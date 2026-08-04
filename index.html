@@ -34,9 +34,13 @@
             background-color: #FFFFFF;
             border: 2px solid #E6F0EA;
             border-radius: 8px;
-            padding: 35px 20px;
+            padding: 30px 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease;
+        }
+        .card-servicio:hover {
+            transform: translateY(-5px);
         }
         .card-servicio i {
             font-size: 32px;
@@ -49,6 +53,13 @@
             font-size: 22px;
             color: #2C3E35;
             font-weight: 500;
+        }
+        .card-servicio p {
+            font-size: 14px;
+            color: #666666;
+            margin-top: 10px;
+            margin-bottom: 0;
+            line-height: 1.4;
         }
         .bloque-texto {
             flex: 1;
@@ -75,28 +86,34 @@
 <body>
 
     <div class="container">
+        <!-- Columna Izquierda: Tarjetas de Servicios -->
         <div class="grid-servicios">
             <div class="card-servicio">
-                <i class="fa-solid fa-border-all"></i>
-                <h3>Prevención</h3>
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Prevención y Riesgos</h3>
+                <p>Identificación de riesgos psicosociales y protocolos.</p>
             </div>
             <div class="card-servicio">
-                <i class="fa-solid fa-window-maximize"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
                 <h3>Investigación</h3>
+                <p>Procedimientos imparciales bajo la normativa vigente.</p>
             </div>
             <div class="card-servicio">
-                <i class="fa-solid fa-code"></i>
+                <i class="fa-solid fa-scale-balanced"></i>
                 <h3>Cumplimiento</h3>
+                <p>Auditoría y adaptación a las exigencias legales.</p>
             </div>
             <div class="card-servicio">
-                <i class="fa-solid fa-code"></i>
-                <h3>Web Development</h3>
+                <i class="fa-solid fa-book-open-reader"></i>
+                <h3>Academia Ágora</h3>
+                <p>Formación y acceso a nuestro manual especializado.</p>
             </div>
         </div>
 
+        <!-- Columna Derecha: Texto Principal -->
         <div class="bloque-texto">
             <h2>¿POR QUÉ ELEGIR A ÁGORA?</h2>
-            <p>Somos una consultora especialista en la Ley Karin.</p>
+            <p>Somos una consultora especialista en la Ley Karin, enfocada en crear entornos laborales seguros, preventivos y libres de violencia.</p>
         </div>
     </div>
 
