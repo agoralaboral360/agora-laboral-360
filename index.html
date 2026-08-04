@@ -7,18 +7,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* VARIABLES DE COLOR */
         :root {
             --color-fondo: #F8F6F0;
-            --color-primario: #2C3E35; /* Verde oscuro texto principal */
-            --color-secundario: #94B9A7; /* Verde suave íconos */
-            --color-acento: #D4AF37; /* Dorado para botones */
+            --color-primario: #2C3E35;
+            --color-secundario: #94B9A7;
+            --color-acento: #D4AF37;
             --color-texto: #333333;
             --color-tarjeta: #FFFFFF;
             --color-borde: #E6F0EA;
         }
 
-        /* ESTILOS GENERALES */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px; /* Evita que la barra fija tape el contenido al hacer clic en el menú */
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -28,14 +31,14 @@
             line-height: 1.6;
         }
 
-        /* BARRA SUPERIOR (HEADER) */
+        /* BARRA SUPERIOR */
         header {
             background-color: var(--color-tarjeta);
             padding: 15px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -71,14 +74,14 @@
             color: var(--color-secundario);
         }
 
-        /* CONTENEDOR PRINCIPAL */
+        /* CONTENEDOR PRINCIPAL CON MARGEN SUPERIOR */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 40px 20px 80px 20px;
         }
 
-        /* SECCIÓN HÉROE (TARJETAS + TEXTO) */
+        /* SECCIÓN HÉROE */
         .hero-section {
             display: flex;
             flex-wrap: wrap;
@@ -100,7 +103,7 @@
             background-color: var(--color-tarjeta);
             border: 2px solid var(--color-borde);
             border-radius: 8px;
-            padding: 35px 25px;
+            padding: 30px 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -112,26 +115,26 @@
         }
 
         .card-servicio i {
-            font-size: 36px;
+            font-size: 34px;
             color: var(--color-secundario);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .card-servicio h3 {
             margin: 0;
             font-family: 'Oswald', sans-serif;
-            font-size: 24px;
+            font-size: 22px;
             color: var(--color-primario);
             font-weight: 500;
             text-transform: uppercase;
         }
 
         .card-servicio p {
-            font-size: 14px;
+            font-size: 13.5px;
             color: #666666;
             margin-top: 10px;
             margin-bottom: 0;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         .bloque-texto {
@@ -142,20 +145,20 @@
 
         .bloque-texto h2 {
             font-family: 'Oswald', sans-serif;
-            font-size: 52px;
+            font-size: 48px;
             text-transform: uppercase;
             color: var(--color-primario);
             margin-top: 0;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             line-height: 1.1;
             letter-spacing: 1px;
         }
 
         .bloque-texto p {
-            font-size: 19px;
+            font-size: 18px;
             color: #555555;
-            line-height: 1.7;
-            margin-bottom: 35px;
+            line-height: 1.6;
+            margin-bottom: 30px;
         }
 
         /* BOTÓN CTA (WHATSAPP) */
@@ -163,13 +166,13 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background-color: #25D366; /* Color oficial WhatsApp */
+            background-color: #25D366;
             color: white;
             text-decoration: none;
-            padding: 15px 30px;
+            padding: 14px 28px;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 15px;
             text-transform: uppercase;
             transition: background-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
@@ -177,32 +180,32 @@
 
         .btn-contacto:hover {
             background-color: #128C7E;
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
 
         /* SECCIÓN ACADEMIA ÁGORA */
         .academia-section {
             background-color: var(--color-tarjeta);
             border-radius: 12px;
-            padding: 50px;
+            padding: 45px;
             border: 2px solid var(--color-borde);
             box-shadow: 0 5px 15px rgba(0,0,0,0.03);
         }
 
         .academia-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         .academia-header i {
-            font-size: 40px;
+            font-size: 38px;
             color: var(--color-acento);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .academia-header h2 {
             font-family: 'Oswald', sans-serif;
-            font-size: 40px;
+            font-size: 38px;
             color: var(--color-primario);
             margin: 0;
             text-transform: uppercase;
@@ -210,16 +213,16 @@
 
         .academia-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1.2fr 1fr;
             gap: 40px;
             align-items: start;
         }
 
-        .manual-info h3 {
+        .manual-info h3, .modulos-info h3 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             color: var(--color-primario);
-            font-size: 22px;
+            font-size: 20px;
             margin-top: 0;
         }
 
@@ -232,13 +235,14 @@
         .modulos-lista li {
             background-color: var(--color-fondo);
             margin-bottom: 10px;
-            padding: 15px 20px;
+            padding: 14px 18px;
             border-radius: 8px;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
             font-weight: 500;
             color: var(--color-texto);
+            font-size: 15px;
         }
 
         .modulos-lista li i {
@@ -246,10 +250,20 @@
             font-size: 18px;
         }
 
-        /* RESPONSIVE */
+        /* PIE DE PÁGINA (FOOTER) */
+        footer {
+            background-color: var(--color-primario);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 14px;
+        }
+
+        footer p { margin: 0; opacity: 0.9; }
+
         @media (max-width: 992px) {
             header { padding: 15px 20px; }
-            .bloque-texto h2 { font-size: 40px; }
+            .bloque-texto h2 { font-size: 38px; }
             .academia-grid { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
@@ -258,7 +272,7 @@
 
     <!-- BARRA SUPERIOR -->
     <header>
-        <a href="#" class="logo">Ágora <span style="font-weight:300; font-size:22px;">Laboral 360</span></a>
+        <a href="#inicio" class="logo">Ágora <span style="font-weight:300; font-size:22px;">Laboral 360</span></a>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -271,12 +285,11 @@
 
     <div class="container" id="inicio">
         
-        <!-- SECCIÓN PRINCIPAL: TARJETAS Y TEXTO -->
-        <div class="hero-section">
-            <!-- Columna Izquierda: Tarjetas de Servicios (Símétricas) -->
-            <div class="grid-servicios" id="servicios">
+        <!-- SECCIÓN PRINCIPAL -->
+        <div class="hero-section" id="servicios">
+            <div class="grid-servicios">
                 <div class="card-servicio">
-                    <i class="fa-solid fa-shield-blank"></i> <!-- Ícono corregido -->
+                    <i class="fa-solid fa-shield"></i>
                     <h3>Prevención y Riesgos</h3>
                     <p>Identificación de riesgos psicosociales y protocolos.</p>
                 </div>
@@ -297,20 +310,18 @@
                 </div>
             </div>
 
-            <!-- Columna Derecha: Texto Principal + Botón CTA -->
             <div class="bloque-texto">
                 <h2>¿POR QUÉ ELEGIR A ÁGORA?</h2>
                 <p>Somos una consultora especialista en la Ley Karin, enfocada en crear entornos laborales seguros, preventivos y libres de violencia.</p>
                 
-                <!-- BOTÓN DE LLAMADA A LA ACCIÓN -->
-                <a href="https://wa.me/TUNUMERODETELEFONO" class="btn-contacto" target="_blank">
+                <a href="https://wa.me/56900000000" class="btn-contacto" target="_blank" id="contacto">
                     <i class="fa-brands fa-whatsapp"></i>
                     Contactar por WhatsApp
                 </a>
             </div>
         </div>
 
-        <!-- SECCIÓN ACADEMIA ÁGORA (NUEVA) -->
+        <!-- SECCIÓN ACADEMIA ÁGORA -->
         <div class="academia-section" id="academia">
             <div class="academia-header">
                 <i class="fa-solid fa-graduation-cap"></i>
@@ -326,16 +337,21 @@
                 <div class="modulos-info">
                     <h3>Módulos de Formación</h3>
                     <ul class="modulos-lista">
-                        <li><i class="fa-solid fa-check-circle"></i> Introducción a la Ley Karin</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Protocolo de Prevención</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Procedimientos de Investigación</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Gestión del Clima Laboral</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Introducción a la Ley Karin</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Protocolo de Prevención</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Procedimientos de Investigación</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Gestión del Clima Laboral</li>
                     </ul>
                 </div>
             </div>
         </div>
 
     </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>© 2026 Ágora Laboral 360 - Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
