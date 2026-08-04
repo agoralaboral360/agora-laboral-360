@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ágora Laboral 360</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 60px 20px;
+            background-color: #F8F6F0;
+            font-family: 'Montserrat', sans-serif;
+            color: #333333;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+        .grid-servicios {
+            flex: 1;
+            min-width: 300px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .card-servicio {
+            background-color: #FFFFFF;
+            border: 2px solid #E6F0EA;
+            border-radius: 8px;
+            padding: 35px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .card-servicio i {
+            font-size: 32px;
+            color: #94B9A7;
+            margin-bottom: 15px;
+        }
+        .card-servicio h3 {
+            margin: 0;
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #2C3E35;
+            font-weight: 500;
+        }
+        .bloque-texto {
+            flex: 1;
+            min-width: 300px;
+            padding: 10px;
+        }
+        .bloque-texto h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            text-transform: uppercase;
+            color: #333333;
+            margin-top: 0;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            letter-spacing: 1px;
+        }
+        .bloque-texto p {
+            font-size: 18px;
+            color: #555555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="grid-servicios">
+            <div class="card-servicio">
+                <i class="fa-solid fa-border-all"></i>
+                <h3>Prevención</h3>
+            </div>
+            <div class="card-servicio">
+                <i class="fa-solid fa-window-maximize"></i>
+                <h3>Investigación</h3>
+            </div>
+            <div class="card-servicio">
+                <i class="fa-solid fa-code"></i>
+                <h3>Cumplimiento</h3>
+            </div>
+            <div class="card-servicio">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Development</h3>
+            </div>
+        </div>
+
+        <div class="bloque-texto">
+            <h2>¿POR QUÉ ELEGIR A ÁGORA?</h2>
+            <p>Somos una consultora especialista en la Ley Karin.</p>
+        </div>
+    </div>
+
+</body>
+</html>
