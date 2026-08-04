@@ -3,118 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ágora Laboral 360</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Ágora Laboral 360 - Consultoría Ley Karin y Academia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        /* VARIABLES DE COLOR */
+        :root {
+            --color-fondo: #F8F6F0;
+            --color-primario: #2C3E35; /* Verde oscuro texto principal */
+            --color-secundario: #94B9A7; /* Verde suave íconos */
+            --color-acento: #D4AF37; /* Dorado para botones */
+            --color-texto: #333333;
+            --color-tarjeta: #FFFFFF;
+            --color-borde: #E6F0EA;
+        }
+
+        /* ESTILOS GENERALES */
         body {
             margin: 0;
-            padding: 60px 20px;
-            background-color: #F8F6F0;
+            padding: 0;
+            background-color: var(--color-fondo);
             font-family: 'Montserrat', sans-serif;
-            color: #333333;
+            color: var(--color-texto);
+            line-height: 1.6;
         }
+
+        /* BARRA SUPERIOR (HEADER) */
+        header {
+            background-color: var(--color-tarjeta);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-primario);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--color-texto);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--color-secundario);
+        }
+
+        /* CONTENEDOR PRINCIPAL */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* SECCIÓN HÉROE (TARJETAS + TEXTO) */
+        .hero-section {
             display: flex;
             flex-wrap: wrap;
             gap: 40px;
             align-items: center;
             justify-content: center;
+            margin-bottom: 80px;
         }
+
         .grid-servicios {
             flex: 1;
-            min-width: 300px;
+            min-width: 320px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            gap: 20px;
         }
+
         .card-servicio {
-            background-color: #FFFFFF;
-            border: 2px solid #E6F0EA;
+            background-color: var(--color-tarjeta);
+            border: 2px solid var(--color-borde);
             border-radius: 8px;
-            padding: 30px 20px;
+            padding: 35px 25px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .card-servicio:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
         }
+
         .card-servicio i {
-            font-size: 32px;
-            color: #94B9A7;
-            margin-bottom: 15px;
+            font-size: 36px;
+            color: var(--color-secundario);
+            margin-bottom: 20px;
         }
+
         .card-servicio h3 {
             margin: 0;
             font-family: 'Oswald', sans-serif;
-            font-size: 22px;
-            color: #2C3E35;
+            font-size: 24px;
+            color: var(--color-primario);
             font-weight: 500;
+            text-transform: uppercase;
         }
+
         .card-servicio p {
             font-size: 14px;
             color: #666666;
             margin-top: 10px;
             margin-bottom: 0;
-            line-height: 1.4;
+            line-height: 1.5;
         }
+
         .bloque-texto {
             flex: 1;
-            min-width: 300px;
+            min-width: 320px;
             padding: 10px;
         }
+
         .bloque-texto h2 {
             font-family: 'Oswald', sans-serif;
-            font-size: 48px;
+            font-size: 52px;
             text-transform: uppercase;
-            color: #333333;
+            color: var(--color-primario);
             margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             line-height: 1.1;
             letter-spacing: 1px;
         }
+
         .bloque-texto p {
-            font-size: 18px;
+            font-size: 19px;
             color: #555555;
-            line-height: 1.6;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        /* BOTÓN CTA (WHATSAPP) */
+        .btn-contacto {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #25D366; /* Color oficial WhatsApp */
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-contacto:hover {
+            background-color: #128C7E;
+            transform: scale(1.03);
+        }
+
+        /* SECCIÓN ACADEMIA ÁGORA */
+        .academia-section {
+            background-color: var(--color-tarjeta);
+            border-radius: 12px;
+            padding: 50px;
+            border: 2px solid var(--color-borde);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .academia-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .academia-header i {
+            font-size: 40px;
+            color: var(--color-acento);
+            margin-bottom: 15px;
+        }
+
+        .academia-header h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            color: var(--color-primario);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .academia-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .manual-info h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--color-primario);
+            font-size: 22px;
+            margin-top: 0;
+        }
+
+        .modulos-lista {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .modulos-lista li {
+            background-color: var(--color-fondo);
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 500;
+            color: var(--color-texto);
+        }
+
+        .modulos-lista li i {
+            color: var(--color-secundario);
+            font-size: 18px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            header { padding: 15px 20px; }
+            .bloque-texto h2 { font-size: 40px; }
+            .academia-grid { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Columna Izquierda: Tarjetas de Servicios -->
-        <div class="grid-servicios">
-            <div class="card-servicio">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h3>Prevención y Riesgos</h3>
-                <p>Identificación de riesgos psicosociales y protocolos.</p>
+    <!-- BARRA SUPERIOR -->
+    <header>
+        <a href="#" class="logo">Ágora <span style="font-weight:300; font-size:22px;">Laboral 360</span></a>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#academia">Academia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" id="inicio">
+        
+        <!-- SECCIÓN PRINCIPAL: TARJETAS Y TEXTO -->
+        <div class="hero-section">
+            <!-- Columna Izquierda: Tarjetas de Servicios (Símétricas) -->
+            <div class="grid-servicios" id="servicios">
+                <div class="card-servicio">
+                    <i class="fa-solid fa-shield-blank"></i> <!-- Ícono corregido -->
+                    <h3>Prevención y Riesgos</h3>
+                    <p>Identificación de riesgos psicosociales y protocolos.</p>
+                </div>
+                <div class="card-servicio">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <h3>Investigación</h3>
+                    <p>Procedimientos imparciales bajo la normativa vigente.</p>
+                </div>
+                <div class="card-servicio">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <h3>Cumplimiento</h3>
+                    <p>Auditoría y adaptación a las exigencias legales.</p>
+                </div>
+                <div class="card-servicio">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    <h3>Academia Ágora</h3>
+                    <p>Formación y acceso a nuestro manual especializado.</p>
+                </div>
             </div>
-            <div class="card-servicio">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <h3>Investigación</h3>
-                <p>Procedimientos imparciales bajo la normativa vigente.</p>
-            </div>
-            <div class="card-servicio">
-                <i class="fa-solid fa-scale-balanced"></i>
-                <h3>Cumplimiento</h3>
-                <p>Auditoría y adaptación a las exigencias legales.</p>
-            </div>
-            <div class="card-servicio">
-                <i class="fa-solid fa-book-open-reader"></i>
-                <h3>Academia Ágora</h3>
-                <p>Formación y acceso a nuestro manual especializado.</p>
+
+            <!-- Columna Derecha: Texto Principal + Botón CTA -->
+            <div class="bloque-texto">
+                <h2>¿POR QUÉ ELEGIR A ÁGORA?</h2>
+                <p>Somos una consultora especialista en la Ley Karin, enfocada en crear entornos laborales seguros, preventivos y libres de violencia.</p>
+                
+                <!-- BOTÓN DE LLAMADA A LA ACCIÓN -->
+                <a href="https://wa.me/TUNUMERODETELEFONO" class="btn-contacto" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Contactar por WhatsApp
+                </a>
             </div>
         </div>
 
-        <!-- Columna Derecha: Texto Principal -->
-        <div class="bloque-texto">
-            <h2>¿POR QUÉ ELEGIR A ÁGORA?</h2>
-            <p>Somos una consultora especialista en la Ley Karin, enfocada en crear entornos laborales seguros, preventivos y libres de violencia.</p>
+        <!-- SECCIÓN ACADEMIA ÁGORA (NUEVA) -->
+        <div class="academia-section" id="academia">
+            <div class="academia-header">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>Academia Ágora</h2>
+            </div>
+            
+            <div class="academia-grid">
+                <div class="manual-info">
+                    <h3>Nuestro Manual Especializado</h3>
+                    <p>Accede a nuestro manual exclusivo de construcción propia, diseñado para guiar a las empresas en la implementación efectiva de la Ley Karin. Incluye matrices de riesgo, plantillas de protocolos y casos de estudio.</p>
+                    <p>Ofrecemos capacitaciones presenciales y online adaptadas a las necesidades de tu organización.</p>
+                </div>
+                <div class="modulos-info">
+                    <h3>Módulos de Formación</h3>
+                    <ul class="modulos-lista">
+                        <li><i class="fa-solid fa-check-circle"></i> Introducción a la Ley Karin</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Protocolo de Prevención</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Procedimientos de Investigación</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Gestión del Clima Laboral</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+
     </div>
 
 </body>
