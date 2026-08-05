@@ -15,6 +15,8 @@
             --color-hover: #6F9181;      /* Verde Hover */
             --color-texto: #4E4036;      /* Café Espresso */
             --color-borde: #E6F0EA;      /* Verde Claro Bordes */
+            --color-naranja: #E67E22;    /* Naranja Cálido para el Botón del Menú */
+            --color-naranja-hover: #D35400; /* Naranja Oscuro Hover */
         }
 
         html {
@@ -61,6 +63,7 @@
             padding: 0;
             list-style: none;
             display: flex;
+            align-items: center; /* Alinea los botones y textos al centro verticalmente */
             gap: 25px;
         }
 
@@ -77,13 +80,61 @@
             color: var(--color-hover);
         }
 
+        /* BOTÓN NARANJA EN EL MENÚ */
+        nav a.btn-nav-naranja {
+            background-color: var(--color-naranja);
+            color: #FFFFFF !important;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 3px 8px rgba(230, 126, 34, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        nav a.btn-nav-naranja:hover {
+            background-color: var(--color-naranja-hover);
+            transform: scale(1.05);
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px 60px 20px;
+            padding: 20px 20px 60px 20px;
         }
 
-        /* SECCIÓN HÉROE */
+        /* QUIÉNES SOMOS */
+        .nosotros-section {
+            background-color: var(--color-tarjeta);
+            border-radius: 12px;
+            border: 2px solid var(--color-borde);
+            margin-bottom: 70px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(78, 64, 54, 0.06);
+        }
+
+        .nosotros-texto {
+            flex: 1.2;
+            padding: 50px;
+        }
+
+        .nosotros-texto h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 42px;
+            color: var(--color-texto);
+            margin-top: 0;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .nosotros-imagen {
+            flex: 1;
+            background-image: url('https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* SERVICIOS */
         .hero-section {
             display: flex;
             flex-wrap: wrap;
@@ -147,12 +198,12 @@
 
         .bloque-texto h2 {
             font-family: 'Oswald', sans-serif;
-            font-size: 44px;
+            font-size: 38px;
             text-transform: uppercase;
             color: var(--color-texto);
             margin-top: 0;
             margin-bottom: 20px;
-            line-height: 1.1;
+            line-height: 1.2;
         }
 
         .bloque-texto p {
@@ -180,37 +231,6 @@
         .btn-principal:hover {
             background-color: var(--color-hover);
             transform: scale(1.02);
-        }
-
-        /* QUIÉNES SOMOS */
-        .nosotros-section {
-            background-color: var(--color-tarjeta);
-            border-radius: 12px;
-            border: 2px solid var(--color-borde);
-            margin-bottom: 80px;
-            display: flex;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(78, 64, 54, 0.05);
-        }
-
-        .nosotros-texto {
-            flex: 1.2;
-            padding: 50px;
-        }
-
-        .nosotros-texto h2 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 36px;
-            color: var(--color-texto);
-            margin-top: 0;
-            text-transform: uppercase;
-        }
-
-        .nosotros-imagen {
-            flex: 1;
-            background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
         }
 
         /* DIAGNÓSTICO GRATUITO */
@@ -380,7 +400,7 @@
             header { padding: 15px 20px; }
             nav ul { gap: 15px; }
             .nosotros-section { flex-direction: column; }
-            .nosotros-imagen { min-height: 260px; }
+            .nosotros-imagen { min-height: 280px; }
             .academia-grid { grid-template-columns: 1fr; }
             .diagnostico-section { padding: 30px 20px; }
         }
@@ -390,17 +410,15 @@
 
     <!-- NAVEGACIÓN -->
     <header>
-        <!-- LOGO OFICIAL SVG (CON 360° INTEGRADO) -->
+        <!-- LOGO OFICIAL SVG -->
         <a href="#inicio" class="logo-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 50" width="280" height="42">
-                <!-- Isotipo: Órbita 360° + Escudo de Protección -->
                 <g transform="translate(2, 2)">
                     <circle cx="22" cy="22" r="20" fill="none" stroke="#E6F0EA" stroke-width="3"/>
                     <path d="M 22,2 A 20,20 0 0,1 42,22" fill="none" stroke="#94B9A7" stroke-width="3.5" stroke-linecap="round"/>
                     <path d="M 22,10 L 30,14 V 22 C 30,28 22,33 22,33 C 22,33 14,28 14,22 V 14 Z" fill="#4E4036"/>
                     <path d="M 22,10 L 22,33 C 22,33 14,28 14,22 V 14 Z" fill="#6F9181"/>
                 </g>
-                <!-- Marca Textual Integrada -->
                 <text x="56" y="31" font-family="'Oswald', sans-serif" font-size="23" font-weight="700" fill="#4E4036" letter-spacing="0.5">ÁGORA LABORAL</text>
                 <text x="242" y="31" font-family="'Oswald', sans-serif" font-size="23" font-weight="700" fill="#6F9181" letter-spacing="0.5">360°</text>
             </svg>
@@ -410,7 +428,8 @@
             <ul>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#diagnostico">Diagnóstico</a></li>
+                <!-- ESTE ES EL NUEVO BOTÓN NARANJA -->
+                <li><a href="#diagnostico" class="btn-nav-naranja">Diagnóstico</a></li>
                 <li><a href="#academia">Academia 360°</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -419,6 +438,16 @@
 
     <div class="container" id="inicio">
         
+        <!-- QUIÉNES SOMOS -->
+        <div class="nosotros-section" id="nosotros">
+            <div class="nosotros-texto">
+                <h2>¿Quiénes Somos en Ágora Laboral 360°?</h2>
+                <p><strong>Ágora Laboral 360°</strong> nace con el propósito de acompañar a las organizaciones en la transformación hacia espacios de trabajo dignos, seguros y respetuosos. Nos especializamos en la prevención del acoso laboral, sexual y la violencia en el trabajo, alineados estrictamente con las exigencias de la Ley Karin y con una clara perspectiva de género e inclusión.</p>
+                <p>Nuestro equipo interdisciplinario combina asesoría jurídica, gestión de personas y capacitación técnica para entregar soluciones integrales adaptadas a la realidad de cada empresa.</p>
+            </div>
+            <div class="nosotros-imagen"></div>
+        </div>
+
         <!-- SERVICIOS -->
         <div class="hero-section" id="servicios">
             <div class="grid-servicios">
@@ -445,23 +474,13 @@
             </div>
 
             <div class="bloque-texto">
-                <h2>¿POR QUÉ ELEGIR ÁGORA LABORAL 360°?</h2>
+                <h2>Nuestros Servicios y Enfoque</h2>
                 <p>En <strong>Ágora Laboral 360°</strong> somos una consultora especialista en la Ley Karin, enfocada en crear entornos laborales seguros, preventivos y libres de violencia mediante nuestra metodología integral de 360°.</p>
                 <a href="#diagnostico" class="btn-principal">
                     <i class="fa-solid fa-clipboard-check"></i>
                     Evaluar mi Empresa
                 </a>
             </div>
-        </div>
-
-        <!-- QUIÉNES SOMOS -->
-        <div class="nosotros-section" id="nosotros">
-            <div class="nosotros-texto">
-                <h2>¿Quiénes Somos en Ágora Laboral 360°?</h2>
-                <p><strong>Ágora Laboral 360°</strong> nace con el propósito de acompañar a las organizaciones en la transformación hacia espacios de trabajo dignos, seguros y respetuosos. Nos especializamos en la prevención del acoso laboral, sexual y la violencia en el trabajo, alineados estrictamente con las exigencias de la Ley Karin y con una clara perspectiva de género e inclusión.</p>
-                <p>Nuestro equipo interdisciplinario combina asesoría jurídica, gestión de personas y capacitación técnica para entregar soluciones integrales adaptadas a la realidad de cada empresa.</p>
-            </div>
-            <div class="nosotros-imagen"></div>
         </div>
 
         <!-- DIAGNÓSTICO GRATUITO -->
@@ -519,7 +538,7 @@
             <div id="resultadoBox" class="resultado-box">
                 <h3 id="resultadoTitulo" style="font-family:'Oswald', sans-serif; font-size:26px; margin-top:0;"></h3>
                 <p id="resultadoTexto" style="font-size: 16px; margin-bottom:20px;"></p>
-                <a href="https://wa.me/56900000000?text=Hola,%20hice%20el%20diagnóstico%20gratuito%20en%20Ágora%20Laboral%20360°%20y%20me%20gustaría%20recibir%20asesoría." target="_blank" class="btn-principal" style="background-color: #25D366; color:white;">
+                <a href="https://wa.me/56912345678?text=Hola,%20hice%20el%20diagnóstico%20gratuito%20en%20Ágora%20Laboral%20360°%20y%20me%20gustaría%20recibir%20asesoría." target="_blank" class="btn-principal" style="background-color: #25D366; color:white;">
                     <i class="fa-brands fa-whatsapp"></i> Solicitar Asesoría para Mi Resultado
                 </a>
             </div>
