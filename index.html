@@ -34,7 +34,7 @@
         /* HEADER */
         header {
             background-color: var(--color-tarjeta);
-            padding: 15px 50px;
+            padding: 12px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -45,14 +45,15 @@
             z-index: 1000;
         }
 
-        .logo {
-            font-family: 'Oswald', sans-serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--color-texto);
+        .logo-container {
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            transition: opacity 0.2s ease;
+        }
+
+        .logo-container:hover {
+            opacity: 0.9;
         }
 
         nav ul {
@@ -146,7 +147,7 @@
 
         .bloque-texto h2 {
             font-family: 'Oswald', sans-serif;
-            font-size: 48px;
+            font-size: 44px;
             text-transform: uppercase;
             color: var(--color-texto);
             margin-top: 0;
@@ -181,7 +182,7 @@
             transform: scale(1.02);
         }
 
-        /* QUIÉNES SOMOS (FOTO HD CON TONOS CÁLIDOS / NARANJA) */
+        /* QUIÉNES SOMOS */
         .nosotros-section {
             background-color: var(--color-tarjeta);
             border-radius: 12px;
@@ -207,13 +208,12 @@
 
         .nosotros-imagen {
             flex: 1;
-            /* Foto de alta definición con tonos cálidos/naranja de reunión de trabajo */
-            background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
         }
 
-        /* DIAGNÓSTICO (NUEVO DISEÑO LIMPIO Y FRESCO) */
+        /* DIAGNÓSTICO GRATUITO */
         .diagnostico-section {
             background-color: var(--color-tarjeta);
             border: 2px solid var(--color-borde);
@@ -305,7 +305,7 @@
             color: var(--color-texto);
         }
 
-        /* ACADEMIA ÁGORA (FOTO HD CON CÁLIDOS) */
+        /* ACADEMIA ÁGORA 360° */
         .academia-section {
             background-color: var(--color-tarjeta);
             border-radius: 12px;
@@ -390,13 +390,28 @@
 
     <!-- NAVEGACIÓN -->
     <header>
-        <a href="#inicio" class="logo">Ágora <span style="font-weight:300; font-size:22px;">Laboral 360°</span></a>
+        <!-- LOGO OFICIAL SVG (CON 360° INTEGRADO) -->
+        <a href="#inicio" class="logo-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 50" width="280" height="42">
+                <!-- Isotipo: Órbita 360° + Escudo de Protección -->
+                <g transform="translate(2, 2)">
+                    <circle cx="22" cy="22" r="20" fill="none" stroke="#E6F0EA" stroke-width="3"/>
+                    <path d="M 22,2 A 20,20 0 0,1 42,22" fill="none" stroke="#94B9A7" stroke-width="3.5" stroke-linecap="round"/>
+                    <path d="M 22,10 L 30,14 V 22 C 30,28 22,33 22,33 C 22,33 14,28 14,22 V 14 Z" fill="#4E4036"/>
+                    <path d="M 22,10 L 22,33 C 22,33 14,28 14,22 V 14 Z" fill="#6F9181"/>
+                </g>
+                <!-- Marca Textual Integrada -->
+                <text x="56" y="31" font-family="'Oswald', sans-serif" font-size="23" font-weight="700" fill="#4E4036" letter-spacing="0.5">ÁGORA LABORAL</text>
+                <text x="242" y="31" font-family="'Oswald', sans-serif" font-size="23" font-weight="700" fill="#6F9181" letter-spacing="0.5">360°</text>
+            </svg>
+        </a>
+
         <nav>
             <ul>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#diagnostico">Diagnóstico</a></li>
-                <li><a href="#academia">Academia</a></li>
+                <li><a href="#academia">Academia 360°</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -424,14 +439,14 @@
                 </div>
                 <div class="card-servicio">
                     <i class="fa-solid fa-book-open-reader"></i>
-                    <h3>Academia Ágora</h3>
+                    <h3>Academia Ágora 360°</h3>
                     <p>Formación y acceso a nuestro manual especializado.</p>
                 </div>
             </div>
 
             <div class="bloque-texto">
-                <h2>¿POR QUÉ ELEGIR A ÁGORA?</h2>
-                <p>Somos una consultora especialista en la Ley Karin, enfocada en crear entornos laborales seguros, preventivos y libres de violencia mediante una visión integral de 360°.</p>
+                <h2>¿POR QUÉ ELEGIR ÁGORA LABORAL 360°?</h2>
+                <p>En <strong>Ágora Laboral 360°</strong> somos una consultora especialista en la Ley Karin, enfocada en crear entornos laborales seguros, preventivos y libres de violencia mediante nuestra metodología integral de 360°.</p>
                 <a href="#diagnostico" class="btn-principal">
                     <i class="fa-solid fa-clipboard-check"></i>
                     Evaluar mi Empresa
@@ -442,9 +457,9 @@
         <!-- QUIÉNES SOMOS -->
         <div class="nosotros-section" id="nosotros">
             <div class="nosotros-texto">
-                <h2>¿Quiénes Somos?</h2>
-                <p><strong>Ágora Laboral 360°</strong> nace con el propósito de acompañar a las organizaciones en la transformación hacia espacios de trabajo dignos, seguros y respetuosos. Nos especializamos en la prevención del acoso laboral, sexual y la violencia en el trabajo, alineados strictly con las exigencias de la Ley Karin.</p>
-                <p>Nuestro equipo interdisciplinario combina asesoría jurídica, gestión de personas y capacitación técnica para entregar soluciones integrales 360° adaptadas a la realidad de cada empresa.</p>
+                <h2>¿Quiénes Somos en Ágora Laboral 360°?</h2>
+                <p><strong>Ágora Laboral 360°</strong> nace con el propósito de acompañar a las organizaciones en la transformación hacia espacios de trabajo dignos, seguros y respetuosos. Nos especializamos en la prevención del acoso laboral, sexual y la violencia en el trabajo, alineados estrictamente con las exigencias de la Ley Karin y con una clara perspectiva de género e inclusión.</p>
+                <p>Nuestro equipo interdisciplinario combina asesoría jurídica, gestión de personas y capacitación técnica para entregar soluciones integrales adaptadas a la realidad de cada empresa.</p>
             </div>
             <div class="nosotros-imagen"></div>
         </div>
@@ -452,7 +467,7 @@
         <!-- DIAGNÓSTICO GRATUITO -->
         <div class="diagnostico-section" id="diagnostico">
             <h2>Diagnóstico Gratuito Ley Karin</h2>
-            <p style="text-align: center; color: var(--color-texto); opacity: 0.8; margin-bottom: 30px;">Responde estas 5 preguntas para evaluar el nivel de cumplimiento de tu empresa sin costo y en tiempo real:</p>
+            <p style="text-align: center; color: var(--color-texto); opacity: 0.8; margin-bottom: 30px;">Responde estas 5 preguntas para evaluar el nivel de cumplimiento de tu empresa con la metodología de Ágora Laboral 360°:</p>
 
             <form id="quizForm">
                 <div class="pregunta-item">
@@ -504,24 +519,24 @@
             <div id="resultadoBox" class="resultado-box">
                 <h3 id="resultadoTitulo" style="font-family:'Oswald', sans-serif; font-size:26px; margin-top:0;"></h3>
                 <p id="resultadoTexto" style="font-size: 16px; margin-bottom:20px;"></p>
-                <a href="https://wa.me/56900000000?text=Hola,%20hice%20el%20diagnóstico%20gratuito%20en%20su%20web%20y%20me%20gustaría%20recibir%20asesoría." target="_blank" class="btn-principal" style="background-color: #25D366; color:white;">
+                <a href="https://wa.me/56900000000?text=Hola,%20hice%20el%20diagnóstico%20gratuito%20en%20Ágora%20Laboral%20360°%20y%20me%20gustaría%20recibir%20asesoría." target="_blank" class="btn-principal" style="background-color: #25D366; color:white;">
                     <i class="fa-brands fa-whatsapp"></i> Solicitar Asesoría para Mi Resultado
                 </a>
             </div>
         </div>
 
-        <!-- ACADEMIA ÁGORA -->
+        <!-- ACADEMIA ÁGORA 360° -->
         <div class="academia-section" id="academia">
             <div class="academia-header">
                 <i class="fa-solid fa-graduation-cap" style="font-size: 36px; color: var(--color-boton);"></i>
-                <h2>Academia Ágora</h2>
+                <h2>Academia Ágora 360°</h2>
             </div>
             
             <div class="academia-grid">
                 <div class="manual-info">
-                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Manual Ley Karin" class="academia-img">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Manual Ley Karin" class="academia-img">
                     <h3 style="color: var(--color-texto);">Nuestro Manual Especializado</h3>
-                    <p>Accede a nuestro manual exclusivo de construcción propia, diseñado para guiar a las empresas en la implementación efectiva de la Ley Karin. Incluye matrices de riesgo, plantillas de protocolos y casos de estudio.</p>
+                    <p>Accede a nuestro manual exclusivo de construcción propia en Ágora Laboral 360°, diseñado para guiar a las empresas en la implementación efectiva de la Ley Karin. Incluye matrices de riesgo, plantillas de protocolos y casos de estudio.</p>
                 </div>
                 <div class="modulos-info">
                     <h3 style="color: var(--color-texto);">Módulos de Formación</h3>
@@ -570,7 +585,7 @@
             if (puntaje >= 8) {
                 titulo.innerText = '¡Nivel de Cumplimiento Alto!';
                 titulo.style.color = '#6F9181';
-                texto.innerText = 'Tu empresa cuenta con una estructura sólida frente a la Ley Karin. Te recomendamos auditar periódicamente tus procesos para mantener los estándares.';
+                texto.innerText = 'Tu empresa cuenta con una estructura sólida frente a la Ley Karin. Te recomendamos auditar periódicamente tus procesos con Ágora Laboral 360° para mantener los estándares.';
             } else if (puntaje >= 5) {
                 titulo.innerText = 'Nivel de Cumplimiento Medio (Atención Requerida)';
                 titulo.style.color = '#4E4036';
