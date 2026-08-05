@@ -32,11 +32,12 @@
     .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
     .logo-text { font-weight: 800; font-size: 1.25rem; color: var(--verde-principal); letter-spacing: -0.5px; }
     .logo-text span { color: var(--naranja-acento); }
-    .nav-links { display: flex; align-items: center; gap: 16px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s ease; }
+    
+    .nav-links { display: flex; align-items: center; gap: 14px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s ease; }
     .nav-links a:hover, .nav-links a.active { color: var(--verde-principal); }
     
-    .btn-nav-cta { background-color: var(--naranja-acento) !important; color: #ffffff !important; padding: 10px 18px; border-radius: 4px !important; font-weight: 700 !important; transition: background 0.2s ease; }
+    .btn-nav-cta { background-color: var(--naranja-acento) !important; color: #ffffff !important; padding: 10px 16px; border-radius: 4px !important; font-weight: 700 !important; transition: background 0.2s ease; }
     .btn-nav-cta:hover { background-color: var(--naranja-hover) !important; }
 
     /* BARRA DE CONFIANZA */
@@ -52,7 +53,7 @@
     .section-title { font-size: 2.1rem; margin-bottom: 14px; }
     .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 800px; margin-bottom: 35px; }
 
-    /* HERO PRINCIPAL CON 2 ACCIONES */
+    /* HERO PRINCIPAL CON DOBLE ACCIÓN */
     .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; }
     .hero-text h1 { font-size: 2.4rem; line-height: 1.25; margin-bottom: 20px; }
     .hero-text p { font-size: 1.05rem; color: var(--texto-suave); margin-bottom: 28px; }
@@ -101,7 +102,7 @@
     .quiz-options input { margin-right: 6px; accent-color: var(--naranja-acento); }
     #quiz-result { display: none; margin-top: 25px; padding: 20px; border-radius: 4px; background-color: var(--verde-fondo); border-left: 4px solid var(--naranja-acento); }
 
-    /* MITOS Y REALIDADES (ICONOS PEQUEÑOS Y SUBTILES) */
+    /* MITOS Y REALIDADES */
     .comparativa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 25px; }
     .box-comparativa { padding: 30px; border-radius: 4px; border: 1px solid #eaeaea; background: #fff; }
     .box-si { border-top: 4px solid var(--naranja-acento); }
@@ -137,6 +138,8 @@
           <li><a href="#ley-21828">INFORME 21.828</a></li>
           <li><a href="#academia">ACADEMIA 360°</a></li>
           <li><a href="#recursos">RECURSOS</a></li>
+          <!-- CONTACTO RESTAURADO AQUÍ -->
+          <li><a href="#contacto">CONTACTO</a></li>
           <li><a href="#diagnostico" class="btn-nav-cta">DIAGNÓSTICO KARIN</a></li>
         </ul>
       </nav>
@@ -162,7 +165,7 @@
   </section>
 
   <main>
-    <!-- HERO PRINCIPAL CON LIDERAZGO FEMENINO Y DOBLE ACCIÓN -->
+    <!-- HERO PRINCIPAL CON FOTO DE MUJER LIDERANDO EQUIPO DE TRABAJO -->
     <section class="section container hero-grid">
       <div class="hero-text">
         <h1>Transformamos la exigencia legal en una cultura de respeto mutuo</h1>
@@ -176,8 +179,8 @@
         </div>
       </div>
       <div class="hero-image">
-        <!-- Imagen de lidera ejecutiva facilitando una sesión con un equipo colaborador -->
-        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="Líder facilitando taller de trabajo en equipo e igualdad">
+        <!-- Nueva Foto: Mujer profesional liderando reunión colaborativa en la oficina -->
+        <img src="https://images.unsplash.com/photo-1573164713619-24f4efb7189c?auto=format&fit=crop&w=800&q=80" alt="Mujer profesional liderando reunión de equipo y consultoría laboral">
       </div>
     </section>
 
@@ -293,7 +296,7 @@
       </p>
 
       <div class="recursos-grid">
-        <!-- LEAD MAGNET: CAPÍTULO 1 Y INTRODUCCIÓN -->
+        <!-- LEAD MAGNET: CAPÍTULO 1 E INTRODUCCIÓN -->
         <div class="recurso-card recurso-destacado">
           <div class="badge-pronto">Muestra Gratis</div>
           <h3>
@@ -375,7 +378,7 @@
       </div>
     </section>
 
-    <!-- MITOS Y REALIDADES LEY KARIN (UBICACIÓN INFERIOR CON ICONOS SÚPER SUTILES) -->
+    <!-- MITOS Y REALIDADES LEY KARIN (UBICACIÓN INFERIOR CON ICONOS PEQUEÑOS) -->
     <section class="section container" id="mitos">
       <h2 class="section-title">Mitos y Realidades de la Ley Karin</h2>
       <p class="section-subtitle">Aclarar los límites entre la exigencia laboral legítima y el acoso es fundamental para proteger a jefaturas y colaboradores.</p>
