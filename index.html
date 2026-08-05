@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ágora Laboral 360° | Ley Karin y Asesoría Corporativa</title>
+  <title>Ágora Laboral 360° | Ley Karin y Gestión Psicosocial</title>
   
   <!-- Tipografías Corporativas Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* RESET Y FONDO BLANCO PURO */
+    /* RESET Y ESTILOS BASE */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -25,15 +25,15 @@
     body {
       font-family: 'Montserrat', sans-serif;
       color: #2b2b2b;
-      background-color: #ffffff; /* Fondo blanco limpio sin imágenes ni texturas */
+      background-color: #ffffff;
       line-height: 1.7;
     }
 
-    /* TIPOGRAFÍA EJECUTIVA B2B */
+    /* TIPOGRAFÍA ELEGANTE SOBRIA */
     h1, h2, h3, .titulo-ejecutivo {
       font-family: 'Playfair Display', Georgia, serif;
       font-weight: 700;
-      color: #1e3328; /* Verde corporativo oscuro */
+      color: #1e3328; /* Verde corporativo profundo */
       letter-spacing: -0.3px;
     }
 
@@ -52,25 +52,25 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 24px;
+      padding: 18px 24px;
     }
 
     .logo-text {
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       letter-spacing: 0.5px;
       color: #1e3328;
     }
 
     .logo-text span {
-      color: #e07a27; /* Naranja corporativo */
+      color: #e07a27; /* Naranja de acento */
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 22px;
       list-style: none;
     }
 
@@ -89,12 +89,12 @@
       color: #1e3328;
     }
 
-    /* Botón de acción (CTA) recto y sobrio */
+    /* Botón de Acción Naranja */
     .btn-cta {
       background-color: #e07a27 !important;
       color: #ffffff !important;
       padding: 10px 22px;
-      border-radius: 2px !important; /* Bordes rectos sobrios */
+      border-radius: 2px !important;
       font-weight: 700 !important;
       transition: background-color 0.2s ease;
     }
@@ -103,7 +103,7 @@
       background-color: #c9671b !important;
     }
 
-    /* 2. BARRA DE CONFIANZA CORPORATIVA (TRUST BAR) */
+    /* 2. BARRA DE CONFIANZA ENFOQUE PSICOSOCIAL */
     .trust-bar {
       background-color: #1e3328;
       color: #ffffff;
@@ -134,7 +134,7 @@
       font-weight: bold;
     }
 
-    /* 3. ESTRUCTURA ABIERTA (SIN TARJETAS) */
+    /* 3. ESTRUCTURA Y CONTENIDO */
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -142,68 +142,105 @@
     }
 
     .section {
-      padding: 70px 0;
-      border-bottom: 1px solid #eeeeee; /* Separación lineal limpia */
+      padding: 65px 0;
+      border-bottom: 1px solid #eeeeee;
     }
 
     .section:last-of-type {
       border-bottom: none;
     }
 
-    /* SECCIÓN NOSOTROS / HERO */
+    /* HERO PRINCIPAL CON GANCHO DE ATENCIÓN */
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
       align-items: center;
     }
 
     .hero-text h1 {
-      font-size: 2.3rem;
-      line-height: 1.25;
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-text .sub-lead {
+      font-size: 1.1rem;
+      color: #444444;
       margin-bottom: 24px;
+      font-weight: 500;
     }
 
     .hero-text p {
-      font-size: 1.05rem;
-      color: #4a4a4a;
-      margin-bottom: 18px;
-      text-align: justify;
+      font-size: 1rem;
+      color: #555555;
+      margin-bottom: 28px;
+    }
+
+    .btn-hero {
+      display: inline-block;
+      background-color: #e07a27;
+      color: #ffffff;
+      padding: 14px 28px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background-color 0.2s;
+    }
+
+    .btn-hero:hover {
+      background-color: #c9671b;
     }
 
     .hero-image img {
       width: 100%;
       height: 100%;
-      max-height: 420px;
+      max-height: 440px;
       object-fit: cover;
       border-radius: 2px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
     }
 
-    /* SECCIÓN SERVICIOS EN FORMATO LISTA ABIERTA */
+    /* SECCIÓN IMPACTO Y PILARES LEY KARIN */
     .section-title {
-      font-size: 2rem;
-      margin-bottom: 30px;
+      font-size: 2.1rem;
+      margin-bottom: 16px;
+      text-align: left;
     }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-      margin-top: 20px;
-    }
-
-    .service-item h3 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-      color: #1e3328;
-    }
-
-    .service-item p {
+    .section-intro {
+      font-size: 1.05rem;
       color: #555555;
-      font-size: 0.95rem;
+      max-width: 850px;
+      margin-bottom: 40px;
     }
 
-    /* FOOTER SOBRIO */
+    .pilares-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .pilar-item {
+      padding: 24px;
+      background: #fafafa;
+      border-left: 4px solid #1e3328;
+    }
+
+    .pilar-item h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .pilar-item p {
+      font-size: 0.95rem;
+      color: #555555;
+    }
+
+    /* FOOTER */
     footer {
       background-color: #1e3328;
       color: #ffffff;
@@ -212,7 +249,7 @@
       font-size: 0.85rem;
     }
 
-    /* RESPONSIVO MÓVIL */
+    /* RESPONSIVO */
     @media (max-width: 900px) {
       .hero-grid {
         grid-template-columns: 1fr;
@@ -240,90 +277,115 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#inicio" class="active">INICIO</a></li>
+          <li><a href="#ley-karin">LEY KARIN</a></li>
           <li><a href="#nosotros">NOSOTROS</a></li>
           <li><a href="#servicios">SERVICIOS</a></li>
           <li><a href="#diagnostico" class="btn-cta">DIAGNÓSTICO GRATIS</a></li>
-          <li><a href="#academia">ACADEMIA 360°</a></li>
           <li><a href="#contacto">CONTACTO</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- BARRA DE CONFIANZA B2B -->
+  <!-- BARRA DE CONFIANZA (ENFOQUE INTEGRAL Y PSICOSOCIAL) -->
   <section class="trust-bar">
     <div class="trust-container">
       <div class="trust-item">
-        <span class="icon">✓</span> 100% ALINEADOS CON LEY KARIN (LEY N° 21.643)
+        <span class="icon">✓</span> CUMPLIMIENTO LEY N° 21.643 (LEY KARIN)
       </div>
       <div class="trust-item">
-        <span class="icon">★</span> ASESORÍA JURÍDICA E INTERDISCIPLINARIA
+        <span class="icon">★</span> ENFOQUE INTEGRAL Y PSICOSOCIAL
       </div>
       <div class="trust-item">
-        <span class="icon">🏢</span> SOLUCIONES ESTRATÉGICAS B2B
+        <span class="icon">🏢</span> PREVENCIÓN Y GESTIÓN DE PERSONAS B2B
       </div>
     </div>
   </section>
 
-  <!-- CONTENIDO PRINCIPAL ABIERTO (SIN TARJETAS NI RECUADROS) -->
+  <!-- CONTENIDO PRINCIPAL -->
   <main class="container">
     
-    <!-- SECCIÓN NOSOTROS -->
-    <section class="section hero-grid" id="nosotros">
+    <!-- 1. HERO PRINCIPAL (GANCHO DE ATENCIÓN) -->
+    <section class="section hero-grid">
       <div class="hero-text">
-        <h1>¿Quiénes somos en Ágora Laboral 360°?</h1>
-        <p>
-          <strong>Ágora Laboral 360°</strong> nace con el propósito de acompañar a las organizaciones en la transformación hacia espacios de trabajo dignos, seguros y respetuosos. Nos especializamos en la prevención del acoso laboral, sexual y la violencia en el trabajo, alineados estrictamente con las exigencias de la <strong>Ley Karin</strong> y con una clara perspectiva de género e inclusión.
+        <h1>Protege a tu organización y transforma tu entorno laboral con la Ley Karin</h1>
+        <p class="sub-lead">
+          La Ley N° 21.643 no es solo un requerimiento legal: es la oportunidad de construir espacios de trabajo seguros, libres de acoso y comprometidos con el bienestar psicosocial.
         </p>
         <p>
-          Nuestro equipo interdisciplinario combina asesoría jurídica, gestión de personas y capacitación técnica para entregar soluciones integrales adaptadas a la realidad de cada empresa.
+          En <strong>Ágora Laboral 360°</strong> acompañamos a las empresas en la implementación de protocolos efectivos, capacitación técnica y gestión humana del clima laboral.
         </p>
+        <a href="#diagnostico" class="btn-hero">Solicitar Evaluación Inicial Sin Costo</a>
       </div>
       
       <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Consultoría corporativa Ley Karin Ágora Laboral 360">
+        <!-- Imagen humana, colaborativa, cálida con toque de ambiente moderno -->
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Asesoria psicosocial y clima laboral Ley Karin">
       </div>
     </section>
 
-    <!-- SECCIÓN SERVICIOS -->
+    <!-- 2. EL IMPACTO DE LA LEY KARIN EN TU EMPRESA -->
+    <section class="section" id="ley-karin">
+      <h2 class="section-title">¿Qué exige la Ley Karin a tu organización?</h2>
+      <p class="section-intro">
+        La normativa establece obligaciones claras para empleadores en Chile en materia de prevención, investigación y sanción del acoso laboral, sexual y la violencia en el trabajo.
+      </p>
+
+      <div class="pilares-grid">
+        <div class="pilar-item">
+          <h3>1. Protocolos de Prevención</h3>
+          <p>Diseño e incorporación del protocolo de prevención de riesgos psicosociales en el Reglamento Interno (RIOHS).</p>
+        </div>
+        <div class="pilar-item">
+          <h3>2. Gestión de Denuncias e Investigación</h3>
+          <p>Procedimientos claros, imparciales y oportunos para la recepción, investigación y resguardo de las partes afectadas.</p>
+        </div>
+        <div class="pilar-item">
+          <h3>3. Acompañamiento y Formación</h3>
+          <p>Capacitación continua a jefaturas, comités y colaboradores para fomentar espacios de respeto y buen trato.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SECCIÓN QUIÉNES SOMOS (RESPALDO INSTITUCIONAL) -->
+    <section class="section" id="nosotros">
+      <h2 class="section-title">¿Quiénes somos en Ágora Laboral 360°?</h2>
+      <p class="section-intro">
+        Somos una consultora especializada que combina la <strong>gestión de personas, el enfoque psicosocial y la asesoría técnica</strong>. Acompañamos a las organizaciones a cumplir con las exigencias legales desde un enfoque humano, inclusivo y adaptado a la realidad de cada equipo de trabajo.
+      </p>
+    </section>
+
+    <!-- 4. SERVICIOS -->
     <section class="section" id="servicios">
-      <h2 class="section-title">Nuestros Servicios</h2>
-      <div class="services-grid">
-        <div class="service-item">
-          <h3>Implementación Ley Karin</h3>
-          <p>Elaboración y adecuación de protocolos de prevención, investigación y sanción ajustados a la normativa vigente.</p>
+      <h2 class="section-title">Nuestros Servicios Estratégicos</h2>
+      <div class="pilares-grid">
+        <div class="pilar-item">
+          <h3>Diagnóstico e Implementación</h3>
+          <p>Auditoría de cumplimiento normativo, redacción de protocolos e integración formal según la Ley N° 21.643.</p>
         </div>
-        <div class="service-item">
-          <h3>Investigaciones Internas</h3>
-          <p>Conducción imparcial e interdisciplinaria de procedimientos de denuncia por acoso laboral y sexual.</p>
+        <div class="pilar-item">
+          <h3>Investigación Imparcial</h3>
+          <p>Conducción técnica e interdisciplinaria de procesos de investigación interna ante denuncias laborales.</p>
         </div>
-        <div class="service-item">
-          <h3>Capacitación Ejecutiva</h3>
-          <p>Talleres y programas normativos diseñados para directivos, comités de convivencia y colaboradores.</p>
+        <div class="pilar-item">
+          <h3>Academia y Capacitación 360°</h3>
+          <p>Talleres prácticos y formación ejecutiva sobre liderazgo respetuoso y prevención de violencia laboral.</p>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN DIAGNÓSTICO -->
+    <!-- 5. DIAGNÓSTICO GRATUITO Y CONTACTO -->
     <section class="section" id="diagnostico">
-      <h2 class="section-title">Diagnóstico Gratuito</h2>
-      <p>Evalúa el nivel de cumplimiento de tu empresa respecto a la Ley N° 21.643 y recibe una revisión inicial sin costo coordinando una llamada con nuestro equipo.</p>
-    </section>
-
-    <!-- SECCIÓN ACADEMIA -->
-    <section class="section" id="academia">
-      <h2 class="section-title">Academia 360°</h2>
-      <p>Programas de formación continua en clima laboral, prevención del desgaste ocupacional y liderazgo respetuoso.</p>
-    </section>
-
-    <!-- SECCIÓN CONTACTO -->
-    <section class="section" id="contacto">
-      <h2 class="section-title">Contacto Directo</h2>
-      <p>Coorganiza una sesión de evaluación o escribe a nuestros especialistas a través de nuestras vías institucionales.</p>
+      <h2 class="section-title">Solicita tu Diagnóstico Inicial</h2>
+      <p class="section-intro">
+        Evalúa el estado de cumplimiento de tu empresa respecto a la Ley Karin. Coordina una breve sesión diagnóstica sin compromiso con nuestros especialistas.
+      </p>
+      <a href="mailto:contacto@agoralaboral.cl" class="btn-hero">Contactar a un Especialista</a>
     </section>
 
   </main>
 
+  <!-- PIE DE PÁGINA -->
   <footer>
     <p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados. | Santiago, Chile</p>
   </footer>
