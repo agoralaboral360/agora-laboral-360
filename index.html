@@ -64,7 +64,7 @@
     .btn-hero-secondary { background-color: transparent; color: var(--verde-principal); border: 2px solid var(--verde-principal); padding: 12px 20px; text-decoration: none; font-weight: 700; border-radius: 4px; font-size: 0.88rem; transition: all 0.2s; }
     .btn-hero-secondary:hover { background-color: var(--verde-principal); color: white; }
     
-    .hero-image img { width: 100%; height: 420px; object-fit: cover; border-radius: 4px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+    .hero-image img { width: 100%; height: 420px; object-fit: cover; border-radius: 4px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); display: block; }
 
     /* TARJETAS DE SERVICIOS */
     .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
@@ -138,7 +138,6 @@
           <li><a href="#ley-21828">INFORME 21.828</a></li>
           <li><a href="#academia">ACADEMIA 360°</a></li>
           <li><a href="#recursos">RECURSOS</a></li>
-          <!-- CONTACTO RESTAURADO AQUÍ -->
           <li><a href="#contacto">CONTACTO</a></li>
           <li><a href="#diagnostico" class="btn-nav-cta">DIAGNÓSTICO KARIN</a></li>
         </ul>
@@ -165,7 +164,7 @@
   </section>
 
   <main>
-    <!-- HERO PRINCIPAL CON FOTO DE MUJER LIDERANDO EQUIPO DE TRABAJO -->
+    <!-- HERO PRINCIPAL -->
     <section class="section container hero-grid">
       <div class="hero-text">
         <h1>Transformamos la exigencia legal en una cultura de respeto mutuo</h1>
@@ -179,19 +178,18 @@
         </div>
       </div>
       <div class="hero-image">
-        <!-- Nueva Foto: Mujer profesional liderando reunión colaborativa en la oficina -->
-        <img src="https://images.unsplash.com/photo-1573164713619-24f4efb7189c?auto=format&fit=crop&w=800&q=80" alt="Mujer profesional liderando reunión de equipo y consultoría laboral">
+        <!-- URL de imagen probada y directa de Unsplash -->
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Líder facilitando taller de trabajo en equipo e igualdad">
       </div>
     </section>
 
-    <!-- SERVICIOS ESTRATÉGICOS CLAROS -->
+    <!-- SERVICIOS ESTRATÉGICOS -->
     <section class="section section-bg-light" id="servicios">
       <div class="container">
         <h2 class="section-title">Asesoría Estratégica Normativa</h2>
         <p class="section-subtitle">Acompañamos a las empresas en el cumplimiento normativo con una mirada técnica, preventiva y centrada en las personas.</p>
         
         <div class="cards-grid">
-          <!-- Card 1 -->
           <div class="card">
             <div class="icon-wrapper">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
@@ -200,7 +198,6 @@
             <p>Confección del protocolo obligatorio de prevención, integración al Reglamento Interno (RIOHS) y diseño de canales formales de denuncia.</p>
           </div>
 
-          <!-- Card 2 -->
           <div class="card">
             <div class="icon-wrapper">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
@@ -209,7 +206,6 @@
             <p>Estructuramos, levantamos indicadores y redactamos el informe obligatorio de equidad de género de tu empresa para ser entregado en marzo.</p>
           </div>
 
-          <!-- Card 3 -->
           <div class="card">
             <div class="icon-wrapper">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -218,7 +214,6 @@
             <p>Conducción imparcial y técnica de procedimientos de investigación ante denuncias por acoso laboral, sexual o violencia.</p>
           </div>
 
-          <!-- Card 4 -->
           <div class="card">
             <div class="icon-wrapper">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><path d="M3 9l3 6 3-6"></path><path d="M15 9l3 6 3-6"></path></svg>
@@ -230,7 +225,7 @@
       </div>
     </section>
 
-    <!-- INFORME LEY 21.828 (MARZO) -->
+    <!-- INFORME LEY 21.828 -->
     <section class="section container" id="ley-21828">
       <div class="informe-box">
         <h2>⚠️ Alerta de Cumplimiento: Informe Anual Ley 21.828</h2>
@@ -283,12 +278,12 @@
           </div>
         </div>
         <div class="hero-image">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Capacitación y formación en equipo">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Capacitación y formación en equipo">
         </div>
       </div>
     </section>
 
-    <!-- RECURSOS Y DESCARGABLES (MUESTRA GRATUITA DEL MANUAL) -->
+    <!-- RECURSOS -->
     <section class="section container" id="recursos">
       <h2 class="section-title" style="text-align: center;">Recursos y Muestras Gratuitas</h2>
       <p class="section-subtitle" style="text-align: center; margin: 0 auto 35px auto;">
@@ -296,7 +291,6 @@
       </p>
 
       <div class="recursos-grid">
-        <!-- LEAD MAGNET: CAPÍTULO 1 E INTRODUCCIÓN -->
         <div class="recurso-card recurso-destacado">
           <div class="badge-pronto">Muestra Gratis</div>
           <h3>
@@ -310,7 +304,6 @@
           </form>
         </div>
 
-        <!-- RECURSO 2 -->
         <div class="recurso-card">
           <h3>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
@@ -322,7 +315,7 @@
       </div>
     </section>
 
-    <!-- DIAGNÓSTICO LEY KARIN (5 Preguntas) -->
+    <!-- DIAGNÓSTICO LEY KARIN -->
     <section class="section section-bg-light" id="diagnostico">
       <div class="container">
         <h2 class="section-title">Diagnóstico Ley Karin Gratuito</h2>
@@ -378,13 +371,12 @@
       </div>
     </section>
 
-    <!-- MITOS Y REALIDADES LEY KARIN (UBICACIÓN INFERIOR CON ICONOS PEQUEÑOS) -->
+    <!-- MITOS Y REALIDADES -->
     <section class="section container" id="mitos">
       <h2 class="section-title">Mitos y Realidades de la Ley Karin</h2>
       <p class="section-subtitle">Aclarar los límites entre la exigencia laboral legítima y el acoso es fundamental para proteger a jefaturas y colaboradores.</p>
 
       <div class="comparativa-grid">
-        <!-- QUÉ SÍ ES -->
         <div class="box-comparativa box-si">
           <h3>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
@@ -397,7 +389,6 @@
           </ul>
         </div>
 
-        <!-- QUÉ NO ES -->
         <div class="box-comparativa box-no">
           <h3>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
