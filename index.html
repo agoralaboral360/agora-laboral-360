@@ -25,7 +25,8 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: var(--color-fondo);
+            /* Fondo con degradado sutil para quitar lo plano */
+            background: linear-gradient(135deg, #FAF8F4 0%, #EBE7DF 100%);
             font-family: 'Montserrat', sans-serif;
             color: var(--color-texto);
             line-height: 1.6;
@@ -39,7 +40,7 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 2px solid var(--color-borde);
-            box-shadow: 0 2px 8px rgba(78, 64, 54, 0.04);
+            box-shadow: 0 2px 10px rgba(78, 64, 54, 0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -82,7 +83,7 @@
             padding: 40px 20px 60px 20px;
         }
 
-        /* SECCIÓN HÉROE Y SERVICIOS */
+        /* SECCIÓN HÉROE */
         .hero-section {
             display: flex;
             flex-wrap: wrap;
@@ -103,10 +104,10 @@
         .card-servicio {
             background-color: var(--color-tarjeta);
             border: 2px solid var(--color-borde);
-            border-radius: 8px;
+            border-radius: 12px;
             padding: 30px 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(78, 64, 54, 0.02);
+            box-shadow: 0 6px 15px rgba(78, 64, 54, 0.05);
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
@@ -173,6 +174,7 @@
             font-size: 15px;
             text-transform: uppercase;
             transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(148, 185, 167, 0.4);
         }
 
         .btn-principal:hover {
@@ -180,16 +182,23 @@
             transform: scale(1.02);
         }
 
-        /* QUIÉNES SOMOS */
+        /* QUIÉNES SOMOS (CON FOTO) */
         .nosotros-section {
             background-color: var(--color-tarjeta);
             border-radius: 12px;
-            padding: 45px;
             border: 2px solid var(--color-borde);
-            margin-bottom: 70px;
+            margin-bottom: 80px;
+            display: flex;
+            overflow: hidden; /* Permite que la imagen se adapte a los bordes curvos */
+            box-shadow: 0 5px 20px rgba(78, 64, 54, 0.05);
         }
 
-        .nosotros-section h2 {
+        .nosotros-texto {
+            flex: 1.2;
+            padding: 50px;
+        }
+
+        .nosotros-texto h2 {
             font-family: 'Oswald', sans-serif;
             font-size: 36px;
             color: var(--color-texto);
@@ -197,21 +206,32 @@
             text-transform: uppercase;
         }
 
-        /* DIAGNÓSTICO GRATUITO */
+        .nosotros-imagen {
+            flex: 1;
+            /* Foto de consultoría profesional */
+            background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* DIAGNÓSTICO (DISEÑO PREMIUM CON FONDO OSCURO) */
         .diagnostico-section {
-            background-color: var(--color-tarjeta);
-            border: 2px solid var(--color-borde);
+            /* Filtro oscuro + Foto de oficina de fondo */
+            background-image: linear-gradient(rgba(78, 64, 54, 0.88), rgba(78, 64, 54, 0.95)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
             border-radius: 12px;
-            padding: 40px;
-            margin-bottom: 70px;
-            box-shadow: 0 5px 15px rgba(78, 64, 54, 0.03);
+            padding: 50px;
+            margin-bottom: 80px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            color: #FFFFFF;
         }
 
         .diagnostico-section h2 {
             font-family: 'Oswald', sans-serif;
             font-size: 36px;
             text-transform: uppercase;
-            color: var(--color-texto);
+            color: #FFFFFF;
             text-align: center;
             margin-top: 0;
         }
@@ -219,13 +239,13 @@
         .pregunta-item {
             margin-bottom: 25px;
             padding-bottom: 15px;
-            border-bottom: 1px solid var(--color-borde);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .pregunta-item p {
             font-weight: 600;
             font-size: 16px;
-            color: var(--color-texto);
+            color: #FFFFFF;
             margin-bottom: 12px;
         }
 
@@ -236,15 +256,15 @@
         }
 
         .opciones-group label {
-            background-color: var(--color-fondo);
-            border: 1px solid var(--color-borde);
-            color: var(--color-texto);
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #FFFFFF;
             padding: 10px 20px;
             border-radius: 20px;
             cursor: pointer;
             font-size: 14px;
             font-weight: 500;
-            transition: background-color 0.2s ease, border-color 0.2s ease;
+            transition: all 0.2s ease;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -252,7 +272,8 @@
 
         .opciones-group label:hover {
             background-color: var(--color-principal);
-            border-color: var(--color-boton);
+            color: var(--color-texto);
+            border-color: var(--color-principal);
         }
 
         .btn-calcular {
@@ -270,6 +291,7 @@
             text-transform: uppercase;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(148, 185, 167, 0.4);
         }
 
         .btn-calcular:hover {
@@ -285,14 +307,16 @@
             text-align: center;
             background-color: var(--color-fondo);
             border: 1px solid var(--color-borde);
+            color: var(--color-texto);
         }
 
-        /* ACADEMIA ÁGORA */
+        /* ACADEMIA ÁGORA (CON FOTO) */
         .academia-section {
             background-color: var(--color-tarjeta);
             border-radius: 12px;
             padding: 45px;
             border: 2px solid var(--color-borde);
+            box-shadow: 0 5px 20px rgba(78, 64, 54, 0.05);
         }
 
         .academia-header {
@@ -312,6 +336,15 @@
             display: grid;
             grid-template-columns: 1.2fr 1fr;
             gap: 40px;
+        }
+
+        .academia-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(78, 64, 54, 0.08);
         }
 
         .modulos-lista {
@@ -347,10 +380,14 @@
             margin-top: 60px;
         }
 
+        /* DISEÑO RESPONSIVO (MÓVILES) */
         @media (max-width: 992px) {
             header { padding: 15px 20px; }
             nav ul { gap: 15px; }
+            .nosotros-section { flex-direction: column; }
+            .nosotros-imagen { min-height: 250px; }
             .academia-grid { grid-template-columns: 1fr; }
+            .diagnostico-section { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -409,15 +446,19 @@
 
         <!-- QUIÉNES SOMOS -->
         <div class="nosotros-section" id="nosotros">
-            <h2>¿Quiénes Somos?</h2>
-            <p><strong>Ágora Laboral 360°</strong> nace con el propósito de acompañar a las organizaciones en la transformación hacia espacios de trabajo dignos, seguros y respetuosos. Nos especializamos en la prevención del acoso laboral, sexual y la violencia en el trabajo, alineados estrictamente con las exigencias de la Ley Karin.</p>
-            <p>Nuestro equipo interdisciplinario combina asesoría jurídica, gestión de personas y capacitación técnica para entregar soluciones integrales 360° adaptadas a la realidad de cada empresa.</p>
+            <div class="nosotros-texto">
+                <h2>¿Quiénes Somos?</h2>
+                <p><strong>Ágora Laboral 360°</strong> nace con el propósito de acompañar a las organizaciones en la transformación hacia espacios de trabajo dignos, seguros y respetuosos. Nos especializamos en la prevención del acoso laboral, sexual y la violencia en el trabajo, alineados estrictamente con las exigencias de la Ley Karin.</p>
+                <p>Nuestro equipo interdisciplinario combina asesoría jurídica, gestión de personas y capacitación técnica para entregar soluciones integrales 360° adaptadas a la realidad de cada empresa.</p>
+            </div>
+            <!-- La imagen se carga como fondo en CSS -->
+            <div class="nosotros-imagen"></div>
         </div>
 
         <!-- DIAGNÓSTICO GRATUITO -->
         <div class="diagnostico-section" id="diagnostico">
             <h2>Diagnóstico Gratuito Ley Karin</h2>
-            <p style="text-align: center; color: var(--color-texto); opacity: 0.8; margin-bottom: 30px;">Responde estas 5 preguntas para evaluar el nivel de cumplimiento de tu empresa sin costo y en tiempo real:</p>
+            <p style="text-align: center; opacity: 0.9; margin-bottom: 30px;">Responde estas 5 preguntas para evaluar el nivel de cumplimiento de tu empresa sin costo y en tiempo real:</p>
 
             <form id="quizForm">
                 <div class="pregunta-item">
@@ -468,8 +509,8 @@
 
             <div id="resultadoBox" class="resultado-box">
                 <h3 id="resultadoTitulo" style="font-family:'Oswald', sans-serif; font-size:26px; margin-top:0;"></h3>
-                <p id="resultadoTexto" style="font-size: 16px; color: var(--color-texto);"></p>
-                <a href="https://wa.me/56900000000?text=Hola,%20hice%20el%20diagnóstico%20gratuito%20en%20su%20web%20y%20me%20gustaría%20recibir%20asesoría." target="_blank" class="btn-principal" style="background-color: #25D366; margin-top: 15px;">
+                <p id="resultadoTexto" style="font-size: 16px; margin-bottom:20px;"></p>
+                <a href="https://wa.me/56900000000?text=Hola,%20hice%20el%20diagnóstico%20gratuito%20en%20su%20web%20y%20me%20gustaría%20recibir%20asesoría." target="_blank" class="btn-principal" style="background-color: #25D366; color:white;">
                     <i class="fa-brands fa-whatsapp"></i> Solicitar Asesoría para Mi Resultado
                 </a>
             </div>
@@ -484,6 +525,8 @@
             
             <div class="academia-grid">
                 <div class="manual-info">
+                    <!-- Foto insertada del Manual -->
+                    <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Manual Ley Karin" class="academia-img">
                     <h3 style="color: var(--color-texto);">Nuestro Manual Especializado</h3>
                     <p>Accede a nuestro manual exclusivo de construcción propia, diseñado para guiar a las empresas en la implementación efectiva de la Ley Karin. Incluye matrices de riesgo, plantillas de protocolos y casos de estudio.</p>
                 </div>
