@@ -19,7 +19,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 90px; /* Evita que la barra fija tape el contenido al hacer clic en el menú */
+            scroll-padding-top: 90px;
         }
 
         body {
@@ -31,7 +31,7 @@
             line-height: 1.6;
         }
 
-        /* BARRA SUPERIOR */
+        /* HEADER */
         header {
             background-color: var(--color-tarjeta);
             padding: 15px 50px;
@@ -59,14 +59,15 @@
             padding: 0;
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 25px;
         }
 
         nav a {
             text-decoration: none;
             color: var(--color-texto);
-            font-weight: 500;
-            font-size: 15px;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
             transition: color 0.3s ease;
         }
 
@@ -74,11 +75,10 @@
             color: var(--color-secundario);
         }
 
-        /* CONTENEDOR PRINCIPAL CON MARGEN SUPERIOR */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px 80px 20px;
+            padding: 40px 20px 60px 20px;
         }
 
         /* SECCIÓN HÉROE */
@@ -88,7 +88,7 @@
             gap: 40px;
             align-items: center;
             justify-content: center;
-            margin-bottom: 80px;
+            margin-bottom: 70px;
         }
 
         .grid-servicios {
@@ -106,12 +106,11 @@
             padding: 30px 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .card-servicio:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
         }
 
         .card-servicio i {
@@ -134,7 +133,6 @@
             color: #666666;
             margin-top: 10px;
             margin-bottom: 0;
-            line-height: 1.4;
         }
 
         .bloque-texto {
@@ -151,22 +149,19 @@
             margin-top: 0;
             margin-bottom: 20px;
             line-height: 1.1;
-            letter-spacing: 1px;
         }
 
         .bloque-texto p {
             font-size: 18px;
             color: #555555;
-            line-height: 1.6;
             margin-bottom: 30px;
         }
 
-        /* BOTÓN CTA (WHATSAPP) */
-        .btn-contacto {
+        .btn-principal {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background-color: #25D366;
+            background-color: var(--color-primario);
             color: white;
             text-decoration: none;
             padding: 14px 28px;
@@ -174,33 +169,127 @@
             font-weight: 700;
             font-size: 15px;
             text-transform: uppercase;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+            transition: background-color 0.3s ease;
         }
 
-        .btn-contacto:hover {
-            background-color: #128C7E;
-            transform: scale(1.02);
+        .btn-principal:hover {
+            background-color: #1E2B25;
         }
 
-        /* SECCIÓN ACADEMIA ÁGORA */
+        /* QUIÉNES SOMOS */
+        .nosotros-section {
+            background-color: var(--color-tarjeta);
+            border-radius: 12px;
+            padding: 45px;
+            border: 2px solid var(--color-borde);
+            margin-bottom: 70px;
+        }
+
+        .nosotros-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            color: var(--color-primario);
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+        /* DIAGNÓSTICO INTERACTIVO */
+        .diagnostico-section {
+            background-color: #FFFFFF;
+            border: 2px solid var(--color-borde);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 70px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .diagnostico-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            text-transform: uppercase;
+            color: var(--color-primario);
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .pregunta-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #E6F0EA;
+        }
+
+        .pregunta-item p {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--color-primario);
+            margin-bottom: 12px;
+        }
+
+        .opciones-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .opciones-group label {
+            background-color: var(--color-fondo);
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .opciones-group label:hover {
+            background-color: var(--color-secundario);
+            color: white;
+        }
+
+        .btn-calcular {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 30px auto 0 auto;
+            background-color: var(--color-acento);
+            color: #333333;
+            border: none;
+            padding: 15px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-calcular:hover {
+            transform: scale(1.03);
+        }
+
+        .resultado-box {
+            display: none;
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            background-color: var(--color-fondo);
+        }
+
+        /* ACADEMIA */
         .academia-section {
             background-color: var(--color-tarjeta);
             border-radius: 12px;
             padding: 45px;
             border: 2px solid var(--color-borde);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
         }
 
         .academia-header {
             text-align: center;
             margin-bottom: 35px;
-        }
-
-        .academia-header i {
-            font-size: 38px;
-            color: var(--color-acento);
-            margin-bottom: 10px;
         }
 
         .academia-header h2 {
@@ -215,15 +304,6 @@
             display: grid;
             grid-template-columns: 1.2fr 1fr;
             gap: 40px;
-            align-items: start;
-        }
-
-        .manual-info h3, .modulos-info h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            color: var(--color-primario);
-            font-size: 20px;
-            margin-top: 0;
         }
 
         .modulos-lista {
@@ -241,42 +321,39 @@
             align-items: center;
             gap: 12px;
             font-weight: 500;
-            color: var(--color-texto);
-            font-size: 15px;
         }
 
         .modulos-lista li i {
             color: var(--color-secundario);
-            font-size: 18px;
         }
 
-        /* PIE DE PÁGINA (FOOTER) */
+        /* FOOTER */
         footer {
             background-color: var(--color-primario);
             color: #FFFFFF;
             text-align: center;
             padding: 25px 20px;
             font-size: 14px;
+            margin-top: 60px;
         }
-
-        footer p { margin: 0; opacity: 0.9; }
 
         @media (max-width: 992px) {
             header { padding: 15px 20px; }
-            .bloque-texto h2 { font-size: 38px; }
-            .academia-grid { grid-template-columns: 1fr; gap: 30px; }
+            nav ul { gap: 15px; }
+            .academia-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- BARRA SUPERIOR -->
+    <!-- NAVEGACIÓN -->
     <header>
         <a href="#inicio" class="logo">Ágora <span style="font-weight:300; font-size:22px;">Laboral 360</span></a>
         <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#diagnostico">Diagnóstico</a></li>
                 <li><a href="#academia">Academia</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -285,7 +362,7 @@
 
     <div class="container" id="inicio">
         
-        <!-- SECCIÓN PRINCIPAL -->
+        <!-- SERVICIOS -->
         <div class="hero-section" id="servicios">
             <div class="grid-servicios">
                 <div class="card-servicio">
@@ -313,29 +390,95 @@
             <div class="bloque-texto">
                 <h2>¿POR QUÉ ELEGIR A ÁGORA?</h2>
                 <p>Somos una consultora especialista en la Ley Karin, enfocada en crear entornos laborales seguros, preventivos y libres de violencia.</p>
-                
-                <a href="https://wa.me/56900000000" class="btn-contacto" target="_blank" id="contacto">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    Contactar por WhatsApp
+                <a href="#diagnostico" class="btn-principal">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    Evaluar mi Empresa
                 </a>
             </div>
         </div>
 
-        <!-- SECCIÓN ACADEMIA ÁGORA -->
+        <!-- QUIÉNES SOMOS -->
+        <div class="nosotros-section" id="nosotros">
+            <h2>¿Quiénes Somos?</h2>
+            <p><strong>Ágora Laboral 360</strong> nace con el propósito de acompañar a las organizaciones en la transformación hacia espacios de trabajo dignos, seguros y respetuosos. Nos especializamos en la prevención del acoso laboral, sexual y la violencia en el trabajo, alineados estrictamente con las exigencias de la Ley Karin.</p>
+            <p>Nuestro equipo interdisciplinario combina asesoría jurídica, gestión de personas y capacitación técnica para entregar soluciones integrales adaptadas a la realidad de cada empresa.</p>
+        </div>
+
+        <!-- DIAGNÓSTICO INTERACTIVO -->
+        <div class="diagnostico-section" id="diagnostico">
+            <h2>Diagnóstico Exprés Ley Karin</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 30px;">Responde estas 5 preguntas para evaluar el nivel de cumplimiento de tu empresa en tiempo real:</p>
+
+            <form id="quizForm">
+                <div class="pregunta-item">
+                    <p>1. ¿Cuenta tu empresa con un Protocolo de Prevención de la Ley Karin formalmente redactado?</p>
+                    <div class="opciones-group">
+                        <label><input type="radio" name="p1" value="2" required> Sí, implementado</label>
+                        <label><input type="radio" name="p1" value="1"> En elaboración</label>
+                        <label><input type="radio" name="p1" value="0"> No tenemos</label>
+                    </div>
+                </div>
+
+                <div class="pregunta-item">
+                    <p>2. ¿Tienen habilitado un Canal de Denuncias confidencial e imparcial?</p>
+                    <div class="opciones-group">
+                        <label><input type="radio" name="p2" value="2" required> Sí, activo</label>
+                        <label><input type="radio" name="p2" value="0"> No tenemos</label>
+                    </div>
+                </div>
+
+                <div class="pregunta-item">
+                    <p>3. ¿Han evaluado e identificado la matriz de riesgos psicosociales en el trabajo?</p>
+                    <div class="opciones-group">
+                        <label><input type="radio" name="p3" value="2" required> Sí</label>
+                        <label><input type="radio" name="p3" value="1"> Parcialmente</label>
+                        <label><input type="radio" name="p3" value="0"> No</label>
+                    </div>
+                </div>
+
+                <div class="pregunta-item">
+                    <p>4. ¿Sus colaboradores y jefaturas han recibido capacitación oficial sobre la normativa?</p>
+                    <div class="opciones-group">
+                        <label><input type="radio" name="p4" value="2" required> Sí, capacitados</label>
+                        <label><input type="radio" name="p4" value="1"> Solo jefaturas</label>
+                        <label><input type="radio" name="p4" value="0"> Ninguna</label>
+                    </div>
+                </div>
+
+                <div class="pregunta-item">
+                    <p>5. ¿Tienen definido un procedimiento formal para investigaciones internas de denuncias?</p>
+                    <div class="opciones-group">
+                        <label><input type="radio" name="p5" value="2" required> Sí</label>
+                        <label><input type="radio" name="p5" value="0"> No</label>
+                    </div>
+                </div>
+
+                <button type="button" class="btn-calcular" onclick="calcularResultado()">Obtener Mi Resultado</button>
+            </form>
+
+            <div id="resultadoBox" class="resultado-box">
+                <h3 id="resultadoTitulo" style="font-family:'Oswald', sans-serif; font-size:26px; margin-top:0;"></h3>
+                <p id="resultadoTexto" style="font-size: 16px; color: #555;"></p>
+                <a href="https://wa.me/56900000000?text=Hola,%20hice%20el%20diagnóstico%20exprés%20en%20su%20web%20y%20me%20gustaría%20recibir%20asesoría." target="_blank" class="btn-principal" style="background-color: #25D366; margin-top: 15px;">
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar Asesoría para Mi Resultado
+                </a>
+            </div>
+        </div>
+
+        <!-- ACADEMIA ÁGORA -->
         <div class="academia-section" id="academia">
             <div class="academia-header">
-                <i class="fa-solid fa-graduation-cap"></i>
+                <i class="fa-solid fa-graduation-cap" style="font-size: 36px; color: var(--color-acento);"></i>
                 <h2>Academia Ágora</h2>
             </div>
             
             <div class="academia-grid">
                 <div class="manual-info">
-                    <h3>Nuestro Manual Especializado</h3>
+                    <h3 style="color: var(--color-primario);">Nuestro Manual Especializado</h3>
                     <p>Accede a nuestro manual exclusivo de construcción propia, diseñado para guiar a las empresas en la implementación efectiva de la Ley Karin. Incluye matrices de riesgo, plantillas de protocolos y casos de estudio.</p>
-                    <p>Ofrecemos capacitaciones presenciales y online adaptadas a las necesidades de tu organización.</p>
                 </div>
                 <div class="modulos-info">
-                    <h3>Módulos de Formación</h3>
+                    <h3 style="color: var(--color-primario);">Módulos de Formación</h3>
                     <ul class="modulos-lista">
                         <li><i class="fa-solid fa-circle-check"></i> Introducción a la Ley Karin</li>
                         <li><i class="fa-solid fa-circle-check"></i> Protocolo de Prevención</li>
@@ -348,10 +491,53 @@
 
     </div>
 
-    <!-- PIE DE PÁGINA -->
-    <footer>
-        <p>© 2026 Ágora Laboral 360 - Todos los derechos reservados.</p>
+    <!-- FOOTER -->
+    <footer id="contacto">
+        <p><strong>Ágora Laboral 360</strong> | Consultoría Especializada en Ley Karin</p>
+        <p style="margin-top: 5px; opacity: 0.8;">© 2026 Todos los derechos reservados.</p>
     </footer>
+
+    <!-- SCRIPT DE EVALUACIÓN INTERACTIVA -->
+    <script>
+        function calcularResultado() {
+            let form = document.getElementById('quizForm');
+            let data = new FormData(form);
+            let puntaje = 0;
+            let respondidas = 0;
+
+            for (let value of data.values()) {
+                puntaje += parseInt(value);
+                respondidas++;
+            }
+
+            if (respondidas < 5) {
+                alert('Por favor responde las 5 preguntas para obtener tu diagnóstico.');
+                return;
+            }
+
+            let box = document.getElementById('resultadoBox');
+            let titulo = document.getElementById('resultadoTitulo');
+            let texto = document.getElementById('resultadoTexto');
+
+            box.style.display = 'block';
+
+            if (puntaje >= 8) {
+                titulo.innerText = '¡Nivel de Cumplimiento Alto!';
+                titulo.style.color = '#2C3E35';
+                texto.innerText = 'Tu empresa cuenta con una estructura sólida frente a la Ley Karin. Te recomendamos auditar periódicamente tus procesos para mantener los estándares.';
+            } else if (puntaje >= 5) {
+                titulo.innerText = 'Nivel de Cumplimiento Medio (Atención Requerida)';
+                titulo.style.color = '#D4AF37';
+                texto.innerText = 'Tienes avances importantes, pero existen brechas normativas que podrían exponer a la organización a sanciones de la Dirección del Trabajo.';
+            } else {
+                titulo.innerText = '¡Alerta de Riesgo Alto!';
+                titulo.style.color = '#C0392B';
+                texto.innerText = 'Tu empresa presenta deficiencias críticas ante las exigencias de la Ley Karin. Es urgente implementar los protocolos básicos y canales de denuncia.';
+            }
+
+            box.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 </html>
