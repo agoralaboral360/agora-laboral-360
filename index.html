@@ -3,15 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ágora Laboral 360° | Ley Karin y Gestión Psicosocial</title>
+  <title>Ágora Laboral 360° | Ley Karin, Inclusión y Equidad de Género</title>
   
-  <!-- Tipografías Corporativas Google Fonts -->
+  <!-- Tipografías Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* RESET Y ESTILOS BASE */
+    :root {
+      --verde-principal: #256d46; /* Verde cálido y vivo */
+      --verde-claro: #38b000;
+      --verde-fondo: #f2f7f4;
+      --naranja-acento: #e07a27;
+      --naranja-hover: #c9671b;
+      --texto-oscuro: #222222;
+      --texto-suave: #4a5568;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -24,26 +33,26 @@
 
     body {
       font-family: 'Montserrat', sans-serif;
-      color: #2b2b2b;
+      color: var(--texto-oscuro);
       background-color: #ffffff;
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
-    /* TIPOGRAFÍA ELEGANTE SOBRIA */
-    h1, h2, h3, .titulo-ejecutivo {
+    /* TITULOS CON CARÁCTER Y CALIDEZ */
+    h1, h2, h3 {
       font-family: 'Playfair Display', Georgia, serif;
+      color: var(--verde-principal);
       font-weight: 700;
-      color: #1e3328; /* Verde corporativo profundo */
-      letter-spacing: -0.3px;
     }
 
-    /* 1. ENCABEZADO Y NAVEGACIÓN */
+    /* 1. NAVEGACIÓN VIVA */
     .header {
       background-color: #ffffff;
-      border-bottom: 1px solid #e5e5e5;
+      border-bottom: 2px solid #eef2f0;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     }
 
     .navbar {
@@ -52,63 +61,60 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 24px;
+      padding: 16px 24px;
     }
 
     .logo-text {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      letter-spacing: 0.5px;
-      color: #1e3328;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--verde-principal);
+      letter-spacing: -0.5px;
     }
 
     .logo-text span {
-      color: #e07a27; /* Naranja de acento */
+      color: var(--naranja-acento);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 16px;
       list-style: none;
     }
 
     .nav-links a {
       text-decoration: none;
-      color: #333333;
+      color: var(--texto-oscuro);
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       transition: color 0.2s ease;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: #1e3328;
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--verde-principal);
     }
 
-    /* Botón de Acción Naranja */
-    .btn-cta {
-      background-color: #e07a27 !important;
+    .btn-nav-cta {
+      background-color: var(--naranja-acento) !important;
       color: #ffffff !important;
-      padding: 10px 22px;
-      border-radius: 2px !important;
+      padding: 10px 18px;
+      border-radius: 6px !important;
       font-weight: 700 !important;
-      transition: background-color 0.2s ease;
+      transition: background 0.2s ease;
     }
 
-    .btn-cta:hover {
-      background-color: #c9671b !important;
+    .btn-nav-cta:hover {
+      background-color: var(--naranja-hover) !important;
     }
 
-    /* 2. BARRA DE CONFIANZA ENFOQUE PSICOSOCIAL */
+    /* 2. BARRA DE CONFIANZA Y CULTURA DE GÉNERO */
     .trust-bar {
-      background-color: #1e3328;
+      background-color: var(--verde-principal);
       color: #ffffff;
       padding: 14px 24px;
-      border-bottom: 3px solid #e07a27;
+      border-bottom: 4px solid var(--naranja-acento);
     }
 
     .trust-container {
@@ -119,8 +125,8 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 16px;
-      font-size: 0.85rem;
-      font-weight: 500;
+      font-size: 0.88rem;
+      font-weight: 600;
     }
 
     .trust-item {
@@ -130,11 +136,11 @@
     }
 
     .trust-item .icon {
-      color: #e07a27;
-      font-weight: bold;
+      color: var(--naranja-acento);
+      font-size: 1.1rem;
     }
 
-    /* 3. ESTRUCTURA Y CONTENIDO */
+    /* CONTENEDORES Y SECCIONES */
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -142,253 +148,461 @@
     }
 
     .section {
-      padding: 65px 0;
-      border-bottom: 1px solid #eeeeee;
+      padding: 70px 0;
     }
 
-    .section:last-of-type {
-      border-bottom: none;
+    .section-bg-light {
+      background-color: var(--verde-fondo);
     }
 
-    /* HERO PRINCIPAL CON GANCHO DE ATENCIÓN */
+    .section-title {
+      font-size: 2.3rem;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--texto-suave);
+      max-width: 800px;
+      margin-bottom: 40px;
+    }
+
+    /* HERO PRINCIPAL (CALIDEZ Y DIVERSIDAD) */
     .hero-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 50px;
+      gap: 40px;
       align-items: center;
     }
 
     .hero-text h1 {
-      font-size: 2.4rem;
+      font-size: 2.5rem;
       line-height: 1.2;
       margin-bottom: 20px;
     }
 
-    .hero-text .sub-lead {
-      font-size: 1.1rem;
-      color: #444444;
-      margin-bottom: 24px;
-      font-weight: 500;
-    }
-
     .hero-text p {
-      font-size: 1rem;
-      color: #555555;
+      font-size: 1.05rem;
+      color: var(--texto-suave);
       margin-bottom: 28px;
     }
 
     .btn-hero {
       display: inline-block;
-      background-color: #e07a27;
+      background-color: var(--naranja-acento);
       color: #ffffff;
       padding: 14px 28px;
       text-decoration: none;
       font-weight: 700;
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      border-radius: 2px;
-      transition: background-color 0.2s;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 14px rgba(224, 122, 39, 0.3);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
     }
 
     .btn-hero:hover {
-      background-color: #c9671b;
+      background-color: var(--naranja-hover);
+      transform: translateY(-2px);
     }
 
     .hero-image img {
       width: 100%;
-      height: 100%;
-      max-height: 440px;
+      height: 420px;
       object-fit: cover;
-      border-radius: 2px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
-    /* SECCIÓN IMPACTO Y PILARES LEY KARIN */
-    .section-title {
-      font-size: 2.1rem;
-      margin-bottom: 16px;
-      text-align: left;
-    }
-
-    .section-intro {
-      font-size: 1.05rem;
-      color: #555555;
-      max-width: 850px;
-      margin-bottom: 40px;
-    }
-
-    .pilares-grid {
+    /* TARJETAS DINÁMICAS (SERVICIOS Y ACADEMIA) */
+    .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      border-top: 5px solid var(--verde-principal);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-icon {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--texto-suave);
+    }
+
+    /* SECCIÓN RECURSOS Y DESCARGABLES */
+    .recursos-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 30px;
     }
-
-    .pilar-item {
-      padding: 24px;
-      background: #fafafa;
-      border-left: 4px solid #1e3328;
+    
+    .recurso-card {
+      background: var(--verde-principal);
+      color: white;
+      padding: 40px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .pilar-item h3 {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
+    .recurso-card h3 {
+      color: white;
+      font-size: 1.6rem;
+      margin-bottom: 15px;
     }
 
-    .pilar-item p {
+    .recurso-card p {
+      margin-bottom: 25px;
       font-size: 0.95rem;
-      color: #555555;
+      opacity: 0.9;
     }
 
-    /* FOOTER */
-    footer {
-      background-color: #1e3328;
-      color: #ffffff;
-      text-align: center;
-      padding: 30px 24px;
-      font-size: 0.85rem;
+    .input-recurso {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 10px;
+      font-family: inherit;
     }
 
-    /* RESPONSIVO */
+    .btn-recurso {
+      background: var(--naranja-acento);
+      color: white;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-recurso:hover { background: var(--naranja-hover); }
+
+    .badge-pronto {
+      position: absolute;
+      top: 15px;
+      right: -30px;
+      background: var(--naranja-acento);
+      color: white;
+      padding: 5px 40px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      transform: rotate(45deg);
+    }
+
+    /* DIAGNÓSTICO INTERACTIVO */
+    .quiz-box {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      border: 1px solid #e0e7e3;
+    }
+
+    .quiz-question { margin-bottom: 24px; }
+    .quiz-question p { font-weight: 600; margin-bottom: 10px; font-size: 1.05rem; }
+    .quiz-options label { display: inline-block; margin-right: 20px; font-weight: 500; cursor: pointer; }
+    .quiz-options input { margin-right: 6px; accent-color: var(--naranja-acento); }
+
+    #quiz-result {
+      display: none;
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: var(--verde-fondo);
+      border-left: 5px solid var(--naranja-acento);
+    }
+
+    /* FOOTER Y FORMULARIOS */
+    .contact-form {
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem; }
+    .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #cccccc; border-radius: 6px; font-family: inherit; }
+
+    footer { background: var(--verde-principal); color: #ffffff; text-align: center; padding: 30px 24px; font-size: 0.9rem; }
+
     @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      .nav-links {
-        display: none;
-      }
-      .trust-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .hero-grid, .recursos-grid, .contact-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ENCABEZADO Y NAVEGACIÓN -->
+  <!-- NAVEGACIÓN -->
   <header class="header" id="inicio">
     <div class="navbar">
-      <div class="logo-container">
-        <div class="logo-text">ÁGORA LABORAL <span>360°</span></div>
-      </div>
-      
+      <div class="logo-text">ÁGORA LABORAL <span>360°</span></div>
       <nav>
         <ul class="nav-links">
           <li><a href="#inicio" class="active">INICIO</a></li>
-          <li><a href="#ley-karin">LEY KARIN</a></li>
-          <li><a href="#nosotros">NOSOTROS</a></li>
-          <li><a href="#servicios">SERVICIOS</a></li>
-          <li><a href="#diagnostico" class="btn-cta">DIAGNÓSTICO GRATIS</a></li>
+          <li><a href="#servicios">NORMATIVAS</a></li>
+          <li><a href="#academia">ACADEMIA 360°</a></li>
+          <li><a href="#recursos">RECURSOS</a></li>
+          <li><a href="#diagnostico" class="btn-nav-cta">DIAGNÓSTICO GRATIS</a></li>
           <li><a href="#contacto">CONTACTO</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- BARRA DE CONFIANZA (ENFOQUE INTEGRAL Y PSICOSOCIAL) -->
+  <!-- BARRA DE CONFIANZA -->
   <section class="trust-bar">
     <div class="trust-container">
-      <div class="trust-item">
-        <span class="icon">✓</span> CUMPLIMIENTO LEY N° 21.643 (LEY KARIN)
-      </div>
-      <div class="trust-item">
-        <span class="icon">★</span> ENFOQUE INTEGRAL Y PSICOSOCIAL
-      </div>
-      <div class="trust-item">
-        <span class="icon">🏢</span> PREVENCIÓN Y GESTIÓN DE PERSONAS B2B
-      </div>
+      <div class="trust-item"><span class="icon">✓</span> LEY KARIN (N° 21.643)</div>
+      <div class="trust-item"><span class="icon">⚖</span> LEY 21.828 (INCLUSIÓN MUJERES)</div>
+      <div class="trust-item"><span class="icon">🌱</span> LEY 21.015 Y GESTIÓN PSICOSOCIAL</div>
     </div>
   </section>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <main class="container">
-    
-    <!-- 1. HERO PRINCIPAL (GANCHO DE ATENCIÓN) -->
-    <section class="section hero-grid">
+  <main>
+    <!-- HERO PRINCIPAL (IMAGEN DIVERSA E INCLUSIVA) -->
+    <section class="section container hero-grid">
       <div class="hero-text">
-        <h1>Protege a tu organización y transforma tu entorno laboral con la Ley Karin</h1>
-        <p class="sub-lead">
-          La Ley N° 21.643 no es solo un requerimiento legal: es la oportunidad de construir espacios de trabajo seguros, libres de acoso y comprometidos con el bienestar psicosocial.
-        </p>
+        <h1>Construimos culturas laborales equitativas, seguras y libres de acoso</h1>
         <p>
-          En <strong>Ágora Laboral 360°</strong> acompañamos a las empresas en la implementación de protocolos efectivos, capacitación técnica y gestión humana del clima laboral.
+          Asesoría especializada y cálida para transformar las exigencias de la <strong>Ley Karin, la Ley 21.828 de Inclusión Femenina</strong> y normativas de equidad en oportunidades de desarrollo para tus equipos.
         </p>
-        <a href="#diagnostico" class="btn-hero">Solicitar Evaluación Inicial Sin Costo</a>
+        <a href="#diagnostico" class="btn-hero">Haz Tu Diagnóstico Gratis en 1 Minuto</a>
       </div>
-      
       <div class="hero-image">
-        <!-- Imagen humana, colaborativa, cálida con toque de ambiente moderno -->
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Asesoria psicosocial y clima laboral Ley Karin">
+        <!-- Imagen cálida, equidad de género, equipo de trabajo feliz y diverso -->
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Equipo de trabajo diverso con perspectiva de genero">
       </div>
     </section>
 
-    <!-- 2. EL IMPACTO DE LA LEY KARIN EN TU EMPRESA -->
-    <section class="section" id="ley-karin">
-      <h2 class="section-title">¿Qué exige la Ley Karin a tu organización?</h2>
-      <p class="section-intro">
-        La normativa establece obligaciones claras para empleadores en Chile en materia de prevención, investigación y sanción del acoso laboral, sexual y la violencia en el trabajo.
-      </p>
+    <!-- SERVICIOS: LEY KARIN, 21.828 E INCLUSIÓN -->
+    <section class="section section-bg-light" id="servicios">
+      <div class="container">
+        <h2 class="section-title">Asesoría Estratégica en Cumplimiento Normativo</h2>
+        <p class="section-subtitle">
+          Abordamos las leyes laborales desde una perspectiva humana, interdisciplinaria y de resguardo a la dignidad.
+        </p>
 
-      <div class="pilares-grid">
-        <div class="pilar-item">
-          <h3>1. Protocolos de Prevención</h3>
-          <p>Diseño e incorporación del protocolo de prevención de riesgos psicosociales en el Reglamento Interno (RIOHS).</p>
-        </div>
-        <div class="pilar-item">
-          <h3>2. Gestión de Denuncias e Investigación</h3>
-          <p>Procedimientos claros, imparciales y oportunos para la recepción, investigación y resguardo de las partes afectadas.</p>
-        </div>
-        <div class="pilar-item">
-          <h3>3. Acompañamiento y Formación</h3>
-          <p>Capacitación continua a jefaturas, comités y colaboradores para fomentar espacios de respeto y buen trato.</p>
-        </div>
-      </div>
-    </section>
+        <div class="cards-grid">
+          <div class="card">
+            <span class="card-icon">📋</span>
+            <h3>Protocolos Ley Karin</h3>
+            <p>Confección del protocolo de prevención de acoso laboral, sexual y violencia, con su correcta integración al RIOHS.</p>
+          </div>
 
-    <!-- 3. SECCIÓN QUIÉNES SOMOS (RESPALDO INSTITUCIONAL) -->
-    <section class="section" id="nosotros">
-      <h2 class="section-title">¿Quiénes somos en Ágora Laboral 360°?</h2>
-      <p class="section-intro">
-        Somos una consultora especializada que combina la <strong>gestión de personas, el enfoque psicosocial y la asesoría técnica</strong>. Acompañamos a las organizaciones a cumplir con las exigencias legales desde un enfoque humano, inclusivo y adaptado a la realidad de cada equipo de trabajo.
-      </p>
-    </section>
+          <div class="card">
+            <span class="card-icon">📊</span>
+            <h3>Ley 21.828: Transparencia Femenina</h3>
+            <p>Ante la falta de formato legal, estructuramos y redactamos tu <strong>Informe Anual de Inclusión Laboral de Mujeres</strong> a la medida de tu empresa.</p>
+          </div>
 
-    <!-- 4. SERVICIOS -->
-    <section class="section" id="servicios">
-      <h2 class="section-title">Nuestros Servicios Estratégicos</h2>
-      <div class="pilares-grid">
-        <div class="pilar-item">
-          <h3>Diagnóstico e Implementación</h3>
-          <p>Auditoría de cumplimiento normativo, redacción de protocolos e integración formal según la Ley N° 21.643.</p>
-        </div>
-        <div class="pilar-item">
-          <h3>Investigación Imparcial</h3>
-          <p>Conducción técnica e interdisciplinaria de procesos de investigación interna ante denuncias laborales.</p>
-        </div>
-        <div class="pilar-item">
-          <h3>Academia y Capacitación 360°</h3>
-          <p>Talleres prácticos y formación ejecutiva sobre liderazgo respetuoso y prevención de violencia laboral.</p>
+          <div class="card">
+            <span class="card-icon">⚖</span>
+            <h3>Perspectiva de Género</h3>
+            <p>Implementación de la Norma Chilena NCh3262, erradicación de sesgos inconscientes y auditorías de equidad salarial.</p>
+          </div>
+
+          <div class="card">
+            <span class="card-icon">🤝</span>
+            <h3>Ley de Inclusión (21.015)</h3>
+            <p>Acompañamiento en el cumplimiento del 1% de cuota laboral para personas con discapacidad y gestión de conciliación familiar.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. DIAGNÓSTICO GRATUITO Y CONTACTO -->
-    <section class="section" id="diagnostico">
-      <h2 class="section-title">Solicita tu Diagnóstico Inicial</h2>
-      <p class="section-intro">
-        Evalúa el estado de cumplimiento de tu empresa respecto a la Ley Karin. Coordina una breve sesión diagnóstica sin compromiso con nuestros especialistas.
-      </p>
-      <a href="mailto:contacto@agoralaboral.cl" class="btn-hero">Contactar a un Especialista</a>
+    <!-- ACADEMIA ÁGORA 360° -->
+    <section class="section container" id="academia">
+      <div class="hero-grid" style="grid-template-columns: 1fr 1fr; gap: 60px;">
+        <div>
+          <h2 class="section-title">Academia Ágora 360°</h2>
+          <p style="color: var(--texto-suave); margin-bottom: 20px; font-size: 1.05rem;">
+            No basta con firmar un protocolo; la cultura se cambia educando. Brindamos programas de capacitación dinámica y formativa para comités, jefaturas y colaboradores.
+          </p>
+          <ul style="list-style: none; line-height: 2.2;">
+            <li><strong style="color: var(--verde-principal);">🎓 Taller Ley Karin para Jefaturas:</strong> Prevención y deber de denuncia.</li>
+            <li><strong style="color: var(--verde-principal);">💡 Sensibilización en Buen Trato:</strong> Fomento del clima laboral y empatía.</li>
+            <li><strong style="color: var(--verde-principal);">🔍 Formación de Investigadores:</strong> Técnicas de investigación interna e imparcial.</li>
+          </ul>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Capacitación y formación Academia Agora 360">
+        </div>
+      </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: RECURSOS Y DESCARGABLES GRATIS -->
+    <section class="section section-bg-light" id="recursos">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">Recursos y Descargables Gratuitos</h2>
+        <p class="section-subtitle" style="text-align: center; margin: 0 auto 40px auto;">
+          Accede a herramientas prácticas diseñadas por nuestros especialistas para ayudarte a iniciar tu camino hacia el cumplimiento.
+        </p>
+
+        <div class="recursos-grid">
+          <!-- CARD MANUAL (LEAD MAGNET) -->
+          <div class="recurso-card">
+            <div class="badge-pronto">Fase Final</div>
+            <h3>📚 Manual Práctico: Ley Karin e Inclusión</h3>
+            <p>Estamos afinando los últimos detalles de nuestro manual exclusivo paso a paso. Anótate en la lista de espera y sé el primero en recibirlo gratis en tu correo.</p>
+            <form onsubmit="event.preventDefault(); alert('¡Gracias! Te enviaremos el manual a tu correo apenas sea lanzado.');">
+              <input type="email" class="input-recurso" placeholder="Ingresa tu correo institucional" required>
+              <button type="submit" class="btn-recurso">Quiero recibir el Manual</button>
+            </form>
+          </div>
+
+          <!-- CARD OTROS DESCARGABLES -->
+          <div class="recurso-card" style="background: #ffffff; color: var(--texto-oscuro); border: 2px solid var(--verde-principal);">
+            <h3 style="color: var(--verde-principal);">📄 Checklists y Plantillas</h3>
+            <p style="color: var(--texto-suave);">Descarga nuestras listas de verificación rápidas para evaluar las medidas de igualdad de género y los canales de denuncia de tu empresa.</p>
+            <button class="btn-recurso" style="margin-top: 15px;" onclick="alert('Esta sección de descargas directas se habilitará pronto.')">Explorar Documentos</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIAGNÓSTICO INTERACTIVO EN VIVO -->
+    <section class="section container" id="diagnostico">
+      <h2 class="section-title">Diagnóstico de Cumplimiento Exprés</h2>
+      <p class="section-subtitle">Responde estas 3 preguntas y conoce en el acto (gratis) la situación inicial de tu organización.</p>
+
+      <div class="quiz-box">
+        <form id="quiz-form">
+          <div class="quiz-question">
+            <p>1. ¿Tienen un protocolo activo contra el acoso ajustado a la Ley Karin?</p>
+            <div class="quiz-options">
+              <label><input type="radio" name="q1" value="no" required> No / En proceso</label>
+              <label><input type="radio" name="q1" value="si"> Sí, está al día</label>
+            </div>
+          </div>
+
+          <div class="quiz-question">
+            <p>2. ¿Están preparando el Informe Anual de Inclusión Femenina (Ley 21.828)?</p>
+            <div class="quiz-options">
+              <label><input type="radio" name="q2" value="no" required> No sabíamos de este informe</label>
+              <label><input type="radio" name="q2" value="si"> Sí, estamos trabajando en él</label>
+            </div>
+          </div>
+
+          <div class="quiz-question">
+            <p>3. ¿Han capacitado formalmente a jefaturas en enfoque de género y buen trato?</p>
+            <div class="quiz-options">
+              <label><input type="radio" name="q3" value="no" required> No aún</label>
+              <label><input type="radio" name="q3" value="si"> Sí</label>
+            </div>
+          </div>
+
+          <button type="button" class="btn-hero" onclick="calcularDiagnostico()">Ver Mi Resultado Inmediato</button>
+        </form>
+
+        <div id="quiz-result">
+          <h3 id="result-title"></h3>
+          <p id="result-text" style="margin-top: 8px;"></p>
+          <a href="#contacto" class="btn-hero" style="margin-top: 15px; display: inline-block; background-color: var(--verde-principal);">Solicitar Asesoría para regularizar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO DIRECTO -->
+    <section class="section section-bg-light" id="contacto">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="contact-form">
+            <h2 class="section-title" style="font-size: 1.8rem;">Escríbenos directamente</h2>
+            <form onsubmit="event.preventDefault(); alert('¡Gracias por contactarnos! Un especialista de Ágora 360° se comunicará contigo a la brevedad.');">
+              <div class="form-group">
+                <label>Nombre Completo</label>
+                <input type="text" placeholder="Ej: Camila González" required>
+              </div>
+              <div class="form-group">
+                <label>Correo Institucional</label>
+                <input type="email" placeholder="nombre@empresa.cl" required>
+              </div>
+              <div class="form-group">
+                <label>Mensaje o Consulta</label>
+                <textarea rows="4" placeholder="¿En qué podemos apoyar a tu equipo?" required></textarea>
+              </div>
+              <button type="submit" class="btn-hero" style="width: 100%; border: none;">Enviar Mensaje</button>
+            </form>
+          </div>
+          <div>
+            <h2 class="section-title">¿Quiénes somos?</h2>
+            <p style="color: var(--texto-suave); margin-bottom: 20px;">
+              Somos un equipo que une la psicología organizacional, la gestión de personas y la asesoría técnica para promover la equidad y el respeto laboral en Chile.
+            </p>
+            <div style="background: white; padding: 25px; border-radius: 8px; border-left: 4px solid var(--verde-principal); margin-bottom: 20px;">
+              <p><strong>📧 Correo:</strong> contacto@agoralaboral.cl</p>
+              <p><strong>📍 Ubicación:</strong> Santiago, Chile (Atención nacional)</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <!-- PIE DE PÁGINA -->
   <footer>
-    <p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados. | Santiago, Chile</p>
+    <p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados. | Diseñando culturas de respeto en Chile.</p>
   </footer>
+
+  <script>
+    function calcularDiagnostico() {
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      const q3 = document.querySelector('input[name="q3"]:checked');
+
+      if (!q1 || !q2 || !q3) {
+        alert('Por favor responde las 3 preguntas para ver tu resultado.');
+        return;
+      }
+
+      let noCount = 0;
+      if (q1.value === 'no') noCount++;
+      if (q2.value === 'no') noCount++;
+      if (q3.value === 'no') noCount++;
+
+      const resultBox = document.getElementById('quiz-result');
+      const resultTitle = document.getElementById('result-title');
+      const resultText = document.getElementById('result-text');
+
+      resultBox.style.display = 'block';
+
+      if (noCount >= 2) {
+        resultTitle.innerText = '⚠️ Nivel de Riesgo Alto de Incumplimiento';
+        resultText.innerText = 'Tu empresa presenta brechas críticas respecto a la Ley Karin y Ley 21.828. Te recomendamos apoyarte en expertos para regularizar protocolos y el Informe Anual a la brevedad.';
+      } else if (noCount === 1) {
+        resultTitle.innerText = '🟡 Cumplimiento Parcial';
+        resultText.innerText = 'Tienes buenas bases, pero hay normativas como el Informe de Inclusión o capacitaciones de liderazgo que debes cerrar para evitar multas.';
+      } else {
+        resultTitle.innerText = '✅ ¡Excelente Nivel de Cumplimiento!';
+        resultText.innerText = 'Tu organización cuenta con las bases exigidas por ley. En Academia 360° podemos ayudarte a fortalecer esa cultura con talleres de sensibilización.';
+      }
+    }
+  </script>
 
 </body>
 </html>
