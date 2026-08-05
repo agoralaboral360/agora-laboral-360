@@ -10,8 +10,8 @@
         :root {
             --color-fondo: #FAF8F4;      /* Blanco Hueso */
             --color-tarjeta: #FFFFFF;    /* Blanco */
-            --color-principal: #BED7C5;  /* Verde Acento/Destacados */
-            --color-boton: #94B9A7;      /* Verde Botones Base */
+            --color-principal: #BED7C5;  /* Verde Acento */
+            --color-boton: #94B9A7;      /* Verde Botones */
             --color-hover: #6F9181;      /* Verde Hover */
             --color-texto: #4E4036;      /* Café Espresso */
             --color-borde: #E6F0EA;      /* Verde Claro Bordes */
@@ -25,7 +25,6 @@
         body {
             margin: 0;
             padding: 0;
-            /* Fondo con degradado sutil para quitar lo plano */
             background: linear-gradient(135deg, #FAF8F4 0%, #EBE7DF 100%);
             font-family: 'Montserrat', sans-serif;
             color: var(--color-texto);
@@ -107,7 +106,7 @@
             border-radius: 12px;
             padding: 30px 20px;
             text-align: center;
-            box-shadow: 0 6px 15px rgba(78, 64, 54, 0.05);
+            box-shadow: 0 6px 15px rgba(78, 64, 54, 0.04);
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
@@ -182,14 +181,14 @@
             transform: scale(1.02);
         }
 
-        /* QUIÉNES SOMOS (CON FOTO) */
+        /* QUIÉNES SOMOS (FOTO HD CON TONOS CÁLIDOS / NARANJA) */
         .nosotros-section {
             background-color: var(--color-tarjeta);
             border-radius: 12px;
             border: 2px solid var(--color-borde);
             margin-bottom: 80px;
             display: flex;
-            overflow: hidden; /* Permite que la imagen se adapte a los bordes curvos */
+            overflow: hidden;
             box-shadow: 0 5px 20px rgba(78, 64, 54, 0.05);
         }
 
@@ -208,30 +207,27 @@
 
         .nosotros-imagen {
             flex: 1;
-            /* Foto de consultoría profesional */
-            background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            /* Foto de alta definición con tonos cálidos/naranja de reunión de trabajo */
+            background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
         }
 
-        /* DIAGNÓSTICO (DISEÑO PREMIUM CON FONDO OSCURO) */
+        /* DIAGNÓSTICO (NUEVO DISEÑO LIMPIO Y FRESCO) */
         .diagnostico-section {
-            /* Filtro oscuro + Foto de oficina de fondo */
-            background-image: linear-gradient(rgba(78, 64, 54, 0.88), rgba(78, 64, 54, 0.95)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
+            background-color: var(--color-tarjeta);
+            border: 2px solid var(--color-borde);
             border-radius: 12px;
             padding: 50px;
             margin-bottom: 80px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            color: #FFFFFF;
+            box-shadow: 0 8px 25px rgba(78, 64, 54, 0.06);
         }
 
         .diagnostico-section h2 {
             font-family: 'Oswald', sans-serif;
             font-size: 36px;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: var(--color-texto);
             text-align: center;
             margin-top: 0;
         }
@@ -239,13 +235,13 @@
         .pregunta-item {
             margin-bottom: 25px;
             padding-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid var(--color-borde);
         }
 
         .pregunta-item p {
             font-weight: 600;
             font-size: 16px;
-            color: #FFFFFF;
+            color: var(--color-texto);
             margin-bottom: 12px;
         }
 
@@ -256,9 +252,9 @@
         }
 
         .opciones-group label {
-            background-color: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: #FFFFFF;
+            background-color: var(--color-fondo);
+            border: 1px solid var(--color-borde);
+            color: var(--color-texto);
             padding: 10px 20px;
             border-radius: 20px;
             cursor: pointer;
@@ -272,8 +268,7 @@
 
         .opciones-group label:hover {
             background-color: var(--color-principal);
-            color: var(--color-texto);
-            border-color: var(--color-principal);
+            border-color: var(--color-boton);
         }
 
         .btn-calcular {
@@ -310,7 +305,7 @@
             color: var(--color-texto);
         }
 
-        /* ACADEMIA ÁGORA (CON FOTO) */
+        /* ACADEMIA ÁGORA (FOTO HD CON CÁLIDOS) */
         .academia-section {
             background-color: var(--color-tarjeta);
             border-radius: 12px;
@@ -380,12 +375,12 @@
             margin-top: 60px;
         }
 
-        /* DISEÑO RESPONSIVO (MÓVILES) */
+        /* RESPONSIVO */
         @media (max-width: 992px) {
             header { padding: 15px 20px; }
             nav ul { gap: 15px; }
             .nosotros-section { flex-direction: column; }
-            .nosotros-imagen { min-height: 250px; }
+            .nosotros-imagen { min-height: 260px; }
             .academia-grid { grid-template-columns: 1fr; }
             .diagnostico-section { padding: 30px 20px; }
         }
@@ -448,17 +443,16 @@
         <div class="nosotros-section" id="nosotros">
             <div class="nosotros-texto">
                 <h2>¿Quiénes Somos?</h2>
-                <p><strong>Ágora Laboral 360°</strong> nace con el propósito de acompañar a las organizaciones en la transformación hacia espacios de trabajo dignos, seguros y respetuosos. Nos especializamos en la prevención del acoso laboral, sexual y la violencia en el trabajo, alineados estrictamente con las exigencias de la Ley Karin.</p>
+                <p><strong>Ágora Laboral 360°</strong> nace con el propósito de acompañar a las organizaciones en la transformación hacia espacios de trabajo dignos, seguros y respetuosos. Nos especializamos en la prevención del acoso laboral, sexual y la violencia en el trabajo, alineados strictly con las exigencias de la Ley Karin.</p>
                 <p>Nuestro equipo interdisciplinario combina asesoría jurídica, gestión de personas y capacitación técnica para entregar soluciones integrales 360° adaptadas a la realidad de cada empresa.</p>
             </div>
-            <!-- La imagen se carga como fondo en CSS -->
             <div class="nosotros-imagen"></div>
         </div>
 
         <!-- DIAGNÓSTICO GRATUITO -->
         <div class="diagnostico-section" id="diagnostico">
             <h2>Diagnóstico Gratuito Ley Karin</h2>
-            <p style="text-align: center; opacity: 0.9; margin-bottom: 30px;">Responde estas 5 preguntas para evaluar el nivel de cumplimiento de tu empresa sin costo y en tiempo real:</p>
+            <p style="text-align: center; color: var(--color-texto); opacity: 0.8; margin-bottom: 30px;">Responde estas 5 preguntas para evaluar el nivel de cumplimiento de tu empresa sin costo y en tiempo real:</p>
 
             <form id="quizForm">
                 <div class="pregunta-item">
@@ -525,8 +519,7 @@
             
             <div class="academia-grid">
                 <div class="manual-info">
-                    <!-- Foto insertada del Manual -->
-                    <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Manual Ley Karin" class="academia-img">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Manual Ley Karin" class="academia-img">
                     <h3 style="color: var(--color-texto);">Nuestro Manual Especializado</h3>
                     <p>Accede a nuestro manual exclusivo de construcción propia, diseñado para guiar a las empresas en la implementación efectiva de la Ley Karin. Incluye matrices de riesgo, plantillas de protocolos y casos de estudio.</p>
                 </div>
