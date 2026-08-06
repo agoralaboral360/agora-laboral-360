@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ágora Laboral 360° | Investigación Externa y Compliance Ley Karin</title>
+  <title>Ágora Laboral 360° | Ley Karin, Compliance y Bienestar Laboral</title>
   
   <!-- Tipografías Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,43 +56,38 @@
     .section-title { font-size: 2.2rem; margin-bottom: 14px; text-align: center; }
     .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 850px; margin: 0 auto 40px auto; text-align: center; }
 
-    /* 1. HERO PRINCIPAL CON FOTO DE FONDO VISIBLE Y TARJETA TRASLÚCIDA */
+    /* 1. HERO PRINCIPAL CON FOTO COMPLETA DE FONDO Y TEXTO TRANSPARENTE FLOTANTE */
     .hero-banner {
       position: relative;
       background-color: var(--morado-principal);
-      background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80');
+      background-image: linear-gradient(rgba(38, 19, 48, 0.55), rgba(38, 19, 48, 0.65)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      min-height: 520px;
+      min-height: 540px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 60px 24px;
+      padding: 70px 24px;
       border-radius: 12px;
       margin-top: 20px;
       box-shadow: 0 12px 30px rgba(0,0,0,0.12);
     }
     
-    .hero-card {
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(8px);
-      padding: 45px 40px;
-      border-radius: 12px;
-      max-width: 820px;
+    .hero-content {
+      max-width: 880px;
       text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      box-shadow: 0 10px 30px rgba(54, 30, 66, 0.15);
+      color: var(--blanco);
     }
-    .hero-card h1 { font-size: 2.4rem; line-height: 1.25; margin-bottom: 18px; color: var(--morado-principal); }
-    .hero-card p { font-size: 1.1rem; color: var(--texto-suave); margin-bottom: 28px; line-height: 1.6; }
+    .hero-content h1 { font-size: 2.6rem; line-height: 1.25; margin-bottom: 20px; color: var(--blanco); text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+    .hero-content p { font-size: 1.15rem; color: rgba(255, 255, 255, 0.95); margin-bottom: 32px; line-height: 1.6; text-shadow: 0 1px 6px rgba(0,0,0,0.5); }
     
     .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn-hero { display: inline-block; padding: 14px 28px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.92rem; transition: all 0.2s; border: none; cursor: pointer; }
-    .btn-hero-primary { background-color: var(--morado-principal); color: var(--blanco); }
-    .btn-hero-primary:hover { background-color: var(--morado-hover); transform: translateY(-2px); }
-    .btn-hero-secondary { background-color: var(--azul-cielo); color: var(--morado-principal); border: 2px solid var(--morado-principal); }
-    .btn-hero-secondary:hover { background-color: var(--morado-principal); color: var(--blanco); transform: translateY(-2px); }
+    .btn-hero { display: inline-block; padding: 15px 30px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.95rem; transition: all 0.2s; border: none; cursor: pointer; }
+    .btn-hero-primary { background-color: var(--verde-menta); color: var(--morado-principal); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+    .btn-hero-primary:hover { background-color: var(--blanco); transform: translateY(-2px); }
+    .btn-hero-secondary { background-color: transparent; color: var(--blanco); border: 2px solid var(--blanco); backdrop-filter: blur(4px); }
+    .btn-hero-secondary:hover { background-color: var(--blanco); color: var(--morado-principal); transform: translateY(-2px); }
 
     /* 2. AUTODIAGNÓSTICO INVITACIÓN */
     .quiz-invite { text-align: center; background: var(--blanco); padding: 40px; border-radius: 10px; border: 1px solid #ede8f2; box-shadow: 0 8px 25px rgba(0,0,0,0.05); margin-top: -35px; position: relative; z-index: 10; border-top: 5px solid var(--verde-menta); }
@@ -113,7 +108,7 @@
     .pilar-box h4 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; color: var(--morado-principal); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
     .pilar-box h4 svg { width: 22px; height: 22px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; }
 
-    /* 5. ALERTAS DE COMPLIANCE (CASOS DT CON ICONO MONOCROMÁTICO) */
+    /* 5. ALERTAS DE COMPLIANCE (CASOS DT CON ESTILO MONOCROMÁTICO) */
     .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 25px; }
     .case-card { background: var(--blanco); padding: 25px; border-radius: 8px; border-left: 4px solid var(--morado-principal); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
     .case-card h4 { font-family: 'Montserrat', sans-serif; color: var(--morado-principal); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
@@ -149,7 +144,7 @@
     .checkbox-group input { width: 18px; height: 18px; accent-color: var(--morado-principal); }
 
     footer { background: var(--morado-principal); color: var(--blanco); text-align: center; padding: 25px 24px; font-size: 0.85rem; }
-    @media (max-width: 900px) { .hero-card h1 { font-size: 1.8rem; } .pilares-grid, .cases-grid, .recursos-grid { grid-template-columns: 1fr; gap: 35px; } .nav-links { display: none; } .quiz-invite { margin-top: 20px; padding: 30px; } }
+    @media (max-width: 900px) { .hero-content h1 { font-size: 2rem; } .pilares-grid, .cases-grid, .recursos-grid { grid-template-columns: 1fr; gap: 35px; } .nav-links { display: none; } .quiz-invite { margin-top: 20px; padding: 30px; } }
   </style>
 </head>
 <body>
@@ -190,13 +185,13 @@
   </section>
 
   <main>
-    <!-- 1. HERO PRINCIPAL: IMAGEN DE FONDO VISIBLE CON TARJETA TRASLÚCIDA ELEGANTE -->
+    <!-- 1. HERO PRINCIPAL: PÁRRAFO DE CONSULTORA ESPECIALISTA SOBRE IMAGEN DE FONDO COMPLETA -->
     <section class="container">
       <div class="hero-banner">
-        <div class="hero-card">
-          <h1>¿Recibió una denuncia por Ley Karin?</h1>
+        <div class="hero-content">
+          <h1>Consultoría Especializada en Ley Karin, Compliance y Bienestar Laboral</h1>
           <p>
-            Realizamos investigaciones externas objetivas, periciales y defendibles ante la Dirección del Trabajo, protegiendo la reputación y el patrimonio de su organización.
+            Acompañamos a organizaciones públicas y privadas en investigaciones externas periciales, cumplimiento normativo y en la construcción de entornos de trabajo seguros, equitativos y de respeto mutuo.
           </p>
           
           <div class="hero-buttons">
@@ -259,7 +254,7 @@
             <a href="#contacto" class="btn-agora btn-agora-small btn-agora-outline">📅 Cotizar Informe de Marzo</a>
           </div>
 
-          <!-- Card 4 (AJUSTADA: TALLER Y PREVENCIÓN) -->
+          <!-- Card 4 -->
           <div class="card">
             <div>
               <div class="icon-wrapper">
@@ -274,7 +269,7 @@
       </div>
     </section>
 
-    <!-- 4. ¿POR QUÉ ELEGIR ÁGORA (MÉTODO ÁGORA 360) - ICONOS UNIFORMES Y MONOCROMÁTICOS -->
+    <!-- 4. ¿POR QUÉ ELEGIR ÁGORA (MÉTODO ÁGORA 360) -->
     <section class="section container" id="metodo360">
       <h2 class="section-title">¿Por qué confiar en Ágora Laboral 360°?</h2>
       <p class="section-subtitle">Nuestro Método Ágora 360® registrado garantiza investigaciones técnicas sólidas, trazables y objetivas conforme a la Ley Karin.</p>
