@@ -30,7 +30,7 @@
     /* TIPOGRAFÍA Y ENCABEZADOS */
     h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--morado-principal); font-weight: 700; }
 
-    /* NAVEGACIÓN PRINCIPAL LIMPIA (SIN BOTÓN) */
+    /* NAVEGACIÓN PRINCIPAL LIMPIA */
     .header { background-color: var(--blanco); border-bottom: 1px solid #ede8f2; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
     .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; }
     .logo-text { font-weight: 800; font-size: 1.3rem; color: var(--morado-principal); letter-spacing: -0.5px; }
@@ -123,13 +123,15 @@
     .news-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
     .news-tag { display: inline-block; background: var(--azul-cielo); color: var(--morado-principal); font-size: 0.72rem; font-weight: bold; padding: 3px 8px; border-radius: 4px; margin-bottom: 10px; text-transform: uppercase; }
 
-    /* 8. BIBLIOTECA LEGAL Y RECURSOS */
+    /* 8. BIBLIOTECA LEGAL Y RECURSOS (CORREGIDO CONTROL DE TAMAÑO SVG) */
     .resource-tabs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; }
     .resource-panel { background: var(--blanco); padding: 35px; border-radius: 10px; border: 1px solid #ede8f2; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
     .panel-free { border-top: 5px solid var(--verde-menta); }
     .panel-premium { border-top: 5px solid var(--morado-principal); background: #fdfbfe; }
     
     .panel-title { font-size: 1.35rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .panel-title svg { width: 28px; height: 28px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; }
+    
     .resource-list { list-style: none; margin-bottom: 25px; }
     .resource-list li { margin-bottom: 12px; font-size: 0.92rem; color: var(--texto-suave); display: flex; align-items: flex-start; gap: 10px; }
     .resource-list li svg { width: 18px; height: 18px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; margin-top: 2px; }
@@ -407,7 +409,7 @@
           <div class="resource-panel panel-free">
             <h3 class="panel-title">
               <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              🟢 Recursos Gratuitos
+              Recursos Gratuitos
             </h3>
             <ul class="resource-list">
               <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline></svg> <strong>Introducción y Capítulo 1 del Manual.</strong></li>
@@ -423,7 +425,7 @@
           <div class="resource-panel panel-premium">
             <h3 class="panel-title">
               <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-              🔒 Biblioteca Profesional Ágora 360®
+              Biblioteca Profesional Ágora 360®
             </h3>
             <ul class="resource-list">
               <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline></svg> <strong>Manual del Investigador Completo (+200 pág).</strong></li>
@@ -485,4 +487,3 @@
 
 </body>
 </html>
-
