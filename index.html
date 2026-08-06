@@ -12,120 +12,136 @@
 
   <style>
     :root {
-      --azul-gris: #2E5D73;      /* Color principal corporativo */
-      --turquesa: #4CB7B3;       /* Acento de frescura y confianza */
-      --coral: #E68A6A;          /* Botones y CTAs de conversión */
-      --coral-hover: #d57656;
-      --fondo-suave: #f4f8f9;
-      --texto-oscuro: #1f313a;
-      --texto-suave: #4a5c66;
+      --navy-principal: #1b2838;    /* Azul Marino Corporativo */
+      --durazno-terracota: #e59379; /* Tono cálido para botones y CTAs (Canva) */
+      --durazno-hover: #d28167;
+      --menta-suave: #c8e6d5;      /* Verde menta para acentos de equilibrio */
+      --azul-suave: #d4e8fc;       /* Azul cielo para calma y claridad */
+      --fondo-pagina: #fcfbf9;     /* Fondo cálido ejecutuivo */
+      --texto-oscuro: #1c2733;
+      --texto-suave: #4a5a6a;
       --blanco: #ffffff;
-      --alerta-roja: #c53030;
+      --alerta-roja: #d9534f;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: #ffffff; line-height: 1.6; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: var(--fondo-pagina); line-height: 1.6; }
 
     /* TITULOS */
-    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--azul-gris); font-weight: 700; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--navy-principal); font-weight: 700; }
 
-    /* NAVEGACIÓN (SIMPLIFICADA) */
-    .header { background-color: var(--blanco); border-bottom: 1px solid #e1e9ec; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    /* NAVEGACIÓN */
+    .header { background-color: var(--blanco); border-bottom: 1px solid #e8ede9; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
     .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
-    .logo-text { font-weight: 800; font-size: 1.25rem; color: var(--azul-gris); letter-spacing: -0.5px; }
-    .logo-text span { color: var(--coral); }
+    .logo-text { font-weight: 800; font-size: 1.25rem; color: var(--navy-principal); letter-spacing: -0.5px; }
+    .logo-text span { color: var(--durazno-terracota); }
     
-    .nav-links { display: flex; align-items: center; gap: 14px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s ease; }
-    .nav-links a:hover, .nav-links a.active { color: var(--turquesa); }
+    .nav-links { display: flex; align-items: center; gap: 16px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--durazno-terracota); }
     
-    .btn-nav-cta { background-color: var(--coral) !important; color: var(--blanco) !important; padding: 10px 18px; border-radius: 6px !important; font-weight: 700 !important; transition: background 0.2s ease; }
-    .btn-nav-cta:hover { background-color: var(--coral-hover) !important; }
+    .btn-nav-cta { background-color: var(--durazno-terracota) !important; color: var(--blanco) !important; padding: 10px 18px; border-radius: 6px !important; font-weight: 700 !important; transition: background 0.2s ease; }
+    .btn-nav-cta:hover { background-color: var(--durazno-hover) !important; }
 
-    /* BARRA DE ESPECIALIDADES (3 COLUMNAS) */
-    .trust-bar { background-color: var(--azul-gris); color: var(--blanco); padding: 14px 24px; border-bottom: 3px solid var(--turquesa); }
+    /* BARRA DE ESPECIALIDADES (ESQUEMA MENTA Y AZUL SUAVE) */
+    .trust-bar { background-color: var(--navy-principal); color: var(--blanco); padding: 14px 24px; border-bottom: 3px solid var(--durazno-terracota); }
     .trust-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.85rem; font-weight: 500; }
     .trust-item { display: flex; align-items: center; gap: 8px; }
-    .trust-item svg { width: 18px; height: 18px; stroke: var(--turquesa); flex-shrink: 0; }
+    .trust-badge { background: var(--menta-suave); color: var(--navy-principal); font-weight: 700; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
+    .trust-item svg { width: 18px; height: 18px; stroke: var(--menta-suave); flex-shrink: 0; }
 
     /* CONTENEDORES GENERALES */
     .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
     .section { padding: 75px 0; }
-    .section-bg-light { background-color: var(--fondo-suave); }
+    .section-bg-light { background-color: #f2f7f4; }
     .section-title { font-size: 2.2rem; margin-bottom: 14px; text-align: center; }
     .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 850px; margin: 0 auto 40px auto; text-align: center; }
 
-    /* 1. HERO (PANTALLA PRINCIPAL - VENTAS) */
-    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; padding: 50px 0; }
-    .hero-text h1 { font-size: 2.5rem; line-height: 1.25; margin-bottom: 20px; color: var(--blanco); }
-    .hero-text p { font-size: 1.05rem; color: rgba(255,255,255,0.9); margin-bottom: 28px; }
-    .btn-hero { display: inline-block; padding: 14px 28px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.95rem; transition: background 0.2s; border: none; cursor: pointer; }
-    .btn-hero-primary { background-color: var(--coral); color: var(--blanco); }
-    .btn-hero-primary:hover { background-color: var(--coral-hover); }
-    .btn-hero-secondary { background-color: transparent; color: var(--blanco); border: 2px solid var(--blanco); }
-    .btn-hero-secondary:hover { background-color: var(--blanco); color: var(--azul-gris); }
-    .hero-image img { width: 100%; height: 430px; object-fit: cover; border-radius: 8px; box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
+    /* 1. HERO CON FOTO PRINCIPAL DE FONDO Y TEXTO OVERLAY */
+    .hero-banner {
+      position: relative;
+      background: linear-gradient(rgba(27, 40, 56, 0.84), rgba(27, 40, 56, 0.88)), url('vitaly-gariev-i4BPnD5nrPc-unsplash.jpg') center/cover no-repeat;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--blanco);
+      padding: 90px 24px;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    .hero-content { max-width: 880px; margin: 0 auto; }
+    .hero-content h1 { font-size: 2.8rem; line-height: 1.25; margin-bottom: 20px; color: var(--blanco); text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+    .hero-content p { font-size: 1.15rem; color: rgba(255, 255, 255, 0.95); margin-bottom: 32px; line-height: 1.6; }
+    
+    .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-hero { display: inline-block; padding: 15px 30px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.95rem; transition: all 0.2s; border: none; cursor: pointer; }
+    .btn-hero-primary { background-color: var(--durazno-terracota); color: var(--blanco); box-shadow: 0 4px 15px rgba(229, 147, 121, 0.4); }
+    .btn-hero-primary:hover { background-color: var(--durazno-hover); transform: translateY(-2px); }
+    .btn-hero-secondary { background-color: rgba(255, 255, 255, 0.12); color: var(--blanco); border: 2px solid var(--blanco); backdrop-filter: blur(5px); }
+    .btn-hero-secondary:hover { background-color: var(--blanco); color: var(--navy-principal); transform: translateY(-2px); }
 
     /* 2. AUTODIAGNÓSTICO INVITACIÓN */
-    .quiz-invite { text-align: center; background: var(--blanco); padding: 50px; border-radius: 8px; border: 1px solid #e1e9ec; box-shadow: 0 8px 30px rgba(0,0,0,0.05); margin-top: -50px; position: relative; z-index: 10; }
+    .quiz-invite { text-align: center; background: var(--blanco); padding: 45px; border-radius: 10px; border: 1px solid #e1e9ec; box-shadow: 0 10px 30px rgba(0,0,0,0.06); margin-top: -45px; position: relative; z-index: 10; border-top: 5px solid var(--durazno-terracota); }
     .quiz-invite h3 { font-size: 1.8rem; margin-bottom: 10px; }
-    .quiz-invite p { color: var(--texto-suave); margin-bottom: 20px; }
+    .quiz-invite p { color: var(--texto-suave); margin-bottom: 22px; font-size: 1.02rem; }
 
-    /* 3. SERVICIOS (TARJETAS CON BOTOES "VER MÁS") */
+    /* 3. SERVICIOS (TARJETAS CON BOTOES) */
     .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
-    .card { background: var(--blanco); padding: 32px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e5edef; border-top: 4px solid var(--turquesa); transition: transform 0.2s; display: flex; flex-direction: column; justify-content: space-between; }
-    .card:hover { transform: translateY(-4px); }
-    .icon-wrapper svg { width: 34px; height: 34px; stroke: var(--coral); margin-bottom: 15px; }
+    .card { background: var(--blanco); padding: 32px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e5edef; border-top: 4px solid var(--menta-suave); transition: transform 0.2s; display: flex; flex-direction: column; justify-content: space-between; }
+    .card:hover { transform: translateY(-4px); border-top-color: var(--durazno-terracota); }
+    .icon-wrapper svg { width: 34px; height: 34px; stroke: var(--durazno-terracota); margin-bottom: 15px; }
     .card h3 { font-size: 1.25rem; margin-bottom: 12px; }
-    .card p { font-size: 0.92rem; color: var(--texto-suave); margin-bottom: 15px; }
+    .card p { font-size: 0.92rem; color: var(--texto-suave); margin-bottom: 20px; }
 
-    /* 4. ¿POR QUÉ ELEGIR ÁGORA (MÉTODO ÁGORA 360 PILLARS) */
+    /* 4. ¿POR QUÉ ELEGIR ÁGORA (MÉTODO ÁGORA 360 PILLARES) */
     .pilares-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-    .pilar-box { background: var(--blanco); padding: 25px; border-radius: 8px; border: 1px solid #e5edef; border-top: 3px solid var(--turquesa); }
-    .pilar-box h4 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; color: var(--azul-gris); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .pilar-box { background: var(--blanco); padding: 25px; border-radius: 8px; border: 1px solid #e2ece6; border-top: 4px solid var(--menta-suave); }
+    .pilar-box h4 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; color: var(--navy-principal); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
 
     /* 5. ALERTAS DE COMPLIANCE (CASOS DT CON ICONO ROJO) */
     .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 25px; }
     .case-card { background: var(--blanco); padding: 25px; border-radius: 8px; border-left: 4px solid var(--alerta-roja); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
     .case-card h4 { font-family: 'Montserrat', sans-serif; color: var(--alerta-roja); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
     .case-card h4 svg { width: 16px; height: 16px; stroke: var(--alerta-roja); }
-    .case-card h3 { font-size: 1.15rem; margin-bottom: 12px; color: var(--azul-gris); }
-    .case-card p { font-size: 0.9rem; color: var(--texto-suave); margin-bottom: 10px; }
-    .case-card .dt-criterion { font-size: 0.88rem; background: var(--fondo-suave); padding: 12px; border-radius: 6px; border-left: 3px solid var(--turquesa); font-weight: 500; }
+    .case-card h3 { font-size: 1.15rem; margin-bottom: 12px; color: var(--navy-principal); }
+    .case-card p { font-size: 0.9rem; color: var(--texto-suave); }
 
-    /* 7. RECURSOS (TARJETAS CON DESCARGAS) */
+    /* 7. RECURSOS (CENTRO DE DESCARGAS) */
     .recursos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
     .recurso-card { background: var(--blanco); padding: 30px; border-radius: 8px; border: 1px solid #e5edef; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between; }
     .recurso-card h3 { font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-    .recurso-card h3 svg { width: 22px; height: 22px; stroke: var(--coral); flex-shrink: 0; }
+    .recurso-card h3 svg { width: 22px; height: 22px; stroke: var(--durazno-terracota); flex-shrink: 0; }
     .recurso-card p { margin-bottom: 15px; font-size: 0.9rem; color: var(--texto-suave); }
 
-    /* BOTOES GENERALES MODERNOS */
-    .btn-agora { display: inline-block; padding: 10px 20px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.85rem; transition: background 0.2s; border: none; cursor: pointer; text-align: center; }
-    .btn-agora-coral { background-color: var(--coral); color: var(--blanco); }
-    .btn-agora-coral:hover { background-color: var(--coral-hover); }
-    .btn-agora-outline { background-color: transparent; color: var(--azul-gris); border: 2px solid var(--azul-gris); }
-    .btn-agora-outline:hover { background-color: var(--azul-gris); color: var(--blanco); }
-    .btn-agora-outline-coral { background-color: transparent; color: var(--coral); border: 2px solid var(--coral); }
-    .btn-agora-outline-coral:hover { background-color: var(--coral); color: var(--blanco); }
-    .btn-agora-small { padding: 8px 16px; font-size: 0.8rem; }
+    /* BOTONES MODERNOS */
+    .btn-agora { display: inline-block; padding: 12px 24px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.88rem; transition: background 0.2s; border: none; cursor: pointer; text-align: center; }
+    .btn-agora-durazno { background-color: var(--durazno-terracota); color: var(--blanco); }
+    .btn-agora-durazno:hover { background-color: var(--durazno-hover); }
+    .btn-agora-outline { background-color: transparent; color: var(--navy-principal); border: 2px solid var(--navy-principal); }
+    .btn-agora-outline:hover { background-color: var(--navy-principal); color: var(--blanco); }
+    .btn-agora-outline-durazno { background-color: transparent; color: var(--durazno-terracota); border: 2px solid var(--durazno-terracota); }
+    .btn-agora-outline-durazno:hover { background-color: var(--durazno-terracota); color: var(--blanco); }
+    .btn-agora-small { padding: 9px 18px; font-size: 0.82rem; }
 
     /* CONTACTO */
     .contact-form { background: var(--blanco); padding: 35px; border-radius: 8px; border: 1px solid #e5edef; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
     .form-group { margin-bottom: 18px; }
-    .form-group label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.88rem; color: var(--azul-gris); }
+    .form-group label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.88rem; color: var(--navy-principal); }
     .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #cce0e7; border-radius: 6px; font-family: inherit; font-size: 0.9rem; }
     .checkbox-group { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-size: 0.9rem; color: var(--texto-suave); }
-    .checkbox-group input { width: 18px; height: 18px; accent-color: var(--coral); }
+    .checkbox-group input { width: 18px; height: 18px; accent-color: var(--durazno-terracota); }
 
-    footer { background: var(--azul-gris); color: var(--blanco); text-align: center; padding: 25px 24px; font-size: 0.85rem; }
-    @media (max-width: 900px) { .hero-grid, .pilares-grid, .cases-grid, .recursos-grid { grid-template-columns: 1fr; gap: 35px; } .nav-links { display: none; } .quiz-invite { margin-top: 20px; padding: 30px; } .quiz-invite h3 { font-size: 1.5rem; } }
+    footer { background: var(--navy-principal); color: var(--blanco); text-align: center; padding: 25px 24px; font-size: 0.85rem; }
+    @media (max-width: 900px) { .hero-content h1 { font-size: 2rem; } .pilares-grid, .cases-grid, .recursos-grid { grid-template-columns: 1fr; gap: 35px; } .nav-links { display: none; } .quiz-invite { margin-top: 20px; padding: 30px; } }
   </style>
 </head>
 <body>
 
-  <!-- NAVEGACIÓN (SIMPLIFICADA) -->
+  <!-- NAVEGACIÓN -->
   <header class="header" id="inicio">
     <div class="navbar">
       <div class="logo-text">ÁGORA LABORAL <span>360°</span></div>
@@ -136,62 +152,58 @@
           <li><a href="#metodo360">MÉTODO 360°</a></li>
           <li><a href="#recursos">RECURSOS</a></li>
           <li><a href="#contacto">CONTACTO</a></li>
-          <li><a href="#diagnostico" class="btn-nav-cta">DIAGNÓSTICO GRATUITO</a></li>
+          <li><a href="#contacto" class="btn-nav-cta">DIAGNÓSTICO GRATUITO</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- BARRA DE ESPECIALIDADES (3 COLUMNAS) -->
+  <!-- BARRA DE ESPECIALIDADES (3 COLUMNAS CON INSIGNIAS) -->
   <section class="trust-bar">
     <div class="trust-container">
       <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        ✓ Ley Karin (N° 21.643)
+        <span class="trust-badge">N° 21.643</span>
+        Ley Karin & Prevención
       </div>
       <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-        ✓ Informe Ley 21.828
+        <span class="trust-badge" style="background: var(--azul-suave);">Marzo</span>
+        Informe Ley 21.828
       </div>
       <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-        ✓ Método Ágora 360®
+        <span class="trust-badge">Pericial</span>
+        Método Ágora 360®
       </div>
     </div>
   </section>
 
   <main>
-    <!-- HERO (PANTALLA PRINCIPAL - VENTAS) -->
-    <section class="section container" style="background: var(--azul-gris); border-radius: 8px; color: var(--blanco); margin-top: 20px;">
-      <div class="hero-grid">
-        <div class="hero-text">
+    <!-- 1. HERO PRINCIPAL: IMAGEN DE FONDO CON OVERLAY + TEXTO Y BOTONES SOBRE ELLA -->
+    <section class="container">
+      <div class="hero-banner">
+        <div class="hero-content">
           <h1>¿Recibió una denuncia por Ley Karin?</h1>
           <p>
             Realizamos investigaciones externas objetivas, periciales y defendibles ante la Dirección del Trabajo, protegiendo la reputación y el patrimonio de su organización.
           </p>
           
           <div class="hero-buttons">
-            <a href="#diagnostico" class="btn-hero btn-hero-primary">🟧 Autodiagnóstico Gratutito</a>
+            <a href="#contacto" class="btn-hero btn-hero-primary">🟧 Autodiagnóstico Gratuito</a>
             <a href="#contacto" class="btn-hero btn-hero-secondary">Agendar Reunión Técnica</a>
           </div>
-        </div>
-        <div class="hero-image">
-          <!-- FOTO PROFESIONAL: Consultora y equipo ejecutivo revisando documentos legales y reportes -->
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Consultores técnicos revisando documentos legales y reportes periciales">
         </div>
       </div>
     </section>
 
-    <!-- INVITACIÓN AL AUTODIAGNÓSTICO -->
+    <!-- 2. INVITACIÓN AL AUTODIAGNÓSTICO -->
     <section class="container" id="diagnostico_invite">
       <div class="quiz-invite">
         <h3>Evalúe gratuitamente el nivel de cumplimiento de su organización</h3>
         <p>Responda 5 preguntas clave diseñadas por nuestros peritos técnicos y obtenga un reporte de riesgo preliminar inmediato.</p>
-        <a href="#diagnostico" class="btn-agora btn-agora-coral btn-agora-large">Hacer Autodiagnóstico Ley Karin</a>
+        <a href="#contacto" class="btn-agora btn-agora-durazno">Hacer Autodiagnóstico Ley Karin</a>
       </div>
     </section>
 
-    <!-- SERVICIOS (VITRINA) -->
+    <!-- 3. SERVICIOS (VITRINA) -->
     <section class="section section-bg-light" id="servicios">
       <div class="container">
         <h2 class="section-title">Asesoría Estratégica Normativa</h2>
@@ -246,17 +258,13 @@
             <a href="#recursos" class="btn-agora btn-agora-small btn-agora-outline">Ver Cursos</a>
           </div>
         </div>
-        
-        <div style="text-align: center; margin-top: 35px;">
-            <a href="#contacto" class="btn-agora btn-agora-coral">Conozca Todos los Servicios</a>
-        </div>
       </div>
     </section>
 
-    <!-- ¿POR QUÉ ÁGORA LABORAL (DEMOSTRAR - MÉTODO 360) -->
+    <!-- 4. ¿POR QUÉ ELEGIR ÁGORA (MÉTODO ÁGORA 360) -->
     <section class="section container" id="metodo360">
       <h2 class="section-title">¿Por qué confiar en Ágora Laboral 360°?</h2>
-      <p class="section-subtitle">Venta metodología. Nuestro Método Ágora 360® registrado garantiza investigaciones técnicas sólidas, trazables y objetivas conforme a la Ley Karin.</p>
+      <p class="section-subtitle">Nuestro Método Ágora 360® registrado garantiza investigaciones técnicas sólidas, trazables y objetivas conforme a la Ley Karin.</p>
 
       <div class="pilares-grid">
         <div class="pilar-box">
@@ -278,65 +286,57 @@
       </div>
       
       <div style="text-align: center; margin-top: 35px;">
-        <a href="#metodo360_page" class="btn-agora btn-agora-coral btn-agora-small">Conozca el Método Ágora 360® en detalle</a>
+        <a href="#contacto" class="btn-agora btn-agora-durazno btn-agora-small">Conozca el Método Ágora 360® en detalle</a>
       </div>
     </section>
 
-    <!-- ALERTA DE COMPLIANCE (CASOS DT CON ICONO ROJO) -->
+    <!-- 5. ALERTA DE COMPLIANCE (CASOS DT CON ICONO ROJO) -->
     <section class="section section-bg-light" id="alertas">
       <div class="container">
         <h2 class="section-title">Los errores más frecuentes detectados por la Dirección del Trabajo</h2>
         <p class="section-subtitle">Proteja su organización de sanciones severas conociendo los criterios técnicos de fiscalización obligatorios.</p>
 
         <div class="cases-grid">
-          <!-- Alerta 1 -->
           <div class="case-card">
             <h4><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Criterio Técnico</h4>
             <h3>Competencia del Investigador</h3>
-            <p><strong>Infracción común:</strong> Designar al jefe de operaciones o un abogado general sin formación demostrable en acoso, género o derechos fundamentales acreditada mediante certificaciones de entidades reconocidas por el Estado.</p>
+            <p><strong>Infracción común:</strong> Designar al jefe de operaciones o un abogado general sin formación demostrable en acoso, género o derechos fundamentales acreditada mediante certificaciones reconocidas por el Estado.</p>
           </div>
 
-          <!-- Alerta 2 -->
           <div class="case-card">
             <h4><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Criterio Técnico</h4>
             <h3>Mito de los 60 Días</h3>
             <p><strong>Infracción común:</strong> Rechazar denuncias por hechos ocurridos hace más de 2 meses alegando caducidad según plazos de tutela judicial. Ante cualquier denuncia, la empresa está obligada por ley a aperturar la investigación interna.</p>
           </div>
 
-          <!-- Alerta 3 -->
           <div class="case-card">
             <h4><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Criterio Técnico</h4>
             <h3>Desistimiento Verbal</h3>
-            <p><strong>Infracción común:</strong> Archivar la carpeta cuando el denunciante manifiesta informalmente que "ya no quiere seguir por estrés". Exige un registro escrito explícito donde se refleje con total claridad la voluntad de la persona afectada.</p>
+            <p><strong>Infracción común:</strong> Archivar la carpeta cuando el denunciante manifiesta informalmente no querer seguir. Exige un registro escrito explícito donde se refleje con total claridad la libre voluntad de la persona afectada.</p>
           </div>
 
-          <!-- Alerta 4 -->
           <div class="case-card">
             <h4><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Criterio Técnico</h4>
             <h3>Prueba Indiciaria</h3>
-            <p><strong>Infracción común:</strong> Concluir "sin acoso" porque los hechos ocurrieron en privado sin testigos ni correos. Infracción grave al debido proceso, ya que la ley obliga a ponderar las dificultades probatorias inherentes a estas conductas.</p>
+            <p><strong>Infracción común:</strong> Concluir "sin acoso" porque los hechos ocurrieron en privado sin testigos ni correos. Infracción grave al debido proceso, ya que la ley obliga a ponderar las dificultades probatorias inherentes.</p>
           </div>
-        </div>
-        
-        <div style="text-align: center; margin-top: 35px;">
-            <a href="#contacto" class="btn-agora btn-agora-coral">Solicitar Auditoría de Protocolos</a>
         </div>
       </div>
     </section>
 
-    <!-- RECURSOS (VITRINA - CENTRO DE DESCARGAS) -->
+    <!-- 6. RECURSOS (CENTRO DE DESCARGAS) -->
     <section class="section container" id="recursos">
       <h2 class="section-title">Fuentes y Directrices Oficiales Vigentes</h2>
-      <p class="section-subtitle">Acceda directamente a los cuerpos legales y circulares técnicas obligatorias vigentes en Chile. Pince sobre cada documento para solicitarlo en formato PDF oficial.</p>
+      <p class="section-subtitle">Acceda directamente a los cuerpos legales y circulares técnicas obligatorias vigentes en Chile.</p>
 
       <div class="recursos-grid">
-        <div class="recurso-card recurso-destacado">
+        <div class="recurso-card">
           <h3>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
             Ley Karin Nº 21.643
           </h3>
           <p>Texto publicado en el Diario Oficial que modifica el Código del Trabajo fortaleciendo la prevención y sanción del acoso laboral, sexual y violencia.</p>
-          <button class="btn-agora btn-agora-small btn-agora-outline-coral" style="width: 100%;" onclick="alert('Solicitando archivo PDF oficial... Le contactaremos.')">Solicitar PDF Oficial</button>
+          <button class="btn-agora btn-agora-small btn-agora-outline-durazno" style="width: 100%;" onclick="alert('Solicitando archivo PDF oficial... Le contactaremos.')">Solicitar PDF Oficial</button>
         </div>
 
         <div class="recurso-card">
@@ -345,7 +345,7 @@
             Decreto Supremo Nº 21
           </h3>
           <p>Reglamento que aprueba las directrices de investigación y sanción obligatorias para todas las empresas públicas y privadas.</p>
-          <button class="btn-agora btn-agora-small btn-agora-outline-coral" style="width: 100%;" onclick="alert('Solicitando archivo PDF oficial... Le contactaremos.')">Solicitar PDF Oficial</button>
+          <button class="btn-agora btn-agora-small btn-agora-outline-durazno" style="width: 100%;" onclick="alert('Solicitando archivo PDF oficial... Le contactaremos.')">Solicitar PDF Oficial</button>
         </div>
 
         <div class="recurso-card">
@@ -354,7 +354,7 @@
             Convenio 190 OIT
           </h3>
           <p>Marco internacional sobre la erradicación de la violencia y el acoso en el mundo del trabajo.</p>
-          <button class="btn-agora btn-agora-small btn-agora-outline-coral" style="width: 100%;" onclick="alert('Solicitando archivo PDF oficial... Le contactaremos.')">Solicitar PDF Oficial</button>
+          <button class="btn-agora btn-agora-small btn-agora-outline-durazno" style="width: 100%;" onclick="alert('Solicitando archivo PDF oficial... Le contactaremos.')">Solicitar PDF Oficial</button>
         </div>
 
         <div class="recurso-card">
@@ -363,19 +363,15 @@
             Guía SUSESO Ley Karin
           </h3>
           <p>Manual oficial de asistencia técnica y protocolo preventivo obligatorio administrado por las mutualidades.</p>
-          <button class="btn-agora btn-agora-small btn-agora-outline-coral" style="width: 100%;" onclick="alert('Solicitando archivo PDF oficial... Le contactaremos.')">Solicitar Guía PDF</button>
+          <button class="btn-agora btn-agora-small btn-agora-outline-durazno" style="width: 100%;" onclick="alert('Solicitando archivo PDF oficial... Le contactaremos.')">Solicitar Guía PDF</button>
         </div>
-      </div>
-      
-      <div style="text-align: center; margin-top: 35px;">
-        <a href="#contacto" class="btn-agora btn-agora-coral btn-agora-small">Conozca más Recursos Técnicos</a>
       </div>
     </section>
 
-    <!-- CONTACTO DIRECTO (PANTALLA COMPLETA - AGENDAMIENTO) -->
+    <!-- 7. CONTACTO DIRECTO (PANTALLA COMPLETA - AGENDAMIENTO) -->
     <section class="section section-bg-light" id="contacto">
       <div class="container">
-        <div class="hero-grid">
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: start;">
           <div class="contact-form">
             <h2 class="section-title" style="font-size: 1.7rem; text-align: left; margin-bottom: 25px;">Agendar Reunión Técnica / Diagnóstico Inicial</h2>
             <form onsubmit="event.preventDefault(); alert('¡Gracias! Un especialista de Ágora 360° se comunicará contigo a la brevedad para agendar la reunión técnica.');">
@@ -407,7 +403,7 @@
                 <input type="checkbox" id="diagnostico_check" checked>
                 <label for="diagnostico_check">Solicito una reunión de diagnóstico inicial de cumplimiento.</label>
               </div>
-              <button type="submit" class="btn-agora btn-agora-coral btn-agora-large" style="width: 100%;">📅 Agendar Reunión Técnica</button>
+              <button type="submit" class="btn-agora btn-agora-durazno" style="width: 100%; font-size: 1rem;">📅 Agendar Reunión Técnica</button>
             </form>
           </div>
 
@@ -416,8 +412,8 @@
             <p style="color: var(--texto-suave); margin-bottom: 25px;">
               Somos un equipo interdisciplinario que une la gestión de personas, la psicología organizacional y la asesoría técnica laboral pericial para promover el buen trato y la equidad en el mundo del trabajo.
             </p>
-            <div style="background: var(--blanco); padding: 25px; border-radius: 8px; border-left: 4px solid var(--azul-gris); box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
-              <p><strong>📧 Correo:</strong> contacto@agoralaboral.cl</p>
+            <div style="background: var(--blanco); padding: 25px; border-radius: 8px; border-left: 4px solid var(--navy-principal); box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+              <p style="margin-bottom: 10px;"><strong>📧 Correo:</strong> contacto@agoralaboral.cl</p>
               <p><strong>📍 Ubicación:</strong> Santiago, Chile (Atención nacional)</p>
             </div>
           </div>
