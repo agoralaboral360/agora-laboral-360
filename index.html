@@ -56,10 +56,14 @@
     .section-title { font-size: 2.2rem; margin-bottom: 14px; text-align: center; }
     .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 850px; margin: 0 auto 40px auto; text-align: center; }
 
-    /* 1. HERO CON LA FOTO DIRECTA DE FONDO Y TARJETA TRASLÚCIDA ELEGANTE SOBRE ELLA */
+    /* 1. HERO PRINCIPAL CON FOTO DE FONDO VISIBLE Y TARJETA TRASLÚCIDA */
     .hero-banner {
       position: relative;
-      background: url('vitaly-gariev-i4BPnD5nrPc-unsplash.jpg') center/cover no-repeat;
+      background-color: var(--morado-principal);
+      background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       min-height: 520px;
       display: flex;
       align-items: center;
@@ -71,7 +75,7 @@
     }
     
     .hero-card {
-      background: rgba(255, 255, 255, 0.93);
+      background: rgba(255, 255, 255, 0.94);
       backdrop-filter: blur(8px);
       padding: 45px 40px;
       border-radius: 12px;
@@ -99,29 +103,34 @@
     .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
     .card { background: var(--blanco); padding: 32px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #ede8f2; border-top: 4px solid var(--verde-menta); transition: transform 0.2s; display: flex; flex-direction: column; justify-content: space-between; }
     .card:hover { transform: translateY(-4px); border-top-color: var(--morado-principal); }
-    .icon-wrapper svg { width: 34px; height: 34px; stroke: var(--morado-principal); margin-bottom: 15px; }
+    .icon-wrapper svg { width: 34px; height: 34px; stroke: var(--morado-principal); fill: none; margin-bottom: 15px; }
     .card h3 { font-size: 1.2rem; margin-bottom: 12px; }
     .card p { font-size: 0.92rem; color: var(--texto-suave); margin-bottom: 20px; }
 
-    /* 4. ¿POR QUÉ ELEGIR ÁGORA (MÉTODO ÁGORA 360) */
+    /* 4. ¿POR QUÉ ELEGIR ÁGORA (MÉTODO ÁGORA 360) - ICONOS MONOCROMÁTICOS */
     .pilares-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
     .pilar-box { background: var(--blanco); padding: 25px; border-radius: 8px; border: 1px solid #ede8f2; border-top: 4px solid var(--azul-cielo); }
-    .pilar-box h4 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; color: var(--morado-principal); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .pilar-box h4 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; color: var(--morado-principal); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+    .pilar-box h4 svg { width: 22px; height: 22px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; }
 
-    /* 5. ALERTAS DE COMPLIANCE (CASOS DT CON ESTILO MORADO) */
+    /* 5. ALERTAS DE COMPLIANCE (CASOS DT CON ICONO MONOCROMÁTICO) */
     .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 25px; }
     .case-card { background: var(--blanco); padding: 25px; border-radius: 8px; border-left: 4px solid var(--morado-principal); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
     .case-card h4 { font-family: 'Montserrat', sans-serif; color: var(--morado-principal); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-    .case-card h4 svg { width: 16px; height: 16px; stroke: var(--morado-principal); }
+    .case-card h4 svg { width: 18px; height: 18px; stroke: var(--morado-principal); fill: none; }
     .case-card h3 { font-size: 1.15rem; margin-bottom: 12px; color: var(--morado-principal); }
     .case-card p { font-size: 0.9rem; color: var(--texto-suave); }
 
-    /* 6. RECURSOS (CENTRO DE DESCARGAS) */
+    /* 6. RECURSOS Y LEAD MAGNET DEL MANUAL */
     .recursos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
-    .recurso-card { background: var(--blanco); padding: 30px; border-radius: 8px; border: 1px solid #ede8f2; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between; }
+    .recurso-card { background: var(--blanco); padding: 30px; border-radius: 8px; border: 1px solid #ede8f2; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
     .recurso-card h3 { font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-    .recurso-card h3 svg { width: 22px; height: 22px; stroke: var(--morado-principal); flex-shrink: 0; }
+    .recurso-card h3 svg { width: 22px; height: 22px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; }
     .recurso-card p { margin-bottom: 15px; font-size: 0.9rem; color: var(--texto-suave); }
+    
+    .recurso-destacado { background: var(--menta-fondo); border: 2px solid var(--verde-menta); }
+    .badge-pronto { position: absolute; top: 15px; right: -30px; background: var(--morado-principal); color: var(--blanco); padding: 4px 35px; font-size: 0.7rem; font-weight: bold; transform: rotate(45deg); text-transform: uppercase; }
+    .input-recurso { width: 100%; padding: 11px 14px; border-radius: 6px; border: 1px solid #d9d2e0; margin-bottom: 10px; font-family: inherit; font-size: 0.88rem; }
 
     /* BOTONES MODERNOS */
     .btn-agora { display: inline-block; padding: 12px 24px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.88rem; transition: background 0.2s; border: none; cursor: pointer; text-align: center; }
@@ -218,7 +227,7 @@
           <div class="card">
             <div>
               <div class="icon-wrapper">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
               </div>
               <h3>Investigación Externa Imparcial</h3>
               <p>Conducción completa del procedimiento pericial por denuncias complejas, con la máxima independencia e informe final técnico fundado.</p>
@@ -230,7 +239,7 @@
           <div class="card">
             <div>
               <div class="icon-wrapper">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
               </div>
               <h3>Asesoría al Investigador Interno</h3>
               <p>Acompañamiento técnico especializado al profesional designado por su empresa: estrategia, preguntas, análisis de pruebas y revisión del informe.</p>
@@ -242,7 +251,7 @@
           <div class="card">
             <div>
               <div class="icon-wrapper">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
               </div>
               <h3>Informe Anual Ley 21.828</h3>
               <p>Estructuramos, levantamos la data salarial y redactamos el Informe Anual de Equidad de Género obligatorio para la entrega de marzo.</p>
@@ -250,41 +259,56 @@
             <a href="#contacto" class="btn-agora btn-agora-small btn-agora-outline">📅 Cotizar Informe de Marzo</a>
           </div>
 
-          <!-- Card 4 -->
+          <!-- Card 4 (AJUSTADA: TALLER Y PREVENCIÓN) -->
           <div class="card">
             <div>
               <div class="icon-wrapper">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
               </div>
-              <h3>Academia Ágora 360°</h3>
-              <p>Capacitación práctica a jefaturas y equipos de RR.HH. para categorizar denuncias, prevenir sesgos y actuar con perspectiva de género.</p>
+              <h3>Academia & Sensibilización</h3>
+              <p>Taller práctico de sensibilización en buen trato y categorización de denuncias para jefaturas, evitando sesgos y promoviendo el liderazgo respetuoso.</p>
             </div>
-            <a href="#recursos" class="btn-agora btn-agora-small btn-agora-outline">Ver Cursos</a>
+            <a href="#contacto" class="btn-agora btn-agora-small btn-agora-outline">📅 Solicitar Taller</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. ¿POR QUÉ ELEGIR ÁGORA (MÉTODO ÁGORA 360) -->
+    <!-- 4. ¿POR QUÉ ELEGIR ÁGORA (MÉTODO ÁGORA 360) - ICONOS UNIFORMES Y MONOCROMÁTICOS -->
     <section class="section container" id="metodo360">
       <h2 class="section-title">¿Por qué confiar en Ágora Laboral 360°?</h2>
       <p class="section-subtitle">Nuestro Método Ágora 360® registrado garantiza investigaciones técnicas sólidas, trazables y objetivas conforme a la Ley Karin.</p>
 
       <div class="pilares-grid">
         <div class="pilar-box">
-          <h4>⚖️ Imparcialidad</h4>
+          <h4>
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"></line><path d="M3 9l9-6 9 6"></path><path d="M3 9l3 6 3-6"></path><path d="M15 9l3 6 3-6"></path></svg>
+            Imparcialidad
+          </h4>
           <p style="font-size: 0.88rem; color: var(--texto-suave);">Declaración formal de independencia de la persona investigadora, prevención de inhabilidades y conflictos de interés.</p>
         </div>
+        
         <div class="pilar-box">
-          <h4>📂 Trazabilidad</h4>
+          <h4>
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            Trazabilidad
+          </h4>
           <p style="font-size: 0.88rem; color: var(--texto-suave);">Código Único de Caso (CUC), expediente reservado y registro cronológico auditable de todas las actuaciones del proceso.</p>
         </div>
+
         <div class="pilar-box">
-          <h4>🔎 Objetividad</h4>
+          <h4>
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            Objetividad
+          </h4>
           <p style="font-size: 0.88rem; color: var(--texto-suave);">Conclusiones fundadas exclusivamente en un análisis sistemático e interdisciplinario de la evidencia disponible aplicando la prueba indiciaria.</p>
         </div>
+
         <div class="pilar-box">
-          <h4>📜 Cumplimiento</h4>
+          <h4>
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            Cumplimiento
+          </h4>
           <p style="font-size: 0.88rem; color: var(--texto-suave);">Alineación total con la Ley Karin, Código del Trabajo, Decreto N° 21 de MinTrab, Convenio 190 OIT y dictámenes de la Dirección del Trabajo.</p>
         </div>
       </div>
@@ -294,7 +318,7 @@
       </div>
     </section>
 
-    <!-- 5. ALERTA DE COMPLIANCE (CASOS DT CON ESTILO MORADO) -->
+    <!-- 5. ALERTA DE COMPLIANCE (CASOS DT CON ESTILO UNIFORME) -->
     <section class="section section-bg-light" id="alertas">
       <div class="container">
         <h2 class="section-title">Los errores más frecuentes detectados por la Dirección del Trabajo</h2>
@@ -302,25 +326,25 @@
 
         <div class="cases-grid">
           <div class="case-card">
-            <h4><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Criterio Técnico</h4>
+            <h4><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Criterio Técnico</h4>
             <h3>Competencia del Investigador</h3>
             <p><strong>Infracción común:</strong> Designar al jefe de operaciones o un abogado general sin formación demostrable en acoso, género o derechos fundamentales acreditada mediante certificaciones reconocidas por el Estado.</p>
           </div>
 
           <div class="case-card">
-            <h4><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Criterio Técnico</h4>
+            <h4><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Criterio Técnico</h4>
             <h3>Mito de los 60 Días</h3>
             <p><strong>Infracción común:</strong> Rechazar denuncias por hechos ocurridos hace más de 2 meses alegando caducidad según plazos de tutela judicial. Ante cualquier denuncia, la empresa está obligada por ley a aperturar la investigación interna.</p>
           </div>
 
           <div class="case-card">
-            <h4><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Criterio Técnico</h4>
+            <h4><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Criterio Técnico</h4>
             <h3>Desistimiento Verbal</h3>
             <p><strong>Infracción común:</strong> Archivar la carpeta cuando el denunciante manifiesta informalmente no querer seguir. Exige un registro escrito explícito donde se refleje con total claridad la libre voluntad de la persona afectada.</p>
           </div>
 
           <div class="case-card">
-            <h4><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Criterio Técnico</h4>
+            <h4><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Criterio Técnico</h4>
             <h3>Prueba Indiciaria</h3>
             <p><strong>Infracción común:</strong> Concluir "sin acoso" porque los hechos ocurrieron en privado sin testigos ni correos. Infracción grave al debido proceso, ya que la ley obliga a ponderar las dificultades probatorias inherentes.</p>
           </div>
@@ -328,42 +352,50 @@
       </div>
     </section>
 
-    <!-- 6. RECURSOS (CENTRO DE DESCARGAS) -->
+    <!-- 6. RECURSOS CON GANCHO LEAD MAGNET (MANUAL DEL INVESTIGADOR INTERNO) -->
     <section class="section container" id="recursos">
-      <h2 class="section-title">Fuentes y Directrices Oficiales Vigentes</h2>
-      <p class="section-subtitle">Acceda directamente a los cuerpos legales y circulares técnicas obligatorias vigentes en Chile.</p>
+      <h2 class="section-title">Fuentes Oficiales y Recursos Exclusivos</h2>
+      <p class="section-subtitle">Acceda a la normativa oficial y solicite nuestras muestras técnicas de descarga directa.</p>
 
       <div class="recursos-grid">
+        <!-- LEAD MAGNET DESTACADO: MANUAL DEL INVESTIGADOR INTERNO -->
+        <div class="recurso-card recurso-destacado">
+          <div class="badge-pronto">Muestra Gratis</div>
+          <h3>
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            Manual del Investigador Interno
+          </h3>
+          <p>Próximamente lanzaremos nuestro manual práctico completo. Déjanos tu correo institucional y te enviaremos gratis la <strong>Introducción y el Capítulo 1</strong> de muestra.</p>
+          <form onsubmit="event.preventDefault(); alert('¡Gracias! Te enviaremos la Introducción y Capítulo 1 a tu correo.');">
+            <input type="email" class="input-recurso" placeholder="Correo institucional" required>
+            <button type="submit" class="btn-agora btn-agora-morado" style="width: 100%; font-size: 0.82rem;">Descargar Capítulo 1 Gratis</button>
+          </form>
+        </div>
+
+        <!-- RECURSO 2: LEY KARIN -->
         <div class="recurso-card">
           <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
             Ley Karin Nº 21.643
           </h3>
           <p>Texto publicado en el Diario Oficial que modifica el Código del Trabajo fortaleciendo la prevención y sanción del acoso laboral, sexual y violencia.</p>
           <button class="btn-agora btn-agora-small btn-agora-outline" style="width: 100%;" onclick="alert('Solicitando archivo PDF oficial... Le contactaremos.')">Solicitar PDF Oficial</button>
         </div>
 
+        <!-- RECURSO 3: DECRETO 21 -->
         <div class="recurso-card">
           <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
             Decreto Supremo Nº 21
           </h3>
           <p>Reglamento que aprueba las directrices de investigación y sanción obligatorias para todas las empresas públicas y privadas.</p>
           <button class="btn-agora btn-agora-small btn-agora-outline" style="width: 100%;" onclick="alert('Solicitando archivo PDF oficial... Le contactaremos.')">Solicitar PDF Oficial</button>
         </div>
 
+        <!-- RECURSO 4: GUÍA SUSESO -->
         <div class="recurso-card">
           <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-            Convenio 190 OIT
-          </h3>
-          <p>Marco internacional sobre la erradicación de la violencia y el acoso en el mundo del trabajo.</p>
-          <button class="btn-agora btn-agora-small btn-agora-outline" style="width: 100%;" onclick="alert('Solicitando archivo PDF oficial... Le contactaremos.')">Solicitar PDF Oficial</button>
-        </div>
-
-        <div class="recurso-card">
-          <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
             Guía SUSESO Ley Karin
           </h3>
           <p>Manual oficial de asistencia técnica y protocolo preventivo obligatorio administrado por las mutualidades.</p>
