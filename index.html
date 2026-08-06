@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ágora Laboral 360° | Ley Karin y Ley 21.828</title>
+  <title>Ágora Laboral 360° | Investigación Externa y Compliance Ley Karin</title>
   
   <!-- Tipografías Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,12 +12,14 @@
 
   <style>
     :root {
-      --verde-principal: #1e3328;
-      --verde-fondo: #f4f6f5;
-      --naranja-acento: #e07a27;
-      --naranja-hover: #c9671b;
-      --texto-oscuro: #2b2b2b;
-      --texto-suave: #4a5568;
+      --azul-gris: #2E5D73;      /* Color principal corporativo */
+      --turquesa: #4CB7B3;       /* Acento de frescura y confianza */
+      --coral: #E68A6A;          /* Botones y CTAs de conversión */
+      --coral-hover: #d57656;
+      --fondo-suave: #f4f8f9;
+      --texto-oscuro: #1f313a;
+      --texto-suave: #4a5c66;
+      --blanco: #ffffff;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,104 +27,129 @@
     body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: #ffffff; line-height: 1.6; }
 
     /* TITULOS */
-    h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; color: var(--verde-principal); font-weight: 700; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--azul-gris); font-weight: 700; }
 
     /* NAVEGACIÓN */
-    .header { background-color: #ffffff; border-bottom: 1px solid #eef2f0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .header { background-color: var(--blanco); border-bottom: 1px solid #e1e9ec; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
     .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
-    .logo-text { font-weight: 800; font-size: 1.25rem; color: var(--verde-principal); letter-spacing: -0.5px; }
-    .logo-text span { color: var(--naranja-acento); }
+    .logo-text { font-weight: 800; font-size: 1.25rem; color: var(--azul-gris); letter-spacing: -0.5px; }
+    .logo-text span { color: var(--coral); }
     
     .nav-links { display: flex; align-items: center; gap: 14px; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s ease; }
-    .nav-links a:hover, .nav-links a.active { color: var(--verde-principal); }
+    .nav-links a:hover, .nav-links a.active { color: var(--turquesa); }
     
-    .btn-nav-cta { background-color: var(--naranja-acento) !important; color: #ffffff !important; padding: 10px 16px; border-radius: 4px !important; font-weight: 700 !important; transition: background 0.2s ease; }
-    .btn-nav-cta:hover { background-color: var(--naranja-hover) !important; }
+    .btn-nav-cta { background-color: var(--coral) !important; color: var(--blanco) !important; padding: 10px 18px; border-radius: 6px !important; font-weight: 700 !important; transition: background 0.2s ease; }
+    .btn-nav-cta:hover { background-color: var(--coral-hover) !important; }
 
     /* BARRA DE CONFIANZA */
-    .trust-bar { background-color: var(--verde-principal); color: #ffffff; padding: 14px 24px; border-bottom: 3px solid var(--naranja-acento); }
+    .trust-bar { background-color: var(--azul-gris); color: var(--blanco); padding: 14px 24px; border-bottom: 3px solid var(--turquesa); }
     .trust-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.85rem; font-weight: 500; }
     .trust-item { display: flex; align-items: center; gap: 8px; }
-    .trust-item svg { width: 18px; height: 18px; stroke: var(--naranja-acento); flex-shrink: 0; }
+    .trust-item svg { width: 18px; height: 18px; stroke: var(--turquesa); flex-shrink: 0; }
 
     /* CONTENEDORES GENERALES */
     .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    .section { padding: 65px 0; }
-    .section-bg-light { background-color: var(--verde-fondo); }
-    .section-title { font-size: 2.1rem; margin-bottom: 14px; }
-    .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 800px; margin-bottom: 35px; }
+    .section { padding: 75px 0; }
+    .section-bg-light { background-color: var(--fondo-suave); }
+    .section-title { font-size: 2.2rem; margin-bottom: 14px; }
+    .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 850px; margin-bottom: 40px; }
 
-    /* HERO PRINCIPAL CON DOBLE ACCIÓN */
+    /* HERO PRINCIPAL CON FOTO DE CONSULTORÍA Y REVISIÓN DE DOCUMENTOS LEGALES */
     .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; }
-    .hero-text h1 { font-size: 2.4rem; line-height: 1.25; margin-bottom: 20px; }
+    .hero-text h1 { font-size: 2.5rem; line-height: 1.25; margin-bottom: 20px; }
     .hero-text p { font-size: 1.05rem; color: var(--texto-suave); margin-bottom: 28px; }
     
     .hero-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
-    .btn-hero-primary { background-color: var(--naranja-acento); color: #ffffff; padding: 14px 22px; text-decoration: none; font-weight: 700; border-radius: 4px; font-size: 0.88rem; transition: background 0.2s; }
-    .btn-hero-primary:hover { background-color: var(--naranja-hover); }
-    .btn-hero-secondary { background-color: transparent; color: var(--verde-principal); border: 2px solid var(--verde-principal); padding: 12px 20px; text-decoration: none; font-weight: 700; border-radius: 4px; font-size: 0.88rem; transition: all 0.2s; }
-    .btn-hero-secondary:hover { background-color: var(--verde-principal); color: white; }
+    .btn-primary { background-color: var(--coral); color: var(--blanco); padding: 14px 24px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.9rem; transition: background 0.2s; cursor: pointer; border: none; display: inline-block; }
+    .btn-primary:hover { background-color: var(--coral-hover); }
+    .btn-secondary { background-color: transparent; color: var(--azul-gris); border: 2px solid var(--azul-gris); padding: 12px 22px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.9rem; transition: all 0.2s; cursor: pointer; display: inline-block; }
+    .btn-secondary:hover { background-color: var(--azul-gris); color: var(--blanco); }
     
-    .hero-image img { width: 100%; height: 420px; object-fit: cover; border-radius: 4px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); display: block; }
+    .hero-image img { width: 100%; height: 430px; object-fit: cover; border-radius: 8px; box-shadow: 0 12px 30px rgba(46,93,115,0.12); display: block; }
 
     /* TARJETAS DE SERVICIOS */
     .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
-    .card { background: #ffffff; padding: 30px; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eaeaea; border-top: 4px solid var(--verde-principal); transition: transform 0.2s; }
+    .card { background: var(--blanco); padding: 32px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e5edef; border-top: 4px solid var(--turquesa); transition: transform 0.2s; }
     .card:hover { transform: translateY(-4px); }
-    .icon-wrapper svg { width: 32px; height: 32px; stroke: var(--naranja-acento); margin-bottom: 15px; }
-    .card h3 { font-size: 1.2rem; margin-bottom: 12px; }
+    .icon-wrapper svg { width: 34px; height: 34px; stroke: var(--coral); margin-bottom: 15px; }
+    .card h3 { font-size: 1.25rem; margin-bottom: 12px; }
     .card p { font-size: 0.92rem; color: var(--texto-suave); }
 
-    /* SECCIÓN INFORME 21.828 (MARZO) */
-    .informe-box { background: var(--verde-principal); color: white; padding: 45px; border-radius: 4px; }
-    .informe-box h2 { color: white; margin-bottom: 16px; }
+    /* ALERTAS DE COMPLIANCE (CASOS DT) */
+    .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 25px; margin-top: 30px; }
+    .case-card { background: var(--blanco); padding: 25px; border-radius: 8px; border-left: 4px solid var(--coral); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .case-card h4 { font-family: 'Montserrat', sans-serif; color: var(--coral); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .case-card h3 { font-size: 1.15rem; margin-bottom: 12px; color: var(--azul-gris); }
+    .case-card p { font-size: 0.9rem; color: var(--texto-suave); margin-bottom: 10px; }
+    .case-card .dt-criterion { font-size: 0.88rem; background: var(--fondo-suave); padding: 12px; border-radius: 6px; border-left: 3px solid var(--turquesa); font-weight: 500; }
+
+    /* TABLA MATRIZ DE RESGUARDO */
+    .table-container { overflow-x: auto; margin-top: 25px; background: var(--blanco); border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e5edef; }
+    .custom-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; }
+    .custom-table th { background-color: var(--azul-gris); color: var(--blanco); padding: 16px 20px; font-family: 'Montserrat', sans-serif; font-weight: 600; }
+    .custom-table td { padding: 16px 20px; border-bottom: 1px solid #eef3f5; color: var(--texto-suave); vertical-align: top; }
+    .custom-table tr:hover { background-color: #f9fbfc; }
+    .badge-risk { display: inline-block; padding: 4px 10px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; }
+    .risk-critical { background: #fde8e8; color: #c53030; }
+    .risk-medium { background: #fefcbf; color: #b7791f; }
+    .risk-all { background: #e6fffa; color: #234e52; }
+
+    /* PILARES MÉTODO ÁGORA 360 */
+    .pilares-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 30px; }
+    .pilar-box { background: var(--blanco); padding: 25px; border-radius: 8px; border: 1px solid #e5edef; border-top: 3px solid var(--turquesa); }
+    .pilar-box h4 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; color: var(--azul-gris); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+
+    /* FLUJO DE 8 ETAPAS */
+    .flujo-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px; }
+    .step-box { background: var(--azul-gris); color: var(--blanco); padding: 18px; border-radius: 6px; text-align: center; font-size: 0.88rem; font-weight: 600; border-bottom: 3px solid var(--turquesa); }
+
+    /* INFORME LEY 21.828 (MARZO) */
+    .informe-box { background: var(--azul-gris); color: var(--blanco); padding: 45px; border-radius: 8px; }
+    .informe-box h2 { color: var(--blanco); margin-bottom: 16px; }
     .informe-tips { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 25px; }
-    .tip-item { background: rgba(255,255,255,0.08); padding: 20px; border-radius: 4px; border-left: 3px solid var(--naranja-acento); }
-    .tip-item h4 { color: var(--naranja-acento); font-family: 'Montserrat', sans-serif; margin-bottom: 8px; font-size: 1rem; }
+    .tip-item { background: rgba(255,255,255,0.08); padding: 20px; border-radius: 6px; border-left: 3px solid var(--coral); }
+    .tip-item h4 { color: var(--coral); font-family: 'Montserrat', sans-serif; margin-bottom: 8px; font-size: 1rem; }
     .tip-item p { font-size: 0.88rem; opacity: 0.9; }
 
-    /* RECURSOS Y MANUAL */
-    .recursos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-    .recurso-card { background: #ffffff; padding: 35px; border-radius: 4px; border: 1px solid #eaeaea; position: relative; overflow: hidden; }
-    .recurso-destacado { background: var(--verde-fondo); border: 1px solid #d0ddd5; }
-    .recurso-card h3 { font-size: 1.3rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-    .recurso-card h3 svg { width: 24px; height: 24px; stroke: var(--naranja-acento); flex-shrink: 0; }
-    .recurso-card p { margin-bottom: 20px; font-size: 0.92rem; color: var(--texto-suave); }
-    .input-recurso { width: 100%; padding: 12px; border-radius: 4px; border: 1px solid #ccc; margin-bottom: 10px; font-family: inherit; font-size: 0.9rem; }
-    .btn-recurso { background: var(--naranja-acento); color: white; width: 100%; padding: 12px; border: none; border-radius: 4px; font-weight: 700; cursor: pointer; transition: 0.2s; font-size: 0.9rem; }
-    .btn-recurso:hover { background: var(--naranja-hover); }
-    .badge-pronto { position: absolute; top: 15px; right: -30px; background: var(--naranja-acento); color: white; padding: 4px 35px; font-size: 0.7rem; font-weight: bold; transform: rotate(45deg); }
+    /* DESCARGAS Y RECURSOS */
+    .recursos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+    .recurso-card { background: var(--blanco); padding: 30px; border-radius: 8px; border: 1px solid #e5edef; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .recurso-card h3 { font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .recurso-card h3 svg { width: 22px; height: 22px; stroke: var(--coral); flex-shrink: 0; }
+    .recurso-card p { margin-bottom: 20px; font-size: 0.9rem; color: var(--texto-suave); }
 
-    /* DIAGNÓSTICO INTERACTIVO */
-    .quiz-box { background: #ffffff; padding: 35px; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eaeaea; }
-    .quiz-question { margin-bottom: 20px; }
-    .quiz-question p { font-weight: 600; margin-bottom: 8px; font-size: 1rem; }
-    .quiz-options label { display: inline-block; margin-right: 20px; font-weight: 500; cursor: pointer; color: var(--texto-suave); font-size: 0.92rem; }
-    .quiz-options input { margin-right: 6px; accent-color: var(--naranja-acento); }
-    #quiz-result { display: none; margin-top: 25px; padding: 20px; border-radius: 4px; background-color: var(--verde-fondo); border-left: 4px solid var(--naranja-acento); }
+    /* AUTODIAGNÓSTICO INTERACTIVO */
+    .quiz-box { background: var(--blanco); padding: 35px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e5edef; }
+    .quiz-question { margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid #f0f4f6; }
+    .quiz-question:last-of-type { border-bottom: none; }
+    .quiz-question p { font-weight: 600; margin-bottom: 12px; font-size: 1rem; color: var(--azul-gris); }
+    .quiz-options label { display: block; margin-bottom: 10px; font-weight: 500; cursor: pointer; color: var(--texto-suave); font-size: 0.92rem; line-height: 1.4; padding-left: 26px; position: relative; }
+    .quiz-options input { position: absolute; left: 0; top: 3px; accent-color: var(--coral); width: 17px; height: 17px; cursor: pointer; }
+    #quiz-result { display: none; margin-top: 25px; padding: 25px; border-radius: 6px; background-color: var(--fondo-suave); border-left: 4px solid var(--coral); }
 
     /* MITOS Y REALIDADES */
     .comparativa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 25px; }
-    .box-comparativa { padding: 30px; border-radius: 4px; border: 1px solid #eaeaea; background: #fff; }
-    .box-si { border-top: 4px solid var(--naranja-acento); }
-    .box-no { border-top: 4px solid var(--verde-principal); }
+    .box-comparativa { padding: 30px; border-radius: 8px; border: 1px solid #e5edef; background: var(--blanco); }
+    .box-si { border-top: 4px solid var(--coral); }
+    .box-no { border-top: 4px solid var(--azul-gris); }
     .box-comparativa h3 { font-size: 1.25rem; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
-    .box-comparativa h3 svg { width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; }
     .box-comparativa ul { list-style: none; }
     .box-comparativa li { margin-bottom: 12px; display: flex; gap: 10px; font-size: 0.9rem; color: var(--texto-suave); align-items: flex-start; }
     .box-comparativa li svg { width: 16px; height: 16px; min-width: 16px; margin-top: 3px; flex-shrink: 0; }
-    .box-si li svg { stroke: var(--naranja-acento); }
-    .box-no li svg { stroke: var(--verde-principal); }
+    .box-si li svg { stroke: var(--coral); }
+    .box-no li svg { stroke: var(--azul-gris); }
 
-    /* CONTACTO */
-    .contact-form { background: #ffffff; padding: 30px; border-radius: 4px; border: 1px solid #eaeaea; }
+    /* FORMULARIO CONTACTO / AGENDAMIENTO */
+    .contact-form { background: var(--blanco); padding: 35px; border-radius: 8px; border: 1px solid #e5edef; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
     .form-group { margin-bottom: 18px; }
-    .form-group label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.88rem; }
-    .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #cccccc; border-radius: 4px; font-family: inherit; }
+    .form-group label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.88rem; color: var(--azul-gris); }
+    .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #cfdc00; border: 1px solid #cce0e7; border-radius: 6px; font-family: inherit; font-size: 0.9rem; }
+    .checkbox-group { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-size: 0.9rem; color: var(--texto-suave); }
+    .checkbox-group input { width: 18px; height: 18px; accent-color: var(--coral); }
 
-    footer { background: var(--verde-principal); color: #ffffff; text-align: center; padding: 25px 24px; font-size: 0.85rem; }
-    @media (max-width: 900px) { .hero-grid, .comparativa-grid, .recursos-grid, .contact-grid { grid-template-columns: 1fr; gap: 35px; } .nav-links { display: none; } }
+    footer { background: var(--azul-gris); color: var(--blanco); text-align: center; padding: 25px 24px; font-size: 0.85rem; }
+    @media (max-width: 900px) { .hero-grid, .comparativa-grid, .recursos-grid { grid-template-columns: 1fr; gap: 35px; } .nav-links { display: none; } }
   </style>
 </head>
 <body>
@@ -135,11 +162,11 @@
         <ul class="nav-links">
           <li><a href="#inicio" class="active">INICIO</a></li>
           <li><a href="#servicios">SERVICIOS</a></li>
+          <li><a href="#metodo360">MÉTODO 360°</a></li>
           <li><a href="#ley-21828">INFORME 21.828</a></li>
-          <li><a href="#academia">ACADEMIA 360°</a></li>
-          <li><a href="#recursos">RECURSOS</a></li>
+          <li><a href="#descargas">DESCARGAS</a></li>
           <li><a href="#contacto">CONTACTO</a></li>
-          <li><a href="#diagnostico" class="btn-nav-cta">DIAGNÓSTICO KARIN</a></li>
+          <li><a href="#diagnostico" class="btn-nav-cta">AUTODIAGNÓSTICO</a></li>
         </ul>
       </nav>
     </div>
@@ -158,44 +185,129 @@
       </div>
       <div class="trust-item">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-        PREVENCIÓN Y BUEN TRATO
+        MÉTODO ÁGORA 360° PERICIAL
       </div>
     </div>
   </section>
 
   <main>
-    <!-- HERO PRINCIPAL -->
+    <!-- HERO PRINCIPAL CON FOTO DE EQUIPO/CONSULTORA REVISANDO DOCUMENTOS LEGALES -->
     <section class="section container hero-grid">
       <div class="hero-text">
         <h1>Transformamos la exigencia legal en una cultura de respeto mutuo</h1>
         <p>
-          Asesoría especializada para resolver las exigencias de la <strong>Ley Karin</strong> y elaborar el <strong>Informe Anual de Equidad de Género (Ley 21.828)</strong> en tu organización.
+          Investigaciones externas periciales, asesoría técnica en la <strong>Ley Karin (N° 21.643)</strong> y elaboración del <strong>Informe Anual de Equidad de Género (Ley 21.828)</strong> para organizaciones públicas y privadas.
         </p>
         
         <div class="hero-buttons">
-          <a href="#diagnostico" class="btn-hero-primary">Diagnóstico Ley Karin Gratis</a>
-          <a href="#ley-21828" class="btn-hero-secondary">Asesoría Informe Ley 21.828</a>
+          <a href="#diagnostico" class="btn-primary">Autodiagnóstico Ley Karin</a>
+          <a href="#contacto" class="btn-secondary">Agendar Investigación Externa</a>
         </div>
       </div>
       <div class="hero-image">
-        <!-- URL de imagen probada y directa de Unsplash -->
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Líder facilitando taller de trabajo en equipo e igualdad">
+        <!-- FOTO PROFESIONAL: Equipo ejecutivo y consultora revisando informe técnico y documentos legales -->
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Consultores y equipo ejecutivo analizando informe técnico y normativo">
+      </div>
+    </section>
+
+    <!-- ALERTAS DE COMPLIANCE (CASOS DT) -->
+    <section class="section section-bg-light" id="alertas">
+      <div class="container">
+        <h2 class="section-title">Alertas de Compliance: Criterios de la DT</h2>
+        <p class="section-subtitle">Evite sanciones severas conociendo los criterios de fiscalización definitivos del Dictamen N° 515/21 y el Decreto N° 21 de la Inspección del Trabajo.</p>
+
+        <div class="cases-grid">
+          <div class="case-card">
+            <h4>Caso 1</h4>
+            <h3>Competencia del Investigador</h3>
+            <p><strong>Infracción común:</strong> Designar al jefe de operaciones o un abogado general sin formación acreditada en la materia.</p>
+            <div class="dt-criterion"><strong>Criterio DT:</strong> El Art. 211-C exige estrictamente formación demostrable en acoso, género o derechos fundamentales por entidades reconocidas.</div>
+          </div>
+
+          <div class="case-card">
+            <h4>Caso 2</h4>
+            <h3>El Fantasma de los 60 Días</h3>
+            <p><strong>Infracción común:</strong> Rechazar denuncias por hechos ocurridos hace más de 2 meses alegando "caducidad".</p>
+            <div class="dt-criterion"><strong>Criterio DT:</strong> El plazo de 60 días rige la tutela judicial, no al empleador. La empresa está obligada por ley a aperturar el procedimiento siempre.</div>
+          </div>
+
+          <div class="case-card">
+            <h4>Caso 3</h4>
+            <h3>Cierre por Desistimiento Verbal</h3>
+            <p><strong>Infracción común:</strong> Archivar la investigación cuando el denunciante manifiesta informalmente no querer seguir.</p>
+            <div class="dt-criterion"><strong>Criterio DT:</strong> Exige un registro escrito explícito donde se refleje con total claridad y nitidez la libre voluntad de la persona afectada.</div>
+          </div>
+
+          <div class="case-card">
+            <h4>Caso 4</h4>
+            <h3>Falta de Pruebas Concretas</h3>
+            <p><strong>Infracción común:</strong> Concluir "sin acoso" porque los hechos ocurrieron en privado sin testigos ni correos.</p>
+            <div class="dt-criterion"><strong>Criterio DT:</strong> Infracción al debido proceso. Se debe aplicar la prueba indiciaria, ponderando la dificultad probatoria del acoso.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MATRIZ DE ACCIÓN INMEDIATA (MEDIDAS DE RESGUARDO) -->
+    <section class="section container" id="matriz">
+      <h2 class="section-title">Matriz de Acción Inmediata: Medidas de Resguardo</h2>
+      <p class="section-subtitle">Herramienta pericial orientada al cumplimiento del Artículo 211-B bis del Código del Trabajo. Aplique mitigaciones inmediatas tras recibir la denuncia.</p>
+
+      <div class="table-container">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Nivel de Riesgo</th>
+              <th>Gravedad del Hecho Imputado</th>
+              <th>Medida de Resguardo Obligatoria</th>
+              <th>Sustento Legal (DT / Ley 21.643)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge-risk risk-critical">Crítico</span></td>
+              <td>Agresión física, acoso sexual explícito o amenazas directas a la integridad.</td>
+              <td>Separación inmediata de espacios físicos, teletrabajo prioritario o reubicación de jornada sin menoscabo.</td>
+              <td>Art. 211-B bis: Resguardo inmediato considerando la seguridad del denunciante.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-risk risk-medium">Medio</span></td>
+              <td>Hostigamiento reiterado, maltrato verbal prolongado o menoscabo horizontal.</td>
+              <td>Redistribución del tiempo de la jornada laboral o rotación preventiva de turnos.</td>
+              <td>Dictamen 515/21: Criterio de evaluación caso a caso según condiciones laborales.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-risk risk-all">Todo Nivel</span></td>
+              <td>Cualquier denuncia verbal o escrita de acoso o violencia en el trabajo.</td>
+              <td>Derivación inmediata a atención psicológica temprana a través del organismo administrador (ACHS, Mutual, IST).</td>
+              <td>Plazo máximo de 2 días hábiles para activar prestaciones si la denuncia ingresa por la DT.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <!-- SERVICIOS ESTRATÉGICOS -->
     <section class="section section-bg-light" id="servicios">
       <div class="container">
-        <h2 class="section-title">Asesoría Estratégica Normativa</h2>
-        <p class="section-subtitle">Acompañamos a las empresas en el cumplimiento normativo con una mirada técnica, preventiva y centrada en las personas.</p>
-        
+        <h2 class="section-title">Servicios de Asesoría e Investigación Externa</h2>
+        <p class="section-subtitle">Soluciones integrales para resguardar a la organización y conducir procesos investigativos impecables.</p>
+
         <div class="cards-grid">
+          <div class="card">
+            <div class="icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+            <h3>Investigación Externa Imparcial</h3>
+            <p>Desarrollamos el procedimiento pericial completo ante denuncias complejas, con la máxima independencia, entrevistas estructuradas e informe final técnico.</p>
+          </div>
+
           <div class="card">
             <div class="icon-wrapper">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
             </div>
-            <h3>Protocolos Ley Karin</h3>
-            <p>Confección del protocolo obligatorio de prevención, integración al Reglamento Interno (RIOHS) y diseño de canales formales de denuncia.</p>
+            <h3>Asesoría al Investigador Interno</h3>
+            <p>Acompañamos paso a paso al profesional designado por tu empresa: estrategia, formulación de preguntas, revisión de pruebas y redacción del informe.</p>
           </div>
 
           <div class="card">
@@ -203,236 +315,277 @@
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
             </div>
             <h3>Informe Anual Ley 21.828</h3>
-            <p>Estructuramos, levantamos indicadores y redactamos el informe obligatorio de equidad de género de tu empresa para ser entregado en marzo.</p>
+            <p>Estructuramos, levantamos la data salarial y redactamos el Informe Anual de Equidad e Inclusión de Mujeres obligatorio para la entrega de marzo.</p>
           </div>
 
           <div class="card">
             <div class="icon-wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
             </div>
-            <h3>Investigaciones Internas</h3>
-            <p>Conducción imparcial y técnica de procedimientos de investigación ante denuncias por acoso laboral, sexual o violencia.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon-wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><path d="M3 9l3 6 3-6"></path><path d="M15 9l3 6 3-6"></path></svg>
-            </div>
-            <h3>Perspectiva de Género</h3>
-            <p>Auditorías de equidad salarial, erradicación de sesgos e implementación de programas de buen trato y conciliación.</p>
+            <h3>Academia Ágora 360°</h3>
+            <p>Capacitación y formación práctica a jefaturas y equipos de RR.HH. para categorizar denuncias, prevenir sesgos y ejercer un liderazgo respetuoso.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- INFORME LEY 21.828 -->
-    <section class="section container" id="ley-21828">
-      <div class="informe-box">
-        <h2>⚠️ Alerta de Cumplimiento: Informe Anual Ley 21.828</h2>
-        <p style="font-size: 1.05rem; opacity: 0.9; max-width: 900px; margin-bottom: 20px;">
-          Las empresas que deben cumplir con la Ley 21.828 están obligadas a presentar un <strong>Informe Anual sobre la Inclusión de Mujeres y Equidad</strong> en el mes de marzo. Al no existir una plantilla estándar de la autoridad, elaboramos el documento técnico a tu medida.
-        </p>
-        
-        <div class="informe-tips">
-          <div class="tip-item">
-            <h4>Tip 1: Levanta la data a tiempo</h4>
-            <p>Consolidar métricas de brecha salarial y representación femenina requiere semanas de revisión.</p>
-          </div>
-          <div class="tip-item">
-            <h4>Tip 2: Mide acciones de conciliación</h4>
-            <p>El informe exige reportar medidas concretas de flexibilidad e igualdad aplicadas en el año.</p>
-          </div>
-          <div class="tip-item">
-            <h4>Tip 3: Formato Ejecutivo Profesional</h4>
-            <p>Te entregamos un informe preparado para auditoría, comité directivo y organismos fiscalizadores.</p>
-          </div>
-        </div>
+    <!-- MÉTODO ÁGORA 360 Y PLAZOS DE 30 DÍAS -->
+    <section class="section container" id="metodo360">
+      <h2 class="section-title">Método Ágora 360®: Investigaciones Objetivas</h2>
+      <p class="section-subtitle">Metodología pericial ajustada al plazo legal obligatorio de 30 días corridos establecido por la Ley N° 21.643.</p>
 
-        <a href="#contacto" class="btn-hero-primary" style="margin-top: 30px; display: inline-block; background-color: #ffffff; color: var(--verde-principal);">Solicitar Asesoría para el Informe</a>
+      <h3 style="margin-bottom: 15px;">Los Cuatro Pilares Fundamentales</h3>
+      <div class="pilares-grid">
+        <div class="pilar-box">
+          <h4>⚖️ Imparcialidad</h4>
+          <p style="font-size: 0.88rem; color: var(--texto-suave);">Declaración formal de independencia, prevención de conflictos de interés e igualdad de oportunidades para las partes.</p>
+        </div>
+        <div class="pilar-box">
+          <h4>📂 Trazabilidad</h4>
+          <p style="font-size: 0.88rem; color: var(--texto-suave);">Código Único de Caso (CUC), expediente reservado, cadena de custodia documental y registros cronológicos auditable.</p>
+        </div>
+        <div class="pilar-box">
+          <h4>🔎 Objetividad</h4>
+          <p style="font-size: 0.88rem; color: var(--texto-suave);">Análisis mediante matriz de evidencia, evaluación de consistencia de relatos y estándar de prueba indiciaria.</p>
+        </div>
+        <div class="pilar-box">
+          <h4>📜 Cumplimiento</h4>
+          <p style="font-size: 0.88rem; color: var(--texto-suave);">Alineación total con la Ley 21.643, DS N° 21, Convenio 190 OIT y dictámenes vigentes de la Dirección del Trabajo.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 40px; margin-bottom: 15px;">El Flujo de 8 Etapas en los 30 Días Legales</h3>
+      <div class="flujo-container">
+        <div class="step-box">1. Admisibilidad & Resguardo</div>
+        <div class="step-box">2. Planificación & Cronograma</div>
+        <div class="step-box">3. Custodia de Evidencia</div>
+        <div class="step-box">4. Entrevistas a Partes/Testigos</div>
+        <div class="step-box">5. Análisis Técnico Indiciario</div>
+        <div class="step-box">6. Formulación de Conclusiones</div>
+        <div class="step-box">7. Informe Final & Remisión DT</div>
+        <div class="step-box">8. Seguimiento & Mejora</div>
       </div>
     </section>
 
-    <!-- ACADEMIA ÁGORA 360° -->
-    <section class="section section-bg-light" id="academia">
-      <div class="container hero-grid" style="gap: 60px;">
-        <div>
-          <h2 class="section-title">Academia Ágora 360°</h2>
-          <p style="color: var(--texto-suave); margin-bottom: 25px; font-size: 1.02rem;">
-            El cumplimiento normativo es el piso básico; la cultura organizacional se transforma capacitando a las personas.
+    <!-- INFORME LEY 21.828 (ALERTA MARZO) -->
+    <section class="section section-bg-light" id="ley-21828">
+      <div class="container">
+        <div class="informe-box">
+          <h2>⚠️ Alerta de Cumplimiento: Informe Anual Ley 21.828</h2>
+          <p style="font-size: 1.05rem; opacity: 0.9; max-width: 900px; margin-bottom: 20px;">
+            Las organizaciones sujetas a la Ley 21.828 deben presentar su <strong>Informe Anual sobre la Inclusión de Mujeres y Equidad</strong> durante el mes de marzo. Construimos el reporte técnico conforme a los parámetros exigidos.
           </p>
           
-          <div style="display: flex; gap: 15px; margin-bottom: 20px;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px; stroke:var(--naranja-acento); flex-shrink:0;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-            <div>
-              <strong style="color: var(--verde-principal); display:block;">Taller Ley Karin para Jefaturas</strong>
-              <span style="color: var(--texto-suave); font-size:0.9rem;">Límites del liderazgo, prevención temprana y deber legal de denuncia.</span>
+          <div class="informe-tips">
+            <div class="tip-item">
+              <h4>Tip 1: Levantamiento Temprano</h4>
+              <p>Consolidar métricas de brechas salariales y representación femenina requiere semanas de revisión.</p>
+            </div>
+            <div class="tip-item">
+              <h4>Tip 2: Medidas de Conciliación</h4>
+              <p>Se exige documentar acciones concretas de flexibilidad y corresponsabilidad ejecutadas durante el año.</p>
+            </div>
+            <div class="tip-item">
+              <h4>Tip 3: Formato Auditable</h4>
+              <p>Entregamos un informe ejecutivo listo para revisión de directorios y organismos fiscalizadores.</p>
             </div>
           </div>
 
-          <div style="display: flex; gap: 15px;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px; stroke:var(--naranja-acento); flex-shrink:0;"><path d="M9 18h6M10 22h4M12 2v1M19 5l-1.5 1.5M5 5L6.5 6.5M22 12h-1M2 12h1M16.5 17.5c2.4-1.5 3.5-4.4 2.3-7.2-1.2-2.7-4-4.3-7-4.3s-5.8 1.6-7 4.3c-1.2 2.8-.1 5.7 2.3 7.2v.5a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-.5z"></path></svg>
-            <div>
-              <strong style="color: var(--verde-principal); display:block;">Sensibilización en Buen Trato</strong>
-              <span style="color: var(--texto-suave); font-size:0.9rem;">Empatía, comunicación asertiva y resolución pacífica de conflictos.</span>
-            </div>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Capacitación y formación en equipo">
+          <a href="#contacto" class="btn-primary" style="margin-top: 30px; display: inline-block; background-color: var(--blanco); color: var(--azul-gris);">Cotizar Informe de Marzo</a>
         </div>
       </div>
     </section>
 
-    <!-- RECURSOS -->
-    <section class="section container" id="recursos">
-      <h2 class="section-title" style="text-align: center;">Recursos y Muestras Gratuitas</h2>
-      <p class="section-subtitle" style="text-align: center; margin: 0 auto 35px auto;">
-        Descarga herramientas iniciales e inscribe tu correo para recibir la vista previa exclusiva de nuestro material.
-      </p>
+    <!-- MARCO LEGAL Y CENTRO DE DESCARGAS OFICIALES -->
+    <section class="section container" id="descargas">
+      <h2 class="section-title">Centro de Descargas y Fuentes Oficiales</h2>
+      <p class="section-subtitle">Acceda directamente a los cuerpos legales y circulares técnicas obligatorias vigentes en Chile.</p>
 
       <div class="recursos-grid">
-        <div class="recurso-card recurso-destacado">
-          <div class="badge-pronto">Muestra Gratis</div>
+        <div class="recurso-card">
           <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-            Capítulo 1 e Introducción: Manual Ley Karin
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Ley Karin Nº 21.643
           </h3>
-          <p>Déjanos tu correo institucional y te enviaremos sin costo la <strong>Introducción y Capítulo 1</strong> de nuestro Manual Práctico, junto con la información para adquirir la versión completa.</p>
-          <form onsubmit="event.preventDefault(); alert('¡Gracias! Te enviaremos el Capítulo 1 e Introducción a tu correo.');">
-            <input type="email" class="input-recurso" placeholder="Ingresa tu correo institucional" required>
-            <button type="submit" class="btn-recurso">Descargar Capítulo 1 Gratis</button>
-          </form>
+          <p>Texto completo publicado en el Diario Oficial que modifica el Código del Trabajo.</p>
+          <button class="btn-secondary" style="width: 100%; font-size: 0.85rem;" onclick="alert('Descargando archivo PDF oficial...')">Descargar PDF Oficial</button>
         </div>
 
         <div class="recurso-card">
           <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            Checklist de Datos Ley 21.828
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Decreto Supremo Nº 21
           </h3>
-          <p>Guía de cotejo rápida para identificar qué información salarial y de dotación necesitas recopilar para el informe de marzo.</p>
-          <button class="btn-recurso" style="margin-top: 15px;" onclick="alert('Esta herramienta estará disponible muy pronto.')">Solicitar Checklist</button>
+          <p>Directrices oficiales del Ministerio del Trabajo para el desarrollo de investigaciones.</p>
+          <button class="btn-secondary" style="width: 100%; font-size: 0.85rem;" onclick="alert('Descargando archivo PDF oficial...')">Descargar PDF Oficial</button>
+        </div>
+
+        <div class="recurso-card">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Decreto Nº 122 (Convenio 190)
+          </h3>
+          <p>Promulgación del Convenio 190 de la OIT sobre la erradicación de la violencia y el acoso.</p>
+          <button class="btn-secondary" style="width: 100%; font-size: 0.85rem;" onclick="alert('Descargando archivo PDF oficial...')">Descargar PDF Oficial</button>
+        </div>
+
+        <div class="recurso-card">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Circular General SUSESO
+          </h3>
+          <p>Asistencia técnica obligatoria y protocolo de prevención de mutualidades (CEAL-SM).</p>
+          <button class="btn-secondary" style="width: 100%; font-size: 0.85rem;" onclick="alert('Descargando archivo PDF oficial...')">Descargar PDF Oficial</button>
         </div>
       </div>
     </section>
 
-    <!-- DIAGNÓSTICO LEY KARIN -->
+    <!-- AUTODIAGNÓSTICO LEY KARIN (5 PREGUNTAS TÉCNICAS) -->
     <section class="section section-bg-light" id="diagnostico">
       <div class="container">
-        <h2 class="section-title">Diagnóstico Ley Karin Gratuito</h2>
-        <p class="section-subtitle">Responde 5 preguntas clave y evalúa de inmediato el nivel de cumplimiento de tu empresa frente a la fiscalización.</p>
+        <h2 class="section-title">Autodiagnóstico de Cumplimiento: Ley Karin</h2>
+        <p class="section-subtitle">Evalúe el nivel de blindaje legal de su organización frente a las exigencias de la Ley N° 21.643 en Chile.</p>
 
         <div class="quiz-box">
           <form id="quiz-form">
             <div class="quiz-question">
-              <p>1. ¿Tienen redactado un Protocolo de Prevención del Acoso Laboral, Sexual y Violencia ajustado a la Ley Karin?</p>
+              <p>1. ¿Su organización cuenta con un Protocolo de Prevención formalmente incorporado en el RIOHS, o entregado por escrito a los trabajadores al firmar contrato si su empresa tiene menos de 10 colaboradores?</p>
               <div class="quiz-options">
-                <label><input type="radio" name="q1" value="no" required> No / En proceso</label>
-                <label><input type="radio" name="q1" value="si"> Sí, está al día</label>
-              </div>
-            </div>
-            <div class="quiz-question">
-              <p>2. ¿Actualizaron e incorporaron formalmente las nuevas normativas en el Reglamento Interno (RIOHS)?</p>
-              <div class="quiz-options">
-                <label><input type="radio" name="q2" value="no" required> No / No estoy seguro(a)</label>
-                <label><input type="radio" name="q2" value="si"> Sí, está actualizado</label>
-              </div>
-            </div>
-            <div class="quiz-question">
-              <p>3. ¿Cuentan con un Canal de Denuncias formal, seguro y difundido a todo el personal?</p>
-              <div class="quiz-options">
-                <label><input type="radio" name="q3" value="no" required> No formalmente</label>
-                <label><input type="radio" name="q3" value="si"> Sí, está operativo</label>
-              </div>
-            </div>
-            <div class="quiz-question">
-              <p>4. ¿Existe un procedimiento claro para investigar y sancionar denuncias con total imparcialidad?</p>
-              <div class="quiz-options">
-                <label><input type="radio" name="q4" value="no" required> No hay procedimiento formal</label>
-                <label><input type="radio" name="q4" value="si"> Sí, está definido</label>
-              </div>
-            </div>
-            <div class="quiz-question">
-              <p>5. ¿Han capacitado a las jefaturas sobre el rol del liderazgo y el deber legal de denuncia?</p>
-              <div class="quiz-options">
-                <label><input type="radio" name="q5" value="no" required> Aún no</label>
-                <label><input type="radio" name="q5" value="si"> Sí, se capacitaron</label>
+                <label><input type="radio" name="q1" value="0" required> Sí, completamente al día</label>
+                <label><input type="radio" name="q1" value="1"> Parcialmente / En desarrollo</label>
+                <label><input type="radio" name="q1" value="2"> No contamos con este respaldo</label>
               </div>
             </div>
 
-            <button type="button" class="btn-hero-primary" style="width: 100%; border: none;" onclick="calcularDiagnostico()">Ver Mi Resultado Inmediato</button>
+            <div class="quiz-question">
+              <p>2. ¿Existe un canal confidencial y un procedimiento claramente definido y conocido por el personal para realizar denuncias?</p>
+              <div class="quiz-options">
+                <label><input type="radio" name="q2" value="0" required> Sí, estructurado e informado</label>
+                <label><input type="radio" name="q2" value="1"> Parcialmente / Falta difusión</label>
+                <label><input type="radio" name="q2" value="2"> No tenemos un canal formal</label>
+              </div>
+            </div>
+
+            <div class="quiz-question">
+              <p>3. Ante una denuncia, ¿el procedimiento asegura por escrito la aplicación inmediata de medidas de resguardo (separación física) y atención psicológica temprana para la víctima?</p>
+              <div class="quiz-options">
+                <label><input type="radio" name="q3" value="0" required> Sí, garantizado en el flujo interno</label>
+                <label><input type="radio" name="q3" value="1"> Probablemente / Se evalúa caso a caso</label>
+                <label><input type="radio" name="q3" value="2"> No lo tenemos protocolizado</label>
+              </div>
+            </div>
+
+            <div class="quiz-question">
+              <p>4. ¿El protocolo de su empresa contempla medidas preventivas y de acción frente a la violencia en el trabajo ejercida por terceros ajenos a la relación laboral (ej. clientes, usuarios o proveedores)?</p>
+              <div class="quiz-options">
+                <label><input type="radio" name="q4" value="0" required> Sí, incluye cobertura externa</label>
+                <label><input type="radio" name="q4" value="1"> Parcialmente / De forma ambigua</label>
+                <label><input type="radio" name="q4" value="2"> No cubre conductas de terceros</label>
+              </div>
+            </div>
+
+            <div class="quiz-question">
+              <p>5. Al realizar una investigación interna, ¿su organización está obligada a designar preferentemente a un encargado con formación demostrable en acoso, género o derechos fundamentales?</p>
+              <div class="quiz-options">
+                <label><input type="radio" name="q5" value="0" required> Sí, contamos con personal calificado o externo</label>
+                <label><input type="radio" name="q5" value="1"> Probablemente lo asuma RR.HH. sin certificación</label>
+                <label><input type="radio" name="q5" value="2"> No, desconocemos esa exigencia</label>
+              </div>
+            </div>
+
+            <button type="button" class="btn-primary" style="width: 100%; font-size: 1rem;" onclick="calcularDiagnostico()">Obtener Evaluación de Riesgo</button>
           </form>
 
           <div id="quiz-result">
             <h3 id="result-title"></h3>
-            <p id="result-text" style="margin-top: 8px;"></p>
-            <a href="#contacto" class="btn-hero-primary" style="margin-top: 15px; display: inline-block;">Solicitar Asesoría de Regularización</a>
+            <p id="result-text" style="margin-top: 8px; font-size: 1.05rem;"></p>
+            <a href="#contacto" class="btn-primary" style="margin-top: 20px; display: inline-block;">Solicitar Asesoría de Regularización</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- MITOS Y REALIDADES -->
+    <!-- CRITERIOS DE ACOSO VS CONFLICTO (MITOS Y REALIDADES) -->
     <section class="section container" id="mitos">
-      <h2 class="section-title">Mitos y Realidades de la Ley Karin</h2>
-      <p class="section-subtitle">Aclarar los límites entre la exigencia laboral legítima y el acoso es fundamental para proteger a jefaturas y colaboradores.</p>
+      <h2 class="section-title">Conflicto Laboral vs. Acoso bajo Ley Karin</h2>
+      <p class="section-subtitle">Diferenciar correctamente un desacuerdo operativo del acoso es clave para no saturar los canales y evitar investigaciones infundadas.</p>
 
       <div class="comparativa-grid">
         <div class="box-comparativa box-si">
           <h3>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-            SÍ es sancionable (Ley Karin)
+            SÍ es Acoso (Un solo hecho grave basta)
           </h3>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Burlas, descalificaciones o gritos sistemáticos o graves.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Aislar o ignorar deliberadamente a una persona.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Acoso sexual o violencia por parte de terceros (clientes).</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Humillar públicamente con insultos o descalificaciones graves.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Amenazar injustificadamente con el despido como intimidación.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Difundir información privada para afectar la honra.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Violencia ejercida por terceros (clientes o proveedores).</li>
           </ul>
         </div>
 
         <div class="box-comparativa box-no">
           <h3>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            NO es acoso (Liderazgo)
+            NO es Acoso (Ejercicio de Liderazgo)
           </h3>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14"></path></svg> Feedback de desempeño objetivo y respetuoso.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14"></path></svg> Exigir el cumplimiento de metas y compromisos del contrato.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14"></path></svg> Instrucciones operativas razonables de una jefatura.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14"></path></svg> Feedback de desempeño objetivo y entregado con respeto.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14"></path></svg> Exigir el cumplimiento de metas y contratos estipulados.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14"></path></svg> Corrección respetuosa de errores en el trabajo.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14"></path></svg> Reorganización operativa motivada por necesidades de la empresa.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- CONTACTO DIRECTO -->
+    <!-- CONTACTO DIRECTO Y AGENDAMIENTO -->
     <section class="section section-bg-light" id="contacto">
       <div class="container">
         <div class="hero-grid">
           <div class="contact-form">
-            <h2 class="section-title" style="font-size: 1.7rem;">Escríbenos directamente</h2>
-            <form onsubmit="event.preventDefault(); alert('¡Gracias! Un especialista de Ágora 360° se comunicará contigo.');">
+            <h2 class="section-title" style="font-size: 1.7rem;">Solicitar Investigación o Asesoría</h2>
+            <form onsubmit="event.preventDefault(); alert('¡Gracias! Un especialista de Ágora Laboral 360° se comunicará a la brevedad para agendar la reunión.');">
               <div class="form-group">
                 <label>Nombre Completo</label>
                 <input type="text" placeholder="Ej: Camila González" required>
               </div>
               <div class="form-group">
-                <label>Correo Institucional</label>
+                <label>Cargo</label>
+                <input type="text" placeholder="Ej: Gerenta de Personas / Fiscal" required>
+              </div>
+              <div class="form-group">
+                <label>Empresa u Organización</label>
+                <input type="text" placeholder="Ej: Empresa S.A." required>
+              </div>
+              <div class="form-group">
+                <label>Correo Electrónico Institucional</label>
                 <input type="email" placeholder="nombre@empresa.cl" required>
               </div>
               <div class="form-group">
-                <label>Mensaje o Consulta</label>
-                <textarea rows="4" placeholder="¿Necesitas apoyo con la Ley Karin o el Informe de Marzo?" required></textarea>
+                <label>Teléfono de Contacto</label>
+                <input type="tel" placeholder="+56 9 1234 5678" required>
               </div>
-              <button type="submit" class="btn-hero-primary" style="width: 100%; border: none;">Enviar Mensaje</button>
+              <div class="form-group">
+                <label>Mensaje o Detalle del Caso</label>
+                <textarea rows="3" placeholder="Indíquenos brevemente el requerimiento o la situación a evaluar..." required></textarea>
+              </div>
+              <div class="checkbox-group">
+                <input type="checkbox" id="reunion" checked>
+                <label for="reunion">Solicito una reunión inicial de diagnóstico previo.</label>
+              </div>
+              <button type="submit" class="btn-primary" style="width: 100%;">📅 Agendar Reunión Técnica</button>
             </form>
           </div>
+
           <div>
             <h2 class="section-title">¿Quiénes somos?</h2>
-            <p style="color: var(--texto-suave); margin-bottom: 20px;">
-              Somos un equipo interdisciplinario que une la gestión de personas, la psicología organizacional y la asesoría técnica para impulsar el respeto y la equidad laboral en Chile.
+            <p style="color: var(--texto-suave); margin-bottom: 25px;">
+              Un equipo interdisciplinario experto en compliance laboral, psicología organizacional y derecho del trabajo dedicado a resguardar la reputación corporativa y la dignidad en los espacios laborales de Chile.
             </p>
-            <div style="background: white; padding: 25px; border-radius: 4px; border-left: 4px solid var(--verde-principal); box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
-              <p><strong>📧 Correo:</strong> contacto@agoralaboral.cl</p>
-              <p><strong>📍 Ubicación:</strong> Santiago, Chile (Atención nacional)</p>
+            <div style="background: var(--blanco); padding: 25px; border-radius: 8px; border-left: 4px solid var(--azul-gris); box-shadow: 0 2px 12px rgba(0,0,0,0.03);">
+              <p style="margin-bottom: 10px;"><strong>📧 Correo:</strong> contacto@agoralaboral.cl</p>
+              <p><strong>📍 Ubicación:</strong> Santiago, Chile (Atención a nivel nacional)</p>
             </div>
           </div>
         </div>
@@ -442,7 +595,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados. | Diseñando culturas de respeto en Chile.</p>
+    <p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados. | Método Ágora 360® registrado.</p>
   </footer>
 
   <script>
@@ -454,16 +607,11 @@
       const q5 = document.querySelector('input[name="q5"]:checked');
 
       if (!q1 || !q2 || !q3 || !q4 || !q5) {
-        alert('Por favor responde las 5 preguntas para evaluar tu nivel de cumplimiento.');
+        alert('Por favor responda las 5 preguntas para obtener su evaluación.');
         return;
       }
 
-      let noCount = 0;
-      if (q1.value === 'no') noCount++;
-      if (q2.value === 'no') noCount++;
-      if (q3.value === 'no') noCount++;
-      if (q4.value === 'no') noCount++;
-      if (q5.value === 'no') noCount++;
+      let score = parseInt(q1.value) + parseInt(q2.value) + parseInt(q3.value) + parseInt(q4.value) + parseInt(q5.value);
 
       const resultBox = document.getElementById('quiz-result');
       const resultTitle = document.getElementById('result-title');
@@ -471,15 +619,15 @@
 
       resultBox.style.display = 'block';
 
-      if (noCount >= 3) {
-        resultTitle.innerText = '⚠️ Nivel de Riesgo Alto frente a Fiscalización';
-        resultText.innerText = 'Tu empresa presenta brechas críticas respecto a la Ley Karin. Te recomendamos apoyarte en expertos para confeccionar tus protocolos y evitar sanciones de la Dirección del Trabajo.';
-      } else if (noCount >= 1) {
-        resultTitle.innerText = '🟡 Cumplimiento Parcial o Incompleto';
-        resultText.innerText = 'Tienes bases creadas, pero faltan aspectos clave (como el canal formal o la formación a jefaturas). Debes cerrar estas brechas para estar protegido legalmente.';
+      if (score >= 5) {
+        resultTitle.innerText = '⚠️ Nivel de Riesgo Alto frente a Fiscalización DT';
+        resultText.innerText = 'Su organización presenta brechas críticas respecto a las exigencias obligatorias de la Ley Karin. Le recomendamos apoyarse urgentemente en un peritaje externo para regularizar sus procedimientos y evitar multas graves.';
+      } else if (score >= 1) {
+        resultTitle.innerText = '🟡 Cumplimiento Parcial o En Desarrollo';
+        resultText.innerText = 'Cuentan con bases creadas, pero faltan aspectos clave de resguardo, difusión o certificación de investigadores. Deben cerrar estas brechas para lograr un blindaje legal efectivo.';
       } else {
-        resultTitle.innerText = '✅ ¡Excelente Nivel de Cumplimiento!';
-        resultText.innerText = 'Tu organización cuenta con las bases exigidas por la Ley Karin. En Academia 360° podemos ayudarte a fortalecer esa cultura con talleres anuales de sensibilización.';
+        resultTitle.innerText = '✅ ¡Excelente Nivel de Blindaje Legal!';
+        resultText.innerText = 'Su organización cumple a cabalidad con los estándares exigidos por la Ley Karin y los dictámenes de la DT. En Academia Ágora 360° podemos ayudarles a mantener activa esta cultura con talleres anuales.';
       }
     }
   </script>
