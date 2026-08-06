@@ -40,7 +40,7 @@
     .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s ease; }
     .nav-links a:hover, .nav-links a.active { color: var(--morado-principal); }
     
-    .btn-nav-cta { background-color: var(--morado-principal) !important; color: var(--blanco) !important; padding: 10px 18px; border-radius: 6px !important; font-weight: 700 !important; transition: background 0.2s ease; }
+    .btn-nav-cta { background-color: var(--morado-principal) !important; color: var(--blanco) !important; padding: 10px 18px; border-radius: 6px !important; font-weight: 700 !important; transition: background 0.2s ease; text-align: center; }
     .btn-nav-cta:hover { background-color: var(--morado-hover) !important; }
 
     /* BARRA DE ESPECIALIDADES */
@@ -56,7 +56,7 @@
     .section-title { font-size: 2.2rem; margin-bottom: 14px; text-align: center; }
     .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 850px; margin: 0 auto 40px auto; text-align: center; }
 
-    /* 1. HERO PRINCIPAL CON FOTO COMPLETA DE FONDO Y TEXTO TRANSPARENTE FLOTANTE */
+    /* 1. HERO PRINCIPAL */
     .hero-banner {
       position: relative;
       background-color: var(--morado-principal);
@@ -64,7 +64,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      min-height: 540px;
+      min-height: 500px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -102,13 +102,13 @@
     .card h3 { font-size: 1.2rem; margin-bottom: 12px; }
     .card p { font-size: 0.92rem; color: var(--texto-suave); margin-bottom: 20px; }
 
-    /* 4. ¿POR QUÉ ELEGIR ÁGORA (MÉTODO ÁGORA 360) - ICONOS MONOCROMÁTICOS */
+    /* 4. ¿POR QUÉ ELEGIR ÁGORA */
     .pilares-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
     .pilar-box { background: var(--blanco); padding: 25px; border-radius: 8px; border: 1px solid #ede8f2; border-top: 4px solid var(--azul-cielo); }
     .pilar-box h4 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; color: var(--morado-principal); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
     .pilar-box h4 svg { width: 22px; height: 22px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; }
 
-    /* 5. ALERTAS DE COMPLIANCE (CASOS DT CON ESTILO MONOCROMÁTICO) */
+    /* 5. ALERTAS DE COMPLIANCE */
     .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 25px; }
     .case-card { background: var(--blanco); padding: 25px; border-radius: 8px; border-left: 4px solid var(--morado-principal); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
     .case-card h4 { font-family: 'Montserrat', sans-serif; color: var(--morado-principal); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
@@ -116,7 +116,7 @@
     .case-card h3 { font-size: 1.15rem; margin-bottom: 12px; color: var(--morado-principal); }
     .case-card p { font-size: 0.9rem; color: var(--texto-suave); }
 
-    /* 6. RECURSOS Y LEAD MAGNET DEL MANUAL */
+    /* 6. RECURSOS Y LEAD MAGNET */
     .recursos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
     .recurso-card { background: var(--blanco); padding: 30px; border-radius: 8px; border: 1px solid #ede8f2; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
     .recurso-card h3 { font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
@@ -135,7 +135,8 @@
     .btn-agora-outline:hover { background-color: var(--morado-principal); color: var(--blanco); }
     .btn-agora-small { padding: 9px 18px; font-size: 0.82rem; }
 
-    /* CONTACTO */
+    /* CONTACTO GRID Y PREGUNTAS FRECUENTES */
+    .contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: start; }
     .contact-form { background: var(--blanco); padding: 35px; border-radius: 8px; border: 1px solid #ede8f2; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
     .form-group { margin-bottom: 18px; }
     .form-group label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.88rem; color: var(--morado-principal); }
@@ -143,8 +144,41 @@
     .checkbox-group { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-size: 0.9rem; color: var(--texto-suave); }
     .checkbox-group input { width: 18px; height: 18px; accent-color: var(--morado-principal); }
 
+    /* ESTILO ACORDEÓN PREGUNTAS FRECUENTES */
+    .faq-wrapper { margin-top: 30px; }
+    .faq-title { font-size: 1.3rem; margin-bottom: 16px; color: var(--morado-principal); }
+    .faq-item { background: var(--blanco); border: 1px solid #ede8f2; border-radius: 8px; margin-bottom: 10px; padding: 14px 18px; transition: border-color 0.2s; }
+    .faq-item summary { font-weight: 700; color: var(--morado-principal); cursor: pointer; font-size: 0.9rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--morado-principal); font-weight: bold; }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p { margin-top: 10px; font-size: 0.86rem; color: var(--texto-suave); line-height: 1.5; border-top: 1px solid #f4f0f8; padding-top: 8px; }
+
     footer { background: var(--morado-principal); color: var(--blanco); text-align: center; padding: 25px 24px; font-size: 0.85rem; }
-    @media (max-width: 900px) { .hero-content h1 { font-size: 2rem; } .pilares-grid, .cases-grid, .recursos-grid { grid-template-columns: 1fr; gap: 35px; } .nav-links { display: none; } .quiz-invite { margin-top: 20px; padding: 30px; } }
+
+    /* REGLAS MÓVILES RESPONSIVAS */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hero-banner { padding: 50px 18px; min-height: 420px; }
+      .hero-content h1 { font-size: 1.85rem; }
+      .hero-content p { font-size: 1rem; }
+      .hero-buttons { flex-direction: column; width: 100%; }
+      .btn-hero { width: 100%; text-align: center; }
+      .quiz-invite { margin-top: 20px; padding: 28px 20px; }
+      .quiz-invite h3 { font-size: 1.35rem; }
+      .section { padding: 45px 0; }
+      .section-title { font-size: 1.7rem; }
+      .section-subtitle { font-size: 0.95rem; margin-bottom: 28px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+      .trust-container { justify-content: center; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .contact-form { padding: 22px 16px; }
+      .card { padding: 24px 20px; }
+      .recurso-card { padding: 22px 18px; }
+    }
   </style>
 </head>
 <body>
@@ -185,7 +219,7 @@
   </section>
 
   <main>
-    <!-- 1. HERO PRINCIPAL: PÁRRAFO DE CONSULTORA ESPECIALISTA SOBRE IMAGEN DE FONDO COMPLETA -->
+    <!-- 1. HERO PRINCIPAL -->
     <section class="container">
       <div class="hero-banner">
         <div class="hero-content">
@@ -211,14 +245,13 @@
       </div>
     </section>
 
-    <!-- 3. SERVICIOS (VITRINA) -->
+    <!-- 3. SERVICIOS -->
     <section class="section section-bg-light" id="servicios">
       <div class="container">
         <h2 class="section-title">Asesoría Estratégica Normativa</h2>
         <p class="section-subtitle">Soluciones periciales e interdisciplinarias para resguardar a la organización y cumplir a cabalidad con la normativa laboral chilena.</p>
         
         <div class="cards-grid">
-          <!-- Card 1 -->
           <div class="card">
             <div>
               <div class="icon-wrapper">
@@ -230,7 +263,6 @@
             <a href="#contacto" class="btn-agora btn-agora-small btn-agora-outline">📅 Solicitar Investigación</a>
           </div>
 
-          <!-- Card 2 -->
           <div class="card">
             <div>
               <div class="icon-wrapper">
@@ -242,7 +274,6 @@
             <a href="#contacto" class="btn-agora btn-agora-small btn-agora-outline">📅 Solicitar Acompañamiento</a>
           </div>
 
-          <!-- Card 3 -->
           <div class="card">
             <div>
               <div class="icon-wrapper">
@@ -254,7 +285,6 @@
             <a href="#contacto" class="btn-agora btn-agora-small btn-agora-outline">📅 Cotizar Informe de Marzo</a>
           </div>
 
-          <!-- Card 4 -->
           <div class="card">
             <div>
               <div class="icon-wrapper">
@@ -269,7 +299,7 @@
       </div>
     </section>
 
-    <!-- 4. ¿POR QUÉ ELEGIR ÁGORA (MÉTODO ÁGORA 360) -->
+    <!-- 4. ¿POR QUÉ ELEGIR ÁGORA -->
     <section class="section container" id="metodo360">
       <h2 class="section-title">¿Por qué confiar en Ágora Laboral 360°?</h2>
       <p class="section-subtitle">Nuestro Método Ágora 360® registrado garantiza investigaciones técnicas sólidas, trazables y objetivas conforme a la Ley Karin.</p>
@@ -313,7 +343,7 @@
       </div>
     </section>
 
-    <!-- 5. ALERTA DE COMPLIANCE (CASOS DT CON ESTILO UNIFORME) -->
+    <!-- 5. ALERTAS DE COMPLIANCE -->
     <section class="section section-bg-light" id="alertas">
       <div class="container">
         <h2 class="section-title">Los errores más frecuentes detectados por la Dirección del Trabajo</h2>
@@ -347,13 +377,12 @@
       </div>
     </section>
 
-    <!-- 6. RECURSOS CON GANCHO LEAD MAGNET (MANUAL DEL INVESTIGADOR INTERNO) -->
+    <!-- 6. RECURSOS Y LEAD MAGNET -->
     <section class="section container" id="recursos">
       <h2 class="section-title">Fuentes Oficiales y Recursos Exclusivos</h2>
       <p class="section-subtitle">Acceda a la normativa oficial y solicite nuestras muestras técnicas de descarga directa.</p>
 
       <div class="recursos-grid">
-        <!-- LEAD MAGNET DESTACADO: MANUAL DEL INVESTIGADOR INTERNO -->
         <div class="recurso-card recurso-destacado">
           <div class="badge-pronto">Muestra Gratis</div>
           <h3>
@@ -367,7 +396,6 @@
           </form>
         </div>
 
-        <!-- RECURSO 2: LEY KARIN -->
         <div class="recurso-card">
           <h3>
             <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
@@ -377,7 +405,6 @@
           <button class="btn-agora btn-agora-small btn-agora-outline" style="width: 100%;" onclick="alert('Solicitando archivo PDF oficial... Le contactaremos.')">Solicitar PDF Oficial</button>
         </div>
 
-        <!-- RECURSO 3: DECRETO 21 -->
         <div class="recurso-card">
           <h3>
             <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
@@ -387,7 +414,6 @@
           <button class="btn-agora btn-agora-small btn-agora-outline" style="width: 100%;" onclick="alert('Solicitando archivo PDF oficial... Le contactaremos.')">Solicitar PDF Oficial</button>
         </div>
 
-        <!-- RECURSO 4: GUÍA SUSESO -->
         <div class="recurso-card">
           <h3>
             <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
@@ -399,10 +425,10 @@
       </div>
     </section>
 
-    <!-- 7. CONTACTO DIRECTO (PANTALLA COMPLETA - AGENDAMIENTO) -->
+    <!-- 7. CONTACTO Y PREGUNTAS FRECUENTES -->
     <section class="section section-bg-light" id="contacto">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: start;">
+        <div class="contact-grid">
           <div class="contact-form">
             <h2 class="section-title" style="font-size: 1.7rem; text-align: left; margin-bottom: 25px;">Agendar Reunión Técnica / Diagnóstico Inicial</h2>
             <form onsubmit="event.preventDefault(); alert('¡Gracias! Un especialista de Ágora 360° se comunicará contigo a la brevedad para agendar la reunión técnica.');">
@@ -439,13 +465,38 @@
           </div>
 
           <div>
-            <h2 class="section-title" style="text-align: left; margin-bottom: 25px;">¿Quiénes somos?</h2>
-            <p style="color: var(--texto-suave); margin-bottom: 25px;">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">¿Quiénes somos?</h2>
+            <p style="color: var(--texto-suave); margin-bottom: 20px;">
               Somos un equipo interdisciplinario que une la gestión de personas, la psicología organizacional y la asesoría técnica laboral pericial para promover el buen trato y la equidad en el mundo del trabajo.
             </p>
-            <div style="background: var(--blanco); padding: 25px; border-radius: 8px; border-left: 4px solid var(--morado-principal); box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
-              <p style="margin-bottom: 10px;"><strong>📧 Correo:</strong> contacto@agoralaboral.cl</p>
+            <div style="background: var(--blanco); padding: 20px; border-radius: 8px; border-left: 4px solid var(--morado-principal); box-shadow: 0 2px 10px rgba(0,0,0,0.03); margin-bottom: 25px;">
+              <p style="margin-bottom: 6px;"><strong>📧 Correo:</strong> contacto@agoralaboral.cl</p>
               <p><strong>📍 Ubicación:</strong> Santiago, Chile (Atención nacional)</p>
+            </div>
+
+            <!-- PREGUNTAS FRECUENTES PARA LLENAR EL ESPACIO VACÍO -->
+            <div class="faq-wrapper">
+              <h3 class="faq-title">Preguntas Frecuentes</h3>
+              
+              <details class="faq-item">
+                <summary>¿Cuánto toma una investigación con la Ley Karin?</summary>
+                <p>La normativa exige un plazo máximo de 30 días corridos para concluir el procedimiento. Nuestro Método Ágora 360® garantiza cumplir estos plazos en cada una de sus 8 etapas.</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>¿Por qué preferir un investigador externo?</summary>
+                <p>Asegura imparcialidad absoluta, evita conflictos de interés internos y entrega un informe pericial con respaldo normativo invulnerable ante revisiones de la Dirección del Trabajo.</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>¿Qué ocurre si la denuncia viene de un cliente o proveedor?</summary>
+                <p>La Ley Karin contempla explícitamente la violencia ejercida por terceros. El empleador está obligado a aplicar medidas de resguardo e investigar el contexto laboral.</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>¿Cómo se resguarda la reserva y confidencialidad?</summary>
+                <p>Asignamos un Código Único de Caso (CUC), expediente bajo estricta reserva y cadena de custodia documental y digital durante todo el procedimiento.</p>
+              </details>
             </div>
           </div>
         </div>
