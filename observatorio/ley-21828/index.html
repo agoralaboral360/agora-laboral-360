@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ley 21.828: Equidad e Informe Anual | Ágora Laboral 360°</title>
+  
+  <!-- Tipografías Corporativas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --morado-principal: #361e42;  
+      --morado-hover: #261330;
+      --verde-menta: #a8e6cf;       
+      --menta-fondo: #eef9f4;
+      --azul-cielo: #d4e8fc;        
+      --fondo-pagina: #faf8fc;      
+      --texto-oscuro: #211329;
+      --texto-suave: #4d4054;
+      --blanco: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: var(--fondo-pagina); line-height: 1.6; }
+
+    /* TIPOGRAFÍA Y ENCABEZADOS */
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--morado-principal); font-weight: 700; }
+
+    /* NAVEGACIÓN PRINCIPAL */
+    .header { background-color: var(--blanco); border-bottom: 1px solid #ede8f2; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; }
+    .logo-text { font-weight: 800; font-size: 1.3rem; color: var(--morado-principal); letter-spacing: -0.5px; text-decoration: none; }
+    .logo-text span { color: var(--morado-principal); border-bottom: 3px solid var(--verde-menta); }
+    
+    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--morado-principal); border-bottom: 2px solid var(--verde-menta); }
+
+    /* MIGA DE PAN */
+    .breadcrumb-bar { background-color: var(--menta-fondo); padding: 14px 24px; border-bottom: 1px solid #e1f2ea; font-size: 0.85rem; }
+    .breadcrumb-container { max-width: 1200px; margin: 0 auto; color: var(--texto-suave); }
+    .breadcrumb-container a { color: var(--morado-principal); text-decoration: none; font-weight: 600; }
+
+    /* CONTENEDORES Y ESTRUCTURA */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 60px 0; }
+    .section-bg-light { background-color: var(--menta-fondo); }
+    .section-title { font-size: 2.2rem; margin-bottom: 14px; text-align: center; }
+    .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 850px; margin: 0 auto 40px auto; text-align: center; }
+
+    /* HERO INTERIOR */
+    .page-header { background: var(--morado-principal); color: var(--blanco); padding: 55px 24px; border-bottom: 4px solid var(--verde-menta); margin-bottom: 40px; }
+    .page-header-content { max-width: 1200px; margin: 0 auto; text-align: center; }
+    .page-header h1 { color: var(--blanco); font-size: 2.6rem; margin-bottom: 14px; }
+    .page-header p { font-size: 1.15rem; color: rgba(255, 255, 255, 0.92); max-width: 850px; margin: 0 auto; line-height: 1.6; }
+
+    /* GRILLA DE PILARES LEY 21.828 */
+    .law-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 40px; }
+    .law-card { background: var(--blanco); padding: 30px; border-radius: 8px; border: 1px solid #ede8f2; border-top: 4px solid var(--azul-cielo); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .law-card h3 { font-size: 1.25rem; margin-bottom: 12px; color: var(--morado-principal); }
+    .law-card p { font-size: 0.92rem; color: var(--texto-suave); line-height: 1.6; }
+
+    /* CAJA DE ALERTA DE MARZO */
+    .alert-banner { background: var(--blanco); border: 2px dashed var(--morado-principal); padding: 30px; border-radius: 10px; text-align: center; margin-bottom: 40px; }
+    .alert-banner h3 { font-size: 1.5rem; color: var(--morado-principal); margin-bottom: 10px; }
+    .alert-banner p { color: var(--texto-suave); max-width: 750px; margin: 0 auto 20px auto; font-size: 0.98rem; }
+
+    /* BOTONES */
+    .btn-agora { display: inline-block; padding: 12px 24px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.88rem; transition: background 0.2s; border: none; cursor: pointer; text-align: center; }
+    .btn-agora-morado { background-color: var(--morado-principal); color: var(--blanco); }
+    .btn-agora-morado:hover { background-color: var(--morado-hover); }
+
+    footer { background: var(--morado-principal); color: var(--blanco); text-align: center; padding: 25px 24px; font-size: 0.85rem; margin-top: 60px; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .navbar { justify-content: center; }
+      .page-header h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header class="header">
+    <div class="navbar">
+      <a href="../../index.html" class="logo-text">ÁGORA LABORAL <span>360°</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../../index.html#inicio">INICIO</a></li>
+          <li><a href="../../index.html#servicios">SERVICIOS</a></li>
+          <li><a href="../../index.html#metodo360">MÉTODO 360°</a></li>
+          <li><a href="../../index.html#observatorio" class="active">OBSERVATORIO</a></li>
+          <li><a href="../../index.html#academia">ACADEMIA</a></li>
+          <li><a href="../../index.html#recursos">RECURSOS</a></li>
+          <li><a href="../../index.html#contacto">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MIGA DE PAN -->
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-container">
+      <a href="../../index.html">Inicio</a> &gt; <a href="../../index.html#observatorio">Observatorio</a> &gt; <span>Ley 21.828 (Equidad)</span>
+    </div>
+  </div>
+
+  <!-- ENCABEZADO DE PÁGINA INTERIOR -->
+  <section class="page-header">
+    <div class="page-header-content">
+      <h1>Ley 21.828: Equidad de Género e Informe Anual</h1>
+      <p>Análisis técnico, obligaciones para empleadores y estructuración del reporte sobre participación equitativa, brecha salarial y conciliación de la vida personal y laboral.</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- SECCIÓN 1: EYES OBLIGACIONES Y EJES -->
+    <section class="section">
+      <h2 class="section-title">Ejes Fundamentales de la Normativa</h2>
+      <p class="section-subtitle">Exigencias legales orientadas a promover la equidad real en las organizaciones laborales de Chile.</p>
+
+      <div class="law-grid">
+        <div class="law-card">
+          <h3>📊 Reporte Anual Obligatorio</h3>
+          <p>Exige a las empresas la preparación y presentación de un informe estructurado que dé cuenta de la proporción de hombres y mujeres en los distintos niveles de la estructura corporativa.</p>
+        </div>
+
+        <div class="law-card">
+          <h3>⚖️ Diagnóstico de Brechas Salariales</h3>
+          <p>Análisis cuantitativo para identificar diferencias de remuneración injustificadas entre cargos de igual valor o responsabilidad dentro de la empresa.</p>
+        </div>
+
+        <div class="law-card">
+          <h3>🌱 Conciliación y Corresponsabilidad</h3>
+          <p>Adopción de medidas e indicadores que faciliten la conciliación entre la vida laboral, familiar y personal, promoviendo la corresponsabilidad parental.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER DE CUMPLIMIENTO EN MARZO -->
+    <section class="container">
+      <div class="alert-banner">
+        <h3>📅 Plazo Anual de Presentación de Informes</h3>
+        <p>Las organizaciones deben mantener su matriz de cargos y reporte de participación actualizado para la entrega exigida durante el primer trimestre. En Ágora Laboral 360° elaboramos el expediente técnico completo listo para envío institucional.</p>
+        <a href="../../index.html#contacto" class="btn-agora btn-agora-morado">Solicitar Diagnóstico e Informe Ley 21.828</a>
+      </div>
+    </section>
+
+    <!-- LLAMADO A LA ACCIÓN -->
+    <section class="section" style="text-align: center;">
+      <h2 class="section-title">¿Necesita asistencia para estructurar su Informe Anual?</h2>
+      <p class="section-subtitle" style="margin-bottom: 30px;">Nuestro equipo metodológico procesa los datos de su nómina para emitir un reporte técnicamente validado.</p>
+      <a href="../../index.html#contacto" class="btn-agora btn-agora-morado">Agendar Sesión Técnica</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados. | Método Ágora 360® registrado.</p>
+  </footer>
+
+</body>
+</html>
