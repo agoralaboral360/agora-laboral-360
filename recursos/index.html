@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Legal y Recursos | Ágora Laboral 360°</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --morado-principal: #361e42; --morado-hover: #261330; --verde-menta: #a8e6cf; --menta-fondo: #eef9f4; --azul-cielo: #d4e8fc; --fondo-pagina: #faf8fc; --texto-oscuro: #211329; --texto-suave: #4d4054; --blanco: #ffffff; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: var(--fondo-pagina); line-height: 1.6; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--morado-principal); font-weight: 700; }
+    
+    .header { background-color: var(--blanco); border-bottom: 1px solid #ede8f2; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; }
+    .logo-text { font-weight: 800; font-size: 1.3rem; color: var(--morado-principal); letter-spacing: -0.5px; text-decoration: none; }
+    .logo-text span { color: var(--morado-principal); border-bottom: 3px solid var(--verde-menta); }
+    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; transition: color 0.2s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--morado-principal); border-bottom: 2px solid var(--verde-menta); }
+
+    .breadcrumb-bar { background-color: var(--menta-fondo); padding: 14px 24px; border-bottom: 1px solid #e1f2ea; font-size: 0.85rem; }
+    .breadcrumb-container { max-width: 1200px; margin: 0 auto; color: var(--texto-suave); }
+    .breadcrumb-container a { color: var(--morado-principal); text-decoration: none; font-weight: 600; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 60px 0; }
+    .section-title { font-size: 2.2rem; margin-bottom: 14px; text-align: center; }
+    .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 850px; margin: 0 auto 40px auto; text-align: center; }
+
+    .page-header { background: var(--morado-principal); color: var(--blanco); padding: 55px 24px; border-bottom: 4px solid var(--verde-menta); margin-bottom: 40px; }
+    .page-header-content { max-width: 1200px; margin: 0 auto; text-align: center; }
+    .page-header h1 { color: var(--blanco); font-size: 2.6rem; margin-bottom: 14px; }
+    .page-header p { font-size: 1.15rem; color: rgba(255, 255, 255, 0.92); max-width: 850px; margin: 0 auto; }
+
+    .resource-tabs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; }
+    .resource-panel { background: var(--blanco); padding: 40px; border-radius: 10px; border: 1px solid #ede8f2; box-shadow: 0 4px 20px rgba(0,0,0,0.03); display: flex; flex-direction: column; }
+    .panel-free { border-top: 5px solid var(--verde-menta); }
+    .panel-premium { border-top: 5px solid var(--morado-principal); background: #fdfbfe; }
+    
+    .panel-title { font-size: 1.5rem; margin-bottom: 25px; display: flex; align-items: center; gap: 12px; }
+    .panel-title svg { width: 32px; height: 32px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; }
+    
+    .resource-list { list-style: none; margin-bottom: 30px; flex-grow: 1; }
+    .resource-list li { margin-bottom: 16px; font-size: 0.95rem; color: var(--texto-suave); display: flex; align-items: flex-start; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid #f4eff7; }
+    .resource-list li:last-child { border-bottom: none; }
+    .resource-list li svg { width: 20px; height: 20px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; margin-top: 2px; }
+
+    .btn-agora { display: inline-block; padding: 14px 24px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.92rem; transition: background 0.2s; border: none; cursor: pointer; text-align: center; width: 100%; }
+    .btn-agora-morado { background-color: var(--morado-principal); color: var(--blanco); }
+    .btn-agora-morado:hover { background-color: var(--morado-hover); }
+
+    footer { background: var(--morado-principal); color: var(--blanco); text-align: center; padding: 25px 24px; font-size: 0.85rem; margin-top: 60px; }
+    @media (max-width: 900px) { .nav-links { display: none; } .navbar { justify-content: center; } .resource-tabs-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="navbar">
+      <a href="../index.html" class="logo-text">ÁGORA LABORAL <span>360°</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#inicio">INICIO</a></li>
+          <li><a href="../index.html#servicios">SERVICIOS</a></li>
+          <li><a href="../index.html#metodo360">MÉTODO 360°</a></li>
+          <li><a href="../index.html#observatorio">OBSERVATORIO</a></li>
+          <li><a href="../index.html#academia">ACADEMIA</a></li>
+          <li><a href="../index.html#recursos" class="active">RECURSOS</a></li>
+          <li><a href="../index.html#contacto">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-container">
+      <a href="../index.html">Inicio</a> &gt; <span>Biblioteca Legal y Recursos</span>
+    </div>
+  </div>
+
+  <section class="page-header">
+    <div class="page-header-content">
+      <h1>Centro de Recursos y Descargas</h1>
+      <p>Acceda a herramientas prácticas, guías metodológicas e instrumentos normativos para fortalecer el cumplimiento en su organización.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="section" style="padding-top: 20px;">
+      
+      <div class="resource-tabs-grid">
+        <!-- 🟢 RECURSOS GRATUITOS -->
+        <div class="resource-panel panel-free">
+          <h3 class="panel-title">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Herramientas Gratuitas
+          </h3>
+          <ul class="resource-list">
+            <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline></svg> <strong>Capítulo 1 del Manual del Investigador.</strong> (Conceptos básicos y principios).</li>
+            <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline></svg> <strong>Lista de verificación Ley Karin.</strong> (Checklist de cumplimiento DT).</li>
+            <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline></svg> <strong>PPT de sensibilización.</strong> (15 slides editables para su equipo).</li>
+            <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline></svg> <strong>Infografía "Conflicto vs. Acoso".</strong> (Ideal para murales internos).</li>
+            <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline></svg> <strong>Autodiagnóstico en PDF.</strong> (Evalúe el riesgo de su empresa).</li>
+          </ul>
+          <a href="../index.html#contacto" class="btn-agora btn-agora-morado">Solicitar Pack Gratuito</a>
+        </div>
+
+        <!-- 🔒 BIBLIOTECA PROFESIONAL -->
+        <div class="resource-panel panel-premium">
+          <h3 class="panel-title">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            Biblioteca Profesional Ágora 360®
+          </h3>
+          <ul class="resource-list">
+            <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline></svg> <strong>Manual del Investigador Completo.</strong> (Guía procedimental de +200 pág).</li>
+            <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline></svg> <strong>Plantillas Legales Editables.</strong> (Formatos de Actas, Citaciones e Informes en Word).</li>
+            <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline></svg> <strong>Pautas de Entrevistas Estructuradas.</strong> (Preguntas para denunciante, denunciado y testigos).</li>
+            <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline></svg> <strong>Matrices de Evaluación de Riesgo.</strong> (Herramientas Excel para ponderar evidencia).</li>
+            <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline></svg> <strong>Resolución de Casos Prácticos.</strong> (Análisis de jurisprudencia aplicada).</li>
+          </ul>
+          <a href="../index.html#contacto" class="btn-agora btn-agora-morado">Adquirir Biblioteca Profesional</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
