@@ -445,26 +445,32 @@
       <div class="contact-grid">
         <div class="contact-form">
           <h2 class="section-title" style="font-size: 1.7rem; text-align: left; margin-bottom: 25px;">Solicite una Reunión Técnica</h2>
-          <form onsubmit="event.preventDefault(); alert('¡Gracias! Un especialista de Ágora 360° se comunicará contigo.');">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- Pega tu clave de Web3Forms en value -->
+            <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3>
+            
+            <input type="hidden" name="from_name" value="Sitio Web Ágora Laboral 360°">
+            <input type="hidden" name="subject" value="Nueva Solicitud de Reunión Técnica - Ley Karin">
+            <input type="hidden" name="redirect" value="https://agoralaboral.cl">
+
             <div class="form-group">
               <label>Nombre Completo</label>
-              <input type="text" placeholder="Ej: Camila González" required>
+              <input type="text" name="nombre" placeholder="Ej: Camila González" required>
             </div>
             <div class="form-group">
               <label>Cargo / Institución</label>
-              <input type="text" placeholder="Ej: Gerenta de Personas / Fiscal" required>
+              <input type="text" name="cargo" placeholder="Ej: Gerenta de Personas / Fiscal" required>
             </div>
             <div class="form-group">
               <label>Correo Institucional</label>
-              <input type="email" placeholder="nombre@empresa.cl" required>
+              <input type="email" name="email" placeholder="nombre@empresa.cl" required>
             </div>
             <div class="form-group">
               <label>Mensaje o Requerimiento</label>
-              <textarea rows="3" placeholder="Indíquenos brevemente cómo podemos apoyar a su organización..."></textarea>
+              <textarea name="mensaje" rows="3" placeholder="Indíquenos brevemente cómo podemos apoyar a su organización..." required></textarea>
             </div>
             <button type="submit" class="btn-agora btn-agora-morado" style="width: 100%; font-size: 1rem;">📅 Agendar Reunión Técnica</button>
           </form>
-        </div>
 
         <div>
           <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">¿Quiénes somos?</h2>
