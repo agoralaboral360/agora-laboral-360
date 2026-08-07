@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico de Cumplimiento Ley Karin | Ágora Laboral 360°</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --morado-principal: #361e42;  
+      --morado-hover: #261330;
+      --verde-menta: #a8e6cf;       
+      --menta-fondo: #eef9f4;
+      --azul-cielo: #d4e8fc;        
+      --fondo-pagina: #faf8fc;      
+      --texto-oscuro: #211329;
+      --texto-suave: #4d4054;
+      --blanco: #ffffff;
+      --rojo-alerta: #e74c3c;
+      --amarillo-alerta: #f39c12;
+      --verde-ok: #27ae60;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: var(--fondo-pagina); line-height: 1.6; }
+
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--morado-principal); font-weight: 700; }
+
+    .header { background-color: var(--blanco); border-bottom: 1px solid #ede8f2; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; }
+    .logo-text { font-weight: 800; font-size: 1.3rem; color: var(--morado-principal); letter-spacing: -0.5px; text-decoration: none; }
+    .logo-text span { color: var(--morado-principal); border-bottom: 3px solid var(--verde-menta); }
+    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; transition: color 0.2s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--morado-principal); border-bottom: 2px solid var(--verde-menta); }
+
+    .breadcrumb-bar { background-color: var(--menta-fondo); padding: 14px 24px; border-bottom: 1px solid #e1f2ea; font-size: 0.85rem; }
+    .breadcrumb-container { max-width: 1200px; margin: 0 auto; color: var(--texto-suave); }
+    .breadcrumb-container a { color: var(--morado-principal); text-decoration: none; font-weight: 600; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 24px 70px 24px; }
+
+    .quiz-card { background: var(--blanco); border-radius: 12px; border: 1px solid #ede8f2; padding: 40px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
+    .quiz-header { text-align: center; margin-bottom: 35px; border-bottom: 2px solid var(--menta-fondo); padding-bottom: 25px; }
+    .quiz-header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+    .quiz-header p { color: var(--texto-suave); font-size: 1.05rem; }
+
+    .question-block { margin-bottom: 30px; }
+    .question-title { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--morado-principal); margin-bottom: 14px; }
+
+    .options-group { display: flex; flex-direction: column; gap: 10px; }
+    .option-label { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border: 1px solid #e1dbe6; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-size: 0.95rem; background: var(--blanco); }
+    .option-label:hover { border-color: var(--morado-principal); background: #fdfbfe; }
+    .option-label input[type="radio"] { accent-color: var(--morado-principal); width: 18px; height: 18px; }
+
+    .btn-submit { display: block; width: 100%; padding: 16px; background-color: var(--morado-principal); color: var(--blanco); border: none; border-radius: 8px; font-weight: 700; font-size: 1.05rem; cursor: pointer; transition: background 0.2s; margin-top: 30px; }
+    .btn-submit:hover { background-color: var(--morado-hover); }
+
+    /* ESTILOS DE RESULTADO */
+    #resultado-box { display: none; margin-top: 20px; animation: fadeIn 0.4s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    .result-badge { padding: 25px; border-radius: 10px; text-align: center; color: var(--blanco); margin-bottom: 30px; }
+    .result-badge.rojo { background-color: var(--rojo-alerta); }
+    .result-badge.amarillo { background-color: var(--amarillo-alerta); }
+    .result-badge.verde { background-color: var(--verde-ok); }
+    
+    .result-badge h2 { color: var(--blanco); font-size: 1.8rem; margin-bottom: 8px; }
+    .result-badge p { font-size: 1.1rem; font-weight: 500; }
+
+    .recommendations-box { background: var(--menta-fondo); padding: 25px; border-radius: 8px; border: 1px solid #d8f0e5; margin-bottom: 30px; }
+    .recommendations-box h3 { font-size: 1.2rem; margin-bottom: 12px; }
+    .recommendations-box ul { list-style: none; }
+    .recommendations-box li { margin-bottom: 10px; font-size: 0.93rem; display: flex; gap: 10px; align-items: flex-start; }
+
+    .contact-cta-box { background: var(--blanco); border: 2px solid var(--morado-principal); padding: 30px; border-radius: 10px; text-align: center; }
+    .contact-cta-box h3 { font-size: 1.4rem; margin-bottom: 10px; }
+    .contact-cta-box p { color: var(--texto-suave); font-size: 0.95rem; margin-bottom: 20px; }
+
+    footer { background: var(--morado-principal); color: var(--blanco); text-align: center; padding: 25px 24px; font-size: 0.85rem; margin-top: 60px; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .navbar { justify-content: center; }
+      .quiz-card { padding: 25px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="navbar">
+      <a href="../index.html" class="logo-text">ÁGORA LABORAL <span>360°</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#inicio">INICIO</a></li>
+          <li><a href="../index.html#servicios">SERVICIOS</a></li>
+          <li><a href="../index.html#metodo360">MÉTODO 360°</a></li>
+          <li><a href="../index.html#observatorio">OBSERVATORIO</a></li>
+          <li><a href="../index.html#academia">ACADEMIA</a></li>
+          <li><a href="../index.html#recursos">RECURSOS</a></li>
+          <li><a href="../index.html#contacto">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-container">
+      <a href="../index.html">Inicio</a> &gt; <span>Diagnóstico Ley Karin</span>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="quiz-card">
+      <div class="quiz-header">
+        <h1>Diagnóstico de Cumplimiento: Ley Karin</h1>
+        <p>Evalúe el nivel de blindaje legal de su organización frente a las exigencias de la Ley 21.643 en Chile.</p>
+      </div>
+
+      <form id="quiz-form">
+        <!-- PREGUNTA 1 -->
+        <div class="question-block">
+          <p class="question-title">1. ¿Su organización cuenta con un Protocolo de Prevención formalmente incorporado en el RIOHS, o entregado por escrito a los trabajadores al firmar contrato si su empresa tiene menos de 10 colaboradores?</p>
+          <div class="options-group">
+            <label class="option-label"><input type="radio" name="p1" value="20" required> Sí, completamente al día</label>
+            <label class="option-label"><input type="radio" name="p1" value="10"> Parcialmente / En desarrollo</label>
+            <label class="option-label"><input type="radio" name="p1" value="0"> No contamos con este respaldo</label>
+          </div>
+        </div>
+
+        <!-- PREGUNTA 2 -->
+        <div class="question-block">
+          <p class="question-title">2. ¿Existe un canal confidencial y un procedimiento claramente definido y conocido por el personal para realizar denuncias?</p>
+          <div class="options-group">
+            <label class="option-label"><input type="radio" name="p2" value="20" required> Sí, estructurado e informado</label>
+            <label class="option-label"><input type="radio" name="p2" value="10"> Parcialmente / Falta difusión</label>
+            <label class="option-label"><input type="radio" name="p2" value="0"> No tenemos un canal formal</label>
+          </div>
+        </div>
+
+        <!-- PREGUNTA 3 -->
+        <div class="question-block">
+          <p class="question-title">3. Ante una denuncia, ¿el procedimiento asegura por escrito la aplicación inmediata de medidas de resguardo (separación física) y atención psicológica temprana para la víctima?</p>
+          <div class="options-group">
+            <label class="option-label"><input type="radio" name="p3" value="20" required> Sí, garantizado en el flujo interno</label>
+            <label class="option-label"><input type="radio" name="p3" value="10"> Probablemente / Se evalúa caso a caso</label>
+            <label class="option-label"><input type="radio" name="p3" value="0"> No lo tenemos protocolizado</label>
+          </div>
+        </div>
+
+        <!-- PREGUNTA 4 -->
+        <div class="question-block">
+          <p class="question-title">4. ¿El protocolo de su empresa contempla medidas preventivas y de acción frente a la violencia en el trabajo ejercida por terceros ajenos a la relación laboral (ej. clientes, usuarios o proveedores)?</p>
+          <div class="options-group">
+            <label class="option-label"><input type="radio" name="p4" value="20" required> Sí, incluye cobertura externa</label>
+            <label class="option-label"><input type="radio" name="p4" value="10"> Parcialmente / De forma ambigua</label>
+            <label class="option-label"><input type="radio" name="p4" value="0"> No cubre conductas de terceros</label>
+          </div>
+        </div>
+
+        <!-- PREGUNTA 5 -->
+        <div class="question-block">
+          <p class="question-title">5. Al realizar una investigación interna, ¿su organización está obligada a designar preferentemente a un encargado con formación demostrable en acoso, género o derechos fundamentales?</p>
+          <div class="options-group">
+            <label class="option-label"><input type="radio" name="p5" value="20" required> Sí, contamos con personal calificado o externo</label>
+            <label class="option-label"><input type="radio" name="p5" value="10"> Probablemente lo asuma RR.HH. sin certificación</label>
+            <label class="option-label"><input type="radio" name="p5" value="0"> No, desconocemos esa exigencia</label>
+          </div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="calcularEvaluacion()">Obtener Evaluación de Riesgo</button>
+      </form>
+
+      <!-- RESULTADO -->
+      <div id="resultado-box">
+        <div id="result-badge" class="result-badge">
+          <h2 id="result-title">Evaluando...</h2>
+          <p id="result-text"></p>
+        </div>
+
+        <div class="recommendations-box">
+          <h3>Recomendaciones Clave:</h3>
+          <ul id="recommendations-list"></ul>
+        </div>
+
+        <div class="contact-cta-box">
+          <h3>Solicite un Informe de Vulnerabilidades Formal</h3>
+          <p>Un especialista en Compliance de Ágora Laboral 360° puede auditar su RIOHS y protocolo para evitar sanciones de la Dirección del Trabajo.</p>
+          <a href="../index.html#contacto" class="btn-submit" style="text-decoration: none; display: inline-block; width: auto; padding: 12px 30px;">Agendar Reunión Técnica</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados. | Método Ágora 360® registrado.</p>
+  </footer>
+
+  <script>
+    function calcularEvaluacion() {
+      const form = document.getElementById('quiz-form');
+      if (!form.checkValidity()) {
+        alert('Por favor responda todas las preguntas para obtener su evaluación.');
+        form.reportValidity();
+        return;
+      }
+
+      const p1 = parseInt(document.querySelector('input[name="p1"]:checked').value);
+      const p2 = parseInt(document.querySelector('input[name="p2"]:checked').value);
+      const p3 = parseInt(document.querySelector('input[name="p3"]:checked').value);
+      const p4 = parseInt(document.querySelector('input[name="p4"]:checked').value);
+      const p5 = parseInt(document.querySelector('input[name="p5"]:checked').value);
+
+      const total = p1 + p2 + p3 + p4 + p5;
+
+      const resBox = document.getElementById('resultado-box');
+      const badge = document.getElementById('result-badge');
+      const title = document.getElementById('result-title');
+      const text = document.getElementById('result-text');
+      const recList = document.getElementById('recommendations-list');
+
+      badge.className = 'result-badge';
+      recList.innerHTML = '';
+
+      if (total >= 80) {
+        badge.classList.add('verde');
+        title.innerText = 'Nivel de Riesgo: BAJO (' + total + '/100 pts)';
+        text.innerText = 'Su organización cuenta con una estructura sólida frente a la Ley Karin. Le sugerimos mantener capacitaciones periódicas y auditorías anuales.';
+        recList.innerHTML = `
+          <li>✔️ Mantener actualizado el registro de capacitaciones y difusión.</li>
+          <li>✔️ Realizar simulaciones de recepción de denuncias para evaluar tiempos de respuesta.</li>
+        `;
+      } else if (total >= 50) {
+        badge.classList.add('amarillo');
+        title.innerText = 'Nivel de Riesgo: MEDIO (' + total + '/100 pts)';
+        text.innerText = 'Existen vulnerabilidades importantes en el procedimiento que podrían generar observaciones o multas en una fiscalización de la Dirección del Trabajo.';
+        recList.innerHTML = `
+          <li>⚠️ Ajustar el protocolo interno con las pautas obligatorias del Reglamento MinTrab.</li>
+          <li>⚠️ Formalizar por escrito las medidas cautelares de resguardo y atención psicológica.</li>
+          <li>⚠️ Certificar formalmente al encargado de investigación o considerar derivación externa.</li>
+        `;
+      } else {
+        badge.classList.add('rojo');
+        title.innerText = 'Nivel de Riesgo: ALTO (' + total + '/100 pts)';
+        text.innerText = 'Su empresa está expuesta a multas gravísimas e impugnación de procedimientos ante demandas laborales o tutelas por vulneración de derechos.';
+        recList.innerHTML = `
+          <li>🚨 Redactar e incorporar de forma urgente el Protocolo de Prevención en el RIOHS.</li>
+          <li>🚨 Implementar un canal de denuncias formal y protocolizado.</li>
+          <li>🚨 Contar de inmediato con asesoría pericial externa para denuncias activas o futuras.</li>
+        `;
+      }
+
+      form.style.display = 'none';
+      resBox.style.display = 'block';
+      resBox.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
