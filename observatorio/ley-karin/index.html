@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compendio Técnico Ley Karin (N° 21.643) | Ágora Laboral 360°</title>
+  
+  <!-- Tipografías Corporativas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --morado-principal: #361e42;  
+      --morado-hover: #261330;
+      --verde-menta: #a8e6cf;       
+      --menta-fondo: #eef9f4;
+      --azul-cielo: #d4e8fc;        
+      --fondo-pagina: #faf8fc;      
+      --texto-oscuro: #211329;
+      --texto-suave: #4d4054;
+      --blanco: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: var(--fondo-pagina); line-height: 1.6; }
+
+    /* TIPOGRAFÍA Y ENCABEZADOS */
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--morado-principal); font-weight: 700; }
+
+    /* NAVEGACIÓN PRINCIPAL */
+    .header { background-color: var(--blanco); border-bottom: 1px solid #ede8f2; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; }
+    .logo-text { font-weight: 800; font-size: 1.3rem; color: var(--morado-principal); letter-spacing: -0.5px; text-decoration: none; }
+    .logo-text span { color: var(--morado-principal); border-bottom: 3px solid var(--verde-menta); }
+    
+    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--morado-principal); border-bottom: 2px solid var(--verde-menta); }
+
+    /* BARRA DE MIGA DE PAN (BREADCRUMB) */
+    .breadcrumb-bar { background-color: var(--menta-fondo); padding: 14px 24px; border-bottom: 1px solid #e1f2ea; font-size: 0.85rem; }
+    .breadcrumb-container { max-width: 1200px; margin: 0 auto; color: var(--texto-suave); }
+    .breadcrumb-container a { color: var(--morado-principal); text-decoration: none; font-weight: 600; }
+    .breadcrumb-container a:hover { text-decoration: underline; }
+
+    /* CONTENEDORES Y ESTRUCTURA */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 60px 0; }
+    .section-bg-light { background-color: var(--menta-fondo); }
+    .section-title { font-size: 2rem; margin-bottom: 14px; }
+    .section-subtitle { font-size: 1rem; color: var(--texto-suave); margin-bottom: 35px; }
+
+    /* HERO INTERIOR */
+    .page-header { background: var(--morado-principal); color: var(--blanco); padding: 50px 24px; border-bottom: 4px solid var(--verde-menta); margin-bottom: 40px; }
+    .page-header-content { max-width: 1200px; margin: 0 auto; }
+    .page-header h1 { color: var(--blanco); font-size: 2.5rem; margin-bottom: 12px; }
+    .page-header p { font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); max-width: 800px; }
+
+    /* SECCIÓN PREGUNTAS FRECUENTES (FAQ DESPLEGABLE) */
+    .faq-container { max-width: 900px; margin: 0 auto; }
+    .faq-item { background: var(--blanco); border: 1px solid #ede8f2; border-radius: 8px; margin-bottom: 16px; padding: 18px 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+    .faq-item summary { font-weight: 700; color: var(--morado-principal); cursor: pointer; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 1.4rem; color: var(--morado-principal); font-weight: bold; }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p { margin-top: 14px; font-size: 0.95rem; color: var(--texto-suave); line-height: 1.6; border-top: 1px solid #f4eff7; padding-top: 12px; }
+
+    /* TARJETAS DE DICTÁMENES Y NORMAS */
+    .dictamenes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 30px; }
+    .dictamen-card { background: var(--blanco); padding: 28px; border-radius: 8px; border-left: 4px solid var(--verde-menta); border-top: 1px solid #ede8f2; border-right: 1px solid #ede8f2; border-bottom: 1px solid #ede8f2; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .dictamen-card span { display: inline-block; background: var(--azul-cielo); color: var(--morado-principal); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; text-transform: uppercase; }
+    .dictamen-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--morado-principal); }
+    .dictamen-card p { font-size: 0.9rem; color: var(--texto-suave); margin-bottom: 15px; }
+
+    /* BOTONES */
+    .btn-agora { display: inline-block; padding: 12px 24px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.88rem; transition: background 0.2s; border: none; cursor: pointer; text-align: center; }
+    .btn-agora-morado { background-color: var(--morado-principal); color: var(--blanco); }
+    .btn-agora-morado:hover { background-color: var(--morado-hover); }
+    .btn-agora-outline { background-color: transparent; color: var(--morado-principal); border: 2px solid var(--morado-principal); }
+    .btn-agora-outline:hover { background-color: var(--morado-principal); color: var(--blanco); }
+
+    footer { background: var(--morado-principal); color: var(--blanco); text-align: center; padding: 25px 24px; font-size: 0.85rem; margin-top: 60px; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .navbar { justify-content: center; }
+      .page-header h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header class="header">
+    <div class="navbar">
+      <a href="../../index.html" class="logo-text">ÁGORA LABORAL <span>360°</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../../index.html#inicio">INICIO</a></li>
+          <li><a href="../../index.html#servicios">SERVICIOS</a></li>
+          <li><a href="../../index.html#metodo360">MÉTODO 360°</a></li>
+          <li><a href="../../index.html#observatorio" class="active">OBSERVATORIO</a></li>
+          <li><a href="../../index.html#academia">ACADEMIA</a></li>
+          <li><a href="../../index.html#recursos">RECURSOS</a></li>
+          <li><a href="../../index.html#contacto">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MIGA DE PAN -->
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-container">
+      <a href="../../index.html">Inicio</a> &gt; <a href="../../index.html#observatorio">Observatorio</a> &gt; <span>Ley Karin (N° 21.643)</span>
+    </div>
+  </div>
+
+  <!-- ENCABEZADO DE PÁGINA INTERIOR -->
+  <section class="page-header">
+    <div class="page-header-content">
+      <h1>Compendio Técnico Ley Karin (N° 21.643)</h1>
+      <p>Criterios de la Dirección del Trabajo, jurisprudencia interpretativa y preguntas frecuentes sobre el procedimiento de prevención e investigación laboral.</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- SECCIÓN 1: PREGUNTAS FRECUENTES LEY KARIN -->
+    <section class="section">
+      <h2 class="section-title">Preguntas Frecuentes y Criterios Operativos</h2>
+      <p class="section-subtitle">Respuestas técnicas basadas en los dictámenes de la Dirección del Trabajo y la Superintendencia de Seguridad Social (SUSESO).</p>
+
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary>¿Cuánto tiempo debe durar una investigación interna bajo Ley Karin?</summary>
+          <p>La normativa exige un plazo máximo estricto de <strong>30 días corridos</strong> contados desde la recepción de la denuncia para concluir el informe de investigación y remitirlo a la Dirección del Trabajo. Nuestro Método Ágora 360® asegura el cumplimiento riguroso de cada hito procedimental dentro de este margen.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Por qué es recomendable designar a un investigador externo pericial?</summary>
+          <p>Un investigador externo garantiza objetividad, neutralidad e imparcialidad total, evitando conflictos de interés o sesgos internos. Además, sus conclusiones cuentan con un estándar técnico pericial que resiste impugnaciones laborales o tutelas en tribunales.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué ocurre si la denuncia involucra a clientes, usuarios o proveedores?</summary>
+          <p>La Ley 21.643 sanciona explícitamente la violencia ejercida por terceros ajenos a la relación laboral. El empleador está legalmente obligado a activar los protocolos de resguardo, adoptar medidas inmediatas de protección e investigar los hechos dentro de su ámbito de control.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Se puede rechazar una denuncia si los hechos ocurrieron hace más de 60 días?</summary>
+          <p>No. Incurrir en el rechazo o archivo automático por transcurso del tiempo constituye una infracción gravísima según la Dirección del Trabajo (falsa caducidad). Toda denuncia formal debe ser admitida a tramitación para ponderar el mérito de sus antecedentes.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué requisitos debe cumplir la medida de resguardo de separación de espacios?</summary>
+          <p>Las medidas cautelares o de resguardo deben ser proporcionales y jamás traducirse en un menoscabo laboral, salarial o de condiciones de trabajo para las partes involucradas (especialmente la persona denunciante).</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: DICTÁMENES CLAVE Y DOCUMENTACIÓN TÉCNICA -->
+    <section class="section section-bg-light" style="border-radius: 12px; padding: 45px 30px;">
+      <h2 class="section-title">Dictámenes e Instrucciones Oficiales</h2>
+      <p class="section-subtitle">Compendio de cuerpos normativos que regulan la aplicación de la ley en Chile.</p>
+
+      <div class="dictamenes-grid">
+        <div class="dictamen-card">
+          <span>Dictamen DT N° 362/19</span>
+          <h3>Instrucciones sobre procedimiento de investigación</h3>
+          <p>Fija los principios de confidencialidad, imparcialidad, celeridad y debido proceso obligatorios en cada expediente.</p>
+          <a href="../../index.html#contacto" class="btn-agora btn-agora-small btn-agora-outline">Solicitar Análisis Técnico</a>
+        </div>
+
+        <div class="dictamen-card">
+          <span>Circular SUSESO N° 3.813</span>
+          <h3>Asistencia técnica en prevención de riesgos</h3>
+          <p>Establece el rol de los organismos administradores (ACHS, Mutual, IST) y la matriz de evaluación del riesgo psicosocial.</p>
+          <a href="../../index.html#contacto" class="btn-agora btn-agora-small btn-agora-outline">Solicitar Análisis Técnico</a>
+        </div>
+
+        <div class="dictamen-card">
+          <span>Reglamento MinTrab N° 21</span>
+          <h3>Directrices para reglamentos internos (RITO)</h3>
+          <p>Estructura las modificaciones obligatorias a los Reglamentos Internos de Orden, Higiene y Seguridad.</p>
+          <a href="../../index.html#contacto" class="btn-agora btn-agora-small btn-agora-outline">Solicitar Análisis Técnico</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: CTA FINAL DE PÁGINA -->
+    <section class="section" style="text-align: center;">
+      <h2 class="section-title">¿Su empresa necesita asesoría en un caso activo?</h2>
+      <p class="section-subtitle" style="margin-bottom: 25px;">Agende una sesión técnica con nuestros peritos para evaluar su procedimiento o asumir una investigación externa.</p>
+      <a href="../../index.html#contacto" class="btn-agora btn-agora-morado">Agendar Reunión Técnica</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados. | Método Ágora 360® registrado.</p>
+  </footer>
+
+</body>
+</html>
