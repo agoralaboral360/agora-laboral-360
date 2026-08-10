@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descarga Kit Normativo y Protocolar Ley Karin | Ágora Laboral 360°</title>
+  
+  <!-- METATAGS -->
+  <meta name="description" content="Descargue gratis el Kit Definitivo de 10 Instrumentos y Actas de Investigación Interna para la Ley N.º 21.643 (Ley Karin).">
+
+  <!-- Tipografías Corporativas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --morado-principal: #361e42;
+      --morado-hover: #261330;
+      --verde-menta: #a8e6cf;
+      --menta-fondo: #eef9f4;
+      --texto-oscuro: #1d1b20;
+      --texto-suave: #5c5566;
+      --fondo-tarjeta: #ffffff;
+      --gris-claro: #f8f6fa;
+      --borde-suave: #e1dbe6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: var(--gris-claro); line-height: 1.7; font-size: 1rem; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--morado-principal); }
+
+    /* NAVEGACIÓN */
+    .navbar { background: #ffffff; border-bottom: 1px solid var(--borde-suave); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--morado-principal); text-decoration: none; }
+    .logo span { font-family: 'Montserrat', sans-serif; font-size: 0.8rem; font-weight: 800; color: var(--verde-menta); background: var(--morado-principal); padding: 2px 6px; border-radius: 4px; margin-left: 5px; }
+    .nav-links { display: flex; gap: 20px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--texto-suave); font-weight: 600; font-size: 0.9rem; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--morado-principal); }
+
+    /* CONTENEDOR PRINCIPAL GRID */
+    .landing-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 420px; gap: 40px; align-items: start; }
+
+    /* DETALLE DEL KIT */
+    .kit-info { background: #ffffff; border: 1px solid var(--borde-suave); border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+    .badge-tag { display: inline-block; background: var(--menta-fondo); color: var(--morado-principal); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; padding: 6px 14px; border-radius: 50px; border: 1px solid var(--verde-menta); margin-bottom: 15px; }
+    .kit-title { font-size: 2.2rem; line-height: 1.25; margin-bottom: 15px; }
+    .kit-subtitle { font-size: 1.05rem; color: var(--texto-suave); margin-bottom: 30px; }
+
+    .instrument-list { list-style: none; padding: 0; margin-top: 20px; }
+    .instrument-item { background: var(--gris-claro); border: 1px solid var(--borde-suave); padding: 14px 18px; border-radius: 8px; margin-bottom: 12px; font-size: 0.92rem; display: flex; align-items: center; gap: 12px; }
+    .instrument-item strong { color: var(--morado-principal); }
+
+    /* FORMULARIO LATERAL */
+    .form-box { background: var(--morado-principal); color: #ffffff; border-radius: 16px; padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: sticky; top: 100px; }
+    .form-box h3 { color: #ffffff; font-size: 1.5rem; margin-bottom: 10px; }
+    .form-box p { color: #e1dbe6; font-size: 0.9rem; margin-bottom: 25px; }
+
+    .input-group { margin-bottom: 15px; }
+    .input-group label { display: block; font-size: 0.85rem; margin-bottom: 5px; color: #e1dbe6; font-weight: 500; }
+    .input-control { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #5c5566; background: #ffffff; font-family: inherit; font-size: 0.95rem; color: var(--texto-oscuro); }
+    .input-control:focus { outline: none; border-color: var(--verde-menta); }
+
+    .btn-download { display: block; width: 100%; background: var(--verde-menta); color: var(--morado-principal); font-weight: 700; padding: 14px; border-radius: 8px; text-decoration: none; text-align: center; border: none; font-size: 1rem; cursor: pointer; margin-top: 10px; transition: background 0.2s; }
+    .btn-download:hover { background: #92d6bb; }
+
+    /* BOTÓN WHATSAPP FLOTANTE */
+    .btn-whatsapp { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000; text-decoration: none; }
+
+    @media (max-width: 900px) {
+      .landing-container { grid-template-columns: 1fr; }
+      .form-box { position: static; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">ÁGORA LABORAL <span>360°</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">INICIO</a></li>
+        <li><a href="../servicios/index.html">SERVICIOS</a></li>
+        <li><a href="../metodo-360/index.html">MÉTODO 360°</a></li>
+        <li><a href="../index.html#observatorio">OBSERVATORIO</a></li>
+        <li><a href="../academia/index.html">ACADEMIA</a></li>
+        <li><a href="index.html">RECURSOS</a></li>
+        <li><a href="../index.html#contacto">CONTACTO</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <main class="landing-container">
+    
+    <!-- DETALLE DEL CONTENIDO -->
+    <section class="kit-info">
+      <span class="badge-tag">Herramienta Gratuita de Compliance</span>
+      <h1 class="kit-title">Kit Normativo y Protocolar de Investigación Interna</h1>
+      <p class="kit-subtitle">Ley N.º 21.643 (Ley Karin) &ndash; Código del Trabajo de Chile. Conforme al Decreto N.º 21 del Mintrab y el Dictamen N.º 515/21 de la Dirección del Trabajo.</p>
+
+      <h3 style="font-size: 1.2rem; margin-bottom: 15px;">¿Qué incluye este Kit de Recursos?</h3>
+      <p style="font-size: 0.95rem; color: var(--texto-suave); margin-bottom: 20px;">Colección técnica con 10 instrumentos prácticos y editables redactados por especialistas en derecho laboral e investigación de acoso:</p>
+
+      <ul class="instrument-list">
+        <li class="instrument-item">📄 <div><strong>Instrumento I:</strong> Acta de Recepción de Denuncia (Acoso Sexual, Laboral y Violencia de Terceros).</div></li>
+        <li class="instrument-item">🛡 <div><strong>Instrumento II:</strong> Resolución de Medidas de Resguardo Inmediatas y Designación de Investigador/a.</div></li>
+        <li class="instrument-item">🔒 <div><strong>Instrumento III:</strong> Acta de Compromiso de Confidencialidad y Deber de No Represalias.</div></li>
+        <li class="instrument-item">🗣 <div><strong>Instrumento IV:</strong> Pauta y Acta de Entrevista a la Persona Denunciante (Enfoque de Género).</div></li>
+        <li class="instrument-item">⚖ <div><strong>Instrumento V:</strong> Pauta y Acta de Entrevista a la Persona Denunciada (Debido Proceso).</div></li>
+        <li class="instrument-item">👥 <div><strong>Instrumento VI:</strong> Pauta y Acta de Entrevista a Testigos (Prueba Indiciaria).</div></li>
+        <li class="instrument-item">📁 <div><strong>Instrumento VII:</strong> Acta de Recepción y Aportación de Medios Probatorios.</div></li>
+        <li class="instrument-item">✍ <div><strong>Instrumento VIII:</strong> Acta Formal de Desistimiento de la Denuncia (Criterio DT).</div></li>
+        <li class="instrument-item">📋 <div><strong>Instrumento IX:</strong> Modelo de Informe Final de Investigación Interna para la Inspección del Trabajo.</div></li>
+        <li class="instrument-item">⏱ <div><strong>Instrumento X:</strong> Checklist de Control de Flujo de Procedimiento y Plazos Legales (30 días).</div></li>
+      </ul>
+    </section>
+
+    <!-- FORMULARIO DE CAPTURA -->
+    <aside class="form-box">
+      <h3>Obtener el Kit Editable</h3>
+      <p>Complete sus datos para acceder de forma inmediata al documento ejecutable en formato Google Docs / PDF.</p>
+
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- ACCESS KEY Y REDIRECCIÓN AL DOCUMENTO DE GOOGLE DOCS -->
+        <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
+        <input type="hidden" name="from_name" value="Descarga Kit Ley Karin">
+        <input type="hidden" name="subject" value="🚨 Nuevo Descarga - Kit Protocolar Ley Karin">
+        <input type="hidden" name="redirect" value="https://docs.google.com/document/d/1832_7nN8JZOa3aDotKW-Eyhmc5MvX0JPIhWFQIMcVrs/edit?usp=drive_web">
+
+        <div class="input-group">
+          <label for="nombre">Nombre Completo *</label>
+          <input type="text" id="nombre" name="nombre" class="input-control" placeholder="Ej. Constanza Silva" required>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Correo Corporativo *</label>
+          <input type="email" id="email" name="email" class="input-control" placeholder="nombre@empresa.cl" required>
+        </div>
+
+        <div class="input-group">
+          <label for="empresa">Empresa / Organización *</label>
+          <input type="text" id="empresa" name="empresa" class="input-control" placeholder="Razón Social o Fantasía" required>
+        </div>
+
+        <div class="input-group">
+          <label for="telefono">Teléfono / WhatsApp *</label>
+          <input type="tel" id="telefono" name="telefono" class="input-control" placeholder="+56 9 1234 5678" required>
+        </div>
+
+        <button type="submit" class="btn-download">Descargar Kit Gratuito →</button>
+      </form>
+    </aside>
+
+  </main>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/56999840502?text=Hola,%20quisiera%20consultar%20sobre%20el%20Kit%20Normativo%20de%20Ley%20Karin" class="btn-whatsapp" target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 448 512">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
