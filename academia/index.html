@@ -3,133 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academia Ágora 360° | Capacitación Corporativa</title>
+  <title>Academia | Ágora Laboral 360°</title>
   
+  <!-- Tipografías Corporativas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
-    :root { --morado-principal: #361e42; --morado-hover: #261330; --verde-menta: #a8e6cf; --menta-fondo: #eef9f4; --azul-cielo: #d4e8fc; --fondo-pagina: #faf8fc; --texto-oscuro: #211329; --texto-suave: #4d4054; --blanco: #ffffff; }
+    :root {
+      --morado-principal: #361e42;
+      --morado-hover: #261330;
+      --verde-menta: #a8e6cf;
+      --menta-fondo: #eef9f4;
+      --texto-oscuro: #1d1b20;
+      --texto-suave: #5c5566;
+      --fondo-tarjeta: #ffffff;
+      --gris-claro: #f8f6fa;
+      --borde-suave: #e1dbe6;
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: var(--fondo-pagina); line-height: 1.6; }
-    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--morado-principal); font-weight: 700; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: var(--gris-claro); line-height: 1.7; font-size: 1rem; display: flex; flex-direction: column; min-height: 100vh; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--morado-principal); }
+
+    /* NAVEGACIÓN */
+    .navbar { background: #ffffff; border-bottom: 1px solid var(--borde-suave); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--morado-principal); text-decoration: none; }
+    .logo span { font-family: 'Montserrat', sans-serif; font-size: 0.8rem; font-weight: 800; color: var(--verde-menta); background: var(--morado-principal); padding: 2px 6px; border-radius: 4px; margin-left: 5px; }
+    .nav-links { display: flex; gap: 20px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--texto-suave); font-weight: 600; font-size: 0.9rem; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--morado-principal); }
+
+    /* CONTENEDOR PRINCIPAL */
+    .hero-container { max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: center; flex-grow: 1; }
+    .hero-icon { font-size: 3.5rem; color: var(--morado-principal); margin-bottom: 20px; }
+    .hero-title { font-size: 2.8rem; line-height: 1.2; margin-bottom: 20px; }
+    .hero-subtitle { font-size: 1.15rem; color: var(--texto-suave); font-weight: 400; line-height: 1.6; margin-bottom: 40px; }
+
+    /* CAJA DE CONTACTO Y LISTA DE ESPERA */
+    .waitlist-box { background: #ffffff; border: 1px solid var(--borde-suave); border-radius: 16px; padding: 45px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; }
+    .waitlist-box h3 { font-size: 1.5rem; margin-bottom: 15px; }
+    .waitlist-box p { color: var(--texto-suave); margin-bottom: 25px; font-size: 1rem; }
     
-    .header { background-color: var(--blanco); border-bottom: 1px solid #ede8f2; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-    .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; }
-    .logo-text { font-weight: 800; font-size: 1.3rem; color: var(--morado-principal); letter-spacing: -0.5px; text-decoration: none; }
-    .logo-text span { color: var(--morado-principal); border-bottom: 3px solid var(--verde-menta); }
-    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; transition: color 0.2s ease; }
-    .nav-links a:hover, .nav-links a.active { color: var(--morado-principal); border-bottom: 2px solid var(--verde-menta); }
+    .btn-submit { display: inline-block; background: var(--morado-principal); color: #ffffff; font-weight: 700; padding: 14px 28px; border-radius: 8px; text-decoration: none; transition: background 0.2s; border: none; font-size: 1rem; cursor: pointer; width: 100%; text-align: center; }
+    .btn-submit:hover { background: var(--morado-hover); }
 
-    .breadcrumb-bar { background-color: var(--menta-fondo); padding: 14px 24px; border-bottom: 1px solid #e1f2ea; font-size: 0.85rem; }
-    .breadcrumb-container { max-width: 1200px; margin: 0 auto; color: var(--texto-suave); }
-    .breadcrumb-container a { color: var(--morado-principal); text-decoration: none; font-weight: 600; }
+    .input-field { width: 100%; padding: 14px; border-radius: 8px; border: 1px solid var(--borde-suave); font-family: inherit; margin-bottom: 15px; background: var(--gris-claro); }
+    .input-field:focus { outline: none; border-color: var(--morado-principal); background: #ffffff; }
 
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    .section { padding: 60px 0; }
-    .section-title { font-size: 2.2rem; margin-bottom: 14px; text-align: center; }
-    .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 850px; margin: 0 auto 40px auto; text-align: center; }
+    /* OPCIÓN CORPORATIVA */
+    .corporate-option { margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--borde-suave); text-align: center; }
+    .corporate-option p { font-size: 0.95rem; color: var(--texto-suave); margin-bottom: 15px; }
+    .btn-outline { display: inline-block; background: transparent; color: var(--morado-principal); font-weight: 700; padding: 12px 24px; border-radius: 8px; text-decoration: none; border: 2px solid var(--morado-principal); font-size: 0.95rem; transition: all 0.2s; }
+    .btn-outline:hover { background: var(--menta-fondo); }
 
-    .page-header { background: var(--morado-principal); color: var(--blanco); padding: 55px 24px; border-bottom: 4px solid var(--verde-menta); margin-bottom: 40px; }
-    .page-header-content { max-width: 1200px; margin: 0 auto; text-align: center; }
-    .page-header h1 { color: var(--blanco); font-size: 2.6rem; margin-bottom: 14px; }
-    .page-header p { font-size: 1.15rem; color: rgba(255, 255, 255, 0.92); max-width: 850px; margin: 0 auto; }
-
-    .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .course-card { background: var(--blanco); border-radius: 10px; border: 1px solid #ede8f2; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; }
-    .course-tag { background: var(--azul-cielo); color: var(--morado-principal); font-size: 0.75rem; font-weight: bold; padding: 6px 12px; display: inline-block; text-transform: uppercase; }
-    .course-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
-    .course-content h3 { font-size: 1.3rem; margin-bottom: 12px; }
-    .course-content p { font-size: 0.92rem; color: var(--texto-suave); margin-bottom: 20px; flex-grow: 1; }
-    
-    .btn-agora { display: inline-block; padding: 12px 24px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.88rem; transition: background 0.2s; border: none; cursor: pointer; text-align: center; }
-    .btn-agora-morado { background-color: var(--morado-principal); color: var(--blanco); }
-    .btn-agora-outline { background-color: transparent; color: var(--morado-principal); border: 2px solid var(--morado-principal); }
-
-    footer { background: var(--morado-principal); color: var(--blanco); text-align: center; padding: 25px 24px; font-size: 0.85rem; margin-top: 60px; }
-    @media (max-width: 900px) { .nav-links { display: none; } .navbar { justify-content: center; } }
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.2rem; }
+      .nav-links { display: none; }
+      .waitlist-box { padding: 30px; }
+    }
   </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="navbar">
-      <a href="../index.html" class="logo-text">ÁGORA LABORAL <span>360°</span></a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="../index.html#inicio">INICIO</a></li>
-          <li><a href="../index.html#servicios">SERVICIOS</a></li>
-          <li><a href="../index.html#metodo360">MÉTODO 360°</a></li>
-          <li><a href="../index.html#observatorio">OBSERVATORIO</a></li>
-          <li><a href="../index.html#academia" class="active">ACADEMIA</a></li>
-          <li><a href="../index.html#recursos">RECURSOS</a></li>
-          <li><a href="../index.html#contacto">CONTACTO</a></li>
-        </ul>
-      </nav>
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">ÁGORA LABORAL <span>360°</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">INICIO</a></li>
+        <li><a href="../servicios/index.html">SERVICIOS</a></li>
+        <li><a href="../metodo-360/index.html">MÉTODO 360°</a></li>
+        <li><a href="../index.html#observatorio">OBSERVATORIO</a></li>
+        <li><a href="index.html" style="color: var(--morado-principal); border-bottom: 2px solid var(--morado-principal);">ACADEMIA</a></li>
+        <li><a href="../recursos/index.html">RECURSOS</a></li>
+        <li><a href="../index.html#contacto">CONTACTO</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <div class="breadcrumb-bar">
-    <div class="breadcrumb-container">
-      <a href="../index.html">Inicio</a> &gt; <span>Academia Ágora 360°</span>
-    </div>
-  </div>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="hero-container">
+    <div class="hero-icon">🎓</div>
+    <h1 class="hero-title">Nuestra plataforma de formación está en preparación</h1>
+    <p class="hero-subtitle">Estamos diseñando programas de alta especialización en Compliance Laboral, Ley Karin, Ley 21.828 y prevención de riesgos psicosociales.</p>
 
-  <section class="page-header">
-    <div class="page-header-content">
-      <h1>Academia Ágora 360°</h1>
-      <p>Formación ejecutiva, talleres prácticos y certificaciones para equipos de Recursos Humanos, Fiscalías Internas y Comités Paritarios.</p>
-    </div>
-  </section>
+    <div class="waitlist-box">
+      <h3>Lista de Espera y Novedades</h3>
+      <p>Déjenos su correo para ser el primero en enterarse de nuestros primeros webinars gratuitos y el lanzamiento oficial de nuestros cursos certificados.</p>
+      
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- Reemplazar con tu Access Key de Web3Forms -->
+        <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
+        <input type="hidden" name="from_name" value="Lista de Espera - Academia">
+        <input type="hidden" name="subject" value="🚨 Nuevo Suscriptor - Lista de Espera Academia">
+        <input type="hidden" name="redirect" value="https://agoralaboral.cl">
 
-  <main class="container">
-    <section class="section">
-      <h2 class="section-title">Programas Destacados</h2>
-      <p class="section-subtitle">Capacitamos a su organización para prevenir, abordar y sancionar adecuadamente las conductas que vulneran la dignidad en el trabajo.</p>
+        <input type="text" name="nombre" class="input-field" placeholder="Nombre completo" required>
+        <input type="email" name="email" class="input-field" placeholder="Correo electrónico profesional" required>
+        
+        <button type="submit" class="btn-submit">Avisarme cuando haya cursos disponibles</button>
+      </form>
 
-      <div class="courses-grid">
-        <div class="course-card">
-          <div class="course-tag">Taller Práctico</div>
-          <div class="course-content">
-            <h3>Sensibilización en Ley Karin</h3>
-            <p>Dirigido a todos los colaboradores de la empresa. Diferencia claramente qué es y qué no es acoso laboral, sexual y violencia en el trabajo mediante casos prácticos.</p>
-            <a href="../index.html#contacto" class="btn-agora btn-agora-outline">Solicitar Temario</a>
-          </div>
-        </div>
-
-        <div class="course-card">
-          <div class="course-tag">Certificación</div>
-          <div class="course-content">
-            <h3>Técnicas de Entrevista para Investigadores</h3>
-            <p>Formación avanzada para fiscales internos. Enseña a conducir interrogatorios estructurados, prevenir la revictimización y valorar indicios probatorios.</p>
-            <a href="../index.html#contacto" class="btn-agora btn-agora-outline">Solicitar Temario</a>
-          </div>
-        </div>
-
-        <div class="course-card">
-          <div class="course-tag">Programa Especializado</div>
-          <div class="course-content">
-            <h3>Capacitación para Comités Paritarios</h3>
-            <p>Prepara al comité para sus nuevas obligaciones legales en materia de resguardo de protocolos de prevención y derivación oportuna de denuncias.</p>
-            <a href="../index.html#contacto" class="btn-agora btn-agora-outline">Solicitar Temario</a>
-          </div>
-        </div>
+      <div class="corporate-option">
+        <p><strong>¿Busca capacitación corporativa para su empresa?</strong><br>Realizamos charlas, talleres y entrenamientos "In-Company" adaptados a la realidad de su organización.</p>
+        <a href="https://wa.me/56999840502?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20una%20capacitaci%C3%B3n%20corporativa%20o%20charla%20para%20mi%20empresa" target="_blank" class="btn-outline">Cotizar Capacitación In-Company</a>
       </div>
-    </section>
-
-    <section class="section" style="text-align: center; background: var(--menta-fondo); border-radius: 12px; padding: 45px 24px;">
-      <h2 class="section-title">Modalidades In-Company e-Learning</h2>
-      <p class="section-subtitle" style="margin-bottom: 25px;">Adaptamos nuestros contenidos a la realidad de su industria (minería, salud, retail, corporativo). Solicite nuestro catálogo completo de cursos.</p>
-      <a href="../index.html#contacto" class="btn-agora btn-agora-morado">Cotizar Programa de Formación</a>
-    </section>
+    </div>
   </main>
-
-  <footer>
-    <p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.</p>
-  </footer>
 
 </body>
 </html>
