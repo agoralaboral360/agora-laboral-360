@@ -12,15 +12,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    /* PALETA DE 3 COLORES PRINCIPALES */
+    /* PALETA DE 3 COLORES PRINCIPALES + REDES */
     :root {
-      --verde-corporativo: #065f2e; /* Identidad, títulos y navegación */
-      --amarillo-cta: #ffc107;      /* Llamadas a la acción */
+      --verde-corporativo: #065f2e; /* Identidad y títulos */
+      --amarillo-cta: #ffc107;      /* Botones principales de acción */
       --blanco-frio: #f8f9fa;       /* Fondos */
       --blanco-puro: #ffffff;
       --texto-oscuro: #111827;
       --texto-suave: #4b5563;
       --whatsapp: #25D366;
+      --instagram: #E1306C;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,45 +35,47 @@
     .nav-links { display: flex; gap: 20px; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--verde-corporativo); font-weight: 700; font-size: 0.95rem; }
 
-    /* HERO SECTION REESTRUCTURADO */
-    .hero { background: var(--blanco-puro); padding: 70px 20px; border-bottom: 1px solid #e5e7eb; }
-    .hero-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: center; }
+    /* HERO SECTION */
+    .hero { background: var(--blanco-puro); padding: 60px 20px; border-bottom: 1px solid #e5e7eb; }
+    .hero-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
     
-    .hero h1 { font-size: 2.8rem; font-weight: 900; line-height: 1.1; color: var(--verde-corporativo); margin-bottom: 15px; text-transform: uppercase; }
-    .hero h2 { font-size: 1.3rem; font-weight: 700; color: var(--texto-oscuro); margin-bottom: 10px; }
-    .hero p { font-size: 1.1rem; color: var(--texto-suave); margin-bottom: 30px; font-weight: 500; }
+    .hero h1 { font-size: 2.6rem; font-weight: 900; line-height: 1.1; color: var(--verde-corporativo); margin-bottom: 15px; text-transform: uppercase; }
+    .hero h2 { font-size: 1.2rem; font-weight: 700; color: var(--texto-oscuro); margin-bottom: 10px; }
+    .hero p { font-size: 1.05rem; color: var(--texto-suave); margin-bottom: 25px; font-weight: 500; }
     
-    .btn-cta-principal { display: inline-block; background: var(--amarillo-cta); color: #000000; padding: 18px 35px; border-radius: 8px; font-weight: 900; text-decoration: none; font-size: 1.1rem; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4); text-transform: uppercase; }
+    .btn-cta-principal { display: inline-block; background: var(--amarillo-cta); color: #000000; padding: 16px 32px; border-radius: 8px; font-weight: 900; text-decoration: none; font-size: 1.1rem; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4); text-transform: uppercase; }
     .btn-cta-principal:hover { transform: scale(1.02); }
     
-    .badge-presupuesto { display: inline-block; color: var(--verde-corporativo); font-size: 1rem; font-weight: 800; margin-top: 20px; }
+    .badge-presupuesto { display: inline-block; color: var(--verde-corporativo); font-size: 0.95rem; font-weight: 800; margin-top: 15px; }
 
     .hero-img-box { text-align: center; }
-    .hero-img { width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); object-fit: cover; height: 420px; }
+    .hero-img { width: 100%; max-width: 420px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); object-fit: cover; height: 380px; }
 
-    /* SECCIONES COMUNES */
-    .section-container { max-width: 1100px; margin: 70px auto; padding: 0 20px; }
-    .section-title { text-align: center; font-size: 2.2rem; font-weight: 900; color: var(--verde-corporativo); margin-bottom: 10px; text-transform: uppercase; }
-    .section-subtitle { text-align: center; color: var(--texto-suave); font-weight: 600; margin-bottom: 45px; font-size: 1.1rem; }
+    /* SECCIONES */
+    .section-container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    .section-title { text-align: center; font-size: 2rem; font-weight: 900; color: var(--verde-corporativo); margin-bottom: 10px; text-transform: uppercase; }
+    .section-subtitle { text-align: center; color: var(--texto-suave); font-weight: 600; margin-bottom: 40px; font-size: 1rem; }
 
     /* TARJETAS DE SERVICIOS */
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-    .service-card { background: var(--blanco-puro); border: 1px solid #e5e7eb; border-radius: 10px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-top: 4px solid var(--verde-corporativo); }
-    .service-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
-    .service-card h3 { color: var(--verde-corporativo); font-size: 1.25rem; font-weight: 800; margin-bottom: 10px; }
-    .service-card p { color: var(--texto-suave); font-size: 0.95rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .service-card { background: var(--blanco-puro); border: 1px solid #e5e7eb; border-radius: 10px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-top: 4px solid var(--verde-corporativo); }
+    .service-icon { font-size: 2.2rem; margin-bottom: 12px; display: block; }
+    .service-card h3 { color: var(--verde-corporativo); font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; }
+    .service-card p { color: var(--texto-suave); font-size: 0.92rem; }
 
-    /* SECCIÓN PERFIL PROFESIONAL (NUEVO DISEÑO INTEGRADO) */
-    .perfil-card { background: var(--blanco-puro); border: 2px solid var(--verde-corporativo); border-radius: 20px; padding: 40px; box-shadow: 0 10px 25px rgba(6, 95, 46, 0.08); display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; align-items: center; }
+    /* PERFIL PROFESIONAL CON BOTONES DE CONTACTO */
+    .perfil-card { background: var(--blanco-puro); border: 2px solid var(--verde-corporativo); border-radius: 16px; padding: 35px; box-shadow: 0 10px 25px rgba(6, 95, 46, 0.08); display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; align-items: center; }
     .perfil-list { list-style: none; color: var(--texto-suave); line-height: 2; margin-top: 15px; font-size: 0.95rem; }
-    .perfil-list li strong { color: var(--texto-oscuro); }
+    .perfil-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
+    .btn-instagram { display: inline-flex; align-items: center; gap: 6px; background: var(--instagram); color: #ffffff; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: 800; font-size: 0.85rem; }
+    .btn-email { display: inline-flex; align-items: center; gap: 6px; background: var(--verde-corporativo); color: #ffffff; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: 800; font-size: 0.85rem; }
 
-    /* FORMULARIO DIRECTO */
-    .quote-box { background: var(--blanco-puro); border: 2px solid var(--verde-corporativo); border-radius: 12px; padding: 45px; margin-top: 60px; box-shadow: 0 10px 30px rgba(6, 95, 46, 0.08); }
-    .quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-    .input-field { width: 100%; padding: 15px; border-radius: 6px; border: 1px solid #cbd5e1; margin-bottom: 15px; font-family: inherit; font-size: 1rem; background: var(--blanco-frio); }
+    /* FORMULARIO */
+    .quote-box { background: var(--blanco-puro); border: 2px solid var(--verde-corporativo); border-radius: 12px; padding: 40px; margin-top: 50px; box-shadow: 0 10px 30px rgba(6, 95, 46, 0.08); }
+    .quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: center; }
+    .input-field { width: 100%; padding: 14px; border-radius: 6px; border: 1px solid #cbd5e1; margin-bottom: 12px; font-family: inherit; font-size: 0.95rem; background: var(--blanco-frio); }
     .input-field:focus { outline: none; border-color: var(--verde-corporativo); }
-    .btn-submit { width: 100%; background: var(--verde-corporativo); color: var(--blanco-puro); padding: 16px; border: none; border-radius: 6px; font-weight: 800; font-size: 1.05rem; cursor: pointer; text-transform: uppercase; }
+    .btn-submit { width: 100%; background: var(--verde-corporativo); color: var(--blanco-puro); padding: 15px; border: none; border-radius: 6px; font-weight: 800; font-size: 1rem; cursor: pointer; text-transform: uppercase; }
 
     /* WHATSAPP FLOTANTE */
     .btn-whatsapp-float { position: fixed; bottom: 25px; right: 25px; background-color: var(--whatsapp); color: #ffffff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,0.25); z-index: 10000; transition: transform 0.2s; }
@@ -80,15 +83,17 @@
 
     @media (max-width: 850px) {
       .hero-container, .quote-grid, .perfil-card { grid-template-columns: 1fr; text-align: center; }
-      .hero h1 { font-size: 2.2rem; }
+      .hero h1 { font-size: 2rem; }
       .hero-img-box { order: -1; }
-      .hero-img { height: 300px; }
+      .hero-img { height: 280px; }
       .nav-links { display: none; }
+      .perfil-buttons { justify-content: center; }
     }
   </style>
 </head>
 <body>
 
+  <!-- MENÚ SUPERIOR -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="../../index.html" class="logo">ÁGORA <span>DIGITAL</span></a>
@@ -100,7 +105,7 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION INVERTIDO HACIA LA CONVERSIÓN -->
+  <!-- PORTADA DE CONVERSIÓN -->
   <header class="hero">
     <div class="hero-container">
       <div>
@@ -154,29 +159,37 @@
     </div>
   </section>
 
-  <!-- SECCIÓN PERFIL DEL INSTALADOR (CON IMAGEN CORREGIDA) -->
+  <!-- PERFIL PROFESIONAL (CON CORREO E INSTAGRAM INTEGRADOS) -->
   <section class="section-container" id="perfil" style="margin-top: 0;">
     <div class="perfil-card">
       <div>
         <span style="color: var(--verde-corporativo); font-weight: 800; font-size: 0.85rem; text-transform: uppercase;">Respaldo Profesional</span>
-        <h2 style="font-size: 2rem; color: var(--texto-oscuro); margin: 8px 0 10px 0;">Mario Labarca</h2>
+        <h2 style="font-size: 1.8rem; color: var(--texto-oscuro); margin: 6px 0;">Mario Labarca</h2>
         
-        <!-- Etiqueta amarilla rediseñada -->
-        <span style="background: var(--amarillo-cta); color: #000; font-weight: 800; padding: 6px 14px; border-radius: 4px; display: inline-block; font-size: 0.9rem;">
+        <span style="background: var(--amarillo-cta); color: #000; font-weight: 800; padding: 5px 12px; border-radius: 4px; display: inline-block; font-size: 0.85rem;">
           ⚡ Instalador Autorizado SEC - Licencia Clase [B / C]
         </span>
         
         <ul class="perfil-list">
-          <li>🎓 <strong>Formación:</strong> [Ej: Técnico en Electricidad / INACAP]</li>
-          <li>📜 <strong>Registro SEC N°:</strong> [Ingresar número de Licencia SEC]</li>
-          <li>💡 <strong>Cursos y Certificaciones:</strong> [Ej: Normativa RIC SEC, Tableros Trifásicos, Mallas a Tierra]</li>
-          <li>🛡️ <strong>Garantía de Trabajo:</strong> Cumplimiento estricto de protocolos de seguridad y normativa vigente.</li>
+          <li>🎓 <strong>Formación:</strong> Técnico en Electricidad</li>
+          <li>📜 <strong>Registro SEC N°:</strong> [Ingresar número SEC]</li>
+          <li>✉️ <strong>Correo:</strong> <a href="mailto:contacto@agoralaboral.cl" style="color: var(--verde-corporativo); text-decoration: underline; font-weight: 700;">contacto@agoralaboral.cl</a></li>
+          <li>🛡️ <strong>Garantía:</strong> Cumplimiento estricto de la normativa RIC.</li>
         </ul>
+
+        <!-- BOTONES DE INSTAGRAM Y CORREO DIRECTO -->
+        <div class="perfil-buttons">
+          <a href="https://instagram.com/USUARIO_INSTAGRAM" target="_blank" class="btn-instagram">
+            📸 Instagram
+          </a>
+          <a href="mailto:contacto@agoralaboral.cl" class="btn-email">
+            ✉️ Enviar Correo
+          </a>
+        </div>
       </div>
 
       <div style="text-align: center;">
-        <!-- IMAGEN CORREGIDA - FOTO DE STOCK PROFESIONAL QUE SÍ FUNCIONA -->
-        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=400&q=80" alt="Instalador Autorizado Mario Labarca" style="width: 100%; max-width: 250px; height: 250px; object-fit: cover; border-radius: 50%; border: 5px solid var(--verde-corporativo); box-shadow: 0 10px 25px rgba(6, 95, 46, 0.15);">
+        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3cb716f7?auto=format&fit=crop&w=400&q=80" alt="Instalador Autorizado Mario Labarca" style="width: 100%; max-width: 220px; height: 220px; object-fit: cover; border-radius: 50%; border: 4px solid var(--verde-corporativo); box-shadow: 0 8px 20px rgba(6, 95, 46, 0.15);">
       </div>
     </div>
   </section>
@@ -186,8 +199,11 @@
     <div class="quote-box">
       <div class="quote-grid">
         <div>
-          <h2 style="font-size: 2.2rem; color: var(--verde-corporativo); margin-bottom: 10px; text-transform: uppercase; font-weight: 900;">Cotiza Hoy</h2>
-          <p style="color: var(--texto-suave); margin-bottom: 20px; font-size: 1.1rem;">Déjanos tus datos y te contactaremos para agendar tu evaluación técnica gratuita.</p>
+          <h2 style="font-size: 2rem; color: var(--verde-corporativo); margin-bottom: 10px; text-transform: uppercase; font-weight: 900;">Cotiza Hoy</h2>
+          <p style="color: var(--texto-suave); margin-bottom: 15px; font-size: 1rem;">Déjanos tus datos o escríbenos a nuestro correo oficial:</p>
+          <p style="color: var(--verde-corporativo); font-weight: 800; font-size: 1rem; margin-bottom: 15px;">
+            ✉️ <a href="mailto:contacto@agoralaboral.cl" style="color: inherit; text-decoration: underline;">contacto@agoralaboral.cl</a>
+          </p>
           <p style="color: var(--texto-oscuro); font-weight: 700;">📍 Cobertura: Región Metropolitana.</p>
         </div>
 
@@ -213,7 +229,7 @@
     </div>
   </section>
 
-  <!-- WHATSAPP -->
+  <!-- WHATSAPP FLOTANTE -->
   <a href="https://wa.me/56999840502?text=Hola,%20necesito%20coordinar%20una%20evaluaci%C3%B3n%20t%C3%A9cnica" class="btn-whatsapp-float" target="_blank" title="WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#ffffff" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.705 1.754zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.285-.143-1.687-.833-1.947-.928-.26-.095-.45-.143-.64.143-.19.285-.736.928-.902 1.118-.166.19-.333.214-.618.071-1.638-.82-2.718-1.462-3.804-3.328-.288-.495.288-.459.825-1.533.095-.19.048-.356-.024-.499-.071-.143-.64-1.543-.877-2.11-.23-.553-.464-.477-.64-.486l-.547-.01c-.19 0-.499.071-.76.356-.26.285-.998.975-.998 2.38 0 1.404 1.022 2.759 1.164 2.95.143.19 2.012 3.073 4.876 4.31.681.294 1.213.47 1.626.601.684.217 1.307.186 1.8.113.55-.082 1.687-.69 1.925-1.356.237-.666.237-1.237.166-1.356-.07-.118-.26-.19-.545-.333z"/></svg>
   </a>
