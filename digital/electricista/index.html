@@ -65,6 +65,16 @@
     .service-card h3 { color: var(--verde-oscuro); font-size: 1.25rem; font-weight: 800; margin-bottom: 10px; }
     .service-card p { color: var(--texto-suave); font-size: 0.95rem; }
 
+    /* SECCIÓN DE GALERÍA DE TRABAJOS */
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 30px; }
+    .gallery-card { background: var(--fondo-blanco); border: 2px solid var(--borde-suave); border-radius: 14px; overflow: hidden; transition: all 0.3s ease; }
+    .gallery-card:hover { border-color: var(--verde-principal); box-shadow: 0 10px 25px rgba(10, 136, 67, 0.12); transform: translateY(-4px); }
+    .gallery-img { width: 100%; height: 210px; object-fit: cover; display: block; }
+    .gallery-body { padding: 20px; }
+    .gallery-tag { display: inline-block; background: var(--fondo-suave); color: var(--verde-oscuro); font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; margin-bottom: 8px; border: 1px solid var(--verde-principal); }
+    .gallery-title { font-size: 1.1rem; font-weight: 800; color: var(--texto-oscuro); margin-bottom: 6px; }
+    .gallery-desc { font-size: 0.88rem; color: var(--texto-suave); }
+
     /* FORMULARIO PRESUPUESTO GRATIS */
     .quote-box { background: var(--fondo-suave); border: 2px solid var(--verde-principal); border-radius: 20px; padding: 45px; margin-top: 60px; }
     .quote-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: center; }
@@ -95,6 +105,7 @@
       <ul class="nav-links">
         <li><a href="../../index.html">Inicio</a></li>
         <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Trabajos</a></li>
         <li><a href="#cotizar">Solicitar Presupuesto</a></li>
       </ul>
     </div>
@@ -147,6 +158,50 @@
         <span class="service-icon">🏠</span>
         <h3>Proyectos & Recableados</h3>
         <p>Instalación de mallas a tierra, cableados de casas, oficinas y locales comerciales conforme a norma NCh 4/2003 / RIC N°10.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECCIÓN GALERÍA DE TRABAJOS REALIZADOS -->
+  <section class="section-container" id="galeria" style="margin-top: 0;">
+    <h2 class="section-title">Trabajos y Proyectos Realizados</h2>
+    <p class="section-subtitle">Garantía de cumplimiento técnico y estándares normativos SEC</p>
+
+    <div class="gallery-grid">
+      <article class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=600&q=80" alt="Armado y Normalización de Tableros Eléctricos" class="gallery-img">
+        <div class="gallery-body">
+          <span class="gallery-tag">Tableros & Fuerza</span>
+          <h3 class="gallery-title">Normalización de Tablero Trifásico</h3>
+          <p class="gallery-desc">Reestructuración completa, etiquetado de circuitos y cambio de protecciones diferenciales para local comercial.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Inspección y Medición para Certificado TE1" class="gallery-img">
+        <div class="gallery-body">
+          <span class="gallery-tag">Aprobado SEC</span>
+          <h3 class="gallery-title">Tramitación y Certificado TE1</h3>
+          <p class="gallery-desc">Inspección técnica de aislamiento y resistencia a tierra previa a la declaración oficial ante la SEC.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="Instalación de Iluminación y Malla a Tierra" class="gallery-img">
+        <div class="gallery-body">
+          <span class="gallery-tag">Proyectos Domiciliarios</span>
+          <h3 class="gallery-title">Recableado Integral e Iluminación LED</h3>
+          <p class="gallery-desc">Sustitución de cableado antiguo por conductores libres de halógeno e instalación de tableros de distribución.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Atención de Emergencias Eléctricas" class="gallery-img">
+        <div class="gallery-body">
+          <span class="gallery-tag">Urgencias 24/7</span>
+          <h3 class="gallery-title">Reparación de Cortocircuitos y Fugas</h3>
+          <p class="gallery-desc">Localización precisa de falla a tierra en líneas subterráneas y cambio de protecciones sobrecargadas.</p>
+        </div>
       </article>
     </div>
 
