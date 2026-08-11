@@ -3,173 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios Eléctricos & Certificaciones SEC | Ágora Digital</title>
-  <meta name="description" content="Servicios eléctricos profesionales, certificaciones TE1 SEC, aumento de capacidad, tableros y atención de urgencias.">
+  <title>Servicios Eléctricos & Certificaciones SEC | Presupuesto Gratuito</title>
+  <meta name="description" content="Servicios eléctricos profesionales, certificaciones TE1 SEC, aumento de capacidad y reparación de fallas. ¡Presupuesto 100% Gratis!">
 
   <!-- Tipografías Corporativas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --morado-principal: #361e42;
-      --morado-hover: #261330;
-      --verde-menta: #a8e6cf;
-      --menta-fondo: #eef9f4;
-      --amarillo-electrico: #f39c12;
-      --texto-oscuro: #1d1b20;
-      --texto-suave: #5c5566;
-      --gris-fondo: #f8f6fa;
-      --borde-suave: #e1dbe6;
+      --verde-principal: #0a8843;
+      --verde-oscuro: #065f2e;
+      --amarillo-electrico: #f59e0b;
+      --amarillo-brillante: #ffc107;
+      --fondo-blanco: #ffffff;
+      --fondo-suave: #f4fbf7;
+      --texto-oscuro: #111827;
+      --texto-suave: #4b5563;
+      --borde-suave: #e5e7eb;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: var(--gris-fondo); line-height: 1.6; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: var(--fondo-blanco); line-height: 1.6; }
     
     /* NAVEGACIÓN */
-    .navbar { background: #ffffff; border-bottom: 1px solid var(--borde-suave); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+    .navbar { background: var(--fondo-blanco); border-bottom: 2px solid var(--borde-suave); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
     .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-    .logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--morado-principal); text-decoration: none; }
-    .logo span { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 800; color: var(--verde-menta); background: var(--morado-principal); padding: 2px 6px; border-radius: 4px; margin-left: 5px; }
+    .logo { font-size: 1.3rem; font-weight: 800; color: var(--verde-principal); text-decoration: none; text-transform: uppercase; letter-spacing: -0.5px; }
+    .logo span { color: var(--amarillo-electrico); background: var(--verde-oscuro); padding: 3px 8px; border-radius: 4px; margin-left: 5px; font-size: 0.8rem; }
     .nav-links { display: flex; gap: 20px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--texto-suave); font-weight: 600; font-size: 0.9rem; }
+    .nav-links a { text-decoration: none; color: var(--texto-suave); font-weight: 700; font-size: 0.9rem; }
+    .nav-links a:hover { color: var(--verde-principal); }
 
-    /* HERO SECTION */
-    .hero { background: linear-gradient(135deg, var(--morado-principal) 0%, #1e1026 100%); color: #ffffff; padding: 60px 20px; text-align: center; }
-    .hero-container { max-width: 800px; margin: 0 auto; }
-    .sec-badge { display: inline-block; background: rgba(255,255,255,0.15); color: var(--verde-menta); font-size: 0.85rem; font-weight: 700; padding: 6px 16px; border-radius: 50px; border: 1px solid var(--verde-menta); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
-    .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; line-height: 1.2; margin-bottom: 15px; }
-    .hero p { font-size: 1.1rem; color: #e1dbe6; margin-bottom: 30px; font-weight: 400; }
+    /* HERO SECTION CON FOTO Y PRESUPUESTO GRATIS */
+    .hero { background: var(--fondo-suave); border-bottom: 1px solid var(--borde-suave); padding: 60px 20px; }
+    .hero-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
     
-    .cta-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { background: var(--verde-menta); color: var(--morado-principal); padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: background 0.2s; }
-    .btn-primary:hover { background: #92d6bb; }
-    .btn-secondary { background: transparent; color: #ffffff; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; border: 2px solid #ffffff; transition: all 0.2s; }
-    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+    .badge-presupuesto { display: inline-block; background: var(--amarillo-brillante); color: var(--texto-oscuro); font-size: 0.9rem; font-weight: 800; padding: 8px 18px; border-radius: 50px; margin-bottom: 20px; text-transform: uppercase; box-shadow: 0 2px 10px rgba(245, 158, 11, 0.3); }
+    .hero h1 { font-size: 2.6rem; font-weight: 900; line-height: 1.2; color: var(--verde-oscuro); margin-bottom: 15px; }
+    .hero p { font-size: 1.1rem; color: var(--texto-suave); margin-bottom: 30px; font-weight: 500; }
+    
+    .hero-img-box { position: relative; text-align: center; }
+    .hero-img { width: 100%; max-width: 450px; border-radius: 20px; box-shadow: 0 15px 35px rgba(10, 136, 67, 0.15); border: 4px solid var(--fondo-blanco); object-fit: cover; height: 400px; }
+    
+    .cta-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+    .btn-verde { background: var(--verde-principal); color: #ffffff; padding: 15px 28px; border-radius: 8px; font-weight: 800; text-decoration: none; transition: background 0.2s; font-size: 1rem; border: none; cursor: pointer; }
+    .btn-verde:hover { background: var(--verde-oscuro); }
+    .btn-amarillo { background: var(--amarillo-brillante); color: var(--texto-oscuro); padding: 15px 28px; border-radius: 8px; font-weight: 800; text-decoration: none; border: none; font-size: 1rem; cursor: pointer; transition: transform 0.2s; }
+    .btn-amarillo:hover { transform: translateY(-2px); }
 
-    /* GRID DE SERVICIOS */
-    .section-container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
-    .section-title { text-align: center; font-size: 2rem; color: var(--morado-principal); margin-bottom: 40px; }
+    /* SECCIÓN DE SERVICIOS */
+    .section-container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    .section-title { text-align: center; font-size: 2.2rem; font-weight: 800; color: var(--verde-oscuro); margin-bottom: 10px; }
+    .section-subtitle { text-align: center; color: var(--texto-suave); font-weight: 600; margin-bottom: 45px; font-size: 1.05rem; }
 
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-    .service-card { background: #ffffff; border: 1px solid var(--borde-suave); border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.2s; }
-    .service-card:hover { transform: translateY(-5px); }
-    .service-icon { font-size: 2.2rem; margin-bottom: 15px; display: block; }
-    .service-card h3 { color: var(--morado-principal); font-size: 1.25rem; margin-bottom: 10px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+    .service-card { background: var(--fondo-blanco); border: 2px solid var(--borde-suave); border-radius: 14px; padding: 30px; transition: all 0.3s ease; }
+    .service-card:hover { border-color: var(--verde-principal); box-shadow: 0 10px 25px rgba(10, 136, 67, 0.1); transform: translateY(-5px); }
+    .service-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+    .service-card h3 { color: var(--verde-oscuro); font-size: 1.25rem; font-weight: 800; margin-bottom: 10px; }
     .service-card p { color: var(--texto-suave); font-size: 0.95rem; }
 
-    /* FORMULARIO Y CONTACTO */
-    .quote-box { background: #ffffff; border: 1px solid var(--borde-suave); border-radius: 16px; padding: 40px; margin-top: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-    .quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-    .input-field { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--borde-suave); margin-bottom: 15px; font-family: inherit; }
-    .btn-submit { width: 100%; background: var(--morado-principal); color: #ffffff; padding: 14px; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1rem; }
-    .btn-submit:hover { background: var(--morado-hover); }
+    /* FORMULARIO PRESUPUESTO GRATIS */
+    .quote-box { background: var(--fondo-suave); border: 2px solid var(--verde-principal); border-radius: 20px; padding: 45px; margin-top: 60px; }
+    .quote-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: center; }
+    .input-field { width: 100%; padding: 14px; border-radius: 8px; border: 1px solid #cbd5e1; margin-bottom: 15px; font-family: inherit; font-size: 0.95rem; }
+    .input-field:focus { outline: none; border-color: var(--verde-principal); box-shadow: 0 0 0 3px rgba(10, 136, 67, 0.15); }
+    
+    /* BOTÓN FLOTANTE WHATSAPP LIMPIDO Y CORREGIDO */
+    .btn-whatsapp-float { position: fixed; bottom: 25px; right: 25px; background-color: #25D366; color: #ffffff; width: 62px; height: 62px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,0.25); z-index: 10000; text-decoration: none; transition: transform 0.2s; }
+    .btn-whatsapp-float:hover { transform: scale(1.08); }
 
-    /* WHATSAPP FLOTANTE */
-    .btn-whatsapp { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000; text-decoration: none; }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 1.9rem; }
+    @media (max-width: 850px) {
+      .hero-container { grid-template-columns: 1fr; text-align: center; }
+      .hero h1 { font-size: 2.1rem; }
+      .hero-img-box { order: -1; }
+      .hero-img { height: 280px; }
       .quote-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
+      .cta-buttons { justify-content: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVEGACIÓN -->
+  <!-- NAVEGACIÓN PRINCIPAL -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="../../index.html" class="logo">ÁGORA <span>DIGITAL</span></a>
       <ul class="nav-links">
         <li><a href="../../index.html">Inicio</a></li>
-        <li><a href="../../servicios/index.html">Servicios Corporativos</a></li>
-        <li><a href="https://wa.me/56999840502?text=Hola,%20necesito%20cotizar%20un%20servicio%20el%C3%A9ctrico" target="_blank">Atención Directa</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#cotizar">Solicitar Presupuesto</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO CON FOTO DE ELÉCTRICO Y BADGE GRATIS -->
   <header class="hero">
     <div class="hero-container">
-      <span class="sec-badge">⚡ Instalador Eléctrico Autorizado SEC</span>
-      <h1>Soluciones Eléctricas Profesionales y Certificaciones TE1</h1>
-      <p>Proyectos eléctricos domiciliarios, comerciales e industriales. Normalizaciones, aumentos de capacidad y trámites ante la Superintendencia de Electricidad y Combustibles (SEC).</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/56999840502?text=Hola,%20necesito%20cotizar%20un%20servicio%20el%C3%A9ctrico%20o%20Certificaci%C3%B3n%20TE1" class="btn-primary" target="_blank">Cotizar por WhatsApp 💬</a>
-        <a href="#cotizar" class="btn-secondary">Solicitar Presupuesto</a>
+      <div>
+        <span class="badge-presupuesto">⚡ ¡Presupuesto y Evaluación 100% Gratis!</span>
+        <h1>Servicios Eléctricos Profesionales & Certificaciones SEC</h1>
+        <p>Instalaciones, normalizaciones, aumento de capacidad y trámites de Certificación TE1 ante la SEC. Atención rápida para empresas y domicilios.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/56999840502?text=Hola,%20quisiera%20solicitar%20un%20presupuesto%20gratuito%20para%20un%20servicio%20el%C3%A9ctrico" class="btn-verde" target="_blank">Pedir Presupuesto por WhatsApp 💬</a>
+          <a href="#cotizar" class="btn-amarillo">Cotizar en Línea</a>
+        </div>
+      </div>
+
+      <div class="hero-img-box">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Instalador Eléctrico Autorizado SEC" class="hero-img">
       </div>
     </div>
   </header>
 
-  <!-- SERVICIOS -->
-  <section class="section-container">
+  <!-- SECCIÓN SERVICIOS -->
+  <section class="section-container" id="servicios">
     <h2 class="section-title">Nuestros Servicios Eléctricos</h2>
+    <p class="section-subtitle">Trabajos garantizados ejecutados por Instalador Autorizado SEC</p>
     
     <div class="services-grid">
       <article class="service-card">
         <span class="service-icon">📜</span>
         <h3>Certificación TE1 - SEC</h3>
-        <p>Declaración de instalaciones eléctricas de baja tensión ante la SEC. Trámite fundamental para empalmes, venta de propiedades y patentes comerciales.</p>
+        <p>Declaración oficial de instalaciones de baja tensión ante la SEC. Indispensable para nuevos empalmes, patentes y venta de inmuebles.</p>
       </article>
 
       <article class="service-card">
         <span class="service-icon">🎛</span>
-        <h3>Tableros Eléctricos & Aumentos</h3>
-        <p>Armado, diseño y normalización de tableros de fuerza y alumbrado. Tramitación de aumentos de capacidad con la compañía distribuidora.</p>
+        <h3>Tableros & Aumento de Capacidad</h3>
+        <p>Armado, ordenamiento y normalización de tableros eléctricos de alumbrado y fuerza. Tramitación de aumento de potencia.</p>
       </article>
 
       <article class="service-card">
         <span class="service-icon">🔍</span>
         <h3>Detección de Fallas & Fugas</h3>
-        <p>Diagnóstico técnico de cortocircuitos, caídas de automático y fuga a tierra. Reparaciones preventivas y correctivas con instrumentos de precisión.</p>
+        <p>Diagnóstico de cortocircuitos, caídas del diferencial o automático principal. Reparación segura y rápida de emergencias.</p>
       </article>
 
       <article class="service-card">
-        <span class="service-icon">🏭</span>
-        <h3>Proyectos Domiciliarios e Industriales</h3>
-        <p>Cableados, montaje de canalizaciones (tubo Conduit, escalerillas), iluminación LED eficiente y malla a tierra para protección de equipos.</p>
+        <span class="service-icon">🏠</span>
+        <h3>Proyectos & Recableados</h3>
+        <p>Instalación de mallas a tierra, cableados de casas, oficinas y locales comerciales conforme a norma NCh 4/2003 / RIC N°10.</p>
       </article>
     </div>
 
-    <!-- FORMULARIO DE COTIZACIÓN -->
+    <!-- FORMULARIO DE PRESUPUESTO GRATIS -->
     <div class="quote-box" id="cotizar">
       <div class="quote-grid">
         <div>
-          <h3 style="font-size: 1.8rem; color: var(--morado-principal); margin-bottom: 15px;">¿Necesita una cotización o visita técnica?</h3>
-          <p style="color: var(--texto-suave); margin-bottom: 20px;">Complete sus datos y un instalador eléctrico autorizado se pondrá en contacto con usted a la brevedad para evaluar su requerimiento.</p>
-          <p style="color: var(--texto-suave);">📍 <strong>Cobertura:</strong> Región Metropolitana y zonas allegadas.</p>
+          <span style="color: var(--verde-principal); font-weight: 800; font-size: 0.9rem; text-transform: uppercase;">Atención Inmediata</span>
+          <h3 style="font-size: 2rem; color: var(--verde-oscuro); margin: 10px 0;">Solicite su Presupuesto Gratuito</h3>
+          <p style="color: var(--texto-suave); margin-bottom: 20px;">Complete sus datos y lo contactaremos a la brevedad para coordinar su evaluación sin ningún costo.</p>
+          <p style="color: var(--texto-oscuro); font-weight: 700;">📍 Cobertura: Región Metropolitana y zonas cercanas.</p>
         </div>
 
         <form action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
-          <input type="hidden" name="from_name" value="Cotización Electricista">
-          <input type="hidden" name="subject" value="⚡ Nueva Cotización Servicio Eléctrico">
+          <input type="hidden" name="from_name" value="Cotización Servicio Eléctrico">
+          <input type="hidden" name="subject" value="⚡ Solicitud Presupuesto Gratuito - Electricista">
 
-          <input type="text" name="nombre" class="input-field" placeholder="Nombre completo" required>
-          <input type="tel" name="telefono" class="input-field" placeholder="Teléfono de contacto (+569...)" required>
-          <input type="text" name="comuna" class="input-field" placeholder="Comuna o Dirección" required>
+          <input type="text" name="nombre" class="input-field" placeholder="Nombre completo *" required>
+          <input type="tel" name="telefono" class="input-field" placeholder="Teléfono de contacto (+569...) *" required>
+          <input type="text" name="comuna" class="input-field" placeholder="Comuna o Sector *" required>
           
-          <select name="servicio" class="input-field" style="color: var(--texto-suave);" required>
-            <option value="">Seleccione el servicio requerido</option>
+          <select name="servicio" class="input-field" required>
+            <option value="">Seleccione el trabajo a realizar *</option>
             <option value="Certificación TE1 SEC">Certificación TE1 SEC</option>
-            <option value="Tableros o Aumento de Capacidad">Tableros o Aumento de Capacidad</option>
-            <option value="Reparación de Falla o Urgencia">Reparación de Falla o Urgencia</option>
-            <option value="Proyecto Nuevo o Recableado">Proyecto Nuevo o Recableado</option>
-            <option value="Otro">Otro requerimiento</option>
+            <option value="Tableros / Aumento de Capacidad">Tableros / Aumento de Capacidad</option>
+            <option value="Reparación de Falla o Cortocircuito">Reparación de Falla o Cortocircuito</option>
+            <option value="Proyecto Nuevo / Recableado">Proyecto Nuevo / Recableado</option>
+            <option value="Otro">Otro trabajo eléctrico</option>
           </select>
 
-          <button type="submit" class="btn-submit">Enviar Solicitud de Cotización</button>
+          <button type="submit" class="btn-verde" style="width: 100%;">Solicitar Presupuesto Sin Costo →</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- BOTÓN WHATSAPP -->
-  <a href="https://wa.me/56999840502?text=Hola,%20necesito%20consultar%20por%20un%20servicio%20el%C3%A9ctrico" class="btn-whatsapp" target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 448 512">
-      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+  <!-- BOTÓN FLOTANTE DE WHATSAPP DEFINITIVO -->
+  <a href="https://wa.me/56999840502?text=Hola,%20necesito%20un%20presupuesto%20gratuito%20para%20un%20servicio%20el%C3%A9ctrico" class="btn-whatsapp-float" target="_blank" rel="noopener noreferrer" title="Escribir por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#ffffff" viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.705 1.754zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.285-.143-1.687-.833-1.947-.928-.26-.095-.45-.143-.64.143-.19.285-.736.928-.902 1.118-.166.19-.333.214-.618.071-1.638-.82-2.718-1.462-3.804-3.328-.288-.495.288-.459.825-1.533.095-.19.048-.356-.024-.499-.071-.143-.64-1.543-.877-2.11-.23-.553-.464-.477-.64-.486l-.547-.01c-.19 0-.499.071-.76.356-.26.285-.998.975-.998 2.38 0 1.404 1.022 2.759 1.164 2.95.143.19 2.012 3.073 4.876 4.31.681.294 1.213.47 1.626.601.684.217 1.307.186 1.8.113.55-.082 1.687-.69 1.925-1.356.237-.666.237-1.237.166-1.356-.07-.118-.26-.19-.545-.333z"/>
     </svg>
   </a>
 
