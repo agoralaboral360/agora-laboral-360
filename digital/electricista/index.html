@@ -62,7 +62,12 @@
     .service-card h3 { color: var(--verde-corporativo); font-size: 1.25rem; font-weight: 800; margin-bottom: 10px; }
     .service-card p { color: var(--texto-suave); font-size: 0.95rem; }
 
-    /* FORMULARIO */
+    /* SECCIÓN PERFIL PROFESIONAL (NUEVO DISEÑO INTEGRADO) */
+    .perfil-card { background: var(--blanco-puro); border: 2px solid var(--verde-corporativo); border-radius: 20px; padding: 40px; box-shadow: 0 10px 25px rgba(6, 95, 46, 0.08); display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; align-items: center; }
+    .perfil-list { list-style: none; color: var(--texto-suave); line-height: 2; margin-top: 15px; font-size: 0.95rem; }
+    .perfil-list li strong { color: var(--texto-oscuro); }
+
+    /* FORMULARIO DIRECTO */
     .quote-box { background: var(--blanco-puro); border: 2px solid var(--verde-corporativo); border-radius: 12px; padding: 45px; margin-top: 60px; box-shadow: 0 10px 30px rgba(6, 95, 46, 0.08); }
     .quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
     .input-field { width: 100%; padding: 15px; border-radius: 6px; border: 1px solid #cbd5e1; margin-bottom: 15px; font-family: inherit; font-size: 1rem; background: var(--blanco-frio); }
@@ -74,7 +79,7 @@
     .btn-whatsapp-float:hover { transform: scale(1.1); }
 
     @media (max-width: 850px) {
-      .hero-container, .quote-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-container, .quote-grid, .perfil-card { grid-template-columns: 1fr; text-align: center; }
       .hero h1 { font-size: 2.2rem; }
       .hero-img-box { order: -1; }
       .hero-img { height: 300px; }
@@ -89,6 +94,7 @@
       <a href="../../index.html" class="logo">ÁGORA <span>DIGITAL</span></a>
       <ul class="nav-links">
         <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#perfil">Profesional</a></li>
         <li><a href="#cotizar">Contacto</a></li>
       </ul>
     </div>
@@ -146,9 +152,38 @@
         <p>Recableados domiciliarios, mallas a tierra e iluminación para comercios y oficinas.</p>
       </article>
     </div>
+  </section>
 
-    <!-- FORMULARIO DIRECTO -->
-    <div class="quote-box" id="cotizar">
+  <!-- SECCIÓN PERFIL DEL INSTALADOR (CON IMAGEN CORREGIDA) -->
+  <section class="section-container" id="perfil" style="margin-top: 0;">
+    <div class="perfil-card">
+      <div>
+        <span style="color: var(--verde-corporativo); font-weight: 800; font-size: 0.85rem; text-transform: uppercase;">Respaldo Profesional</span>
+        <h2 style="font-size: 2rem; color: var(--texto-oscuro); margin: 8px 0 10px 0;">Mario Labarca</h2>
+        
+        <!-- Etiqueta amarilla rediseñada -->
+        <span style="background: var(--amarillo-cta); color: #000; font-weight: 800; padding: 6px 14px; border-radius: 4px; display: inline-block; font-size: 0.9rem;">
+          ⚡ Instalador Autorizado SEC - Licencia Clase [B / C]
+        </span>
+        
+        <ul class="perfil-list">
+          <li>🎓 <strong>Formación:</strong> [Ej: Técnico en Electricidad / INACAP]</li>
+          <li>📜 <strong>Registro SEC N°:</strong> [Ingresar número de Licencia SEC]</li>
+          <li>💡 <strong>Cursos y Certificaciones:</strong> [Ej: Normativa RIC SEC, Tableros Trifásicos, Mallas a Tierra]</li>
+          <li>🛡️ <strong>Garantía de Trabajo:</strong> Cumplimiento estricto de protocolos de seguridad y normativa vigente.</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center;">
+        <!-- IMAGEN CORREGIDA - FOTO DE STOCK PROFESIONAL QUE SÍ FUNCIONA -->
+        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=400&q=80" alt="Instalador Autorizado Mario Labarca" style="width: 100%; max-width: 250px; height: 250px; object-fit: cover; border-radius: 50%; border: 5px solid var(--verde-corporativo); box-shadow: 0 10px 25px rgba(6, 95, 46, 0.15);">
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DIRECTO -->
+  <section class="section-container" id="cotizar" style="margin-top: 0;">
+    <div class="quote-box">
       <div class="quote-grid">
         <div>
           <h2 style="font-size: 2.2rem; color: var(--verde-corporativo); margin-bottom: 10px; text-transform: uppercase; font-weight: 900;">Cotiza Hoy</h2>
