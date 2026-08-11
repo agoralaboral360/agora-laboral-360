@@ -12,17 +12,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    /* PALETA DE COLORES */
+    /* PALETA DE 3 COLORES PRINCIPALES */
     :root {
       --verde-corporativo: #065f2e; /* Identidad y títulos */
-      --amarillo-cta: #ffc107;      /* Botones principales */
-      --blanco-frio: #f8f9fa;       /* Fondos */
+      --amarillo-cta: #ffc107;      /* Botones principales de acción */
+      --blanco-frio: #f8f9fa;       /* Fondos generales */
       --blanco-puro: #ffffff;
       --texto-oscuro: #111827;
       --texto-suave: #4b5563;
       --whatsapp: #25D366;
-      --instagram: #E1306C;
-      --gmail: #EA4335;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -64,16 +62,21 @@
     .service-card h3 { color: var(--verde-corporativo); font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; }
     .service-card p { color: var(--texto-suave); font-size: 0.92rem; }
 
-    /* PERFIL PROFESIONAL Y BOTONES DE REDES */
+    /* PERFIL PROFESIONAL Y BOTONES EN AMARILLO / TRANSPARENTE */
     .perfil-card { background: var(--blanco-puro); border: 2px solid var(--verde-corporativo); border-radius: 16px; padding: 35px; box-shadow: 0 10px 25px rgba(6, 95, 46, 0.08); display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; align-items: center; }
     .perfil-list { list-style: none; color: var(--texto-suave); line-height: 2.2; margin-top: 15px; font-size: 0.95rem; }
     .perfil-list li { display: flex; align-items: center; gap: 8px; }
     
     .perfil-buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
-    .btn-instagram { display: inline-flex; align-items: center; gap: 8px; background: var(--instagram); color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 800; font-size: 0.88rem; transition: transform 0.2s; }
-    .btn-instagram:hover { transform: translateY(-2px); }
-    .btn-gmail { display: inline-flex; align-items: center; gap: 8px; background: var(--gmail); color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 800; font-size: 0.88rem; transition: transform 0.2s; }
-    .btn-gmail:hover { transform: translateY(-2px); }
+    
+    /* BOTÓN AMARILLO (INSTAGRAM) */
+    .btn-red-amarillo { display: inline-flex; align-items: center; gap: 8px; background: var(--amarillo-cta); color: #000000; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 800; font-size: 0.88rem; transition: transform 0.2s; }
+    .btn-red-amarillo:hover { transform: translateY(-2px); }
+
+    /* BOTÓN TRANSPARENTE CON BORDE (CORREO) */
+    .btn-red-transparente { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--verde-corporativo); border: 2px solid var(--verde-corporativo); padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 800; font-size: 0.88rem; transition: all 0.2s; }
+    .btn-red-transparente:hover { background: var(--verde-corporativo); color: var(--blanco-puro); }
+    .btn-red-transparente:hover svg { fill: var(--blanco-puro); }
 
     /* FORMULARIO */
     .quote-box { background: var(--blanco-puro); border: 2px solid var(--verde-corporativo); border-radius: 12px; padding: 40px; margin-top: 50px; box-shadow: 0 10px 30px rgba(6, 95, 46, 0.08); }
@@ -165,7 +168,7 @@
     </div>
   </section>
 
-  <!-- PERFIL PROFESIONAL CON ÍCONOS SVG DE INSTAGRAM Y GMAIL -->
+  <!-- PERFIL PROFESIONAL CON ÍCONOS REALES SVG SOBRE AMARILLO Y TRANSPARENTE -->
   <section class="section-container" id="perfil" style="margin-top: 0;">
     <div class="perfil-card">
       <div>
@@ -180,24 +183,24 @@
           <li>🎓 <strong>Formación:</strong> Técnico en Electricidad</li>
           <li>📜 <strong>Registro SEC N°:</strong> [Ingresar número SEC]</li>
           <li>
-            <!-- ÍCONO SVG GMAIL EN LISTA -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#EA4335" viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.272H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.545l8.073-6.052c1.618-1.214 3.927-.059 3.927 1.964z"/></svg>
+            <!-- ÍCONO SVG CORREO REAL EN LISTA -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="var(--verde-corporativo)" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
             <strong>Correo:</strong> <a href="mailto:contacto@agoralaboral.cl" style="color: var(--texto-oscuro); text-decoration: underline; font-weight: 700;">contacto@agoralaboral.cl</a>
           </li>
           <li>🛡️ <strong>Garantía:</strong> Cumplimiento estricto de la normativa RIC.</li>
         </ul>
 
-        <!-- BOTONES OFICIALES CON ÍCONOS SVG -->
+        <!-- BOTONES CON ÍCONOS REALES SVG SOBRE FONDO AMARILLO Y TRANSPARENTE -->
         <div class="perfil-buttons">
-          <!-- BOTÓN INSTAGRAM SVG -->
-          <a href="https://instagram.com/USUARIO_INSTAGRAM" target="_blank" class="btn-instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffffff" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <!-- INSTAGRAM (AMARILLO CON ÍCONO REAL NEGRO) -->
+          <a href="https://instagram.com/USUARIO_INSTAGRAM" target="_blank" class="btn-red-amarillo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#000000" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             Ver Instagram
           </a>
 
-          <!-- BOTÓN GMAIL SVG -->
-          <a href="mailto:contacto@agoralaboral.cl" class="btn-gmail">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffffff" viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.272H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.545l8.073-6.052c1.618-1.214 3.927-.059 3.927 1.964z"/></svg>
+          <!-- CORREO (TRANSPARENTE CON BORDE Y VERDE CORPORATIVO) -->
+          <a href="mailto:contacto@agoralaboral.cl" class="btn-red-transparente">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="var(--verde-corporativo)" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
             Enviar Correo
           </a>
         </div>
@@ -209,7 +212,7 @@
     </div>
   </section>
 
-  <!-- FORMULARIO DIRECTO CON ÍCONO DE GMAIL -->
+  <!-- FORMULARIO DIRECTO -->
   <section class="section-container" id="cotizar" style="margin-top: 0;">
     <div class="quote-box">
       <div class="quote-grid">
@@ -218,7 +221,7 @@
           <p style="color: var(--texto-suave); margin-bottom: 15px; font-size: 1rem;">Déjanos tus datos o escríbenos directamente a nuestro e-mail:</p>
           
           <p style="display: flex; align-items: center; gap: 8px; color: var(--verde-corporativo); font-weight: 800; font-size: 1rem; margin-bottom: 15px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#EA4335" viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.272H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.545l8.073-6.052c1.618-1.214 3.927-.059 3.927 1.964z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--verde-corporativo)" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
             <a href="mailto:contacto@agoralaboral.cl" style="color: inherit; text-decoration: underline;">contacto@agoralaboral.cl</a>
           </p>
           <p style="color: var(--texto-oscuro); font-weight: 700;">📍 Cobertura: Región Metropolitana.</p>
