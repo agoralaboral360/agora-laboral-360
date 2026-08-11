@@ -3,273 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios Eléctricos & Certificaciones SEC | Cotización Gratis</title>
-  <meta name="description" content="Servicios eléctricos garantizados, certificaciones TE1 SEC, aumento de capacidad y reparación de fallas. ¡Evaluación 100% Sin Costo!">
+  <title>Servicios Eléctricos Profesionales | Ágora Digital</title>
+  <meta name="description" content="Instalaciones, reparaciones y mantenciones eléctricas. Atención profesional y evaluación técnica sin costo.">
 
-  <!-- Tipografías Corporativas -->
+  <!-- Tipografías -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
+    /* PALETA DE 3 COLORES PRINCIPALES */
     :root {
-      --verde-principal: #0a8843;
-      --verde-oscuro: #065f2e;
-      --amarillo-electrico: #f59e0b;
-      --amarillo-brillante: #ffc107;
-      --fondo-blanco: #ffffff;
-      --fondo-suave: #f4fbf7;
+      --verde-corporativo: #065f2e; /* Identidad, títulos y navegación */
+      --amarillo-cta: #ffc107;      /* Llamadas a la acción */
+      --blanco-frio: #f8f9fa;       /* Fondos */
+      --blanco-puro: #ffffff;
       --texto-oscuro: #111827;
       --texto-suave: #4b5563;
-      --borde-suave: #e5e7eb;
+      --whatsapp: #25D366;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: var(--fondo-blanco); line-height: 1.6; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: var(--blanco-frio); line-height: 1.6; }
     
     /* NAVEGACIÓN */
-    .navbar { background: var(--fondo-blanco); border-bottom: 2px solid var(--borde-suave); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+    .navbar { background: var(--blanco-puro); border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
     .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-    .logo { font-size: 1.3rem; font-weight: 800; color: var(--verde-principal); text-decoration: none; text-transform: uppercase; letter-spacing: -0.5px; }
-    .logo span { color: var(--amarillo-electrico); background: var(--verde-oscuro); padding: 3px 8px; border-radius: 4px; margin-left: 5px; font-size: 0.8rem; }
+    .logo { font-size: 1.3rem; font-weight: 900; color: var(--texto-oscuro); text-decoration: none; text-transform: uppercase; letter-spacing: -0.5px; }
+    .logo span { color: var(--blanco-puro); background: var(--verde-corporativo); padding: 3px 8px; border-radius: 4px; margin-left: 5px; font-size: 0.8rem; }
     .nav-links { display: flex; gap: 20px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--texto-suave); font-weight: 700; font-size: 0.9rem; }
-    .nav-links a:hover { color: var(--verde-principal); }
+    .nav-links a { text-decoration: none; color: var(--verde-corporativo); font-weight: 700; font-size: 0.95rem; }
 
-    /* HERO SECTION */
-    .hero { background: var(--fondo-suave); border-bottom: 1px solid var(--borde-suave); padding: 60px 20px; }
-    .hero-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+    /* HERO SECTION REESTRUCTURADO */
+    .hero { background: var(--blanco-puro); padding: 70px 20px; border-bottom: 1px solid #e5e7eb; }
+    .hero-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: center; }
     
-    .badge-presupuesto { display: inline-block; background: var(--amarillo-brillante); color: var(--texto-oscuro); font-size: 0.9rem; font-weight: 800; padding: 8px 18px; border-radius: 50px; margin-bottom: 20px; text-transform: uppercase; box-shadow: 0 2px 10px rgba(245, 158, 11, 0.3); }
-    .hero h1 { font-size: 2.6rem; font-weight: 900; line-height: 1.2; color: var(--verde-oscuro); margin-bottom: 15px; }
+    .hero h1 { font-size: 2.8rem; font-weight: 900; line-height: 1.1; color: var(--verde-corporativo); margin-bottom: 15px; text-transform: uppercase; }
+    .hero h2 { font-size: 1.3rem; font-weight: 700; color: var(--texto-oscuro); margin-bottom: 10px; }
     .hero p { font-size: 1.1rem; color: var(--texto-suave); margin-bottom: 30px; font-weight: 500; }
     
-    .hero-img-box { position: relative; text-align: center; }
-    .hero-img { width: 100%; max-width: 450px; border-radius: 20px; box-shadow: 0 15px 35px rgba(10, 136, 67, 0.15); border: 4px solid var(--fondo-blanco); object-fit: cover; height: 400px; }
+    .btn-cta-principal { display: inline-block; background: var(--amarillo-cta); color: #000000; padding: 18px 35px; border-radius: 8px; font-weight: 900; text-decoration: none; font-size: 1.1rem; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4); text-transform: uppercase; }
+    .btn-cta-principal:hover { transform: scale(1.02); }
     
-    .cta-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
-    .btn-verde { background: var(--verde-principal); color: #ffffff; padding: 15px 28px; border-radius: 8px; font-weight: 800; text-decoration: none; transition: background 0.2s; font-size: 1rem; border: none; cursor: pointer; }
-    .btn-verde:hover { background: var(--verde-oscuro); }
-    .btn-amarillo { background: var(--amarillo-brillante); color: var(--texto-oscuro); padding: 15px 28px; border-radius: 8px; font-weight: 800; text-decoration: none; border: none; font-size: 1rem; cursor: pointer; transition: transform 0.2s; }
-    .btn-amarillo:hover { transform: translateY(-2px); }
+    .badge-presupuesto { display: inline-block; color: var(--verde-corporativo); font-size: 1rem; font-weight: 800; margin-top: 20px; }
 
-    /* SECCIÓN DE SERVICIOS */
-    .section-container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
-    .section-title { text-align: center; font-size: 2.2rem; font-weight: 800; color: var(--verde-oscuro); margin-bottom: 10px; }
-    .section-subtitle { text-align: center; color: var(--texto-suave); font-weight: 600; margin-bottom: 45px; font-size: 1.05rem; }
+    .hero-img-box { text-align: center; }
+    .hero-img { width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); object-fit: cover; height: 420px; }
 
+    /* SECCIONES COMUNES */
+    .section-container { max-width: 1100px; margin: 70px auto; padding: 0 20px; }
+    .section-title { text-align: center; font-size: 2.2rem; font-weight: 900; color: var(--verde-corporativo); margin-bottom: 10px; text-transform: uppercase; }
+    .section-subtitle { text-align: center; color: var(--texto-suave); font-weight: 600; margin-bottom: 45px; font-size: 1.1rem; }
+
+    /* TARJETAS DE SERVICIOS */
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-    .service-card { background: var(--fondo-blanco); border: 2px solid var(--borde-suave); border-radius: 14px; padding: 30px; transition: all 0.3s ease; }
-    .service-card:hover { border-color: var(--verde-principal); box-shadow: 0 10px 25px rgba(10, 136, 67, 0.1); transform: translateY(-5px); }
+    .service-card { background: var(--blanco-puro); border: 1px solid #e5e7eb; border-radius: 10px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-top: 4px solid var(--verde-corporativo); }
     .service-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
-    .service-card h3 { color: var(--verde-oscuro); font-size: 1.25rem; font-weight: 800; margin-bottom: 10px; }
+    .service-card h3 { color: var(--verde-corporativo); font-size: 1.25rem; font-weight: 800; margin-bottom: 10px; }
     .service-card p { color: var(--texto-suave); font-size: 0.95rem; }
 
-    /* SECCIÓN PERFIL PROFESIONAL */
-    .perfil-card { background: var(--fondo-blanco); border: 2px solid var(--verde-principal); border-radius: 20px; padding: 40px; box-shadow: 0 10px 25px rgba(10, 136, 67, 0.08); display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; align-items: center; }
-    .perfil-list { list-style: none; color: var(--texto-suave); line-height: 2; margin-top: 15px; font-size: 0.95rem; }
-
-    /* SECCIÓN DE GALERÍA DE TRABAJOS */
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 30px; }
-    .gallery-card { background: var(--fondo-blanco); border: 2px solid var(--borde-suave); border-radius: 14px; overflow: hidden; transition: all 0.3s ease; }
-    .gallery-card:hover { border-color: var(--verde-principal); box-shadow: 0 10px 25px rgba(10, 136, 67, 0.12); transform: translateY(-4px); }
-    .gallery-img { width: 100%; height: 210px; object-fit: cover; display: block; }
-    .gallery-body { padding: 20px; }
-    .gallery-tag { display: inline-block; background: var(--fondo-suave); color: var(--verde-oscuro); font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; margin-bottom: 8px; border: 1px solid var(--verde-principal); }
-    .gallery-title { font-size: 1.1rem; font-weight: 800; color: var(--texto-oscuro); margin-bottom: 6px; }
-    .gallery-desc { font-size: 0.88rem; color: var(--texto-suave); }
-
     /* FORMULARIO */
-    .quote-box { background: var(--fondo-suave); border: 2px solid var(--verde-principal); border-radius: 20px; padding: 45px; margin-top: 60px; }
-    .quote-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: center; }
-    .input-field { width: 100%; padding: 14px; border-radius: 8px; border: 1px solid #cbd5e1; margin-bottom: 15px; font-family: inherit; font-size: 0.95rem; }
-    .input-field:focus { outline: none; border-color: var(--verde-principal); box-shadow: 0 0 0 3px rgba(10, 136, 67, 0.15); }
-    
-    /* BOTÓN FLOTANTE WHATSAPP */
-    .btn-whatsapp-float { position: fixed; bottom: 25px; right: 25px; background-color: #25D366; color: #ffffff; width: 62px; height: 62px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,0.25); z-index: 10000; text-decoration: none; transition: transform 0.2s; }
-    .btn-whatsapp-float:hover { transform: scale(1.08); }
+    .quote-box { background: var(--blanco-puro); border: 2px solid var(--verde-corporativo); border-radius: 12px; padding: 45px; margin-top: 60px; box-shadow: 0 10px 30px rgba(6, 95, 46, 0.08); }
+    .quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .input-field { width: 100%; padding: 15px; border-radius: 6px; border: 1px solid #cbd5e1; margin-bottom: 15px; font-family: inherit; font-size: 1rem; background: var(--blanco-frio); }
+    .input-field:focus { outline: none; border-color: var(--verde-corporativo); }
+    .btn-submit { width: 100%; background: var(--verde-corporativo); color: var(--blanco-puro); padding: 16px; border: none; border-radius: 6px; font-weight: 800; font-size: 1.05rem; cursor: pointer; text-transform: uppercase; }
+
+    /* WHATSAPP FLOTANTE */
+    .btn-whatsapp-float { position: fixed; bottom: 25px; right: 25px; background-color: var(--whatsapp); color: #ffffff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,0.25); z-index: 10000; transition: transform 0.2s; }
+    .btn-whatsapp-float:hover { transform: scale(1.1); }
 
     @media (max-width: 850px) {
-      .hero-container, .perfil-card, .quote-grid { grid-template-columns: 1fr; text-align: center; }
-      .hero h1 { font-size: 2.1rem; }
+      .hero-container, .quote-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero h1 { font-size: 2.2rem; }
       .hero-img-box { order: -1; }
-      .hero-img { height: 280px; }
+      .hero-img { height: 300px; }
       .nav-links { display: none; }
-      .cta-buttons { justify-content: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVEGACIÓN PRINCIPAL -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="../../index.html" class="logo">ÁGORA <span>DIGITAL</span></a>
       <ul class="nav-links">
-        <li><a href="../../index.html">Inicio</a></li>
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#perfil">Profesional</a></li>
-        <li><a href="#galeria">Trabajos</a></li>
-        <li><a href="#cotizar">Cotizar en Línea</a></li>
+        <li><a href="#cotizar">Contacto</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO SECTION INVERTIDO HACIA LA CONVERSIÓN -->
   <header class="hero">
     <div class="hero-container">
       <div>
-        <span class="badge-presupuesto">⚡ ¡Evaluación Técnica 100% Sin Costo!</span>
-        <h1>Servicios Eléctricos Profesionales & Certificaciones SEC</h1>
-        <p>Instalaciones, normalizaciones, aumento de capacidad y trámites de Certificación TE1 ante la SEC. Atención rápida para empresas y domicilios.</p>
-        <div class="cta-buttons">
-          <a href="https://wa.me/56999840502?text=Hola,%20quisiera%20solicitar%20una%20evaluaci%C3%B3n%20gratuita%20para%20un%20servicio%20el%C3%A9ctrico" class="btn-verde" target="_blank">Consultar por WhatsApp 💬</a>
-          <a href="#cotizar" class="btn-amarillo">Cotizar en Línea</a>
-        </div>
+        <h1>Servicios Eléctricos Profesionales</h1>
+        <h2>Instalaciones, reparaciones y mantenciones eléctricas.</h2>
+        <p>Atención profesional y evaluación técnica para su hogar o empresa.</p>
+        
+        <a href="https://wa.me/56999840502?text=Hola,%20necesito%20cotizar%20un%20servicio%20el%C3%A9ctrico" class="btn-cta-principal" target="_blank">
+          COTIZAR POR WHATSAPP 💬
+        </a>
+        
+        <br>
+        <span class="badge-presupuesto">⚡ Evaluación técnica sin costo</span>
       </div>
 
       <div class="hero-img-box">
-        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Instalador Eléctrico Autorizado SEC" class="hero-img">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Electricista Profesional" class="hero-img">
       </div>
     </div>
   </header>
 
   <!-- SERVICIOS -->
   <section class="section-container" id="servicios">
-    <h2 class="section-title">Nuestros Servicios Eléctricos</h2>
-    <p class="section-subtitle">Trabajos garantizados ejecutados por Instalador Autorizado SEC</p>
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <p class="section-subtitle">Soluciones técnicas ejecutadas por profesionales autorizados</p>
     
     <div class="services-grid">
       <article class="service-card">
         <span class="service-icon">📜</span>
         <h3>Certificación TE1 - SEC</h3>
-        <p>Declaración oficial de instalaciones de baja tensión ante la SEC. Indispensable para nuevos empalmes, patentes y venta de inmuebles.</p>
+        <p>Declaración oficial de instalaciones ante la SEC. Indispensable para nuevos empalmes y patentes.</p>
       </article>
 
       <article class="service-card">
         <span class="service-icon">🎛</span>
-        <h3>Tableros & Aumento de Capacidad</h3>
-        <p>Armado, ordenamiento y normalización de tableros eléctricos de alumbrado y fuerza. Tramitación de aumento de potencia.</p>
+        <h3>Tableros y Empalmes</h3>
+        <p>Armado, normalización de tableros eléctricos y tramitación de aumento de capacidad.</p>
       </article>
 
       <article class="service-card">
         <span class="service-icon">🔍</span>
-        <h3>Detección de Fallas & Fugas</h3>
-        <p>Diagnóstico de cortocircuitos, caídas del diferencial o automático principal. Reparación segura y rápida de emergencias.</p>
+        <h3>Reparación de Fallas</h3>
+        <p>Diagnóstico rápido de cortocircuitos y caídas de automático. Solución de emergencias.</p>
       </article>
 
       <article class="service-card">
         <span class="service-icon">🏠</span>
-        <h3>Proyectos & Recableados</h3>
-        <p>Instalación de mallas a tierra, cableados de casas, oficinas y locales comerciales conforme a norma NCh 4/2003 / RIC N°10.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- SECCIÓN NUEVA: PERFIL DEL INSTALADOR -->
-  <section class="section-container" id="perfil" style="margin-top: 0;">
-    <div class="perfil-card">
-      <div>
-        <span style="color: var(--verde-principal); font-weight: 800; font-size: 0.85rem; text-transform: uppercase;">Respaldo Profesional</span>
-        <h2 style="font-size: 2rem; color: var(--verde-oscuro); margin: 8px 0 5px 0;">Mario Labarca</h2>
-        <p style="color: var(--amarillo-electrico); font-weight: 800; background: #fff8e6; display: inline-block; padding: 4px 12px; border-radius: 6px; border: 1px solid var(--amarillo-brillante);">⚡ Instalador Autorizado SEC - Licencia Clase [B / C]</p>
-        
-        <ul class="perfil-list">
-          <li>🎓 <strong>Formación:</strong> [Ej: Técnico en Electricidad / INACAP]</li>
-          <li>📜 <strong>Registro SEC N°:</strong> [Ingresar número de Licencia SEC]</li>
-          <li>💡 <strong>Cursos y Certificaciones:</strong> [Ej: Normativa RIC SEC, Tableros Trifásicos, Mallas a Tierra]</li>
-          <li>🛡️ <strong>Garantía de Trabajo:</strong> Cumplimiento estricto de protocolos de seguridad y normativa vigente.</li>
-        </ul>
-      </div>
-
-      <div style="text-align: center;">
-        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3cb716f7?auto=format&fit=crop&w=400&q=80" alt="Instalador Autorizado" style="width: 100%; max-width: 250px; height: 250px; object-fit: cover; border-radius: 50%; border: 5px solid var(--verde-principal); box-shadow: 0 10px 25px rgba(10, 136, 67, 0.2);">
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN GALERÍA DE TRABAJOS -->
-  <section class="section-container" id="galeria" style="margin-top: 0;">
-    <h2 class="section-title">Trabajos y Proyectos Realizados</h2>
-    <p class="section-subtitle">Garantía de cumplimiento técnico y estándares normativos SEC</p>
-
-    <div class="gallery-grid">
-      <article class="gallery-card">
-        <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=600&q=80" alt="Armado y Normalización de Tableros Eléctricos" class="gallery-img">
-        <div class="gallery-body">
-          <span class="gallery-tag">Tableros & Fuerza</span>
-          <h3 class="gallery-title">Normalización de Tablero Trifásico</h3>
-          <p class="gallery-desc">Reestructuración completa, etiquetado de circuitos y cambio de protecciones diferenciales para local comercial.</p>
-        </div>
-      </article>
-
-      <article class="gallery-card">
-        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Inspección y Medición para Certificado TE1" class="gallery-img">
-        <div class="gallery-body">
-          <span class="gallery-tag">Aprobado SEC</span>
-          <h3 class="gallery-title">Tramitación y Certificado TE1</h3>
-          <p class="gallery-desc">Inspección técnica de aislamiento y resistencia a tierra previa a la declaración oficial ante la SEC.</p>
-        </div>
-      </article>
-
-      <article class="gallery-card">
-        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="Instalación de Iluminación y Malla a Tierra" class="gallery-img">
-        <div class="gallery-body">
-          <span class="gallery-tag">Proyectos Domiciliarios</span>
-          <h3 class="gallery-title">Recableado Integral e Iluminación LED</h3>
-          <p class="gallery-desc">Sustitución de cableado antiguo por conductores libres de halógeno e instalación de tableros de distribución.</p>
-        </div>
-      </article>
-
-      <article class="gallery-card">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Atención de Emergencias Eléctricas" class="gallery-img">
-        <div class="gallery-body">
-          <span class="gallery-tag">Urgencias 24/7</span>
-          <h3 class="gallery-title">Reparación de Cortocircuitos y Fugas</h3>
-          <p class="gallery-desc">Localización precisa de falla a tierra en líneas subterráneas y cambio de protecciones sobrecargadas.</p>
-        </div>
+        <h3>Instalaciones y Proyectos</h3>
+        <p>Recableados domiciliarios, mallas a tierra e iluminación para comercios y oficinas.</p>
       </article>
     </div>
 
-    <!-- FORMULARIO DE COTIZACIÓN -->
+    <!-- FORMULARIO DIRECTO -->
     <div class="quote-box" id="cotizar">
       <div class="quote-grid">
         <div>
-          <span style="color: var(--verde-principal); font-weight: 800; font-size: 0.9rem; text-transform: uppercase;">Atención Inmediata</span>
-          <h3 style="font-size: 2rem; color: var(--verde-oscuro); margin: 10px 0;">Cotice su Trabajo Eléctrico Sin Compromiso</h3>
-          <p style="color: var(--texto-suave); margin-bottom: 20px;">Complete sus datos y lo contactaremos a la brevedad para coordinar una evaluación en terreno totalmente gratuita.</p>
-          <p style="color: var(--texto-oscuro); font-weight: 700;">📍 Cobertura: Región Metropolitana y zonas cercanas.</p>
+          <h2 style="font-size: 2.2rem; color: var(--verde-corporativo); margin-bottom: 10px; text-transform: uppercase; font-weight: 900;">Cotiza Hoy</h2>
+          <p style="color: var(--texto-suave); margin-bottom: 20px; font-size: 1.1rem;">Déjanos tus datos y te contactaremos para agendar tu evaluación técnica gratuita.</p>
+          <p style="color: var(--texto-oscuro); font-weight: 700;">📍 Cobertura: Región Metropolitana.</p>
         </div>
 
         <form action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
-          <input type="hidden" name="from_name" value="Cotización Servicio Eléctrico">
-          <input type="hidden" name="subject" value="⚡ Nueva Solicitud de Cotización - Electricista">
+          <input type="hidden" name="subject" value="⚡ Nueva Cotización - Ágora Digital">
 
-          <input type="text" name="nombre" class="input-field" placeholder="Nombre completo *" required>
-          <input type="tel" name="telefono" class="input-field" placeholder="Teléfono de contacto (+569...) *" required>
-          <input type="text" name="comuna" class="input-field" placeholder="Comuna o Sector *" required>
+          <input type="text" name="nombre" class="input-field" placeholder="Nombre completo" required>
+          <input type="tel" name="telefono" class="input-field" placeholder="Teléfono celular" required>
+          <input type="text" name="comuna" class="input-field" placeholder="Comuna" required>
           
           <select name="servicio" class="input-field" required>
-            <option value="">Seleccione el trabajo a realizar *</option>
-            <option value="Certificación TE1 SEC">Certificación TE1 SEC</option>
-            <option value="Tableros / Aumento de Capacidad">Tableros / Aumento de Capacidad</option>
-            <option value="Reparación de Falla o Cortocircuito">Reparación de Falla o Cortocircuito</option>
-            <option value="Proyecto Nuevo / Recableado">Proyecto Nuevo / Recableado</option>
-            <option value="Otro">Otro trabajo eléctrico</option>
+            <option value="">¿Qué servicio necesitas?</option>
+            <option value="Certificación TE1 SEC">Certificación TE1</option>
+            <option value="Tableros y Empalmes">Tableros y Empalmes</option>
+            <option value="Reparación Urgente">Reparación de Falla</option>
+            <option value="Proyectos e Instalación">Proyectos e Instalaciones</option>
           </select>
 
-          <button type="submit" class="btn-verde" style="width: 100%;">Enviar Solicitud Gratis →</button>
+          <button type="submit" class="btn-submit">ENVIAR SOLICITUD</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a href="https://wa.me/56999840502?text=Hola,%20necesito%20una%20evaluaci%C3%B3n%20gratuita%20para%20un%20servicio%20el%C3%A9ctrico" class="btn-whatsapp-float" target="_blank" rel="noopener noreferrer" title="Escribir por WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#ffffff" viewBox="0 0 24 24">
-      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.705 1.754zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.285-.143-1.687-.833-1.947-.928-.26-.095-.45-.143-.64.143-.19.285-.736.928-.902 1.118-.166.19-.333.214-.618.071-1.638-.82-2.718-1.462-3.804-3.328-.288-.495.288-.459.825-1.533.095-.19.048-.356-.024-.499-.071-.143-.64-1.543-.877-2.11-.23-.553-.464-.477-.64-.486l-.547-.01c-.19 0-.499.071-.76.356-.26.285-.998.975-.998 2.38 0 1.404 1.022 2.759 1.164 2.95.143.19 2.012 3.073 4.876 4.31.681.294 1.213.47 1.626.601.684.217 1.307.186 1.8.113.55-.082 1.687-.69 1.925-1.356.237-.666.237-1.237.166-1.356-.07-.118-.26-.19-.545-.333z"/>
-    </svg>
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/56999840502?text=Hola,%20necesito%20coordinar%20una%20evaluaci%C3%B3n%20t%C3%A9cnica" class="btn-whatsapp-float" target="_blank" title="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#ffffff" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.705 1.754zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.285-.143-1.687-.833-1.947-.928-.26-.095-.45-.143-.64.143-.19.285-.736.928-.902 1.118-.166.19-.333.214-.618.071-1.638-.82-2.718-1.462-3.804-3.328-.288-.495.288-.459.825-1.533.095-.19.048-.356-.024-.499-.071-.143-.64-1.543-.877-2.11-.23-.553-.464-.477-.64-.486l-.547-.01c-.19 0-.499.071-.76.356-.26.285-.998.975-.998 2.38 0 1.404 1.022 2.759 1.164 2.95.143.19 2.012 3.073 4.876 4.31.681.294 1.213.47 1.626.601.684.217 1.307.186 1.8.113.55-.082 1.687-.69 1.925-1.356.237-.666.237-1.237.166-1.356-.07-.118-.26-.19-.545-.333z"/></svg>
   </a>
 
 </body>
