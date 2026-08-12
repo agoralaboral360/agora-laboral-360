@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Cronograma Ley Karin | Ágora Laboral 360°</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --morado-corporativo: #382341;
+      --morado-oscuro: #23122c;
+      --verde-menta: #a2e8dd;
+      --verde-menta-hover: #8edbc0;
+      --texto-btn-menta: #2b1736;
+      --fondo-suave: #f8f9fa;
+      --blanco-puro: #ffffff;
+      --texto-oscuro: #111827;
+      --texto-suave: #4b5563;
+      --borde-suave: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+    body { background-color: var(--fondo-suave); color: var(--texto-oscuro); line-height: 1.6; padding-bottom: 50px; }
+
+    /* NAVEGACIÓN */
+    .navbar { background: var(--blanco-puro); border-bottom: 1px solid var(--borde-suave); padding: 15px 20px; text-align: center; }
+    .logo { font-size: 1.3rem; font-weight: 900; color: var(--morado-corporativo); text-decoration: none; text-transform: uppercase; }
+    .logo span { color: var(--blanco-puro); background: var(--morado-corporativo); padding: 3px 8px; border-radius: 4px; margin-left: 5px; font-size: 0.8rem; }
+
+    /* CONTENEDOR PRINCIPAL */
+    .tool-container { max-width: 650px; margin: 50px auto 0; background: var(--blanco-puro); border-radius: 12px; padding: 40px; box-shadow: 0 10px 30px rgba(56, 35, 65, 0.08); border-top: 5px solid var(--morado-corporativo); }
+    
+    .tool-title { font-size: 1.8rem; color: var(--morado-corporativo); font-weight: 900; margin-bottom: 10px; text-align: center; }
+    .tool-desc { color: var(--texto-suave); margin-bottom: 30px; font-size: 0.95rem; text-align: center; }
+
+    /* FORMULARIO INICIAL */
+    .input-group { text-align: left; margin-bottom: 25px; }
+    .input-group label { display: block; font-weight: 700; margin-bottom: 8px; color: var(--morado-corporativo); }
+    .date-input { width: 100%; padding: 14px; border: 2px solid var(--borde-suave); border-radius: 8px; font-size: 1rem; color: var(--texto-oscuro); outline: none; transition: border-color 0.2s; }
+    .date-input:focus { border-color: var(--verde-menta); }
+
+    .btn-action { background: var(--morado-corporativo); color: var(--blanco-puro); width: 100%; padding: 16px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 800; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+    .btn-action:hover { background: var(--morado-oscuro); }
+
+    /* LÍNEA DE TIEMPO DE RESULTADOS */
+    #resultado-box { display: none; margin-top: 35px; }
+    .timeline { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
+    
+    .timeline-step { background: #fdfdfd; border: 1px solid var(--borde-suave); border-left: 4px solid var(--morado-corporativo); padding: 15px 18px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+    .step-info strong { display: block; color: var(--morado-corporativo); font-size: 0.95rem; }
+    .step-info span { font-size: 0.85rem; color: var(--texto-suave); }
+    .step-date { background: #f3f0f5; color: var(--morado-corporativo); font-weight: 800; font-size: 0.85rem; padding: 6px 12px; border-radius: 6px; white-space: nowrap; }
+
+    .btn-modal { background: var(--verde-menta); color: var(--texto-btn-menta); width: 100%; padding: 16px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 800; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+    .btn-modal:hover { background: var(--verde-menta-hover); }
+
+    /* MODAL (VENTANA EMERGENTE) */
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; align-items: center; justify-content: center; }
+    .modal-content { background: var(--blanco-puro); padding: 40px; border-radius: 12px; max-width: 450px; width: 90%; position: relative; }
+    .close-modal { position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer; color: var(--texto-suave); border: none; background: none; }
+    
+    .modal-title { color: var(--morado-corporativo); font-weight: 800; margin-bottom: 10px; font-size: 1.3rem; }
+    .modal-input { width: 100%; padding: 12px; border: 1px solid var(--borde-suave); border-radius: 6px; margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">ÁGORA <span>LABORAL 360°</span></a>
+  </nav>
+
+  <div class="tool-container">
+    <h1 class="tool-title">Generador de Cronograma</h1>
+    <p class="tool-desc">Esquematice las 8 etapas clave del expediente de investigación interna dentro del plazo legal de 30 días fijado por la Ley Karin.</p>
+
+    <div class="input-group">
+      <label for="fecha-inicio">Seleccione la fecha de recepción de la denuncia:</label>
+      <input type="date" id="fecha-inicio" class="date-input">
+    </div>
+
+    <button class="btn-action" onclick="generarCronograma()">Generar Cronograma de Trabajo</button>
+
+    <!-- RESULTADO ESQUEMÁTICO DE LAS 8 ETAPAS -->
+    <div id="resultado-box">
+      <h3 style="color: var(--morado-corporativo); font-size: 1.1rem; margin-bottom: 20px; text-align: center;">Cronograma Sugerido de Investigación:</h3>
+      
+      <div class="timeline" id="timeline-container">
+        <!-- Las etapas se cargan dinámicamente con JS -->
+      </div>
+
+      <button class="btn-modal" onclick="abrirModal()">Descargar Cronograma Editable (Word / Excel) 📄</button>
+    </div>
+  </div>
+
+  <!-- MODAL DE CAPTURA DE LEADS -->
+  <div class="modal-overlay" id="leadModal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="cerrarModal()">×</button>
+      <h3 class="modal-title">Obtenga la Plantilla Editable</h3>
+      <p style="font-size: 0.9rem; color: var(--texto-suave); margin-bottom: 20px;">Le enviaremos a su correo la matriz en formato editable para incluir este expediente en las carpetas de investigación de su empresa.</p>
+      
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
+        <input type="hidden" name="subject" value="📅 Solicitud: Cronograma de Expediente (Herramienta)">
+
+        <input type="text" name="nombre" class="modal-input" placeholder="Nombre completo" required>
+        <input type="text" name="empresa" class="modal-input" placeholder="Empresa / Organización" required>
+        <input type="email" name="email" class="modal-input" placeholder="Correo electrónico corporativo" required>
+        
+        <button type="submit" class="btn-action" style="background: var(--verde-menta); color: var(--texto-btn-menta);">Enviar a mi correo</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- LÓGICA JAVASCRIPT -->
+  <script>
+    function calcularFecha(fechaBase, dias) {
+      const nuevaFecha = new Date(fechaBase);
+      nuevaFecha.setDate(nuevaFecha.getDate() + dias);
+      const opciones = { day: '2-digit', month: 'short' };
+      return nuevaFecha.toLocaleDateString('es-CL', opciones);
+    }
+
+    function generarCronograma() {
+      const input = document.getElementById('fecha-inicio').value;
+      if (!input) {
+        alert("Por favor, seleccione la fecha de inicio.");
+        return;
+      }
+
+      const inicio = new Date(input);
+      
+      const etapas = [
+        { titulo: "Etapa 1: Recepción y Medidas de Resguardo", desc: "Acta formal y adopción inmediata de resguardos.", dias: 0 },
+        { titulo: "Etapa 2: Derivación e Informes Iniciales", desc: "Derivación a Mutualidad (APT) y notificación DT.", dias: 2 },
+        { titulo: "Etapa 3: Notificación a las Partes", desc: "Entrega de citaciones a denunciante y denunciado/a.", dias: 4 },
+        { titulo: "Etapa 4: Entrevistas Indagatorias", desc: "Toma de declaraciones a las partes y testigos.", dias: 10 },
+        { titulo: "Etapa 5: Cierre Indagatorio y Descargos", desc: "Traslado de la información y recepción de descargos.", dias: 18 },
+        { titulo: "Etapa 6: Ponderación y Análisis de Prueba", desc: "Análisis técnico de la evidencia recibida.", dias: 22 },
+        { titulo: "Etapa 7: Redacción de Informe Final", desc: "Conclusiones y propuesta de medidas disciplinarias.", dias: 26 },
+        { titulo: "Etapa 8: Cierre y Remisión a la DT", desc: "Notificación de resolución y envío a la Dirección del Trabajo.", dias: 30 }
+      ];
+
+      const container = document.getElementById('timeline-container');
+      container.innerHTML = '';
+
+      etapas.forEach(item => {
+        const fechaCalculada = calcularFecha(inicio, item.dias);
+        const html = `
+          <div class="timeline-step">
+            <div class="step-info">
+              <strong>${item.titulo}</strong>
+              <span>${item.desc}</span>
+            </div>
+            <div class="step-date">${fechaCalculada}</div>
+          </div>
+        `;
+        container.innerHTML += html;
+      });
+
+      document.getElementById('resultado-box').style.display = 'block';
+    }
+
+    function abrirModal() {
+      document.getElementById('leadModal').style.display = 'flex';
+    }
+    function cerrarModal() {
+      document.getElementById('leadModal').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
