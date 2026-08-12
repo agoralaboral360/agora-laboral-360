@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de Riesgo Ley Karin | Ágora Laboral 360°</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --morado-corporativo: #382341;
+      --morado-oscuro: #23122c;
+      --verde-menta: #a2e8dd;
+      --verde-menta-hover: #8edbc0;
+      --texto-btn-menta: #2b1736;
+      --fondo-suave: #f8f9fa;
+      --blanco-puro: #ffffff;
+      --texto-oscuro: #111827;
+      --texto-suave: #4b5563;
+      --borde-suave: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+    body { background-color: var(--fondo-suave); color: var(--texto-oscuro); line-height: 1.6; padding-bottom: 50px; }
+
+    /* NAVEGACIÓN */
+    .navbar { background: var(--blanco-puro); border-bottom: 1px solid var(--borde-suave); padding: 15px 20px; text-align: center; }
+    .logo { font-size: 1.3rem; font-weight: 900; color: var(--morado-corporativo); text-decoration: none; text-transform: uppercase; }
+    .logo span { color: var(--blanco-puro); background: var(--morado-corporativo); padding: 3px 8px; border-radius: 4px; margin-left: 5px; font-size: 0.8rem; }
+
+    /* CONTENEDOR PRINCIPAL */
+    .tool-container { max-width: 650px; margin: 50px auto 0; background: var(--blanco-puro); border-radius: 12px; padding: 40px; box-shadow: 0 10px 30px rgba(56, 35, 65, 0.08); border-top: 5px solid var(--morado-corporativo); }
+    
+    .tool-title { font-size: 1.8rem; color: var(--morado-corporativo); font-weight: 900; margin-bottom: 10px; text-align: center; }
+    .tool-desc { color: var(--texto-suave); margin-bottom: 30px; font-size: 0.95rem; text-align: center; }
+
+    /* FORMULARIO CUESTIONARIO */
+    .question-box { margin-bottom: 22px; text-align: left; }
+    .question-label { display: block; font-weight: 700; color: var(--morado-corporativo); font-size: 0.95rem; margin-bottom: 8px; }
+    .select-input { width: 100%; padding: 12px 15px; border: 2px solid var(--borde-suave); border-radius: 8px; font-size: 0.95rem; color: var(--texto-oscuro); background: #ffffff; outline: none; transition: border-color 0.2s; }
+    .select-input:focus { border-color: var(--verde-menta); }
+
+    .btn-action { background: var(--morado-corporativo); color: var(--blanco-puro); width: 100%; padding: 16px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 800; text-transform: uppercase; cursor: pointer; transition: background 0.2s; margin-top: 10px; }
+    .btn-action:hover { background: var(--morado-oscuro); }
+
+    /* RESULTADO DE LA MATRIZ */
+    #resultado-box { display: none; margin-top: 35px; padding: 25px; border-radius: 10px; text-align: center; }
+    .result-badge { display: inline-block; font-size: 1.4rem; font-weight: 900; padding: 8px 20px; border-radius: 50px; text-transform: uppercase; margin: 10px 0 15px; }
+    .result-desc { font-size: 0.95rem; font-weight: 600; margin-bottom: 20px; }
+
+    .btn-modal { background: var(--verde-menta); color: var(--texto-btn-menta); width: 100%; padding: 16px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 800; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+    .btn-modal:hover { background: var(--verde-menta-hover); }
+
+    /* MODAL (VENTANA EMERGENTE) */
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; align-items: center; justify-content: center; }
+    .modal-content { background: var(--blanco-puro); padding: 40px; border-radius: 12px; max-width: 450px; width: 90%; position: relative; }
+    .close-modal { position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer; color: var(--texto-suave); border: none; background: none; }
+    
+    .modal-title { color: var(--morado-corporativo); font-weight: 800; margin-bottom: 10px; font-size: 1.3rem; }
+    .modal-input { width: 100%; padding: 12px; border: 1px solid var(--borde-suave); border-radius: 6px; margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">ÁGORA <span>LABORAL 360°</span></a>
+  </nav>
+
+  <div class="tool-container">
+    <h1 class="tool-title">Evaluación de Riesgo de Denuncia</h1>
+    <p class="tool-desc">Matriz rápida para determinar la severidad del caso y si la organización debe adoptar medidas inmediatas de separación de espacios o funciones.</p>
+
+    <!-- PREGUNTAS CLAVE -->
+    <div class="question-box">
+      <label class="question-label">1. ¿Existe relación de jerarquía o dependencia directa entre las partes?</label>
+      <select id="p1" class="select-input">
+        <option value="0">No, son pares o de distintas áreas sin subordinación</option>
+        <option value="2">Sí, existe jerarquía directa o poder de decisión sobre el denunciante</option>
+      </select>
+    </div>
+
+    <div class="question-box">
+      <label class="question-label">2. ¿Los hechos denunciados involucran agresión física, acoso sexual explícito o amenazas?</label>
+      <select id="p2" class="select-input">
+        <option value="0">No, corresponden a conductas verbales o desacuerdos laborales</option>
+        <option value="3">Sí, involucran conductas de alta gravedad o vulneración física/psicológica</option>
+      </select>
+    </div>
+
+    <div class="question-box">
+      <label class="question-label">3. ¿Existe contacto o interacción diaria obligatoria en la jornada de trabajo?</label>
+      <select id="p3" class="select-input">
+        <option value="0">No, trabajan en turnos, sedes o modalidades distintas</option>
+        <option value="2">Sí, comparten el mismo espacio físico o equipo directo de trabajo</option>
+      </select>
+    </div>
+
+    <div class="question-box">
+      <label class="question-label">4. ¿Existen antecedentes previos o reiteración de la conducta denunciada?</label>
+      <select id="p4" class="select-input">
+        <option value="0">Es un hecho aislado o sin antecedentes previos registrados</option>
+        <option value="2">Existen antecedentes previos o denuncias de otros trabajadores</option>
+      </select>
+    </div>
+
+    <button class="btn-action" onclick="evaluarRiesgo()">Ponderar Nivel de Riesgo</button>
+
+    <!-- RESULTADO -->
+    <div id="resultado-box">
+      <span style="font-weight: 700; color: var(--texto-suave); display: block;">Diagnóstico Preliminar de Resguardo:</span>
+      <div id="result-badge" class="result-badge">--</div>
+      <p id="result-desc" class="result-desc">--</p>
+
+      <button class="btn-modal" onclick="abrirModal()">Descargar Acta de Medidas de Resguardo (Word) 🛡️</button>
+    </div>
+  </div>
+
+  <!-- MODAL DE CAPTURA DE LEADS -->
+  <div class="modal-overlay" id="leadModal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="cerrarModal()">×</button>
+      <h3 class="modal-title">Descargar Formato de Medidas</h3>
+      <p style="font-size: 0.9rem; color: var(--texto-suave); margin-bottom: 20px;">Reciba en su correo el <strong>Instrumento II: Acta de Adopción de Medidas de Resguardo Inmediatas</strong> en formato Word 100% editable.</p>
+      
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
+        <input type="hidden" name="subject" value="🛡️ Solicitud: Acta de Medidas de Resguardo (Evaluación)">
+
+        <input type="text" name="nombre" class="modal-input" placeholder="Nombre completo" required>
+        <input type="text" name="empresa" class="modal-input" placeholder="Empresa / Organización" required>
+        <input type="email" name="email" class="modal-input" placeholder="Correo electrónico corporativo" required>
+        
+        <button type="submit" class="btn-action" style="background: var(--verde-menta); color: var(--texto-btn-menta);">Enviar a mi correo</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- LÓGICA JAVASCRIPT -->
+  <script>
+    function evaluarRiesgo() {
+      const v1 = parseInt(document.getElementById('p1').value);
+      const v2 = parseInt(document.getElementById('p2').value);
+      const v3 = parseInt(document.getElementById('p3').value);
+      const v4 = parseInt(document.getElementById('p4').value);
+
+      const puntaje = v1 + v2 + v3 + v4;
+
+      const box = document.getElementById('resultado-box');
+      const badge = document.getElementById('result-badge');
+      const desc = document.getElementById('result-desc');
+
+      box.style.display = 'block';
+
+      if (puntaje >= 5) {
+        box.style.backgroundColor = '#fef2f2';
+        box.style.border = '2px solid #ef4444';
+        badge.style.backgroundColor = '#ef4444';
+        badge.style.color = '#ffffff';
+        badge.innerText = 'RIESGO ALTO';
+        desc.style.color = '#991b1b';
+        desc.innerText = 'Se exige la adopción INMEDIATA de medidas de resguardo (separación física de espacios, cambio de turno o redistribución de funciones) antes de iniciar las entrevistas.';
+      } else if (puntaje >= 3) {
+        box.style.backgroundColor = '#fffbeb';
+        box.style.border = '2px solid #f59e0b';
+        badge.style.backgroundColor = '#f59e0b';
+        badge.style.color = '#ffffff';
+        badge.innerText = 'RIESGO MEDIO';
+        desc.style.color = '#92400e';
+        desc.innerText = 'Se aconseja adoptar medidas de resguardo preventivas (p. ej., restringir supervisión directa o reuniones a solas) mientras se desarrolla la investigación.';
+      } else {
+        box.style.backgroundColor = '#e8f9f6';
+        box.style.border = '2px solid var(--verde-menta)';
+        badge.style.backgroundColor = '#10b981';
+        badge.style.color = '#ffffff';
+        badge.innerText = 'RIESGO BAJO';
+        desc.style.color = '#065f46';
+        desc.innerText = 'No se aprecian factores críticos de riesgo inmediato. Se puede proseguir con la citación formal a entrevistas sin alterar las funciones habituales.';
+      }
+    }
+
+    function abrirModal() {
+      document.getElementById('leadModal').style.display = 'flex';
+    }
+    function cerrarModal() {
+      document.getElementById('leadModal').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
