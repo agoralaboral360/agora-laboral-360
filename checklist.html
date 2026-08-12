@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist de Cumplimiento Ley Karin | Ágora Laboral 360°</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --morado-corporativo: #382341;
+      --morado-oscuro: #23122c;
+      --verde-menta: #a2e8dd;
+      --texto-btn-menta: #2b1736;
+      --fondo-suave: #f8f9fa;
+      --blanco-puro: #ffffff;
+      --texto-oscuro: #111827;
+      --texto-suave: #4b5563;
+      --borde-suave: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+    body { background-color: var(--fondo-suave); color: var(--texto-oscuro); line-height: 1.6; padding-bottom: 50px; }
+
+    /* NAVEGACIÓN */
+    .navbar { background: var(--blanco-puro); border-bottom: 1px solid var(--borde-suave); padding: 15px 20px; text-align: center; }
+    .logo { font-size: 1.3rem; font-weight: 900; color: var(--morado-corporativo); text-decoration: none; text-transform: uppercase; }
+    .logo span { color: var(--blanco-puro); background: var(--morado-corporativo); padding: 3px 8px; border-radius: 4px; margin-left: 5px; font-size: 0.8rem; }
+
+    /* CONTENEDOR PRINCIPAL */
+    .tool-container { max-width: 650px; margin: 50px auto 0; background: var(--blanco-puro); border-radius: 12px; padding: 40px; box-shadow: 0 10px 30px rgba(56, 35, 65, 0.08); border-top: 5px solid var(--morado-corporativo); }
+    
+    .tool-title { font-size: 1.8rem; color: var(--morado-corporativo); font-weight: 900; margin-bottom: 10px; text-align: center; }
+    .tool-desc { color: var(--texto-suave); margin-bottom: 30px; font-size: 0.95rem; text-align: center; }
+
+    /* LISTA DE CHECKBOXES */
+    .check-list { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
+    
+    .check-item { display: flex; align-items: flex-start; gap: 12px; background: #fdfdfd; border: 1px solid var(--borde-suave); padding: 15px; border-radius: 8px; cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+    .check-item:hover { background: #f4f6f8; border-color: #d1d5db; }
+    .check-item.active { background: #e8f9f6; border-color: var(--verde-menta); }
+    
+    .check-input { width: 22px; height: 22px; cursor: pointer; margin-top: 2px; accent-color: var(--morado-corporativo); }
+    .check-text { font-size: 0.95rem; font-weight: 600; color: var(--texto-oscuro); }
+
+    .btn-action { background: var(--morado-corporativo); color: var(--blanco-puro); width: 100%; padding: 16px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 800; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+    .btn-action:hover { background: var(--morado-oscuro); }
+
+    /* RESULTADO */
+    #resultado-box { display: none; margin-top: 30px; padding: 25px; border-radius: 8px; text-align: center; }
+    .result-score { font-size: 3rem; font-weight: 900; margin: 10px 0; }
+    .result-msg { font-size: 1rem; font-weight: 600; margin-bottom: 20px; }
+
+    .btn-modal { background: var(--verde-menta); color: var(--texto-btn-menta); width: 100%; padding: 15px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 800; text-transform: uppercase; cursor: pointer; }
+
+    /* MODAL */
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; align-items: center; justify-content: center; }
+    .modal-content { background: var(--blanco-puro); padding: 40px; border-radius: 12px; max-width: 450px; width: 90%; position: relative; }
+    .close-modal { position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer; color: var(--texto-suave); border: none; background: none; }
+    
+    .modal-title { color: var(--morado-corporativo); font-weight: 800; margin-bottom: 10px; font-size: 1.3rem; }
+    .modal-input { width: 100%; padding: 12px; border: 1px solid var(--borde-suave); border-radius: 6px; margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">ÁGORA <span>LABORAL 360°</span></a>
+  </nav>
+
+  <div class="tool-container">
+    <h1 class="tool-title">Checklist de Cumplimiento</h1>
+    <p class="tool-desc">Evalúe interactivamente si su empresa cumple con las obligaciones preventivas y procedimentales exigidas por la Ley Karin y la Dirección del Trabajo.</p>
+
+    <div class="check-list" id="formulario-checklist">
+      
+      <label class="check-item">
+        <input type="checkbox" class="check-input" value="1">
+        <span class="check-text">1. ¿El Reglamento Interno (RIOHS) está actualizado e incluye el Protocolo de Prevención de la Ley Karin?</span>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check-input" value="1">
+        <span class="check-text">2. ¿Se ha implementado un canal formal, seguro y confidencial para recibir denuncias?</span>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check-input" value="1">
+        <span class="check-text">3. ¿Se realizó difusión y capacitación a los trabajadores sobre los nuevos conceptos de Acoso y Violencia?</span>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check-input" value="1">
+        <span class="check-text">4. ¿Existe un procedimiento escrito para adoptar Medidas de Resguardo Inmediatas en caso de denuncia?</span>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check-input" value="1">
+        <span class="check-text">5. ¿La empresa cuenta con matrices de evaluación de riesgo psicosocial actualizadas (Ej. CEAL-SM)?</span>
+      </label>
+
+    </div>
+
+    <button class="btn-action" onclick="evaluarCumplimiento()">Ver mi Nivel de Cumplimiento</button>
+
+    <div id="resultado-box">
+      <p style="font-weight: 700; color: var(--texto-suave);">Nivel de Cumplimiento Normativo:</p>
+      <div class="result-score" id="score-text">0%</div>
+      <p class="result-msg" id="msg-text">--</p>
+      
+      <button class="btn-modal" onclick="abrirModal()">Solicitar Asesoría de Brechas 📈</button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="leadModal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="cerrarModal()">×</button>
+      <h3 class="modal-title">¿Necesita ayuda para alcanzar el 100%?</h3>
+      <p style="font-size: 0.9rem; color: var(--texto-suave); margin-bottom: 20px;">Deje sus datos y un consultor de Ágora Laboral 360° lo contactará para orientarlo sobre cómo cerrar estas brechas legales sin riesgo de multas.</p>
+      
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
+        <input type="hidden" name="subject" value="⚠️ Solicitud de Asesoría: Checklist Ley Karin">
+
+        <input type="text" name="nombre" class="modal-input" placeholder="Nombre completo" required>
+        <input type="text" name="empresa" class="modal-input" placeholder="Empresa / Organización" required>
+        <input type="email" name="email" class="modal-input" placeholder="Correo electrónico corporativo" required>
+        
+        <button type="submit" class="btn-action" style="background: var(--verde-menta); color: var(--texto-btn-menta);">Solicitar Contacto</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const checkItems = document.querySelectorAll('.check-input');
+    checkItems.forEach(input => {
+      input.addEventListener('change', function() {
+        if(this.checked) {
+          this.parentElement.classList.add('active');
+        } else {
+          this.parentElement.classList.remove('active');
+        }
+      });
+    });
+
+    function evaluarCumplimiento() {
+      const totalPreguntas = 5;
+      const marcadas = document.querySelectorAll('.check-input:checked').length;
+      const porcentaje = (marcadas / totalPreguntas) * 100;
+      
+      const resultBox = document.getElementById('resultado-box');
+      const scoreText = document.getElementById('score-text');
+      const msgText = document.getElementById('msg-text');
+      const btnModal = document.querySelector('.btn-modal');
+
+      scoreText.innerText = porcentaje + '%';
+      resultBox.style.display = 'block';
+
+      if (porcentaje === 100) {
+        resultBox.style.backgroundColor = '#e8f9f6';
+        resultBox.style.border = '2px solid var(--verde-menta)';
+        scoreText.style.color = '#059669';
+        msgText.style.color = '#059669';
+        msgText.innerText = "¡Excelente! Su empresa cumple con los pilares preventivos.";
+        btnModal.innerText = "Potenciar con la Biblioteca Profesional 🔓";
+      } else if (porcentaje >= 60) {
+        resultBox.style.backgroundColor = '#fffbeb';
+        resultBox.style.border = '2px solid #f59e0b';
+        scoreText.style.color = '#d97706';
+        msgText.style.color = '#d97706';
+        msgText.innerText = "Cumplimiento Parcial. Aún existen brechas que pueden generar multas.";
+        btnModal.innerText = "Solicitar Asesoría para Cierre de Brechas 📈";
+      } else {
+        resultBox.style.backgroundColor = '#fef2f2';
+        resultBox.style.border = '2px solid #ef4444';
+        scoreText.style.color = '#dc2626';
+        msgText.style.color = '#dc2626';
+        msgText.innerText = "Riesgo Crítico. Su empresa está expuesta a multas e indemnizaciones inmediatas.";
+        btnModal.innerText = "Solicitar Contacto de Urgencia 🚨";
+      }
+    }
+
+    function abrirModal() {
+      document.getElementById('leadModal').style.display = 'flex';
+    }
+    function cerrarModal() {
+      document.getElementById('leadModal').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
