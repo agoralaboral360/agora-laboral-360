@@ -497,49 +497,92 @@
   </section>
 
     <!-- 9. CONTACTO Y PRESENTACIÓN -->
-    <section class="section container" id="contacto">
-      <div class="contact-grid">
-        <div class="contact-form">
-          <h2 class="section-title" style="font-size: 1.7rem; text-align: left; margin-bottom: 25px;">Solicite una Reunión Técnica</h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <!-- Pega tu clave de Web3Forms en value -->
-            <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
-            
-            <input type="hidden" name="from_name" value="Sitio Web Ágora Laboral 360°">
-            <input type="hidden" name="subject" value="Nueva Solicitud de Reunión Técnica - Ley Karin">
-            <input type="hidden" name="redirect" value="https://agoralaboral.cl">
+ <!-- SECCIÓN CONTACTO COMPLETA Y EQUILIBRADA -->
+<section id="contacto" style="max-width: 1200px; margin: 60px auto; padding: 0 20px; font-family: 'Montserrat', sans-serif;">
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: start;">
+    
+    <!-- COLUMNA IZQUIERDA: FORMULARIO -->
+    <div style="background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(56, 35, 65, 0.05); border: 1px solid #e5e7eb;">
+      <h2 style="font-size: 1.8rem; color: #382341; font-weight: 900; margin-bottom: 25px;">Solicite una Reunión Técnica</h2>
+      
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
+        <input type="hidden" name="subject" value="📅 Solicitud de Reunión Técnica - Ágora Laboral 360°">
 
-            <div class="form-group">
-              <label>Nombre Completo</label>
-              <input type="text" name="nombre" placeholder="Ej: Camila González" required>
-            </div>
-            <div class="form-group">
-              <label>Cargo / Institución</label>
-              <input type="text" name="cargo" placeholder="Ej: Gerenta de Personas / Fiscal" required>
-            </div>
-            <div class="form-group">
-              <label>Correo Institucional</label>
-              <input type="email" name="email" placeholder="nombre@empresa.cl" required>
-            </div>
-            <div class="form-group">
-              <label>Mensaje o Requerimiento</label>
-              <textarea name="mensaje" rows="3" placeholder="Indíquenos brevemente cómo podemos apoyar a su organización..." required></textarea>
-            </div>
-            <button type="submit" class="btn-agora btn-agora-morado" style="width: 100%; font-size: 1rem;">📅 Agendar Reunión Técnica</button>
-          </form>
+        <div style="margin-bottom: 18px;">
+          <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #382341; margin-bottom: 6px;">Nombre Completo *</label>
+          <input type="text" name="nombre" placeholder="Ej: Camila González" required style="width: 100%; padding: 12px; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 0.95rem; outline: none;">
+        </div>
 
-        <div>
-          <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">¿Quiénes somos?</h2>
-          <p style="color: var(--texto-suave); margin-bottom: 20px;">
-            Somos un equipo interdisciplinario que une la gestión de personas, la psicología organizacional y la asesoría técnica laboral pericial para promover el buen trato y la equidad en el mundo del trabajo.
-          </p>
-          <div style="background: var(--blanco); padding: 25px; border-radius: 8px; border-left: 4px solid var(--morado-principal); box-shadow: 0 2px 10px rgba(0,0,0,0.03); margin-bottom: 25px;">
-            <p style="margin-bottom: 10px;"><strong>📧 Correo:</strong> contacto@agoralaboral.cl</p>
-            <p><strong>📍 Ubicación:</strong> Santiago, Chile (Atención nacional)</p>
+        <div style="margin-bottom: 18px;">
+          <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #382341; margin-bottom: 6px;">Cargo / Institución *</label>
+          <input type="text" name="cargo" placeholder="Ej: Gerenta de Personas / Fiscal" required style="width: 100%; padding: 12px; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 0.95rem; outline: none;">
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #382341; margin-bottom: 6px;">Correo Institucional *</label>
+          <input type="email" name="email" placeholder="nombre@empresa.cl" required style="width: 100%; padding: 12px; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 0.95rem; outline: none;">
+        </div>
+
+        <div style="margin-bottom: 22px;">
+          <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #382341; margin-bottom: 6px;">Mensaje o Requerimiento *</label>
+          <textarea name="mensaje" rows="4" placeholder="Indíquenos brevemente cómo podemos apoyar a su organización..." required style="width: 100%; padding: 12px; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 0.95rem; font-family: inherit; resize: vertical; outline: none;"></textarea>
+        </div>
+
+        <button type="submit" style="width: 100%; background: #a2e8dd; color: #2b1736; border: none; padding: 16px; border-radius: 6px; font-weight: 900; font-size: 1rem; cursor: pointer; text-transform: uppercase;">Agendar Sesión Técnica →</button>
+      </form>
+    </div>
+
+    <!-- COLUMNA DERECHA: CANALES DIRECTOS Y CONFIDENCIALIDAD -->
+    <div style="display: flex; flex-direction: column; gap: 25px;">
+      
+      <!-- CANALES DIRECTOS -->
+      <div style="background: #382341; color: #ffffff; padding: 35px; border-radius: 12px; box-shadow: 0 10px 30px rgba(56, 35, 65, 0.15);">
+        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 15px; color: #a2e8dd;">Atención Directa</h3>
+        <p style="font-size: 0.92rem; color: #e5e7eb; margin-bottom: 25px; line-height: 1.5;">Si requiere asesoría inmediata ante una denuncia en curso o consultas técnicas sobre la Ley Karin, comuníquese directamente:</p>
+
+        <div style="display: flex; flex-direction: column; gap: 18px; font-size: 0.95rem;">
+          <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <span style="font-size: 1.2rem;">✉️</span>
+            <div>
+              <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; color: #a2e8dd; letter-spacing: 0.5px;">Correo Corporativo</strong>
+              <a href="mailto:contacto@agoralaboral.cl" style="color: #ffffff; text-decoration: none; font-weight: 600;">contacto@agoralaboral.cl</a>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <span style="font-size: 1.2rem;">💬</span>
+            <div>
+              <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; color: #a2e8dd; letter-spacing: 0.5px;">WhatsApp Consultoría</strong>
+              <a href="https://wa.me/56999840502" target="_blank" style="color: #ffffff; text-decoration: none; font-weight: 600;">+56 9 9984 0502</a>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <span style="font-size: 1.2rem;">📍</span>
+            <div>
+              <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; color: #a2e8dd; letter-spacing: 0.5px;">Cobertura</strong>
+              <span style="color: #ffffff; font-weight: 600;">Santiago & Regiones de Chile</span>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- GARANTÍAS DE SEGURIDAD -->
+      <div style="background: #ffffff; padding: 30px; border-radius: 12px; border: 1px solid #e5e7eb; border-left: 5px solid #a2e8dd; box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+        <h4 style="font-size: 1.1rem; color: #382341; font-weight: 800; margin-bottom: 10px;">Compromiso de Resguardo</h4>
+        <p style="font-size: 0.88rem; color: #4b5563; line-height: 1.5; margin-bottom: 15px;">Toda información provista está bajo estrictos protocolos de confidencialidad y reserva legal conforme a la Ley N.° 21.643.</p>
+        <div style="display: flex; gap: 15px; font-size: 0.82rem; font-weight: 800; color: #382341;">
+          <span>✓ Respuesta &lt; 24 hrs.</span>
+          <span>✓ Sin Compromiso</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
   </main>
 
