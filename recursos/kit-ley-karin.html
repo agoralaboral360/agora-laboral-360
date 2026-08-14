@@ -217,9 +217,9 @@
       <p style="text-align: center; color: var(--texto-suave); margin-bottom: 25px; font-size: 0.95rem;">Complete sus datos, seleccione su plan y lo contactaremos inmediatamente con los medios de pago corporativos y el acceso al material.</p>
 
       <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="redirect" value="https://mpago.la/1GxYcmP">
+  <input type="hidden" name="redirect" id="redirect-url" value="https://mpago.la/1GxYcmP">
         <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
-        <input type="hidden" name="subject" value="💼 NUEVA COMPRA: Kit Ley Karin / Ley 21.828">
+        <input type="hidden" name="subject" value=" NUEVA COMPRA: Kit Ley Karin / Ley 21.828">
 
         <div class="form-group">
           <label class="form-label">Plan Seleccionado *</label>
@@ -252,6 +252,26 @@
 
         <button type="submit" class="btn-submit">Solicitar Medios de Pago →</button>
       </form>
+      <script>
+  // Enlaces de Mercado Pago dinámicos según el plan
+  const linksMercadoPago = {
+    "Básico ($39.900)": "https://mpago.la/1GxYcmP",
+    "Profesional ($79.900)": "https://mpago.la/1GxYcmP",
+    "Premium ($129.900)": "https://mpago.la/1GxYcmP"
+  };
+
+  const planSelector = document.getElementById('plan-selector');
+  const redirectInput = document.getElementById('redirect-url');
+
+  if (planSelector && redirectInput) {
+    planSelector.addEventListener('change', function() {
+      const selectedPlan = this.value;
+      if (linksMercadoPago[selectedPlan]) {
+        redirectInput.value = linksMercadoPago[selectedPlan];
+      }
+    });
+  }
+</script>
     </div>
   </section>
 
