@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtro de Admisibilidad Exprés | Ágora Laboral 360°</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --morado-corporativo: #382341;
+      --morado-oscuro: #23122c;
+      --verde-menta: #a2e8dd;
+      --verde-menta-hover: #8edbc0;
+      --texto-btn-menta: #2b1736;
+      --fondo-suave: #f8f9fa;
+      --blanco-puro: #ffffff;
+      --texto-oscuro: #111827;
+      --texto-suave: #4b5563;
+      --borde-suave: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+    body { background-color: var(--fondo-suave); color: var(--texto-oscuro); line-height: 1.6; padding-bottom: 60px; }
+
+    .navbar { background: var(--blanco-puro); border-bottom: 1px solid var(--borde-suave); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+    .logo { font-size: 1.3rem; font-weight: 900; color: var(--morado-corporativo); text-decoration: none; text-transform: uppercase; }
+    .logo span { color: var(--blanco-puro); background: var(--morado-corporativo); padding: 3px 8px; border-radius: 4px; margin-left: 5px; font-size: 0.8rem; }
+    .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--morado-corporativo); font-weight: 700; font-size: 0.9rem; }
+
+    .main-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+    .page-title { font-size: 2rem; color: var(--morado-corporativo); font-weight: 900; text-align: center; margin-bottom: 10px; }
+    .page-desc { text-align: center; color: var(--texto-suave); margin-bottom: 30px; font-size: 0.95rem; }
+
+    .quiz-card { background: var(--blanco-puro); border-radius: 12px; padding: 30px; border: 1px solid var(--borde-suave); box-shadow: 0 10px 25px rgba(56, 35, 65, 0.05); }
+    .question-block { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid var(--borde-suave); }
+    .question-title { font-size: 1rem; font-weight: 800; color: var(--morado-corporativo); margin-bottom: 12px; }
+    
+    .options-group { display: flex; gap: 15px; }
+    .option-label { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; padding: 8px 16px; border: 1px solid var(--borde-suave); border-radius: 6px; transition: background 0.2s; }
+    .option-label:hover { background: #f3f0f5; }
+
+    .btn-eval { width: 100%; background: var(--morado-corporativo); color: var(--blanco-puro); padding: 14px; border: none; border-radius: 8px; font-weight: 800; font-size: 0.9rem; text-transform: uppercase; cursor: pointer; margin-top: 10px; }
+    .btn-eval:hover { background: var(--morado-oscuro); }
+
+    .result-box { margin-top: 25px; padding: 20px; border-radius: 8px; display: none; }
+    .result-box.admisible { background: #ecfdf5; border: 2px solid #10b981; color: #065f46; }
+    .result-box.subsanacion { background: #fffbe3; border: 2px solid #f59e0b; color: #92400e; }
+    .result-box.inadmisible { background: #fef2f2; border: 2px solid #ef4444; color: #991b1b; }
+    
+    .result-title { font-weight: 900; font-size: 1.1rem; margin-bottom: 8px; text-transform: uppercase; }
+    .result-desc { font-size: 0.88rem; line-height: 1.5; }
+
+    @media (max-width: 650px) {
+      .nav-links { display: none; }
+      .options-group { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">ÁGORA <span>LABORAL 360°</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios/index.html">Servicios</a></li>
+        <li><a href="recursos/index.html">Recursos</a></li>
+        <li><a href="https://wa.me/56932701196" target="_blank" style="color: var(--morado-corporativo); border: 1px solid var(--morado-corporativo); padding: 6px 14px; border-radius: 50px;">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main-container">
+    <h1 class="page-title">Filtro de Admisibilidad Exprés</h1>
+    <p class="page-desc">
+      Evaluación preliminar de requisitos formales conforme al procedimiento legal vigente (Ley N° 21.643).
+    </p>
+
+    <div class="quiz-card">
+      <form id="admisibilidadForm">
+        
+        <div class="question-block">
+          <div class="question-title">1. ¿Existe vínculo o relación laboral (directa o por subcontratación) entre denunciante y denunciado/a?</div>
+          <div class="options-group">
+            <label class="option-label"><input type="radio" name="p1" value="si" required> Sí</label>
+            <label class="option-label"><input type="radio" name="p1" value="no"> No</label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-title">2. ¿Los hechos constitutivos describen Acoso Sexual, Acoso Laboral o Violencia en el Trabajo?</div>
+          <div class="options-group">
+            <label class="option-label"><input type="radio" name="p2" value="si" required> Sí</label>
+            <label class="option-label"><input type="radio" name="p2" value="no"> No (Son meros problemas de desempeño u operativos)</label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-title">3. ¿La presentación cuenta con identificación de las partes y relato mínimo circunstanciado?</div>
+          <div class="options-group">
+            <label class="option-label"><input type="radio" name="p3" value="si" required> Sí, completa</label>
+            <label class="option-label"><input type="radio" name="p3" value="incompleta"> No, faltan antecedentes clave</label>
+          </div>
+        </div>
+
+        <button type="button" class="btn-eval" onclick="evaluarAdmisibilidad()">Evaluar Denuncia</button>
+      </form>
+
+      <div id="resultado" class="result-box">
+        <div id="resTitulo" class="result-title"></div>
+        <div id="resTexto" class="result-desc"></div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function evaluarAdmisibilidad() {
+      const p1 = document.querySelector('input[name="p1"]:checked')?.value;
+      const p2 = document.querySelector('input[name="p2"]:checked')?.value;
+      const p3 = document.querySelector('input[name="p3"]:checked')?.value;
+
+      const box = document.getElementById('resultado');
+      const titulo = document.getElementById('resTitulo');
+      const texto = document.getElementById('resTexto');
+
+      if (!p1 || !p2 || !p3) {
+        alert('Por favor responda las 3 preguntas antes de evaluar.');
+        return;
+      }
+
+      box.className = 'result-box';
+      box.style.display = 'block';
+
+      if (p1 === 'no' || p2 === 'no') {
+        box.classList.add('inadmisible');
+        titulo.innerText = 'Dictamen: Inadmisible';
+        texto.innerText = 'La presentación no cumple los requisitos mínimos de competencia o naturaleza laboral bajo la Ley N° 21.643. Se debe emitir resolución fundada de inadmisión y derivar según corresponda.';
+      } else if (p3 === 'incompleta') {
+        box.classList.add('subsanacion');
+        titulo.innerText = 'Dictamen: Observada (Aplica Subsanación - Plazo 3 días)';
+        texto.innerText = 'La denuncia presenta indicios suficientes pero carece de datos o relatos formales obligatorios. Se debe requerir al/la denunciante la subsanación dentro del plazo legal de 3 días hábiles.';
+      } else {
+        box.classList.add('admisible');
+        titulo.innerText = 'Dictamen: Admisible';
+        texto.innerText = 'La denuncia cumple formalmente los requisitos para dar inicio inmediato al procedimiento de investigación interna o derivación a la Dirección del Trabajo.';
+      }
+    }
+  </script>
+
+</body>
+</html>
