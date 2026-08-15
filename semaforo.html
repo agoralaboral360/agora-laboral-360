@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semáforo de Conductas Ley Karin | Ágora Laboral 360°</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --morado-corporativo: #382341;
+      --morado-oscuro: #23122c;
+      --verde-menta: #a2e8dd;
+      --fondo-suave: #f8f9fa;
+      --blanco-puro: #ffffff;
+      --texto-oscuro: #111827;
+      --texto-suave: #4b5563;
+      --borde-suave: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+    body { background-color: var(--fondo-suave); color: var(--texto-oscuro); line-height: 1.6; padding-bottom: 60px; }
+
+    .navbar { background: var(--blanco-puro); border-bottom: 1px solid var(--borde-suave); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+    .logo { font-size: 1.3rem; font-weight: 900; color: var(--morado-corporativo); text-decoration: none; text-transform: uppercase; }
+    .logo span { color: var(--blanco-puro); background: var(--morado-corporativo); padding: 3px 8px; border-radius: 4px; margin-left: 5px; font-size: 0.8rem; }
+    .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--morado-corporativo); font-weight: 700; font-size: 0.9rem; }
+
+    .main-container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+    .page-title { font-size: 2rem; color: var(--morado-corporativo); font-weight: 900; text-align: center; margin-bottom: 10px; }
+    .page-desc { text-align: center; color: var(--texto-suave); max-width: 750px; margin: 0 auto 35px; font-size: 0.95rem; }
+
+    .semaforo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    
+    .status-card { background: var(--blanco-puro); border-radius: 10px; border: 1px solid var(--borde-suave); padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .status-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--borde-suave); }
+    
+    .tag-rojo { background: #fee2e2; color: #991b1b; padding: 4px 12px; border-radius: 4px; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; }
+    .tag-amarillo { background: #fef3c7; color: #92400e; padding: 4px 12px; border-radius: 4px; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; }
+    .tag-verde { background: #d1fae5; color: #065f46; padding: 4px 12px; border-radius: 4px; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; }
+
+    .card-title { font-size: 1.1rem; font-weight: 800; color: var(--morado-corporativo); }
+    
+    .conduct-list { list-style: none; margin-top: 15px; }
+    .conduct-list li { font-size: 0.85rem; color: var(--texto-oscuro); margin-bottom: 10px; padding-left: 15px; position: relative; }
+    .conduct-list li::before { content: "•"; position: absolute; left: 0; color: var(--morado-corporativo); font-weight: bold; }
+
+    @media (max-width: 650px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">ÁGORA <span>LABORAL 360°</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios/index.html">Servicios</a></li>
+        <li><a href="recursos/index.html">Recursos</a></li>
+        <li><a href="https://wa.me/56932701196" target="_blank" style="color: var(--morado-corporativo); border: 1px solid var(--morado-corporativo); padding: 6px 14px; border-radius: 50px;">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main-container">
+    <h1 class="page-title">Semáforo de Conductas Ley Karin</h1>
+    <p class="page-desc">
+      Guía de clasificación operativa para diferenciar faltas gravedosas bajo Ley N° 21.643 de conflictos operativos e incivilidades de trabajo.
+    </p>
+
+    <div class="semaforo-grid">
+
+      <!-- NIVEL ROJO -->
+      <div class="status-card" style="border-top: 4px solid #ef4444;">
+        <div class="status-header">
+          <h2 class="card-title">Conductas Inadmisibles</h2>
+          <span class="tag-rojo">Riesgo Alto</span>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--texto-suave);">Constituyen infracción directa a la Ley N° 21.643 e inician procedimiento formal de investigación:</p>
+        <ul class="conduct-list">
+          <li>Requerimientos de carácter sexual no consentidos de cualquier naturaleza.</li>
+          <li>Acoso laboral sistemático, hostigamiento o exclusión reiterada deliberada.</li>
+          <li>Violencia física, amenazas o agresiones verbales graves por terceros o pares.</li>
+          <li>Invasión grave a la intimidad o difusión no autorizada de datos sensibles.</li>
+        </ul>
+      </div>
+
+      <!-- NIVEL AMARILLO -->
+      <div class="status-card" style="border-top: 4px solid #f59e0b;">
+        <div class="status-header">
+          <h2 class="card-title">Incivilidades y Alertas</h2>
+          <span class="tag-amarillo">Riesgo Medio</span>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--texto-suave);">Conductas que no constituyen delito pero requieren intervención temprana / gestión de clima:</p>
+        <ul class="conduct-list">
+          <li>Faltas aisladas de cortesía o lenguaje inadecuado en reuniones laborales.</li>
+          <li>Uso de tono de voz elevado en discusiones técnicas u operativas puntuales.</li>
+          <li>Diferencias de criterio profesional no canalizadas formalmente.</li>
+          <li>Desencuentros de comunicación que no configuran sistematicidad ni asimetría.</li>
+        </ul>
+      </div>
+
+      <!-- NIVEL VERDE -->
+      <div class="status-card" style="border-top: 4px solid #10b981;">
+        <div class="status-header">
+          <h2 class="card-title">Ilegítima Invocación</h2>
+          <span class="tag-verde">Ejercicio Legítimo</span>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--texto-suave);">Acciones que se enmarcan en las facultades de administración del empleador (Art. 3 y 154 Código del Trabajo):</p>
+        <ul class="conduct-list">
+          <li>Instrucciones directas, asignación de metas e indicadores de gestión.</li>
+          <li>Evaluación formal de desempeño e retroalimentación sobre metas incumplidas.</li>
+          <li>Aplicación regular de medidas disciplinarias contenidas en el RIOHS.</li>
+          <li>Cambios organizacionales o de turnos fundados en necesidades operativas.</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
