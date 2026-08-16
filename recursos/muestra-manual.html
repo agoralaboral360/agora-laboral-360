@@ -1,48 +1,143 @@
-<div style="background-color: #361e42; color: #ffffff; padding: 45px 30px; border-radius: 16px; border: 3px solid #a8e6cf; text-align: center; max-width: 800px; margin: 40px auto; box-shadow: 0 10px 30px rgba(54,30,66,0.2); font-family: 'Montserrat', sans-serif;">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muestra Gratuita: Manual de Investigación Laboral | Ágora Laboral 360°</title>
   
-  <!-- ETIQUETA DESTACADA CORAL -->
-  <span style="background: #ff6b6b; color: #ffffff; font-size: 0.8rem; font-weight: 900; padding: 6px 18px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 18px; box-shadow: 0 4px 12px rgba(255,107,107,0.35);">
-    Acceso Inmediato
-  </span>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <h2 style="font-size: 2.1rem; font-weight: 900; color: #ffffff; margin-bottom: 18px; line-height: 1.2;">
-    ¿Quieres acceder al Manual Completo y las Herramientas Editables?
-  </h2>
+  <style>
+    :root {
+      --morado-principal: #361e42;
+      --morado-oscuro: #211329;
+      --verde-menta: #a8e6cf;
+      --menta-fondo: #eef9f4;
+      --coral-acento: #ff6b6b;
+      --fondo-pagina: #faf8fc;
+      --texto-oscuro: #211329;
+      --texto-suave: #4d4054;
+      --blanco: #ffffff;
+    }
 
-  <p style="font-size: 1.05rem; color: #f8fafc; margin-bottom: 28px; line-height: 1.6; font-weight: 500; max-width: 720px; margin-left: auto; margin-right: auto;">
-    Esta muestra corresponde únicamente al <strong>Módulo I</strong>. Adquiriendo la <strong style="color: #a8e6cf;">Biblioteca Profesional ($79.900 CLP)</strong> o el <strong style="color: #ff6b6b;">Master Kit ($129.900 CLP)</strong> obtendrás acceso inmediato a:
-  </p>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif !important; background-color: var(--fondo-pagina); color: var(--texto-oscuro); line-height: 1.7; }
 
-  <ul style="list-style: none; padding: 0; margin: 0 auto 32px auto; text-align: left; max-width: 660px;">
-    <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
-      <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
-      <span><strong>Módulo II:</strong> Filtro de Admisibilidad y Subsanación en 3 Días (Ley N.° 21.643 - Ley Karin).</span>
-    </li>
-    <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
-      <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
-      <span><strong>Módulo III:</strong> Cronograma de 30 Días e Hipótesis Investigativas.</span>
-    </li>
-    <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
-      <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
-      <span><strong>Módulo IV:</strong> Catálogo de Preguntas Permitidas vs. Prohibidas (Evita revictimización).</span>
-    </li>
-    <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
-      <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
-      <span><strong>Módulo V:</strong> Valoración de Evidencia mediante la Matriz ICIA.</span>
-    </li>
-    <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
-      <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
-      <span><strong>Módulo VI:</strong> Estructura del Informe Final blindado para la DT.</span>
-    </li>
-    <li style="margin-top: 18px; font-size: 1.05rem; color: #a8e6cf; font-weight: 800; display: flex; align-items: flex-start; gap: 12px;">
-      <span style="color: #ff6b6b; font-size: 1.2rem; flex-shrink: 0;">✦</span>
-      <span>+ Todas las Actas y Formatos 100% Editables en Word.</span>
-    </li>
-  </ul>
+    .header { background-color: var(--blanco); border-bottom: 3px solid var(--morado-principal); padding: 16px 24px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .navbar { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo-text { font-weight: 900; font-size: 1.25rem; color: var(--morado-principal); text-decoration: none; }
+    .logo-text span { border-bottom: 4px solid var(--verde-menta); }
+    .btn-back { background: var(--morado-principal); color: var(--blanco); text-decoration: none; font-weight: 800; font-size: 0.8rem; padding: 8px 16px; border-radius: 6px; text-transform: uppercase; }
 
-  <!-- BOTÓN LLAMATIVO EN CORAL -->
-  <a href="https://agoralaboral.cl/recursos/index.html#precios" style="display: inline-block; background-color: #ff6b6b; color: #ffffff; font-size: 1rem; font-weight: 900; padding: 18px 36px; border-radius: 8px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 6px 20px rgba(255,107,107,0.4); transition: all 0.2s;">
-    ADQUIRIR EL KIT COMPLETO AQUÍ →
-  </a>
+    .container { max-width: 900px; margin: 40px auto; padding: 0 24px; }
+    
+    .document-card { background: var(--blanco); border: 2px solid var(--morado-principal); border-radius: 16px; padding: 45px 40px; box-shadow: 0 10px 30px rgba(54,30,66,0.06); }
+    .doc-badge { background: var(--verde-menta); color: var(--morado-principal); font-weight: 800; font-size: 0.75rem; padding: 4px 14px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 15px; }
+    
+    h1 { font-size: 2.2rem; font-weight: 900; color: var(--morado-principal); margin-bottom: 15px; line-height: 1.2; }
+    .meta-info { font-size: 0.88rem; color: var(--texto-suave); font-weight: 600; margin-bottom: 30px; border-bottom: 2px solid var(--menta-fondo); padding-bottom: 15px; }
 
-</div>
+    .content-section { margin-bottom: 35px; }
+    .content-section h2 { font-size: 1.4rem; font-weight: 800; color: var(--morado-principal); margin-bottom: 15px; border-left: 5px solid var(--verde-menta); padding-left: 12px; }
+    .content-section h3 { font-size: 1.1rem; font-weight: 700; color: var(--morado-principal); margin: 20px 0 10px 0; }
+    .content-section p { font-size: 0.98rem; color: var(--texto-suave); margin-bottom: 15px; font-weight: 500; }
+    
+    .highlight-box { background: var(--menta-fondo); border-left: 4px solid var(--morado-principal); padding: 18px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 0.95rem; font-weight: 600; }
+
+    footer { background: var(--morado-oscuro); color: var(--blanco); text-align: center; padding: 25px 24px; font-size: 0.85rem; font-weight: 600; margin-top: 60px; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="navbar">
+      <a href="https://agoralaboral.cl/" class="logo-text">ÁGORA LABORAL <span>360°</span></a>
+      <a href="https://agoralaboral.cl/recursos/index.html" class="btn-back">← Volver a Recursos</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="document-card">
+      <span class="doc-badge">Muestra Gratuita Oficial</span>
+      <h1>Manual de Investigación Laboral Ley Karin</h1>
+      <div class="meta-info">Documento de Lectura Técnica • Módulo I de VI • Ley N.° 21.643</div>
+
+      <!-- MÓDULO I / CAPÍTULO I -->
+      <section class="content-section">
+        <h2>Módulo I: Principios Guias y Marco Normativo de la Ley Karin</h2>
+        <p>La entrada en vigencia de la Ley N.° 21.643 redefine de manera sustancial las obligaciones de los empleadores en Chile respecto a la prevención, investigación y sanción del acoso sexual, laboral y la violencia en el trabajo.</p>
+
+        <h3>1.1 Principios Rectores Obligatorios</h3>
+        <p>Todo procedimiento de investigación interna o externa debe fundamentarse irrestrictamente en los siguientes principios expresados en la normativa:</p>
+        
+        <div class="highlight-box">
+          <strong>a) Perspectiva de Género:</strong> Obligación de analizar las dinámicas de poder e inequidades estructurales en el entorno de trabajo.<br>
+          <strong>b) No Revictimización:</strong> Prohibición absoluta de reiterar declaraciones de la persona afectada salvo estricta necesidad pericial.<br>
+          <strong>c) Debido Proceso e Imparcialidad:</strong> Garantía de objetividad, derecho a la defensa y ecuanimidad en la recepción de pruebas.<br>
+          <strong>d) Confidencialidad y Reserva:</strong> Resguardo estricto del expediente y la identidad de las partes involucradas.
+        </div>
+
+        <h3>1.2 Definición de las Tres Conductas Reguladas</h3>
+        <p><strong>Acoso Sexual:</strong> El que una persona realice de forma indebida, por cualquier medio, requerimientos de carácter sexual, no consentidos por quien los recibe y que amenacen o perjudiquen su situación laboral.</p>
+        <p><strong>Acoso Laboral:</strong> Toda conducta que constituya agresión u hostigamiento ejercida por el empleador o por uno o más trabajadores, en contra de otro u otros trabajadores, por cualquier medio, ocasionando menoscabo, maltrato o humillación.</p>
+        <p><strong>Violencia en el Trabajo:</strong> Conductas ejercidas por terceros ajenos a la relación laboral (clientes, proveedores, usuarios) en contra de los trabajadores durante la prestación de sus servicios.</p>
+      </section>
+
+      <!-- RECUADRO DESTACADO CTA CORAL DE VENTA -->
+      <div style="background-color: #361e42; color: #ffffff; padding: 45px 30px; border-radius: 16px; border: 3px solid #a8e6cf; text-align: center; margin-top: 50px; box-shadow: 0 10px 30px rgba(54,30,66,0.2);">
+        
+        <span style="background: #ff6b6b; color: #ffffff; font-size: 0.8rem; font-weight: 900; padding: 6px 18px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 18px; box-shadow: 0 4px 12px rgba(255,107,107,0.35);">
+          Acceso Inmediato
+        </span>
+
+        <h2 style="font-size: 2.1rem; font-weight: 900; color: #ffffff; margin-bottom: 18px; line-height: 1.2;">
+          ¿Quieres acceder al Manual Completo y las Herramientas Editables?
+        </h2>
+
+        <p style="font-size: 1.05rem; color: #f8fafc; margin-bottom: 28px; line-height: 1.6; font-weight: 500; max-width: 720px; margin-left: auto; margin-right: auto;">
+          Esta muestra corresponde únicamente al <strong>Módulo I</strong>. Adquiriendo la <strong style="color: #a8e6cf;">Biblioteca Profesional ($79.900 CLP)</strong> o el <strong style="color: #ff6b6b;">Master Kit ($129.900 CLP)</strong> obtendrás acceso inmediato a:
+        </p>
+
+        <ul style="list-style: none; padding: 0; margin: 0 auto 32px auto; text-align: left; max-width: 660px;">
+          <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
+            <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
+            <span><strong>Módulo II:</strong> Filtro de Admisibilidad y Subsanación en 3 Días (Ley N.° 21.643 - Ley Karin).</span>
+          </li>
+          <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
+            <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
+            <span><strong>Módulo III:</strong> Cronograma de 30 Días e Hipótesis Investigativas.</span>
+          </li>
+          <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
+            <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
+            <span><strong>Módulo IV:</strong> Catálogo de Preguntas Permitidas vs. Prohibidas (Evita revictimización).</span>
+          </li>
+          <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
+            <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
+            <span><strong>Módulo V:</strong> Valoración de Evidencia mediante la Matriz ICIA.</span>
+          </li>
+          <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
+            <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
+            <span><strong>Módulo VI:</strong> Estructura del Informe Final blindado para la DT.</span>
+          </li>
+          <li style="margin-top: 18px; font-size: 1.05rem; color: #a8e6cf; font-weight: 800; display: flex; align-items: flex-start; gap: 12px;">
+            <span style="color: #ff6b6b; font-size: 1.2rem; flex-shrink: 0;">✦</span>
+            <span>+ Todas las Actas y Formatos 100% Editables en Word.</span>
+          </li>
+        </ul>
+
+        <a href="https://agoralaboral.cl/recursos/index.html#precios" style="display: inline-block; background-color: #ff6b6b; color: #ffffff; font-size: 1rem; font-weight: 900; padding: 18px 36px; border-radius: 8px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 6px 20px rgba(255,107,107,0.4); transition: all 0.2s;">
+          ADQUIRIR EL KIT COMPLETO AQUÍ →
+        </a>
+
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
