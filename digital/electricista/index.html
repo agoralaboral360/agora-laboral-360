@@ -12,13 +12,12 @@
   <style>
     :root {
       /* PALETA DE COLORES */
-      --azul-principal: #0000FF;   /* Azul para botones principales */
-      --azul-electrico: #00F0FF;   /* Azul eléctrico para detalles, bordes y hovers */
-      --azul-marino: #0a192f;      /* Azul marino para textos y fondos oscuros */
+      --azul-principal: #0000FF;   /* Azul para botones principales y distintivos */
+      --azul-electrico: #00F0FF;   /* Azul eléctrico para bordes y detalles */
+      --azul-marino: #0a192f;      /* Azul marino para textos */
       --azul-marino-profundo: #020c1b;
-      --blanco: #ffffff;           /* Letras blancas y tarjetas */
+      --blanco: #ffffff;           /* Fondo blanco principal */
       --fondo-suave: #f0f7ff;      /* Fondo suave secundario */
-      --verde-gratis: #16a34a;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
@@ -32,28 +31,29 @@
     .nav-btn { background: var(--azul-principal); color: var(--blanco); padding: 10px 20px; border-radius: 6px; font-weight: 800; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; transition: all 0.2s; border: 1px solid var(--azul-electrico); }
     .nav-btn:hover { background: var(--azul-electrico); color: var(--azul-marino); box-shadow: 0 0 12px var(--azul-electrico); }
 
-    /* HERO */
-    .hero { padding: 70px 20px; background-color: var(--azul-marino); color: var(--blanco); position: relative; }
+    /* HERO FONDO BLANCO */
+    .hero { padding: 70px 20px; background-color: var(--blanco); color: var(--azul-marino); }
     .hero-container { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
     .hero-text { flex: 1; min-width: 300px; }
     
-    .badge-gratis { background: var(--verde-gratis); color: var(--blanco); font-weight: 800; font-size: 0.85rem; padding: 6px 16px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 15px; border: 1px solid var(--azul-electrico); }
+    /* DISTINTIVO AHORA EN AZUL */
+    .badge-gratis { background: var(--azul-principal); color: var(--blanco); font-weight: 800; font-size: 0.85rem; padding: 8px 18px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 15px; border: 1.5px solid var(--azul-electrico); box-shadow: 0 4px 10px rgba(0,0,255,0.2); }
     
-    .hero h1 { font-size: 2.8rem; font-weight: 900; color: var(--blanco); margin-bottom: 5px; line-height: 1.1; }
-    .hero h2 { font-size: 1.3rem; font-weight: 600; color: var(--azul-electrico); margin-bottom: 25px; }
+    .hero h1 { font-size: 2.8rem; font-weight: 900; color: var(--azul-marino); margin-bottom: 5px; line-height: 1.1; }
+    .hero h2 { font-size: 1.3rem; font-weight: 700; color: var(--azul-principal); margin-bottom: 25px; }
     
-    .profile-card { background: var(--blanco); color: var(--azul-marino); padding: 20px; border-left: 6px solid var(--azul-electrico); margin: 25px 0; border-radius: 4px 8px 8px 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+    .profile-card { background: var(--fondo-suave); color: var(--azul-marino); padding: 20px; border-left: 6px solid var(--azul-principal); border-top: 1px solid var(--azul-electrico); border-right: 1px solid var(--azul-electrico); border-bottom: 1px solid var(--azul-electrico); margin: 25px 0; border-radius: 4px 8px 8px 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .profile-card p { font-size: 0.95rem; margin-bottom: 6px; }
 
     .profile-img-container { flex: 1; min-width: 300px; text-align: center; }
-    .profile-img { max-width: 100%; width: 380px; border-radius: 12px; box-shadow: 0 0 25px rgba(0, 240, 255, 0.3); border: 4px solid var(--azul-electrico); }
+    .profile-img { max-width: 100%; width: 380px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,255,0.15); border: 4px solid var(--azul-electrico); }
 
     /* BOTONES ACCIÓN */
     .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
     .btn-primary { display: inline-block; background: var(--azul-principal); color: var(--blanco); padding: 16px 28px; border-radius: 6px; font-weight: 900; text-decoration: none; text-transform: uppercase; font-size: 0.95rem; transition: all 0.2s; border: 2px solid var(--azul-electrico); text-align: center; }
     .btn-primary:hover { background: var(--azul-electrico); color: var(--azul-marino); box-shadow: 0 0 15px var(--azul-electrico); transform: translateY(-2px); }
     
-    .btn-secondary { display: inline-block; background: transparent; color: var(--blanco); padding: 16px 24px; border-radius: 6px; font-weight: 800; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: all 0.2s; border: 2px solid var(--blanco); text-align: center; }
+    .btn-secondary { display: inline-block; background: var(--azul-marino); color: var(--blanco); padding: 16px 24px; border-radius: 6px; font-weight: 800; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: all 0.2s; border: 2px solid var(--azul-marino); text-align: center; }
     .btn-secondary:hover { background: var(--blanco); color: var(--azul-marino); }
 
     /* SECCIONES */
@@ -128,7 +128,7 @@
           <p>📝 <strong>RUT:</strong> 8.027.653-2</p>
           <p>📞 <strong>Celular:</strong> +56 9 9223 2623</p>
           <p>✉️ <strong>Correo:</strong> mariolabarca56@gmail.com</p>
-          <p>📷 <strong>Instagram:</strong> @mario.electricista</p>
+          <p>📷 <strong>Instagram:</strong> <a href="https://www.instagram.com/mario.electricista" target="_blank" style="color: var(--azul-principal); font-weight: 700; text-decoration: none;">@mario.electricista</a></p>
         </div>
 
         <p style="font-size: 1.05rem; margin-bottom: 20px; font-weight: 500;">Evaluaciones sin costo para reparaciones, instalaciones y proyectos eléctricos seguros y normados.</p>
@@ -198,7 +198,7 @@
           </div>
         </div>
         <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b6?auto=format&fit=crop&w=800&q=80" alt="Sistema Tierra e Instalaciones" class="gallery-img">
+          <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80" alt="Protección a Tierra e Instalaciones" class="gallery-img">
           <div class="gallery-info">
             <h4>Protección a Tierra</h4>
             <p>Instalación de barra Cooper e inspección de puntos.</p>
@@ -244,7 +244,7 @@
         <a href="mailto:mariolabarca56@gmail.com" class="btn-social">
           ✉️ Correo
         </a>
-        <a href="https://instagram.com" target="_blank" class="btn-social">
+        <a href="https://www.instagram.com/mario.electricista" target="_blank" class="btn-social">
           📷 Instagram
         </a>
       </div>
