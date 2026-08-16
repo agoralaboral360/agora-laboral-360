@@ -72,10 +72,10 @@
 
     /* BOTONES ACCIÓN */
     .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
-    .btn-primary { display: inline-block; background: var(--azul-principal); color: var(--blanco); padding: 16px 28px; border-radius: 6px; font-weight: 900; text-decoration: none; text-transform: uppercase; font-size: 0.95rem; transition: all 0.2s; border: 2px solid var(--azul-electrico); text-align: center; }
+    .btn-primary { display: inline-flex; align-items: center; justify-content: center; background: var(--azul-principal); color: var(--blanco); padding: 16px 28px; border-radius: 6px; font-weight: 900; text-decoration: none; text-transform: uppercase; font-size: 0.95rem; transition: all 0.2s; border: 2px solid var(--azul-electrico); text-align: center; }
     .btn-primary:hover { background: var(--azul-electrico); color: var(--azul-principal); box-shadow: 0 0 15px var(--azul-electrico); transform: translateY(-2px); }
     
-    .btn-secondary { display: inline-block; background: var(--blanco); color: var(--azul-principal); padding: 16px 24px; border-radius: 6px; font-weight: 800; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: all 0.2s; border: 2px solid var(--azul-principal); text-align: center; }
+    .btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--blanco); color: var(--azul-principal); padding: 16px 24px; border-radius: 6px; font-weight: 800; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: all 0.2s; border: 2px solid var(--azul-principal); text-align: center; }
     .btn-secondary:hover { background: var(--azul-principal); color: var(--blanco); }
 
     /* SECCIONES */
@@ -162,14 +162,17 @@
         <img src="image_0262e7.jpg" alt="Mario Labarca Quiroz - Electricista" class="profile-img">
       </div>
 
-      <!-- 3. FRASE DESTACADA Y BOTONES -->
+      <!-- 3. FRASE DESTACADA Y BOTONES (AHORA CON BOTÓN DE INSTAGRAM) -->
       <div class="hero-action-area">
         <div class="highlight-box">
           ⚡ Evaluaciones sin costo para reparaciones, instalaciones y proyectos eléctricos seguros y normados.
         </div>
         <div class="btn-group">
           <a href="https://wa.me/56992232623?text=Hola%20Mario,%20quisiera%20solicitar%20un%20presupuesto%20gratuito%20para%20un%20trabajo%20el%C3%A9ctrico." target="_blank" class="btn-primary">Solicitar Presupuesto Gratis →</a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mariolabarca56@gmail.com" target="_blank" class="btn-secondary">Enviar Correo ✉️</a>
+          <a href="https://www.instagram.com/mario.electricista" target="_blank" class="btn-secondary">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            Instagram
+          </a>
         </div>
       </div>
 
@@ -179,7 +182,7 @@
           <p>🎓 <strong>Formación:</strong> IP INACAP</p>
           <p>📝 <strong>RUT:</strong> 8.027.653-2</p>
           <p>📞 <strong>Celular:</strong> <a href="tel:+56992232623">+56 9 9223 2623</a></p>
-          <p>✉️ <strong>Correo:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mariolabarca56@gmail.com" target="_blank">mariolabarca56@gmail.com</a></p>
+          <p>✉️ <strong>Correo:</strong> <a href="mailto:mariolabarca56@gmail.com">mariolabarca56@gmail.com</a></p>
           <p>📷 <strong>Instagram:</strong> <a href="https://www.instagram.com/mario.electricista" target="_blank">@mario.electricista</a></p>
         </div>
       </div>
@@ -191,31 +194,35 @@
   <section class="section">
     <h2 class="section-title">Servicios <span>Eléctricos</span></h2>
     <div class="services-grid">
+      
+      <!-- SERVICIO 1 -->
       <div class="service-card">
         <div class="service-icon">🛠️</div>
         <h3>Reparación de Fallas</h3>
         <p>Diagnóstico preciso y solución rápida de cortes de luz, cortocircuitos y fallas en el hogar.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon">🔌</div>
-        <h3>Separación de Circuitos</h3>
-        <p>Distribución de cargas para evitar caídas del automático por sobredemanda de energía.</p>
-      </div>
+
+      <!-- SERVICIO 2 (NUEVO: TABLEROS Y EMPALMES UNIFICADO) -->
       <div class="service-card">
         <div class="service-icon">⚡</div>
-        <h3>Instalación Barra Cooper</h3>
-        <p>Conexión e instalación de cable a tierra para resguardar tus artefactos y la seguridad de la casa.</p>
+        <h3>Tableros y Empalmes</h3>
+        <p>Normalización y armado. Este servicio <strong>incluye separación de circuitos e instalación de barra Cooper</strong> a tierra.</p>
       </div>
+
+      <!-- SERVICIO 3 -->
       <div class="service-card">
         <div class="service-icon">🏢</div>
         <h3>Instalaciones y Proyectos</h3>
         <p>Recableados domiciliarios, mallas a tierra e instalaciones para comercios y oficinas.</p>
       </div>
+
+      <!-- SERVICIO 4 -->
       <div class="service-card">
         <div class="service-icon">💡</div>
         <h3>Iluminación</h3>
         <p>Montaje seguro de lámparas, focos led, enchufes e interruptores.</p>
       </div>
+
     </div>
   </section>
 
@@ -282,7 +289,7 @@
         <a href="https://wa.me/56992232623?text=Hola%20Mario,%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto%20gratuito." target="_blank" class="btn-social">
           📱 WhatsApp
         </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mariolabarca56@gmail.com" target="_blank" class="btn-social">
+        <a href="mailto:mariolabarca56@gmail.com" class="btn-social">
           ✉️ Enviar Correo
         </a>
         <a href="https://www.instagram.com/mario.electricista" target="_blank" class="btn-social">
