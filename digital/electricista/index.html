@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mario Labarca | Electricista Profesional</title>
   
+  <!-- ETIQUETAS PARA QUE LA FOTO SE VEA AL COMPARTIR POR WHATSAPP / REDES SOCIALES -->
+  <meta property="og:title" content="Mario Labarca | Electricista Profesional">
+  <meta property="og:description" content="Evaluaciones sin costo para reparaciones, instalaciones y proyectos eléctricos seguros y normados.">
+  <meta property="og:image" content="https://agoralaboral.cl/digital/electricista/image_0262e7.jpg">
+  <meta property="og:url" content="https://agoralaboral.cl/digital/electricista/">
+  <meta property="og:type" content="website">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -31,7 +38,7 @@
     .nav-btn { background: var(--azul-principal); color: var(--blanco); padding: 10px 20px; border-radius: 6px; font-weight: 800; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; transition: all 0.2s; border: 2px solid var(--azul-electrico); }
     .nav-btn:hover { background: var(--azul-electrico); color: var(--azul-principal); box-shadow: 0 0 12px var(--azul-electrico); }
 
-    /* HERO CON GRID (Permite ordenar perfecto en celular y PC) */
+    /* HERO CON GRID AVANZADO (Controla el orden en PC y Celular) */
     .hero { padding: 40px 20px 60px; background-color: var(--blanco); color: var(--azul-marino); }
     .hero-container {
       max-width: 1100px; 
@@ -39,12 +46,14 @@
       display: grid; 
       grid-template-columns: 1fr 380px; 
       grid-template-areas: 
-        "top image" 
+        "title image" 
+        "action image"
         "bottom image"; 
       gap: 15px 40px; 
       align-items: center;
     }
-    .hero-top { grid-area: top; }
+    .hero-title-area { grid-area: title; align-self: end; }
+    .hero-action-area { grid-area: action; }
     .hero-bottom { grid-area: bottom; align-self: start; }
     .hero-image { grid-area: image; text-align: center; }
 
@@ -53,7 +62,7 @@
     .hero-title { font-size: 2.4rem; font-weight: 900; color: var(--azul-marino); margin-bottom: 15px; line-height: 1.1; }
     
     /* RECUADRO DESTACADO */
-    .highlight-box { background: var(--azul-principal); color: var(--blanco); padding: 18px 22px; border-radius: 8px; border: 2px solid var(--azul-electrico); margin: 15px 0 25px 0; font-size: 1.05rem; font-weight: 800; box-shadow: 0 4px 15px rgba(0,0,255,0.25); text-align: left; line-height: 1.4; }
+    .highlight-box { background: var(--azul-principal); color: var(--blanco); padding: 18px 22px; border-radius: 8px; border: 2px solid var(--azul-electrico); margin: 10px 0 25px 0; font-size: 1.05rem; font-weight: 800; box-shadow: 0 4px 15px rgba(0,0,255,0.25); text-align: left; line-height: 1.4; }
 
     .profile-card { background: var(--fondo-suave); color: var(--azul-marino); padding: 20px; border-left: 6px solid var(--azul-principal); border-top: 2px solid var(--azul-electrico); border-right: 2px solid var(--azul-electrico); border-bottom: 2px solid var(--azul-electrico); margin: 10px 0; border-radius: 4px 8px 8px 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .profile-card p { font-size: 0.95rem; margin-bottom: 6px; }
@@ -115,8 +124,9 @@
       .hero-container { 
         grid-template-columns: 1fr; 
         grid-template-areas: 
-          "top" 
+          "title" 
           "image" 
+          "action"
           "bottom"; 
         gap: 20px; 
         text-align: center; 
@@ -141,29 +151,29 @@
   <header class="hero">
     <div class="hero-container">
       
-      <!-- CONTENIDO SUPERIOR (Texto, Frase y Botones - 1° en Celulares) -->
-      <div class="hero-top">
+      <!-- 1. TÍTULO Y BADGE -->
+      <div class="hero-title-area">
         <div class="badge-gratis">⚡ Presupuesto 100% Gratuito</div>
         <h1 class="hero-title">Electricista Industrial y Domiciliario</h1>
+      </div>
+      
+      <!-- 2. FOTO DE MARIO (En celular ahora se ve justo después del título) -->
+      <div class="hero-image">
+        <img src="image_0262e7.jpg" alt="Mario Labarca Quiroz - Electricista" class="profile-img">
+      </div>
 
-        <!-- FRASE DE EVALUACIONES DESTACADA -->
+      <!-- 3. FRASE DESTACADA Y BOTONES -->
+      <div class="hero-action-area">
         <div class="highlight-box">
           ⚡ Evaluaciones sin costo para reparaciones, instalaciones y proyectos eléctricos seguros y normados.
         </div>
-        
-        <!-- BOTONES -->
         <div class="btn-group">
           <a href="https://wa.me/56992232623?text=Hola%20Mario,%20quisiera%20solicitar%20un%20presupuesto%20gratuito%20para%20un%20trabajo%20el%C3%A9ctrico." target="_blank" class="btn-primary">Solicitar Presupuesto Gratis →</a>
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mariolabarca56@gmail.com" target="_blank" class="btn-secondary">Enviar Correo ✉️</a>
         </div>
       </div>
-      
-      <!-- FOTO DE MARIO (2° en Celulares, a la derecha en PC) -->
-      <div class="hero-image">
-        <img src="image_0262e7.jpg" alt="Mario Labarca Quiroz - Electricista" class="profile-img">
-      </div>
 
-      <!-- TARJETA DE DATOS (3° en Celulares, debajo de los botones en PC) -->
+      <!-- 4. DATOS DE CONTACTO -->
       <div class="hero-bottom">
         <div class="profile-card">
           <p>🎓 <strong>Formación:</strong> IP INACAP</p>
