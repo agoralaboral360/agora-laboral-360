@@ -491,82 +491,56 @@
       </div>
     </section>
 
-    <!-- 7. CONTACTO -->
-    <section id="contacto" style="max-width: 1200px; margin: 60px auto; padding: 0 24px;">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: start;">
+ <!-- 7. SECCIÓN BLOG Y NOTICIAS ESPECIALIZADAS -->
+    <section id="blog" class="section container">
+      <h2 class="section-title">Blog & Análisis Normativo</h2>
+      <p class="section-subtitle">Artículos técnicos, novedades legislativas y criterios de la Dirección del Trabajo sobre la normativa laboral vigente.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
         
-        <div class="contact-form-box">
-          <h2 style="font-size: 1.8rem; color: var(--morado-principal); font-weight: 900; margin-bottom: 25px;">Solicite una Reunión Técnica</h2>
-          
-          <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
-            <input type="hidden" name="subject" value="📅 Solicitud de Reunión Técnica - Ágora Laboral 360°">
-
-            <div style="margin-bottom: 18px;">
-              <label style="display: block; font-size: 0.85rem; font-weight: 800; color: var(--morado-principal); margin-bottom: 6px;">Nombre Completo *</label>
-              <input type="text" name="nombre" placeholder="Ej: Camila González" required style="width: 100%; padding: 12px; border: 2px solid var(--morado-principal); border-radius: 6px; font-size: 0.95rem; outline: none;">
-            </div>
-
-            <div style="margin-bottom: 18px;">
-              <label style="display: block; font-size: 0.85rem; font-weight: 800; color: var(--morado-principal); margin-bottom: 6px;">Cargo / Institución *</label>
-              <input type="text" name="cargo" placeholder="Ej: Gerenta de Personas / Fiscal" required style="width: 100%; padding: 12px; border: 2px solid var(--morado-principal); border-radius: 6px; font-size: 0.95rem; outline: none;">
-            </div>
-
-            <div style="margin-bottom: 18px;">
-              <label style="display: block; font-size: 0.85rem; font-weight: 800; color: var(--morado-principal); margin-bottom: 6px;">Correo Institucional *</label>
-              <input type="email" name="email" placeholder="nombre@empresa.cl" required style="width: 100%; padding: 12px; border: 2px solid var(--morado-principal); border-radius: 6px; font-size: 0.95rem; outline: none;">
-            </div>
-
-            <div style="margin-bottom: 22px;">
-              <label style="display: block; font-size: 0.85rem; font-weight: 800; color: var(--morado-principal); margin-bottom: 6px;">Mensaje o Requerimiento *</label>
-              <textarea name="mensaje" rows="4" placeholder="Indíquenos brevemente cómo podemos apoyar a su organización..." required style="width: 100%; padding: 12px; border: 2px solid var(--morado-principal); border-radius: 6px; font-size: 0.95rem; resize: vertical; outline: none;"></textarea>
-            </div>
-
-            <button type="submit" style="width: 100%; background: var(--morado-principal); color: var(--blanco); border: none; padding: 16px; border-radius: 6px; font-weight: 900; font-size: 1rem; cursor: pointer; text-transform: uppercase; transition: background 0.2s;">Agendar Sesión Técnica →</button>
-          </form>
-        </div>
-
-        <div style="display: flex; flex-direction: column; gap: 25px;">
-          <div class="contact-info-box">
-            <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 15px; color: var(--verde-menta);">Atención Directa</h3>
-            <p style="font-size: 0.95rem; color: #e2e8f0; margin-bottom: 25px; line-height: 1.5; font-weight: 500;">Si requiere asesoría inmediata ante una denuncia en curso o consultas técnicas sobre la Ley Karin, comuníquese directamente:</p>
-
-            <div style="display: flex; flex-direction: column; gap: 18px; font-size: 0.95rem;">
-              <div style="display: flex; align-items: flex-start; gap: 12px;">
-                <span style="font-size: 1.2rem;">✉️</span>
-                <div>
-                  <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--verde-menta); letter-spacing: 0.5px;">Correo Corporativo</strong>
-                  <a href="mailto:contacto@agoralaboral.cl" style="color: #ffffff; text-decoration: none; font-weight: 700;">contacto@agoralaboral.cl</a>
-                </div>
-              </div>
-
-              <div style="display: flex; align-items: flex-start; gap: 12px;">
-                <span style="font-size: 1.2rem;">💬</span>
-                <div>
-                  <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--verde-menta); letter-spacing: 0.5px;">WhatsApp Consultoría</strong>
-                  <a href="https://wa.me/56999840502" target="_blank" style="color: #ffffff; text-decoration: none; font-weight: 700;">+56 9 9984 0502</a>
-                </div>
-              </div>
-
-              <div style="display: flex; align-items: flex-start; gap: 12px;">
-                <span style="font-size: 1.2rem;">📍</span>
-                <div>
-                  <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--verde-menta); letter-spacing: 0.5px;">Cobertura</strong>
-                  <span style="color: #ffffff; font-weight: 700;">Santiago & Regiones de Chile</span>
-                </div>
-              </div>
-            </div>
+        <!-- ARTÍCULO 1: LEY KARIN -->
+        <article class="card">
+          <div>
+            <span class="card-badge" style="background: var(--coral-acento);">Ley Karin</span>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--texto-suave); margin-top: 15px; margin-bottom: 8px;">Agosto, 2026</div>
+            <h3>Criterios de la DT en Investigaciones Externas</h3>
+            <p>Análisis práctico sobre los estándares de debido proceso y los errores más comunes al sustanciar expedientes bajo la Ley N.° 21.643.</p>
           </div>
+          <a href="blog/criterios-dt-ley-karin.html" class="btn-agora btn-agora-small btn-agora-outline" style="margin-top: 15px;">Leer Artículo →</a>
+        </article>
 
-          <div style="background: #ffffff; padding: 30px; border-radius: 12px; border: 2px solid var(--morado-principal); border-left: 6px solid var(--verde-menta); box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
-            <h4 style="font-size: 1.1rem; color: var(--morado-principal); font-weight: 900; margin-bottom: 10px;">Compromiso de Resguardo</h4>
-            <p style="font-size: 0.88rem; color: var(--texto-suave); line-height: 1.5; margin-bottom: 15px; font-weight: 500;">Toda información provista está bajo estrictos protocolos de confidencialidad y reserva legal conforme a la Ley N.° 21.643.</p>
-            <div style="display: flex; gap: 15px; font-size: 0.82rem; font-weight: 900; color: var(--morado-principal);">
-              <span>✓ Respuesta &lt; 24 hrs.</span>
-              <span>✓ Sin Compromiso</span>
-            </div>
+        <!-- ARTÍCULO 2: LEY DE EQUIDAD -->
+        <article class="card">
+          <div>
+            <span class="card-badge" style="background: var(--morado-principal); border: 1px solid var(--verde-menta);">Ley de Equidad</span>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--texto-suave); margin-top: 15px; margin-bottom: 8px;">Julio, 2026</div>
+            <h3>Ley N.° 21.828: Diagnóstico de Brecha Salarial</h3>
+            <p>Claves para estructurar matrices de cargos y salarios previas a la promulgación del reglamento oficial de equidad salarial.</p>
           </div>
-        </div>
+          <a href="blog/ley-equidad-brecha-salarial.html" class="btn-agora btn-agora-small btn-agora-outline" style="margin-top: 15px;">Leer Artículo →</a>
+        </article>
+
+        <!-- ARTÍCULO 3: PERSPECTIVA DE GÉNERO -->
+        <article class="card">
+          <div>
+            <span class="card-badge" style="background: var(--coral-acento);">Perspectiva de Género</span>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--texto-suave); margin-top: 15px; margin-bottom: 8px;">Junio, 2026</div>
+            <h3>Aplicación Práctica en Protocolos Internos</h3>
+            <p>Cómo incorporar la perspectiva de género de forma imparcial y técnica en la redacción de reglamentos y toma de declaraciones.</p>
+          </div>
+          <a href="blog/perspectiva-genero-protocolos.html" class="btn-agora btn-agora-small btn-agora-outline" style="margin-top: 15px;">Leer Artículo →</a>
+        </article>
+
+        <!-- ARTÍCULO 4: DERECHOS FUNDAMENTALES -->
+        <article class="card">
+          <div>
+            <span class="card-badge" style="background: var(--morado-principal); border: 1px solid var(--verde-menta);">Derechos Fundamentales</span>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--texto-suave); margin-top: 15px; margin-bottom: 8px;">Mayo, 2026</div>
+            <h3>Tutela Laboral y Garantías Constitucionales</h3>
+            <p>Límites probatorios y resguardo de la honra y privacidad de las partes durante el proceso de investigación interna.</p>
+          </div>
+          <a href="blog/tutela-derechos-fundamentales.html" class="btn-agora btn-agora-small btn-agora-outline" style="margin-top: 15px;">Leer Artículo →</a>
+        </article>
 
       </div>
     </section>
