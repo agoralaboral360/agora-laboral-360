@@ -21,12 +21,12 @@
 
   <style>
     :root {
-      /* PALETA DE COLORES OFICIAL Y ORIGINAL ÁGORA CON ACENTO CORAL */
+      /* PALETA DE COLORES OFICIAL ÁGORA CON ACENTO CORAL */
       --morado-principal: #361e42;  
       --morado-oscuro: #211329;
-      --verde-menta: #a8e6cf;       /* EL VERDE ORIGINAL */
-      --menta-fondo: #eef9f4;       /* FONDO MENTA ORIGINAL */
-      --coral-acento: #ff6b6b;      /* Acento vibrante */
+      --verde-menta: #a8e6cf;       
+      --menta-fondo: #eef9f4;       
+      --coral-acento: #ff6b6b;      /* Acento coral vibrante */
       --fondo-pagina: #faf8fc;      
       --texto-oscuro: #211329;
       --texto-suave: #4d4054;
@@ -37,7 +37,6 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     
-    /* CAMBIO A MONTSERRAT EN TODO EL SITIO */
     body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea { 
       font-family: 'Montserrat', sans-serif !important; 
     }
@@ -79,56 +78,44 @@
 
     /* 1. PORTADA / HERO */
     .hero-banner {
-      background: var(--morado-principal);
+      position: relative;
+      background-color: var(--morado-principal);
+      background-image: linear-gradient(rgba(54, 30, 66, 0.75), rgba(33, 19, 41, 0.85)), url('portada.jpg');
+      background-size: cover;
+      background-position: center 25%;
+      background-repeat: no-repeat;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px 24px;
       border-radius: 16px;
       margin-top: 25px;
-      padding: 50px 40px;
       border: 3px solid var(--verde-menta); 
       box-shadow: 0 15px 35px rgba(54, 30, 66, 0.2);
     }
     
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero-content { color: var(--blanco); }
-    .hero-badge { background: var(--coral-acento); color: var(--blanco); font-weight: 800; font-size: 0.85rem; padding: 6px 18px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(255,107,107,0.4); }
-    .hero-content h1 { font-size: 2.8rem; line-height: 1.15; margin-bottom: 18px; color: var(--blanco); font-weight: 900; }
-    .hero-content p { font-size: 1.15rem; color: #f8fafc; margin-bottom: 30px; line-height: 1.6; font-weight: 500; }
+    .hero-content { max-width: 900px; text-align: center; color: var(--blanco); }
     
-    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
-    .btn-hero { display: inline-block; padding: 16px 28px; text-decoration: none; font-weight: 900; border-radius: 8px; font-size: 0.9rem; transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
-    .btn-hero-primary { background-color: var(--verde-menta); color: var(--morado-principal); box-shadow: 0 4px 15px rgba(168, 230, 207, 0.3); }
+    /* ETIQUETA CORAL EN PORTADA */
+    .hero-badge { background: var(--coral-acento); color: var(--blanco); font-weight: 800; font-size: 0.85rem; padding: 6px 18px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(255,107,107,0.3); }
+    
+    .hero-content h1 { font-size: 3.2rem; line-height: 1.15; margin-bottom: 18px; color: var(--blanco); font-weight: 900; text-shadow: 0 2px 15px rgba(0,0,0,0.5); }
+    .hero-content p { font-size: 1.25rem; color: #f8fafc; margin-bottom: 35px; line-height: 1.6; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+    
+    .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-hero { display: inline-block; padding: 16px 32px; text-decoration: none; font-weight: 900; border-radius: 8px; font-size: 0.95rem; transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
+    .btn-hero-primary { background-color: var(--verde-menta); color: var(--morado-principal); box-shadow: 0 6px 20px rgba(168, 230, 207, 0.3); }
     .btn-hero-primary:hover { background-color: var(--blanco); transform: translateY(-3px); }
-    .btn-hero-secondary { background-color: transparent; color: var(--blanco); border: 2px solid var(--blanco); }
+    .btn-hero-secondary { background-color: rgba(255,255,255,0.15); color: var(--blanco); border: 2px solid var(--blanco); backdrop-filter: blur(5px); }
     .btn-hero-secondary:hover { background-color: var(--blanco); color: var(--morado-principal); transform: translateY(-3px); }
-
-    /* MARCO DE LA FOTO EN PORTADA */
-    .hero-image-wrapper { position: relative; display: flex; justify-content: center; }
-    .hero-image-frame {
-      position: relative;
-      z-index: 2;
-      padding: 10px;
-      background: var(--verde-menta); 
-      border-radius: 16px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-      width: 100%;
-      max-width: 360px;
-    }
-    .hero-img {
-      width: 100%;
-      height: 380px;
-      object-fit: cover;
-      border-radius: 8px;
-      display: block;
-    }
 
     /* 2. DIAGNÓSTICO GRATUITO */
     .quiz-invite { text-align: center; background: var(--blanco); padding: 45px 30px; border-radius: 12px; border: 3px solid var(--morado-principal); box-shadow: 0 10px 30px rgba(54,30,66,0.12); margin-top: -30px; position: relative; z-index: 10; border-top: 6px solid var(--verde-menta); }
-    .quiz-badge { background: var(--morado-principal); color: var(--blanco); font-size: 0.78rem; font-weight: 900; padding: 4px 14px; border-radius: 50px; text-transform: uppercase; margin-bottom: 12px; display: inline-block; }
+    
+    /* ETIQUETA CORAL EN DIAGNÓSTICO */
+    .quiz-badge { background: var(--coral-acento); color: var(--blanco); font-size: 0.8rem; font-weight: 900; padding: 6px 16px; border-radius: 50px; text-transform: uppercase; margin-bottom: 12px; display: inline-block; box-shadow: 0 4px 10px rgba(255,107,107,0.3); }
+    
     .quiz-invite h3 { font-size: 2rem; margin-bottom: 12px; font-weight: 900; }
     .quiz-invite p { color: var(--texto-suave); margin-bottom: 25px; font-size: 1.05rem; max-width: 780px; margin-left: auto; margin-right: auto; font-weight: 500; }
 
@@ -148,7 +135,10 @@
       position: relative;
     }
     .card:hover { transform: translateY(-6px); border-top-color: var(--verde-menta); box-shadow: 0 15px 30px rgba(54, 30, 66, 0.18); }
-    .card-badge { position: absolute; top: -14px; right: 20px; background: var(--morado-principal); color: var(--blanco); font-size: 0.7rem; font-weight: 900; padding: 3px 10px; border-radius: 50px; border: 1px solid var(--verde-menta); text-transform: uppercase; }
+    
+    /* ETIQUETA CORAL SOBRE EL BORDE DE LA TARJETA */
+    .card-badge { position: absolute; top: -14px; right: 20px; background: var(--coral-acento); color: var(--blanco); font-size: 0.75rem; font-weight: 900; padding: 4px 14px; border-radius: 50px; border: none; text-transform: uppercase; box-shadow: 0 4px 10px rgba(255,107,107,0.3); }
+    
     .icon-wrapper svg { width: 38px; height: 38px; stroke: var(--morado-principal); fill: none; margin-bottom: 15px; }
     .card h3 { font-size: 1.25rem; margin-bottom: 12px; font-weight: 800; }
     .card p { font-size: 0.92rem; color: var(--texto-suave); margin-bottom: 22px; font-weight: 500; }
@@ -220,8 +210,9 @@
       .nav-links { display: none; }
       .navbar { justify-content: center; padding: 14px 16px; }
       .trust-container { flex-direction: column !important; gap: 10px !important; text-align: center !important; }
-      .hero-grid { grid-template-columns: 1fr; text-align: center; }
-      .hero-buttons { justify-content: center; }
+      .hero-banner { padding: 50px 18px; min-height: 420px; }
+      .hero-content h1 { font-size: 2.3rem; }
+      .hero-buttons { flex-direction: column; width: 100%; }
       .btn-hero { width: 100%; text-align: center; padding: 14px; }
       .resource-tabs-grid { grid-template-columns: 1fr; gap: 30px; }
       .confianza-box { flex-direction: column; }
@@ -279,33 +270,20 @@
   </section>
 
   <main>
-    <!-- 1. PORTADA CON FOTO DE CONSULTORA Y COLORES ORIGINALES -->
+    <!-- 1. PORTADA CON FOTO DE FONDO -->
     <section class="container">
       <div class="hero-banner">
-        <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">Asesoría Experta & Compliance Laboral</div>
+          <h1>¿Recibió una denuncia por Ley Karin?</h1>
+          <p>
+            Realizamos investigaciones externas imparciales, objetivas y técnicamente defendibles para proteger a su organización y garantizar el debido proceso.
+          </p>
           
-          <!-- TEXTO PORTADA -->
-          <div class="hero-content">
-            <div class="hero-badge">Asesoría Experta & Compliance Laboral</div>
-            <h1>¿Recibió una denuncia por Ley Karin?</h1>
-            <p>
-              Realizamos investigaciones externas imparciales, objetivas y técnicamente defendibles para proteger a su organización y garantizar el debido proceso.
-            </p>
-            
-            <div class="hero-buttons">
-              <a href="diagnostico/index.html" class="btn-hero btn-hero-primary">Realizar Diagnóstico Gratis →</a>
-              <a href="#contacto" class="btn-hero btn-hero-secondary">Agendar Reunión Técnica</a>
-            </div>
+          <div class="hero-buttons">
+            <a href="diagnostico/index.html" class="btn-hero btn-hero-primary">Realizar Diagnóstico Gratis →</a>
+            <a href="#contacto" class="btn-hero btn-hero-secondary">Agendar Reunión Técnica</a>
           </div>
-
-          <!-- FOTO PORTADA -->
-          <div class="hero-image-wrapper">
-            <div class="hero-image-frame">
-              <!-- Foto enviada (portada.jpg) -->
-              <img src="portada.jpg" alt="Consultora Ágora Laboral 360°" class="hero-img">
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
