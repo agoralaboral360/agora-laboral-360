@@ -21,22 +21,23 @@
 
   <style>
     :root {
-      /* PALETA DE COLORES OFICIAL ÁGORA */
+      /* PALETA DE COLORES OFICIAL Y ORIGINAL ÁGORA CON ACENTO CORAL */
       --morado-principal: #361e42;  
       --morado-oscuro: #211329;
-      --verde-menta: #2dd4bf;       
-      --menta-fondo: #f0fdfa;
-      --coral-acento: #ff6b6b;      
-      --fondo-pagina: #f8fafc;      
-      --texto-oscuro: #0f172a;
-      --texto-suave: #475569;
+      --verde-menta: #a8e6cf;       /* EL VERDE ORIGINAL */
+      --menta-fondo: #eef9f4;       /* FONDO MENTA ORIGINAL */
+      --coral-acento: #ff6b6b;      /* Acento vibrante */
+      --fondo-pagina: #faf8fc;      
+      --texto-oscuro: #211329;
+      --texto-suave: #4d4054;
       --blanco: #ffffff;
-      --borde-suave: #e2d9e8;
+      --borde-suave: #ede8f2;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     
+    /* CAMBIO A MONTSERRAT EN TODO EL SITIO */
     body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea { 
       font-family: 'Montserrat', sans-serif !important; 
     }
@@ -72,17 +73,17 @@
     /* CONTENEDORES */
     .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
     .section { padding: 75px 0; }
-    .section-bg-light { background-color: #f1f5f9; border-top: 2px solid var(--morado-principal); border-bottom: 2px solid var(--morado-principal); }
+    .section-bg-light { background-color: var(--blanco); border-top: 2px solid var(--morado-principal); border-bottom: 2px solid var(--morado-principal); }
     .section-title { font-size: 2.2rem; margin-bottom: 12px; text-align: center; text-transform: uppercase; font-weight: 900; }
     .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 850px; margin: 0 auto 45px auto; text-align: center; font-weight: 500; }
 
-    /* 1. PORTADA / HERO (2 COLUMNAS CON FOTO PROTAGÓNICA) */
+    /* 1. PORTADA / HERO */
     .hero-banner {
       background: var(--morado-principal);
       border-radius: 16px;
       margin-top: 25px;
       padding: 50px 40px;
-      border: 3px solid var(--morado-principal);
+      border: 3px solid var(--verde-menta); 
       box-shadow: 0 15px 35px rgba(54, 30, 66, 0.2);
     }
     
@@ -100,9 +101,9 @@
     
     .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
     .btn-hero { display: inline-block; padding: 16px 28px; text-decoration: none; font-weight: 900; border-radius: 8px; font-size: 0.9rem; transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
-    .btn-hero-primary { background-color: var(--verde-menta); color: var(--morado-oscuro); box-shadow: 0 6px 20px rgba(45,212,191,0.4); border: 2px solid var(--verde-menta); }
-    .btn-hero-primary:hover { background-color: var(--blanco); color: var(--morado-principal); transform: translateY(-3px); }
-    .btn-hero-secondary { background-color: rgba(255,255,255,0.15); color: var(--blanco); border: 2px solid var(--blanco); backdrop-filter: blur(8px); }
+    .btn-hero-primary { background-color: var(--verde-menta); color: var(--morado-principal); box-shadow: 0 4px 15px rgba(168, 230, 207, 0.3); }
+    .btn-hero-primary:hover { background-color: var(--blanco); transform: translateY(-3px); }
+    .btn-hero-secondary { background-color: transparent; color: var(--blanco); border: 2px solid var(--blanco); }
     .btn-hero-secondary:hover { background-color: var(--blanco); color: var(--morado-principal); transform: translateY(-3px); }
 
     /* MARCO DE LA FOTO EN PORTADA */
@@ -110,11 +111,10 @@
     .hero-image-frame {
       position: relative;
       z-index: 2;
-      padding: 8px;
-      background: linear-gradient(135deg, var(--verde-menta), var(--morado-principal));
+      padding: 10px;
+      background: var(--verde-menta); 
       border-radius: 16px;
       box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-      border: 2px solid var(--verde-menta);
       width: 100%;
       max-width: 360px;
     }
@@ -122,13 +122,13 @@
       width: 100%;
       height: 380px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 8px;
       display: block;
     }
 
     /* 2. DIAGNÓSTICO GRATUITO */
-    .quiz-invite { text-align: center; background: var(--blanco); padding: 45px 30px; border-radius: 12px; border: 3px solid var(--morado-principal); box-shadow: 0 10px 30px rgba(54,30,66,0.12); margin-top: -30px; position: relative; z-index: 10; }
-    .quiz-badge { background: var(--verde-menta); color: var(--morado-oscuro); font-size: 0.78rem; font-weight: 900; padding: 4px 14px; border-radius: 50px; text-transform: uppercase; margin-bottom: 12px; display: inline-block; }
+    .quiz-invite { text-align: center; background: var(--blanco); padding: 45px 30px; border-radius: 12px; border: 3px solid var(--morado-principal); box-shadow: 0 10px 30px rgba(54,30,66,0.12); margin-top: -30px; position: relative; z-index: 10; border-top: 6px solid var(--verde-menta); }
+    .quiz-badge { background: var(--morado-principal); color: var(--blanco); font-size: 0.78rem; font-weight: 900; padding: 4px 14px; border-radius: 50px; text-transform: uppercase; margin-bottom: 12px; display: inline-block; }
     .quiz-invite h3 { font-size: 2rem; margin-bottom: 12px; font-weight: 900; }
     .quiz-invite p { color: var(--texto-suave); margin-bottom: 25px; font-size: 1.05rem; max-width: 780px; margin-left: auto; margin-right: auto; font-weight: 500; }
 
@@ -148,7 +148,7 @@
       position: relative;
     }
     .card:hover { transform: translateY(-6px); border-top-color: var(--verde-menta); box-shadow: 0 15px 30px rgba(54, 30, 66, 0.18); }
-    .card-badge { position: absolute; top: -14px; right: 20px; background: var(--morado-principal); color: var(--verde-menta); font-size: 0.7rem; font-weight: 900; padding: 3px 10px; border-radius: 50px; border: 1px solid var(--verde-menta); text-transform: uppercase; }
+    .card-badge { position: absolute; top: -14px; right: 20px; background: var(--morado-principal); color: var(--blanco); font-size: 0.7rem; font-weight: 900; padding: 3px 10px; border-radius: 50px; border: 1px solid var(--verde-menta); text-transform: uppercase; }
     .icon-wrapper svg { width: 38px; height: 38px; stroke: var(--morado-principal); fill: none; margin-bottom: 15px; }
     .card h3 { font-size: 1.25rem; margin-bottom: 12px; font-weight: 800; }
     .card p { font-size: 0.92rem; color: var(--texto-suave); margin-bottom: 22px; font-weight: 500; }
@@ -156,8 +156,10 @@
     /* 4. ¿POR QUÉ CONFIAR EN ÁGORA? */
     .confianza-box { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; padding: 10px 0; }
     .confianza-img-wrapper { flex: 1; min-width: 320px; position: relative; display: flex; justify-content: center; }
+    
     .confianza-backdrop { position: absolute; bottom: -20px; right: 10px; width: 100px; height: 100px; background: var(--verde-menta); border-radius: 50%; opacity: 0.8; z-index: 1; }
     .confianza-backdrop-2 { position: absolute; top: -15px; left: 10px; width: 60px; height: 60px; background: var(--coral-acento); border-radius: 50%; opacity: 0.8; z-index: 1; }
+    
     .confianza-img-frame { 
       position: relative; 
       z-index: 2; 
@@ -191,25 +193,25 @@
 
     /* RECURSOS */
     .resource-tabs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; }
-    .resource-panel { background: var(--blanco); padding: 35px; border-radius: 12px; border: 2px solid var(--morado-principal); box-shadow: 0 8px 20px rgba(54, 30, 66, 0.06); }
+    .resource-panel { background: var(--menta-fondo); padding: 35px; border-radius: 12px; border: 2px solid var(--morado-principal); box-shadow: 0 8px 20px rgba(54, 30, 66, 0.06); }
     .panel-free { border-top: 6px solid var(--verde-menta); }
-    .panel-tools { border-top: 6px solid var(--coral-acento); }
+    .panel-tools { border-top: 6px solid var(--coral-acento); background: var(--blanco); }
     .panel-title { font-size: 1.4rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; font-weight: 800; }
     .panel-title svg { width: 28px; height: 28px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; }
     .resource-list { list-style: none; margin-bottom: 25px; }
     .resource-list li { margin-bottom: 12px; font-size: 0.95rem; color: var(--texto-suave); display: flex; align-items: center; gap: 10px; font-weight: 600; }
-    .resource-list li svg { width: 20px; height: 20px; stroke: var(--verde-menta); fill: none; flex-shrink: 0; }
+    .resource-list li svg { width: 20px; height: 20px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; }
 
     /* BOTONES GENERALES */
     .btn-agora { display: inline-block; padding: 14px 28px; text-decoration: none; font-weight: 900; border-radius: 8px; font-size: 0.9rem; transition: all 0.2s; border: none; cursor: pointer; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; }
-    .btn-agora-morado { background-color: var(--morado-principal); color: var(--blanco); border: 2px solid var(--morado-principal); box-shadow: 0 4px 12px rgba(54,30,66,0.3); }
-    .btn-agora-morado:hover { background-color: var(--morado-oscuro); transform: translateY(-2px); }
-    .btn-agora-outline { background-color: transparent; color: var(--morado-principal); border: 2px solid var(--morado-principal); }
+    .btn-agora-morado { background-color: var(--morado-principal); color: var(--blanco); border: 2px solid var(--morado-principal); box-shadow: 0 4px 12px rgba(54,30,66,0.2); }
+    .btn-agora-morado:hover { background-color: var(--blanco); color: var(--morado-principal); transform: translateY(-2px); }
+    .btn-agora-outline { background-color: var(--blanco); color: var(--morado-principal); border: 2px solid var(--morado-principal); }
     .btn-agora-outline:hover { background-color: var(--morado-principal); color: var(--blanco); }
     .btn-agora-small { padding: 10px 20px; font-size: 0.82rem; }
 
     /* CONTACTO */
-    .contact-form-box { background: var(--blanco); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(54, 30, 66, 0.08); border: 2px solid var(--morado-principal); }
+    .contact-form-box { background: var(--menta-fondo); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(54, 30, 66, 0.08); border: 2px solid var(--morado-principal); }
     .contact-info-box { background: var(--morado-principal); color: var(--blanco); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(54, 30, 66, 0.2); border: 2px solid var(--verde-menta); }
 
     footer { background: var(--morado-oscuro); color: var(--blanco); text-align: center; padding: 30px 24px; font-size: 0.88rem; font-weight: 600; border-top: 4px solid var(--verde-menta); }
@@ -277,14 +279,14 @@
   </section>
 
   <main>
-    <!-- 1. PORTADA CON FOTO DE CONSULTORA -->
+    <!-- 1. PORTADA CON FOTO DE CONSULTORA Y COLORES ORIGINALES -->
     <section class="container">
       <div class="hero-banner">
         <div class="hero-grid">
           
           <!-- TEXTO PORTADA -->
           <div class="hero-content">
-            <div class="hero-badge">⚡ Asesoría Experta & Compliance Laboral</div>
+            <div class="hero-badge">Asesoría Experta & Compliance Laboral</div>
             <h1>¿Recibió una denuncia por Ley Karin?</h1>
             <p>
               Realizamos investigaciones externas imparciales, objetivas y técnicamente defendibles para proteger a su organización y garantizar el debido proceso.
@@ -299,6 +301,7 @@
           <!-- FOTO PORTADA -->
           <div class="hero-image-wrapper">
             <div class="hero-image-frame">
+              <!-- Foto enviada (portada.jpg) -->
               <img src="portada.jpg" alt="Consultora Ágora Laboral 360°" class="hero-img">
             </div>
           </div>
