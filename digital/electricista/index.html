@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mario Labarca Quiroz | Electricista Profesional</title>
+  <title>Mario Labarca | Electricista Profesional</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,13 +14,14 @@
       /* PALETA DE COLORES */
       --azul-principal: #0000FF;   /* Azul puro */
       --azul-electrico: #00F0FF;   /* Azul eléctrico */
-      --blanco: #ffffff;           /* Fondo blanco */
-      --texto-oscuro: #0f172a;     /* Texto legible */
-      --fondo-suave: #f0f7ff;      /* Fondo secundario */
+      --azul-marino: #0a192f;      /* Azul marino oscuro para textos */
+      --azul-marino-profundo: #020c1b;
+      --blanco: #ffffff;
+      --fondo-suave: #f0f7ff;      /* Fondo suave secundario */
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
-    body { background-color: var(--blanco); color: var(--texto-oscuro); line-height: 1.6; }
+    body { background-color: var(--blanco); color: var(--azul-marino); line-height: 1.6; }
 
     /* NAVBAR */
     .navbar { background: var(--blanco); border-bottom: 4px solid var(--azul-principal); position: sticky; top: 0; z-index: 100; padding: 15px 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
@@ -30,28 +31,38 @@
     .nav-btn { background: var(--azul-principal); color: var(--blanco); padding: 10px 20px; border-radius: 6px; font-weight: 800; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; transition: all 0.2s; border: 2px solid var(--azul-electrico); }
     .nav-btn:hover { background: var(--azul-electrico); color: var(--azul-principal); box-shadow: 0 0 12px var(--azul-electrico); }
 
-    /* HERO */
-    .hero { padding: 30px 20px 50px; background-color: var(--blanco); color: var(--texto-oscuro); }
-    .hero-container { max-width: 1100px; margin: 0 auto; display: flex; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
-    .hero-text { flex: 1; min-width: 300px; }
-    
+    /* HERO CON GRID (Permite ordenar perfecto en celular y PC) */
+    .hero { padding: 40px 20px 60px; background-color: var(--blanco); color: var(--azul-marino); }
+    .hero-container {
+      max-width: 1100px; 
+      margin: 0 auto; 
+      display: grid; 
+      grid-template-columns: 1fr 380px; 
+      grid-template-areas: 
+        "top image" 
+        "bottom image"; 
+      gap: 15px 40px; 
+      align-items: center;
+    }
+    .hero-top { grid-area: top; }
+    .hero-bottom { grid-area: bottom; align-self: start; }
+    .hero-image { grid-area: image; text-align: center; }
+
     .badge-gratis { background: var(--azul-principal); color: var(--blanco); font-weight: 800; font-size: 0.85rem; padding: 8px 18px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 15px; border: 2px solid var(--azul-electrico); box-shadow: 0 4px 10px rgba(0,0,255,0.2); }
     
-    .hero h1 { font-size: 2.5rem; font-weight: 900; color: var(--texto-oscuro); margin-bottom: 5px; line-height: 1.1; }
-    .hero h2 { font-size: 1.2rem; font-weight: 700; color: var(--azul-principal); margin-bottom: 15px; }
+    .hero-title { font-size: 2.4rem; font-weight: 900; color: var(--azul-marino); margin-bottom: 15px; line-height: 1.1; }
     
-    /* RECUADRO DESTACADO AL PRINCIPIO */
-    .highlight-box { background: var(--azul-principal); color: var(--blanco); padding: 18px 22px; border-radius: 8px; border: 2px solid var(--azul-electrico); margin: 15px 0 20px 0; font-size: 1.05rem; font-weight: 800; box-shadow: 0 4px 15px rgba(0,0,255,0.25); text-align: left; line-height: 1.4; }
+    /* RECUADRO DESTACADO */
+    .highlight-box { background: var(--azul-principal); color: var(--blanco); padding: 18px 22px; border-radius: 8px; border: 2px solid var(--azul-electrico); margin: 15px 0 25px 0; font-size: 1.05rem; font-weight: 800; box-shadow: 0 4px 15px rgba(0,0,255,0.25); text-align: left; line-height: 1.4; }
 
-    .profile-card { background: var(--fondo-suave); color: var(--texto-oscuro); padding: 20px; border-left: 6px solid var(--azul-principal); border-top: 2px solid var(--azul-electrico); border-right: 2px solid var(--azul-electrico); border-bottom: 2px solid var(--azul-electrico); margin: 20px 0; border-radius: 4px 8px 8px 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .profile-card { background: var(--fondo-suave); color: var(--azul-marino); padding: 20px; border-left: 6px solid var(--azul-principal); border-top: 2px solid var(--azul-electrico); border-right: 2px solid var(--azul-electrico); border-bottom: 2px solid var(--azul-electrico); margin: 10px 0; border-radius: 4px 8px 8px 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .profile-card p { font-size: 0.95rem; margin-bottom: 6px; }
     .profile-card a { color: var(--azul-principal); font-weight: 700; text-decoration: none; }
 
-    .profile-img-container { flex: 1; min-width: 300px; text-align: center; }
-    .profile-img { max-width: 100%; width: 380px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,255,0.2); border: 4px solid var(--azul-electrico); display: block; margin: 0 auto; }
+    .profile-img { width: 100%; max-width: 380px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,255,0.2); border: 4px solid var(--azul-electrico); display: block; margin: 0 auto; }
 
     /* BOTONES ACCIÓN */
-    .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
+    .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
     .btn-primary { display: inline-block; background: var(--azul-principal); color: var(--blanco); padding: 16px 28px; border-radius: 6px; font-weight: 900; text-decoration: none; text-transform: uppercase; font-size: 0.95rem; transition: all 0.2s; border: 2px solid var(--azul-electrico); text-align: center; }
     .btn-primary:hover { background: var(--azul-electrico); color: var(--azul-principal); box-shadow: 0 0 15px var(--azul-electrico); transform: translateY(-2px); }
     
@@ -60,7 +71,7 @@
 
     /* SECCIONES */
     .section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
-    .section-title { text-align: center; font-size: 2.2rem; font-weight: 900; margin-bottom: 40px; color: var(--texto-oscuro); text-transform: uppercase; letter-spacing: 1px; }
+    .section-title { text-align: center; font-size: 2.2rem; font-weight: 900; margin-bottom: 40px; color: var(--azul-marino); text-transform: uppercase; letter-spacing: 1px; }
     .section-title span { color: var(--azul-principal); }
 
     /* SERVICIOS */
@@ -68,8 +79,8 @@
     .service-card { background: var(--blanco); border: 2px solid var(--azul-electrico); border-radius: 12px; padding: 30px 20px; text-align: center; transition: all 0.2s; box-shadow: 0 4px 10px rgba(0,0,0,0.04); }
     .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 255, 0.15); border-color: var(--azul-principal); }
     .service-icon { font-size: 2.8rem; margin-bottom: 15px; }
-    .service-card h3 { font-size: 1.15rem; font-weight: 800; color: var(--texto-oscuro); margin-bottom: 10px; }
-    .service-card p { font-size: 0.95rem; color: var(--texto-oscuro); }
+    .service-card h3 { font-size: 1.15rem; font-weight: 800; color: var(--azul-marino); margin-bottom: 10px; }
+    .service-card p { font-size: 0.95rem; color: var(--azul-marino); }
 
     /* GALERÍA DE TRABAJOS */
     .bg-azul-suave { background-color: var(--fondo-suave); border-top: 2px solid var(--azul-electrico); border-bottom: 2px solid var(--azul-electrico); }
@@ -77,21 +88,21 @@
     .gallery-card { background: var(--blanco); border-radius: 10px; overflow: hidden; border: 2px solid var(--azul-electrico); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
     .gallery-img { width: 100%; height: 240px; object-fit: cover; display: block; border-bottom: 3px solid var(--azul-principal); }
     .gallery-info { padding: 20px; text-align: center; }
-    .gallery-info h4 { font-size: 1.05rem; font-weight: 800; color: var(--texto-oscuro); margin-bottom: 5px; }
+    .gallery-info h4 { font-size: 1.05rem; font-weight: 800; color: var(--azul-marino); margin-bottom: 5px; }
     .gallery-info p { font-size: 0.9rem; color: #475569; }
 
     /* COMENTARIOS */
     .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
     .review-card { background: var(--blanco); border-left: 5px solid var(--azul-principal); border-top: 2px solid var(--azul-electrico); border-right: 2px solid var(--azul-electrico); border-bottom: 2px solid var(--azul-electrico); padding: 25px; border-radius: 0 8px 8px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .stars { color: var(--azul-principal); font-size: 1.2rem; margin-bottom: 10px; }
-    .review-text { font-size: 0.95rem; font-style: italic; margin-bottom: 15px; color: var(--texto-oscuro); }
+    .review-text { font-size: 0.95rem; font-style: italic; margin-bottom: 15px; color: var(--azul-marino); }
     .review-author { font-weight: 800; color: var(--azul-principal); font-size: 0.9rem; text-transform: uppercase; }
 
     /* FOOTER */
-    footer { background: var(--blanco); color: var(--texto-oscuro); text-align: center; padding: 50px 20px 30px; border-top: 4px solid var(--azul-principal); }
+    footer { background: var(--blanco); color: var(--azul-marino); text-align: center; padding: 50px 20px 30px; border-top: 4px solid var(--azul-principal); }
     .contact-box { background: var(--fondo-suave); padding: 35px 25px; border-radius: 12px; max-width: 650px; margin: 0 auto 30px; border: 2px solid var(--azul-electrico); box-shadow: 0 10px 25px rgba(0,0,255,0.08); }
     .contact-box h3 { font-size: 1.5rem; margin-bottom: 10px; color: var(--azul-principal); font-weight: 900; }
-    .contact-box p { font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; color: var(--texto-oscuro); }
+    .contact-box p { font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; color: var(--azul-marino); }
     
     .social-btns { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
     .btn-social { display: inline-flex; align-items: center; gap: 8px; background: var(--azul-principal); color: var(--blanco); padding: 12px 22px; border-radius: 6px; font-weight: 800; text-decoration: none; font-size: 0.9rem; border: 2px solid var(--azul-electrico); transition: all 0.2s; }
@@ -99,10 +110,17 @@
 
     .footer-copy { font-size: 0.85rem; color: #64748b; border-top: 1px solid #e2e8f0; padding-top: 20px; }
 
-    /* RESPONSIVE CELULARES: MUESTRA TEXTO PRIMERO Y FOTO DESPUÉS */
+    /* RESPONSIVE CELULARES: REORDENACIÓN PERFECTA */
     @media (max-width: 768px) {
-      .hero { text-align: center; }
-      .hero-container { flex-direction: column; }
+      .hero-container { 
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+          "top" 
+          "image" 
+          "bottom"; 
+        gap: 20px; 
+        text-align: center; 
+      }
       .highlight-box { text-align: center; }
       .profile-card { text-align: left; }
       .btn-group { justify-content: center; }
@@ -123,22 +141,30 @@
   <header class="hero">
     <div class="hero-container">
       
-      <!-- CONTENIDO PRINCIPAL (PRIMERO EN CELULARES) -->
-      <div class="hero-text">
+      <!-- CONTENIDO SUPERIOR (Texto, Frase y Botones - 1° en Celulares) -->
+      <div class="hero-top">
         <div class="badge-gratis">⚡ Presupuesto 100% Gratuito</div>
-        <h1>Mario Labarca Quiroz</h1>
-        <h2>Electricista Industrial y Domiciliario</h2>
+        <h1 class="hero-title">Electricista Industrial y Domiciliario</h1>
 
-        <!-- FRASE DE EVALUACIONES DESTACADA ARRIBA DEL TODO -->
+        <!-- FRASE DE EVALUACIONES DESTACADA -->
         <div class="highlight-box">
           ⚡ Evaluaciones sin costo para reparaciones, instalaciones y proyectos eléctricos seguros y normados.
         </div>
         
+        <!-- BOTONES -->
         <div class="btn-group">
           <a href="https://wa.me/56992232623?text=Hola%20Mario,%20quisiera%20solicitar%20un%20presupuesto%20gratuito%20para%20un%20trabajo%20el%C3%A9ctrico." target="_blank" class="btn-primary">Solicitar Presupuesto Gratis →</a>
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mariolabarca56@gmail.com" target="_blank" class="btn-secondary">Enviar Correo ✉️</a>
         </div>
+      </div>
+      
+      <!-- FOTO DE MARIO (2° en Celulares, a la derecha en PC) -->
+      <div class="hero-image">
+        <img src="image_0262e7.jpg" alt="Mario Labarca Quiroz - Electricista" class="profile-img">
+      </div>
 
+      <!-- TARJETA DE DATOS (3° en Celulares, debajo de los botones en PC) -->
+      <div class="hero-bottom">
         <div class="profile-card">
           <p>🎓 <strong>Formación:</strong> IP INACAP</p>
           <p>📝 <strong>RUT:</strong> 8.027.653-2</p>
@@ -146,11 +172,6 @@
           <p>✉️ <strong>Correo:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mariolabarca56@gmail.com" target="_blank">mariolabarca56@gmail.com</a></p>
           <p>📷 <strong>Instagram:</strong> <a href="https://www.instagram.com/mario.electricista" target="_blank">@mario.electricista</a></p>
         </div>
-      </div>
-      
-      <!-- FOTO DE MARIO (AHORA ABAJO DEL TEXTO EN CELULAR) -->
-      <div class="profile-img-container">
-        <img src="image_0262e7.jpg" alt="Mario Labarca Quiroz - Electricista" class="profile-img">
       </div>
 
     </div>
@@ -260,7 +281,7 @@
       </div>
     </div>
     <div class="footer-copy">
-      <p>Mario Labarca Quiroz | RUT: 8.027.653-2 | Formación IP INACAP</p>
+      <p>Mario Labarca | RUT: 8.027.653-2 | Formación IP INACAP</p>
       <p style="margin-top: 8px;">© 2026 Todos los derechos reservados.</p>
     </div>
   </footer>
