@@ -9,7 +9,6 @@
   <meta property="og:url" content="https://agoralaboral.cl/">
   <meta property="og:title" content="Ágora Laboral 360° | Consultoría y Compliance Ley Karin">
   <meta property="og:description" content="Proteja su organización frente a la Ley 21.643. Diagnósticos, auditoría de RIOHS e investigaciones laborales externas.">
-  <!-- LÍNEA CORREGIDA PARA VISTA PREVIA (usando .jpeg) -->
   <meta property="og:image" content="https://agoralaboral.cl/portada.jpeg">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -81,7 +80,6 @@
     .hero-banner {
       position: relative;
       background-color: var(--morado-principal);
-      /* AQUÍ ESTÁ EL NOMBRE CORRECTO DE TU FOTO: portada.jpeg */
       background-image: linear-gradient(rgba(54, 30, 66, 0.75), rgba(33, 19, 41, 0.85)), url('portada.jpeg');
       background-size: cover;
       background-position: center 25%;
@@ -98,8 +96,6 @@
     }
     
     .hero-content { max-width: 900px; text-align: center; color: var(--blanco); }
-    
-    /* ETIQUETA CORAL EN PORTADA */
     .hero-badge { background: var(--coral-acento); color: var(--blanco); font-weight: 800; font-size: 0.85rem; padding: 6px 18px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(255,107,107,0.3); }
     
     .hero-content h1 { font-size: 3.2rem; line-height: 1.15; margin-bottom: 18px; color: var(--blanco); font-weight: 900; text-shadow: 0 2px 15px rgba(0,0,0,0.5); }
@@ -114,10 +110,7 @@
 
     /* 2. DIAGNÓSTICO GRATUITO */
     .quiz-invite { text-align: center; background: var(--blanco); padding: 45px 30px; border-radius: 12px; border: 3px solid var(--morado-principal); box-shadow: 0 10px 30px rgba(54,30,66,0.12); margin-top: -30px; position: relative; z-index: 10; border-top: 6px solid var(--verde-menta); }
-    
-    /* ETIQUETA CORAL EN DIAGNÓSTICO */
     .quiz-badge { background: var(--coral-acento); color: var(--blanco); font-size: 0.8rem; font-weight: 900; padding: 6px 16px; border-radius: 50px; text-transform: uppercase; margin-bottom: 12px; display: inline-block; box-shadow: 0 4px 10px rgba(255,107,107,0.3); }
-    
     .quiz-invite h3 { font-size: 2rem; margin-bottom: 12px; font-weight: 900; }
     .quiz-invite p { color: var(--texto-suave); margin-bottom: 25px; font-size: 1.05rem; max-width: 780px; margin-left: auto; margin-right: auto; font-weight: 500; }
 
@@ -137,10 +130,7 @@
       position: relative;
     }
     .card:hover { transform: translateY(-6px); border-top-color: var(--verde-menta); box-shadow: 0 15px 30px rgba(54, 30, 66, 0.18); }
-    
-    /* ETIQUETA CORAL SOBRE EL BORDE DE LA TARJETA */
     .card-badge { position: absolute; top: -14px; right: 20px; background: var(--coral-acento); color: var(--blanco); font-size: 0.75rem; font-weight: 900; padding: 4px 14px; border-radius: 50px; border: none; text-transform: uppercase; box-shadow: 0 4px 10px rgba(255,107,107,0.3); }
-    
     .icon-wrapper svg { width: 38px; height: 38px; stroke: var(--morado-principal); fill: none; margin-bottom: 15px; }
     .card h3 { font-size: 1.25rem; margin-bottom: 12px; font-weight: 800; }
     .card p { font-size: 0.92rem; color: var(--texto-suave); margin-bottom: 22px; font-weight: 500; }
@@ -192,13 +182,25 @@
     .resource-list li { margin-bottom: 12px; font-size: 0.95rem; color: var(--texto-suave); display: flex; align-items: center; gap: 10px; font-weight: 600; }
     .resource-list li svg { width: 20px; height: 20px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; }
 
-    /* BOTONES GENERALES */
+    /* BOTONES GENERALES (ACTUALIZADOS A FONDO MORADO) */
     .btn-agora { display: inline-block; padding: 14px 28px; text-decoration: none; font-weight: 900; border-radius: 8px; font-size: 0.9rem; transition: all 0.2s; border: none; cursor: pointer; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; }
     .btn-agora-morado { background-color: var(--morado-principal); color: var(--blanco); border: 2px solid var(--morado-principal); box-shadow: 0 4px 12px rgba(54,30,66,0.2); }
     .btn-agora-morado:hover { background-color: var(--morado-oscuro); transform: translateY(-2px); }
-    .btn-agora-outline { background-color: var(--blanco); color: var(--morado-principal); border: 2px solid var(--morado-principal); }
-    .btn-agora-outline:hover { background-color: var(--morado-principal); color: var(--blanco); }
-    .btn-agora-small { padding: 10px 20px; font-size: 0.82rem; }
+    
+    /* BOTONES DE TARJETAS NO BLANCOS (MORADO SÓLIDO CON HOVER VERDE MENTA) */
+    .btn-agora-outline { 
+      background-color: var(--morado-principal); 
+      color: var(--blanco); 
+      border: 2px solid var(--morado-principal); 
+      box-shadow: 0 4px 12px rgba(54,30,66,0.15);
+    }
+    .btn-agora-outline:hover { 
+      background-color: var(--verde-menta); 
+      color: var(--morado-principal); 
+      border-color: var(--verde-menta);
+      transform: translateY(-2px);
+    }
+    .btn-agora-small { padding: 12px 20px; font-size: 0.85rem; }
 
     /* CONTACTO */
     .contact-form-box { background: var(--menta-fondo); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(54, 30, 66, 0.08); border: 2px solid var(--morado-principal); }
