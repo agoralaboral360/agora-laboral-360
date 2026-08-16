@@ -11,18 +11,18 @@
 
   <style>
     :root {
-      /* PALETA DE COLORES OFICIAL */
+      /* PALETA DE COLORES */
       --azul-principal: #0000FF;   /* Azul puro */
       --azul-electrico: #00F0FF;   /* Azul eléctrico */
-      --blanco: #ffffff;           /* Fondo blanco principal */
-      --texto-oscuro: #0f172a;     /* Texto para alta legibilidad */
-      --fondo-suave: #f0f7ff;      /* Fondo suave secundario */
+      --blanco: #ffffff;           /* Fondo blanco */
+      --texto-oscuro: #0f172a;     /* Texto legible */
+      --fondo-suave: #f0f7ff;      /* Fondo secundario */
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
     body { background-color: var(--blanco); color: var(--texto-oscuro); line-height: 1.6; }
 
-    /* NAVBAR (FONDO BLANCO) */
+    /* NAVBAR */
     .navbar { background: var(--blanco); border-bottom: 4px solid var(--azul-principal); position: sticky; top: 0; z-index: 100; padding: 15px 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
     .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
     .logo { font-size: 1.3rem; font-weight: 900; color: var(--azul-principal); text-decoration: none; text-transform: uppercase; }
@@ -31,29 +31,27 @@
     .nav-btn:hover { background: var(--azul-electrico); color: var(--azul-principal); box-shadow: 0 0 12px var(--azul-electrico); }
 
     /* HERO */
-    .hero { padding: 40px 20px 60px; background-color: var(--blanco); color: var(--texto-oscuro); }
+    .hero { padding: 30px 20px 50px; background-color: var(--blanco); color: var(--texto-oscuro); }
     .hero-container { max-width: 1100px; margin: 0 auto; display: flex; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
     .hero-text { flex: 1; min-width: 300px; }
     
-    /* BADGE CON ÍCONO ELÉCTRICO ⚡ */
     .badge-gratis { background: var(--azul-principal); color: var(--blanco); font-weight: 800; font-size: 0.85rem; padding: 8px 18px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 15px; border: 2px solid var(--azul-electrico); box-shadow: 0 4px 10px rgba(0,0,255,0.2); }
     
-    .hero h1 { font-size: 2.8rem; font-weight: 900; color: var(--texto-oscuro); margin-bottom: 5px; line-height: 1.1; }
-    .hero h2 { font-size: 1.3rem; font-weight: 700; color: var(--azul-principal); margin-bottom: 20px; }
+    .hero h1 { font-size: 2.5rem; font-weight: 900; color: var(--texto-oscuro); margin-bottom: 5px; line-height: 1.1; }
+    .hero h2 { font-size: 1.2rem; font-weight: 700; color: var(--azul-principal); margin-bottom: 15px; }
     
+    /* RECUADRO DESTACADO AL PRINCIPIO */
+    .highlight-box { background: var(--azul-principal); color: var(--blanco); padding: 18px 22px; border-radius: 8px; border: 2px solid var(--azul-electrico); margin: 15px 0 20px 0; font-size: 1.05rem; font-weight: 800; box-shadow: 0 4px 15px rgba(0,0,255,0.25); text-align: left; line-height: 1.4; }
+
     .profile-card { background: var(--fondo-suave); color: var(--texto-oscuro); padding: 20px; border-left: 6px solid var(--azul-principal); border-top: 2px solid var(--azul-electrico); border-right: 2px solid var(--azul-electrico); border-bottom: 2px solid var(--azul-electrico); margin: 20px 0; border-radius: 4px 8px 8px 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .profile-card p { font-size: 0.95rem; margin-bottom: 6px; }
     .profile-card a { color: var(--azul-principal); font-weight: 700; text-decoration: none; }
-    .profile-card a:hover { text-decoration: underline; }
-
-    /* RECUADRO DESTACADO */
-    .highlight-box { background: var(--azul-principal); color: var(--blanco); padding: 18px 22px; border-radius: 8px; border: 2px solid var(--azul-electrico); margin: 20px 0; font-size: 1.05rem; font-weight: 800; box-shadow: 0 4px 15px rgba(0,0,255,0.25); text-align: left; line-height: 1.4; }
 
     .profile-img-container { flex: 1; min-width: 300px; text-align: center; }
     .profile-img { max-width: 100%; width: 380px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,255,0.2); border: 4px solid var(--azul-electrico); display: block; margin: 0 auto; }
 
     /* BOTONES ACCIÓN */
-    .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+    .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
     .btn-primary { display: inline-block; background: var(--azul-principal); color: var(--blanco); padding: 16px 28px; border-radius: 6px; font-weight: 900; text-decoration: none; text-transform: uppercase; font-size: 0.95rem; transition: all 0.2s; border: 2px solid var(--azul-electrico); text-align: center; }
     .btn-primary:hover { background: var(--azul-electrico); color: var(--azul-principal); box-shadow: 0 0 15px var(--azul-electrico); transform: translateY(-2px); }
     
@@ -61,8 +59,8 @@
     .btn-secondary:hover { background: var(--azul-principal); color: var(--blanco); }
 
     /* SECCIONES */
-    .section { padding: 70px 20px; max-width: 1100px; margin: 0 auto; }
-    .section-title { text-align: center; font-size: 2.2rem; font-weight: 900; margin-bottom: 45px; color: var(--texto-oscuro); text-transform: uppercase; letter-spacing: 1px; }
+    .section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
+    .section-title { text-align: center; font-size: 2.2rem; font-weight: 900; margin-bottom: 40px; color: var(--texto-oscuro); text-transform: uppercase; letter-spacing: 1px; }
     .section-title span { color: var(--azul-principal); }
 
     /* SERVICIOS */
@@ -89,21 +87,23 @@
     .review-text { font-size: 0.95rem; font-style: italic; margin-bottom: 15px; color: var(--texto-oscuro); }
     .review-author { font-weight: 800; color: var(--azul-principal); font-size: 0.9rem; text-transform: uppercase; }
 
-    /* FOOTER (FONDO BLANCO / ACCENTOS AZULES) */
-    footer { background: var(--blanco); color: var(--texto-oscuro); text-align: center; padding: 60px 20px 30px; border-top: 4px solid var(--azul-principal); }
-    .contact-box { background: var(--fondo-suave); padding: 40px 30px; border-radius: 12px; max-width: 650px; margin: 0 auto 40px; border: 2px solid var(--azul-electrico); box-shadow: 0 10px 25px rgba(0,0,255,0.08); }
-    .contact-box h3 { font-size: 1.6rem; margin-bottom: 10px; color: var(--azul-principal); font-weight: 900; }
+    /* FOOTER */
+    footer { background: var(--blanco); color: var(--texto-oscuro); text-align: center; padding: 50px 20px 30px; border-top: 4px solid var(--azul-principal); }
+    .contact-box { background: var(--fondo-suave); padding: 35px 25px; border-radius: 12px; max-width: 650px; margin: 0 auto 30px; border: 2px solid var(--azul-electrico); box-shadow: 0 10px 25px rgba(0,0,255,0.08); }
+    .contact-box h3 { font-size: 1.5rem; margin-bottom: 10px; color: var(--azul-principal); font-weight: 900; }
     .contact-box p { font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; color: var(--texto-oscuro); }
     
-    .social-btns { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 25px; }
+    .social-btns { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
     .btn-social { display: inline-flex; align-items: center; gap: 8px; background: var(--azul-principal); color: var(--blanco); padding: 12px 22px; border-radius: 6px; font-weight: 800; text-decoration: none; font-size: 0.9rem; border: 2px solid var(--azul-electrico); transition: all 0.2s; }
     .btn-social:hover { background: var(--azul-electrico); color: var(--azul-principal); box-shadow: 0 0 12px var(--azul-electrico); }
 
-    .footer-copy { font-size: 0.85rem; color: #64748b; border-top: 1px solid #e2e8f0; padding-top: 25px; }
+    .footer-copy { font-size: 0.85rem; color: #64748b; border-top: 1px solid #e2e8f0; padding-top: 20px; }
 
+    /* RESPONSIVE CELULARES: MUESTRA TEXTO PRIMERO Y FOTO DESPUÉS */
     @media (max-width: 768px) {
       .hero { text-align: center; }
-      .hero-container { flex-direction: column-reverse; }
+      .hero-container { flex-direction: column; }
+      .highlight-box { text-align: center; }
       .profile-card { text-align: left; }
       .btn-group { justify-content: center; }
     }
@@ -122,19 +122,14 @@
   <!-- HERO SECTION -->
   <header class="hero">
     <div class="hero-container">
+      
+      <!-- CONTENIDO PRINCIPAL (PRIMERO EN CELULARES) -->
       <div class="hero-text">
         <div class="badge-gratis">⚡ Presupuesto 100% Gratuito</div>
         <h1>Mario Labarca Quiroz</h1>
         <h2>Electricista Industrial y Domiciliario</h2>
-        
-        <div class="profile-card">
-          <p>🎓 <strong>Formación:</strong> IP INACAP</p>
-          <p>📝 <strong>RUT:</strong> 8.027.653-2</p>
-          <p>📞 <strong>Celular:</strong> <a href="tel:+56992232623">+56 9 9223 2623</a></p>
-          <p>✉️ <strong>Correo:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mariolabarca56@gmail.com" target="_blank">mariolabarca56@gmail.com</a></p>
-          <p>📷 <strong>Instagram:</strong> <a href="https://www.instagram.com/mario.electricista" target="_blank">@mario.electricista</a></p>
-        </div>
 
+        <!-- FRASE DE EVALUACIONES DESTACADA ARRIBA DEL TODO -->
         <div class="highlight-box">
           ⚡ Evaluaciones sin costo para reparaciones, instalaciones y proyectos eléctricos seguros y normados.
         </div>
@@ -143,12 +138,21 @@
           <a href="https://wa.me/56992232623?text=Hola%20Mario,%20quisiera%20solicitar%20un%20presupuesto%20gratuito%20para%20un%20trabajo%20el%C3%A9ctrico." target="_blank" class="btn-primary">Solicitar Presupuesto Gratis →</a>
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mariolabarca56@gmail.com" target="_blank" class="btn-secondary">Enviar Correo ✉️</a>
         </div>
+
+        <div class="profile-card">
+          <p>🎓 <strong>Formación:</strong> IP INACAP</p>
+          <p>📝 <strong>RUT:</strong> 8.027.653-2</p>
+          <p>📞 <strong>Celular:</strong> <a href="tel:+56992232623">+56 9 9223 2623</a></p>
+          <p>✉️ <strong>Correo:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mariolabarca56@gmail.com" target="_blank">mariolabarca56@gmail.com</a></p>
+          <p>📷 <strong>Instagram:</strong> <a href="https://www.instagram.com/mario.electricista" target="_blank">@mario.electricista</a></p>
+        </div>
       </div>
       
+      <!-- FOTO DE MARIO (AHORA ABAJO DEL TEXTO EN CELULAR) -->
       <div class="profile-img-container">
-        <!-- FOTO DE PERFIL MARIO -->
         <img src="image_0262e7.jpg" alt="Mario Labarca Quiroz - Electricista" class="profile-img">
       </div>
+
     </div>
   </header>
 
@@ -184,7 +188,7 @@
     </div>
   </section>
 
-  <!-- TRABAJOS REALIZADOS (ENLACES DE IMAGEN ESTABLES Y PROBADOS) -->
+  <!-- TRABAJOS REALIZADOS -->
   <section class="section bg-azul-suave" style="max-width: 100%;">
     <div style="max-width: 1100px; margin: 0 auto;">
       <h2 class="section-title">Trabajos <span>Realizados</span></h2>
