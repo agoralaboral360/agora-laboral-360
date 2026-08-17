@@ -23,87 +23,87 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Montserrat', sans-serif !important; background-color: var(--fondo-pagina); color: var(--azul-petroleo); line-height: 1.6; }
+    body { font-family: 'Montserrat', sans-serif !important; background-color: var(--fondo-pagina); color: var(--azul-petroleo); line-height: 1.5; }
 
-    /* NAVEGACIÓN */
-    .header { background-color: var(--blanco); border-bottom: 3px solid var(--verde-salvia); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-    .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
-    .logo-text { font-weight: 900; font-size: 1.15rem; color: var(--azul-petroleo); text-decoration: none; letter-spacing: -0.5px; }
+    /* NAVEGACIÓN COMPACTA */
+    .header { background-color: var(--blanco); border-bottom: 3px solid var(--verde-salvia); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+    .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; }
+    .logo-text { font-weight: 900; font-size: 1.1rem; color: var(--azul-petroleo); text-decoration: none; letter-spacing: -0.5px; }
     .logo-text span { color: var(--verde-salvia); border-bottom: 3px solid var(--terracota); }
     
-    .nav-links { display: flex; gap: 24px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--azul-petroleo); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s; }
+    .nav-links { display: flex; gap: 20px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--azul-petroleo); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s; }
     .nav-links a:hover { color: var(--verde-salvia); }
 
-    /* PORTADA / HERO CON FOTO DE PERFIL */
-    .hero { max-width: 1200px; margin: 0 auto; padding: 60px 24px; display: flex; align-items: center; gap: 50px; flex-wrap: wrap-reverse; }
-    .hero-text { flex: 1; min-width: 320px; }
-    .hero-badge { background: var(--verde-eucalipto); color: var(--azul-petroleo); font-weight: 800; font-size: 0.8rem; padding: 6px 18px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 18px; letter-spacing: 0.5px; }
-    .hero h1 { font-size: 2.5rem; font-weight: 900; color: var(--azul-petroleo); margin-bottom: 10px; line-height: 1.2; letter-spacing: -0.5px; }
-    .hero h2 { font-size: 1.25rem; font-weight: 700; color: var(--verde-salvia); margin-bottom: 18px; }
-    .hero p { font-size: 1.05rem; color: var(--gris-verdoso); margin-bottom: 30px; font-weight: 500; }
+    /* PORTADA / HERO AJUSTADA (MENOS ESPACIO) */
+    .hero { max-width: 1200px; margin: 0 auto; padding: 25px 24px 15px 24px; display: flex; align-items: center; gap: 35px; flex-wrap: wrap-reverse; }
+    .hero-text { flex: 1; min-width: 300px; }
+    .hero-badge { background: var(--verde-eucalipto); color: var(--azul-petroleo); font-weight: 800; font-size: 0.75rem; padding: 4px 14px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 12px; letter-spacing: 0.5px; }
+    .hero h1 { font-size: 2.2rem; font-weight: 900; color: var(--azul-petroleo); margin-bottom: 4px; line-height: 1.15; letter-spacing: -0.5px; }
+    .hero h2 { font-size: 1.15rem; font-weight: 700; color: var(--verde-salvia); margin-bottom: 12px; }
+    .hero p { font-size: 0.98rem; color: var(--gris-verdoso); margin-bottom: 20px; font-weight: 500; }
     
-    .hero-img-container { flex: 1; min-width: 300px; display: flex; justify-content: center; }
-    .hero-img-frame { position: relative; border-radius: 16px; border: 4px solid var(--verde-eucalipto); padding: 8px; background: var(--blanco); box-shadow: 0 15px 35px rgba(38, 58, 58, 0.08); max-width: 420px; width: 100%; }
-    .hero-img { width: 100%; height: auto; border-radius: 10px; display: block; object-fit: cover; }
+    .hero-img-container { flex: 1; min-width: 260px; display: flex; justify-content: center; }
+    .hero-img-frame { position: relative; border-radius: 14px; border: 3px solid var(--verde-eucalipto); padding: 6px; background: var(--blanco); box-shadow: 0 10px 25px rgba(38, 58, 58, 0.08); max-width: 320px; width: 100%; }
+    .hero-img { width: 100%; height: auto; border-radius: 8px; display: block; object-fit: cover; }
 
-    /* DIAGNÓSTICO GRATIS */
-    .quiz-invite { text-align: center; background: var(--blanco); padding: 45px 30px; border-radius: 12px; border: 2px solid var(--verde-salvia); box-shadow: 0 10px 30px rgba(38, 58, 58, 0.08); margin: -20px auto 60px auto; max-width: 900px; position: relative; z-index: 10; border-top: 6px solid var(--terracota); }
-    .quiz-badge { background: var(--terracota); color: var(--blanco); font-size: 0.8rem; font-weight: 800; padding: 6px 16px; border-radius: 50px; text-transform: uppercase; margin-bottom: 15px; display: inline-block; letter-spacing: 0.5px; }
-    .quiz-invite h3 { font-size: 1.7rem; color: var(--azul-petroleo); margin-bottom: 12px; font-weight: 900; letter-spacing: -0.5px; }
-    .quiz-invite p { color: var(--gris-verdoso); margin-bottom: 25px; font-size: 1.05rem; max-width: 780px; margin-left: auto; margin-right: auto; font-weight: 500; line-height: 1.6; }
+    /* DIAGNÓSTICO GRATIS - POSICIÓN DESTACADA SUPERIOR */
+    .quiz-invite { text-align: center; background: var(--blanco); padding: 25px 25px; border-radius: 12px; border: 2px solid var(--verde-salvia); box-shadow: 0 8px 25px rgba(38, 58, 58, 0.06); margin: 15px auto 40px auto; max-width: 1200px; position: relative; z-index: 10; border-top: 5px solid var(--terracota); }
+    .quiz-badge { background: var(--terracota); color: var(--blanco); font-size: 0.75rem; font-weight: 800; padding: 4px 14px; border-radius: 50px; text-transform: uppercase; margin-bottom: 10px; display: inline-block; letter-spacing: 0.5px; }
+    .quiz-invite h3 { font-size: 1.4rem; color: var(--azul-petroleo); margin-bottom: 8px; font-weight: 900; letter-spacing: -0.5px; }
+    .quiz-invite p { color: var(--gris-verdoso); margin-bottom: 18px; font-size: 0.95rem; max-width: 850px; margin-left: auto; margin-right: auto; font-weight: 500; line-height: 1.5; }
 
     /* PERFIL PROFESIONAL */
-    .perfil-section { background: var(--blanco); border-top: 2px solid var(--verde-eucalipto); border-bottom: 2px solid var(--verde-eucalipto); padding: 70px 0; }
-    .perfil-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .perfil-card { background: var(--fondo-pagina); padding: 30px; border-radius: 12px; border-left: 5px solid var(--terracota); }
-    .perfil-card h3 { font-size: 1.2rem; color: var(--azul-petroleo); margin-bottom: 10px; font-weight: 800; }
-    .perfil-card p { font-size: 0.95rem; color: var(--gris-verdoso); font-weight: 500; }
+    .perfil-section { background: var(--blanco); border-top: 2px solid var(--verde-eucalipto); border-bottom: 2px solid var(--verde-eucalipto); padding: 50px 0; }
+    .perfil-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .perfil-card { background: var(--fondo-pagina); padding: 25px; border-radius: 10px; border-left: 5px solid var(--terracota); }
+    .perfil-card h3 { font-size: 1.1rem; color: var(--azul-petroleo); margin-bottom: 8px; font-weight: 800; }
+    .perfil-card p { font-size: 0.9rem; color: var(--gris-verdoso); font-weight: 500; }
 
     /* CONTENEDORES Y SERVICIOS */
-    .container { max-width: 1200px; margin: 0 auto; padding: 70px 24px; }
-    .section-title { font-size: 2.1rem; color: var(--azul-petroleo); text-align: center; font-weight: 900; margin-bottom: 12px; text-transform: uppercase; letter-spacing: -0.5px; }
-    .section-subtitle { text-align: center; color: var(--gris-verdoso); max-width: 750px; margin: 0 auto 50px; font-size: 1.05rem; font-weight: 500; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+    .section-title { font-size: 1.8rem; color: var(--azul-petroleo); text-align: center; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: -0.5px; }
+    .section-subtitle { text-align: center; color: var(--gris-verdoso); max-width: 750px; margin: 0 auto 35px; font-size: 0.98rem; font-weight: 500; }
     
-    .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
-    .card-service { background: var(--blanco); padding: 35px 25px; border-radius: 12px; border: 2px solid var(--verde-eucalipto); border-top: 6px solid var(--verde-salvia); box-shadow: 0 8px 20px rgba(38, 58, 58, 0.03); transition: transform 0.2s; }
-    .card-service:hover { transform: translateY(-4px); }
-    .card-service h3 { font-size: 1.25rem; color: var(--azul-petroleo); margin-bottom: 12px; font-weight: 800; }
-    .card-service p { font-size: 0.92rem; color: var(--gris-verdoso); font-weight: 500; }
+    .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .card-service { background: var(--blanco); padding: 28px 20px; border-radius: 10px; border: 2px solid var(--verde-eucalipto); border-top: 5px solid var(--verde-salvia); box-shadow: 0 6px 16px rgba(38, 58, 58, 0.03); transition: transform 0.2s; }
+    .card-service:hover { transform: translateY(-3px); }
+    .card-service h3 { font-size: 1.15rem; color: var(--azul-petroleo); margin-bottom: 10px; font-weight: 800; }
+    .card-service p { font-size: 0.88rem; color: var(--gris-verdoso); font-weight: 500; }
 
     /* BANNER NORMATIVO */
-    .normativa-box { background: var(--blanco); border: 2px solid var(--verde-salvia); border-radius: 12px; padding: 40px; margin: 40px 0; border-left: 8px solid var(--terracota); box-shadow: 0 6px 18px rgba(0,0,0,0.02); }
-    .normativa-box h3 { font-size: 1.5rem; color: var(--azul-petroleo); font-weight: 800; margin-bottom: 15px; }
+    .normativa-box { background: var(--blanco); border: 2px solid var(--verde-salvia); border-radius: 10px; padding: 30px; margin: 30px 0; border-left: 6px solid var(--terracota); box-shadow: 0 4px 14px rgba(0,0,0,0.02); }
+    .normativa-box h3 { font-size: 1.3rem; color: var(--azul-petroleo); font-weight: 800; margin-bottom: 12px; }
     .normativa-list { list-style: none; padding: 0; }
-    .normativa-list li { margin-bottom: 12px; font-weight: 600; color: var(--azul-petroleo); display: flex; align-items: center; gap: 12px; font-size: 0.98rem; }
+    .normativa-list li { margin-bottom: 10px; font-weight: 600; color: var(--azul-petroleo); display: flex; align-items: center; gap: 10px; font-size: 0.92rem; }
     .normativa-list span { color: var(--terracota); font-weight: 900; }
 
     /* BOTONES */
-    .btn { display: inline-block; padding: 16px 32px; font-weight: 800; border-radius: 8px; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: background 0.2s, transform 0.2s; letter-spacing: 0.5px; }
-    .btn-principal { background: var(--verde-salvia); color: var(--blanco); box-shadow: 0 4px 14px rgba(96, 125, 107, 0.25); }
+    .btn { display: inline-block; padding: 13px 26px; font-weight: 800; border-radius: 6px; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; transition: background 0.2s, transform 0.2s; letter-spacing: 0.5px; }
+    .btn-principal { background: var(--verde-salvia); color: var(--blanco); box-shadow: 0 4px 12px rgba(96, 125, 107, 0.2); }
     .btn-principal:hover { background: var(--salvia-hover); transform: translateY(-2px); }
-    .btn-contacto { background: var(--verde-salvia); color: var(--blanco); width: 100%; text-align: center; border: none; cursor: pointer; margin-top: 15px; }
+    .btn-contacto { background: var(--verde-salvia); color: var(--blanco); width: 100%; text-align: center; border: none; cursor: pointer; margin-top: 10px; }
     .btn-contacto:hover { background: var(--salvia-hover); }
 
     /* FORMULARIO DE CONTACTO */
-    .contact-container { background: var(--blanco); padding: 40px; border-radius: 12px; border: 2px solid var(--verde-salvia); max-width: 700px; margin: 0 auto; box-shadow: 0 10px 30px rgba(38, 58, 58, 0.05); }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; font-size: 0.85rem; font-weight: 800; color: var(--azul-petroleo); margin-bottom: 8px; text-transform: uppercase; }
-    .form-group input, .form-group textarea { width: 100%; padding: 14px; border: 2px solid var(--verde-eucalipto); border-radius: 6px; font-size: 0.95rem; font-family: inherit; outline: none; background: var(--fondo-pagina); color: var(--azul-petroleo); }
+    .contact-container { background: var(--blanco); padding: 35px; border-radius: 10px; border: 2px solid var(--verde-salvia); max-width: 650px; margin: 0 auto; box-shadow: 0 8px 25px rgba(38, 58, 58, 0.04); }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.8rem; font-weight: 800; color: var(--azul-petroleo); margin-bottom: 6px; text-transform: uppercase; }
+    .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 2px solid var(--verde-eucalipto); border-radius: 6px; font-size: 0.9rem; font-family: inherit; outline: none; background: var(--fondo-pagina); color: var(--azul-petroleo); }
     .form-group input:focus, .form-group textarea:focus { border-color: var(--verde-salvia); background: var(--blanco); }
 
-    footer { background: var(--azul-petroleo); color: var(--fondo-pagina); text-align: center; padding: 30px 24px; font-size: 0.85rem; font-weight: 600; border-top: 4px solid var(--terracota); }
+    footer { background: var(--azul-petroleo); color: var(--fondo-pagina); text-align: center; padding: 25px 24px; font-size: 0.82rem; font-weight: 600; border-top: 4px solid var(--terracota); }
 
     /* BOTÓN WHATSAPP FLOTANTE */
     .whatsapp-float {
       position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25d366; /* Verde original de WhatsApp para que lo reconozcan fácil */
+      width: 55px;
+      height: 55px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
       border-radius: 50px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
       z-index: 10000;
       display: flex;
       align-items: center;
@@ -113,10 +113,10 @@
       border: 3px solid var(--blanco);
     }
     .whatsapp-float:hover { transform: scale(1.1); }
-    .whatsapp-float svg { width: 34px; height: 34px; fill: #ffffff; }
+    .whatsapp-float svg { width: 30px; height: 30px; fill: #ffffff; }
 
     @media (max-width: 768px) {
-      .hero { text-align: center; }
+      .hero { text-align: center; padding-top: 15px; }
       .nav-links { display: none; }
     }
   </style>
@@ -151,12 +151,12 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DIAGNÓSTICO GRATUITO (LEAD MAGNET) -->
+  <!-- SECCIÓN DIAGNÓSTICO GRATUITO VISIBLE ARRIBA -->
   <section class="container" style="padding-top: 0; padding-bottom: 0;">
     <div class="quiz-invite">
       <span class="quiz-badge">Evaluación Preliminar sin costo</span>
       <h3>¿Su empresa cumple con la Normativa Ambiental Vigente?</h3>
-      <p>Realice un diagnóstico para identificar brechas de cumplimiento ante la Superintendencia del Medio Ambiente (SMA), la Ley REP (N.° 20.920) y sus resoluciones de calificación ambiental.</p>
+      <p>Identifique brechas de cumplimiento ante la Superintendencia del Medio Ambiente (SMA), la Ley REP (N.° 20.920) y sus resoluciones de calificación ambiental.</p>
       <a href="#contacto" class="btn btn-principal">Realizar Diagnóstico Gratis →</a>
     </div>
   </section>
@@ -217,7 +217,7 @@
 
     <section id="normativa" class="normativa-box">
       <h3>Dominio del Marco Regulatorio</h3>
-      <p style="margin-bottom: 20px; color: var(--gris-verdoso); font-weight: 500;">Asesoría orientada al cumplimiento de los principales instrumentos legales del país:</p>
+      <p style="margin-bottom: 15px; color: var(--gris-verdoso); font-weight: 500;">Asesoría orientada al cumplimiento de los principales instrumentos legales del país:</p>
       <ul class="normativa-list">
         <li><span>✦</span> Ley N.° 19.300 sobre Bases Generales del Medio Ambiente.</li>
         <li><span>✦</span> D.S. N.° 40 Reglamento del Sistema de Evaluación de Impacto Ambiental (SEIA).</li>
@@ -259,7 +259,6 @@
     <p>&copy; 2026 Cristóbal Santibáñez - Ingeniero Ambiental USACH. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- BOTÓN FLOTANTE WHATSAPP -->
   <a href="https://wa.me/56999840502?text=Hola,%20quisiera%20solicitar%20un%20diagnóstico%20ambiental%20preliminar%20para%20mi%20empresa" 
      class="whatsapp-float" 
      target="_blank" 
