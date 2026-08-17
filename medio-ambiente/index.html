@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingeniería & Compliance Ambiental | Asesoría Normativa a Empresas</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --verde-bosque: #1b4332;
+      --verde-hoja: #2d6a4f;
+      --verde-claro: #52b788;
+      --menta-suave: #e8f5e9;
+      --arena-acento: #d4a373;
+      --fondo-pagina: #f8faf8;
+      --texto-oscuro: #1c2520;
+      --texto-suave: #4a5d52;
+      --blanco: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif !important; background-color: var(--fondo-pagina); color: var(--texto-oscuro); line-height: 1.6; }
+
+    /* NAVEGACIÓN */
+    .header { background-color: var(--blanco); border-bottom: 3px solid var(--verde-bosque); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
+    .logo-text { font-weight: 900; font-size: 1.3rem; color: var(--verde-bosque); text-decoration: none; }
+    .logo-text span { color: var(--verde-claro); border-bottom: 3px solid var(--arena-acento); }
+    
+    .nav-links { display: flex; gap: 20px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; }
+    .nav-links a:hover { color: var(--verde-hoja); }
+
+    /* PORTADA HERO */
+    .hero {
+      background: linear-gradient(rgba(27, 67, 50, 0.88), rgba(27, 67, 50, 0.95)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      color: var(--blanco);
+      padding: 90px 24px;
+      text-align: center;
+      border-bottom: 5px solid var(--verde-claro);
+    }
+    .hero-content { max-width: 850px; margin: 0 auto; }
+    .hero-badge { background: var(--arena-acento); color: var(--verde-bosque); font-weight: 800; font-size: 0.8rem; padding: 6px 18px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 20px; }
+    .hero h1 { font-size: 2.8rem; font-weight: 900; margin-bottom: 18px; line-height: 1.2; color: var(--blanco); }
+    .hero p { font-size: 1.15rem; color: var(--menta-suave); margin-bottom: 30px; font-weight: 500; }
+    
+    /* SERVICIOS */
+    .container { max-width: 1200px; margin: 0 auto; padding: 70px 24px; }
+    .section-title { font-size: 2rem; color: var(--verde-bosque); text-align: center; font-weight: 900; margin-bottom: 10px; text-transform: uppercase; }
+    .section-subtitle { text-align: center; color: var(--texto-suave); max-width: 700px; margin: 0 auto 50px; font-size: 1rem; font-weight: 500; }
+    
+    .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+    .card-service { background: var(--blanco); padding: 35px 25px; border-radius: 12px; border: 2px solid var(--verde-bosque); border-top: 6px solid var(--verde-claro); box-shadow: 0 8px 20px rgba(0,0,0,0.04); }
+    .card-service h3 { font-size: 1.3rem; color: var(--verde-bosque); margin-bottom: 12px; font-weight: 800; }
+    .card-service p { font-size: 0.92rem; color: var(--texto-suave); font-weight: 500; }
+
+    /* BANNER NORMATIVO */
+    .normativa-box { background: var(--menta-suave); border: 2px solid var(--verde-hoja); border-radius: 12px; padding: 40px; margin: 40px 0; border-left: 8px solid var(--verde-bosque); }
+    .normativa-box h3 { font-size: 1.5rem; color: var(--verde-bosque); font-weight: 800; margin-bottom: 15px; }
+    .normativa-list { list-style: none; padding: 0; }
+    .normativa-list li { margin-bottom: 10px; font-weight: 600; color: var(--texto-oscuro); display: flex; align-items: center; gap: 10px; }
+
+    /* BOTONES */
+    .btn { display: inline-block; padding: 14px 28px; font-weight: 800; border-radius: 8px; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: 0.2s; }
+    .btn-principal { background: var(--verde-claro); color: var(--verde-bosque); }
+    .btn-principal:hover { background: var(--blanco); color: var(--verde-bosque); }
+    .btn-contacto { background: var(--verde-bosque); color: var(--blanco); width: 100%; text-align: center; border: none; cursor: pointer; margin-top: 15px; }
+
+    /* FORMULARIO */
+    .contact-container { background: var(--blanco); padding: 40px; border-radius: 12px; border: 2px solid var(--verde-bosque); max-width: 700px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 800; color: var(--verde-bosque); margin-bottom: 6px; }
+    .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 2px solid var(--verde-hoja); border-radius: 6px; font-size: 0.95rem; font-family: inherit; outline: none; }
+
+    footer { background: var(--verde-bosque); color: var(--blanco); text-align: center; padding: 25px; font-size: 0.85rem; font-weight: 600; margin-top: 60px; border-top: 4px solid var(--verde-claro); }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="navbar">
+      <a href="#" class="logo-text">INGENIERÍA <span>AMBIENTAL</span></a>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#normativa">Normativa</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge">Consultoría & Compliance Industrial</span>
+      <h1>Gestión y Cumplimiento Ambiental Sustentable</h1>
+      <p>Asesoría técnica especializada para empresas ante la Superintendencia del Medio Ambiente y el Sistema de Evaluación de Impacto Ambiental.</p>
+      <a href="#contacto" class="btn btn-principal">Agendar Consulta Técnica →</a>
+    </div>
+  </section>
+
+  <main class="container">
+    
+    <section id="servicios">
+      <h2 class="section-title">Servicios Profesionales</h2>
+      <p class="section-subtitle">Soluciones de ingeniería aplicadas a las exigencias regulatorias vigentes.</p>
+
+      <div class="grid-services">
+        <div class="card-service">
+          <h3>Evaluación Ambiental (SEIA)</h3>
+          <p>Elaboración de Declaraciones de Impacto Ambiental (DIA) y Estudios de Impacto Ambiental (EIA) para proyectos de inversión.</p>
+        </div>
+
+        <div class="card-service">
+          <h3>Auditorías y Fiscalización SMA</h3>
+          <p>Diagnóstico preventivo de Resolución de Calificación Ambiental (RCA) y planes de cumplimiento ante fiscalizaciones.</p>
+        </div>
+
+        <div class="card-service">
+          <h3>Ley REP y Gestión de Residuos</h3>
+          <p>Planes de manejo de residuos peligrosos y no peligrosos, declaración en sistema RETC y cumplimiento Ley N.° 20.920.</p>
+        </div>
+
+        <div class="card-service">
+          <h3>Monitoreo & Huella de Carbono</h3>
+          <p>Medición de emisiones, cálculo de huella hídrica y de carbono con estrategia de mitigación corporativa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="normativa" class="normativa-box">
+      <h3>Marco Normativo y Cumplimiento Legal</h3>
+      <p style="margin-bottom: 20px; color: var(--texto-suave); font-weight: 500;">Orientación experta para alinear su operación industrial con el marco regulatorio nacional:</p>
+      <ul class="normativa-list">
+        <li>✔ Ley N.° 19.300 sobre Bases Generales del Medio Ambiente</li>
+        <li>✔ D.S. N.° 40 Reglamento del Sistema de Evaluación de Impacto Ambiental</li>
+        <li>✔ Ley N.° 20.920 Marco para la Gestión de Residuos y Responsabilidad Extendida del Productor (REP)</li>
+        <li>✔ Normas de emisión y calidad ambiental vigentes</li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2 class="section-title">Solicitar Asesoría</h2>
+      <p class="section-subtitle">Déjenos sus datos corporativos para coordinar una reunión de evaluación.</p>
+
+      <div class="contact-container">
+        <form>
+          <div class="form-group">
+            <label>Nombre Completo *</label>
+            <input type="text" required placeholder="Ej: Roberto Muñoz">
+          </div>
+          <div class="form-group">
+            <label>Empresa / Industria *</label>
+            <input type="text" required placeholder="Ej: Constructora San Pedro">
+          </div>
+          <div class="form-group">
+            <label>Correo Institucional *</label>
+            <input type="email" required placeholder="nombre@empresa.cl">
+          </div>
+          <div class="form-group">
+            <label>Requerimiento o Proyecto *</label>
+            <textarea rows="4" required placeholder="Describa brevemente la consulta técnica o estado del proyecto..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-contacto">Enviar Solicitud Técnica</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Asesorías e Ingeniería Ambiental. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
