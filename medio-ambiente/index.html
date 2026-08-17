@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ingeniería & Compliance Ambiental | Consultoría Especializada</title>
+  <title>Cristóbal Santibáñez | Ingeniero Ambiental USACH</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
     /* NAVEGACIÓN */
     .header { background-color: var(--blanco); border-bottom: 3px solid var(--verde-salvia); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
     .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
-    .logo-text { font-weight: 900; font-size: 1.25rem; color: var(--azul-petroleo); text-decoration: none; letter-spacing: -0.5px; }
+    .logo-text { font-weight: 900; font-size: 1.15rem; color: var(--azul-petroleo); text-decoration: none; letter-spacing: -0.5px; }
     .logo-text span { color: var(--verde-salvia); border-bottom: 3px solid var(--terracota); }
     
     .nav-links { display: flex; gap: 24px; list-style: none; }
@@ -39,12 +39,19 @@
     .hero { max-width: 1200px; margin: 0 auto; padding: 60px 24px; display: flex; align-items: center; gap: 50px; flex-wrap: wrap-reverse; }
     .hero-text { flex: 1; min-width: 320px; }
     .hero-badge { background: var(--verde-eucalipto); color: var(--azul-petroleo); font-weight: 800; font-size: 0.8rem; padding: 6px 18px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 18px; letter-spacing: 0.5px; }
-    .hero h1 { font-size: 2.7rem; font-weight: 900; color: var(--azul-petroleo); margin-bottom: 18px; line-height: 1.2; letter-spacing: -0.5px; }
-    .hero p { font-size: 1.1rem; color: var(--gris-verdoso); margin-bottom: 30px; font-weight: 500; }
+    .hero h1 { font-size: 2.5rem; font-weight: 900; color: var(--azul-petroleo); margin-bottom: 10px; line-height: 1.2; letter-spacing: -0.5px; }
+    .hero h2 { font-size: 1.25rem; font-weight: 700; color: var(--verde-salvia); margin-bottom: 18px; }
+    .hero p { font-size: 1.05rem; color: var(--gris-verdoso); margin-bottom: 30px; font-weight: 500; }
     
     .hero-img-container { flex: 1; min-width: 300px; display: flex; justify-content: center; }
     .hero-img-frame { position: relative; border-radius: 16px; border: 4px solid var(--verde-eucalipto); padding: 8px; background: var(--blanco); box-shadow: 0 15px 35px rgba(38, 58, 58, 0.08); max-width: 420px; width: 100%; }
     .hero-img { width: 100%; height: auto; border-radius: 10px; display: block; object-fit: cover; }
+
+    /* DIAGNÓSTICO GRATIS */
+    .quiz-invite { text-align: center; background: var(--blanco); padding: 45px 30px; border-radius: 12px; border: 2px solid var(--verde-salvia); box-shadow: 0 10px 30px rgba(38, 58, 58, 0.08); margin: -20px auto 60px auto; max-width: 900px; position: relative; z-index: 10; border-top: 6px solid var(--terracota); }
+    .quiz-badge { background: var(--terracota); color: var(--blanco); font-size: 0.8rem; font-weight: 800; padding: 6px 16px; border-radius: 50px; text-transform: uppercase; margin-bottom: 15px; display: inline-block; letter-spacing: 0.5px; }
+    .quiz-invite h3 { font-size: 1.7rem; color: var(--azul-petroleo); margin-bottom: 12px; font-weight: 900; letter-spacing: -0.5px; }
+    .quiz-invite p { color: var(--gris-verdoso); margin-bottom: 25px; font-size: 1.05rem; max-width: 780px; margin-left: auto; margin-right: auto; font-weight: 500; line-height: 1.6; }
 
     /* PERFIL PROFESIONAL */
     .perfil-section { background: var(--blanco); border-top: 2px solid var(--verde-eucalipto); border-bottom: 2px solid var(--verde-eucalipto); padding: 70px 0; }
@@ -87,6 +94,27 @@
 
     footer { background: var(--azul-petroleo); color: var(--fondo-pagina); text-align: center; padding: 30px 24px; font-size: 0.85rem; font-weight: 600; border-top: 4px solid var(--terracota); }
 
+    /* BOTÓN WHATSAPP FLOTANTE */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366; /* Verde original de WhatsApp para que lo reconozcan fácil */
+      border-radius: 50px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+      border: 3px solid var(--blanco);
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+    .whatsapp-float svg { width: 34px; height: 34px; fill: #ffffff; }
+
     @media (max-width: 768px) {
       .hero { text-align: center; }
       .nav-links { display: none; }
@@ -97,7 +125,7 @@
 
   <header class="header">
     <div class="navbar">
-      <a href="#" class="logo-text">INGENIERÍA <span>AMBIENTAL</span></a>
+      <a href="#" class="logo-text">CRISTÓBAL SANTIBÁÑEZ <span>| INGENIERO AMBIENTAL</span></a>
       <ul class="nav-links">
         <li><a href="#perfil">Trayectoria</a></li>
         <li><a href="#servicios">Servicios</a></li>
@@ -110,15 +138,26 @@
   <section class="hero">
     <div class="hero-text">
       <span class="hero-badge">Consultoría & Compliance Normativo</span>
-      <h1>Soluciones Técnicas y Sostenibles para la Industria</h1>
-      <p>Asesoría ambiental estratégica respaldada por experiencia en el sector público y regulación ambiental aplicable al sector privado.</p>
+      <h1>Cristóbal Santibáñez</h1>
+      <h2>Ingeniero Ambiental | USACH</h2>
+      <p>Asesoría ambiental estratégica e ingeniería aplicada al cumplimiento regulatorio corporativo e industrial.</p>
       <a href="#contacto" class="btn btn-principal">Agendar Consulta Técnica →</a>
     </div>
 
     <div class="hero-img-container">
       <div class="hero-img-frame">
-        <img src="foto-perfil.jpg" alt="Ingeniero Ambiental USACH" class="hero-img">
+        <img src="foto-perfil.jpg" alt="Cristóbal Santibáñez - Ingeniero Ambiental USACH" class="hero-img">
       </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DIAGNÓSTICO GRATUITO (LEAD MAGNET) -->
+  <section class="container" style="padding-top: 0; padding-bottom: 0;">
+    <div class="quiz-invite">
+      <span class="quiz-badge">Evaluación Preliminar sin costo</span>
+      <h3>¿Su empresa cumple con la Normativa Ambiental Vigente?</h3>
+      <p>Realice un diagnóstico para identificar brechas de cumplimiento ante la Superintendencia del Medio Ambiente (SMA), la Ley REP (N.° 20.920) y sus resoluciones de calificación ambiental.</p>
+      <a href="#contacto" class="btn btn-principal">Realizar Diagnóstico Gratis →</a>
     </div>
   </section>
 
@@ -130,18 +169,18 @@
 
       <div class="perfil-grid">
         <div class="perfil-card">
-          <h3>Formación Académica</h3>
-          <p><strong>Ingeniero Ambiental</strong> egresado de la Universidad de Santiago de Chile (USACH), con sólido dominio del marco normativo nacional y herramientas de gestión territorial.</p>
+          <h3>Ingeniero Ambiental USACH</h3>
+          <p>Titulado de la Universidad de Santiago de Chile (USACH), con sólido dominio del marco normativo nacional, evaluación de impacto ambiental y gestión territorial.</p>
         </div>
 
         <div class="perfil-card">
-          <h3>Sector Público</h3>
-          <p>Experiencia técnica relevante en la administración pública, con participación en análisis regulatorio, fiscalización y evaluación ambiental de proyectos.</p>
+          <h3>Experiencia en Sector Público</h3>
+          <p>Trayectoria técnica en la administración pública, participando activamente en análisis regulatorio, fiscalización y evaluación ambiental de proyectos.</p>
         </div>
 
         <div class="perfil-card">
           <h3>Relatorías & Sector Privado</h3>
-          <p>Expositor en charlas, talleres y capacitaciones corporativas para empresas privadas en materia de cumplimiento legal, Ley REP y gestión de riesgos ambientales.</p>
+          <p>Expositor en charlas, talleres y capacitaciones corporativas para empresas privadas en materia de cumplimiento legal, Ley REP y gestión ambiental.</p>
         </div>
       </div>
     </div>
@@ -189,7 +228,7 @@
 
     <section id="contacto">
       <h2 class="section-title">Contacto Directo</h2>
-      <p class="section-subtitle">Coordine una reunión técnica para evaluar los requerimientos ambientales de su organización.</p>
+      <p class="section-subtitle">Coordine una reunión técnica con Cristóbal Santibáñez para evaluar los requerimientos ambientales de su organización.</p>
 
       <div class="contact-container">
         <form>
@@ -217,8 +256,19 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Asesoría e Ingeniería Ambiental. Todos los derechos reservados.</p>
+    <p>&copy; 2026 Cristóbal Santibáñez - Ingeniero Ambiental USACH. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/56999840502?text=Hola,%20quisiera%20solicitar%20un%20diagnóstico%20ambiental%20preliminar%20para%20mi%20empresa" 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Contacto por WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.031 0C5.385 0 .004 5.385.004 12.031c0 2.128.552 4.192 1.6 6.002L.004 24l6.113-1.605c1.748.948 3.702 1.452 5.714 1.452 6.645 0 12.031-5.385 12.031-12.031C23.862 5.385 18.676 0 12.031 0zm6.541 17.348c-.274.773-1.579 1.472-2.181 1.545-.561.069-1.291.139-4.103-1.026-3.593-1.488-5.918-5.155-6.096-5.393-.178-.238-1.458-1.942-1.458-3.708 0-1.766.921-2.637 1.248-2.964.327-.327.712-.416.95-.416.237 0 .475 0 .683.01.218.01.505-.089.792.604.297.712 1.01 2.475 1.099 2.653.089.178.148.386.03.624-.119.238-.178.386-.356.594-.178.208-.376.435-.534.584-.178.178-.366.376-.158.732.208.356.92 1.515 1.97 2.455 1.355 1.208 2.495 1.584 2.851 1.762.356.178.564.148.772-.089.208-.238.891-1.039 1.129-1.396.238-.356.475-.297.802-.178.327.119 2.079.98 2.435 1.158.356.178.594.267.683.416.089.148.089.861-.188 1.633z"/>
+    </svg>
+  </a>
 
 </body>
 </html>
