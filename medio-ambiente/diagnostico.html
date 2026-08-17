@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico de Cumplimiento Ambiental | Cristóbal Santibáñez</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --fondo-pagina: #F7F5F0;
+      --verde-salvia: #607D6B;
+      --salvia-hover: #486052;
+      --verde-eucalipto: #8FAF9B;
+      --terracota: #C98268;
+      --azul-petroleo: #263A3A;
+      --gris-verdoso: #66716C;
+      --blanco: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif !important; background-color: var(--fondo-pagina); color: var(--azul-petroleo); line-height: 1.6; }
+
+    /* NAVEGACIÓN */
+    .header { background-color: var(--blanco); border-bottom: 3px solid var(--verde-salvia); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+    .navbar { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+    .logo-text { font-weight: 900; font-size: 1.1rem; color: var(--azul-petroleo); text-decoration: none; }
+    .logo-text span { color: var(--verde-salvia); border-bottom: 3px solid var(--terracota); }
+    .btn-volver { background: var(--verde-salvia); color: var(--blanco); text-decoration: none; font-weight: 800; font-size: 0.8rem; padding: 8px 16px; border-radius: 6px; text-transform: uppercase; transition: 0.2s; }
+    .btn-volver:hover { background: var(--salvia-hover); }
+
+    /* HERO DIAGNÓSTICO */
+    .hero-quiz { text-align: center; max-width: 850px; margin: 40px auto 30px auto; padding: 0 24px; }
+    .badge-quiz { background: var(--verde-eucalipto); color: var(--azul-petroleo); font-weight: 800; font-size: 0.75rem; padding: 6px 16px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 15px; letter-spacing: 0.5px; }
+    .hero-quiz h1 { font-size: 2.2rem; font-weight: 900; color: var(--azul-petroleo); margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.5px; }
+    .hero-quiz p { font-size: 1rem; color: var(--gris-verdoso); font-weight: 500; }
+
+    /* CONTENEDOR DEL FORMULARIO INTERACTIVO */
+    .quiz-container { max-width: 850px; margin: 0 auto 60px auto; padding: 0 24px; }
+    .question-card { background: var(--blanco); padding: 30px; border-radius: 12px; border: 2px solid var(--verde-eucalipto); margin-bottom: 20px; box-shadow: 0 4px 15px rgba(38, 58, 58, 0.03); }
+    .question-number { font-size: 0.8rem; font-weight: 900; color: var(--terracota); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; display: block; }
+    .question-title { font-size: 1.15rem; font-weight: 800; color: var(--azul-petroleo); margin-bottom: 16px; }
+    
+    .options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .option-label { display: flex; align-items: center; gap: 10px; background: var(--fondo-pagina); border: 2px solid var(--verde-eucalipto); padding: 14px 18px; border-radius: 8px; cursor: pointer; font-size: 0.92rem; font-weight: 700; color: var(--azul-petroleo); transition: all 0.2s; }
+    .option-label:hover { border-color: var(--verde-salvia); background: var(--blanco); }
+    .option-label input { accent-color: var(--verde-salvia); width: 18px; height: 18px; }
+
+    /* BOTÓN CALCULAR */
+    .btn-submit-quiz { width: 100%; background: var(--verde-salvia); color: var(--blanco); font-size: 1rem; font-weight: 900; padding: 18px; border: none; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; transition: 0.2s; box-shadow: 0 4px 14px rgba(96, 125, 107, 0.25); margin-top: 10px; }
+    .btn-submit-quiz:hover { background: var(--salvia-hover); }
+
+    /* RESULTADOS */
+    .result-box { display: none; background: var(--blanco); padding: 40px; border-radius: 12px; border: 3px solid var(--verde-salvia); border-top: 8px solid var(--terracota); margin-top: 30px; text-align: center; box-shadow: 0 10px 30px rgba(38, 58, 58, 0.08); }
+    .result-status { font-size: 1.6rem; font-weight: 900; color: var(--azul-petroleo); margin-bottom: 12px; }
+    .result-desc { font-size: 1rem; color: var(--gris-verdoso); margin-bottom: 25px; max-width: 650px; margin-left: auto; margin-right: auto; font-weight: 500; }
+    
+    .btn-whatsapp-result { display: inline-block; background: #25d366; color: var(--blanco); font-weight: 900; padding: 16px 32px; border-radius: 8px; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: 0.2s; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); }
+    .btn-whatsapp-result:hover { background: #1eb857; transform: translateY(-2px); }
+
+    footer { background: var(--azul-petroleo); color: var(--fondo-pagina); text-align: center; padding: 25px 24px; font-size: 0.82rem; font-weight: 600; border-top: 4px solid var(--terracota); margin-top: 60px; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="navbar">
+      <a href="index.html" class="logo-text">CRISTÓBAL SANTIBÁÑEZ <span>| INGENIERO AMBIENTAL</span></a>
+      <a href="index.html" class="btn-volver">← Volver al Sitio</a>
+    </div>
+  </header>
+
+  <section class="hero-quiz">
+    <span class="badge-quiz">Herramienta de Diagnóstico Preventivo</span>
+    <h1>Evaluación de Cumplimiento Ambiental</h1>
+    <p>Responda 5 preguntas clave para determinar el nivel de riesgo normativo de su empresa ante la Superintendencia del Medio Ambiente (SMA) y el Ministerio del Medio Ambiente.</p>
+  </section>
+
+  <main class="quiz-container">
+    <form id="envQuiz">
+      
+      <!-- PREGUNTA 1 -->
+      <div class="question-card">
+        <span class="question-number">Pregunta 01 / 05 — Ley REP y Residuos</span>
+        <div class="question-title">¿Su empresa genera o introduce productos prioritarios (envases, embalajes, lubricantes, etc.) y realiza declaraciones en la plataforma RETC?</div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="p1" value="2" required> Sí, al día en RETC</label>
+          <label class="option-label"><input type="radio" name="p1" value="1"> Parcial / En proceso</label>
+          <label class="option-label"><input type="radio" name="p1" value="0"> No / Desconozco</label>
+        </div>
+      </div>
+
+      <!-- PREGUNTA 2 -->
+      <div class="question-card">
+        <span class="question-number">Pregunta 02 / 05 — Resolución de Calificación Ambiental (RCA)</span>
+        <div class="question-title">Si su proyecto posee RCA o instrumentos de gestión ambiental, ¿mantiene reportados sus compromisos en el Sistema de Seguimiento Ambiental de la SMA?</div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="p2" value="2" required> Sí, reportes al día</label>
+          <label class="option-label"><input type="radio" name="p2" value="1"> Con desfase / Pendiente</label>
+          <label class="option-label"><input type="radio" name="p2" value="0"> No tenemos / Sin reporte</label>
+        </div>
+      </div>
+
+      <!-- PREGUNTA 3 -->
+      <div class="question-card">
+        <span class="question-number">Pregunta 03 / 05 — Evaluaciones en el SEIA</span>
+        <div class="question-title">¿Ha realizado modificaciones, ampliaciones o cambios de procesos que no hayan sido evaluados previamente mediante una DIA o EIA?</div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="p3" value="0" required> Sí, existen cambios sin evaluar</label>
+          <label class="option-label"><input type="radio" name="p3" value="1"> En revisión técnica</label>
+          <label class="option-label"><input type="radio" name="p3" value="2"> No, todo evaluado</label>
+        </div>
+      </div>
+
+      <!-- PREGUNTA 4 -->
+      <div class="question-card">
+        <span class="question-number">Pregunta 04 / 05 — Residuos Peligrosos (RESPEL)</span>
+        <div class="question-title">¿Cuenta con bodegas autorizadas sanitariamente y planes de manejo para residuos peligrosos o industriales según la normativa vigente?</div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="p4" value="2" required> Sí, autorización al día</label>
+          <label class="option-label"><input type="radio" name="p4" value="1"> En trámite o parcial</label>
+          <label class="option-label"><input type="radio" name="p4" value="0"> No tenemos autorización</label>
+        </div>
+      </div>
+
+      <!-- PREGUNTA 5 -->
+      <div class="question-card">
+        <span class="question-number">Pregunta 05 / 05 — Fiscalización y Protocolos</span>
+        <div class="question-title">¿Dispone de un Plan de Cumplimiento o protocolo de respuesta ante una eventual inspección o requerimiento directo de la SMA / Seremi de Salud?</div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="p5" value="2" required> Sí, protocolo definido</label>
+          <label class="option-label"><input type="radio" name="p5" value="1"> Parcial / No formalizado</label>
+          <label class="option-label"><input type="radio" name="p5" value="0"> No tenemos protocolo</label>
+        </div>
+      </div>
+
+      <button type="button" onclick="calcularResultado()" class="btn-submit-quiz">Obtener Resultado del Diagnóstico →</button>
+    </form>
+
+    <!-- BLOQUE DE RESULTADOS -->
+    <div id="resultado" class="result-box">
+      <div id="statusText" class="result-status">Analizando datos...</div>
+      <p id="descText" class="result-desc">Cargando la evaluación técnica...</p>
+      <a id="btnWs" href="#" target="_blank" class="btn-whatsapp-result">Solicitar Evaluación Técnica en WhatsApp →</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Cristóbal Santibáñez - Ingeniero Ambiental USACH. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function calcularResultado() {
+      const form = document.getElementById('envQuiz');
+      if(!form.checkValidity()) {
+        alert('Por favor responda todas las preguntas para generar el diagnóstico.');
+        return;
+      }
+
+      const p1 = parseInt(document.querySelector('input[name="p1"]:checked').value);
+      const p2 = parseInt(document.querySelector('input[name="p2"]:checked').value);
+      const p3 = parseInt(document.querySelector('input[name="p3"]:checked').value);
+      const p4 = parseInt(document.querySelector('input[name="p4"]:checked').value);
+      const p5 = parseInt(document.querySelector('input[name="p5"]:checked').value);
+
+      const total = p1 + p2 + p3 + p4 + p5;
+      const resBox = document.getElementById('resultado');
+      const statusText = document.getElementById('statusText');
+      const descText = document.getElementById('descText');
+      const btnWs = document.getElementById('btnWs');
+
+      let nivel = "";
+      let mensaje = "";
+
+      if(total >= 8) {
+        nivel = "RIESGO BAJO (Cumplimiento Adecuado)";
+        mensaje = "Su organización presenta un buen nivel de alineamiento con la normativa. Sin embargo, se recomienda mantener auditorías periódicas para prevenir contingencias ante actualizaciones reglamentarias de la Ley REP o la SMA.";
+      } else if(total >= 5) {
+        nivel = "RIESGO MODERADO (Brechas de Cumplimiento)";
+        mensaje = "Se detectan aspectos vulnerables en la gestión de residuos, seguimiento de compromisos o reportes obligatorios. Se sugiere una revisión técnica para evitar observaciones de la autoridad ambiental.";
+      } else {
+        nivel = "RIESGO CRÍTICO (Exposición a Sanciones)";
+        mensaje = "Su empresa presenta un alto nivel de vulnerabilidad frente a inspecciones de la SMA o la Seremi de Salud. Es urgente regularizar sus procesos, declaraciones y autorizaciones sanitarias.";
+      }
+
+      statusText.innerText = nivel;
+      descText.innerText = mensaje;
+
+      const textoWhatsApp = `Hola Cristóbal, he realizado el Diagnóstico Ambiental en tu sitio. Mi resultado fue: ${nivel}. Quisiera coordinar una revisión técnica para mi empresa.`;
+      btnWs.href = `https://wa.me/56999840502?text=${encodeURIComponent(textoWhatsApp)}`;
+
+      resBox.style.display = 'block';
+      resBox.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
