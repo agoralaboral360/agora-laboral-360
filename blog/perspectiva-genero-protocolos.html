@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicación Práctica en Protocolos Internos | Blog Ágora Laboral 360°</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --morado-principal: #361e42; --morado-oscuro: #211329; --verde-menta: #a8e6cf;
+      --menta-fondo: #eef9f4; --coral-acento: #ff6b6b; --fondo-pagina: #faf8fc;
+      --texto-oscuro: #211329; --texto-suave: #4d4054; --blanco: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif !important; background-color: var(--fondo-pagina); color: var(--texto-oscuro); line-height: 1.7; }
+
+    .header { background-color: var(--blanco); border-bottom: 3px solid var(--morado-principal); padding: 16px 24px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .navbar { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo-text { font-weight: 900; font-size: 1.25rem; color: var(--morado-principal); text-decoration: none; }
+    .logo-text span { border-bottom: 4px solid var(--verde-menta); }
+    .btn-back { background: var(--morado-principal); color: var(--blanco); text-decoration: none; font-weight: 800; font-size: 0.8rem; padding: 8px 16px; border-radius: 6px; text-transform: uppercase; transition: 0.2s; }
+    .btn-back:hover { background: var(--verde-menta); color: var(--morado-principal); }
+
+    .article-hero { background-color: var(--morado-principal); background-image: linear-gradient(rgba(54, 30, 66, 0.85), rgba(33, 19, 41, 0.95)), url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; padding: 80px 24px; text-align: center; color: var(--blanco); border-bottom: 5px solid var(--coral-acento); }
+    .article-hero h1 { max-width: 800px; margin: 0 auto 15px; font-size: 2.5rem; font-weight: 900; line-height: 1.2; color: var(--blanco); }
+    .article-badge { background: var(--coral-acento); color: var(--blanco); font-size: 0.85rem; font-weight: 800; padding: 6px 16px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 20px; }
+    
+    .container { max-width: 800px; margin: 50px auto; padding: 0 24px; }
+    .article-meta { display: flex; justify-content: center; gap: 20px; font-size: 0.9rem; color: var(--texto-suave); font-weight: 600; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #ede8f2; }
+    .article-content h2 { font-size: 1.6rem; color: var(--morado-principal); margin: 35px 0 15px; font-weight: 800; border-left: 5px solid var(--verde-menta); padding-left: 15px; }
+    .article-content p { font-size: 1.05rem; color: var(--texto-suave); margin-bottom: 20px; font-weight: 500; }
+    
+    .highlight-box { background: var(--menta-fondo); border: 2px solid var(--morado-principal); border-radius: 8px; padding: 25px; margin: 30px 0; border-left: 8px solid var(--verde-menta); }
+    .highlight-box h3 { color: var(--morado-principal); font-size: 1.2rem; margin-bottom: 10px; font-weight: 800; }
+    
+    .cta-box { background: var(--morado-principal); color: var(--blanco); padding: 40px; border-radius: 12px; text-align: center; margin-top: 60px; box-shadow: 0 10px 30px rgba(54,30,66,0.2); border: 2px solid var(--coral-acento); }
+    .cta-box h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--blanco); }
+    .btn-cta { display: inline-block; background: var(--coral-acento); color: var(--blanco); font-weight: 900; padding: 15px 30px; border-radius: 8px; text-decoration: none; text-transform: uppercase; margin-top: 20px; transition: 0.2s; }
+    .btn-cta:hover { background: var(--blanco); color: var(--morado-principal); }
+
+    footer { background: var(--morado-oscuro); color: var(--blanco); text-align: center; padding: 30px 24px; font-size: 0.88rem; font-weight: 600; margin-top: 60px; border-top: 4px solid var(--verde-menta); }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="navbar">
+      <a href="../index.html" class="logo-text">ÁGORA LABORAL <span>360°</span></a>
+      <a href="../index.html#blog" class="btn-back">← Volver al Blog</a>
+    </div>
+  </header>
+
+  <section class="article-hero">
+    <span class="article-badge">Perspectiva de Género</span>
+    <h1>Aplicación Práctica en Protocolos Internos</h1>
+    <p style="font-size: 1.2rem; font-weight: 500; max-width: 600px; margin: 0 auto;">Cómo incorporar la perspectiva de género de forma imparcial y técnica en la redacción de reglamentos y toma de declaraciones.</p>
+  </section>
+
+  <main class="container article-content">
+    <div class="article-meta"><span> Junio 2026</span><span> 3 min de lectura</span><span> Equipo Legal Ágora</span></div>
+
+    <p>A partir de la promulgación de la Ley Karin, la "perspectiva de género" dejó de ser una declaración de intenciones para convertirse en un <strong>mandato legal imperativo</strong> dentro de las investigaciones por acoso y violencia en el trabajo.</p>
+
+    <h2>¿Qué significa realmente integrar la perspectiva de género?</h2>
+    <p>En términos investigativos, implica que el analista o investigador debe estar capacitado para detectar si el conflicto laboral está atravesado por estereotipos, asimetrías de poder históricas o vulnerabilidades asociadas al género de las partes.</p>
+
+    <div class="highlight-box">
+      <h3>❌ Lo que NO se debe hacer (Errores Comunes)</h3>
+      <p style="margin-bottom: 0;">Juzgar la reacción de la víctima bajo estándares de "cómo debió haberse defendido". La jurisprudencia actual reconoce que el miedo, la paralización o la demora en denunciar son reacciones naturales frente a dinámicas de abuso de poder.</p>
+    </div>
+
+    <h2>Revisión de Reglamentos Internos</h2>
+    <p>Las empresas deben actualizar sus Reglamentos Internos de Orden, Higiene y Seguridad (RIOHS). Un protocolo con perspectiva de género debe asegurar canales de denuncia seguros, confidenciales y que eviten que la persona afectada tenga que relatar los hechos múltiples veces a distintas jefaturas.</p>
+
+    <div class="cta-box">
+      <h3>¿Su equipo requiere capacitación técnica?</h3>
+      <p style="font-size: 1.1rem; margin-bottom: 0;">A través de nuestra Academia Ágora 360°, entrenamos a departamentos de RR.HH. para conducir entrevistas libres de sesgos y redactar informes sólidos.</p>
+      <a href="../academia/index.html" class="btn-cta">Ver Cursos y Talleres →</a>
+    </div>
+  </main>
+
+  <footer><p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.</p></footer>
+</body>
+</html>
