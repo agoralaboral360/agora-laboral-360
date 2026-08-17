@@ -3,17 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ágora Laboral 360° | Consultoría y Cumplimiento Normativo Ley Karin</title>
-  
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://agoralaboral.cl/">
-  <meta property="og:title" content="Ágora Laboral 360° | Consultoría y Compliance Ley Karin">
-  <meta property="og:description" content="Proteja su organización frente a la Ley 21.643. Diagnósticos, auditoría de RIOHS e investigaciones laborales externas.">
-  <meta property="og:image" content="https://agoralaboral.cl/portada.jpeg">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ágora Laboral 360° | Compliance Ley Karin">
-  <meta name="twitter:description" content="Diagnóstico interactivo y asesoría experta en prevención e investigación de acoso laboral.">
+  <title>Ágora Laboral 360° | Consultoría & Compliance Laboral</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,558 +11,268 @@
 
   <style>
     :root {
-      /* PALETA DE COLORES OFICIAL ÁGORA CON ACENTO CORAL */
-      --morado-principal: #361e42;  
+      /* PALETA OFICIAL DE JERARQUÍA */
+      --morado-autoridad: #382341;
       --morado-oscuro: #211329;
-      --verde-menta: #a8e6cf;       
-      --menta-fondo: #eef9f4;       
-      --coral-acento: #ff6b6b;      
-      --fondo-pagina: #faf8fc;      
+      --menta-prevencion: #a2e8dd;
+      --menta-fondo: #eaf8f5;
+      --naranja-accion: #e85d04;
+      --naranja-hover: #dc2f02;
+      --fondo-pagina: #faf8fc;
       --texto-oscuro: #211329;
-      --texto-suave: #4d4054;
+      --texto-suave: #524359;
       --blanco: #ffffff;
-      --borde-suave: #ede8f2;
+      --gris-borde: #e2dae8;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif !important; background-color: var(--fondo-pagina); color: var(--texto-oscuro); line-height: 1.6; }
+
+    /* NAVEGACIÓN COMPACTA */
+    .header { background-color: var(--blanco); border-bottom: 3px solid var(--morado-autoridad); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
+    .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+    .logo-text { font-weight: 900; font-size: 1.2rem; color: var(--morado-autoridad); text-decoration: none; letter-spacing: -0.5px; }
+    .logo-text span { color: var(--morado-autoridad); border-bottom: 3px solid var(--menta-prevencion); }
     
-    body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea { 
-      font-family: 'Montserrat', sans-serif !important; 
-    }
-    
-    body { 
-      color: var(--texto-oscuro); 
-      background-color: var(--fondo-pagina); 
-      line-height: 1.6; 
-    }
+    .nav-links { display: flex; gap: 18px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.3px; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--naranja-accion); }
 
-    h1, h2, h3, h4 { 
-      color: var(--morado-principal); 
-      font-weight: 800; 
-      letter-spacing: -0.5px;
-    }
+    /* BOTONES DE ACCIÓN (NARANJA EXCLUSIVO) */
+    .btn-naranja { display: inline-block; background: var(--naranja-accion); color: var(--blanco); font-weight: 800; padding: 14px 28px; border-radius: 8px; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; transition: background 0.2s, transform 0.2s; border: none; cursor: pointer; }
+    .btn-naranja:hover { background: var(--naranja-hover); transform: translateY(-2px); }
 
-    /* NAVEGACIÓN PRINCIPAL */
-    .header { background-color: var(--blanco); border-bottom: 3px solid var(--morado-principal); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
-    .logo-text { font-weight: 900; font-size: 1.35rem; color: var(--morado-principal); letter-spacing: -0.5px; }
-    .logo-text span { color: var(--morado-principal); border-bottom: 4px solid var(--verde-menta); }
-    
-    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.2s ease; }
-    .nav-links a:hover, .nav-links a.active { color: var(--morado-principal); border-bottom: 3px solid var(--verde-menta); }
+    .btn-secundario { display: inline-block; background: var(--blanco); color: var(--morado-autoridad); font-weight: 800; padding: 14px 28px; border-radius: 8px; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; border: 2px solid var(--morado-autoridad); transition: 0.2s; }
+    .btn-secundario:hover { background: var(--morado-autoridad); color: var(--blanco); }
 
-    /* BARRA DE ESPECIALIDADES */
-    .trust-bar { background-color: var(--morado-principal); color: var(--blanco); padding: 12px 24px; border-bottom: 3px solid var(--verde-menta); }
-    .trust-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.95rem; font-weight: 800; }
-    .trust-item { color: var(--blanco); letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px; }
-    .trust-item::before { content: "✦"; color: var(--verde-menta); font-size: 0.9rem; }
+    /* 2. HERO SECTION */
+    .hero { background: var(--blanco); border-bottom: 1px solid var(--gris-borde); padding: 70px 24px 50px; text-align: center; }
+    .hero-content { max-width: 850px; margin: 0 auto; }
+    .hero h1 { font-size: 2.5rem; font-weight: 900; color: var(--morado-autoridad); margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.5px; }
+    .hero-subtitle { font-size: 1.2rem; font-weight: 700; color: var(--texto-suave); margin-bottom: 16px; }
+    .hero-desc { font-size: 1.05rem; color: var(--texto-suave); margin-bottom: 30px; font-weight: 500; }
+    .hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 30px; }
+    .hero-tagline { font-size: 0.82rem; font-weight: 800; color: var(--morado-autoridad); text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid var(--gris-borde); padding-top: 20px; display: inline-block; }
 
-    /* CONTENEDORES */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    .section { padding: 75px 0; }
-    .section-bg-light { background-color: var(--blanco); border-top: 2px solid var(--morado-principal); border-bottom: 2px solid var(--morado-principal); }
-    .section-title { font-size: 2.2rem; margin-bottom: 12px; text-align: center; text-transform: uppercase; font-weight: 900; }
-    .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 850px; margin: 0 auto 45px auto; text-align: center; font-weight: 500; }
+    /* SECCIONES Y CONTENEDORES GENERALES */
+    .section-container { max-width: 1200px; margin: 0 auto; padding: 70px 24px; }
+    .section-title { font-size: 2rem; color: var(--morado-autoridad); text-align: center; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: -0.5px; }
+    .section-subtitle { text-align: center; color: var(--texto-suave); max-width: 700px; margin: 0 auto 45px; font-size: 1.05rem; font-weight: 500; }
+    .cta-center-container { text-align: center; margin-top: 40px; }
 
-    /* 1. PORTADA / HERO (FOTO DE FONDO CON FILTRO OSCURO) */
-    .hero-banner {
-      position: relative;
-      background-color: var(--morado-principal);
-      background-image: linear-gradient(rgba(54, 30, 66, 0.75), rgba(33, 19, 41, 0.85)), url('portada.jpeg');
-      background-size: cover;
-      background-position: center 25%;
-      background-repeat: no-repeat;
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 70px 24px;
-      border-radius: 16px;
-      margin-top: 25px;
-      border: 3px solid var(--verde-menta); 
-      box-shadow: 0 15px 35px rgba(54, 30, 66, 0.2);
-    }
-    
-    .hero-content { max-width: 900px; text-align: center; color: var(--blanco); }
-    .hero-badge { background: var(--coral-acento); color: var(--blanco); font-weight: 800; font-size: 0.85rem; padding: 6px 18px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(255,107,107,0.3); }
-    
-    .hero-content h1 { font-size: 3.2rem; line-height: 1.15; margin-bottom: 18px; color: var(--blanco); font-weight: 900; text-shadow: 0 2px 15px rgba(0,0,0,0.5); }
-    .hero-content p { font-size: 1.25rem; color: #f8fafc; margin-bottom: 35px; line-height: 1.6; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-    
-    .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn-hero { display: inline-block; padding: 16px 32px; text-decoration: none; font-weight: 900; border-radius: 8px; font-size: 0.95rem; transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
-    .btn-hero-primary { background-color: var(--verde-menta); color: var(--morado-principal); box-shadow: 0 6px 20px rgba(168, 230, 207, 0.3); }
-    .btn-hero-primary:hover { background-color: var(--blanco); transform: translateY(-3px); }
-    .btn-hero-secondary { background-color: rgba(255,255,255,0.15); color: var(--blanco); border: 2px solid var(--blanco); backdrop-filter: blur(5px); }
-    .btn-hero-secondary:hover { background-color: var(--blanco); color: var(--morado-principal); transform: translateY(-3px); }
+    /* 3. SERVICIOS (4 TARJETAS) */
+    .grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+    .card-servicio { background: var(--blanco); padding: 35px 25px; border-radius: 12px; border: 2px solid var(--gris-borde); box-shadow: 0 6px 18px rgba(0,0,0,0.02); }
+    .card-servicio.morado { border-top: 6px solid var(--morado-autoridad); }
+    .card-servicio.menta { border-top: 6px solid var(--menta-prevencion); }
+    .card-servicio h3 { font-size: 1.25rem; color: var(--morado-autoridad); margin-bottom: 12px; font-weight: 800; }
+    .card-servicio p { font-size: 0.95rem; color: var(--texto-suave); font-weight: 500; }
 
-    /* 2. DIAGNÓSTICO GRATUITO */
-    .quiz-invite { text-align: center; background: var(--blanco); padding: 45px 30px; border-radius: 12px; border: 3px solid var(--morado-principal); box-shadow: 0 10px 30px rgba(54,30,66,0.12); margin-top: -30px; position: relative; z-index: 10; border-top: 6px solid var(--verde-menta); }
-    .quiz-badge { background: var(--coral-acento); color: var(--blanco); font-size: 0.8rem; font-weight: 900; padding: 6px 16px; border-radius: 50px; text-transform: uppercase; margin-bottom: 12px; display: inline-block; box-shadow: 0 4px 10px rgba(255,107,107,0.3); }
-    .quiz-invite h3 { font-size: 2rem; margin-bottom: 12px; font-weight: 900; }
-    .quiz-invite p { color: var(--texto-suave); margin-bottom: 25px; font-size: 1.05rem; max-width: 780px; margin-left: auto; margin-right: auto; font-weight: 500; }
+    /* 4. MÉTODO ÁGORA 360® */
+    .metodo-section { background: var(--blanco); border-top: 1px solid var(--gris-borde); border-bottom: 1px solid var(--gris-borde); padding: 70px 0; }
+    .grid-pilares { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+    .card-pilar { padding: 25px 20px; border-radius: 10px; text-align: center; }
+    .card-pilar.morado { background: var(--morado-autoridad); color: var(--blanco); }
+    .card-pilar.morado h3 { color: var(--blanco); }
+    .card-pilar.morado p { color: #e2dae8; }
+    .card-pilar.menta { background: var(--menta-fondo); border: 2px solid var(--menta-prevencion); color: var(--morado-autoridad); }
+    .card-pilar.menta h3 { color: var(--morado-autoridad); }
+    .card-pilar.menta p { color: var(--texto-suave); }
+    .card-pilar h3 { font-size: 1.1rem; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .card-pilar p { font-size: 0.9rem; font-weight: 500; }
 
-    /* 3. SERVICIOS */
-    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-    .card { 
-      background: var(--blanco); 
-      padding: 32px 25px; 
-      border-radius: 12px; 
-      box-shadow: 0 8px 20px rgba(54, 30, 66, 0.08); 
-      border: 2px solid var(--morado-principal); 
-      border-top: 6px solid var(--morado-principal); 
-      display: flex; 
-      flex-direction: column; 
-      justify-content: space-between; 
-      transition: all 0.25s; 
-      position: relative;
-    }
-    .card:hover { transform: translateY(-6px); border-top-color: var(--verde-menta); box-shadow: 0 15px 30px rgba(54, 30, 66, 0.18); }
-    .card-badge { position: absolute; top: -14px; right: 20px; background: var(--coral-acento); color: var(--blanco); font-size: 0.75rem; font-weight: 900; padding: 4px 14px; border-radius: 50px; border: none; text-transform: uppercase; box-shadow: 0 4px 10px rgba(255,107,107,0.3); }
-    .icon-wrapper svg { width: 38px; height: 38px; stroke: var(--morado-principal); fill: none; margin-bottom: 15px; }
-    .card h3 { font-size: 1.25rem; margin-bottom: 12px; font-weight: 800; }
-    .card p { font-size: 0.92rem; color: var(--texto-suave); margin-bottom: 22px; font-weight: 500; }
+    /* 5. HERRAMIENTAS GRATUITAS */
+    .grid-herramientas { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+    .card-herramienta { background: var(--blanco); padding: 30px 20px; border-radius: 12px; text-align: center; border: 2px solid var(--gris-borde); text-decoration: none; color: var(--texto-oscuro); transition: transform 0.2s, border-color 0.2s; }
+    .card-herramienta:hover { transform: translateY(-4px); border-color: var(--morado-autoridad); }
+    .card-herramienta.menta { border-left: 6px solid var(--menta-prevencion); }
+    .card-herramienta.morado { border-left: 6px solid var(--morado-autoridad); }
+    .card-herramienta h3 { font-size: 1.1rem; color: var(--morado-autoridad); font-weight: 800; }
 
-    /* 4. ¿POR QUÉ CONFIAR EN ÁGORA? */
-    .confianza-box { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; padding: 10px 0; }
-    .confianza-img-wrapper { flex: 1; min-width: 320px; position: relative; display: flex; justify-content: center; }
-    .confianza-backdrop { position: absolute; bottom: -20px; right: 10px; width: 100px; height: 100px; background: var(--verde-menta); border-radius: 50%; opacity: 0.8; z-index: 1; }
-    .confianza-backdrop-2 { position: absolute; top: -15px; left: 10px; width: 60px; height: 60px; background: var(--coral-acento); border-radius: 50%; opacity: 0.8; z-index: 1; }
-    .confianza-img-frame { 
-      position: relative; 
-      z-index: 2; 
-      padding: 8px; 
-      background: var(--morado-principal); 
-      border-radius: 16px 90px 16px 16px; 
-      box-shadow: 0 20px 40px rgba(54,30,66,0.25); 
-      border: 3px solid var(--verde-menta);
-    }
-    .confianza-img { width: 100%; max-width: 480px; height: 380px; object-fit: cover; border-radius: 10px 82px 10px 10px; display: block; }
+    /* 6. BIBLIOTECA (GRATIS VS PROFESIONAL) */
+    .grid-biblioteca { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+    .box-biblioteca { background: var(--blanco); padding: 40px 30px; border-radius: 12px; border: 2px solid var(--gris-borde); display: flex; flex-direction: column; justify-content: space-between; }
+    .box-biblioteca.gratis { border-top: 8px solid var(--menta-prevencion); }
+    .box-biblioteca.profesional { border-top: 8px solid var(--morado-autoridad); }
+    .box-biblioteca h3 { font-size: 1.5rem; color: var(--morado-autoridad); font-weight: 900; margin-bottom: 6px; }
+    .badge-biblio { font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 20px; }
+    .badge-biblio.gratis { background: var(--menta-fondo); color: var(--morado-autoridad); }
+    .badge-biblio.profesional { background: var(--morado-autoridad); color: var(--blanco); }
+    .list-biblio { list-style: none; padding: 0; margin-bottom: 30px; }
+    .list-biblio li { font-size: 0.95rem; color: var(--texto-suave); font-weight: 600; padding: 8px 0; border-bottom: 1px dashed var(--gris-borde); }
+    .list-biblio li span { color: var(--morado-autoridad); font-weight: 900; margin-right: 8px; }
 
-    /* 5. HERRAMIENTAS ÁGORA */
-    .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
-    .tool-card { 
-      background: var(--blanco); 
-      padding: 30px 22px; 
-      border-radius: 12px; 
-      border: 2px solid var(--morado-principal); 
-      border-bottom: 5px solid var(--morado-principal);
-      text-align: center; 
-      transition: all 0.25s; 
-      cursor: pointer; 
-      text-decoration: none; 
-      color: inherit; 
-      box-shadow: 0 6px 16px rgba(54, 30, 66, 0.06); 
-    }
-    .tool-card:hover { transform: translateY(-6px); border-color: var(--morado-principal); border-bottom-color: var(--verde-menta); box-shadow: 0 12px 25px rgba(54, 30, 66, 0.16); background: var(--menta-fondo); }
-    .tool-card svg { width: 44px; height: 44px; stroke: var(--coral-acento); fill: none; margin-bottom: 15px; }
-    .tool-card h4 { font-size: 1.1rem; font-weight: 800; color: var(--morado-principal); margin-bottom: 8px; }
-    .tool-card p { font-size: 0.88rem; color: var(--texto-suave); font-weight: 500; }
+    /* 7. OBSERVATORIO */
+    .grid-observatorio { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .card-observatorio { background: var(--blanco); padding: 30px; border-radius: 12px; border: 2px solid var(--gris-borde); }
+    .tag-obs { font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 12px; }
+    .tag-obs.normativo { background: var(--morado-autoridad); color: var(--blanco); }
+    .tag-obs.dt { background: var(--menta-prevencion); color: var(--morado-autoridad); }
+    .tag-obs.actualidad { background: #ffe2d1; color: var(--naranja-accion); }
+    .card-observatorio h3 { font-size: 1.15rem; color: var(--morado-autoridad); margin-bottom: 10px; font-weight: 800; }
+    .card-observatorio p { font-size: 0.9rem; color: var(--texto-suave); font-weight: 500; }
 
-    /* RECURSOS */
-    .resource-tabs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; }
-    .resource-panel { background: var(--menta-fondo); padding: 35px; border-radius: 12px; border: 2px solid var(--morado-principal); box-shadow: 0 8px 20px rgba(54, 30, 66, 0.06); }
-    .panel-free { border-top: 6px solid var(--verde-menta); }
-    .panel-tools { border-top: 6px solid var(--coral-acento); background: var(--blanco); }
-    .panel-title { font-size: 1.4rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; font-weight: 800; }
-    .panel-title svg { width: 28px; height: 28px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; }
-    .resource-list { list-style: none; margin-bottom: 25px; }
-    .resource-list li { margin-bottom: 12px; font-size: 0.95rem; color: var(--texto-suave); display: flex; align-items: center; gap: 10px; font-weight: 600; }
-    .resource-list li svg { width: 20px; height: 20px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; }
+    /* 9. CONTACTO UNIFICADO */
+    .contact-section { background: var(--blanco); border-top: 1px solid var(--gris-borde); padding: 70px 0; }
+    .contact-container { max-width: 650px; margin: 0 auto; background: var(--fondo-pagina); padding: 40px; border-radius: 12px; border: 2px solid var(--morado-autoridad); }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.8rem; font-weight: 800; color: var(--morado-autoridad); margin-bottom: 6px; text-transform: uppercase; }
+    .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 2px solid var(--gris-borde); border-radius: 6px; font-size: 0.95rem; font-family: inherit; outline: none; background: var(--blanco); color: var(--texto-oscuro); }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--morado-autoridad); }
+    .direct-contact { text-align: center; margin-top: 25px; font-size: 0.9rem; font-weight: 700; color: var(--texto-suave); }
+    .direct-contact a { color: var(--morado-autoridad); text-decoration: none; font-weight: 800; border-bottom: 2px solid var(--menta-prevencion); margin: 0 8px; }
 
-    /* BOTONES GENERALES (ACTUALIZADOS A FONDO MORADO) */
-    .btn-agora { display: inline-block; padding: 14px 28px; text-decoration: none; font-weight: 900; border-radius: 8px; font-size: 0.9rem; transition: all 0.2s; border: none; cursor: pointer; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; }
-    .btn-agora-morado { background-color: var(--morado-principal); color: var(--blanco); border: 2px solid var(--morado-principal); box-shadow: 0 4px 12px rgba(54,30,66,0.2); }
-    .btn-agora-morado:hover { background-color: var(--morado-oscuro); transform: translateY(-2px); }
-    
-    /* BOTONES DE TARJETAS NO BLANCOS (MORADO SÓLIDO CON HOVER VERDE MENTA) */
-    .btn-agora-outline { 
-      background-color: var(--morado-principal); 
-      color: var(--blanco); 
-      border: 2px solid var(--morado-principal); 
-      box-shadow: 0 4px 12px rgba(54,30,66,0.15);
-    }
-    .btn-agora-outline:hover { 
-      background-color: var(--verde-menta); 
-      color: var(--morado-principal); 
-      border-color: var(--verde-menta);
-      transform: translateY(-2px);
-    }
-    .btn-agora-small { padding: 12px 20px; font-size: 0.85rem; }
+    footer { background: var(--morado-oscuro); color: var(--blanco); text-align: center; padding: 30px 24px; font-size: 0.85rem; font-weight: 600; border-top: 4px solid var(--menta-prevencion); }
 
-    /* CONTACTO */
-    .contact-form-box { background: var(--menta-fondo); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(54, 30, 66, 0.08); border: 2px solid var(--morado-principal); }
-    .contact-info-box { background: var(--morado-principal); color: var(--blanco); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(54, 30, 66, 0.2); border: 2px solid var(--verde-menta); }
-
-    footer { background: var(--morado-oscuro); color: var(--blanco); text-align: center; padding: 30px 24px; font-size: 0.88rem; font-weight: 600; border-top: 4px solid var(--verde-menta); }
-
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       .nav-links { display: none; }
-      .navbar { justify-content: center; padding: 14px 16px; }
-      .trust-container { flex-direction: column !important; gap: 10px !important; text-align: center !important; }
-      .hero-banner { padding: 50px 18px; min-height: 420px; }
-      .hero-content h1 { font-size: 2.3rem; }
-      .hero-buttons { flex-direction: column; width: 100%; }
-      .btn-hero { width: 100%; text-align: center; padding: 14px; }
-      .resource-tabs-grid { grid-template-columns: 1fr; gap: 30px; }
-      .confianza-box { flex-direction: column; }
+      .hero h1 { font-size: 1.9rem; }
     }
-
-    /* BOTÓN WHATSAPP FLOTANTE */
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25d366;
-      color: #fff;
-      border-radius: 50px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.3);
-      z-index: 10000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.2s ease;
-      text-decoration: none;
-      border: 2px solid var(--blanco);
-    }
-    .whatsapp-float:hover { transform: scale(1.1); }
   </style>
 </head>
 <body>
 
-  <!-- NAVEGACIÓN -->
-  <header class="header" id="inicio">
+  <header class="header">
     <div class="navbar">
-      <div class="logo-text">ÁGORA LABORAL <span>360°</span></div>
-      <nav>
-       <ul class="nav-links">
-        <li><a href="#inicio" class="active">INICIO</a></li>
-        <li><a href="#servicios">SERVICIOS</a></li>
-        <li><a href="metodo-360/index.html">MÉTODO 360°</a></li>
-        <li><a href="observatorio.html">OBSERVATORIO</a></li>
-        <li><a href="academia/index.html">ACADEMIA</a></li>
-        <li><a href="recursos/index.html">RECURSOS</a></li>
-        <li><a href="#contacto">CONTACTO</a></li>
-       </ul>
-      </nav>
+      <a href="#" class="logo-text">ÁGORA LABORAL <span>360°</span></a>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#metodo">Método 360°</a></li>
+        <li><a href="blog/ley-equidad-brecha-salarial.html">Informe 21.828</a></li>
+        <li><a href="#herramientas">Herramientas</a></li>
+        <li><a href="#biblioteca">Recursos</a></li>
+        <li><a href="#observatorio">Observatorio</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
     </div>
   </header>
 
-  <!-- BARRA DE ESPECIALIDADES -->
-  <section class="trust-bar">
-    <div class="trust-container">
-      <div class="trust-item">Ley 21.643 (Ley Karin)</div>
-      <div class="trust-item">Ley 21.828 (Equidad)</div>
-      <div class="trust-item">Método Ágora 360®</div>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>ÁGORA LABORAL 360°</h1>
+      <div class="hero-subtitle">Consultoría especializada en Ley Karin, investigaciones y compliance laboral</div>
+      <p class="hero-desc">Investigaciones externas, asesoría técnica y herramientas para ayudar a organizaciones públicas y privadas a cumplir la normativa y gestionar denuncias con rigor.</p>
+      
+      <div class="hero-buttons">
+        <a href="evaluacion-riesgo.html" class="btn-naranja">Realizar Diagnóstico Gratuito →</a>
+        <a href="#contacto" class="btn-secundario">Agendar Reunión Técnica</a>
+      </div>
+
+      <div class="hero-tagline">Ley 21.643 · Ley 21.828 · Método Ágora 360®</div>
     </div>
   </section>
 
-  <main>
-    <!-- 1. PORTADA CON FOTO DE FONDO -->
-    <section class="container">
-      <div class="hero-banner">
-        <div class="hero-content">
-          <div class="hero-badge">Asesoría Experta & Compliance Laboral</div>
-          <h1>¿Recibió una denuncia por Ley Karin?</h1>
-          <p>
-            Realizamos investigaciones externas imparciales, objetivas y técnicamente defendibles para proteger a su organización y garantizar el debido proceso.
-          </p>
-          
-          <div class="hero-buttons">
-            <a href="diagnostico/index.html" class="btn-hero btn-hero-primary">Realizar Diagnóstico Gratis →</a>
-            <a href="#contacto" class="btn-hero btn-hero-secondary">Agendar Reunión Técnica</a>
-          </div>
-        </div>
+  <section id="servicios" class="section-container">
+    <h2 class="section-title">Servicios Especializados</h2>
+    <p class="section-subtitle">Soluciones de alto nivel técnico para el resguardo de la organización y el cumplimiento normativo.</p>
+
+    <div class="grid-servicios">
+      <div class="card-servicio morado">
+        <h3>Investigación Externa</h3>
+        <p>Investigación independiente de denuncias complejas por acoso laboral, sexual y violencia en el trabajo.</p>
       </div>
-    </section>
 
-    <!-- 2. DIAGNÓSTICO GRATUITO -->
-    <section class="container" id="diagnostico_invite">
-      <div class="quiz-invite">
-        <span class="quiz-badge">Evaluación Express 3 Min.</span>
-        <h3>¿Su organización cumple con la Ley Karin?</h3>
-        <p>Evalúe en menos de 3 minutos el nivel de riesgo y preparación de su empresa ante fiscalizaciones de la Dirección del Trabajo.</p>
-        <a href="diagnostico/index.html" class="btn-agora btn-agora-morado">Realizar Diagnóstico Gratis →</a>
+      <div class="card-servicio menta">
+        <h3>Asesoría al Investigador Interno</h3>
+        <p>Acompañamiento técnico, revisión metodológica y resguardo del debido proceso en investigaciones internas.</p>
       </div>
-    </section>
 
-    <!-- 3. NUESTROS SERVICIOS -->
-    <section class="section container" id="servicios">
-      <h2 class="section-title">Nuestros Servicios</h2>
-      <p class="section-subtitle">Conducción técnica y estratégica para resguardar a su organización ante la normativa laboral vigente.</p>
+      <div class="card-servicio morado">
+        <h3>Informe Ley 21.828</h3>
+        <p>Preparación, diagnóstico y análisis preventivo del informe de equidad salarial y brechas de género.</p>
+      </div>
 
-      <div class="cards-grid">
-        <div class="card">
-          <span class="card-badge">Más Solicitado</span>
-          <div>
-            <div class="icon-wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </div>
-            <h3>Investigación Externa</h3>
-            <p>Conducción imparcial del procedimiento pericial completo por denuncias complejas de acoso u hostigamiento.</p>
-          </div>
-          <a href="servicios/index.html" class="btn-agora btn-agora-small btn-agora-outline">Conozca más</a>
+      <div class="card-servicio menta">
+        <h3>Academia Ágora 360°</h3>
+        <p>Formación especializada y práctica para departamentos de RR.HH., fiscalías e investigadores internos.</p>
+      </div>
+    </div>
+
+    <div class="cta-center-container">
+      <a href="#contacto" class="btn-naranja">Conozca Nuestros Servicios →</a>
+    </div>
+  </section>
+
+  <section id="metodo" class="metodo-section">
+    <div class="section-container" style="padding-top:0; padding-bottom:0;">
+      <h2 class="section-title">Método Ágora 360®</h2>
+      <p class="section-subtitle">Una metodología orientada a investigaciones objetivas, trazables e imparciales.</p>
+
+      <div class="grid-pilares">
+        <div class="card-pilar morado">
+          <h3>Imparcialidad</h3>
+          <p>Independencia absoluta y ausencia de conflictos de interés.</p>
         </div>
 
-        <div class="card">
-          <div>
-            <div class="icon-wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-            </div>
-            <h3>Asesoría Investigador Interno</h3>
-            <p>Apoyo técnico en estrategia, preguntas, actas e informe final para el equipo de investigación de su empresa.</p>
-          </div>
-          <a href="servicios/index.html" class="btn-agora btn-agora-small btn-agora-outline">Conozca más</a>
+        <div class="card-pilar menta">
+          <h3>Trazabilidad</h3>
+          <p>Cada actuación queda debidamente registrada y respaldada.</p>
         </div>
 
-        <div class="card">
-          <div>
-            <div class="icon-wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-            </div>
-            <h3>Diagnóstico Ley 21.828</h3>
-            <p>Evaluación preventiva sobre participación, brecha salarial y corresponsabilidad previo al reglamento oficial.</p>
-          </div>
-          <a href="observatorio.html" class="btn-agora btn-agora-small btn-agora-outline">Conozca más</a>
+        <div class="card-pilar morado">
+          <h3>Objetividad</h3>
+          <p>Evaluación sistemática, neutra y técnica de la evidencia.</p>
         </div>
 
-        <div class="card">
-          <div>
-            <div class="icon-wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-            </div>
-            <h3>Academia Ágora 360°</h3>
-            <p>Cursos, certificaciones, webinars y talleres de prevención y debido proceso para ejecutivos y RR.HH.</p>
-          </div>
-          <a href="academia/index.html" class="btn-agora btn-agora-small btn-agora-outline">Ver Academia</a>
+        <div class="card-pilar menta">
+          <h3>Cumplimiento</h3>
+          <p>Alineación rigurosa con la normativa y dictámenes de la DT.</p>
         </div>
       </div>
-    </section>
 
-    <!-- 4. ¿POR QUÉ CONFIAR EN ÁGORA? -->
-    <section id="confianza" class="section section-bg-light">
-      <div class="container">
-        <div class="confianza-box">
-          
-          <div style="flex: 1; min-width: 320px;">
-            <h2 style="font-size: 2.3rem; font-weight: 900; color: var(--morado-principal); margin-bottom: 20px;">
-              ¿Por qué confiar en Ágora Laboral 360°?
-            </h2>
-            <p style="font-size: 1.05rem; color: var(--texto-suave); margin-bottom: 30px; line-height: 1.7; font-weight: 500;">
-              Combinamos la precisión del derecho laboral con metodologías de investigación comprobadas para entregar resultados que protegen a su organización de manera imparcial.
-            </p>
+      <div class="cta-center-container">
+        <a href="#contacto" class="btn-naranja">Conozca el Método Ágora 360® →</a>
+      </div>
+    </div>
+  </section>
 
-            <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
-              <li style="margin-bottom: 18px; display: flex; align-items: flex-start; gap: 14px; font-size: 1rem; color: var(--texto-oscuro);">
-                <span style="background: var(--morado-principal); color: var(--verde-menta); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.9rem; flex-shrink: 0; margin-top: 2px;">✓</span>
-                <div><strong>Rigor Técnico:</strong> Criterios alineados a la jurisprudencia reciente de la Dirección del Trabajo.</div>
-              </li>
-              <li style="margin-bottom: 18px; display: flex; align-items: flex-start; gap: 14px; font-size: 1rem; color: var(--texto-oscuro);">
-                <span style="background: var(--morado-principal); color: var(--verde-menta); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.9rem; flex-shrink: 0; margin-top: 2px;">✓</span>
-                <div><strong>Metodología ICIA:</strong> Estándar propio para la valoración objetiva y neutral de la evidencia.</div>
-              </li>
-              <li style="margin-bottom: 18px; display: flex; align-items: flex-start; gap: 14px; font-size: 1rem; color: var(--texto-oscuro);">
-                <span style="background: var(--morado-principal); color: var(--verde-menta); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.9rem; flex-shrink: 0; margin-top: 2px;">✓</span>
-                <div><strong>Celeridad Legal:</strong> Procesos estructurados para cumplir sin fallas los 30 días legales.</div>
-              </li>
-            </ul>
-          </div>
+  <section id="herramientas" class="section-container">
+    <h2 class="section-title">Herramientas Gratuitas</h2>
+    <p class="section-subtitle">Recursos prácticos interactivos para RR.HH. y responsables de cumplimiento.</p>
 
-          <div class="confianza-img-wrapper">
-            <div class="confianza-backdrop"></div>
-            <div class="confianza-backdrop-2"></div>
+    <div class="grid-herramientas">
+      <a href="calculadora.html" class="card-herramienta menta">
+        <h3>Calculadora de 30 días</h3>
+      </a>
+      <a href="cronograma.html" class="card-herramienta morado">
+        <h3>Generador de Cronograma</h3>
+      </a>
+      <a href="checklist.html" class="card-herramienta menta">
+        <h3>Checklist Ley Karin</h3>
+      </a>
+      <a href="evaluacion-riesgo.html" class="card-herramienta morado">
+        <h3>Matriz de Medidas de Resguardo</h3>
+      </a>
+    </div>
 
-            <div class="confianza-img-frame">
-              <img 
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
-                alt="Investigación y Consultoría Laboral Ágora" 
-                class="confianza-img"
-              >
-            </div>
-          </div>
+    <div class="cta-center-container">
+      <a href="recursos/index.html" class="btn-naranja">Ver Todas las Herramientas →</a>
+    </div>
+  </section>
 
+  <section id="biblioteca" class="section-container" style="padding-top: 0;">
+    <h2 class="section-title">Biblioteca Ágora</h2>
+    <p class="section-subtitle">Documentación, guías y modelos para fortalecer la gestión preventiva en su empresa.</p>
+
+    <div class="grid-biblioteca">
+      <div class="box-biblioteca gratis">
+        <div>
+          <span class="badge-biblio gratis">Recursos Abiertos</span>
+          <h3>Biblioteca Gratuita</h3>
+          <ul class="list-biblio">
+            <li><span>✓</span> Guía Práctica Ley Karin</li>
+            <li><span>✓</span> Infografía Resumen Normativo</li>
+            <li><span>✓</span> Presentación PPT Introductoria</li>
+            <li><span>✓</span> Checklist de Admisibilidad</li>
+            <li><span>✓</span> Dictámenes DT Resumidos</li>
+            <li><span>✓</span> Primer Capítulo: Manual del Investigador/a</li>
+          </ul>
         </div>
+        <a href="recursos/index.html" class="btn-secundario" style="text-align:center;">Descargar Gratis →</a>
       </div>
-    </section>
 
-    <!-- 5. HERRAMIENTAS ÁGORA -->
-    <section class="section container" id="herramientas">
-      <h2 class="section-title">Herramientas Ágora 360°</h2>
-      <p class="section-subtitle">Utilidades interactivas gratuitas para agilizar la gestión de RR.HH. y Compliance normativo.</p>
-
-      <div class="tools-grid">
-        <a href="calculadora.html" class="tool-card">
-          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          <h4>Calculadora de Plazos</h4>
-          <p>Calcule la fecha límite exacta de los 30 días de investigación.</p>
-        </a>
-
-        <a href="cronograma.html" class="tool-card">
-          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          <h4>Generador de Cronograma</h4>
-          <p>Esquematice las 8 etapas obligatorias para su expediente.</p>
-        </a>
-
-        <a href="checklist.html" class="tool-card">
-          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-          <h4>Checklist de Cumplimiento</h4>
-          <p>Lista de verificación interactiva de protocolos de prevención.</p>
-        </a>
-
-        <a href="evaluacion-riesgo.html" class="tool-card">
-          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
-          <h4>Evaluación de Riesgo</h4>
-          <p>Matriz rápida para determinar si un caso exige separación.</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- 6. BIBLIOTECA LEGAL Y RECURSOS -->
-    <section class="section section-bg-light" id="recursos">
-      <div class="container">
-        <h2 class="section-title">Biblioteca Legal y Recursos</h2>
-        <p class="section-subtitle">Acceda a nuestra colección de instrumentos normativos, guías interactivas y herramientas de gestión.</p>
-
-        <div class="resource-tabs-grid">
-          
-          <div class="resource-panel panel-free">
-            <div>
-              <h3 class="panel-title">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                Recursos Gratuitos
-              </h3>
-              <ul class="resource-list">
-                <li>
-                  <svg viewBox="0 0 24 24" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Guía de Protocolo Ley Karin
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Dictamen N.º 515/21 Resumido
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Checklist Preventivo DT
-                </li>
-              </ul>
-            </div>
-            <a href="recursos/index.html" class="btn-agora btn-agora-small btn-agora-outline" style="width: 100%;">Ver Biblioteca Completa</a>
-          </div>
-
-          <div class="resource-panel panel-tools">
-            <div>
-              <h3 class="panel-title">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                Herramientas e Instrumentos
-              </h3>
-              <ul class="resource-list">
-                <li>
-                  <svg viewBox="0 0 24 24" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Calculadora de Plazos (30 días)
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Generador de Cronograma
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Matriz de Riesgo y Resguardo
-                </li>
-              </ul>
-            </div>
-            <a href="recursos/index.html" class="btn-agora btn-agora-small btn-agora-outline" style="width: 100%;">Acceder a Herramientas</a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
- <!-- SECCIÓN BLOG Y NOTICIAS ESPECIALIZADAS -->
-    <section id="blog" class="section container">
-      <h2 class="section-title">Blog & Análisis Normativo</h2>
-      <p class="section-subtitle">Artículos técnicos, novedades legislativas y criterios de la Dirección del Trabajo sobre la normativa laboral vigente.</p>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
-        
-        <!-- ARTÍCULO 1: LEY KARIN -->
-        <article class="card" style="padding: 0; overflow: hidden; justify-content: flex-start;">
-          <div style="position: relative;">
-            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80" alt="Reunión equipo legal" style="width: 100%; height: 200px; object-fit: cover; display: block; border-bottom: 2px solid var(--morado-principal);">
-            <span class="card-badge" style="background: var(--coral-acento); top: 15px; right: 15px;">Ley Karin</span>
-          </div>
-          <div style="padding: 25px; display: flex; flex-direction: column; height: 100%;">
-            <div style="font-size: 0.82rem; font-weight: 700; color: var(--texto-suave); margin-bottom: 10px;">Agosto, 2026</div>
-            <h3 style="font-size: 1.15rem; margin-bottom: 12px; line-height: 1.3;">Criterios de la DT en Investigaciones Externas</h3>
-            <p style="font-size: 0.9rem; margin-bottom: 25px;">Análisis práctico sobre los estándares de debido proceso y los errores más comunes al sustanciar expedientes bajo la Ley N.° 21.643.</p>
-            <a href="blog/criterios-dt-ley-karin.html" class="btn-agora btn-agora-small btn-agora-outline" style="margin-top: auto; align-self: flex-start;">Leer Artículo →</a>
-          </div>
-        </article>
-
-        <!-- ARTÍCULO 2: LEY DE EQUIDAD -->
-        <article class="card" style="padding: 0; overflow: hidden; justify-content: flex-start;">
-          <div style="position: relative;">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Análisis de brecha salarial" style="width: 100%; height: 200px; object-fit: cover; display: block; border-bottom: 2px solid var(--morado-principal);">
-            <span class="card-badge" style="background: var(--morado-principal); border: 1px solid var(--verde-menta); top: 15px; right: 15px;">Ley de Equidad</span>
-          </div>
-          <div style="padding: 25px; display: flex; flex-direction: column; height: 100%;">
-            <div style="font-size: 0.82rem; font-weight: 700; color: var(--texto-suave); margin-bottom: 10px;">Julio, 2026</div>
-            <h3 style="font-size: 1.15rem; margin-bottom: 12px; line-height: 1.3;">Ley N.° 21.828: Diagnóstico de Brecha Salarial</h3>
-            <p style="font-size: 0.9rem; margin-bottom: 25px;">Claves para estructurar matrices de cargos y salarios previas a la promulgación del reglamento oficial de equidad salarial.</p>
-            <a href="blog/ley-equidad-brecha-salarial.html" class="btn-agora btn-agora-small btn-agora-outline" style="margin-top: auto; align-self: flex-start;">Leer Artículo →</a>
-          </div>
-        </article>
-
-        <!-- ARTÍCULO 3: PERSPECTIVA DE GÉNERO -->
-        <article class="card" style="padding: 0; overflow: hidden; justify-content: flex-start;">
-          <div style="position: relative;">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Mujeres profesionales trabajando" style="width: 100%; height: 200px; object-fit: cover; display: block; border-bottom: 2px solid var(--morado-principal);">
-            <span class="card-badge" style="background: var(--coral-acento); top: 15px; right: 15px;">Perspectiva de Género</span>
-          </div>
-          <div style="padding: 25px; display: flex; flex-direction: column; height: 100%;">
-            <div style="font-size: 0.82rem; font-weight: 700; color: var(--texto-suave); margin-bottom: 10px;">Junio, 2026</div>
-            <h3 style="font-size: 1.15rem; margin-bottom: 12px; line-height: 1.3;">Aplicación Práctica en Protocolos Internos</h3>
-            <p style="font-size: 0.9rem; margin-bottom: 25px;">Cómo incorporar la perspectiva de género de forma imparcial y técnica en la redacción de reglamentos y toma de declaraciones.</p>
-            <a href="blog/perspectiva-genero-protocolos.html" class="btn-agora btn-agora-small btn-agora-outline" style="margin-top: auto; align-self: flex-start;">Leer Artículo →</a>
-          </div>
-        </article>
-
-        <!-- ARTÍCULO 4: DERECHOS FUNDAMENTALES -->
-        <article class="card" style="padding: 0; overflow: hidden; justify-content: flex-start;">
-          <div style="position: relative;">
-            <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=600&q=80" alt="Balanza de la justicia" style="width: 100%; height: 200px; object-fit: cover; display: block; border-bottom: 2px solid var(--morado-principal);">
-            <span class="card-badge" style="background: var(--morado-principal); border: 1px solid var(--verde-menta); top: 15px; right: 15px;">Derechos Fundamentales</span>
-          </div>
-          <div style="padding: 25px; display: flex; flex-direction: column; height: 100%;">
-            <div style="font-size: 0.82rem; font-weight: 700; color: var(--texto-suave); margin-bottom: 10px;">Mayo, 2026</div>
-            <h3 style="font-size: 1.15rem; margin-bottom: 12px; line-height: 1.3;">Tutela Laboral y Garantías Constitucionales</h3>
-            <p style="font-size: 0.9rem; margin-bottom: 25px;">Límites probatorios y resguardo de la honra y privacidad de las partes durante el proceso de investigación interna.</p>
-            <a href="blog/tutela-derechos-fundamentales.html" class="btn-agora btn-agora-small btn-agora-outline" style="margin-top: auto; align-self: flex-start;">Leer Artículo →</a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados. | Método Ágora 360® registrado.</p>
-  </footer>
-
-  <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a href="https://wa.me/56999840502?text=Hola,%20necesito%20información%20sobre%20asesoría%20en%20Ley%20Karin" 
-     class="whatsapp-float" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     aria-label="Contacto por WhatsApp">
-    <svg viewBox="0 0 24 24" width="34" height="34" fill="#ffffff">
-      <path d="M12.031 0C5.385 0 .004 5.385.004 12.031c0 2.128.552 4.192 1.6 6.002L.004 24l6.113-1.605c1.748.948 3.702 1.452 5.714 1.452 6.645 0 12.031-5.385 12.031-12.031C23.862 5.385 18.676 0 12.031 0zm6.541 17.348c-.274.773-1.579 1.472-2.181 1.545-.561.069-1.291.139-4.103-1.026-3.593-1.488-5.918-5.155-6.096-5.393-.178-.238-1.458-1.942-1.458-3.708 0-1.766.921-2.637 1.248-2.964.327-.327.712-.416.95-.416.237 0 .475 0 .683.01.218.01.505-.089.792.604.297.712 1.01 2.475 1.099 2.653.089.178.148.386.03.624-.119.238-.178.386-.356.594-.178.208-.376.435-.534.584-.178.178-.366.376-.158.732.208.356.92 1.515 1.97 2.455 1.355 1.208 2.495 1.584 2.851 1.762.356.178.564.148.772-.089.208-.238.891-1.039 1.129-1.396.238-.356.475-.297.802-.178.327.119 2.079.98 2.435 1.158.356.178.594.267.683.416.089.148.089.861-.188 1.633z"/>
-    </svg>
-  </a>
-
-</body>
-</html>
+      <div class="box-biblioteca profesional">
+        <div>
+          <span class="badge-biblio profesional">Acceso Profesional</span>
+          <h3>Biblioteca Especial
