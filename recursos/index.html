@@ -213,19 +213,21 @@
       display: block;
       width: 100%;
       text-align: center;
-      background: var(--verde-menta);
-      color: var(--morado-corporativo);
+      background: #f26522; /* Naranja corporativo vibrante */
+      color: #ffffff !important;
       font-weight: 800;
       padding: 14px 20px;
       border-radius: 8px;
       text-decoration: none;
-      transition: background 0.2s, transform 0.2s;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     }
 
     .btn-action:hover {
+      background: #d95316;
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 14px rgba(242, 101, 34, 0.35);
     }
+    
 
     .btn-secondary {
       display: block;
@@ -353,7 +355,7 @@
         <!-- BOTONES DE ACCIÓN -->
         <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
           <a href="muestra-manual.html" class="btn-secondary">Leer Muestra Gratuita (Capítulo I)</a>
-          <a href="../index.html#contacto" class="btn-action">SOLICITAR ACCESO PRO →</a>
+          <a href="https://wa.me/56932701196?text=Hola,%20quisiera%20información%20para%20adquirir%20el%20Kit%20Profesional%20PRO" target="_blank" class="btn-action">SOLICITAR ACCESO PRO →</a>
         </div>
       </div>
 
