@@ -48,16 +48,16 @@
 
     .card-title { font-size: 1.3rem; color: var(--morado-corporativo); font-weight: 900; margin-bottom: 20px; }
 
-    /* LISTA DE HERRAMIENTAS */
-    .tool-list { list-style: none; display: flex; flex-direction: column; gap: 15px; margin-bottom: 20px; }
-    .tool-item-link { display: flex; flex-direction: column; text-decoration: none; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--borde-suave); transition: background 0.2s, border-color 0.2s; color: inherit; background: #fafafa; }
+    /* LISTA DE HERRAMIENTAS INTERACTIVAS */
+    .tool-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+    .tool-item-link { display: flex; flex-direction: column; text-decoration: none; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--borde-suave); transition: background 0.2s, border-color 0.2s; color: inherit; background: #fafafa; }
     .tool-item-link:hover { background: #f3f0f5; border-color: var(--morado-corporativo); }
-    .tool-item-title { font-weight: 800; color: var(--morado-corporativo); font-size: 0.95rem; display: flex; justify-content: space-between; align-items: center; }
-    .tool-item-desc { font-size: 0.85rem; color: var(--texto-suave); margin-top: 4px; }
+    .tool-item-title { font-weight: 800; color: var(--morado-corporativo); font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center; }
+    .tool-item-desc { font-size: 0.8rem; color: var(--texto-suave); margin-top: 3px; }
 
     /* PROMO BIBLIOTECA */
-    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 30px; }
-    .feature-list li { font-size: 0.92rem; color: var(--texto-oscuro); display: flex; align-items: flex-start; gap: 10px; font-weight: 600; }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px; }
+    .feature-list li { font-size: 0.9rem; color: var(--texto-oscuro); display: flex; align-items: flex-start; gap: 10px; font-weight: 600; }
     .feature-list li span { color: var(--morado-corporativo); font-weight: 900; }
 
     .btn-action { display: block; width: 100%; text-align: center; background: var(--verde-menta); color: var(--texto-btn-menta); padding: 16px; border-radius: 8px; font-weight: 900; text-decoration: none; text-transform: uppercase; transition: background 0.2s; }
@@ -67,12 +67,13 @@
     .info-box-clean {
       background: #f8f6f9;
       border-left: 3px solid var(--morado-corporativo);
-      padding: 16px 18px;
+      padding: 14px 16px;
       border-radius: 6px;
       margin-top: 15px;
+      margin-bottom: 15px;
     }
     .info-box-clean h4 {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 800;
       color: var(--morado-corporativo);
       text-transform: uppercase;
@@ -80,7 +81,7 @@
       letter-spacing: 0.5px;
     }
     .info-box-clean p {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--texto-suave);
       line-height: 1.4;
       margin: 0;
@@ -116,10 +117,20 @@
 
     <div class="resources-grid">
 
-      <!-- TARJETA 1: HERRAMIENTAS GRATUITAS -->
+      <!-- TARJETA 1: BIBLIOTECA GRATUITA Y HERRAMIENTAS -->
       <div class="card-box">
         <div>
-          <h2 class="card-title">Herramientas de Diagnóstico</h2>
+          <h2 class="card-title">Biblioteca Gratuita</h2>
+          
+          <ul class="feature-list">
+            <li><span>✓</span> Guía Práctica Ley Karin</li>
+            <li><span>✓</span> Infografía Resumen Normativo</li>
+            <li><span>✓</span> Presentación PPT Introductoria</li>
+            <li><span>✓</span> Dictámenes DT Resumidos</li>
+            <li><span>✓</span> Primer Capítulo: Manual del Investigador/a</li>
+          </ul>
+
+          <h3 style="font-size: 1rem; color: var(--morado-corporativo); font-weight: 800; margin: 20px 0 10px;">Herramientas Interactivas:</h3>
           <div class="tool-list">
             <a href="../checklist.html" class="tool-item-link">
               <div class="tool-item-title">
@@ -134,7 +145,7 @@
                 <span>Filtro de Admisibilidad Exprés</span>
                 <span>→</span>
               </div>
-              <span class="tool-item-desc">Verifique en 3 pasos si la denuncia cumple con los requisitos legales de recepción.</span>
+              <span class="tool-item-desc">Verifique en 3 pasos si la denuncia cumple los requisitos.</span>
             </a>
 
             <a href="../semaforo.html" class="tool-item-link">
@@ -142,16 +153,19 @@
                 <span>Semáforo de Conductas Ley Karin</span>
                 <span>→</span>
               </div>
-              <span class="tool-item-desc">Clasifique rápidamente si el hecho corresponde a Acoso o Violencia en el trabajo.</span>
+              <span class="tool-item-desc">Clasifique si el hecho corresponde a Acoso o Violencia.</span>
             </a>
           </div>
         </div>
 
-        <!-- RECUADRO SOBRIO DE CIERRE (SIN EMOJIS NI COLORINCHES) -->
         <div class="info-box-clean">
           <h4>Acceso Libre e Institucional</h4>
-          <p>Instrumentos de libre uso orientados a respaldar la toma de decisiones inicial de los equipos de Gestión de Personas y Fiscalía Interna.</p>
+          <p>Instrumentos de libre uso para respaldar la toma de decisiones inicial de los equipos de Gestión de Personas y Fiscalía Interna.</p>
         </div>
+
+        <a href="../index.html#contacto" style="display: block; width: 100%; text-align: center; background: transparent; color: var(--morado-corporativo); border: 2px solid var(--morado-corporativo); padding: 14px; border-radius: 8px; font-weight: 800; text-decoration: none; text-transform: uppercase;">
+          Solicitar Recursos Gratis por Correo →
+        </a>
       </div>
 
       <!-- TARJETA 2: BIBLIOTECA PROFESIONAL / KIT DE INVESTIGACIÓN -->
@@ -173,13 +187,13 @@
           </ul>
         </div>
 
-        <!-- BOTONES DE ACCIÓN MEJORADOS -->
+        <!-- BOTONES DE ACCIÓN -->
         <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
           <a href="muestra-manual.html" style="display: block; text-align: center; background: #ffffff; color: #382341; border: 2px solid #382341; padding: 12px; border-radius: 6px; font-weight: 800; font-size: 0.85rem; text-decoration: none; text-transform: uppercase;">
             Leer Muestra Gratuita (Capítulo I)
           </a>
-          <a href="kit-ley-karin.html" class="btn-action" style="display: block; text-align: center;">
-            Ver Planes y Adquirir Kit →
+          <a href="../index.html#contacto" class="btn-action" style="display: block; text-align: center;">
+            Solicitar Acceso Pro →
           </a>
         </div>
       </div>
