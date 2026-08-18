@@ -48,13 +48,34 @@
 
     .card-title { font-size: 1.3rem; color: var(--morado-corporativo); font-weight: 900; margin-bottom: 20px; }
 
-    /* LISTA DE HERRAMIENTAS INTERACTIVAS */
+    /* LISTA DE HERRAMIENTAS INTERACTIVAS (CON BORDES CORPORATIVOS) */
     .tool-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
-    .tool-item-link { display: flex; flex-direction: column; text-decoration: none; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--borde-suave); transition: background 0.2s, border-color 0.2s; color: inherit; background: #fafafa; }
-    .tool-item-link:hover { background: #f3f0f5; border-color: var(--morado-corporativo); }
+    
+    .tool-list a:nth-child(1) { border-left: 6px solid #a2e8dd; }
+    .tool-list a:nth-child(2) { border-left: 6px solid #382341; }
+    .tool-list a:nth-child(3) { border-left: 6px solid #a2e8dd; }
+
+    .tool-item-link { 
+      display: flex; 
+      flex-direction: column; 
+      text-decoration: none; 
+      padding: 12px 16px; 
+      border-radius: 8px; 
+      border-top: 1px solid var(--borde-suave);
+      border-right: 1px solid var(--borde-suave);
+      border-bottom: 1px solid var(--borde-suave);
+      transition: transform 0.2s, box-shadow 0.2s; 
+      color: inherit; 
+      background: #ffffff; 
+    }
+
+    .tool-item-link:hover { 
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(56, 35, 65, 0.1);
+    }
+    
     .tool-item-title { font-weight: 800; color: var(--morado-corporativo); font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center; }
     .tool-item-desc { font-size: 0.8rem; color: var(--texto-suave); margin-top: 3px; }
-
     /* PROMO BIBLIOTECA */
     .feature-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px; }
     .feature-list li { font-size: 0.9rem; color: var(--texto-oscuro); display: flex; align-items: flex-start; gap: 10px; font-weight: 600; }
@@ -159,6 +180,10 @@
         </div>
 
         <div class="info-box-clean">
+          <!-- BANNER CON IMAGEN Y BORDES DE MARCA -->
+<div style="margin: 20px 0; border-left: 6px solid #a2e8dd; border-top: 2px solid #382341; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 18px rgba(56, 35, 65, 0.12);">
+  <img src="../IMAGEN%205.png" alt="Consultoría Ley Karin" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+</div>
           <h4>Acceso Libre e Institucional</h4>
           <p>Instrumentos de libre uso para respaldar la toma de decisiones inicial de los equipos de Gestión de Personas y Fiscalía Interna.</p>
         </div>
