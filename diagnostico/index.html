@@ -206,31 +206,31 @@
       </div>
     </div>
 
-    <!-- TABLA RESUMEN DE LA MATRIZ (UBICADA AL FINAL) -->
+    <!-- TABLA RESUMEN DE LA MATRIZ (ESTILO SOBRIO CORPORATIVO) -->
     <div style="margin: 25px 0; overflow-x: auto;">
-      <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem; text-align: left;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
         <thead>
           <tr style="background: #382341; color: #ffffff;">
-            <th style="padding: 10px; border: 1px solid #382341;">Puntaje Obtenido</th>
-            <th style="padding: 10px; border: 1px solid #382341;">Clasificación de Riesgo</th>
-            <th style="padding: 10px; border: 1px solid #382341;">Dictamen Procedimental</th>
+            <th style="padding: 12px 14px;">Puntaje Obtenido</th>
+            <th style="padding: 12px 14px;">Clasificación de Riesgo</th>
+            <th style="padding: 12px 14px;">Dictamen Procedimental</th>
           </tr>
         </thead>
         <tbody>
-          <tr style="background: #fde8e8; color: #9b2c2c;">
-            <td style="padding: 8px 10px; border: 1px solid #cbd5e0; font-weight: 700;">0 a 8 puntos</td>
-            <td style="padding: 8px 10px; border: 1px solid #cbd5e0; font-weight: 700;">RIESGO CRÍTICO</td>
-            <td style="padding: 8px 10px; border: 1px solid #cbd5e0;">Inobservancia Estructural</td>
+          <tr style="border-bottom: 1px solid #edf2f7; background: #ffffff;">
+            <td style="padding: 12px 14px; font-weight: 700; color: #382341;">0 a 8 puntos</td>
+            <td style="padding: 12px 14px; font-weight: 800; color: #f26522;">RIESGO CRÍTICO</td>
+            <td style="padding: 12px 14px; color: #4a5568;">Inobservancia Estructural</td>
           </tr>
-          <tr style="background: #fff8e6; color: #d95316;">
-            <td style="padding: 8px 10px; border: 1px solid #cbd5e0; font-weight: 700;">9 a 14 puntos</td>
-            <td style="padding: 8px 10px; border: 1px solid #cbd5e0; font-weight: 700;">RIESGO MODERADO</td>
-            <td style="padding: 8px 10px; border: 1px solid #cbd5e0;">Vulnerabilidad Documental</td>
+          <tr style="border-bottom: 1px solid #edf2f7; background: #fcfaff;">
+            <td style="padding: 12px 14px; font-weight: 700; color: #382341;">9 a 14 puntos</td>
+            <td style="padding: 12px 14px; font-weight: 800; color: #382341;">RIESGO MODERADO</td>
+            <td style="padding: 12px 14px; color: #4a5568;">Vulnerabilidad Documental</td>
           </tr>
-          <tr style="background: #e6f7f4; color: #382341;">
-            <td style="padding: 8px 10px; border: 1px solid #cbd5e0; font-weight: 700;">15 a 18 puntos</td>
-            <td style="padding: 8px 10px; border: 1px solid #cbd5e0; font-weight: 700;">BLINDAJE ADECUADO</td>
-            <td style="padding: 8px 10px; border: 1px solid #cbd5e0;">Cumplimiento Sustancial</td>
+          <tr style="background: #ffffff;">
+            <td style="padding: 12px 14px; font-weight: 700; color: #382341;">15 a 18 puntos</td>
+            <td style="padding: 12px 14px; font-weight: 800; color: #0d9488;">BLINDAJE ADECUADO</td>
+            <td style="padding: 8px 14px; color: #4a5568;">Cumplimiento Sustancial</td>
           </tr>
         </tbody>
       </table>
@@ -267,9 +267,9 @@ function evaluarDiagnosticoKarin() {
 
   if (puntaje <= 8) {
     html = `
-      <div style="padding: 25px; border: 2px solid #b71c1c; background-color: #ffebee; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px;">
-        <div style="font-size: 0.75rem; font-weight: 800; color: #b71c1c; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Dictamen Procedimental: Inobservancia Estructural</div>
-        <h3 style="color: #b71c1c; margin-top: 0; font-size: 1.25rem; font-weight: 800;">CLASIFICACIÓN: RIESGO CRÍTICO (${puntaje} / 18 Puntos)</h3>
+      <div style="padding: 25px; border-left: 6px solid #f26522; border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; background-color: #fcfaff; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px; box-shadow: 0 4px 12px rgba(56, 35, 65, 0.05);">
+        <div style="font-size: 0.75rem; font-weight: 800; color: #f26522; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Dictamen Procedimental: Inobservancia Estructural</div>
+        <h3 style="color: #382341; margin-top: 0; font-size: 1.25rem; font-weight: 800;">CLASIFICACIÓN: RIESGO CRÍTICO (${puntaje} / 18 Puntos)</h3>
         <p style="color: #333; font-size: 0.95rem;"><strong>Estado de Situación:</strong> Incumplimiento estructural de la Ley N° 21.643, los Dictámenes de la DT y las Circulares de la SUSESO.</p>
         <p style="color: #333; font-size: 0.95rem; margin-bottom: 5px;"><strong>Exposición Legal Directa:</strong></p>
         <ul style="color: #4a5568; font-size: 0.9rem; line-height: 1.5; padding-left: 20px;">
@@ -287,9 +287,9 @@ function evaluarDiagnosticoKarin() {
       </div>`;
   } else if (puntaje <= 14) {
     html = `
-      <div style="padding: 25px; border: 2px solid #e65100; background-color: #fff3e0; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px;">
-        <div style="font-size: 0.75rem; font-weight: 800; color: #e65100; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Dictamen Procedimental: Vulnerabilidad Documental</div>
-        <h3 style="color: #e65100; margin-top: 0; font-size: 1.25rem; font-weight: 800;">CLASIFICACIÓN: RIESGO MODERADO (${puntaje} / 18 Puntos)</h3>
+      <div style="padding: 25px; border-left: 6px solid #382341; border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; background-color: #fcfaff; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px; box-shadow: 0 4px 12px rgba(56, 35, 65, 0.05);">
+        <div style="font-size: 0.75rem; font-weight: 800; color: #382341; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Dictamen Procedimental: Vulnerabilidad Documental</div>
+        <h3 style="color: #382341; margin-top: 0; font-size: 1.25rem; font-weight: 800;">CLASIFICACIÓN: RIESGO MODERADO (${puntaje} / 18 Puntos)</h3>
         <p style="color: #333; font-size: 0.95rem;"><strong>Estado de Situación:</strong> Cumplimiento formal incompleto. La empresa posee documentación base pero mantiene vacíos críticos que invalidan su blindaje.</p>
         <p style="color: #333; font-size: 0.95rem; margin-bottom: 5px;"><strong>Brechas Detectadas:</strong></p>
         <ul style="color: #4a5568; font-size: 0.9rem; line-height: 1.5; padding-left: 20px;">
@@ -301,15 +301,15 @@ function evaluarDiagnosticoKarin() {
 
         <a href="https://wa.me/${numWA}?text=Hola,%20realicé%20el%20diagnóstico%20legal%20de%20Ley%20Karin%20y%20obtuve%20RIESGO%20MODERADO%20(${puntaje}/18%20pts)%20por%20Vulnerabilidad%20Documental.%20Quisiera%20regularizar." 
            target="_blank" 
-           style="display: inline-block; width: 100%; text-align: center; box-sizing: border-box; margin-top: 15px; background: #382341; color: #ffffff; padding: 14px 20px; border-radius: 8px; font-weight: 800; text-decoration: none; font-size: 0.95rem;">
+           style="display: inline-block; width: 100%; text-align: center; box-sizing: border-box; margin-top: 15px; background: #f26522; color: #ffffff; padding: 14px 20px; border-radius: 8px; font-weight: 800; text-decoration: none; font-size: 0.95rem;">
           SOLICITAR AUDITORÍA DE REGULARIZACIÓN →
         </a>
       </div>`;
   } else {
     html = `
-      <div style="padding: 25px; border: 2px solid #1b5e20; background-color: #e8f5e9; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px;">
-        <div style="font-size: 0.75rem; font-weight: 800; color: #1b5e20; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Dictamen Procedimental: Cumplimiento Sustancial</div>
-        <h3 style="color: #1b5e20; margin-top: 0; font-size: 1.25rem; font-weight: 800;">CLASIFICACIÓN: BLINDAJE ADECUADO (${puntaje} / 18 Puntos)</h3>
+      <div style="padding: 25px; border-left: 6px solid #a2e8dd; border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; background-color: #fcfaff; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px; box-shadow: 0 4px 12px rgba(56, 35, 65, 0.05);">
+        <div style="font-size: 0.75rem; font-weight: 800; color: #0d9488; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Dictamen Procedimental: Cumplimiento Sustancial</div>
+        <h3 style="color: #382341; margin-top: 0; font-size: 1.25rem; font-weight: 800;">CLASIFICACIÓN: BLINDAJE ADECUADO (${puntaje} / 18 Puntos)</h3>
         <p style="color: #333; font-size: 0.95rem;"><strong>Estado de Situación:</strong> Su organización demuestra alineamiento sustancial con el marco regulatorio de la Ley N° 21.643.</p>
         <p style="color: #333; font-size: 0.95rem; margin-bottom: 5px;"><strong>Obligaciones de Mantención Normativa:</strong></p>
         <ul style="color: #4a5568; font-size: 0.9rem; line-height: 1.5; padding-left: 20px;">
