@@ -9,13 +9,13 @@
       --morado: #382341;
       --menta: #a2e8dd;
       --naranja: #f26522;
-      --gris-fondo: #fcfaff;
+      --blanco: #ffffff;
       --texto: #2d3748;
     }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background-color: #f8f9fa;
+      background-color: var(--blanco);
       color: var(--texto);
       margin: 0;
       padding: 40px 15px;
@@ -24,7 +24,7 @@
     .diagnostico-container {
       max-width: 800px;
       margin: 0 auto;
-      background: #ffffff;
+      background: var(--blanco);
       padding: 35px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(56, 35, 65, 0.08);
@@ -46,7 +46,8 @@
     }
 
     .pregunta-box {
-      background: var(--gris-fondo);
+      background: var(--blanco);
+      border: 1px solid rgba(56, 35, 65, 0.15); /* Borde sutil morado transparente */
       border-left: 4px solid var(--morado);
       padding: 20px;
       border-radius: 6px;
@@ -67,7 +68,7 @@
       flex-direction: column;
       gap: 10px;
       font-size: 0.9rem;
-      color: #4a5568;
+      color: var(--texto);
     }
 
     .opciones-group label {
@@ -90,7 +91,7 @@
       display: block;
       width: 100%;
       background: var(--naranja);
-      color: #ffffff;
+      color: var(--blanco);
       border: none;
       padding: 16px;
       border-radius: 8px;
@@ -208,7 +209,7 @@
 
     <!-- TABLA RESUMEN DE LA MATRIZ (ESTILO SOBRIO CORPORATIVO) -->
     <div style="margin: 25px 0; overflow-x: auto;">
-      <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid rgba(56, 35, 65, 0.15);">
         <thead>
           <tr style="background: #382341; color: #ffffff;">
             <th style="padding: 12px 14px;">Puntaje Obtenido</th>
@@ -217,12 +218,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr style="border-bottom: 1px solid #edf2f7; background: #ffffff;">
+          <tr style="border-bottom: 1px solid rgba(56, 35, 65, 0.15); background: #ffffff;">
             <td style="padding: 12px 14px; font-weight: 700; color: #382341;">0 a 8 puntos</td>
             <td style="padding: 12px 14px; font-weight: 800; color: #f26522;">RIESGO CRÍTICO</td>
             <td style="padding: 12px 14px; color: #4a5568;">Inobservancia Estructural</td>
           </tr>
-          <tr style="border-bottom: 1px solid #edf2f7; background: #fcfaff;">
+          <tr style="border-bottom: 1px solid rgba(56, 35, 65, 0.15); background: #ffffff;">
             <td style="padding: 12px 14px; font-weight: 700; color: #382341;">9 a 14 puntos</td>
             <td style="padding: 12px 14px; font-weight: 800; color: #382341;">RIESGO MODERADO</td>
             <td style="padding: 12px 14px; color: #4a5568;">Vulnerabilidad Documental</td>
@@ -262,12 +263,12 @@ function evaluarDiagnosticoKarin() {
   let contenedor = document.getElementById('resultadoDiagnosticoLegal');
   let html = "";
   
-  // NÚMERO DE WHATSAPP CORPORATIVO (Reemplazar por el tuyo real cuando lo tengas)
+  // NÚMERO DE WHATSAPP CORPORATIVO
   const numWA = "56912345678";
 
   if (puntaje <= 8) {
     html = `
-      <div style="padding: 25px; border-left: 6px solid #f26522; border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; background-color: #fcfaff; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px; box-shadow: 0 4px 12px rgba(56, 35, 65, 0.05);">
+      <div style="padding: 25px; border-left: 6px solid #f26522; border-top: 1px solid rgba(56, 35, 65, 0.15); border-right: 1px solid rgba(56, 35, 65, 0.15); border-bottom: 1px solid rgba(56, 35, 65, 0.15); background-color: #ffffff; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px; box-shadow: 0 4px 12px rgba(56, 35, 65, 0.05);">
         <div style="font-size: 0.75rem; font-weight: 800; color: #f26522; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Dictamen Procedimental: Inobservancia Estructural</div>
         <h3 style="color: #382341; margin-top: 0; font-size: 1.25rem; font-weight: 800;">CLASIFICACIÓN: RIESGO CRÍTICO (${puntaje} / 18 Puntos)</h3>
         <p style="color: #333; font-size: 0.95rem;"><strong>Estado de Situación:</strong> Incumplimiento estructural de la Ley N° 21.643, los Dictámenes de la DT y las Circulares de la SUSESO.</p>
@@ -287,7 +288,7 @@ function evaluarDiagnosticoKarin() {
       </div>`;
   } else if (puntaje <= 14) {
     html = `
-      <div style="padding: 25px; border-left: 6px solid #382341; border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; background-color: #fcfaff; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px; box-shadow: 0 4px 12px rgba(56, 35, 65, 0.05);">
+      <div style="padding: 25px; border-left: 6px solid #382341; border-top: 1px solid rgba(56, 35, 65, 0.15); border-right: 1px solid rgba(56, 35, 65, 0.15); border-bottom: 1px solid rgba(56, 35, 65, 0.15); background-color: #ffffff; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px; box-shadow: 0 4px 12px rgba(56, 35, 65, 0.05);">
         <div style="font-size: 0.75rem; font-weight: 800; color: #382341; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Dictamen Procedimental: Vulnerabilidad Documental</div>
         <h3 style="color: #382341; margin-top: 0; font-size: 1.25rem; font-weight: 800;">CLASIFICACIÓN: RIESGO MODERADO (${puntaje} / 18 Puntos)</h3>
         <p style="color: #333; font-size: 0.95rem;"><strong>Estado de Situación:</strong> Cumplimiento formal incompleto. La empresa posee documentación base pero mantiene vacíos críticos que invalidan su blindaje.</p>
@@ -307,7 +308,7 @@ function evaluarDiagnosticoKarin() {
       </div>`;
   } else {
     html = `
-      <div style="padding: 25px; border-left: 6px solid #a2e8dd; border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; background-color: #fcfaff; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px; box-shadow: 0 4px 12px rgba(56, 35, 65, 0.05);">
+      <div style="padding: 25px; border-left: 6px solid #a2e8dd; border-top: 1px solid rgba(56, 35, 65, 0.15); border-right: 1px solid rgba(56, 35, 65, 0.15); border-bottom: 1px solid rgba(56, 35, 65, 0.15); background-color: #ffffff; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px; box-shadow: 0 4px 12px rgba(56, 35, 65, 0.05);">
         <div style="font-size: 0.75rem; font-weight: 800; color: #0d9488; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Dictamen Procedimental: Cumplimiento Sustancial</div>
         <h3 style="color: #382341; margin-top: 0; font-size: 1.25rem; font-weight: 800;">CLASIFICACIÓN: BLINDAJE ADECUADO (${puntaje} / 18 Puntos)</h3>
         <p style="color: #333; font-size: 0.95rem;"><strong>Estado de Situación:</strong> Su organización demuestra alineamiento sustancial con el marco regulatorio de la Ley N° 21.643.</p>
