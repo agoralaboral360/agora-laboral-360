@@ -11,19 +11,19 @@
 
   <style>
     :root {
-    /* PALETA OFICIAL ÁGORA 360° */
-    --morado-autoridad: #382341;
-    --morado-oscuro: #382341;
-    --menta-prevencion: #a2e8dd;
-    --menta-fondo: #ffffff;
-    --naranja-accion: #f26522;
-    --naranja-hover: #d95316;
-    --fondo-pagina: #ffffff;
-    --texto-oscuro: #2d3748;
-    --texto-suave: #382341;
-    --blanco: #ffffff;
-    --gris-borde: rgba(56, 35, 65, 0.15);
-  }
+      /* PALETA OFICIAL ÁGORA 360° */
+      --morado-autoridad: #382341;
+      --morado-oscuro: #382341;
+      --menta-prevencion: #a2e8dd;
+      --menta-fondo: #ffffff;
+      --naranja-accion: #f26522;
+      --naranja-hover: #d95316;
+      --fondo-pagina: #ffffff;
+      --texto-oscuro: #2d3748;
+      --texto-suave: #382341;
+      --blanco: #ffffff;
+      --gris-borde: rgba(56, 35, 65, 0.15);
+    }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -39,29 +39,30 @@
     .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.3px; transition: color 0.2s; }
     .nav-links a:hover { color: var(--naranja-accion); }
 
-    /* BOTONES DE ACCIÓN (NARANJA EXCLUSIVO) */
+    /* BOTONES DE ACCIÓN */
     .btn-naranja { display: inline-block; background: var(--naranja-accion); color: var(--blanco); font-weight: 800; padding: 14px 28px; border-radius: 8px; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; transition: background 0.2s, transform 0.2s; border: none; cursor: pointer; }
     .btn-naranja:hover { background: var(--naranja-hover); transform: translateY(-2px); }
 
     .btn-secundario { display: inline-block; background: var(--blanco); color: var(--morado-autoridad); font-weight: 800; padding: 14px 28px; border-radius: 8px; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; border: 2px solid var(--morado-autoridad); transition: 0.2s; }
     .btn-secundario:hover { background: var(--morado-autoridad); color: var(--blanco); }
 
-    /* 2. HERO SECTION */
-.hero { background: linear-gradient(rgba(20, 10, 28, 0.45), rgba(20, 10, 28, 0.55)), url('IMAGEN%205.png'); background-size: cover; background-position: center; padding: 90px 24px 70px; text-align: center; }
-.hero h1 { font-size: 2.8rem; font-weight: 900; color: #ffffff !important; text-shadow: 0 2px 10px rgba(0,0,0,0.7); margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.5px; }
-.hero-subtitle { font-size: 1.25rem; font-weight: 700; color: var(--menta-prevencion) !important; margin-bottom: 16px; text-shadow: 0 1px 5px rgba(0,0,0,0.5); }
-.hero-desc { font-size: 1.05rem; color: #ffffff !important; text-shadow: 0 1px 5px rgba(0,0,0,0.6); margin-bottom: 30px; font-weight: 500; }
-.hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 30px; }
-.hero-tagline { font-size: 0.82rem; font-weight: 800; color: var(--menta-prevencion) !important; text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid rgba(255, 255, 255, 0.3); padding-top: 20px; display: inline-block; }
-.btn-secundario-hero { display: inline-block; background: transparent; color: #ffffff; font-weight: 800; padding: 14px 28px; border-radius: 8px; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; border: 2px solid #ffffff; transition: 0.2s; }
-.btn-secundario-hero:hover { background: #ffffff; color: var(--morado-autoridad); }
-    /* SECCIONES Y CONTENEDORES GENERALES */
+    /* HERO SECTION */
+    .hero { background: linear-gradient(rgba(20, 10, 28, 0.45), rgba(20, 10, 28, 0.55)), url('IMAGEN%205.png'); background-size: cover; background-position: center; padding: 90px 24px 70px; text-align: center; }
+    .hero h1 { font-size: 2.8rem; font-weight: 900; color: #ffffff !important; text-shadow: 0 2px 10px rgba(0,0,0,0.7); margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.5px; }
+    .hero-subtitle { font-size: 1.25rem; font-weight: 700; color: var(--menta-prevencion) !important; margin-bottom: 16px; text-shadow: 0 1px 5px rgba(0,0,0,0.5); }
+    .hero-desc { font-size: 1.05rem; color: #ffffff !important; text-shadow: 0 1px 5px rgba(0,0,0,0.6); margin-bottom: 30px; font-weight: 500; }
+    .hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 30px; }
+    .hero-tagline { font-size: 0.82rem; font-weight: 800; color: var(--menta-prevencion) !important; text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid rgba(255, 255, 255, 0.3); padding-top: 20px; display: inline-block; }
+    .btn-secundario-hero { display: inline-block; background: transparent; color: #ffffff; font-weight: 800; padding: 14px 28px; border-radius: 8px; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; border: 2px solid #ffffff; transition: 0.2s; }
+    .btn-secundario-hero:hover { background: #ffffff; color: var(--morado-autoridad); }
+
+    /* CONTENEDORES GENERALES */
     .section-container { max-width: 1200px; margin: 0 auto; padding: 70px 24px; }
     .section-title { font-size: 2rem; color: var(--morado-autoridad); text-align: center; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: -0.5px; }
     .section-subtitle { text-align: center; color: var(--texto-suave); max-width: 700px; margin: 0 auto 45px; font-size: 1.05rem; font-weight: 500; }
     .cta-center-container { text-align: center; margin-top: 40px; }
 
-    /* 3. SERVICIOS (4 TARJETAS) */
+    /* SERVICIOS */
     .grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
     .card-servicio { background: var(--blanco); padding: 35px 25px; border-radius: 12px; border: 2px solid var(--gris-borde); box-shadow: 0 6px 18px rgba(0,0,0,0.02); }
     .card-servicio.morado { border-top: 6px solid var(--morado-autoridad); }
@@ -69,7 +70,7 @@
     .card-servicio h3 { font-size: 1.25rem; color: var(--morado-autoridad); margin-bottom: 12px; font-weight: 800; }
     .card-servicio p { font-size: 0.95rem; color: var(--texto-suave); font-weight: 500; }
 
-    /* 4. MÉTODO ÁGORA 360® */
+    /* MÉTODO ÁGORA 360® */
     .metodo-section { background: var(--blanco); border-top: 1px solid var(--gris-borde); border-bottom: 1px solid var(--gris-borde); padding: 70px 0; }
     .grid-pilares { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
     .card-pilar { padding: 25px 20px; border-radius: 10px; text-align: center; }
@@ -82,15 +83,7 @@
     .card-pilar h3 { font-size: 1.1rem; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
     .card-pilar p { font-size: 0.9rem; font-weight: 500; }
 
-    /* 5. HERRAMIENTAS GRATUITAS */
-    .grid-herramientas { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
-    .card-herramienta { background: var(--blanco); padding: 30px 20px; border-radius: 12px; text-align: center; border: 2px solid var(--gris-borde); text-decoration: none; color: var(--texto-oscuro); transition: transform 0.2s, border-color 0.2s; }
-    .card-herramienta:hover { transform: translateY(-4px); border-color: var(--morado-autoridad); }
-    .card-herramienta.menta { border-left: 6px solid var(--menta-prevencion); }
-    .card-herramienta.morado { border-left: 6px solid var(--morado-autoridad); }
-    .card-herramienta h3 { font-size: 1.1rem; color: var(--morado-autoridad); font-weight: 800; }
-
-    /* 6. BIBLIOTECA (GRATIS VS PROFESIONAL) */
+    /* BIBLIOTECA */
     .grid-biblioteca { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
     .box-biblioteca { background: var(--blanco); padding: 40px 30px; border-radius: 12px; border: 2px solid var(--gris-borde); display: flex; flex-direction: column; justify-content: space-between; }
     .box-biblioteca.gratis { border-top: 8px solid var(--menta-prevencion); }
@@ -102,26 +95,6 @@
     .list-biblio { list-style: none; padding: 0; margin-bottom: 30px; }
     .list-biblio li { font-size: 0.95rem; color: var(--texto-suave); font-weight: 600; padding: 8px 0; border-bottom: 1px dashed var(--gris-borde); }
     .list-biblio li span { color: var(--morado-autoridad); font-weight: 900; margin-right: 8px; }
-
-    /* 7. OBSERVATORIO */
-    .grid-observatorio { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .card-observatorio { background: var(--blanco); padding: 30px; border-radius: 12px; border: 2px solid var(--gris-borde); }
-    .tag-obs { font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 12px; }
-    .tag-obs.normativo { background: var(--morado-autoridad); color: var(--blanco); }
-    .tag-obs.dt { background: var(--menta-prevencion); color: var(--morado-autoridad); }
-    .tag-obs.actualidad { background: #ffe2d1; color: var(--naranja-accion); }
-    .card-observatorio h3 { font-size: 1.15rem; color: var(--morado-autoridad); margin-bottom: 10px; font-weight: 800; }
-    .card-observatorio p { font-size: 0.9rem; color: var(--texto-suave); font-weight: 500; }
-
-    /* 9. CONTACTO UNIFICADO */
-    .contact-section { background: var(--blanco); border-top: 1px solid var(--gris-borde); padding: 70px 0; }
-    .contact-container { max-width: 650px; margin: 0 auto; background: var(--fondo-pagina); padding: 40px; border-radius: 12px; border: 2px solid var(--morado-autoridad); }
-    .form-group { margin-bottom: 18px; }
-    .form-group label { display: block; font-size: 0.8rem; font-weight: 800; color: var(--morado-autoridad); margin-bottom: 6px; text-transform: uppercase; }
-    .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 2px solid var(--gris-borde); border-radius: 6px; font-size: 0.95rem; font-family: inherit; outline: none; background: var(--blanco); color: var(--texto-oscuro); }
-    .form-group input:focus, .form-group textarea:focus { border-color: var(--morado-autoridad); }
-    .direct-contact { text-align: center; margin-top: 25px; font-size: 0.9rem; font-weight: 700; color: var(--texto-suave); }
-    .direct-contact a { color: var(--morado-autoridad); text-decoration: none; font-weight: 800; border-bottom: 2px solid var(--menta-prevencion); margin: 0 8px; }
 
     footer { background: var(--morado-oscuro); color: var(--blanco); text-align: center; padding: 30px 24px; font-size: 0.85rem; font-weight: 600; border-top: 4px solid var(--menta-prevencion); }
 
@@ -142,7 +115,6 @@
         <li><a href="blog/ley-equidad-brecha-salarial.html">Informe 21.828</a></li>
         <li><a href="#herramientas">Herramientas</a></li>
         <li><a href="#biblioteca">Recursos</a></li>
-        <li><a href="#observatorio">Observatorio</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
@@ -155,7 +127,7 @@
       <p class="hero-desc">Investigaciones externas, asesoría técnica y herramientas para ayudar a organizaciones públicas y privadas a cumplir la normativa y gestionar denuncias con rigor.</p>
       
       <div class="hero-buttons">
-       <a href="diagnostico/index.html" class="btn-naranja">Realizar Diagnóstico Gratuito →</a>
+        <a href="diagnostico/index.html" class="btn-naranja">Realizar Diagnóstico Gratuito →</a>
         <a href="#contacto" class="btn-secundario-hero">Agendar Reunión Técnica</a>
       </div>
 
@@ -226,119 +198,77 @@
       </div>
     </div>
   </section>
-<!-- ======================================================== -->
-<!-- SECCIÓN HERRAMIENTAS GRATUITAS CON COLOR CORPORATIVO      -->
-<!-- ======================================================== -->
-<section id="herramientas" style="padding: 60px 20px; background-color: #ffffff; text-align: center;">
-  <div style="max-width: 1100px; margin: 0 auto; font-family: system-ui, sans-serif;">
-    
-    <span style="background: #a2e8dd; color: #382341; font-size: 0.8rem; font-weight: 800; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Recursos Interactivos</span>
-    <h2 style="color: #382341; font-size: 2.2rem; font-weight: 800; margin-top: 12px; margin-bottom: 10px;">HERRAMIENTAS GRATUITAS</h2>
-    <p style="color: #382341; font-size: 1rem; max-width: 600px; margin: 0 auto 40px auto; opacity: 0.9;">Recursos prácticos interactivos diseñados para RR.HH., prevencionistas y responsables de cumplimiento legal.</p>
 
-    <!-- GRID DE TARJETAS CON ÍCONOS EN PALETA OFICIAL -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; text-align: left;">
+  <!-- ======================================================== -->
+  <!-- SECCIÓN HERRAMIENTAS GRATUITAS CON COLOR CORPORATIVO     -->
+  <!-- ======================================================== -->
+  <section id="herramientas" style="padding: 60px 20px; background-color: #ffffff; text-align: center;">
+    <div style="max-width: 1100px; margin: 0 auto; font-family: system-ui, sans-serif;">
       
-      <!-- TARJETA 1: CALCULADORA (MENTA) -->
-      <a href="calculadora.html" style="text-decoration: none; color: inherit;">
-        <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #a2e8dd; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
-          <div style="width: 58px; height: 58px; background: #a2e8dd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#382341" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path><path d="M16 18h.01"></path></svg>
-          </div>
-          <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Calculadora de 30 Días</h3>
-          <p style="color: #382341; font-size: 0.88rem; margin: 0; line-height: 1.4; opacity: 0.85;">Cómputo de plazos fatales para investigaciones internas.</p>
-        </div>
-      </a>
+      <span style="background: #a2e8dd; color: #382341; font-size: 0.8rem; font-weight: 800; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Recursos Interactivos</span>
+      <h2 style="color: #382341; font-size: 2.2rem; font-weight: 800; margin-top: 12px; margin-bottom: 10px;">HERRAMIENTAS GRATUITAS</h2>
+      <p style="color: #382341; font-size: 1rem; max-width: 600px; margin: 0 auto 40px auto; opacity: 0.9;">Recursos prácticos interactivos diseñados para RR.HH., prevencionistas y responsables de cumplimiento legal.</p>
 
-      <!-- TARJETA 2: CRONOGRAMA (NARANJA) -->
-      <a href="cronograma.html" style="text-decoration: none; color: inherit;">
-        <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #f26522; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
-          <div style="width: 58px; height: 58px; background: #f26522; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="6" x2="21" y2="6"></line><line x1="10" y1="12" x2="21" y2="12"></line><line x1="10" y1="18" x2="21" y2="18"></line><polyline points="3 6 4 7 6 5"></polyline><polyline points="3 12 4 13 6 11"></polyline><polyline points="3 18 4 19 6 17"></polyline></svg>
+      <!-- GRID DE TARJETAS CON ÍCONOS EN PALETA OFICIAL -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; text-align: left;">
+        
+        <!-- TARJETA 1: CALCULADORA (MENTA) -->
+        <a href="calculadora.html" style="text-decoration: none; color: inherit;">
+          <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #a2e8dd; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div style="width: 58px; height: 58px; background: #a2e8dd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#382341" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path><path d="M16 18h.01"></path></svg>
+            </div>
+            <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Calculadora de 30 Días</h3>
+            <p style="color: #382341; font-size: 0.88rem; margin: 0; line-height: 1.4; opacity: 0.85;">Cómputo de plazos fatales para investigaciones internas.</p>
           </div>
-          <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Generador de Cronograma</h3>
-          <p style="color: #382341; font-size: 0.88rem; margin: 0; line-height: 1.4; opacity: 0.85;">Planificación procedimental paso a paso de denuncias.</p>
-        </div>
-      </a>
+        </a>
 
-      <!-- TARJETA 3: CHECKLIST (MORADO) -->
-      <a href="checklist.html" style="text-decoration: none; color: inherit;">
-        <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #382341; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
-          <div style="width: 58px; height: 58px; background: #382341; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a2e8dd" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <!-- TARJETA 2: CRONOGRAMA (NARANJA) -->
+        <a href="cronograma.html" style="text-decoration: none; color: inherit;">
+          <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #f26522; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div style="width: 58px; height: 58px; background: #f26522; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="6" x2="21" y2="6"></line><line x1="10" y1="12" x2="21" y2="12"></line><line x1="10" y1="18" x2="21" y2="18"></line><polyline points="3 6 4 7 6 5"></polyline><polyline points="3 12 4 13 6 11"></polyline><polyline points="3 18 4 19 6 17"></polyline></svg>
+            </div>
+            <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Generador de Cronograma</h3>
+            <p style="color: #382341; font-size: 0.88rem; margin: 0; line-height: 1.4; opacity: 0.85;">Planificación procedimental paso a paso de denuncias.</p>
           </div>
-          <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Checklist Ley Karin</h3>
-          <p style="color: #382341; font-size: 0.88rem; margin: 0; line-height: 1.4; opacity: 0.85;">Verificación de requisitos normativos mínimos en RIOHS.</p>
-        </div>
-      </a>
+        </a>
 
-      <!-- TARJETA 4: MATRIZ DE RESGUARDO (MENTA) -->
-      <a href="evaluacion-riesgo.html" style="text-decoration: none; color: inherit;">
-        <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #a2e8dd; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
-          <div style="width: 58px; height: 58px; background: #a2e8dd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#382341" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <!-- TARJETA 3: CHECKLIST (MORADO) -->
+        <a href="checklist.html" style="text-decoration: none; color: inherit;">
+          <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #382341; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div style="width: 58px; height: 58px; background: #382341; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a2e8dd" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Checklist Ley Karin</h3>
+            <p style="color: #382341; font-size: 0.88rem; margin: 0; line-height: 1.4; opacity: 0.85;">Verificación de requisitos normativos mínimos en RIOHS.</p>
           </div>
-          <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Matriz de Resguardo</h3>
-          <p style="color: #382341; font-size: 0.88rem; margin: 0; line-height: 1.4; opacity: 0.85;">Identificación y gestión de medidas cautelares inmediatas.</p>
-        </div>
-      </a>
+        </a>
+
+        <!-- TARJETA 4: MATRIZ DE RESGUARDO (MENTA) -->
+        <a href="evaluacion-riesgo.html" style="text-decoration: none; color: inherit;">
+          <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #a2e8dd; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div style="width: 58px; height: 58px; background: #a2e8dd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#382341" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Matriz de Resguardo</h3>
+            <p style="color: #382341; font-size: 0.88rem; margin: 0; line-height: 1.4; opacity: 0.85;">Identificación y gestión de medidas cautelares inmediatas.</p>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- BOTÓN CENTRAL NARANJA -->
+      <div style="margin-top: 40px;">
+        <a href="recursos/index.html" style="display: inline-block; background: #f26522; color: #ffffff; padding: 16px 32px; border-radius: 8px; font-size: 1rem; font-weight: 800; text-decoration: none;">
+          VER TODAS LAS HERRAMIENTAS →
+        </a>
+      </div>
 
     </div>
+  </section>
 
-    <!-- BOTÓN CENTRAL NARANJA -->
-    <div style="margin-top: 40px;">
-      <a href="#recursos" style="display: inline-block; background: #f26522; color: #ffffff; padding: 16px 32px; border-radius: 8px; font-size: 1rem; font-weight: 800; text-decoration: none; transition: background 0.2s;">
-        VER TODAS LAS HERRAMIENTAS →
-      </a>
-    </div>
-
-  </div>
-</section>
-      <!-- TARJETA 2: CRONOGRAMA -->
-      <a href="cronograma.html" style="text-decoration: none; color: inherit;">
-        <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 1px solid rgba(56, 35, 65, 0.12); border-top: 5px solid #382341; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.05); transition: transform 0.2s, box-shadow 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
-          <div style="width: 56px; height: 56px; background: rgba(56, 35, 65, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#382341" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="6" x2="21" y2="6"></line><line x1="10" y1="12" x2="21" y2="12"></line><line x1="10" y1="18" x2="21" y2="18"></line><polyline points="3 6 4 7 6 5"></polyline><polyline points="3 12 4 13 6 11"></polyline><polyline points="3 18 4 19 6 17"></polyline></svg>
-          </div>
-          <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Generador de Cronograma</h3>
-          <p style="color: #666; font-size: 0.85rem; margin: 0; line-height: 1.4;">Planificación procedimental paso a paso de denuncias.</p>
-        </div>
-      </a>
-
-      <!-- TARJETA 3: CHECKLIST -->
-      <a href="checklist.html" style="text-decoration: none; color: inherit;">
-        <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 1px solid rgba(56, 35, 65, 0.12); border-top: 5px solid #a2e8dd; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.05); transition: transform 0.2s, box-shadow 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
-          <div style="width: 56px; height: 56px; background: rgba(162, 232, 221, 0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#382341" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          </div>
-          <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Checklist Ley Karin</h3>
-          <p style="color: #666; font-size: 0.85rem; margin: 0; line-height: 1.4;">Verificación de requisitos normativos mínimos en RIOHS.</p>
-        </div>
-      </a>
-
-      <!-- TARJETA 4: MATRIZ DE RESGUARDO -->
-      <a href="evaluacion-riesgo.html" style="text-decoration: none; color: inherit;">
-        <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 1px solid rgba(56, 35, 65, 0.12); border-top: 5px solid #382341; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.05); transition: transform 0.2s, box-shadow 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
-          <div style="width: 56px; height: 56px; background: rgba(56, 35, 65, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#382341" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          </div>
-          <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Matriz de Resguardo</h3>
-          <p style="color: #666; font-size: 0.85rem; margin: 0; line-height: 1.4;">Identificación y gestión de medidas cautelares inmediatas.</p>
-        </div>
-      </a>
-
-    </div>
-
-    <!-- BOTÓN CENTRAL NARANJA -->
-    <div style="margin-top: 40px;">
-      <a href="#recursos" style="display: inline-block; background: #f26522; color: #ffffff; padding: 16px 32px; border-radius: 8px; font-size: 1rem; font-weight: 800; text-decoration: none; transition: background 0.2s;">
-        VER TODAS LAS HERRAMIENTAS →
-      </a>
-    </div>
-
-  </div>
-</section>
-
+  <!-- BIBLIOTECA ÁGORA -->
   <section id="biblioteca" class="section-container" style="padding-top: 0;">
     <h2 class="section-title">Biblioteca Ágora</h2>
     <p class="section-subtitle">Documentación, guías y modelos para fortalecer la gestión preventiva en su empresa.</p>
@@ -360,74 +290,67 @@
         <a href="recursos/index.html" class="btn-secundario" style="text-align:center;">Descargar Gratis →</a>
       </div>
 
-    <div class="box-biblioteca profesional">
-  <div>
-    <span class="badge-biblio profesional">Acceso Profesional</span>
-    <h3>Biblioteca Especial</h3>
-    <ul class="list-biblio">
-      <li><span>✓</span> Manual Completo del Investigador/a (Ley Karin)</li>
-      <li><span>✓</span> Plantillas Editables de Informes de Investigación</li>
-      <li><span>✓</span> Matriz de Evaluación de Riesgos Psicosociales</li>
-      <li><span>✓</span> Protocolos de Medidas de Resguardo Inmediatas</li>
-      <li><span>✓</span> Modelos de Notificación y Citación a Testigos</li>
-      <li><span>✓</span> Checklist Avanzado de Compliance Laboral</li>
-    </ul>
-  </div>
-  <!-- Botón PRO arreglado con colores directos -->
-  <a href="#contacto" style="display: block; background-color: #382341; color: white; padding: 15px; text-align: center; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px;">SOLICITAR ACCESO PRO →</a>
-</div>
-
-</div> <!-- Cierra las columnas de la biblioteca -->
-</section>
-  <!-- ======================================================== -->
-<!-- BANNER LEAD MAGNET: DESCARGA GUÍA LEY KARIN (LLAMATIVO)  -->
-<!-- ======================================================== -->
-<section style="background-color: var(--morado, #382341); padding: 70px 20px; margin-top: 50px;">
-  <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: space-between; font-family: system-ui, sans-serif;">
-    
-    <!-- Textos Izquierda -->
-    <div style="flex: 1; min-width: 300px;">
-      <span style="background: var(--menta, #a2e8dd); color: var(--morado, #382341); font-size: 0.8rem; font-weight: 800; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Nuevo Recurso Gratuito</span>
-      <h2 style="color: #ffffff; font-size: 2.2rem; font-weight: 800; margin-top: 20px; margin-bottom: 15px; line-height: 1.2;">Guía Práctica: Intake y Entrevistas con Perspectiva de Género</h2>
-      <p style="color: #f8f9fa; font-size: 1.05rem; line-height: 1.6; margin-bottom: 20px;">Evita la revictimización y los vicios procedimentales. Descarga nuestra matriz operativa para cumplir con las exigencias de la DT y la SUSESO (Ley N° 21.643).</p>
-      <ul style="color: var(--menta, #a2e8dd); font-size: 0.95rem; line-height: 1.8; padding-left: 20px; font-weight: 600;">
-        <li>Regulación de plazos fatales de admisibilidad</li>
-        <li>Preguntas clave para evaluar asimetría de poder</li>
-        <li>Valoración de la prueba indiciaria</li>
-      </ul>
+      <div class="box-biblioteca profesional">
+        <div>
+          <span class="badge-biblio profesional">Acceso Profesional</span>
+          <h3>Biblioteca Especial</h3>
+          <ul class="list-biblio">
+            <li><span>✓</span> Manual Completo del Investigador/a (Ley Karin)</li>
+            <li><span>✓</span> Plantillas Editables de Informes de Investigación</li>
+            <li><span>✓</span> Matriz de Evaluación de Riesgos Psicosociales</li>
+            <li><span>✓</span> Protocolos de Medidas de Resguardo Inmediatas</li>
+            <li><span>✓</span> Modelos de Notificación y Citación a Testigos</li>
+            <li><span>✓</span> Checklist Avanzado de Compliance Laboral</li>
+          </ul>
+        </div>
+        <a href="#contacto" style="display: block; background-color: #382341; color: white; padding: 15px; text-align: center; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px;">SOLICITAR ACCESO PRO →</a>
+      </div>
     </div>
+  </section>
 
-    <!-- Formulario Derecha -->
-    <div style="flex: 1; min-width: 320px; background: #ffffff; padding: 35px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
-      <h3 style="color: var(--morado, #382341); font-size: 1.25rem; font-weight: 800; margin-top: 0; margin-bottom: 20px; text-align: center;">Descargar Manual en PDF</h3>
+  <!-- BANNER LEAD MAGNET (DESCARGA LEY KARIN) -->
+  <section id="contacto" style="background-color: var(--morado, #382341); padding: 70px 20px; margin-top: 50px;">
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: space-between; font-family: system-ui, sans-serif;">
       
-      <!-- NOTA: El form action necesita un enlace real (ej. Formspree o Mailchimp) para capturar los correos -->
-      <form action="https://formsubmit.co/48a26614772fccf3642b27db7132c6ff" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-  <!-- Redirecciona al usuario inmediatamente al Google Drive al presionar el botón -->
-  <input type="hidden" name="_next" value="https://docs.google.com/document/d/1yH-5lvQA2S-bd0-AsSNiKoCnFM-kWRrovOfyRw36GCM/edit?usp=drive_web">
-  <!-- Quita el Captcha molesto para que la experiencia del usuario sea limpia -->
-  <input type="hidden" name="_captcha" value="false">
+      <!-- Textos Izquierda -->
+      <div style="flex: 1; min-width: 300px;">
+        <span style="background: var(--menta, #a2e8dd); color: var(--morado, #382341); font-size: 0.8rem; font-weight: 800; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Nuevo Recurso Gratuito</span>
+        <h2 style="color: #ffffff; font-size: 2.2rem; font-weight: 800; margin-top: 20px; margin-bottom: 15px; line-height: 1.2;">Guía Práctica: Intake y Entrevistas con Perspectiva de Género</h2>
+        <p style="color: #f8f9fa; font-size: 1.05rem; line-height: 1.6; margin-bottom: 20px;">Evita la revictimización y los vicios procedimentales. Descarga nuestra matriz operativa para cumplir con las exigencias de la DT y la SUSESO (Ley N° 21.643).</p>
+        <ul style="color: var(--menta, #a2e8dd); font-size: 0.95rem; line-height: 1.8; padding-left: 20px; font-weight: 600;">
+          <li>Regulación de plazos fatales de admisibilidad</li>
+          <li>Preguntas clave para evaluar asimetría de poder</li>
+          <li>Valoración de la prueba indiciaria</li>
+        </ul>
+      </div>
 
-  <input type="text" name="nombre" placeholder="Nombre completo" required style="padding: 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 0.95rem; color: #2d3748; outline: none; font-family: inherit;">
-  <input type="email" name="email" placeholder="Correo corporativo" required style="padding: 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 0.95rem; color: #2d3748; outline: none; font-family: inherit;">
-  <input type="text" name="empresa" placeholder="Empresa / Cargo" required style="padding: 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 0.95rem; color: #2d3748; outline: none; font-family: inherit;">
-  <button type="submit" style="background: var(--naranja, #f26522); color: #ffffff; border: none; padding: 16px; border-radius: 8px; font-size: 1.05rem; font-weight: 800; cursor: pointer; transition: transform 0.2s; margin-top: 10px;">
-    QUIERO LA GUÍA TÉCNICA →
-  </button>
-</form>
-      <p style="color: #718096; font-size: 0.75rem; text-align: center; margin-top: 15px; margin-bottom: 0;">* Recibirás el documento directamente en tu bandeja de entrada.</p>
+      <!-- Formulario Derecha -->
+      <div style="flex: 1; min-width: 320px; background: #ffffff; padding: 35px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
+        <h3 style="color: var(--morado, #382341); font-size: 1.25rem; font-weight: 800; margin-top: 0; margin-bottom: 20px; text-align: center;">Descargar Manual en PDF</h3>
+        
+        <form action="https://formsubmit.co/48a26614772fccf3642b27db7132c6ff" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+          <input type="hidden" name="_next" value="https://docs.google.com/document/d/1yH-5lvQA2S-bd0-AsSNiKoCnFM-kWRrovOfyRw36GCM/edit?usp=drive_web">
+          <input type="hidden" name="_captcha" value="false">
+
+          <input type="text" name="nombre" placeholder="Nombre completo" required style="padding: 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 0.95rem; color: #2d3748; outline: none; font-family: inherit;">
+          <input type="email" name="email" placeholder="Correo corporativo" required style="padding: 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 0.95rem; color: #2d3748; outline: none; font-family: inherit;">
+          <input type="text" name="empresa" placeholder="Empresa / Cargo" required style="padding: 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 0.95rem; color: #2d3748; outline: none; font-family: inherit;">
+          <button type="submit" style="background: var(--naranja, #f26522); color: #ffffff; border: none; padding: 16px; border-radius: 8px; font-size: 1.05rem; font-weight: 800; cursor: pointer; transition: transform 0.2s; margin-top: 10px;">
+            QUIERO LA GUÍA TÉCNICA →
+          </button>
+        </form>
+        <p style="color: #718096; font-size: 0.75rem; text-align: center; margin-top: 15px; margin-bottom: 0;">* Recibirás el documento directamente en tu bandeja de entrada.</p>
+      </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
-<!-- ======================================================== -->
-
-<!-- PIE DE PÁGINA RECUPERADO -->
-<footer style="background-color: #211329; color: white; text-align: center; padding: 50px 20px; margin-top: 60px;">
-  <h3 style="color: white; margin-bottom: 10px;">ÁGORA LABORAL 360°</h3>
-  <p style="color: #a2e8dd; margin-bottom: 20px;">Consultoría especializada en Ley Karin y Compliance Laboral</p>
-  <p style="font-size: 0.9rem; opacity: 0.8;">&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.</p>
-</footer>
+  <!-- PIE DE PÁGINA -->
+  <footer style="background-color: #211329; color: white; text-align: center; padding: 50px 20px; margin-top: 60px;">
+    <h3 style="color: white; margin-bottom: 10px;">ÁGORA LABORAL 360°</h3>
+    <p style="color: #a2e8dd; margin-bottom: 20px;">Consultoría especializada en Ley Karin y Compliance Laboral</p>
+    <p style="font-size: 0.9rem; opacity: 0.8;">&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>
