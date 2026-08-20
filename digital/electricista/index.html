@@ -25,8 +25,8 @@
     html { scroll-behavior: smooth; }
     body { background-color: var(--fondo-suave); color: var(--texto-oscuro); line-height: 1.6; }
 
-    /* BARRA SUPERIOR DE CONTACTO DIRECTO */
-    .top-bar { background: var(--azul-cobalto); color: var(--blanco); padding: 8px 20px; font-size: 0.85rem; font-weight: 700; text-align: center; display: flex; justify-content: space-between; align-items: center; max-width: 100%; }
+    /* BARRA SUPERIOR CON INSTAGRAM Y CONTACTO */
+    .top-bar { background: var(--azul-cobalto); color: var(--blanco); padding: 8px 20px; font-size: 0.85rem; font-weight: 700; }
     .top-bar-container { max-width: 1100px; margin: 0 auto; width: 100%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
     .top-bar a { color: #f1f5f9; text-decoration: none; }
     .top-bar a:hover { color: var(--naranja-energia); }
@@ -54,11 +54,14 @@
     .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 25px; }
     @media (max-width: 850px) { .hero-btns { justify-content: center; } }
     
-    .btn-naranja { background: var(--naranja-energia); color: var(--blanco); padding: 15px 28px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.95rem; box-shadow: 0 6px 18px rgba(255, 107, 0, 0.3); transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-naranja { background: var(--naranja-energia); color: var(--blanco); padding: 14px 24px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.92rem; box-shadow: 0 6px 18px rgba(255, 107, 0, 0.3); transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 8px; }
     .btn-naranja:hover { background: var(--naranja-hover); transform: translateY(-2px); }
     
-    .btn-llamar { background: var(--azul-cobalto); color: var(--blanco); padding: 15px 24px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.95rem; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-llamar { background: var(--azul-cobalto); color: var(--blanco); padding: 14px 22px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.92rem; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; }
     .btn-llamar:hover { background: #152b68; transform: translateY(-2px); }
+
+    .btn-insta { background: var(--blanco); color: var(--azul-cobalto); border: 2px solid var(--azul-cobalto); padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.92rem; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-insta:hover { background: var(--azul-cobalto); color: var(--blanco); }
 
     .hero-info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; text-align: left; background: var(--blanco); padding: 15px; border-radius: 10px; font-size: 0.85rem; border: 1px solid #dbeafe; }
     @media (max-width: 500px) { .hero-info-grid { grid-template-columns: 1fr; } }
@@ -85,7 +88,7 @@
     .service-card h3 { font-size: 1.15rem; font-weight: 800; color: var(--azul-cobalto); margin-bottom: 10px; }
     .service-card p { font-size: 0.88rem; color: var(--texto-gris); line-height: 1.5; }
 
-    /* ¿POR QUÉ ELEGIRNOS? */
+    /* ¿POR QUÉ ELEGIRME? */
     .why-bg { background: var(--blanco); border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
     .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; }
     .why-box { padding: 22px; border-radius: 10px; background: var(--fondo-suave); border: 1px solid #e2e8f0; }
@@ -111,7 +114,7 @@
     .cta-final { background: var(--azul-cobalto); color: var(--blanco); border-radius: 16px; padding: 45px 25px; text-align: center; }
     .cta-final h2 { font-size: 1.8rem; font-weight: 900; margin-bottom: 8px; }
     .cta-final p { font-size: 1rem; color: #e2e8f0; margin-bottom: 25px; font-weight: 500; }
-    .cta-links { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+    .cta-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
 
     footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 20px; font-size: 0.8rem; }
   </style>
@@ -121,10 +124,11 @@
   <!-- BARRA SUPERIOR -->
   <div class="top-bar">
     <div class="top-bar-container">
-      <span>⚡ Servicio Eléctrico Profesional a Domicilio en Santiago</span>
+      <span>⚡ Servicio Eléctrico Técnico a Domicilio en Santiago</span>
       <div>
         <span>📞 <a href="tel:+56992232623">+56 9 9223 2623</a></span> | 
-        <span>📱 <a href="https://wa.me/56992232623?text=Hola%20Mario,%20necesito%20un%20presupuesto" target="_blank">WhatsApp Directo</a></span>
+        <span>📷 <a href="https://instagram.com/mario.electricista" target="_blank">@mario.electricista</a></span> | 
+        <span>📱 <a href="https://wa.me/56992232623?text=Hola%20Mario,%20necesito%20un%20presupuesto" target="_blank">WhatsApp</a></span>
       </div>
     </div>
   </div>
@@ -135,7 +139,7 @@
       <a href="#" class="logo">MARIO LABARCA <span>⚡</span></a>
       <ul class="nav-links">
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
         <li><a href="#trabajos">Trabajos</a></li>
         <li><a href="#opiniones">Opiniones</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -147,26 +151,29 @@
   <header class="hero">
     <div class="hero-container">
       <div>
-        <span class="badge-sec">Técnico e Instalador Autorizado SEC</span>
+        <span class="badge-sec">Técnico Electricista Titulado (INACAP)</span>
         <h1 class="hero-title">Electricista a Domicilio en Santiago</h1>
         
         <div class="hero-desc">
-          Reparaciones, instalaciones y normalización de tableros. Servicio profesional garantizado para hogares, locales comerciales y empresas en la Región Metropolitana.
+          Atención personal y directa. Reparaciones, instalaciones y normalización de tableros con garantía escrita para hogares, locales y empresas.
         </div>
 
         <div class="hero-btns">
           <a href="https://wa.me/56992232623?text=Hola%20Mario,%20necesito%20un%20presupuesto%20gratuito" class="btn-naranja" target="_blank">
-            💬 Solicitar Presupuesto Gratis
+            💬 Presupuesto Gratis
           </a>
           <a href="tel:+56992232623" class="btn-llamar">
             📞 Llamar Ahora
+          </a>
+          <a href="https://instagram.com/mario.electricista" class="btn-insta" target="_blank">
+            📷 Instagram
           </a>
         </div>
 
         <div class="hero-info-grid">
           <div>🎓 <strong>Formación:</strong> IP INACAP</div>
           <div>📝 <strong>RUT:</strong> 8.027.653-2</div>
-          <div>⏱️ <strong>Visita:</strong> Evaluaciones sin costo</div>
+          <div>⚡ <strong>Visita:</strong> Evaluación sin costo</div>
           <div>✉️ <strong>Correo:</strong> mariolabarca56@gmail.com</div>
         </div>
       </div>
@@ -181,12 +188,12 @@
   <section class="counter-banner">
     <div class="counter-grid">
       <div class="counter-item">
-        <h3>SEC</h3>
-        <p>Certificación Vigente</p>
+        <h3>INACAP</h3>
+        <p>Formación Técnica</p>
       </div>
       <div class="counter-item">
         <h3>+300</h3>
-        <p>Clientes Satisfechos</p>
+        <p>Trabajos Realizados</p>
       </div>
       <div class="counter-item">
         <h3>20</h3>
@@ -194,80 +201,80 @@
       </div>
       <div class="counter-item">
         <h3>100%</h3>
-        <p>Garantía Escrita</p>
+        <p>Garantía Directa</p>
       </div>
     </div>
   </section>
 
   <!-- SERVICIOS NUMERADOS -->
   <section id="servicios" class="section">
-    <h2 class="section-title">Nuestros Servicios Eléctricos</h2>
-    <p class="section-subtitle">Atención profesional e instalaciones bajo normativa chilena vigente</p>
+    <h2 class="section-title">Mis Servicios Eléctricos</h2>
+    <p class="section-subtitle">Soluciones técnicas profesionales y prolijas para tu inmueble</p>
 
     <div class="services-grid">
       <div class="service-card">
         <div class="service-num">01</div>
-        <h3>Instalador Eléctrico Autorizado</h3>
-        <p>Servicio residencial y comercial completo. Formación técnica profesional y experiencia comprobada en baja tensión y modernización de inmuebles.</p>
+        <h3>Instalaciones Eléctricas</h3>
+        <p>Servicio residencial y comercial completo. Recableados, independización de líneas y montaje técnico en baja tensión con acabados limpios.</p>
       </div>
 
       <div class="service-card">
         <div class="service-num">02</div>
         <h3>Instalación de Luminarias y LED</h3>
-        <p>Montaje seguro de lámparas colgantes, focos LED de alta eficiencia, recambios en techos altos y proyectos lumínicos para hogar y comercio.</p>
+        <p>Montaje de lámparas colgantes, focos LED de alta eficiencia, apliqués y proyectos de iluminación interior y exterior.</p>
       </div>
 
       <div class="service-card">
         <div class="service-num">03</div>
-        <h3>Reparaciones y Cortocircuitos</h3>
-        <p>Diagnóstico preciso de fugas de corriente, caídas de automático y fallas urgentes. Soluciones definitivas con equipos de medición certificados.</p>
+        <h3>Reparación de Fallas y Cortos</h3>
+        <p>Diagnóstico preciso de fugas de corriente, automáticos que caen y fallas urgentes. Soluciones definitivas con instrumental técnico de medición.</p>
       </div>
 
       <div class="service-card">
         <div class="service-num">04</div>
         <h3>Tableros y Puesta a Tierra</h3>
-        <p>Instalación y recambio de automáticos, protectores diferenciales, separación de circuitos e instalación de barra Cooper para máxima seguridad.</p>
+        <p>Armado y mantenimiento de tableros eléctricos. Recambio de disyuntores automáticos, protectores diferenciales e instalación de barra Cooper.</p>
       </div>
 
       <div class="service-card">
         <div class="service-num">05</div>
         <h3>Mantenimiento Preventivo</h3>
-        <p>Revisión integral de redes de cableado, inspección de puntos de consumo y mantenimiento correctivo para comunidades y locales comerciales.</p>
+        <p>Inspección integral de redes de cableado, orden de circuitos y revisión de enchufes para prevenir sobrecargas y accidentes.</p>
       </div>
 
       <div class="service-card">
         <div class="service-num">06</div>
         <h3>Atención de Urgencias</h3>
-        <p>Respuesta rápida ante cortes generales, chispazos en enchufes o fallas imprevistas en la Región Metropolitana.</p>
+        <p>Respuesta veloz ante cortes imprevistos, chispazos en tomacorrientes o fallas urgentes en la Región Metropolitana.</p>
       </div>
     </div>
   </section>
 
-  <!-- SOBRE NOSOTROS Y ¿POR QUÉ ELEGIRNOS? -->
-  <div id="nosotros" class="why-bg">
+  <!-- SOBRE MÍ Y ¿POR QUÉ ELEGIRME? -->
+  <div id="sobre-mi" class="why-bg">
     <section class="section">
-      <h2 class="section-title">¿Por Qué Elegirnos?</h2>
-      <p class="section-subtitle">Garantía, seguridad y transparencia en cada trabajo eléctrico</p>
+      <h2 class="section-title">¿Por Qué Elegir Mi Servicio?</h2>
+      <p class="section-subtitle">Trato personal, responsabilidad y transparencia en cada trabajo</p>
 
       <div class="why-grid">
         <div class="why-box">
-          <h4>Acreditación SEC</h4>
-          <p>Técnico habilitado oficialmente para ejecutar intervenciones bajo la norma eléctrica de baja tensión.</p>
+          <h4>Trato Directo</h4>
+          <p>Sin subcontratistas ni intermediarios. Yo mismo evalúo, ejecuto y respondo por cada trabajo realizado en tu propiedad.</p>
         </div>
 
         <div class="why-box">
-          <h4>Presupuesto sin Costo</h4>
-          <p>Evaluamos técnicamente sus requerimientos y entregamos un valor claro antes de comenzar. Sin sorpresas.</p>
+          <h4>Formación Técnica</h4>
+          <p>Titulado en IP INACAP, con sólida preparación teórica y práctica para garantizar intervenciones seguras.</p>
+        </div>
+
+        <div class="why-box">
+          <h4>Presupuesto previo $0</h4>
+          <p>Evalúo técnicamente tus requerimientos y entrego un valor claro antes de comenzar. Sin cobros sorpresa.</p>
         </div>
 
         <div class="why-box">
           <h4>Trabajo Garantizado</h4>
-          <p>Todas las instalaciones cuentan con respaldo documentado y uso de materiales certificados de primera calidad.</p>
-        </div>
-
-        <div class="why-box">
-          <h4>Respuesta Inmediata</h4>
-          <p>Puntualidad, trato directo sin intermediarios y atención personalizada para cada cliente en Santiago.</p>
+          <p>Uso de materiales de excelente calidad y terminaciones prolijas con respaldo y comunicación fluida.</p>
         </div>
       </div>
     </section>
@@ -283,7 +290,7 @@
         <img src="imagen.elec1.jpg" alt="Montaje de Iluminación">
         <div class="gallery-info">
           <h4>Montaje e Iluminación en Altura</h4>
-          <p>Conexión de centros de luz, revisión de cableado aéreo y cajas de derivación bajo norma.</p>
+          <p>Conexión de centros de luz, revisión de cableado aéreo y cajas de derivación.</p>
         </div>
       </div>
 
@@ -291,7 +298,7 @@
         <img src="imagen.elec2.jpg" alt="Revisión de Enchufes">
         <div class="gallery-info">
           <h4>Enchufes y Puntos de Fuerza</h4>
-          <p>Intervención técnica limpia, verificación de circuitos de enchufe e instrumental en terreno.</p>
+          <p>Intervención técnica limpia, verificación de circuitos e instrumental especializado.</p>
         </div>
       </div>
 
@@ -309,7 +316,7 @@
   <div id="opiniones" class="why-bg">
     <section class="section">
       <h2 class="section-title">Comentarios de Clientes</h2>
-      <p class="section-subtitle">Opiniones reales de quienes han confiado en nuestro servicio</p>
+      <p class="section-subtitle">Opiniones reales de quienes han confiado en mi trabajo</p>
 
       <div class="reviews-grid">
         <div class="review-card">
@@ -326,7 +333,7 @@
 
         <div class="review-card">
           <div class="stars">★★★★★</div>
-          <p class="review-text">"Instaló la barra cooper y separó los circuitos de la cocina. Todo impecable, seguro y normalizado."</p>
+          <p class="review-text">"Instaló la barra cooper y separó los circuitos de la cocina. Todo impecable y muy seguro."</p>
           <div class="review-author">— Juan Pablo S. (Las Condes)</div>
         </div>
       </div>
@@ -345,6 +352,9 @@
         </a>
         <a href="tel:+56992232623" class="btn-llamar">
           📞 Llamar al +56 9 9223 2623
+        </a>
+        <a href="https://instagram.com/mario.electricista" class="btn-insta" target="_blank">
+          📷 Ver en Instagram
         </a>
       </div>
     </div>
