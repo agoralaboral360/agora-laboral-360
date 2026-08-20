@@ -5,79 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servicios de Consultoría y Compliance Laboral | Ágora Laboral 360°</title>
   
-  <!-- Tipografías Corporativas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --morado-principal: #361e42;  
+      --morado-autoridad: #382341; 
       --morado-hover: #261330;
-      --verde-menta: #a8e6cf;       
-      --menta-fondo: #eef9f4;
-      --azul-cielo: #d4e8fc;        
-      --fondo-pagina: #faf8fc;      
+      --menta-prevencion: #a2e8dd;       
+      --menta-fondo: #f0fdfa;
+      --naranja-accion: #f26522;
+      --naranja-hover: #d95316;
+      --fondo-pagina: #ffffff;     
       --texto-oscuro: #211329;
       --texto-suave: #4d4054;
       --blanco: #ffffff;
+      --gris-borde: rgba(56, 35, 65, 0.15);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Montserrat', sans-serif; color: var(--texto-oscuro); background-color: var(--fondo-pagina); line-height: 1.6; }
+    body { font-family: 'Montserrat', sans-serif !important; color: var(--texto-oscuro); background-color: var(--fondo-pagina); line-height: 1.6; }
 
-    /* TIPOGRAFÍA Y ENCABEZADOS */
-    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--morado-principal); font-weight: 700; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--morado-autoridad); font-weight: 700; }
 
     /* NAVEGACIÓN PRINCIPAL */
-    .header { background-color: var(--blanco); border-bottom: 1px solid #ede8f2; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-    .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; }
-    .logo-text { font-weight: 800; font-size: 1.3rem; color: var(--morado-principal); letter-spacing: -0.5px; text-decoration: none; }
-    .logo-text span { color: var(--morado-principal); border-bottom: 3px solid var(--verde-menta); }
+    .header { background-color: var(--blanco); border-bottom: 3px solid var(--morado-autoridad); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
+    .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
+    .logo-text { font-weight: 900; font-size: 1.2rem; color: var(--morado-autoridad); letter-spacing: -0.5px; text-decoration: none; font-family: 'Montserrat', sans-serif; }
+    .logo-text span { color: var(--morado-autoridad); border-bottom: 3px solid var(--menta-prevencion); }
     
-    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s ease; }
-    .nav-links a:hover, .nav-links a.active { color: var(--morado-principal); border-bottom: 2px solid var(--verde-menta); }
+    .nav-links { display: flex; align-items: center; gap: 20px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.3px; transition: color 0.2s ease; font-family: 'Montserrat', sans-serif; }
+    .nav-links a:hover, .nav-links a.active { color: var(--naranja-accion); }
 
     /* MIGA DE PAN */
-    .breadcrumb-bar { background-color: var(--menta-fondo); padding: 14px 24px; border-bottom: 1px solid #e1f2ea; font-size: 0.85rem; }
+    .breadcrumb-bar { background-color: var(--menta-fondo); padding: 14px 24px; border-bottom: 1px solid #d8f0e5; font-size: 0.85rem; font-family: 'Montserrat', sans-serif; }
     .breadcrumb-container { max-width: 1200px; margin: 0 auto; color: var(--texto-suave); }
-    .breadcrumb-container a { color: var(--morado-principal); text-decoration: none; font-weight: 600; }
+    .breadcrumb-container a { color: var(--morado-autoridad); text-decoration: none; font-weight: 700; }
 
-    /* CONTENEDORES Y ESTRUCTURA */
+    /* ESTRUCTURA */
     .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
     .section { padding: 60px 0; }
-    .section-bg-light { background-color: var(--menta-fondo); }
     .section-title { font-size: 2.2rem; margin-bottom: 14px; text-align: center; }
-    .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 850px; margin: 0 auto 40px auto; text-align: center; }
+    .section-subtitle { font-size: 1.05rem; color: var(--texto-suave); max-width: 850px; margin: 0 auto 40px auto; text-align: center; font-family: 'Montserrat', sans-serif; }
 
     /* HERO INTERIOR */
-    .page-header { background: var(--morado-principal); color: var(--blanco); padding: 55px 24px; border-bottom: 4px solid var(--verde-menta); margin-bottom: 40px; }
+    .page-header { background: var(--morado-autoridad); color: var(--blanco); padding: 55px 24px; border-bottom: 5px solid var(--menta-prevencion); margin-bottom: 40px; }
     .page-header-content { max-width: 1200px; margin: 0 auto; text-align: center; }
     .page-header h1 { color: var(--blanco); font-size: 2.6rem; margin-bottom: 14px; }
-    .page-header p { font-size: 1.15rem; color: rgba(255, 255, 255, 0.92); max-width: 850px; margin: 0 auto; line-height: 1.6; }
+    .page-header p { font-size: 1.15rem; color: rgba(255, 255, 255, 0.92); max-width: 850px; margin: 0 auto; line-height: 1.6; font-family: 'Montserrat', sans-serif; }
 
-    /* GRILLA DE SERVICIOS DETALLADOS */
+    /* TARJETAS DE SERVICIO */
     .services-stack { display: flex; flex-direction: column; gap: 35px; }
-    .service-detail-card { background: var(--blanco); border-radius: 10px; border: 1px solid #ede8f2; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border-left: 6px solid var(--verde-menta); display: grid; grid-template-columns: 1fr 300px; gap: 30px; align-items: start; }
+    .service-detail-card { background: var(--blanco); border-radius: 12px; border: 2px solid var(--gris-borde); padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border-left: 8px solid var(--menta-prevencion); display: grid; grid-template-columns: 1fr 320px; gap: 30px; align-items: start; }
     
-    .service-info h3 { font-size: 1.5rem; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
-    .service-info h3 svg { width: 32px; height: 32px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; }
-    .service-info p { font-size: 0.95rem; color: var(--texto-suave); margin-bottom: 20px; line-height: 1.6; }
+    .service-info h3 { font-size: 1.5rem; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; color: var(--morado-autoridad); }
+    .service-info h3 svg { width: 32px; height: 32px; stroke: var(--morado-autoridad); fill: none; flex-shrink: 0; }
+    .service-info p { font-size: 0.95rem; color: var(--texto-suave); margin-bottom: 24px; line-height: 1.6; font-family: 'Montserrat', sans-serif; }
     
-    .deliverables-box { background: var(--menta-fondo); padding: 20px; border-radius: 8px; border: 1px solid #d8f0e5; }
-    .deliverables-box h4 { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--morado-principal); margin-bottom: 12px; }
+    .deliverables-box { background: var(--menta-fondo); padding: 24px; border-radius: 8px; border: 1px solid var(--menta-prevencion); }
+    .deliverables-box h4 { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--morado-autoridad); margin-bottom: 14px; }
     .deliverables-list { list-style: none; }
-    .deliverables-list li { font-size: 0.88rem; color: var(--texto-oscuro); margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px; }
-    .deliverables-list li svg { width: 16px; height: 16px; stroke: var(--morado-principal); fill: none; flex-shrink: 0; margin-top: 3px; }
+    .deliverables-list li { font-size: 0.88rem; color: var(--texto-oscuro); margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px; font-family: 'Montserrat', sans-serif; font-weight: 500; }
+    .deliverables-list li svg { width: 18px; height: 18px; stroke: var(--naranja-accion); fill: none; flex-shrink: 0; margin-top: 2px; }
 
     /* BOTONES */
-    .btn-agora { display: inline-block; padding: 12px 24px; text-decoration: none; font-weight: 700; border-radius: 6px; font-size: 0.88rem; transition: background 0.2s; border: none; cursor: pointer; text-align: center; }
-    .btn-agora-morado { background-color: var(--morado-principal); color: var(--blanco); }
-    .btn-agora-morado:hover { background-color: var(--morado-hover); }
+    .btn-naranja { display: inline-block; background: var(--naranja-accion); color: var(--blanco); font-weight: 800; padding: 14px 28px; border-radius: 8px; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; transition: background 0.2s, transform 0.2s; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif; }
+    .btn-naranja:hover { background: var(--naranja-hover); transform: translateY(-2px); }
 
-    footer { background: var(--morado-principal); color: var(--blanco); text-align: center; padding: 25px 24px; font-size: 0.85rem; margin-top: 60px; }
+    footer { background: var(--morado-autoridad); color: var(--blanco); text-align: center; padding: 35px 24px; font-size: 0.85rem; margin-top: 60px; border-top: 4px solid var(--menta-prevencion); font-family: 'Montserrat', sans-serif; }
 
     @media (max-width: 900px) {
       .nav-links { display: none; }
@@ -95,13 +93,12 @@
       <a href="../index.html" class="logo-text">ÁGORA LABORAL <span>360°</span></a>
       <nav>
         <ul class="nav-links">
-          <li><a href="../index.html#inicio">INICIO</a></li>
-          <li><a href="../index.html#servicios" class="active">SERVICIOS</a></li>
-          <li><a href="../index.html#metodo360">MÉTODO 360°</a></li>
-          <li><a href="../index.html#observatorio">OBSERVATORIO</a></li>
-          <li><a href="../index.html#academia">ACADEMIA</a></li>
-          <li><a href="../index.html#recursos">RECURSOS</a></li>
-          <li><a href="../index.html#contacto">CONTACTO</a></li>
+          <li><a href="../index.html#servicios" class="active">Servicios</a></li>
+          <li><a href="../index.html#metodo">Método 360°</a></li>
+          <li><a href="../blog/ley-equidad-brecha-salarial.html">Informe 21.828</a></li>
+          <li><a href="../index.html#herramientas">Herramientas</a></li>
+          <li><a href="../index.html#biblioteca">Recursos</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -135,7 +132,7 @@
               1. Investigación Externa Pericial (Ley Karin N° 21.643)
             </h3>
             <p>Conducción completa, neutral e imparcial del procedimiento investigativo por denuncias de acoso sexual, acoso laboral o violencia en el trabajo. Garantizamos objetividad pericial, resguardo estricto de la confidencialidad y estricto apego al plazo de 30 días corridos.</p>
-            <a href="../index.html#contacto" class="btn-agora btn-agora-morado">Solicitar Investigación Externa</a>
+            <a href="../index.html#contacto" class="btn-naranja">Solicitar Investigación Externa →</a>
           </div>
           <div class="deliverables-box">
             <h4>Entregables del Servicio:</h4>
@@ -143,20 +140,20 @@
               <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Planificación y citaciones formales.</li>
               <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Actas de entrevista estructuradas.</li>
               <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Custodia de carpeta probatoria.</li>
-              <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Informe Pericial de Investigación listo para la DT.</li>
+              <li><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Informe Pericial listo para la DT.</li>
             </ul>
           </div>
         </div>
 
         <!-- SERVICIO 2 -->
-        <div class="service-detail-card" style="border-left-color: var(--morado-principal);">
+        <div class="service-detail-card" style="border-left-color: var(--morado-autoridad);">
           <div class="service-info">
             <h3>
               <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
               2. Asesoría y Acompañamiento a Investigadores Internos
             </h3>
             <p>Asesoramos técnicamente al fiscal o investigador designado por su organización para evitar vicios procedimentales, rechazo de denuncias por caducidad o infracciones por menoscabo en las medidas cautelares.</p>
-            <a href="../index.html#contacto" class="btn-agora btn-agora-morado">Agendar Sesión de Asesoría</a>
+            <a href="../index.html#contacto" class="btn-naranja">Agendar Sesión de Asesoría →</a>
           </div>
           <div class="deliverables-box">
             <h4>Entregables del Servicio:</h4>
@@ -177,7 +174,7 @@
               3. Informe Ley 21.828 (Equidad y Conciliación)
             </h3>
             <p>Estructuración técnica del informe anual sobre representación equitativa, brechas de género y conciliación de la vida personal, familiar y laboral, dando cumplimiento oportuno a los requerimientos del Ministerio del Trabajo.</p>
-            <a href="../index.html#contacto" class="btn-agora btn-agora-morado">Solicitar Informe Anual</a>
+            <a href="../index.html#contacto" class="btn-naranja">Solicitar Informe Anual →</a>
           </div>
           <div class="deliverables-box">
             <h4>Entregables del Servicio:</h4>
@@ -191,14 +188,14 @@
         </div>
 
         <!-- SERVICIO 4 -->
-        <div class="service-detail-card" style="border-left-color: var(--morado-principal);">
+        <div class="service-detail-card" style="border-left-color: var(--morado-autoridad);">
           <div class="service-info">
             <h3>
               <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
               4. Capacitación y Formación (Academia Ágora 360°)
             </h3>
             <p>Programas de formación ejecutiva, certificaciones y talleres prácticos dirigidos a Comités Paritarios, Equipos de Personas, Jefaturas e Investigadores sobre debida diligencia, prevención de violencia laboral y técnica de entrevista.</p>
-            <a href="../index.html#contacto" class="btn-agora btn-agora-morado">Ver Programas Académicos</a>
+            <a href="../index.html#contacto" class="btn-naranja">Ver Programas Académicos →</a>
           </div>
           <div class="deliverables-box">
             <h4>Entregables del Servicio:</h4>
@@ -218,7 +215,7 @@
     <section class="section" style="text-align: center;">
       <h2 class="section-title">¿Requiere una propuesta de servicio personalizada?</h2>
       <p class="section-subtitle" style="margin-bottom: 30px;">Coordinamos una sesión técnica inicial sin costo para analizar la situación actual de su empresa.</p>
-      <a href="../index.html#contacto" class="btn-agora btn-agora-morado">Agendar Reunión Técnica</a>
+      <a href="../index.html#contacto" class="btn-naranja">Agendar Reunión Técnica →</a>
     </section>
 
   </main>
