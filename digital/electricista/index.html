@@ -11,98 +11,102 @@
 
   <style>
     :root {
-      --azul-electrico: #1d4ed8;      /* Azul técnico vivo y corporativo */
-      --azul-suave: #eff6ff;          /* Fondo azul ultra claro para destacar el hero */
-      --naranja-cta: #ff6b00;         /* Botón principal de acción */
-      --naranja-hover: #e05d00;
-      --dorado-estrellas: #f59e0b;
+      /* UN SOLO AZUL Y UN SOLO NARANJA */
+      --azul-cobalto: #1e3a8a;        /* Azul cobalto profesional único */
+      --naranja-energia: #ff6b00;     /* Naranja para botones y detalles */
       --blanco: #ffffff;
-      --texto-oscuro: #0f172a;
+      --fondo-gris-suave: #f8fafc;
+      --texto-oscuro: #1e293b;
       --texto-gris: #475569;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
     html { scroll-behavior: smooth; }
-    body { background-color: #f8fafc; color: var(--texto-oscuro); line-height: 1.6; }
+    body { background-color: var(--fondo-gris-suave); color: var(--texto-oscuro); line-height: 1.6; }
 
-    /* NAVBAR CON AZUL TÉCNICO */
-    .navbar { background: var(--blanco); border-bottom: 3px solid var(--azul-electrico); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    /* NAVBAR */
+    .navbar { background: var(--blanco); border-bottom: 3px solid var(--azul-cobalto); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
     .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; }
-    .logo { font-weight: 900; font-size: 1.25rem; color: var(--azul-electrico); text-decoration: none; }
-    .logo span { color: var(--naranja-cta); }
+    .logo { font-weight: 900; font-size: 1.25rem; color: var(--azul-cobalto); text-decoration: none; }
+    .logo span { color: var(--naranja-energia); }
     
     .nav-links { display: flex; gap: 25px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 700; font-size: 0.9rem; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--azul-electrico); }
+    .nav-links a { text-decoration: none; color: var(--azul-cobalto); font-weight: 700; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--naranja-energia); }
     @media (max-width: 768px) { .nav-links { display: none; } }
 
-    /* HERO LUMINOSO CON AZUL TÉCNICO Y DESTACADO */
-    .hero { background: var(--azul-suave); padding: 60px 20px; border-bottom: 1px solid #dbeafe; }
+    /* HERO CON FONDO AZUL COBALTO */
+    .hero { background: var(--azul-cobalto); color: var(--blanco); padding: 65px 20px; border-bottom: 4px solid var(--naranja-energia); }
     .hero-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
     @media (max-width: 850px) { .hero-container { grid-template-columns: 1fr; text-align: center; } }
 
-    .hero-title { font-size: 2.4rem; font-weight: 900; color: var(--texto-oscuro); line-height: 1.2; margin-bottom: 18px; }
-    .hero-desc { background: var(--blanco); border-left: 4px solid var(--azul-electrico); padding: 16px 20px; border-radius: 0 8px 8px 0; margin-bottom: 30px; font-weight: 600; font-size: 0.95rem; color: var(--texto-gris); box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .hero-title { font-size: 2.4rem; font-weight: 900; color: var(--blanco); line-height: 1.2; margin-bottom: 18px; }
+    .hero-desc { background: rgba(255, 255, 255, 0.1); border-left: 4px solid var(--naranja-energia); padding: 16px 20px; border-radius: 0 8px 8px 0; margin-bottom: 30px; font-weight: 500; font-size: 0.98rem; color: #f1f5f9; }
 
-    /* UN SOLO BOTÓN NARANJA PROTAGONISTA */
+    /* BOTÓN PROTAGONISTA NARANJA */
     .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 30px; }
     @media (max-width: 850px) { .hero-btns { justify-content: center; } }
     
-    .btn-cta { background: linear-gradient(135deg, #ff8c00 0%, #ff5500 100%); color: var(--blanco); padding: 18px 32px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 1rem; box-shadow: 0 10px 25px rgba(255, 107, 0, 0.35); transition: all 0.3s ease; display: inline-block; }
-    .btn-cta:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 15px 30px rgba(255, 107, 0, 0.5); }
+    .btn-cta { background: var(--naranja-energia); color: var(--blanco); padding: 18px 32px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 1rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); transition: all 0.3s ease; display: inline-block; }
+    .btn-cta:hover { background: #e05d00; transform: translateY(-3px); box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35); }
     
-    .btn-secondary { background: var(--blanco); color: var(--azul-electrico); border: 2px solid var(--azul-electrico); padding: 16px 24px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.95rem; transition: all 0.3s; }
-    .btn-secondary:hover { background: var(--azul-electrico); color: var(--blanco); }
+    .btn-secondary { background: transparent; color: var(--blanco); border: 2px solid var(--blanco); padding: 16px 24px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.95rem; transition: all 0.3s; }
+    .btn-secondary:hover { background: var(--blanco); color: var(--azul-cobalto); }
 
-    .hero-info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; text-align: left; background: var(--blanco); padding: 18px; border-radius: 10px; font-size: 0.85rem; border: 1px solid #dbeafe; }
+    .hero-info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; text-align: left; background: rgba(255, 255, 255, 0.08); padding: 18px; border-radius: 10px; font-size: 0.85rem; color: #e2e8f0; }
     @media (max-width: 500px) { .hero-info-grid { grid-template-columns: 1fr; } }
-    .hero-info-grid strong { color: var(--azul-electrico); }
+    .hero-info-grid strong { color: var(--blanco); }
 
     .hero-photo-wrapper { text-align: center; }
-    .hero-photo-wrapper img { width: 100%; max-width: 380px; border-radius: 16px; border: 4px solid var(--blanco); outline: 3px solid var(--azul-electrico); box-shadow: 0 15px 30px rgba(29, 78, 216, 0.15); object-fit: cover; }
+    .hero-photo-wrapper img { width: 100%; max-width: 380px; border-radius: 16px; border: 4px solid var(--blanco); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); object-fit: cover; }
 
     /* SECCIONES GENERALES */
     .section { padding: 70px 20px; max-width: 1100px; margin: 0 auto; }
-    .section-title { text-align: center; font-size: 1.8rem; font-weight: 900; color: var(--azul-electrico); margin-bottom: 8px; text-transform: uppercase; }
+    .section-title { text-align: center; font-size: 1.8rem; font-weight: 900; color: var(--azul-cobalto); margin-bottom: 8px; text-transform: uppercase; }
     .section-subtitle { text-align: center; color: var(--texto-gris); font-weight: 500; margin-bottom: 40px; }
 
-    /* GRIDS */
+    /* TARJETAS DE SERVICIOS */
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
-    .service-card { background: var(--blanco); padding: 28px 22px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-    .service-icon { background: var(--azul-suave); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 18px; color: var(--azul-electrico); }
-    .service-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--texto-oscuro); margin-bottom: 8px; }
+    .service-card { background: var(--blanco); padding: 28px 22px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(30, 58, 138, 0.05); transition: transform 0.3s ease; }
+    .service-card:hover { transform: translateY(-5px); border-color: var(--azul-cobalto); }
+    .service-icon { background: rgba(30, 58, 138, 0.08); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 18px; }
+    .service-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--azul-cobalto); margin-bottom: 8px; }
     .service-card p { font-size: 0.88rem; color: var(--texto-gris); }
 
-    /* GALERÍA TRABAJOS */
+    /* GALERÍA DE TRABAJOS */
     .gallery-bg { background: #f1f5f9; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
     .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-    .gallery-card { background: var(--blanco); border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
-    .gallery-card img { width: 100%; height: 300px; object-fit: cover; border-bottom: 3px solid var(--azul-electrico); }
+    .gallery-card { background: var(--blanco); border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .gallery-card img { width: 100%; height: 280px; object-fit: cover; border-bottom: 4px solid var(--azul-cobalto); }
     .gallery-info { padding: 20px; }
-    .gallery-info h4 { font-size: 1.05rem; font-weight: 800; color: var(--texto-oscuro); margin-bottom: 5px; }
+    .gallery-info h4 { font-size: 1.05rem; font-weight: 800; color: var(--azul-cobalto); margin-bottom: 5px; }
     .gallery-info p { font-size: 0.85rem; color: var(--texto-gris); }
 
-    /* TESTIMONIOS */
+    /* OPINIONES / TESTIMONIOS */
     .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .review-card { background: var(--blanco); padding: 25px; border-radius: 12px; border-left: 4px solid var(--azul-electrico); border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
-    .stars { color: var(--dorado-estrellas); font-size: 1.1rem; margin-bottom: 10px; }
+    .review-card { background: var(--blanco); padding: 25px; border-radius: 12px; border-left: 4px solid var(--naranja-energia); border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
+    .stars { color: var(--naranja-energia); font-size: 1.1rem; margin-bottom: 10px; }
     .review-text { font-style: italic; color: #334155; font-size: 0.9rem; margin-bottom: 12px; }
-    .review-author { font-weight: 800; color: var(--azul-electrico); font-size: 0.85rem; }
+    .review-author { font-weight: 800; color: var(--azul-cobalto); font-size: 0.85rem; }
 
-    /* BLOQUE FINAL EN AZUL ELÉCTRICO VIVO */
-    .cta-final { background: var(--azul-electrico); color: var(--blanco); border-radius: 16px; padding: 45px 25px; text-align: center; box-shadow: 0 12px 30px rgba(29, 78, 216, 0.25); }
+    /* CTA FINAL AZUL COBALTO CON BOTONES NARANJA */
+    .cta-final { background: var(--azul-cobalto); color: var(--blanco); border-radius: 16px; padding: 45px 25px; text-align: center; box-shadow: 0 10px 25px rgba(30, 58, 138, 0.2); }
     .cta-final h2 { font-size: 1.7rem; font-weight: 900; margin-bottom: 6px; color: var(--blanco); }
-    .cta-final p { font-size: 1rem; color: #dbeafe; margin-bottom: 25px; font-weight: 600; }
+    .cta-final p { font-size: 1rem; color: #e2e8f0; margin-bottom: 25px; font-weight: 500; }
     .cta-links { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-    .btn-contact { background: var(--blanco); color: var(--azul-electrico); text-decoration: none; padding: 12px 20px; border-radius: 6px; font-weight: 800; font-size: 0.88rem; transition: all 0.2s; }
-    .btn-contact:hover { background: var(--naranja-cta); color: var(--blanco); }
+    
+    .btn-contact { background: var(--naranja-energia); color: var(--blanco); text-decoration: none; padding: 14px 22px; border-radius: 8px; font-weight: 800; font-size: 0.9rem; transition: all 0.2s; }
+    .btn-contact:hover { background: #e05d00; transform: translateY(-2px); }
+    
+    .btn-contact-alt { background: var(--blanco); color: var(--azul-cobalto); text-decoration: none; padding: 14px 22px; border-radius: 8px; font-weight: 800; font-size: 0.9rem; transition: all 0.2s; }
+    .btn-contact-alt:hover { background: #f1f5f9; }
 
-    footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 20px; font-size: 0.8rem; }
+    footer { background: var(--azul-cobalto); color: #cbd5e1; text-align: center; padding: 20px; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR LIMPIA -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="#" class="logo">MARIO LABARCA <span>⚡</span></a>
@@ -115,7 +119,7 @@
     </div>
   </nav>
 
-  <!-- HERO LUMINOSO EN AZUL SUAVE -->
+  <!-- HERO -->
   <header class="hero">
     <div class="hero-container">
       <div>
@@ -236,7 +240,7 @@
     </div>
   </section>
 
-  <!-- CTA FINAL EN AZUL ELÉCTRICO VIVO -->
+  <!-- CTA FINAL -->
   <section id="contacto" class="section">
     <div class="cta-final">
       <h2>¿Necesitas evaluar un trabajo eléctrico?</h2>
@@ -244,8 +248,8 @@
 
       <div class="cta-links">
         <a href="https://wa.me/56992232623?text=Hola%20Mario,%20necesito%20un%20presupuesto" class="btn-contact" target="_blank">📱 WhatsApp (+56 9 9223 2623)</a>
-        <a href="mailto:mariolabarca56@gmail.com" class="btn-contact">✉️ Enviar Correo</a>
-        <a href="https://instagram.com/mario.electricista" class="btn-contact" target="_blank">📷 Instagram</a>
+        <a href="mailto:mariolabarca56@gmail.com" class="btn-contact-alt">✉️ Enviar Correo</a>
+        <a href="https://instagram.com/mario.electricista" class="btn-contact-alt" target="_blank">📷 Instagram</a>
       </div>
     </div>
   </section>
