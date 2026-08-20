@@ -64,7 +64,9 @@
 
     /* SERVICIOS */
     .grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
-    .card-servicio { background: var(--blanco); padding: 35px 25px; border-radius: 12px; border: 2px solid var(--gris-borde); box-shadow: 0 6px 18px rgba(0,0,0,0.02); }
+    .card-servicio-link { text-decoration: none; color: inherit; display: block; }
+    .card-servicio { background: var(--blanco); padding: 35px 25px; border-radius: 12px; border: 2px solid var(--gris-borde); box-shadow: 0 6px 18px rgba(0,0,0,0.02); transition: transform 0.2s; height: 100%; box-sizing: border-box; }
+    .card-servicio:hover { transform: translateY(-4px); }
     .card-servicio.morado { border-top: 6px solid var(--morado-autoridad); }
     .card-servicio.menta { border-top: 6px solid var(--menta-prevencion); }
     .card-servicio h3 { font-size: 1.25rem; color: var(--morado-autoridad); margin-bottom: 12px; font-weight: 800; }
@@ -106,20 +108,22 @@
 </head>
 <body>
 
+  <!-- NAVEGACIÓN PRINCIPAL -->
   <header class="header">
     <div class="navbar">
       <a href="#" class="logo-text">ÁGORA LABORAL <span>360°</span></a>
       <ul class="nav-links">
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#metodo">Método 360°</a></li>
+        <li><a href="servicios/index.html">Servicios</a></li>
+        <li><a href="metodo-360/index.html">Método 360°</a></li>
         <li><a href="blog/ley-equidad-brecha-salarial.html">Informe 21.828</a></li>
         <li><a href="#herramientas">Herramientas</a></li>
-        <li><a href="#biblioteca">Recursos</a></li>
+        <li><a href="recursos/index.html">Recursos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
   </header>
 
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-content">
       <h1>ÁGORA LABORAL 360°</h1>
@@ -128,44 +132,54 @@
       
       <div class="hero-buttons">
         <a href="diagnostico/index.html" class="btn-naranja">Realizar Diagnóstico Gratuito →</a>
-       <a href="https://wa.me/56999840502?text=Hola,%20me%20gustaría%20agendar%20una%20reunión%20técnica" target="_blank" class="btn-secundario-hero">Agendar Reunión Técnica</a>
+        <a href="#contacto" class="btn-secundario-hero">Agendar Reunión Técnica</a>
       </div>
 
       <div class="hero-tagline">Ley 21.643 · Ley 21.828 · Método Ágora 360®</div>
     </div>
   </section>
 
+  <!-- SERVICIOS ESPECIALIZADOS -->
   <section id="servicios" class="section-container">
     <h2 class="section-title">Servicios Especializados</h2>
     <p class="section-subtitle">Soluciones de alto nivel técnico para el resguardo de la organización y el cumplimiento normativo.</p>
 
     <div class="grid-servicios">
-      <div class="card-servicio morado">
-        <h3>Investigación Externa</h3>
-        <p>Investigación independiente de denuncias complejas por acoso laboral, sexual y violencia en el trabajo.</p>
-      </div>
+      <a href="servicios/index.html" class="card-servicio-link">
+        <div class="card-servicio morado">
+          <h3>Investigación Externa</h3>
+          <p>Investigación independiente de denuncias complejas por acoso laboral, sexual y violencia en el trabajo.</p>
+        </div>
+      </a>
 
-      <div class="card-servicio menta">
-        <h3>Asesoría al Investigador Interno</h3>
-        <p>Acompañamiento técnico, revisión metodológica y resguardo del debido proceso en investigaciones internas.</p>
-      </div>
+      <a href="servicios/index.html" class="card-servicio-link">
+        <div class="card-servicio menta">
+          <h3>Asesoría al Investigador Interno</h3>
+          <p>Acompañamiento técnico, revisión metodológica y resguardo del debido proceso en investigaciones internas.</p>
+        </div>
+      </a>
 
-      <div class="card-servicio morado">
-        <h3>Informe Ley 21.828</h3>
-        <p>Preparación, diagnóstico y análisis preventivo del informe de equidad salarial y brechas de género.</p>
-      </div>
+      <a href="blog/ley-equidad-brecha-salarial.html" class="card-servicio-link">
+        <div class="card-servicio morado">
+          <h3>Informe Ley 21.828</h3>
+          <p>Preparación, diagnóstico y análisis preventivo del informe de equidad salarial y brechas de género.</p>
+        </div>
+      </a>
 
-      <div class="card-servicio menta">
-        <h3>Academia Ágora 360°</h3>
-        <p>Formación especializada y práctica para departamentos de RR.HH., fiscalías e investigadores internos.</p>
-      </div>
+      <a href="servicios/index.html" class="card-servicio-link">
+        <div class="card-servicio menta">
+          <h3>Academia Ágora 360°</h3>
+          <p>Formación especializada y práctica para departamentos de RR.HH., fiscalías e investigadores internos.</p>
+        </div>
+      </a>
     </div>
 
     <div class="cta-center-container">
-      <a href="#contacto" class="btn-naranja">Conozca Nuestros Servicios →</a>
+      <a href="servicios/index.html" class="btn-naranja">Conozca Nuestros Servicios →</a>
     </div>
   </section>
 
+  <!-- MÉTODO ÁGORA 360® -->
   <section id="metodo" class="metodo-section">
     <div class="section-container" style="padding-top:0; padding-bottom:0;">
       <h2 class="section-title">Método Ágora 360®</h2>
@@ -194,14 +208,12 @@
       </div>
 
       <div class="cta-center-container">
-        <a href="#contacto" class="btn-naranja">Conozca el Método Ágora 360® →</a>
+        <a href="metodo-360/index.html" class="btn-naranja">Conozca el Método Ágora 360® →</a>
       </div>
     </div>
   </section>
 
-  <!-- ======================================================== -->
-  <!-- SECCIÓN HERRAMIENTAS GRATUITAS CON COLOR CORPORATIVO     -->
-  <!-- ======================================================== -->
+  <!-- HERRAMIENTAS GRATUITAS CON ÍCONOS -->
   <section id="herramientas" style="padding: 60px 20px; background-color: #ffffff; text-align: center;">
     <div style="max-width: 1100px; margin: 0 auto; font-family: system-ui, sans-serif;">
       
@@ -209,10 +221,9 @@
       <h2 style="color: #382341; font-size: 2.2rem; font-weight: 800; margin-top: 12px; margin-bottom: 10px;">HERRAMIENTAS GRATUITAS</h2>
       <p style="color: #382341; font-size: 1rem; max-width: 600px; margin: 0 auto 40px auto; opacity: 0.9;">Recursos prácticos interactivos diseñados para RR.HH., prevencionistas y responsables de cumplimiento legal.</p>
 
-      <!-- GRID DE TARJETAS CON ÍCONOS EN PALETA OFICIAL -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; text-align: left;">
         
-        <!-- TARJETA 1: CALCULADORA (MENTA) -->
+        <!-- TARJETA 1 -->
         <a href="calculadora.html" style="text-decoration: none; color: inherit;">
           <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #a2e8dd; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
             <div style="width: 58px; height: 58px; background: #a2e8dd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
@@ -223,7 +234,7 @@
           </div>
         </a>
 
-        <!-- TARJETA 2: CRONOGRAMA (NARANJA) -->
+        <!-- TARJETA 2 -->
         <a href="cronograma.html" style="text-decoration: none; color: inherit;">
           <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #f26522; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
             <div style="width: 58px; height: 58px; background: #f26522; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
@@ -234,7 +245,7 @@
           </div>
         </a>
 
-        <!-- TARJETA 3: CHECKLIST (MORADO) -->
+        <!-- TARJETA 3 -->
         <a href="checklist.html" style="text-decoration: none; color: inherit;">
           <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #382341; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
             <div style="width: 58px; height: 58px; background: #382341; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
@@ -245,7 +256,7 @@
           </div>
         </a>
 
-        <!-- TARJETA 4: MATRIZ DE RESGUARDO (MENTA) -->
+        <!-- TARJETA 4 -->
         <a href="evaluacion-riesgo.html" style="text-decoration: none; color: inherit;">
           <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #a2e8dd; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
             <div style="width: 58px; height: 58px; background: #a2e8dd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
@@ -258,7 +269,6 @@
 
       </div>
 
-      <!-- BOTÓN CENTRAL NARANJA -->
       <div style="margin-top: 40px;">
         <a href="recursos/index.html" style="display: inline-block; background: #f26522; color: #ffffff; padding: 16px 32px; border-radius: 8px; font-size: 1rem; font-weight: 800; text-decoration: none;">
           VER TODAS LAS HERRAMIENTAS →
@@ -308,11 +318,10 @@
     </div>
   </section>
 
-  <!-- BANNER LEAD MAGNET (DESCARGA LEY KARIN) -->
+  <!-- BANNER LEAD MAGNET Y FORMULARIO -->
   <section id="contacto" style="background-color: var(--morado, #382341); padding: 70px 20px; margin-top: 50px;">
     <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: space-between; font-family: system-ui, sans-serif;">
       
-      <!-- Textos Izquierda -->
       <div style="flex: 1; min-width: 300px;">
         <span style="background: var(--menta, #a2e8dd); color: var(--morado, #382341); font-size: 0.8rem; font-weight: 800; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Nuevo Recurso Gratuito</span>
         <h2 style="color: #ffffff; font-size: 2.2rem; font-weight: 800; margin-top: 20px; margin-bottom: 15px; line-height: 1.2;">Guía Práctica: Intake y Entrevistas con Perspectiva de Género</h2>
@@ -324,7 +333,6 @@
         </ul>
       </div>
 
-      <!-- Formulario Derecha -->
       <div style="flex: 1; min-width: 320px; background: #ffffff; padding: 35px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
         <h3 style="color: var(--morado, #382341); font-size: 1.25rem; font-weight: 800; margin-top: 0; margin-bottom: 20px; text-align: center;">Descargar Manual en PDF</h3>
         
