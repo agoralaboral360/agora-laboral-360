@@ -1,440 +1,491 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ágora Laboral 360° | Consultoría & Compliance Laboral</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ágora Laboral | Prevención, Investigación y Cumplimiento Ley Karin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --purple-main: #382341;
+            --purple-soft: rgba(56, 35, 65, 0.05);
+            --mint-main: #A2E8DD;
+            --mint-soft: rgba(162, 232, 221, 0.15);
+            --orange-cta: #FF6B00;
+            --orange-hover: #E05E00;
+            --bg-white: #FFFFFF;
+            --text-dark: #222222;
+            --text-muted: #555555;
+            --border-light: #EAEAEA;
+        }
 
-  <style>
-    :root {
-      /* PALETA OFICIAL ÁGORA 360° */
-      --morado-autoridad: #382341;
-      --morado-oscuro: #382341;
-      --menta-prevencion: #a2e8dd;
-      --menta-fondo: #ffffff;
-      --naranja-accion: #f26522;
-      --naranja-hover: #d95316;
-      --fondo-pagina: #ffffff;
-      --texto-oscuro: #2d3748;
-      --texto-suave: #382341;
-      --blanco: #ffffff;
-      --gris-borde: rgba(56, 35, 65, 0.15);
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Montserrat', sans-serif !important; background-color: var(--fondo-pagina); color: var(--texto-oscuro); line-height: 1.6; }
+        body {
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
 
-    /* NAVEGACIÓN COMPACTA */
-    .header { background-color: var(--blanco); border-bottom: 3px solid var(--morado-autoridad); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
-    .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
-    .logo-text { font-weight: 900; font-size: 1.2rem; color: var(--morado-autoridad); text-decoration: none; letter-spacing: -0.5px; }
-    .logo-text span { color: var(--morado-autoridad); border-bottom: 3px solid var(--menta-prevencion); }
-    
-    .nav-links { display: flex; gap: 18px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--texto-oscuro); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.3px; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--naranja-accion); }
+        /* HEADER & NAV */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 1000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    /* BOTONES DE ACCIÓN */
-    .btn-naranja { display: inline-block; background: var(--naranja-accion); color: var(--blanco); font-weight: 800; padding: 14px 28px; border-radius: 8px; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; transition: background 0.2s, transform 0.2s; border: none; cursor: pointer; }
-    .btn-naranja:hover { background: var(--naranja-hover); transform: translateY(-2px); }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--purple-main);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
 
-    .btn-secundario { display: inline-block; background: var(--blanco); color: var(--morado-autoridad); font-weight: 800; padding: 14px 28px; border-radius: 8px; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; border: 2px solid var(--morado-autoridad); transition: 0.2s; }
-    .btn-secundario:hover { background: var(--morado-autoridad); color: var(--blanco); }
+        .logo span {
+            font-size: 0.8rem;
+            display: block;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
 
-    /* HERO SECTION */
-    .hero { background: linear-gradient(rgba(20, 10, 28, 0.65), rgba(20, 10, 28, 0.75)), url('50559.jpg'); background-size: cover; background-position: center; padding: 90px 24px 70px; text-align: center; }
-    .hero h1 { font-size: 2.8rem; font-weight: 900; color: #ffffff !important; text-shadow: 0 2px 10px rgba(0,0,0,0.7); margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.5px; }
-    .hero-subtitle { font-size: 1.25rem; font-weight: 700; color: var(--menta-prevencion) !important; margin-bottom: 16px; text-shadow: 0 1px 5px rgba(0,0,0,0.5); }
-    .hero-desc { font-size: 1.05rem; color: #ffffff !important; text-shadow: 0 1px 5px rgba(0,0,0,0.6); margin-bottom: 30px; font-weight: 500; }
-    .hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 30px; }
-    .hero-tagline { font-size: 0.82rem; font-weight: 800; color: var(--menta-prevencion) !important; text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid rgba(255, 255, 255, 0.3); padding-top: 20px; display: inline-block; }
-    .btn-secundario-hero { display: inline-block; background: transparent; color: #ffffff; font-weight: 800; padding: 14px 28px; border-radius: 8px; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; border: 2px solid #ffffff; transition: 0.2s; }
-    .btn-secundario-hero:hover { background: #ffffff; color: var(--morado-autoridad); }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
 
-    /* CONTENEDORES GENERALES */
-    .section-container { max-width: 1200px; margin: 0 auto; padding: 70px 24px; }
-    .section-title { font-size: 2rem; color: var(--morado-autoridad); text-align: center; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: -0.5px; }
-    .section-subtitle { text-align: center; color: var(--texto-suave); max-width: 700px; margin: 0 auto 45px; font-size: 1.05rem; font-weight: 500; }
-    .cta-center-container { text-align: center; margin-top: 40px; }
+        nav a {
+            text-decoration: none;
+            color: var(--purple-main);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
 
-    /* SERVICIOS */
-    .grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
-    .card-servicio-link { text-decoration: none; color: inherit; display: block; }
-    .card-servicio { background: var(--blanco); padding: 35px 25px; border-radius: 12px; border: 2px solid var(--gris-borde); box-shadow: 0 6px 18px rgba(0,0,0,0.02); transition: transform 0.2s; height: 100%; box-sizing: border-box; }
-    .card-servicio:hover { transform: translateY(-4px); }
-    .card-servicio.morado { border-top: 6px solid var(--morado-autoridad); }
-    .card-servicio.menta { border-top: 6px solid var(--menta-prevencion); }
-    .card-servicio h3 { font-size: 1.25rem; color: var(--morado-autoridad); margin-bottom: 12px; font-weight: 800; }
-    .card-servicio p { font-size: 0.95rem; color: var(--texto-suave); font-weight: 500; }
+        nav a:hover {
+            color: var(--orange-cta);
+        }
 
-    /* MÉTODO ÁGORA 360® */
-    .metodo-section { background: var(--blanco); border-top: 1px solid var(--gris-borde); border-bottom: 1px solid var(--gris-borde); padding: 70px 0; }
-    .grid-pilares { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
-    .card-pilar { padding: 25px 20px; border-radius: 10px; text-align: center; }
-    .card-pilar.morado { background: var(--morado-autoridad); color: var(--blanco); }
-    .card-pilar.morado h3 { color: var(--blanco); }
-    .card-pilar.morado p { color: #e2dae8; }
-    .card-pilar.menta { background: var(--menta-fondo); border: 2px solid var(--menta-prevencion); color: var(--morado-autoridad); }
-    .card-pilar.menta h3 { color: var(--morado-autoridad); }
-    .card-pilar.menta p { color: var(--texto-suave); }
-    .card-pilar h3 { font-size: 1.1rem; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .card-pilar p { font-size: 0.9rem; font-weight: 500; }
+        .btn-cta {
+            background-color: var(--orange-cta);
+            color: #FFF;
+            padding: 12px 22px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: inline-block;
+        }
 
-    /* BIBLIOTECA */
-    .grid-biblioteca { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-    .box-biblioteca { background: var(--blanco); padding: 40px 30px; border-radius: 12px; border: 2px solid var(--gris-borde); display: flex; flex-direction: column; justify-content: space-between; }
-    .box-biblioteca.gratis { border-top: 8px solid var(--menta-prevencion); }
-    .box-biblioteca.profesional { border-top: 8px solid var(--morado-autoridad); }
-    .box-biblioteca h3 { font-size: 1.5rem; color: var(--morado-autoridad); font-weight: 900; margin-bottom: 6px; }
-    .badge-biblio { font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 20px; }
-    .badge-biblio.gratis { background: var(--menta-fondo); color: var(--morado-autoridad); }
-    .badge-biblio.profesional { background: var(--morado-autoridad); color: var(--blanco); }
-    .list-biblio { list-style: none; padding: 0; margin-bottom: 30px; }
-    .list-biblio li { font-size: 0.95rem; color: var(--texto-suave); font-weight: 600; padding: 8px 0; border-bottom: 1px dashed var(--gris-borde); }
-    .list-biblio li span { color: var(--morado-autoridad); font-weight: 900; margin-right: 8px; }
+        .btn-cta:hover {
+            background-color: var(--orange-hover);
+        }
 
-    footer { background: var(--morado-oscuro); color: var(--blanco); text-align: center; padding: 30px 24px; font-size: 0.85rem; font-weight: 600; border-top: 4px solid var(--menta-prevencion); }
+        /* HERO SECTION */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 80px 5%;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hero h1 { font-size: 1.9rem; }
-    }
-  </style>
+        .hero-content h1 {
+            font-size: 2.5rem;
+            color: var(--purple-main);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .hero-img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            object-fit: cover;
+        }
+
+        /* SERVICES SECTION */
+        .services-section {
+            padding: 80px 5%;
+            background-color: #FAFAFA;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--purple-main);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid var(--border-light);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-purple {
+            background-color: var(--purple-soft);
+            border-left: 4px solid var(--purple-main);
+        }
+
+        .card-mint {
+            background-color: var(--mint-soft);
+            border-left: 4px solid var(--mint-main);
+        }
+
+        .card h3 {
+            color: var(--purple-main);
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        /* METODO AGORA 360 */
+        .metodo-section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .metodo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .metodo-item {
+            text-align: center;
+            padding: 20px;
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+        }
+
+        .metodo-item h4 {
+            color: var(--purple-main);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* BIBLIOTECA & FREEMIUM */
+        .freemium-section {
+            padding: 80px 5%;
+            background-color: #F5F5F7;
+        }
+
+        .freemium-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .box-free, .box-pro {
+            background: var(--bg-white);
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+        }
+
+        .box-free h3 { color: var(--purple-main); margin-bottom: 15px; }
+        .box-pro h3 { color: var(--purple-main); margin-bottom: 15px; }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-light);
+            font-size: 0.95rem;
+        }
+
+        /* OBSERVATORIO */
+        .observatorio-section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .post-card {
+            display: flex;
+            gap: 20px;
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .post-tag {
+            background-color: var(--mint-main);
+            color: var(--purple-main);
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--purple-main);
+            color: #FFF;
+            padding: 60px 5% 30px 5%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+        }
+
+        .footer-col h5 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--mint-main);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col a {
+            color: #DDD;
+            text-decoration: none;
+            font-size: 0.9rem;
+            line-height: 2;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #AAA;
+        }
+
+        @media (max-width: 768px) {
+            .hero, .freemium-container, .footer-grid { grid-template-columns: 1fr; }
+            .metodo-grid { grid-template-columns: 1fr 1fr; }
+            nav ul { display: none; }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- NAVEGACIÓN PRINCIPAL -->
-  <header class="header">
-    <div class="navbar">
-      <a href="#" class="logo-text">ÁGORA LABORAL <span>360°</span></a>
-      <ul class="nav-links">
-        <li><a href="servicios/index.html">Servicios</a></li>
-        <li><a href="metodo-360/index.html">Método 360°</a></li>
-        <li><a href="blog/ley-equidad-brecha-salarial.html">Informe 21.828</a></li>
-        <li><a href="#herramientas">Herramientas</a></li>
-        <li><a href="recursos/index.html">Recursos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </div>
-  </header>
+    <!-- HEADER / NAV -->
+    <header>
+        <div class="logo">Ágora Laboral<span>Consultoría &amp; Riesgo Normativo</span></div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#metodo">Método 360°</a></li>
+                <li><a href="#biblioteca">Biblioteca</a></li>
+                <li><a href="#observatorio">Observatorio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="#autodiagnostico" class="btn-cta">🟠 REALIZAR AUTODIAGNÓSTICO</a>
+    </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>ÁGORA LABORAL 360°</h1>
-      <div class="hero-subtitle">Consultoría especializada en Ley Karin, investigaciones y compliance laboral</div>
-      <p class="hero-desc">Investigaciones externas, asesoría técnica y herramientas para ayudar a organizaciones públicas y privadas a cumplir la normativa y gestionar denuncias con rigor.</p>
-      
-      <div class="hero-buttons">
-        <a href="diagnostico/index.html" class="btn-naranja">Realizar Diagnóstico Gratuito →</a>
-        <a href="#contacto" class="btn-secundario-hero">Agendar Reunión Técnica</a>
-      </div>
-
-      <div class="hero-tagline">Ley 21.643 · Ley 21.828 · Método Ágora 360®</div>
-    </div>
-  </section>
-
-  <!-- SERVICIOS ESPECIALIZADOS -->
-  <section id="servicios" class="section-container">
-    <h2 class="section-title">Servicios Especializados</h2>
-    <p class="section-subtitle">Soluciones de alto nivel técnico para el resguardo de la organización y el cumplimiento normativo.</p>
-
-    <div class="grid-servicios">
-      <a href="servicios/index.html" class="card-servicio-link">
-        <div class="card-servicio morado">
-          <h3>Investigación Externa</h3>
-          <p>Investigación independiente de denuncias complejas por acoso laboral, sexual y violencia en el trabajo.</p>
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>¿Su organización cumple formalmente con la Ley Karin?</h1>
+            <p>Evaluamos, investigamos y diagnosticamos el nivel de cumplimiento normativo de su empresa bajo el estándar técnico del Método Ágora 360°.</p>
+            <a href="#autodiagnostico" class="btn-cta">🟠 REALIZAR AUTODIAGNÓSTICO GRATUITO</a>
         </div>
-      </a>
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Consultoría Ágora Laboral" class="hero-img">
+    </section>
 
-      <a href="servicios/index.html" class="card-servicio-link">
-        <div class="card-servicio menta">
-          <h3>Asesoría al Investigador Interno</h3>
-          <p>Acompañamiento técnico, revisión metodológica y resguardo del debido proceso en investigaciones internas.</p>
-        </div>
-      </a>
-
-      <a href="blog/ley-equidad-brecha-salarial.html" class="card-servicio-link">
-        <div class="card-servicio morado">
-          <h3>Informe Ley 21.828</h3>
-          <p>Preparación, diagnóstico y análisis preventivo del informe de equidad salarial y brechas de género.</p>
-        </div>
-      </a>
-
-      <a href="servicios/index.html" class="card-servicio-link">
-        <div class="card-servicio menta">
-          <h3>Academia Ágora 360°</h3>
-          <p>Formación especializada y práctica para departamentos de RR.HH., fiscalías e investigadores internos.</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="cta-center-container">
-      <a href="servicios/index.html" class="btn-naranja">Conozca Nuestros Servicios →</a>
-    </div>
-  </section>
-
-  <!-- MÉTODO ÁGORA 360® -->
-  <section id="metodo" class="metodo-section">
-    <div class="section-container" style="padding-top:0; padding-bottom:0;">
-      <h2 class="section-title">Método Ágora 360®</h2>
-      <p class="section-subtitle">Una metodología orientada a investigaciones objetivas, trazables e imparciales.</p>
-
-      <div class="grid-pilares">
-        <div class="card-pilar morado">
-          <h3>Imparcialidad</h3>
-          <p>Independencia absoluta y ausencia de conflictos de interés.</p>
-        </div>
-
-        <div class="card-pilar menta">
-          <h3>Trazabilidad</h3>
-          <p>Cada actuación queda debidamente registrada y respaldada.</p>
-        </div>
-
-        <div class="card-pilar morado">
-          <h3>Objetividad</h3>
-          <p>Evaluación sistemática, neutra y técnica de la evidencia.</p>
-        </div>
-
-        <div class="card-pilar menta">
-          <h3>Cumplimiento</h3>
-          <p>Alineación rigurosa con la normativa y dictámenes de la DT.</p>
-        </div>
-      </div>
-
-      <div class="cta-center-container">
-        <a href="metodo-360/index.html" class="btn-naranja">Conozca el Método Ágora 360® →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- HERRAMIENTAS GRATUITAS CON ÍCONOS -->
-  <section id="herramientas" style="padding: 60px 20px; background-color: #ffffff; text-align: center;">
-    <div style="max-width: 1100px; margin: 0 auto; font-family: system-ui, sans-serif;">
-      
-      <span style="background: #a2e8dd; color: #382341; font-size: 0.8rem; font-weight: 800; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Recursos Interactivos</span>
-      <h2 style="color: #382341; font-size: 2.2rem; font-weight: 800; margin-top: 12px; margin-bottom: 10px;">HERRAMIENTAS GRATUITAS</h2>
-      <p style="color: #382341; font-size: 1rem; max-width: 600px; margin: 0 auto 40px auto; opacity: 0.9;">Recursos prácticos interactivos diseñados para RR.HH., prevencionistas y responsables de cumplimiento legal.</p>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; text-align: left;">
+    <!-- SERVICIOS CORE -->
+    <section class="services-section" id="servicios">
+        <h2 class="section-title">Servicios Especializados</h2>
+        <p class="section-subtitle">Soluciones técnicas en gestión de riesgo, investigación pericial y equidad laboral.</p>
         
-        <!-- TARJETA 1 -->
-        <a href="calculadora.html" style="text-decoration: none; color: inherit;">
-          <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #a2e8dd; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <div style="width: 58px; height: 58px; background: #a2e8dd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#382341" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path><path d="M16 18h.01"></path></svg>
+        <div class="services-grid">
+            <div class="card card-purple">
+                <div>
+                    <h3>Investigación Externa</h3>
+                    <p>Peritaje independiente e imparcial en denuncias de acoso sexual, laboral y violencia. Custodia de antecedentes y cumplimiento estricto del plazo legal de 30 días.</p>
+                </div>
             </div>
-            <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Calculadora de 30 Días</h3>
-            <p style="color: #382341; font-size: 0.88rem; margin: 0; line-height: 1.4; opacity: 0.85;">Cómputo de plazos fatales para investigaciones internas.</p>
-          </div>
-        </a>
-
-        <!-- TARJETA 2 -->
-        <a href="cronograma.html" style="text-decoration: none; color: inherit;">
-          <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #f26522; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <div style="width: 58px; height: 58px; background: #f26522; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="6" x2="21" y2="6"></line><line x1="10" y1="12" x2="21" y2="12"></line><line x1="10" y1="18" x2="21" y2="18"></line><polyline points="3 6 4 7 6 5"></polyline><polyline points="3 12 4 13 6 11"></polyline><polyline points="3 18 4 19 6 17"></polyline></svg>
+            
+            <div class="card card-mint">
+                <div>
+                    <h3>Asesoría Investigador Interno</h3>
+                    <p>Soporte técnico y orientación metodológica paso a paso para instructores y fiscalizadores de la propia organización.</p>
+                </div>
             </div>
-            <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Generador de Cronograma</h3>
-            <p style="color: #382341; font-size: 0.88rem; margin: 0; line-height: 1.4; opacity: 0.85;">Planificación procedimental paso a paso de denuncias.</p>
-          </div>
-        </a>
 
-        <!-- TARJETA 3 -->
-        <a href="checklist.html" style="text-decoration: none; color: inherit;">
-          <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #382341; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <div style="width: 58px; height: 58px; background: #382341; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a2e8dd" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <div class="card card-purple">
+                <div>
+                    <h3>Diagnóstico Ley 21.828</h3>
+                    <p>Auditoría integral de brechas, equidad salarial y adecuación de canales de denuncia y protocolos preventivos.</p>
+                </div>
             </div>
-            <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Checklist Ley Karin</h3>
-            <p style="color: #382341; font-size: 0.88rem; margin: 0; line-height: 1.4; opacity: 0.85;">Verificación de requisitos normativos mínimos en RIOHS.</p>
-          </div>
-        </a>
 
-        <!-- TARJETA 4 -->
-        <a href="evaluacion-riesgo.html" style="text-decoration: none; color: inherit;">
-          <div style="background: #ffffff; border-radius: 12px; padding: 28px 20px; border: 2px solid rgba(56, 35, 65, 0.1); border-top: 6px solid #a2e8dd; box-shadow: 0 4px 15px rgba(56, 35, 65, 0.06); transition: transform 0.2s; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <div style="width: 58px; height: 58px; background: #a2e8dd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#382341" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <div class="card card-mint">
+                <div>
+                    <h3>Academia Ágora 360°</h3>
+                    <p>Formación ejecutiva y talleres prácticos para comités, jefaturas y equipos sobre prevención y normativa laboral.</p>
+                </div>
             </div>
-            <h3 style="color: #382341; font-size: 1.1rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3;">Matriz de Resguardo</h3>
-            <p style="color: #382341; font-size: 0.88rem; margin: 0; line-height: 1.4; opacity: 0.85;">Identificación y gestión de medidas cautelares inmediatas.</p>
-          </div>
-        </a>
-
-      </div>
-
-      <div style="margin-top: 40px;">
-        <a href="recursos/index.html" style="display: inline-block; background: #f26522; color: #ffffff; padding: 16px 32px; border-radius: 8px; font-size: 1rem; font-weight: 800; text-decoration: none;">
-          VER TODAS LAS HERRAMIENTAS →
-        </a>
-      </div>
-
-    </div>
-  </section>
-<!-- ======================================================== -->
-<!-- SECCIÓN OBSERVATORIO NORMATIVO / BLOG CON IMÁGENES OK    -->
-<!-- ======================================================== -->
-<section id="observatorio" class="section-container">
-  <h2 class="section-title">OBSERVATORIO NORMATIVO</h2>
-  <p class="section-subtitle">Análisis técnico, dictámenes de la DT y criterios de cumplimiento en materia laboral.</p>
-
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
-
-    <!-- TARJETA 1: BRECHA SALARIAL -->
-    <a href="blog/ley-equidad-brecha-salarial.html" style="text-decoration: none; color: inherit;">
-      <div style="background: #ffffff; border-radius: 12px; border: 2px solid rgba(56, 35, 65, 0.12); overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); height: 100%; box-sizing: border-box; display: flex; flex-direction: column; transition: transform 0.2s;">
-        <!-- Imagen profesional corporativa / análisis -->
-        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" alt="Ley 21.828" style="width: 100%; height: 180px; object-fit: cover; border-bottom: 4px solid #382341;">
-        <div style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <span style="background: #382341; color: #ffffff; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 50px; text-transform: uppercase;">Ley 21.828</span>
-            <h3 style="color: #382341; font-size: 1.15rem; font-weight: 800; margin: 15px 0 10px 0; line-height: 1.3;">Diagnóstico de Brecha Salarial</h3>
-            <p style="color: #4a5568; font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px;">Matrices de cargos y salarios previas a la promulgación del reglamento oficial.</p>
-          </div>
-          <span style="color: #f26522; font-weight: 800; font-size: 0.85rem;">LEER ARTÍCULO →</span>
         </div>
-      </div>
-    </a>
+    </section>
 
-    <!-- TARJETA 2: DICTÁMENES DT (Mantiene la foto de reunión) -->
-    <a href="blog/criterios-dt-ley-karin.html" style="text-decoration: none; color: inherit;">
-      <div style="background: #ffffff; border-radius: 12px; border: 2px solid rgba(56, 35, 65, 0.12); overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); height: 100%; box-sizing: border-box; display: flex; flex-direction: column; transition: transform 0.2s;">
-        <img src="portada.jpeg" alt="Criterios DT Ley Karin" style="width: 100%; height: 180px; object-fit: cover; border-bottom: 4px solid #a2e8dd;">
-        <div style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <span style="background: #a2e8dd; color: #382341; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 50px; text-transform: uppercase;">Dictámenes DT</span>
-            <h3 style="color: #382341; font-size: 1.15rem; font-weight: 800; margin: 15px 0 10px 0; line-height: 1.3;">Criterios DT en Ley Karin</h3>
-            <p style="color: #4a5568; font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px;">Interpretación sobre medidas preventivas e investigaciones internas.</p>
-          </div>
-          <span style="color: #f26522; font-weight: 800; font-size: 0.85rem;">LEER ARTÍCULO →</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- TARJETA 3: PERSPECTIVA DE GÉNERO -->
-    <a href="blog/perspectiva-genero-protocolos.html" style="text-decoration: none; color: inherit;">
-      <div style="background: #ffffff; border-radius: 12px; border: 2px solid rgba(56, 35, 65, 0.12); overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); height: 100%; box-sizing: border-box; display: flex; flex-direction: column; transition: transform 0.2s;">
-        <!-- Imagen profesional corporativa / liderazgo femenino -->
-        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Perspectiva de Género" style="width: 100%; height: 180px; object-fit: cover; border-bottom: 4px solid #f26522;">
-        <div style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <span style="background: #ffe2d1; color: #f26522; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 50px; text-transform: uppercase;">Compliance</span>
-            <h3 style="color: #382341; font-size: 1.15rem; font-weight: 800; margin: 15px 0 10px 0; line-height: 1.3;">Perspectiva de Género</h3>
-            <p style="color: #4a5568; font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px;">Pautas operativas para entrevistas sin revictimización.</p>
-          </div>
-          <span style="color: #f26522; font-weight: 800; font-size: 0.85rem;">LEER ARTÍCULO →</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- TARJETA 4: TUTELA (Mantiene la foto de trabajo en equipo) -->
-    <a href="blog/tutela-derechos-fundamentales.html" style="text-decoration: none; color: inherit;">
-      <div style="background: #ffffff; border-radius: 12px; border: 2px solid rgba(56, 35, 65, 0.12); overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); height: 100%; box-sizing: border-box; display: flex; flex-direction: column; transition: transform 0.2s;">
-        <img src="IMAGEN%205.png" alt="Derechos Fundamentales" style="width: 100%; height: 180px; object-fit: cover; border-bottom: 4px solid #382341;">
-        <div style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <span style="background: #382341; color: #ffffff; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 50px; text-transform: uppercase;">Derechos Fundamentales</span>
-            <h3 style="color: #382341; font-size: 1.15rem; font-weight: 800; margin: 15px 0 10px 0; line-height: 1.3;">Tutela y Garantías</h3>
-            <p style="color: #4a5568; font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px;">Garantías constitucionales en procedimientos de la empresa.</p>
-          </div>
-          <span style="color: #f26522; font-weight: 800; font-size: 0.85rem;">LEER ARTÍCULO →</span>
-        </div>
-      </div>
-    </a>
-
-  </div>
-
-  <div style="text-align: center; margin-top: 40px;">
-    <a href="blog/index.html" class="btn-naranja">VER TODO EL OBSERVATORIO →</a>
-  </div>
-</section>
-  <!-- BIBLIOTECA ÁGORA -->
-  <section id="biblioteca" class="section-container" style="padding-top: 0;">
-    <h2 class="section-title">Biblioteca Ágora</h2>
-    <p class="section-subtitle">Documentación, guías y modelos para fortalecer la gestión preventiva en su empresa.</p>
-
-    <div class="grid-biblioteca">
-      <div class="box-biblioteca gratis">
-        <div>
-          <span class="badge-biblio gratis">Recursos Abiertos</span>
-          <h3>Biblioteca Gratuita</h3>
-          <ul class="list-biblio">
-            <li><span>✓</span> Guía Práctica Ley Karin</li>
-            <li><span>✓</span> Infografía Resumen Normativo</li>
-            <li><span>✓</span> Presentación PPT Introductoria</li>
-            <li><span>✓</span> Checklist de Admisibilidad</li>
-            <li><span>✓</span> Dictámenes DT Resumidos</li>
-            <li><span>✓</span> Primer Capítulo: Manual del Investigador/a</li>
-          </ul>
-        </div>
-        <a href="recursos/index.html" class="btn-secundario" style="text-align:center;">Descargar Gratis →</a>
-      </div>
-
-      <div class="box-biblioteca profesional">
-        <div>
-          <span class="badge-biblio profesional">Acceso Profesional</span>
-          <h3>Biblioteca Especial</h3>
-          <ul class="list-biblio">
-            <li><span>✓</span> Manual Completo del Investigador/a (Ley Karin)</li>
-            <li><span>✓</span> Plantillas Editables de Informes de Investigación</li>
-            <li><span>✓</span> Matriz de Evaluación de Riesgos Psicosociales</li>
-            <li><span>✓</span> Protocolos de Medidas de Resguardo Inmediatas</li>
-            <li><span>✓</span> Modelos de Notificación y Citación a Testigos</li>
-            <li><span>✓</span> Checklist Avanzado de Compliance Laboral</li>
-          </ul>
-        </div>
-       <a href="https://wa.me/56999840502?text=Hola,%20me%20interesa%20solicitar%20Acceso%20PRO%20a%20la%20Biblioteca%20Especial" target="_blank" style="display: block; background-color: #382341; color: white; padding: 15px; text-align: center; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px;">SOLICITAR ACCESO PRO →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- BANNER LEAD MAGNET Y FORMULARIO -->
-  <section id="contacto" style="background-color: var(--morado, #382341); padding: 70px 20px; margin-top: 50px;">
-    <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: space-between; font-family: system-ui, sans-serif;">
-      
-      <div style="flex: 1; min-width: 300px;">
-        <span style="background: var(--menta, #a2e8dd); color: var(--morado, #382341); font-size: 0.8rem; font-weight: 800; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Nuevo Recurso Gratuito</span>
-        <h2 style="color: #ffffff; font-size: 2.2rem; font-weight: 800; margin-top: 20px; margin-bottom: 15px; line-height: 1.2;">Guía Práctica: Intake y Entrevistas con Perspectiva de Género</h2>
-        <p style="color: #f8f9fa; font-size: 1.05rem; line-height: 1.6; margin-bottom: 20px;">Evita la revictimización y los vicios procedimentales. Descarga nuestra matriz operativa para cumplir con las exigencias de la DT y la SUSESO (Ley N° 21.643).</p>
-        <ul style="color: var(--menta, #a2e8dd); font-size: 0.95rem; line-height: 1.8; padding-left: 20px; font-weight: 600;">
-          <li>Regulación de plazos fatales de admisibilidad</li>
-          <li>Preguntas clave para evaluar asimetría de poder</li>
-          <li>Valoración de la prueba indiciaria</li>
-        </ul>
-      </div>
-
-      <div style="flex: 1; min-width: 320px; background: #ffffff; padding: 35px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
-        <h3 style="color: var(--morado, #382341); font-size: 1.25rem; font-weight: 800; margin-top: 0; margin-bottom: 20px; text-align: center;">Descargar Manual en PDF</h3>
+    <!-- METODO AGORA 360 -->
+    <section class="metodo-section" id="metodo">
+        <h2 class="section-title">Método Ágora 360°</h2>
+        <p class="section-subtitle">Arquitectura metodológica unificada para garantizar objetividad y rigor normativo.</p>
         
-        <form action="https://formsubmit.co/48a26614772fccf3642b27db7132c6ff" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-          <input type="hidden" name="_next" value="https://docs.google.com/document/d/1yH-5lvQA2S-bd0-AsSNiKoCnFM-kWRrovOfyRw36GCM/edit?usp=drive_web">
-          <input type="hidden" name="_captcha" value="false">
+        <div class="metodo-grid">
+            <div class="metodo-item">
+                <h4>Imparcialidad</h4>
+                <p>Peritaje independiente, libre de presiones o sesgos corporativos.</p>
+            </div>
+            <div class="metodo-item">
+                <h4>Trazabilidad</h4>
+                <p>Cadena de custodia en el resguardo de testimonios y actas.</p>
+            </div>
+            <div class="metodo-item">
+                <h4>Objetividad</h4>
+                <p>Ponderación neutral bajo criterios normativos de la DT.</p>
+            </div>
+            <div class="metodo-item">
+                <h4>Cumplimiento</h4>
+                <p>Control estricto de plazos legales y formalidades normativas.</p>
+            </div>
+        </div>
+    </section>
 
-          <input type="text" name="nombre" placeholder="Nombre completo" required style="padding: 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 0.95rem; color: #2d3748; outline: none; font-family: inherit;">
-          <input type="email" name="email" placeholder="Correo corporativo" required style="padding: 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 0.95rem; color: #2d3748; outline: none; font-family: inherit;">
-          <input type="text" name="empresa" placeholder="Empresa / Cargo" required style="padding: 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 0.95rem; color: #2d3748; outline: none; font-family: inherit;">
-          <button type="submit" style="background: var(--naranja, #f26522); color: #ffffff; border: none; padding: 16px; border-radius: 8px; font-size: 1.05rem; font-weight: 800; cursor: pointer; transition: transform 0.2s; margin-top: 10px;">
-            QUIERO LA GUÍA TÉCNICA →
-          </button>
-        </form>
-        <p style="color: #718096; font-size: 0.75rem; text-align: center; margin-top: 15px; margin-bottom: 0;">* Recibirás el documento directamente en tu bandeja de entrada.</p>
-      </div>
+    <!-- BIBLIOTECA & FREEMIUM -->
+    <section class="freemium-section" id="biblioteca">
+        <h2 class="section-title">Biblioteca Ágora</h2>
+        <p class="section-subtitle">Ecosistema de recursos normativos de acceso libre y profesional.</p>
 
-    </div>
-  </section>
+        <div class="freemium-container">
+            <div class="box-free">
+                <h3>Recursos Abiertos (Gratis)</h3>
+                <ul class="feature-list">
+                    <li>✓ Calculadora interactiva de 30 días legales</li>
+                    <li>✓ Checklist preventivo Dirección del Trabajo</li>
+                    <li>✓ Cronograma de implementación Ley Karin</li>
+                    <li>✓ Compendio Leyes 21.643 y 21.828</li>
+                </ul>
+                <a href="#descarga" class="btn-cta" style="background-color: var(--purple-main);">DESCARGAR RECURSOS</a>
+            </div>
 
-  <!-- PIE DE PÁGINA -->
-  <footer style="background-color: #211329; color: white; text-align: center; padding: 50px 20px; margin-top: 60px;">
-    <h3 style="color: white; margin-bottom: 10px;">ÁGORA LABORAL 360°</h3>
-    <p style="color: #a2e8dd; margin-bottom: 20px;">Consultoría especializada en Ley Karin y Compliance Laboral</p>
-    <p style="font-size: 0.9rem; opacity: 0.8;">&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.</p>
-  </footer>
+            <div class="box-pro">
+                <h3>Kit Profesional (Acceso Pago)</h3>
+                <ul class="feature-list">
+                    <li>✓ Manual completo del Investigador/a</li>
+                    <li>✓ Plantillas editables de actas y entrevistas</li>
+                    <li>✓ Matrices de riesgo y modelo de informe pericial</li>
+                    <li>✓ Jurisprudencia comentada y criterios de la DT</li>
+                </ul>
+                <a href="#contacto" class="btn-cta">SOLICITAR ACCESO KIT</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- OBSERVATORIO -->
+    <section class="observatorio-section" id="observatorio">
+        <h2 class="section-title">📰 Observatorio Regulatorio</h2>
+        
+        <div class="post-card">
+            <div>
+                <span class="post-tag">Dictámenes DT</span>
+                <h4 style="margin-top: 10px; color: var(--purple-main);">Alcance de los Criterios de la DT en la Investigación bajo Ley Karin</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 5px;">Análisis de las exigencias sobre la rigidez de los 30 días y la cadena de custodia de actas confidenciales.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="color: #FFF;">Ágora Laboral</div>
+                <p style="font-size: 0.85rem; color: #CCC; margin-top: 10px;">Consultora técnica especializada en prevención de riesgos laborales, investigación de acoso y cumplimiento normativo.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Servicios</h5>
+                <ul>
+                    <li><a href="#">Investigación Externa</a></li>
+                    <li><a href="#">Asesoría Interna</a></li>
+                    <li><a href="#">Ley 21.828</a></li>
+                    <li><a href="#">Academia 360°</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Recursos</h5>
+                <ul>
+                    <li><a href="#">Calculadora Plazos</a></li>
+                    <li><a href="#">Checklist DT</a></li>
+                    <li><a href="#">Biblioteca Legal</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contacto</h5>
+                <p style="font-size: 0.85rem; color: #CCC;">contacto@agoralaboral.cl</p>
+                <a href="#" class="btn-cta" style="margin-top: 15px; font-size: 0.8rem; padding: 8px 14px;">WhatsApp Directo</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Ágora Laboral. Todos los derechos reservados.
+        </div>
+    </footer>
 
 </body>
 </html>
