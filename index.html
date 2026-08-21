@@ -7,16 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --green-accent: #6DB88A;        /* Verde menta limpio de la referencia */
+            --green-accent: #6DB88A;        /* Verde menta principal */
+            --green-mint-bar: #A8E6CF;      /* Verde menta claro para la barra del menú */
             --green-soft: rgba(109, 184, 138, 0.15);
             --hero-overlay-start: rgba(105, 170, 155, 0.75); 
             --hero-overlay-end: rgba(135, 210, 185, 0.45);   
             --purple-main: #382341;         /* Morado corporativo */
             --purple-soft: rgba(56, 35, 65, 0.05);
-            --orange-cta: #FF6B00;          /* Naranja exclusivo para botones */
+            --orange-cta: #FF6B00;          /* Naranja para botones */
             --orange-hover: #E05E00;
             --text-dark: #222222;
-            --text-gray: #555555;
+            --text-gray: #666666;
             --bg-light: #F8FAFC;
             --border-light: #E2E8F0;
         }
@@ -82,42 +83,48 @@
             letter-spacing: 0.5px;
         }
 
-        /* NAVEGACIÓN Y BARRITA VERDE DE ACTIVACIÓN */
+        /* NAVEGACIÓN Y BARRITA VERDE EXACTA DE LA REFERENCIA */
         nav ul {
             display: flex;
             list-style: none;
-            gap: 32px;
+            gap: 36px;
             align-items: center;
         }
 
         nav a {
             text-decoration: none;
             color: var(--text-gray);
-            font-weight: 700;
-            font-size: 0.85rem;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600; /* Semi-bold identico a la imagen de referencia */
+            font-size: 0.88rem;
             letter-spacing: 0.8px;
             text-transform: uppercase;
-            padding-bottom: 8px;
+            padding-bottom: 10px;
             position: relative;
             transition: color 0.2s ease;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover {
             color: var(--green-accent);
+        }
+
+        nav a.active {
+            color: var(--green-accent);
+            font-weight: 700;
         }
 
         nav a.active::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -2px;
             left: 0;
             width: 100%;
-            height: 3.5px;
-            background-color: var(--green-accent);
-            border-radius: 2px;
+            height: 4px;
+            background-color: var(--green-mint-bar); /* Barrita verde menta pastel suave */
+            border-radius: 1px;
         }
 
-        /* HERO BANNER ESTILIZADO */
+        /* HERO BANNER LIMPIO */
         .hero-banner {
             position: relative;
             width: 100%;
@@ -130,12 +137,12 @@
         }
 
         .hero-content {
-            max-width: 650px;
+            max-width: 750px;
         }
 
         .hero-content h1 {
             color: #FFFFFF !important;
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             font-weight: 800;
             line-height: 1.05;
             letter-spacing: -1px;
@@ -152,7 +159,7 @@
             text-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
         }
 
-        /* BOTONES CTA NARANJA */
+        /* BOTONES CTA NARANJA UNIFICADOS */
         .btn-cta {
             background-color: var(--orange-cta) !important;
             color: #FFFFFF !important;
@@ -162,7 +169,7 @@
             font-size: 0.88rem;
             text-decoration: none !important;
             display: inline-block;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(255, 107, 0, 0.25);
             border: none;
             transition: background-color 0.2s ease, transform 0.2s ease;
             cursor: pointer;
@@ -328,7 +335,7 @@
             color: #444444;
         }
 
-        /* FOOTER MORADO CORPORATIVO */
+        /* FOOTER */
         footer {
             background-color: var(--purple-main);
             color: #FFFFFF;
@@ -411,7 +418,7 @@
         </nav>
     </header>
 
-    <!-- HERO BANNER CON TÍTULO ESTILIZADO -->
+    <!-- HERO BANNER -->
     <section class="hero-banner">
         <div class="hero-content">
             <h1>Asesoría Ley Karin<br>y Ley 21.828</h1>
