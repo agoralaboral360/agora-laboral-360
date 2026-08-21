@@ -8,10 +8,13 @@
     <style>
         :root {
             /* PALETA OFICIAL ÁGORA LABORAL 360° */
-            --purple-main: #382341;         /* Morado corporativo (Autoridad/Estructura) */
-            --mint-pastel: #A2E8DD;         /* Verde menta pastel (Acentos/Líneas) */
-            --mint-soft: rgba(162, 232, 221, 0.25); /* Menta transparente para fondos de iconos */
-            --white: #FFFFFF;               /* Blanco (Fondos y Textos hero) */
+            --purple-main: #382341;         /* Morado corporativo (Logos, Títulos, Footer) */
+            --mint-pastel: #A2E8DD;         /* Verde menta pastel (Brackets, Barras) */
+            --mint-soft: rgba(162, 232, 221, 0.25);
+            /* DEGRADADO VERDE MENTA PARA LA PORTADA HERO */
+            --green-gradient-start: rgba(110, 204, 169, 0.78); 
+            --green-gradient-end: rgba(162, 232, 221, 0.48);   
+            --white: #FFFFFF;               /* Blanco (Fondos) */
             --orange-cta: #FF6B00;          /* Naranja (EXCLUSIVO para botones) */
             --orange-hover: #E05E00;        /* Naranja hover */
             
@@ -103,7 +106,7 @@
         }
 
         nav a:hover {
-            color: var(--purple-main); /* Hover en morado */
+            color: var(--purple-main);
         }
 
         nav a.active {
@@ -118,17 +121,16 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background-color: var(--mint-pastel); /* Barrita verde menta pastel */
+            background-color: var(--mint-pastel);
             border-radius: 1px;
         }
 
-        /* HERO BANNER CON OVERLAY MORADO PARA RESALTAR EL BLANCO */
+        /* HERO BANNER CON DEGRADADO VERDE MENTA SOBRE LA FOTO */
         .hero-banner {
             position: relative;
             width: 100%;
             height: 480px;
-            /* Degradado morado sobre la foto para legibilidad perfecta del texto blanco */
-            background: linear-gradient(110deg, rgba(56, 35, 65, 0.85) 0%, rgba(56, 35, 65, 0.55) 100%), 
+            background: linear-gradient(110deg, var(--green-gradient-start) 0%, var(--green-gradient-end) 100%), 
                         url('image_f91a2f.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
@@ -146,7 +148,7 @@
             line-height: 1.05;
             letter-spacing: -1px;
             margin-bottom: 12px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
         }
 
         .hero-content p {
@@ -155,7 +157,7 @@
             font-weight: 400;
             line-height: 1.4;
             margin-bottom: 24px;
-            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
         }
 
         /* BOTONES CTA - EXCLUSIVO NARANJA */
@@ -168,7 +170,7 @@
             font-size: 0.88rem;
             text-decoration: none !important;
             display: inline-block;
-            box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(255, 107, 0, 0.25);
             border: none;
             transition: background-color 0.2s ease, transform 0.2s ease;
             cursor: pointer;
@@ -179,7 +181,7 @@
             transform: translateY(-2px);
         }
 
-        /* TARJETAS LIMPIAS */
+        /* TARJETAS LIMPIAS DEBAJO DE LA PORTADA */
         .centers-container {
             max-width: 1280px;
             margin: 0 auto;
@@ -199,7 +201,7 @@
             padding: 24px 16px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
             border: 1px solid var(--border-light);
-            border-top: 4px solid var(--mint-pastel); /* Borde superior menta */
+            border-top: 4px solid var(--mint-pastel);
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -210,7 +212,7 @@
         .center-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 10px 25px rgba(56, 35, 65, 0.08);
-            border-top-color: var(--purple-main); /* Cambia a morado al pasar el mouse */
+            border-top-color: var(--purple-main);
         }
 
         .icon-box {
@@ -220,8 +222,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--purple-main); /* Icono en morado */
-            background-color: var(--mint-soft); /* Fondo menta pastel */
+            color: var(--purple-main);
+            background-color: var(--mint-soft);
             border-radius: 10px;
         }
 
@@ -417,7 +419,7 @@
         </nav>
     </header>
 
-    <!-- HERO BANNER -->
+    <!-- HERO BANNER CON DEGRADADO VERDE MENTA -->
     <section class="hero-banner">
         <div class="hero-content">
             <h1>Asesoría Ley Karin<br>y Ley 21.828</h1>
