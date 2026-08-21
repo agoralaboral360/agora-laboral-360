@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ágora Laboral | Ley Karin</title>
+    <title>Ágora Laboral 360° | Observatorio Ley Karin</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --brand-green: #6DB88A;        /* Verde menta de acentos y navegación */
-            --brand-green-dark: #589E74;   /* Verde para estados hover */
+            --brand-green-light: #7EE0C7;  /* Verde menta más claro y brillante */
+            --brand-green-active: #50C8A8; /* Verde para estados activos y bordes */
             --header-bg: #FFFFFF;
-            --text-nav: #555555;
-            --hero-teal-overlay: rgba(100, 155, 148, 0.82); /* Filtro verdoso/turquesa del banner */
+            --text-nav: #444444;
+            /* Filtro verdoso más claro con buena legibilidad para texto blanco */
+            --hero-teal-overlay: rgba(75, 160, 145, 0.72); 
         }
 
         * {
@@ -40,7 +41,7 @@
             z-index: 1000;
         }
 
-        /* LOGO ESTILO LIZAMA / ÁGORA */
+        /* LOGO ÁGORA LABORAL 360° */
         .logo-box {
             display: flex;
             align-items: center;
@@ -50,8 +51,8 @@
         .logo-symbol {
             width: 14px;
             height: 48px;
-            border-left: 5px solid var(--brand-green);
-            border-bottom: 5px solid var(--brand-green);
+            border-left: 5px solid var(--brand-green-light);
+            border-bottom: 5px solid var(--brand-green-light);
         }
 
         .logo-text {
@@ -63,7 +64,7 @@
             font-size: 1.4rem;
             font-weight: 800;
             color: #222222;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             line-height: 1;
         }
 
@@ -96,11 +97,11 @@
         }
 
         nav a:hover {
-            color: var(--brand-green);
+            color: var(--brand-green-active);
         }
 
         nav a.active {
-            color: var(--brand-green);
+            color: var(--brand-green-active);
         }
 
         nav a.active::after {
@@ -109,18 +110,18 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 3px;
-            background-color: var(--brand-green);
+            height: 3.5px;
+            background-color: var(--brand-green-light);
             border-radius: 2px;
         }
 
-        /* HERO BANNER ESTILO LEY KARIN */
+        /* HERO BANNER CON NUEVA FOTO LUMINOSA Y VERDE MÁS CLARO */
         .hero-banner {
             position: relative;
             width: 100%;
             height: 480px;
             background: linear-gradient(var(--hero-teal-overlay), var(--hero-teal-overlay)), 
-                        url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
             display: flex;
             align-items: center;
             padding: 0 8%;
@@ -137,14 +138,15 @@
             line-height: 1.05;
             letter-spacing: -1px;
             margin-bottom: 15px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-shadow: 0 2px 12px rgba(0,0,0,0.15);
         }
 
         .hero-content p {
             font-size: 1.35rem;
             font-weight: 400;
-            opacity: 0.95;
+            opacity: 0.98;
             letter-spacing: 0.2px;
+            text-shadow: 0 1px 6px rgba(0,0,0,0.1);
         }
 
         @media (max-width: 900px) {
@@ -166,7 +168,7 @@
         <div class="logo-box">
             <div class="logo-symbol"></div>
             <div class="logo-text">
-                <span class="title">ÁGORA LABORAL</span>
+                <span class="title">ÁGORA LABORAL 360°</span>
                 <span class="subtitle">CONSULTORÍA &amp; RIESGO NORMATIVO</span>
             </div>
         </div>
@@ -181,11 +183,11 @@
         </nav>
     </header>
 
-    <!-- HERO / PORTADA -->
+    <!-- HERO PORTADA -->
     <section class="hero-banner">
         <div class="hero-content">
-            <h1>Ágora Laboral<br>Ley Karin</h1>
-            <p>Una iniciativa de Ágora Laboral</p>
+            <h1>Observatorio<br>Ley Karin</h1>
+            <p>Una iniciativa de Ágora Laboral 360°</p>
         </div>
     </section>
 
