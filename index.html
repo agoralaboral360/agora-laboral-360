@@ -89,7 +89,7 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 36px;
+            gap: 32px;
             align-items: center;
         }
 
@@ -97,7 +97,7 @@
             text-decoration: none;
             color: var(--text-gray);
             font-weight: 600;
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             letter-spacing: 0.8px;
             text-transform: uppercase;
             padding-bottom: 10px;
@@ -291,6 +291,113 @@
             margin-bottom: 40px;
         }
 
+        /* SOBRE LA FUNDADORA */
+        .founder-section {
+            background-color: var(--bg-light);
+            padding: 70px 4%;
+        }
+
+        .founder-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .founder-photo {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            border-radius: 14px;
+            background: linear-gradient(160deg, var(--purple-main) 0%, #4a2d57 100%);
+            border: 4px solid var(--white);
+            box-shadow: 0 12px 30px rgba(56, 35, 65, 0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .founder-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .founder-photo .photo-placeholder {
+            color: rgba(255,255,255,0.55);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        .founder-eyebrow {
+            display: inline-block;
+            color: var(--purple-main);
+            background-color: var(--mint-soft);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+        }
+
+        .founder-name {
+            color: var(--purple-main);
+            font-size: 1.7rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .founder-role {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .founder-text p {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .founder-text strong {
+            color: var(--purple-main);
+        }
+
+        .credentials-label {
+            color: var(--purple-main);
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin: 24px 0 12px 0;
+        }
+
+        .credential-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .credential-pills span {
+            background-color: var(--white);
+            border: 1px solid var(--border-light);
+            border-left: 3px solid var(--mint-pastel);
+            color: var(--text-dark);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 6px;
+        }
+
         /* MÉTODO ÁGORA 360° */
         .metodo-grid {
             display: grid;
@@ -407,6 +514,7 @@
         @media (max-width: 1024px) {
             .centers-grid { grid-template-columns: repeat(3, 1fr); }
             .metodo-grid, .freemium-container { grid-template-columns: 1fr; }
+            .founder-grid { grid-template-columns: 220px 1fr; gap: 30px; }
         }
 
         @media (max-width: 768px) {
@@ -415,6 +523,8 @@
             .centers-grid, .footer-grid { grid-template-columns: 1fr; }
             .hero-content h1 { font-size: 1.8rem; }
             nav { display: none; }
+            .founder-grid { grid-template-columns: 1fr; }
+            .founder-photo { max-width: 260px; margin: 0 auto; }
         }
     </style>
 </head>
@@ -433,8 +543,9 @@
             <ul>
                 <li><a href="#" class="active">INICIO</a></li>
                 <li><a href="#servicios">SERVICIOS</a></li>
-                <li><a href="#herramientas">RECURSOS ▾</a></li>
+                <li><a href="#fundadora">FUNDADORA</a></li>
                 <li><a href="#metodo">MÉTODO 360°</a></li>
+                <li><a href="#herramientas">RECURSOS ▾</a></li>
                 <li><a href="#contacto">CONTACTO</a></li>
             </ul>
         </nav>
@@ -468,7 +579,7 @@
                 <div class="icon-box">
                     <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
                 </div>
-                <h3>Asesoría<br>Investigador</h3>
+                <h3>Asesoría<br>Interna</h3>
                 <p>Soporte técnico y orientación metodológica paso a paso para instructores y fiscales de la empresa.</p>
             </div>
 
@@ -498,6 +609,33 @@
 
         </div>
     </div>
+
+    <!-- SOBRE LA FUNDADORA -->
+    <section class="founder-section" id="fundadora">
+        <div class="founder-grid">
+            <div class="founder-photo">
+                <!-- Reemplazar por <img src="foto-fundadora.jpg" alt="Nombre Apellido, fundadora de Ágora Laboral 360°"> -->
+                <div class="photo-placeholder">Foto profesional<br>de la fundadora</div>
+            </div>
+            <div class="founder-info">
+                <span class="founder-eyebrow">Quién está detrás del Método 360°</span>
+                <h2 class="founder-name">[Nombre Apellido]</h2>
+                <p class="founder-role">Trabajadora Social · Perito Social · Fundadora de Ágora Laboral 360°</p>
+                <div class="founder-text">
+                    <p>Con formación en <strong>trabajo social y peritaje social</strong>, [Nombre] combina rigor técnico y mirada humana en la investigación de denuncias de acoso laboral, sexual y violencia en el trabajo.</p>
+                    <p>Es <strong>Magíster en Derecho de Familia</strong>, lo que le permite integrar el análisis jurídico con la evaluación social y sistémica exigida por la Ley 21.643 (Ley Karin) y la Ley 21.828.</p>
+                    <p>Cuenta con formación especializada en <strong>investigación Ley Karin, perspectiva de género y derechos humanos</strong>, y ha desarrollado su trayectoria profesional en fundaciones y en el ámbito municipal, interviniendo directamente en casos sociales y familiares complejos.</p>
+                </div>
+                <p class="credentials-label">Diplomados y formación complementaria</p>
+                <div class="credential-pills">
+                    <span>Informes Periciales</span>
+                    <span>Marco Jurídico para la Intervención Familiar</span>
+                    <span>Intervención Familiar · Perspectiva Sistémica</span>
+                    <span>Prevención de Drogas</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- MÉTODO ÁGORA 360° -->
     <section class="section-wrapper" id="metodo">
@@ -566,18 +704,18 @@
             <div class="footer-col">
                 <h5>Servicios</h5>
                 <ul>
-                    <li><a href="#">Investigación Externa</a></li>
-                    <li><a href="#">Asesoría Interna</a></li>
-                    <li><a href="#">Ley 21.828 (Equidad)</a></li>
-                    <li><a href="#">Academia 360°</a></li>
+                    <li><a href="#servicios">Investigación Externa</a></li>
+                    <li><a href="#servicios">Asesoría Interna</a></li>
+                    <li><a href="#servicios">Ley 21.828 (Equidad)</a></li>
+                    <li><a href="#servicios">Academia 360°</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h5>Herramientas</h5>
                 <ul>
-                    <li><a href="#">Autodiagnóstico Gratis</a></li>
-                    <li><a href="#">Calculadora de Plazos</a></li>
-                    <li><a href="#">Checklist DT</a></li>
+                    <li><a href="#herramientas">Autodiagnóstico Gratis</a></li>
+                    <li><a href="#herramientas">Calculadora de Plazos</a></li>
+                    <li><a href="#herramientas">Checklist DT</a></li>
                 </ul>
             </div>
             <div class="footer-col">
