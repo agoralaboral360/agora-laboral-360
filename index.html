@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ágora Laboral 360° | Consultoría especializada en Ley karin y Ley de Inclusión Laboral </title>
+    <title>Ágora Laboral 360° | Consultoría &amp; Riesgo Normativo</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --green-accent: #6DB88A;        /* Verde menta principal */
+            --green-accent: #6DB88A;        /* Verde menta limpio de la referencia */
             --green-soft: rgba(109, 184, 138, 0.15);
             --hero-overlay-start: rgba(105, 170, 155, 0.75); 
             --hero-overlay-end: rgba(135, 210, 185, 0.45);   
-            --purple-main: #382341;         /* Morado corporativo restaurado */
+            --purple-main: #382341;         /* Morado corporativo */
             --purple-soft: rgba(56, 35, 65, 0.05);
-            --orange-cta: #FF6B00;          /* Naranja para botones */
+            --orange-cta: #FF6B00;          /* Naranja exclusivo para botones */
             --orange-hover: #E05E00;
             --text-dark: #222222;
             --text-gray: #555555;
@@ -39,8 +39,8 @@
             position: sticky;
             top: 0;
             background-color: #FFFFFF;
-            height: 90px;
-            padding: 0 6%;
+            height: 95px;
+            padding: 0 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -56,7 +56,7 @@
 
         .logo-bracket {
             width: 14px;
-            height: 44px;
+            height: 48px;
             border-left: 5px solid var(--green-accent);
             border-bottom: 5px solid var(--green-accent);
         }
@@ -67,26 +67,26 @@
         }
 
         .logo-text .main-title {
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             font-weight: 800;
-            color: var(--purple-main); /* Morado en el logo */
+            color: var(--purple-main);
             letter-spacing: 0.5px;
             line-height: 1;
         }
 
         .logo-text .sub-title {
-            font-size: 0.72rem;
+            font-size: 0.75rem;
             font-weight: 600;
             color: #888888;
             margin-top: 4px;
             letter-spacing: 0.5px;
         }
 
-        /* NAVEGACIÓN */
+        /* NAVEGACIÓN Y BARRITA VERDE DE ACTIVACIÓN */
         nav ul {
             display: flex;
             list-style: none;
-            gap: 28px;
+            gap: 32px;
             align-items: center;
         }
 
@@ -112,12 +112,12 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 3px;
+            height: 3.5px;
             background-color: var(--green-accent);
             border-radius: 2px;
         }
 
-        /* HERO BANNER LIMPIO */
+        /* HERO BANNER ESTILIZADO */
         .hero-banner {
             position: relative;
             width: 100%;
@@ -130,49 +130,50 @@
         }
 
         .hero-content {
-            max-width: 750px;
+            max-width: 650px;
         }
 
         .hero-content h1 {
             color: #FFFFFF !important;
-            font-size: 3.2rem;
+            font-size: 3.8rem;
             font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -0.5px;
-            margin-bottom: 16px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            line-height: 1.05;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
         }
 
         .hero-content p {
             color: #FFFFFF !important;
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             font-weight: 400;
             line-height: 1.4;
             margin-bottom: 24px;
-            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
         }
 
-        /* BOTONES CTA NARANJA UNIFICADOS */
+        /* BOTONES CTA NARANJA */
         .btn-cta {
             background-color: var(--orange-cta) !important;
             color: #FFFFFF !important;
-            padding: 12px 24px;
+            padding: 13px 26px;
             border-radius: 6px;
             font-weight: 800;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             text-decoration: none !important;
             display: inline-block;
-            box-shadow: 0 4px 12px rgba(255, 107, 0, 0.25);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             border: none;
-            transition: background-color 0.2s ease;
+            transition: background-color 0.2s ease, transform 0.2s ease;
             cursor: pointer;
         }
 
         .btn-cta:hover {
             background-color: var(--orange-hover) !important;
+            transform: translateY(-2px);
         }
 
-        /* TARJETAS LIMPIAS (SIN TRASLAPE) */
+        /* TARJETAS LIMPIAS */
         .centers-container {
             max-width: 1280px;
             margin: 0 auto;
@@ -203,7 +204,7 @@
         .center-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 10px 25px rgba(56, 35, 65, 0.08);
-            border-top-color: var(--purple-main); /* Efecto morado al pasar el mouse */
+            border-top-color: var(--purple-main);
         }
 
         .icon-box {
@@ -213,8 +214,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--purple-main); /* Iconos en morado */
-            background-color: var(--green-soft); /* Fondo menta suave */
+            color: var(--purple-main);
+            background-color: var(--green-soft);
             border-radius: 10px;
         }
 
@@ -225,7 +226,7 @@
         }
 
         .center-card h3 {
-            color: var(--purple-main); /* Títulos en morado */
+            color: var(--purple-main);
             font-size: 0.88rem;
             font-weight: 800;
             text-transform: uppercase;
@@ -249,7 +250,7 @@
 
         .section-title {
             text-align: center;
-            color: var(--purple-main); /* Títulos de sección en morado */
+            color: var(--purple-main);
             font-size: 2rem;
             font-weight: 800;
             margin-bottom: 8px;
@@ -383,7 +384,7 @@
         @media (max-width: 768px) {
             header { padding: 0 4%; }
             .centers-grid, .footer-grid { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content h1 { font-size: 2.8rem; }
             nav { display: none; }
         }
     </style>
@@ -410,11 +411,11 @@
         </nav>
     </header>
 
-    <!-- HERO BANNER LIMPIO -->
+    <!-- HERO BANNER CON TÍTULO ESTILIZADO -->
     <section class="hero-banner">
         <div class="hero-content">
-            <h1>¿Su organización cumple formalmente con la Ley Karin y la Ley de Equidad (21.828)?</h1>
-            <p>Evaluamos, investigamos y diagnosticamos el nivel de cumplimiento normativo de su empresa bajo el estándar técnico del Método Ágora 360°.</p>
+            <h1>Asesoría Ley Karin<br>y Ley 21.828</h1>
+            <p>Una iniciativa de Ágora Laboral 360°</p>
             <a href="#autodiagnostico" class="btn-cta">🟠 REALIZAR AUTODIAGNÓSTICO GRATIS</a>
         </div>
     </section>
@@ -466,7 +467,7 @@
         </div>
     </div>
 
-    <!-- MÉTODO ÁGORA 360 -->
+    <!-- MÉTODO ÁGORA 360° -->
     <section class="section-wrapper" id="metodo">
         <h2 class="section-title">Método Ágora 360°</h2>
         <p class="section-subtitle">Arquitectura metodológica unificada para garantizar objetividad y rigor normativo.</p>
