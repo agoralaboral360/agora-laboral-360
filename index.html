@@ -8,15 +8,15 @@
     <style>
         :root {
             /* PALETA OFICIAL ÁGORA LABORAL 360° */
-            --purple-main: #382341;         /* Morado corporativo (Logos, Títulos, Footer) */
-            --mint-pastel: #A2E8DD;         /* Verde menta pastel (Brackets, Barras) */
+            --purple-main: #382341;         /* Morado corporativo */
+            --purple-hover: #27182E;
+            --mint-pastel: #A2E8DD;         /* Verde menta pastel */
             --mint-soft: rgba(162, 232, 221, 0.25);
-            /* DEGRADADO VERDE MENTA PARA LA PORTADA HERO */
-            --green-gradient-start: rgba(110, 204, 169, 0.78); 
-            --green-gradient-end: rgba(162, 232, 221, 0.48);   
-            --white: #FFFFFF;               /* Blanco (Fondos) */
-            --orange-cta: #FF6B00;          /* Naranja (EXCLUSIVO para botones) */
-            --orange-hover: #E05E00;        /* Naranja hover */
+            --green-gradient-start: rgba(110, 204, 169, 0.80); 
+            --green-gradient-end: rgba(162, 232, 221, 0.50);   
+            --white: #FFFFFF;
+            --orange-cta: #FF6B00;          /* Naranja para el botón principal */
+            --orange-hover: #E05E00;
             
             --text-dark: #222222;
             --text-gray: #555555;
@@ -125,11 +125,11 @@
             border-radius: 1px;
         }
 
-        /* HERO BANNER CON DEGRADADO VERDE MENTA SOBRE LA FOTO */
+        /* HERO BANNER - PORTADA ARMÓNICA CON DEGRADADO MENTA SOBRE LA FOTO */
         .hero-banner {
             position: relative;
             width: 100%;
-            height: 480px;
+            height: 460px;
             background: linear-gradient(110deg, var(--green-gradient-start) 0%, var(--green-gradient-end) 100%), 
                         url('image_f91a2f.jpg') center/cover no-repeat;
             display: flex;
@@ -138,50 +138,70 @@
         }
 
         .hero-content {
-            max-width: 750px;
+            max-width: 720px;
         }
 
         .hero-content h1 {
             color: var(--white) !important;
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.05;
-            letter-spacing: -1px;
-            margin-bottom: 12px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            font-size: 2.3rem;
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: -0.3px;
+            margin-bottom: 22px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .hero-content p {
-            color: var(--white) !important;
-            font-size: 1.35rem;
-            font-weight: 400;
-            line-height: 1.4;
-            margin-bottom: 24px;
-            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+        /* CONTENEDOR DE BOTONES CTA */
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
         }
 
-        /* BOTONES CTA - EXCLUSIVO NARANJA */
         .btn-cta {
-            background-color: var(--orange-cta) !important;
             color: var(--white) !important;
-            padding: 13px 26px;
+            padding: 12px 22px;
             border-radius: 6px;
             font-weight: 800;
-            font-size: 0.88rem;
+            font-size: 0.82rem;
             text-decoration: none !important;
             display: inline-block;
-            box-shadow: 0 4px 12px rgba(255, 107, 0, 0.25);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             border: none;
             transition: background-color 0.2s ease, transform 0.2s ease;
             cursor: pointer;
         }
 
-        .btn-cta:hover {
+        .btn-orange {
+            background-color: var(--orange-cta) !important;
+        }
+
+        .btn-orange:hover {
             background-color: var(--orange-hover) !important;
             transform: translateY(-2px);
         }
 
-        /* TARJETAS LIMPIAS DEBAJO DE LA PORTADA */
+        .btn-purple {
+            background-color: var(--purple-main) !important;
+        }
+
+        .btn-purple:hover {
+            background-color: var(--purple-hover) !important;
+            transform: translateY(-2px);
+        }
+
+        /* LÍNEA SECUNDARIA INFORMATIVA */
+        .hero-subline {
+            color: var(--white) !important;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            opacity: 0.95;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* TARJETAS LIMPIAS */
         .centers-container {
             max-width: 1280px;
             margin: 0 auto;
@@ -315,7 +335,7 @@
         }
 
         .box-free { border-top: 5px solid var(--mint-pastel); }
-        .box-pro { border-top: 5px solid var(--purple-main); background-color: var(--purple-soft); }
+        .box-pro { border-top: 5px solid var(--purple-main); background-color: rgba(56, 35, 65, 0.03); }
 
         .box-free h3, .box-pro h3 {
             color: var(--purple-main);
@@ -391,8 +411,9 @@
 
         @media (max-width: 768px) {
             header { padding: 0 4%; }
+            .hero-buttons { flex-direction: column; gap: 10px; }
             .centers-grid, .footer-grid { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 2.8rem; }
+            .hero-content h1 { font-size: 1.8rem; }
             nav { display: none; }
         }
     </style>
@@ -419,12 +440,15 @@
         </nav>
     </header>
 
-    <!-- HERO BANNER CON DEGRADADO VERDE MENTA -->
+    <!-- HERO BANNER REFINADO -->
     <section class="hero-banner">
         <div class="hero-content">
-            <h1>Asesoría Ley Karin<br>y Ley 21.828</h1>
-            <p>Una iniciativa de Ágora Laboral 360°</p>
-            <a href="#autodiagnostico" class="btn-cta">🟠 REALIZAR AUTODIAGNÓSTICO GRATIS</a>
+            <h1>Transformamos la exigencia legal en una cultura de respeto mutuo</h1>
+            <div class="hero-buttons">
+                <a href="#diagnostico" class="btn-cta btn-orange">🟠 REALIZAR DIAGNÓSTICO LEY KARIN</a>
+                <a href="#reunion" class="btn-cta btn-purple">🟣 AGENDAR REUNIÓN TÉCNICA</a>
+            </div>
+            <p class="hero-subline">Ley 21.643 · Ley 21.828 · Investigaciones Periciales · Método Ágora 360®</p>
         </div>
     </section>
 
@@ -514,7 +538,7 @@
                     <li>✓ Cronograma de implementación Ley Karin</li>
                     <li>✓ Textos oficiales Ley 21.643 y Ley 21.828</li>
                 </ul>
-                <a href="#descarga" class="btn-cta" style="background-color: var(--purple-main) !important;">DESCARGAR HERRAMIENTAS</a>
+                <a href="#descarga" class="btn-cta btn-purple">DESCARGAR HERRAMIENTAS</a>
             </div>
 
             <div class="box-pro">
@@ -525,7 +549,7 @@
                     <li>✓ Matrices de evaluación de riesgo organizacional</li>
                     <li>✓ Jurisprudencia comentada y criterios de la DT</li>
                 </ul>
-                <a href="#contacto" class="btn-cta">SOLICITAR KIT PROFESIONAL</a>
+                <a href="#contacto" class="btn-cta btn-orange">SOLICITAR KIT PROFESIONAL</a>
             </div>
         </div>
     </section>
@@ -559,7 +583,7 @@
             <div class="footer-col">
                 <h5>Contacto</h5>
                 <p style="font-size: 0.85rem; color: #94A3B8;">contacto@agoralaboral.cl</p>
-                <a href="#" class="btn-cta" style="margin-top: 15px; font-size: 0.75rem; padding: 8px 14px;">WhatsApp Directo</a>
+                <a href="#" class="btn-cta btn-orange" style="margin-top: 15px; font-size: 0.75rem; padding: 8px 14px;">WhatsApp Directo</a>
             </div>
         </div>
         <div class="footer-bottom">
