@@ -691,6 +691,37 @@
             box-shadow: 0 8px 20px rgba(242, 112, 89, 0.35);
         }
 
+        /* BOTÓN FLOTANTE DE WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: #FFFFFF !important;
+            border-radius: 50px;
+            padding: 12px 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none !important;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 22px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
         /* FOOTER */
         footer {
             background-color: var(--purple-main);
@@ -806,10 +837,10 @@
     <!-- HERO BANNER -->
     <section class="hero-banner">
         <div class="hero-content">
-            <span class="hero-eyebrow">Consultoría Especializada · Perspectiva de género</span>
+            <span class="hero-eyebrow">Consultoría Especializada · Perspectiva de Género</span>
             <h1>Espacios de trabajo seguros, equitativos y libres de violencia</h1>
             <div class="hero-buttons">
-                <a href="#diagnostico" class="btn-cta btn-accent">REALIZAR DIAGNÓSTICO GRATIS LEY KARIN</a>
+                <a href="#diagnostico" class="btn-cta btn-accent">REALIZAR DIAGNÓSTICO LEY KARIN</a>
                 <a href="#reunion" class="btn-cta btn-purple">AGENDAR REUNIÓN TÉCNICA</a>
             </div>
             <p class="hero-subline">Ley 21.643 · Ley 21.828 · Investigaciones Periciales · Método Ágora 360®</p>
@@ -822,7 +853,7 @@
             <li>Confidencialidad garantizada</li>
             <li>Atención directa de la fundadora</li>
             <li>Enfoque técnico-humano</li>
-           
+            <li>Cumplimiento Ley 21.643 y 21.828</li>
         </ul>
     </div>
 
@@ -884,19 +915,19 @@
             </div>
             <div class="founder-info">
                 <span class="founder-eyebrow">Quién está detrás del Método 360°</span>
-                <h2 class="founder-name">Mariela Silva</h2>
+                <h2 class="founder-name">[Nombre Apellido]</h2>
                 <p class="founder-role">Trabajadora Social · Perito Social · Fundadora de Ágora Laboral 360°</p>
                 <div class="founder-text">
-                    <p>Con formación en <strong>trabajo social y peritaje social</strong>, Mariela combina rigor técnico y mirada humana en la investigación de denuncias de acoso laboral, sexual y violencia en el trabajo.</p>
+                    <p>Con formación en <strong>trabajo social y peritaje social</strong>, [Nombre] combina rigor técnico y mirada humana en la investigación de denuncias de acoso laboral, sexual y violencia en el trabajo.</p>
                     <p>Es <strong>Magíster en Derecho de Familia</strong>, lo que le permite integrar el análisis jurídico con la evaluación social y sistémica exigida por la Ley 21.643 (Ley Karin) y la Ley 21.828.</p>
                     <p>Cuenta con formación especializada en <strong>investigación Ley Karin, perspectiva de género y derechos humanos</strong>, y ha desarrollado su trayectoria profesional en fundaciones y en el ámbito municipal, interviniendo directamente en casos sociales y familiares complejos.</p>
                 </div>
                 <p class="credentials-label">Diplomados y formación complementaria</p>
                 <div class="credential-pills">
-                    <span>Pericia social en Procesos Judiciales de Familia </span>
+                    <span>Informes Periciales</span>
                     <span>Marco Jurídico para la Intervención Familiar</span>
-                    <span>Intervención Familiar desde la Perspectiva Sistémica</span>
-                    <span>Consumo de Drogas:Prevención y Modelos de Intervención</span>
+                    <span>Intervención Familiar · Perspectiva Sistémica</span>
+                    <span>Prevención de Drogas</span>
                 </div>
             </div>
         </div>
@@ -993,6 +1024,15 @@
         </div>
     </section>
 
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/569XXXXXXXX?text=Hola,%20quisiera%20consultar%20por%20los%20servicios%20de%20%C3%81gora%20Laboral%20360%C2%B0" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.758.459 3.474 1.33 4.982l-1.413 5.163 5.286-1.387c1.455.794 3.09 1.213 4.783 1.214h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.037-5.176-2.922-7.065-1.886-1.888-4.394-2.926-7.067-2.926zm0 1.75c2.2 0 4.269.856 5.823 2.41 1.554 1.555 2.41 3.624 2.41 5.824 0 4.538-3.693 8.234-8.234 8.234h-.003c-1.488 0-2.943-.402-4.212-1.161l-.302-.181-3.132.821.835-3.051-.198-.315c-.833-1.328-1.273-2.868-1.273-4.448 0-4.539 3.692-8.234 8.284-8.234zm-3.528 4.25c-.198 0-.52.074-.792.422-.272.348-1.04 1.016-1.04 2.479 0 1.463 1.065 2.877 1.213 3.075.148.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.63.712.226 1.36.194 1.872.112.571-.092 1.757-.718 2.005-1.413.248-.695.248-1.29.173-1.413-.074-.124-.272-.198-.57-.347-.297-.149-1.757-.868-2.03-.967-.272-.099-.47-.149-.668.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.173.198-.297.297-.496.099-.198.05-.372-.025-.521-.074-.149-.668-1.611-.915-2.206-.241-.579-.487-.501-.668-.51-.173-.008-.372-.008-.57-.008z"/></svg>
+        <span>WhatsApp Directo</span>
+    </a>
+
     <!-- FOOTER -->
     <footer id="contacto">
         <div class="footer-grid">
@@ -1022,7 +1062,7 @@
             <div class="footer-col">
                 <h5>Herramientas</h5>
                 <ul>
-                    <li><a href="#herramientas">Diagnóstico Gratis</a></li>
+                    <li><a href="#herramientas">Autodiagnóstico Gratis</a></li>
                     <li><a href="#herramientas">Calculadora de Plazos</a></li>
                     <li><a href="#herramientas">Checklist DT</a></li>
                 </ul>
@@ -1030,7 +1070,7 @@
             <div class="footer-col">
                 <h5>Contacto</h5>
                 <p style="font-size: 0.85rem; color: #94A3B8;">contacto@agoralaboral.cl</p>
-                <a href="#" class="btn-cta btn-accent" style="margin-top: 15px; font-size: 0.75rem; padding: 8px 14px;">WhatsApp Directo</a>
+                <a href="https://wa.me/569XXXXXXXX" target="_blank" class="btn-cta btn-accent" style="margin-top: 15px; font-size: 0.75rem; padding: 8px 14px;">WhatsApp Directo</a>
             </div>
         </div>
         <div class="footer-bottom">
