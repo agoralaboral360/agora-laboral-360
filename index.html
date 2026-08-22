@@ -8,16 +8,14 @@
     <style>
         :root {
             /* PALETA OFICIAL ÁGORA LABORAL 360° */
-            --purple-main: #3D2A47;         /* Morado berenjena — más serio, menos saturado */
-            --purple-hover: #2B1D33;
+            --purple-main: #6B5CA5;         /* Lavanda moderna */
+            --purple-hover: #574B87;
             --mint-pastel: #A2E8DD;         /* Verde menta pastel */
             --mint-soft: rgba(162, 232, 221, 0.25);
-            --green-gradient-start: rgba(110, 204, 169, 0.80); 
-            --green-gradient-end: rgba(162, 232, 221, 0.50);   
             --white: #FFFFFF;               /* Reservado para texto sobre fondos oscuros */
             --bg-white: #FAF7F2;            /* Blanco hueso — fondo base del sitio, menos clínico */
-            --orange-cta: #FF6B00;          /* Naranja para el botón principal */
-            --orange-hover: #E05E00;
+            --accent-cta: var(--mint-pastel); /* Verde menta — botón principal, sin naranja ni verde oscuro */
+            --accent-hover: #8ED9C9;
             
             --text-dark: #222222;
             --text-gray: #555555;
@@ -84,11 +82,9 @@
             gap: 12px;
         }
 
-        .logo-bracket {
-            width: 14px;
-            height: 48px;
-            border-left: 5px solid var(--mint-pastel);
-            border-bottom: 5px solid var(--mint-pastel);
+        .logo-mark {
+            flex-shrink: 0;
+            display: block;
         }
 
         .logo-text {
@@ -97,10 +93,11 @@
         }
 
         .logo-text .main-title {
-            font-size: 1.4rem;
-            font-weight: 800;
+            font-family: var(--font-display);
+            font-size: 1.55rem;
+            font-weight: 700;
             color: var(--purple-main);
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
             line-height: 1;
         }
 
@@ -156,12 +153,14 @@
         .hero-banner {
             position: relative;
             width: 100%;
-            height: 460px;
-            background: linear-gradient(110deg, var(--green-gradient-start) 0%, var(--green-gradient-end) 100%), 
-                        url('image_f91a2f.jpg') center/cover no-repeat;
+            min-height: 480px;
+            background:
+                radial-gradient(circle at 88% 15%, rgba(162, 232, 221, 0.20) 0%, transparent 50%),
+                linear-gradient(115deg, rgba(69, 59, 111, 0.92) 0%, rgba(107, 92, 165, 0.85) 55%, rgba(139, 125, 190, 0.75) 100%),
+                url('image_f91a2f.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
-            padding: 0 8%;
+            padding: 60px 8%;
         }
 
         .hero-content {
@@ -227,17 +226,27 @@
             box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
         }
 
-        .btn-orange {
-            background-color: var(--orange-cta) !important;
+        .btn-accent {
+            background-color: var(--accent-cta) !important;
+            color: var(--purple-main) !important;
         }
 
-        .btn-orange:hover {
-            background-color: var(--orange-hover) !important;
+        .btn-accent:hover {
+            background-color: var(--accent-hover) !important;
             transform: translateY(-2px);
         }
 
         .btn-purple {
             background-color: var(--purple-main) !important;
+        }
+
+        .hero-buttons .btn-purple {
+            background-color: transparent !important;
+            border: 1.5px solid rgba(255,255,255,0.75) !important;
+        }
+
+        .hero-buttons .btn-purple:hover {
+            background-color: rgba(255,255,255,0.12) !important;
         }
 
         .btn-purple:hover {
@@ -306,7 +315,7 @@
         }
 
         .center-card {
-            background: var(--bg-white);
+            background: #FFFFFF;
             border-radius: 14px;
             padding: 34px 20px 28px 20px;
             box-shadow: 0 2px 10px rgba(56, 35, 65, 0.05);
@@ -332,14 +341,14 @@
             align-items: center;
             justify-content: center;
             color: var(--purple-main);
-            background-color: var(--bg-white);
+            background-color: var(--mint-soft);
             border: 1.5px solid var(--mint-pastel);
             border-radius: 50%;
             transition: background-color 0.25s ease;
         }
 
         .center-card:hover .icon-box {
-            background-color: var(--mint-soft);
+            background-color: var(--mint-pastel);
         }
 
         .icon-box svg {
@@ -414,7 +423,7 @@
             width: 100%;
             aspect-ratio: 4 / 5;
             border-radius: 14px;
-            background: linear-gradient(160deg, var(--purple-main) 0%, #543A61 100%);
+            background: linear-gradient(160deg, var(--purple-main) 0%, #8B7DBE 100%);
             border: 4px solid var(--white);
             box-shadow: 0 12px 30px rgba(56, 35, 65, 0.18);
             display: flex;
@@ -595,7 +604,7 @@
         }
 
         .box-pro {
-            background: linear-gradient(165deg, var(--purple-main) 0%, #29192F 100%);
+            background: linear-gradient(165deg, var(--purple-main) 0%, #453B6F 100%);
             box-shadow: 0 20px 40px rgba(56, 35, 65, 0.28);
             color: var(--white);
         }
@@ -681,8 +690,8 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.3l2.4 2.4L12 5' fill='none' stroke='%23A2E8DD' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         }
 
-        .box-pro .btn-cta.btn-orange {
-            box-shadow: 0 8px 20px rgba(255, 107, 0, 0.35);
+        .box-pro .btn-cta.btn-accent {
+            box-shadow: 0 8px 20px rgba(162, 232, 221, 0.35);
         }
 
         /* FOOTER MORADO CORPORATIVO */
@@ -772,9 +781,16 @@
     <!-- HEADER DE ÁGORA LABORAL 360° -->
     <header>
         <div class="logo-box">
-            <div class="logo-bracket"></div>
+            <svg class="logo-mark" width="46" height="46" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 23 3 A 20 20 0 0 1 43 23" fill="none" stroke="#6B5CA5" stroke-width="4" stroke-linecap="round"/>
+                <path d="M 43 23 A 20 20 0 0 1 23 43" fill="none" stroke="#A2E8DD" stroke-width="4" stroke-linecap="round"/>
+                <path d="M 23 43 A 20 20 0 0 1 3 23" fill="none" stroke="#6B5CA5" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+                <path d="M 3 23 A 20 20 0 0 1 23 3" fill="none" stroke="#A2E8DD" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+                <circle cx="23" cy="23" r="13" fill="#6B5CA5"/>
+                <text x="23" y="28" text-anchor="middle" fill="#FFFFFF" font-family="Cormorant Garamond, serif" font-size="17" font-weight="700">A</text>
+            </svg>
             <div class="logo-text">
-                <span class="main-title">ÁGORA LABORAL 360°</span>
+                <span class="main-title">Ágora Laboral 360°</span>
                 <span class="sub-title">CONSULTORÍA &amp; RIESGO NORMATIVO</span>
             </div>
         </div>
@@ -793,10 +809,10 @@
     <!-- HERO BANNER REFINADO -->
     <section class="hero-banner">
         <div class="hero-content">
-            <span class="hero-eyebrow">Consultoría boutique · Atención personalizada</span>
-            <h1>Transformamos la exigencia legal en una cultura de respeto mutuo</h1>
+            <span class="hero-eyebrow">Consultoría boutique · Perspectiva de género</span>
+            <h1>Espacios de trabajo seguros, equitativos y libres de violencia</h1>
             <div class="hero-buttons">
-                <a href="#diagnostico" class="btn-cta btn-orange">REALIZAR DIAGNÓSTICO LEY KARIN</a>
+                <a href="#diagnostico" class="btn-cta btn-accent">REALIZAR DIAGNÓSTICO LEY KARIN</a>
                 <a href="#reunion" class="btn-cta btn-purple">AGENDAR REUNIÓN TÉCNICA</a>
             </div>
             <p class="hero-subline">Ley 21.643 · Ley 21.828 · Investigaciones Periciales · Método Ágora 360®</p>
@@ -903,21 +919,21 @@
                     <circle cx="210" cy="210" r="168" fill="none" stroke="#E2E8F0" stroke-width="2"/>
 
                     <!-- 4 arcos de cuadrante, alternando morado/menta -->
-                    <path d="M 210 42 A 168 168 0 0 1 378 210" fill="none" stroke="#3D2A47" stroke-width="14" stroke-linecap="round"/>
+                    <path d="M 210 42 A 168 168 0 0 1 378 210" fill="none" stroke="#6B5CA5" stroke-width="14" stroke-linecap="round"/>
                     <path d="M 378 210 A 168 168 0 0 1 210 378" fill="none" stroke="#A2E8DD" stroke-width="14" stroke-linecap="round"/>
-                    <path d="M 210 378 A 168 168 0 0 1 42 210" fill="none" stroke="#3D2A47" stroke-width="14" stroke-linecap="round" opacity="0.55"/>
+                    <path d="M 210 378 A 168 168 0 0 1 42 210" fill="none" stroke="#6B5CA5" stroke-width="14" stroke-linecap="round" opacity="0.55"/>
                     <path d="M 42 210 A 168 168 0 0 1 210 42" fill="none" stroke="#A2E8DD" stroke-width="14" stroke-linecap="round" opacity="0.55"/>
 
                     <!-- Centro -->
-                    <circle cx="210" cy="210" r="86" fill="#3D2A47"/>
+                    <circle cx="210" cy="210" r="86" fill="#6B5CA5"/>
                     <text x="210" y="202" text-anchor="middle" fill="#FFFFFF" font-family="Open Sans, sans-serif" font-size="34" font-weight="800">360°</text>
                     <text x="210" y="226" text-anchor="middle" fill="#A2E8DD" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">MÉTODO ÁGORA</text>
 
                     <!-- Etiquetas de cuadrante -->
-                    <text x="290" y="88" text-anchor="middle" fill="#3D2A47" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">01</text>
-                    <text x="340" y="300" text-anchor="middle" fill="#3D2A47" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">02</text>
-                    <text x="130" y="345" text-anchor="middle" fill="#3D2A47" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">03</text>
-                    <text x="78" y="115" text-anchor="middle" fill="#3D2A47" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">04</text>
+                    <text x="290" y="88" text-anchor="middle" fill="#6B5CA5" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">01</text>
+                    <text x="340" y="300" text-anchor="middle" fill="#6B5CA5" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">02</text>
+                    <text x="130" y="345" text-anchor="middle" fill="#6B5CA5" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">03</text>
+                    <text x="78" y="115" text-anchor="middle" fill="#6B5CA5" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">04</text>
                 </svg>
             </div>
 
@@ -983,7 +999,7 @@
                     <li>Matrices de evaluación de riesgo organizacional</li>
                     <li>Jurisprudencia comentada y criterios de la DT</li>
                 </ul>
-                <a href="#contacto" class="btn-cta btn-orange">SOLICITAR KIT PROFESIONAL</a>
+                <a href="#contacto" class="btn-cta btn-accent">SOLICITAR KIT PROFESIONAL</a>
             </div>
         </div>
     </section>
@@ -993,7 +1009,15 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <div class="logo-box" style="margin-bottom: 12px;">
-                    <span class="main-title" style="color: var(--white); font-size: 1.2rem; font-weight: 800;">ÁGORA LABORAL 360°</span>
+                    <svg class="logo-mark" width="38" height="38" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 23 3 A 20 20 0 0 1 43 23" fill="none" stroke="#A2E8DD" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M 43 23 A 20 20 0 0 1 23 43" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+                        <path d="M 23 43 A 20 20 0 0 1 3 23" fill="none" stroke="#A2E8DD" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+                        <path d="M 3 23 A 20 20 0 0 1 23 3" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+                        <circle cx="23" cy="23" r="13" fill="#FFFFFF"/>
+                        <text x="23" y="28" text-anchor="middle" fill="#6B5CA5" font-family="Cormorant Garamond, serif" font-size="17" font-weight="700">A</text>
+                    </svg>
+                    <span class="main-title" style="color: var(--white); font-size: 1.2rem; font-weight: 700; font-family: var(--font-display);">Ágora Laboral 360°</span>
                 </div>
                 <p style="font-size: 0.85rem; color: #94A3B8;">Consultora técnica especializada en gestión de riesgo, investigación pericial de acoso y cumplimiento Ley Karin y Ley 21.828.</p>
             </div>
@@ -1017,7 +1041,7 @@
             <div class="footer-col">
                 <h5>Contacto</h5>
                 <p style="font-size: 0.85rem; color: #94A3B8;">contacto@agoralaboral.cl</p>
-                <a href="#" class="btn-cta btn-orange" style="margin-top: 15px; font-size: 0.75rem; padding: 8px 14px;">WhatsApp Directo</a>
+                <a href="#" class="btn-cta btn-accent" style="margin-top: 15px; font-size: 0.75rem; padding: 8px 14px;">WhatsApp Directo</a>
             </div>
         </div>
         <div class="footer-bottom">
