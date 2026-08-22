@@ -13,9 +13,11 @@
             --mint-pastel: #A2E8DD;         /* Verde menta pastel */
             --mint-soft: rgba(162, 232, 221, 0.25);
             --white: #FFFFFF;               /* Reservado para texto sobre fondos oscuros */
-            --bg-white: #FAF7F2;            /* Blanco hueso — fondo base del sitio, menos clínico */
-            --accent-cta: var(--mint-pastel); /* Verde menta — botón principal, sin naranja ni verde oscuro */
-            --accent-hover: #8ED9C9;
+            --bg-white: #FAF7F2;            /* Blanco hueso — fondo base del sitio */
+            
+            /* ACENTO TERRACOTA ELEGANTE (Sustituye al verde menta en botones de acción) */
+            --accent-cta: #E27D60;          
+            --accent-hover: #C86A50;
             
             --text-dark: #222222;
             --text-gray: #555555;
@@ -37,7 +39,7 @@
             line-height: 1.6;
         }
 
-        /* Marca de agua discreta 360° repetida como textura premium */
+        /* Marca de agua discreta 360° */
         .divider-mark {
             display: flex;
             align-items: center;
@@ -109,7 +111,7 @@
             letter-spacing: 1.6px;
         }
 
-        /* NAVEGACIÓN Y BARRITA MENTA */
+        /* NAVEGACIÓN */
         nav ul {
             display: flex;
             list-style: none;
@@ -149,7 +151,7 @@
             border-radius: 1px;
         }
 
-        /* HERO BANNER - PORTADA ARMÓNICA CON DEGRADADO MENTA SOBRE LA FOTO */
+        /* HERO BANNER */
         .hero-banner {
             position: relative;
             width: 100%;
@@ -199,7 +201,7 @@
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
         }
 
-        /* CONTENEDOR DE BOTONES CTA */
+        /* BOTONES CTA */
         .hero-buttons {
             display: flex;
             gap: 14px;
@@ -208,7 +210,6 @@
         }
 
         .btn-cta {
-            color: var(--white) !important;
             padding: 14px 26px;
             border-radius: 4px;
             font-weight: 700;
@@ -228,7 +229,7 @@
 
         .btn-accent {
             background-color: var(--accent-cta) !important;
-            color: var(--purple-main) !important;
+            color: var(--white) !important; /* Texto blanco en terracota para máxima legibilidad */
         }
 
         .btn-accent:hover {
@@ -238,11 +239,13 @@
 
         .btn-purple {
             background-color: var(--purple-main) !important;
+            color: var(--white) !important;
         }
 
         .hero-buttons .btn-purple {
             background-color: transparent !important;
             border: 1.5px solid rgba(255,255,255,0.75) !important;
+            color: var(--white) !important;
         }
 
         .hero-buttons .btn-purple:hover {
@@ -264,7 +267,7 @@
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
         }
 
-        /* BARRA DE CONFIANZA PREMIUM */
+        /* BARRA DE CONFIANZA */
         .trust-bar {
             background-color: var(--purple-main);
             padding: 18px 8%;
@@ -430,12 +433,6 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-        }
-
-        .founder-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
 
         .founder-photo .photo-placeholder {
@@ -691,10 +688,10 @@
         }
 
         .box-pro .btn-cta.btn-accent {
-            box-shadow: 0 8px 20px rgba(162, 232, 221, 0.35);
+            box-shadow: 0 8px 20px rgba(226, 125, 96, 0.35);
         }
 
-        /* FOOTER MORADO CORPORATIVO */
+        /* FOOTER */
         footer {
             background-color: var(--purple-main);
             color: var(--white);
@@ -806,7 +803,7 @@
         </nav>
     </header>
 
-    <!-- HERO BANNER REFINADO -->
+    <!-- HERO BANNER -->
     <section class="hero-banner">
         <div class="hero-content">
             <span class="hero-eyebrow">Consultoría boutique · Perspectiva de género</span>
@@ -883,7 +880,6 @@
     <section class="founder-section" id="fundadora">
         <div class="founder-grid">
             <div class="founder-photo">
-                <!-- Reemplazar por <img src="foto-fundadora.jpg" alt="Nombre Apellido, fundadora de Ágora Laboral 360°"> -->
                 <div class="photo-placeholder">Foto profesional<br>de la fundadora</div>
             </div>
             <div class="founder-info">
@@ -915,21 +911,14 @@
         <div class="metodo-wrapper">
             <div class="metodo-diagram">
                 <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Anillo base -->
                     <circle cx="210" cy="210" r="168" fill="none" stroke="#E2E8F0" stroke-width="2"/>
-
-                    <!-- 4 arcos de cuadrante, alternando morado/menta -->
                     <path d="M 210 42 A 168 168 0 0 1 378 210" fill="none" stroke="#6B5CA5" stroke-width="14" stroke-linecap="round"/>
                     <path d="M 378 210 A 168 168 0 0 1 210 378" fill="none" stroke="#A2E8DD" stroke-width="14" stroke-linecap="round"/>
                     <path d="M 210 378 A 168 168 0 0 1 42 210" fill="none" stroke="#6B5CA5" stroke-width="14" stroke-linecap="round" opacity="0.55"/>
                     <path d="M 42 210 A 168 168 0 0 1 210 42" fill="none" stroke="#A2E8DD" stroke-width="14" stroke-linecap="round" opacity="0.55"/>
-
-                    <!-- Centro -->
                     <circle cx="210" cy="210" r="86" fill="#6B5CA5"/>
                     <text x="210" y="202" text-anchor="middle" fill="#FFFFFF" font-family="Open Sans, sans-serif" font-size="34" font-weight="800">360°</text>
                     <text x="210" y="226" text-anchor="middle" fill="#A2E8DD" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">MÉTODO ÁGORA</text>
-
-                    <!-- Etiquetas de cuadrante -->
                     <text x="290" y="88" text-anchor="middle" fill="#6B5CA5" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">01</text>
                     <text x="340" y="300" text-anchor="middle" fill="#6B5CA5" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">02</text>
                     <text x="130" y="345" text-anchor="middle" fill="#6B5CA5" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">03</text>
