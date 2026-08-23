@@ -8,20 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* PALETA EDITORIAL "ROSA VIEJO, SALVIA & CAFÉ ESPRESO" */
+            /* PALETA EDITORIAL "ROSA VIEJO SUAVE, SALVIA & CAFÉ ESPRESO" */
             --bg-sand: #EBE6DD;           /* Fondo general tono arena */
-            --bg-card: #EFEAE2;           /* Arena cálido para tarjetas (sin blanco) */
+            --bg-card: #EFEAE2;           /* Arena cálido para tarjetas */
             --bg-card-accent: #E5DFD5;    /* Paneles neutros */
             
-            --color-espresso: #2E2623;    /* Café Espreso profundo */
+            --color-espresso: #282320;    /* Café Espreso oscuro para la barra inferior */
             --text-charcoal: #2C2825;     /* Tinta carbón para textos generales */
             --text-muted: #615B55;        /* Gris terroso suave */
             
-            --accent-sage: #757A68;       /* Verde Salvia */
-            --accent-sage-hover: #616656;
+            --accent-sage: #717764;       /* Verde Salvia */
+            --accent-sage-hover: #5E6354;
             
-            --accent-rose: #C48272;       /* Rosa Viejo auténtico */
-            --accent-rose-dark: #A36557;
+            --accent-rose: #DCA69A;       /* Rosa Viejo Suave */
+            --accent-rose-dark: #B87B6E;  /* Rosa Viejo medio para contrastes */
             
             --border-subtle: #D8D1C5;     /* Líneas finas orgánicas */
             
@@ -137,7 +137,7 @@
             background-color: var(--accent-sage-hover);
         }
 
-        /* HERO PORTADA LUMINOSA Y CONTINUA */
+        /* HERO PORTADA FLUIDA */
         .hero {
             position: relative;
             min-height: 560px;
@@ -148,22 +148,21 @@
             overflow: hidden;
         }
 
-        /* Degradado suave que disuelve la imagen hacia la izquierda para que el texto sea legible */
         .hero-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(to right,
                 var(--bg-sand) 0%,
-                rgba(235, 230, 221, 0.94) 35%,
-                rgba(235, 230, 221, 0.45) 62%,
-                transparent 100%);
+                rgba(235, 230, 221, 0.95) 32%,
+                rgba(235, 230, 221, 0.55) 58%,
+                rgba(40, 35, 32, 0.18) 100%);
             z-index: 1;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 600px;
+            max-width: 620px;
             padding: 80px 6% 80px 9%;
             display: flex;
             flex-direction: column;
@@ -191,7 +190,7 @@
             line-height: 1.7;
         }
 
-        /* Cinta manuscrita Rosa Viejo */
+        /* Cinta manuscrita Rosa Viejo Suave */
         .hero-ribbon {
             display: inline-block;
             background-color: var(--accent-rose);
@@ -203,10 +202,10 @@
             border-radius: 30px 6px 30px 6px;
             transform: rotate(-1.5deg);
             align-self: flex-start;
-            box-shadow: 0 6px 18px rgba(196, 130, 114, 0.28);
+            box-shadow: 0 6px 18px rgba(220, 166, 154, 0.35);
         }
 
-        /* SECCIÓN TRÍPTICO DE CONTENIDO */
+        /* SECCIONES TRÍPTICO DE CONTENIDO */
         .content-triad {
             padding: 80px 7% 60px 7%;
             display: grid;
@@ -426,47 +425,37 @@
             font-style: italic;
         }
 
-        /* BARRA DE TEMAS EN CAFÉ ESPRESO CON PÍLDORAS SALVIA & ROSA */
+        /* BARRA INFERIOR CAFÉ ESPRESO CON PÍLDORAS ROSA VIEJO SUAVE Y SALVIA */
         .topics-bar {
             background-color: var(--color-espresso);
-            border-top: 1px solid var(--border-subtle);
-            padding: 28px 6%;
+            padding: 24px 6%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 18px;
+            gap: 16px;
         }
 
         .topics-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 14px;
             align-items: center;
-        }
-
-        .topics-label {
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--bg-sand);
-            margin-right: 8px;
         }
 
         .topic-pill {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             background-color: var(--accent-sage);
-            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 30px;
-            padding: 8px 18px;
-            font-size: 0.68rem;
+            padding: 10px 22px;
+            font-size: 0.72rem;
             font-weight: 600;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
             color: #FFFFFF;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
 
         .topic-pill.rose {
@@ -474,11 +463,11 @@
         }
 
         .topic-pill svg {
-            width: 15px;
-            height: 15px;
+            width: 16px;
+            height: 16px;
             stroke: #FFFFFF;
             fill: none;
-            stroke-width: 1.6;
+            stroke-width: 1.8;
             flex-shrink: 0;
         }
 
@@ -488,8 +477,8 @@
         }
 
         .social-icons a {
-            width: 36px;
-            height: 36px;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
             background-color: rgba(255, 255, 255, 0.08);
             display: flex;
@@ -513,12 +502,11 @@
         /* FOOTER */
         footer {
             background-color: var(--color-espresso);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 30px 7%;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 24px 7%;
             text-align: center;
             font-size: 0.75rem;
-            color: var(--bg-sand);
-            opacity: 0.85;
+            color: #D2C8BF;
         }
 
         @media (max-width: 1100px) {
@@ -531,12 +519,6 @@
             }
             .hero-content {
                 padding: 70px 6% 70px 6%;
-            }
-            .hero-overlay {
-                background: linear-gradient(to right,
-                    var(--bg-sand) 0%,
-                    rgba(235, 230, 221, 0.95) 55%,
-                    transparent 100%);
             }
         }
 
@@ -595,7 +577,7 @@
         </a>
     </header>
 
-    <!-- PORTADA HERO LUMINOSA CON DEGRADADO SUAVE -->
+    <!-- PORTADA HERO -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -684,12 +666,11 @@
 
     </section>
 
-    <!-- BARRA INFERIOR CAFÉ ESPRESO CON PÍLDORAS DE TEMA -->
+    <!-- BARRA INFERIOR CAFÉ ESPRESO CON PÍLDORAS SÓLIDAS EN SALVIA Y ROSA VIEJO SUAVE -->
     <div class="topics-bar">
         <div class="topics-pills">
-            <span class="topics-label">Hablemos de:</span>
             <div class="topic-pill">
-                <svg viewBox="0 0 24 24"><path d="M12 3v18M3 9l9-6 9 6M5 14h6M13 14h6"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
                 Ley Karin 21.643
             </div>
             <div class="topic-pill rose">
@@ -701,7 +682,7 @@
                 Clima Laboral
             </div>
             <div class="topic-pill rose">
-                <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
                 Ley 21.828 Equidad
             </div>
         </div>
