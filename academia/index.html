@@ -12,21 +12,26 @@
 
   <style>
   :root {
-    --morado: #6B5CA5;
-    --morado-principal: #6B5CA5;
-    --menta: #A2E8DD;
-    --naranja: #F27059;
-    --blanco: #FFFFFF;
-    --texto: #222222;
-    --texto-oscuro: #222222;
-    --bg-white: #FAF7F2;
-    --gris-claro: #FAF7F2;
-    --borde-suave: #E6DFD6;
-  }
+  /* BASE DE LA MARCA (IDENTIDAD TRANQUILA Y ELEGANTE) */
+  --morado: #6B5CA5;          /* Lavanda principal */
+  --morado-principal: #6B5CA5;
+  --menta: #A2E8DD;           /* Verde menta suave */
+  --blanco: #FFFFFF;
+  --bg-white: #FAF7F2;        /* Blanco hueso de fondo */
+  --gris-claro: #FAF7F2;
+  --texto: #222222;           /* Texto oscuro */
+  --texto-oscuro: #222222;
+  --borde-suave: #E6DFD6;
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Open Sans', sans-serif; color: var(--texto-oscuro); background-color: var(--bg-white); line-height: 1.6; }
-  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--morado-principal); }
+  /* COLOR DE ACENTO (SOLO PARA BOTONES QUE DEBEN RESALTAR) */
+  --naranja: #F27059;         /* Coral / Terracota */
+  --accent-cta: #F27059;      
+  --accent-hover: #D95742;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Open Sans', sans-serif; color: var(--texto-oscuro); background-color: var(--bg-white); line-height: 1.6; }
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--morado-principal); }
 
     /* NAVEGACIÓN */
     .navbar { background: #ffffff; border-bottom: 1px solid var(--borde-suave); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
