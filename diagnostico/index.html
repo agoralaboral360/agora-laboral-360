@@ -1,336 +1,322 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diagnóstico Gratis Ley Karin | Ágora Laboral 360°</title>
-  <style>
-    :root {
-      --morado: #382341;
-      --menta: #a2e8dd;
-      --naranja: #f26522;
-      --blanco: #ffffff;
-      --texto: #2d3748;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autodiagnóstico Ley Karin &amp; Ley 21.828 | Ágora Laboral 360°</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* PALETA OFICIAL ÁGORA LABORAL 360° */
+            --purple-main: #6B5CA5;         /* Lavanda moderna */
+            --purple-hover: #574B87;
+            --mint-pastel: #A2E8DD;         /* Verde menta pastel */
+            --mint-soft: rgba(162, 232, 221, 0.25);
+            --white: #FFFFFF;
+            --bg-white: #FAF7F2;            /* Blanco hueso */
+            
+            /* ACENTO CORAL VIBRANTE */
+            --accent-cta: #F27059;          
+            --accent-hover: #D95742;
+            
+            --text-dark: #222222;
+            --text-gray: #555555;
+            --bg-light: #F5F1EC;
+            --border-light: #E6DFD6;
+            --font-display: 'Cormorant Garamond', 'Open Sans', serif;
+        }
 
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background-color: var(--blanco);
-      color: var(--texto);
-      margin: 0;
-      padding: 40px 15px;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
 
-    .diagnostico-container {
-      max-width: 800px;
-      margin: 0 auto;
-      background: var(--blanco);
-      padding: 35px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(56, 35, 65, 0.08);
-      border-top: 6px solid var(--morado);
-    }
+        body {
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
 
-    .diagnostico-header h2 {
-      color: var(--morado);
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 8px;
-      line-height: 1.3;
-    }
+        /* HEADER */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-white);
+            height: 95px;
+            padding: 0 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #EFEFEF;
+            z-index: 1000;
+        }
 
-    .diagnostico-header p {
-      color: #666;
-      font-size: 0.95rem;
-      margin-bottom: 30px;
-    }
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
 
-    .pregunta-box {
-      background: var(--blanco);
-      border: 1px solid rgba(56, 35, 65, 0.15); /* Borde sutil morado transparente */
-      border-left: 4px solid var(--morado);
-      padding: 20px;
-      border-radius: 6px;
-      margin-bottom: 22px;
-    }
+        .logo-mark {
+            flex-shrink: 0;
+            display: block;
+        }
 
-    .pregunta-texto {
-      font-weight: 700;
-      color: var(--morado);
-      font-size: 0.95rem;
-      margin-top: 0;
-      margin-bottom: 14px;
-      line-height: 1.4;
-    }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .opciones-group {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      font-size: 0.9rem;
-      color: var(--texto);
-    }
+        .logo-text .main-title {
+            font-family: var(--font-display);
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: var(--purple-main);
+            letter-spacing: 0.3px;
+            line-height: 1;
+        }
 
-    .opciones-group label {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      cursor: pointer;
-      line-height: 1.4;
-    }
+        .logo-text .sub-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #888888;
+            margin-top: 4px;
+            letter-spacing: 1.6px;
+        }
 
-    .opciones-group input[type="radio"] {
-      accent-color: var(--morado);
-      width: 17px;
-      height: 17px;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
+        nav a {
+            text-decoration: none;
+            color: var(--purple-main);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
 
-    .btn-calcular {
-      display: block;
-      width: 100%;
-      background: var(--naranja);
-      color: var(--blanco);
-      border: none;
-      padding: 16px;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 800;
-      cursor: pointer;
-      margin-top: 30px;
-      transition: background 0.2s, transform 0.2s;
-    }
+        /* HERO DIAGNÓSTICO */
+        .diag-hero {
+            background: linear-gradient(115deg, rgba(69, 59, 111, 0.95) 0%, rgba(107, 92, 165, 0.88) 100%);
+            color: var(--white);
+            padding: 60px 4% 50px 4%;
+            text-align: center;
+        }
 
-    .btn-calcular:hover {
-      background: #d95316;
-      transform: translateY(-2px);
-    }
-  </style>
+        .diag-hero h1 {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .diag-hero p {
+            max-width: 680px;
+            margin: 0 auto;
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        /* CONTENEDOR DEL FORMULARIO */
+        .diag-container {
+            max-width: 800px;
+            margin: -30px auto 80px auto;
+            background: var(--white);
+            padding: 45px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(56, 35, 65, 0.08);
+            border: 1px solid var(--border-light);
+            position: relative;
+        }
+
+        .step-title {
+            color: var(--purple-main);
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--mint-pastel);
+            padding-bottom: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-control:focus {
+            border-color: var(--purple-main);
+        }
+
+        .checkbox-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 14px;
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .checkbox-option input {
+            margin-top: 4px;
+            accent-color: var(--purple-main);
+        }
+
+        .btn-submit {
+            background-color: var(--accent-cta) !important;
+            color: var(--white) !important;
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(242, 112, 89, 0.3);
+            transition: background-color 0.2s, transform 0.2s;
+            margin-top: 15px;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--accent-hover) !important;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--purple-main);
+            color: var(--white);
+            padding: 40px 5% 25px 5%;
+            text-align: center;
+            border-top: 3px solid var(--mint-pastel);
+            font-size: 0.82rem;
+        }
+
+        @media (max-width: 600px) {
+            .diag-container { padding: 25px 20px; margin-top: 10px; }
+            .diag-hero h1 { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="diagnostico-container">
-  <div class="diagnostico-header">
-    <h2>Autodiagnóstico Técnico de Cumplimiento Legal: Ley Karin (Ley N° 21.643)</h2>
-    <p>Evaluación de blindaje normativo frente a exigencias de la Dirección del Trabajo (DT) y la SUSESO.</p>
-  </div>
-
-  <form id="karinFormActualizado">
-    <!-- PREGUNTA 1 -->
-    <div class="pregunta-box">
-      <p class="pregunta-texto">1. ¿Cuenta con un Protocolo de Prevención formalmente incorporado al RIOHS (empresas de 10 o más trabajadores) o entregado por escrito al firmar el contrato de trabajo e integrado al Reglamento de la Ley N° 16.744 (menos de 10 trabajadores)?</p>
-      <div class="opciones-group">
-        <label><input type="radio" name="q1" value="2" required> Sí, completamente formalizado e integrado.</label>
-        <label><input type="radio" name="q1" value="1"> Documento redactado pero no incorporado formalmente.</label>
-        <label><input type="radio" name="q1" value="0"> No se cuenta con dicho instrumento.</label>
-      </div>
-    </div>
-
-    <!-- PREGUNTA 2 -->
-    <div class="pregunta-box">
-      <p class="pregunta-texto">2. ¿Dispone de un canal confidencial de denuncias (escrito o verbal con levante de acta) resguardado bajo los principios de imparcialidad, celeridad y perspectiva de género?</p>
-      <div class="opciones-group">
-        <label><input type="radio" name="q2" value="2" required> Sí, canal formal estructurado y difundido.</label>
-        <label><input type="radio" name="q2" value="1"> Existe un canal genérico sin procedimiento normado.</label>
-        <label><input type="radio" name="q2" value="0"> No existe un canal formal habilitado.</label>
-      </div>
-    </div>
-
-    <!-- PREGUNTA 3 -->
-    <div class="pregunta-box">
-      <p class="pregunta-texto">3. ¿El procedimiento regula una fase de Admisibilidad que contemple el plazo fatal de 3 días hábiles para que el denunciante subsane imprecisiones o entregue antecedentes, previo a decretar la inadmisibilidad?</p>
-      <div class="opciones-group">
-        <label><input type="radio" name="q3" value="2" required> Sí, etapa de admisibilidad y subsanación normada.</label>
-        <label><input type="radio" name="q3" value="1"> Se evalúa la admisibilidad pero sin regulación de plazos.</label>
-        <label><input type="radio" name="q3" value="0"> No se contempla examen de admisibilidad.</label>
-      </div>
-    </div>
-
-    <!-- PREGUNTA 4 -->
-    <div class="pregunta-box">
-      <p class="pregunta-texto">4. Recibida la denuncia, ¿el procedimiento obliga la adopción INMEDIATA de medidas cautelares (separación física, adecuación de jornada) y la derivación a atención psicológica temprana ante la Mutualidad?</p>
-      <div class="opciones-group">
-        <label><input type="radio" name="q4" value="2" required> Sí, adopción inmediata y derivación protocolizada.</label>
-        <label><input type="radio" name="q4" value="1"> Se evalúa caso a caso de forma discrecional.</label>
-        <label><input type="radio" name="q4" value="0"> No existen medidas cautelares previstas.</label>
-      </div>
-    </div>
-
-    <!-- PREGUNTA 5 -->
-    <div class="pregunta-box">
-      <p class="pregunta-texto">5. ¿El protocolo contempla medidas preventivas y correctivas frente a la violencia en el trabajo ejercida por terceros ajenos a la relación laboral (clientes, usuarios, proveedores, visitas)?</p>
-      <div class="opciones-group">
-        <label><input type="radio" name="q5" value="2" required> Sí, abarca expresamente violencia externa.</label>
-        <label><input type="radio" name="q5" value="1"> Mencionada de manera ambigua o genérica.</label>
-        <label><input type="radio" name="q5" value="0"> No cubre conductas de terceros.</label>
-      </div>
-    </div>
-
-    <!-- PREGUNTA 6 -->
-    <div class="pregunta-box">
-      <p class="pregunta-texto">6. Para las investigaciones internas, ¿la organización obliga la designación preferente de personal con formación demostrable y certificada en acoso, género o derechos fundamentales?</p>
-      <div class="opciones-group">
-        <label><input type="radio" name="q6" value="2" required> Sí, investigador capacitado o asesoría externa calificada.</label>
-        <label><input type="radio" name="q6" value="1"> Asumido por RR.HH./Administración sin certificación.</label>
-        <label><input type="radio" name="q6" value="0"> Se desconoce dicha exigencia legal.</label>
-      </div>
-    </div>
-
-    <!-- PREGUNTA 7 -->
-    <div class="pregunta-box">
-      <p class="pregunta-texto">7. ¿La empresa aplicó el cuestionario CEAL-SM e integró los factores de riesgo psicosocial asociados al acoso y la violencia en su Matriz de Riesgos Laborales?</p>
-      <div class="opciones-group">
-        <label><input type="radio" name="q7" value="2" required> Sí, CEAL-SM aplicado e integrado en la Matriz.</label>
-        <label><input type="radio" name="q7" value="1"> Cuestionario aplicado pero no integrado a la Matriz.</label>
-        <label><input type="radio" name="q7" value="0"> No se ha aplicado la evaluación de riesgo psicosocial.</label>
-      </div>
-    </div>
-
-    <!-- PREGUNTA 8 -->
-    <div class="pregunta-box">
-      <p class="pregunta-texto">8. ¿Existe un mecanismo formal para dar cumplimiento al deber de informar SEMESTRALMENTE por escrito a los trabajadores los canales de denuncia e instancias estatales?</p>
-      <div class="opciones-group">
-        <label><input type="radio" name="q8" value="2" required> Sí, programa de comunicación semestral activo.</label>
-        <label><input type="radio" name="q8" value="1"> Se informó únicamente al inicio de la relación laboral.</label>
-        <label><input type="radio" name="q8" value="0"> No se realizan informativos semestrales.</label>
-      </div>
-    </div>
-
-    <!-- PREGUNTA 9 -->
-    <div class="pregunta-box">
-      <p class="pregunta-texto">9. ¿El procedimiento interno se ciñe estrictamente a los plazos legales (3 días para derivar a la DT, 30 días máximos de investigación y 15 días para aplicar e informar sanciones)?</p>
-      <div class="opciones-group">
-        <label><input type="radio" name="q9" value="2" required> Sí, flujo procedimental ajustado a plazos legales.</label>
-        <label><input type="radio" name="q9" value="1"> Procedimiento interno con plazos desajustados.</label>
-        <label><input type="radio" name="q9" value="0"> No se contemplan plazos procedimentales.</label>
-      </div>
-    </div>
-
-    <!-- TABLA RESUMEN DE LA MATRIZ (ESTILO SOBRIO CORPORATIVO) -->
-    <div style="margin: 25px 0; overflow-x: auto;">
-      <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid rgba(56, 35, 65, 0.15);">
-        <thead>
-          <tr style="background: #382341; color: #ffffff;">
-            <th style="padding: 12px 14px;">Puntaje Obtenido</th>
-            <th style="padding: 12px 14px;">Clasificación de Riesgo</th>
-            <th style="padding: 12px 14px;">Dictamen Procedimental</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom: 1px solid rgba(56, 35, 65, 0.15); background: #ffffff;">
-            <td style="padding: 12px 14px; font-weight: 700; color: #382341;">0 a 8 puntos</td>
-            <td style="padding: 12px 14px; font-weight: 800; color: #f26522;">RIESGO CRÍTICO</td>
-            <td style="padding: 12px 14px; color: #4a5568;">Inobservancia Estructural</td>
-          </tr>
-          <tr style="border-bottom: 1px solid rgba(56, 35, 65, 0.15); background: #ffffff;">
-            <td style="padding: 12px 14px; font-weight: 700; color: #382341;">9 a 14 puntos</td>
-            <td style="padding: 12px 14px; font-weight: 800; color: #382341;">RIESGO MODERADO</td>
-            <td style="padding: 12px 14px; color: #4a5568;">Vulnerabilidad Documental</td>
-          </tr>
-          <tr style="background: #ffffff;">
-            <td style="padding: 12px 14px; font-weight: 700; color: #382341;">15 a 18 puntos</td>
-            <td style="padding: 12px 14px; font-weight: 800; color: #0d9488;">BLINDAJE ADECUADO</td>
-            <td style="padding: 8px 14px; color: #4a5568;">Cumplimiento Sustancial</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <button type="button" onclick="evaluarDiagnosticoKarin()" class="btn-calcular">Obtener Dictamen de Riesgo Legal</button>
-  </form>
-
-  <div id="resultadoDiagnosticoLegal"></div>
-</div>
-
-<script>
-function evaluarDiagnosticoKarin() {
-  const form = document.getElementById('karinFormActualizado');
-  const formData = new FormData(form);
-  let puntaje = 0;
-  let respondidas = 0;
-
-  for (let [key, value] of formData.entries()) {
-    puntaje += parseInt(value, 10);
-    respondidas++;
-  }
-
-  if (respondidas < 9) {
-    alert("Debe responder la totalidad de las 9 preguntas para emitir el dictamen legal.");
-    return;
-  }
-
-  let contenedor = document.getElementById('resultadoDiagnosticoLegal');
-  let html = "";
-  
-  // NÚMERO DE WHATSAPP CORPORATIVO
-  const numWA = "56932701196";
-
-  if (puntaje <= 8) {
-    html = `
-      <div style="padding: 25px; border-left: 6px solid #f26522; border-top: 1px solid rgba(56, 35, 65, 0.15); border-right: 1px solid rgba(56, 35, 65, 0.15); border-bottom: 1px solid rgba(56, 35, 65, 0.15); background-color: #ffffff; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px; box-shadow: 0 4px 12px rgba(56, 35, 65, 0.05);">
-        <div style="font-size: 0.75rem; font-weight: 800; color: #f26522; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Dictamen Procedimental: Inobservancia Estructural</div>
-        <h3 style="color: #382341; margin-top: 0; font-size: 1.25rem; font-weight: 800;">CLASIFICACIÓN: RIESGO CRÍTICO (${puntaje} / 18 Puntos)</h3>
-        <p style="color: #333; font-size: 0.95rem;"><strong>Estado de Situación:</strong> Incumplimiento estructural de la Ley N° 21.643, los Dictámenes de la DT y las Circulares de la SUSESO.</p>
-        <p style="color: #333; font-size: 0.95rem; margin-bottom: 5px;"><strong>Exposición Legal Directa:</strong></p>
-        <ul style="color: #4a5568; font-size: 0.9rem; line-height: 1.5; padding-left: 20px;">
-          <li>Multas administrativas de la Inspección del Trabajo por infracción al deber de protección eficaz (Art. 184 y 506 del Código del Trabajo).</li>
-          <li>Nulidad de pleno derecho de procesos disciplinarios o despidos por vicios en la etapa de admisibilidad o inobservancia de plazos fatales (Art. 211-C CdT).</li>
-          <li>Alta contingencia en juicios de Tutela Laboral con recargos indemnizatorios de entre el 50% y el 100% (Art. 485 CdT).</li>
-        </ul>
-        <p style="color: #333; font-size: 0.95rem;"><strong>Acción Requerida:</strong> Intervención legal urgente para confeccionar el Protocolo de Prevención, adaptar el RIOHS y capacitar al personal investigador.</p>
-        
-        <a href="https://wa.me/${numWA}?text=Hola,%20realicé%20el%20diagnóstico%20legal%20de%20Ley%20Karin%20y%20obtuve%20RIESGO%20CRÍTICO%20(${puntaje}/18%20pts)%20con%20Inobservancia%20Estructural.%20Solicito%20intervención." 
-           target="_blank" 
-           style="display: inline-block; width: 100%; text-align: center; box-sizing: border-box; margin-top: 15px; background: #f26522; color: #ffffff; padding: 14px 20px; border-radius: 8px; font-weight: 800; text-decoration: none; font-size: 0.95rem;">
-          SOLICITAR INTERVENCIÓN Y BLINDAJE URGENTE →
+    <!-- HEADER -->
+    <header>
+        <a href="../" class="logo-box">
+            <svg class="logo-mark" width="42" height="46" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 23 3 A 20 20 0 0 1 43 23" fill="none" stroke="#6B5CA5" stroke-width="4" stroke-linecap="round"/>
+                <path d="M 43 23 A 20 20 0 0 1 23 43" fill="none" stroke="#A2E8DD" stroke-width="4" stroke-linecap="round"/>
+                <path d="M 23 43 A 20 20 0 0 1 3 23" fill="none" stroke="#6B5CA5" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+                <path d="M 3 23 A 20 20 0 0 1 23 3" fill="none" stroke="#A2E8DD" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+                <circle cx="23" cy="23" r="13" fill="#6B5CA5"/>
+                <text x="23" y="28" text-anchor="middle" fill="#FFFFFF" font-family="Cormorant Garamond, serif" font-size="17" font-weight="700">A</text>
+            </svg>
+            <div class="logo-text">
+                <span class="main-title">Ágora Laboral 360°</span>
+                <span class="sub-title">CONSULTORÍA &amp; RIESGO NORMATIVO</span>
+            </div>
         </a>
-      </div>`;
-  } else if (puntaje <= 14) {
-    html = `
-      <div style="padding: 25px; border-left: 6px solid #382341; border-top: 1px solid rgba(56, 35, 65, 0.15); border-right: 1px solid rgba(56, 35, 65, 0.15); border-bottom: 1px solid rgba(56, 35, 65, 0.15); background-color: #ffffff; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px; box-shadow: 0 4px 12px rgba(56, 35, 65, 0.05);">
-        <div style="font-size: 0.75rem; font-weight: 800; color: #382341; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Dictamen Procedimental: Vulnerabilidad Documental</div>
-        <h3 style="color: #382341; margin-top: 0; font-size: 1.25rem; font-weight: 800;">CLASIFICACIÓN: RIESGO MODERADO (${puntaje} / 18 Puntos)</h3>
-        <p style="color: #333; font-size: 0.95rem;"><strong>Estado de Situación:</strong> Cumplimiento formal incompleto. La empresa posee documentación base pero mantiene vacíos críticos que invalidan su blindaje.</p>
-        <p style="color: #333; font-size: 0.95rem; margin-bottom: 5px;"><strong>Brechas Detectadas:</strong></p>
-        <ul style="color: #4a5568; font-size: 0.9rem; line-height: 1.5; padding-left: 20px;">
-          <li>Falta de regulación de la etapa de admisibilidad y el plazo de 3 días para subsanar antecedentes.</li>
-          <li>Inexistencia de acreditación formal de capacitaciones en género del personal investigador (Art. 211-C inc. final CdT).</li>
-          <li>Omisión de la actualización de la Matriz de Riesgos conforme a la evaluación psicosocial CEAL-SM (SUSESO).</li>
-        </ul>
-        <p style="color: #333; font-size: 0.95rem;"><strong>Acción Requerida:</strong> Ajuste de las cláusulas del RIOHS, actualización de la Matriz de Riesgos y certificación técnica de jefaturas.</p>
+        <nav>
+            <a href="../">← VOLVER AL INICIO</a>
+        </nav>
+    </header>
 
-        <a href="https://wa.me/${numWA}?text=Hola,%20realicé%20el%20diagnóstico%20legal%20de%20Ley%20Karin%20y%20obtuve%20RIESGO%20MODERADO%20(${puntaje}/18%20pts)%20por%20Vulnerabilidad%20Documental.%20Quisiera%20regularizar." 
-           target="_blank" 
-           style="display: inline-block; width: 100%; text-align: center; box-sizing: border-box; margin-top: 15px; background: #f26522; color: #ffffff; padding: 14px 20px; border-radius: 8px; font-weight: 800; text-decoration: none; font-size: 0.95rem;">
-          SOLICITAR AUDITORÍA DE REGULARIZACIÓN →
-        </a>
-      </div>`;
-  } else {
-    html = `
-      <div style="padding: 25px; border-left: 6px solid #a2e8dd; border-top: 1px solid rgba(56, 35, 65, 0.15); border-right: 1px solid rgba(56, 35, 65, 0.15); border-bottom: 1px solid rgba(56, 35, 65, 0.15); background-color: #ffffff; border-radius: 8px; font-family: system-ui, sans-serif; margin-top: 25px; box-shadow: 0 4px 12px rgba(56, 35, 65, 0.05);">
-        <div style="font-size: 0.75rem; font-weight: 800; color: #0d9488; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Dictamen Procedimental: Cumplimiento Sustancial</div>
-        <h3 style="color: #382341; margin-top: 0; font-size: 1.25rem; font-weight: 800;">CLASIFICACIÓN: BLINDAJE ADECUADO (${puntaje} / 18 Puntos)</h3>
-        <p style="color: #333; font-size: 0.95rem;"><strong>Estado de Situación:</strong> Su organización demuestra alineamiento sustancial con el marco regulatorio de la Ley N° 21.643.</p>
-        <p style="color: #333; font-size: 0.95rem; margin-bottom: 5px;"><strong>Obligaciones de Mantención Normativa:</strong></p>
-        <ul style="color: #4a5568; font-size: 0.9rem; line-height: 1.5; padding-left: 20px;">
-          <li>Ejecutar el programa de difusión semestral obligatoria por escrito a todo el personal.</li>
-          <li>Efectuar la reevaluación bienal de los factores de riesgo psicosocial en conjunto con el Comité Paritario / Comité de Aplicación.</li>
-        </ul>
-        <p style="color: #333; font-size: 0.95rem;"><strong>Acción Requerida:</strong> Auditorías periódicas de seguimiento procedimental para garantizar la mejora continua.</p>
+    <!-- HERO -->
+    <section class="diag-hero">
+        <h1>Autodiagnóstico de Cumplimiento Normativo</h1>
+        <p>Evalúa de forma confidencial el nivel de preparación de tu empresa frente a la Ley Karin (21.643) y la Ley de Equidad Salarial (21.828).</p>
+    </section>
 
-        <a href="https://wa.me/${numWA}?text=Hola,%20obtuvimos%20BLINDAJE%20ADECUADO%20(${puntaje}/18%20pts)%20con%20Cumplimiento%20Sustancial.%20Quisiera%20información%20sobre%20auditorías%20anuales." 
-           target="_blank" 
-           style="display: inline-block; width: 100%; text-align: center; box-sizing: border-box; margin-top: 15px; background: #382341; color: #a2e8dd; padding: 14px 20px; border-radius: 8px; font-weight: 800; text-decoration: none; font-size: 0.95rem;">
-          SOLICITAR AUDITORÍA DE SEGUIMIENTO ANUAL →
-        </a>
-      </div>`;
-  }
+    <!-- FORMULARIO -->
+    <main class="diag-container">
+        <form>
+            <h2 class="step-title">1. Datos de la Organización</h2>
+            
+            <div class="form-group">
+                <label>Nombre de la Empresa o Razón Social</label>
+                <input type="text" class="form-control" placeholder="Ej: Empresa Ejemplo S.A." required>
+            </div>
 
-  contenedor.innerHTML = html;
-  contenedor.scrollIntoView({ behavior: 'smooth' });
-}
-</script>
+            <div class="form-group">
+                <label>Número de Trabajadores/as</label>
+                <select class="form-control">
+                    <option>1 a 9 trabajadores</option>
+                    <option>10 a 49 trabajadores</option>
+                    <option>50 a 199 trabajadores</option>
+                    <option>200 o más trabajadores</option>
+                </select>
+            </div>
+
+            <h2 class="step-title" style="margin-top: 35px;">2. Verificación de Protocolos</h2>
+
+            <div class="form-group">
+                <label>Marca los aspectos con los que tu empresa YA cuenta legalmente:</label>
+                
+                <label class="checkbox-option">
+                    <input type="checkbox">
+                    <span>Protocolo de Prevención del Acoso Sexual, Laboral y Violencia adaptado a Ley Karin.</span>
+                </label>
+
+                <label class="checkbox-option">
+                    <input type="checkbox">
+                    <span>Canal de Denuncias formal con resguardo de confidencialidad y cadena de custodia.</span>
+                </label>
+
+                <label class="checkbox-option">
+                    <input type="checkbox">
+                    <span>Fiscales e Investigadores internos capacitados con estándar técnico.</span>
+                </label>
+
+                <label class="checkbox-option">
+                    <input type="checkbox">
+                    <span>Matriz de evaluación de brecha de género y equidad salarial (Ley 21.828).</span>
+                </label>
+            </div>
+
+            <h2 class="step-title" style="margin-top: 35px;">3. Datos de Contacto para el Informe</h2>
+
+            <div class="form-group">
+                <label>Nombre del Responsable / Cargo</label>
+                <input type="text" class="form-control" placeholder="Ej: María González - Dir. Gestión de Personas" required>
+            </div>
+
+            <div class="form-group">
+                <label>Correo Electrónico Corporativo</label>
+                <input type="email" class="form-control" placeholder="contacto@empresa.cl" required>
+            </div>
+
+            <button type="submit" class="btn-submit">ENVIAR Y RECIBIR EVALUACIÓN GRATUITA</button>
+        </form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 Ágora Laboral 360°. Consultoría Técnica Especializada.
+    </footer>
 
 </body>
 </html>
