@@ -4,94 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ágora Laboral 360° | Consultoría &amp; Riesgo Normativo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Fuentes: Cormorant Garamond (Titulares editoriales), Montserrat (Navegación y texto limpio), Dancing Script (Acento manuscrito) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Dancing+Script:wght@500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* PALETA "TINTA LAVANDA Y VERDE MENTA" - ÁGORA LABORAL 360° */
+            /* PALETA EDITORIAL "ROSA VIEJO & ARENA" */
+            --bg-sand: #EBE6DD;           /* Fondo general tono arena cálido */
+            --bg-card: #FAF8F5;           /* Blanco roto / lino para tarjetas */
+            --bg-card-accent: #EFEAE2;    /* Tono neutro para cajas destacadas */
             
-            /* Tonos Base (Fondos y Formas Suaves) */
-            --bg-white: #F5F1FF;        /* Blanco suave con matiz lavanda */
-            --purple-main: #D9C7F2;     /* Lavanda Pálida */
-            --purple-hover: #C5B0E5;    /* Lavanda tono hover */
+            --text-charcoal: #2C2825;     /* Tinta carbón profunda para titulares */
+            --text-muted: #615B55;        /* Gris terroso para párrafos */
             
-            /* Textos (Alto Contraste) */
-            --text-dark: #3B3347;       /* Tinta Profunda */
-            --text-gray: #494556;       /* Gris Tenue */
+            --accent-sage: #828776;       /* Verde oliva / salvia para botones principales */
+            --accent-sage-hover: #6E7363;
+            --accent-rose: #E2BCAE;       /* Rosa viejo / blush para la cinta manuscrita */
+            --accent-rose-dark: #C99A8B;
             
-            /* Acentos y Botones (Verde Menta) */
-            --accent-cta: #A2E8DD;      /* Verde Menta Pastel para botones CTA */
-            --accent-hover: #8BC9B8;    /* Verde Menta Hover */
-            --mint-pastel: #A2E8DD;     /* Verde Menta para chips, badges y decoraciones */
+            --border-subtle: #D8D1C5;     /* Límite orgánico y fino */
             
-            /* Estructurales */
-            --white: #FFFFFF;           /* Blanco puro para tarjetas */
-            --bg-light: #F4F0FB;        /* Secciones secundarias */
-            --border-light: #E5DFED;    /* Borde suave lila */
-            
-            --font-display: 'Cormorant Garamond', 'Open Sans', serif;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --font-script: 'Dancing Script', cursive;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif;
         }
 
         body {
-            background-color: var(--bg-white);
-            color: var(--text-dark);
+            background-color: var(--bg-sand);
+            color: var(--text-charcoal);
+            font-family: var(--font-sans);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Marca de agua discreta 360° */
-        .divider-mark {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 14px;
-            margin: 0 0 44px 0;
-        }
-
-        .divider-mark::before,
-        .divider-mark::after {
-            content: '';
-            width: 46px;
-            height: 1px;
-            background: var(--border-light);
-        }
-
-        .divider-mark span {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--mint-pastel);
-            border: 1px solid var(--purple-main);
-        }
-
-        /* HEADER */
+        /* HEADER & NAVEGACIÓN EDITORIAL */
         header {
-            position: sticky;
-            top: 0;
-            background-color: var(--bg-white);
-            height: 95px;
-            padding: 0 7%;
+            background-color: var(--bg-sand);
+            padding: 25px 6%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid var(--border-light);
+            border-bottom: 1px solid rgba(216, 209, 197, 0.6);
+            position: sticky;
+            top: 0;
             z-index: 1000;
         }
 
         .logo-box {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
+            text-decoration: none;
+            color: var(--text-charcoal);
         }
 
-        .logo-mark {
-            flex-shrink: 0;
-            display: block;
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            stroke: var(--text-charcoal);
+            fill: none;
+            stroke-width: 1.5;
         }
 
         .logo-text {
@@ -99,948 +76,515 @@
             flex-direction: column;
         }
 
-        .logo-text .main-title {
-            font-family: var(--font-display);
-            font-size: 1.55rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            letter-spacing: 0.3px;
-            line-height: 1;
-        }
-        
-        .logo-text .main-title sup {
-            font-size: 0.65em;
-            vertical-align: super;
-        }
-
-        .logo-text .sub-title {
-            font-size: 0.7rem;
+        .logo-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
             font-weight: 600;
-            color: var(--text-gray);
-            margin-top: 4px;
-            letter-spacing: 1.6px;
+            letter-spacing: 2px;
+            line-height: 0.95;
+            text-transform: uppercase;
         }
 
-        /* NAVEGACIÓN */
+        .logo-subtitle {
+            font-size: 0.62rem;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+
         nav ul {
             display: flex;
             list-style: none;
-            gap: 32px;
+            gap: 28px;
             align-items: center;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--text-gray);
-            font-weight: 600;
-            font-size: 0.85rem;
-            letter-spacing: 0.8px;
+            color: var(--text-charcoal);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 1.8px;
             text-transform: uppercase;
-            padding-bottom: 10px;
-            position: relative;
-            transition: color 0.2s ease;
+            padding-bottom: 4px;
+            transition: all 0.2s ease;
         }
 
-        nav a:hover {
-            color: var(--text-dark);
+        nav a:hover, nav a.active {
+            border-bottom: 1.5px solid var(--text-charcoal);
         }
 
-        nav a.active {
-            color: var(--text-dark);
-            font-weight: 700;
-        }
-
-        nav a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: var(--mint-pastel);
-            border-radius: 1px;
-        }
-
-        /* HERO BANNER */
-        .hero-banner {
-            position: relative;
-            width: 100%;
-            min-height: 480px;
-            background:
-                radial-gradient(circle at 88% 15%, rgba(217, 199, 242, 0.40) 0%, transparent 50%),
-                linear-gradient(115deg, rgba(59, 51, 71, 0.92) 0%, rgba(73, 69, 86, 0.85) 55%, rgba(185, 177, 204, 0.75) 100%),
-                url('image_f91a2f.jpg') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            padding: 60px 8%;
-        }
-
-        .hero-content {
-            max-width: 720px;
-        }
-
-        .hero-eyebrow {
+        .btn-header {
+            background-color: var(--accent-sage);
+            color: #FFFFFF !important;
+            padding: 10px 22px;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1.8px;
+            text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: var(--bg-white) !important;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            margin-bottom: 18px;
-            opacity: 0.92;
-        }
-
-        .hero-eyebrow::before {
-            content: '';
-            width: 28px;
-            height: 1px;
-            background: var(--bg-white);
-            opacity: 0.7;
-        }
-
-        .hero-content h1 {
-            color: var(--white) !important;
-            font-family: var(--font-display);
-            font-size: 3rem;
-            font-weight: 600;
-            line-height: 1.2;
-            letter-spacing: -0.3px;
-            margin-bottom: 26px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
-        }
-
-        /* BOTONES CTA */
-        .hero-buttons {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-
-        .btn-cta {
-            padding: 14px 26px;
-            border-radius: 4px;
-            font-weight: 700;
-            font-size: 0.78rem;
-            letter-spacing: 1px;
-            text-decoration: none !important;
-            display: inline-block;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-            border: 1px solid transparent;
-            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-            cursor: pointer;
-        }
-
-        .btn-cta:hover {
-            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Botón Menta CTA con texto oscuro para contraste perfecto */
-        .btn-accent {
-            background-color: var(--accent-cta) !important;
-            color: var(--text-dark) !important;
-        }
-
-        .btn-accent:hover {
-            background-color: var(--accent-hover) !important;
-            transform: translateY(-2px);
-        }
-
-        .btn-purple {
-            background-color: var(--purple-main) !important;
-            color: var(--text-dark) !important; 
-        }
-
-        .hero-buttons .btn-purple {
-            background-color: transparent !important;
-            border: 1.5px solid rgba(255,255,255,0.75) !important;
-            color: var(--white) !important;
-        }
-
-        .hero-buttons .btn-purple:hover {
-            background-color: rgba(255,255,255,0.12) !important;
-        }
-
-        .btn-purple:hover {
-            background-color: var(--purple-hover) !important;
-            transform: translateY(-2px);
-        }
-
-        /* LÍNEA SECUNDARIA INFORMATIVA */
-        .hero-subline {
-            color: var(--white) !important;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            opacity: 0.95;
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        /* BARRA DE CONFIANZA */
-        .trust-bar {
-            background-color: var(--purple-main);
-            padding: 18px 8%;
-        }
-
-        .trust-bar ul {
-            list-style: none;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px 46px;
-        }
-
-        .trust-bar li {
-            color: var(--text-dark);
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.6px;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            opacity: 0.95;
-        }
-
-        .trust-bar li::before {
-            content: '';
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background: var(--text-dark);
-        }
-
-        /* TARJETAS LIMPIAS */
-        .centers-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            background-color: var(--bg-light);
-        }
-
-        .centers-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 16px;
-        }
-
-        .center-card {
-            background: var(--white);
-            border-radius: 14px;
-            padding: 34px 20px 28px 20px;
-            box-shadow: 0 2px 10px rgba(59, 51, 71, 0.05);
-            border: 1px solid var(--border-light);
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-        }
-
-        .center-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 32px rgba(59, 51, 71, 0.10);
-            border-color: var(--mint-pastel);
-        }
-
-        .icon-box {
-            width: 58px;
-            height: 58px;
-            margin-bottom: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-dark);
-            background-color: var(--bg-white);
-            border: 1.5px solid var(--mint-pastel);
-            border-radius: 50%;
             transition: background-color 0.25s ease;
+            border: none;
         }
 
-        .center-card:hover .icon-box {
-            background-color: var(--mint-pastel);
+        .btn-header:hover {
+            background-color: var(--accent-sage-hover);
+            border-bottom: none !important;
         }
 
-        .icon-box svg {
-            width: 24px;
-            height: 24px;
-            overflow: visible;
-        }
-
-        .icon-box svg path,
-        .icon-box svg circle,
-        .icon-box svg line {
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 1.6;
-        }
-
-        .center-card h3 {
-            color: var(--text-dark);
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            line-height: 1.3;
-            margin-bottom: 10px;
-            letter-spacing: 0.8px;
-        }
-
-        .center-card p {
-            font-size: 0.8rem;
-            color: var(--text-gray);
-            line-height: 1.4;
-        }
-
-        /* SECCIONES DE CONTENIDO */
-        .section-wrapper {
-            max-width: 1200px;
-            margin: 100px auto;
-            padding: 0 4%;
-        }
-
-        .section-title {
-            text-align: center;
-            color: var(--text-dark);
-            font-family: var(--font-display);
-            font-size: 2.6rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-gray);
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        /* SOBRE LA FUNDADORA (Texto a la izquierda, Foto a la derecha) */
-        .founder-section {
-            background-color: var(--bg-light);
-            padding: 70px 4%;
-        }
-
-        .founder-grid {
-            max-width: 1200px;
-            margin: 0 auto;
+        /* HERO SECTION (COMPOSICIÓN CÁLIDA) */
+        .hero {
+            position: relative;
+            min-height: 540px;
             display: grid;
-            grid-template-columns: 1fr 300px; /* Texto 1fr, Foto 300px derecha */
-            gap: 50px;
-            align-items: start;
-        }
-
-        .founder-photo {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 14px;
-            background: linear-gradient(160deg, var(--purple-main) 0%, var(--bg-white) 100%);
-            border: 4px solid var(--white);
-            box-shadow: 0 12px 30px rgba(59, 51, 71, 0.18);
+            grid-template-columns: 1.1fr 0.9fr;
+            background-color: var(--bg-sand);
+            border-bottom: 1px solid var(--border-subtle);
             overflow: hidden;
         }
 
-        .founder-photo img {
-            width: 100%;
-            height: auto;
-            display: block;
+        .hero-left {
+            padding: 80px 8% 80px 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 2;
         }
 
-        .founder-eyebrow {
-            display: inline-block;
-            color: var(--text-dark);
-            background-color: var(--mint-pastel);
-            font-size: 0.72rem;
-            font-weight: 800;
-            letter-spacing: 1px;
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: 3.8rem;
+            font-weight: 400;
+            line-height: 1.08;
+            color: var(--text-charcoal);
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            padding: 6px 14px;
-            border-radius: 20px;
-            margin-bottom: 14px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            max-width: 480px;
+            line-height: 1.7;
         }
 
-        .founder-name {
-            color: var(--text-dark);
-            font-family: var(--font-display);
-            font-size: 2.4rem;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .founder-role {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            font-weight: 600;
+        /* Cinta Manuscrita (Estilo "Liderar con miedo también cansa") */
+        .hero-ribbon {
+            display: inline-block;
+            background-color: var(--accent-rose);
+            color: #FFFFFF;
+            font-family: var(--font-script);
+            font-size: 1.65rem;
+            padding: 8px 28px;
+            border-radius: 30px 4px 30px 4px;
+            transform: rotate(-1.5deg);
+            align-self: flex-start;
+            box-shadow: 0 4px 15px rgba(226, 188, 174, 0.35);
             margin-bottom: 20px;
         }
 
-        .founder-text p {
-            color: var(--text-dark);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 16px;
-        }
-
-        .founder-text strong {
-            color: var(--text-dark);
-        }
-
-        .credentials-label {
-            color: var(--text-dark);
-            font-size: 0.78rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.6px;
-            margin: 24px 0 12px 0;
-        }
-
-        .credential-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .credential-pills span {
-            background-color: var(--bg-white);
-            border: 1px solid var(--border-light);
-            border-left: 3px solid var(--mint-pastel); /* Borde verde menta */
-            color: var(--text-dark);
-            font-size: 0.8rem;
-            font-weight: 600;
-            padding: 8px 14px;
-            border-radius: 6px;
-        }
-
-        /* MÉTODO ÁGORA 360° — DIAGRAMA CIRCULAR */
-        .metodo-wrapper {
-            display: grid;
-            grid-template-columns: 420px 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .metodo-diagram {
+        .hero-right {
             position: relative;
-            width: 100%;
-            max-width: 420px;
-            margin: 0 auto;
+            background: url('image_f91a2f.jpg') center/cover no-repeat;
+            min-height: 100%;
         }
 
-        .metodo-diagram svg {
-            width: 100%;
-            height: auto;
+        /* Transición suave entre la imagen y el fondo arena */
+        .hero-right::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 35%;
+            height: 100%;
+            background: linear-gradient(to right, var(--bg-sand) 0%, transparent 100%);
         }
 
-        .metodo-list {
+        /* SECCIÓN TRIPTICO (BIENVENIDA - SERVICIOS - FRASE) */
+        .content-triad {
+            padding: 70px 7%;
+            display: grid;
+            grid-template-columns: 280px 1fr 300px;
+            gap: 45px;
+            align-items: start;
+        }
+
+        /* Columna 1: Bienvenida */
+        .welcome-box {
             display: flex;
             flex-direction: column;
-            gap: 22px;
-        }
-
-        .metodo-row {
-            display: flex;
-            align-items: flex-start;
             gap: 16px;
-            padding-bottom: 22px;
-            border-bottom: 1px solid var(--border-light);
         }
 
-        .metodo-row:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .metodo-dot {
-            flex-shrink: 0;
-            width: 34px;
-            height: 34px;
+        .welcome-icon {
+            width: 52px;
+            height: 52px;
+            background-color: var(--bg-card-accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        .welcome-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--accent-sage);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .welcome-title {
+            font-family: var(--font-script);
+            font-size: 2.2rem;
+            color: var(--text-charcoal);
+            line-height: 1;
+        }
+
+        .welcome-text {
             font-size: 0.85rem;
-            font-weight: 800;
-            color: var(--text-dark);
-            background-color: var(--mint-pastel); /* Verde menta */
-            margin-top: 2px;
+            color: var(--text-muted);
+            line-height: 1.7;
         }
 
-        .metodo-row h4 {
-            color: var(--text-dark);
-            font-size: 1.05rem;
-            margin-bottom: 4px;
-            font-weight: 800;
+        .welcome-text strong {
+            color: var(--text-charcoal);
+            font-weight: 600;
         }
 
-        .metodo-row p {
-            font-size: 0.87rem;
-            color: var(--text-gray);
-        }
-
-        @media (max-width: 1024px) {
-            .metodo-wrapper { grid-template-columns: 1fr; gap: 40px; }
-            .metodo-diagram { max-width: 320px; }
-            .founder-grid { grid-template-columns: 1fr; gap: 30px; }
-            .founder-photo { max-width: 260px; margin: 0 auto; grid-row: 1; } /* Foto arriba en tablets/móviles */
-        }
-
-        /* HERRAMIENTAS Y BIBLIOTECA */
-        .freemium-container {
-            display: grid;
-            grid-template-columns: 1fr 1.05fr;
-            gap: 30px;
-            align-items: stretch;
-        }
-
-        .box-free, .box-pro {
-            padding: 42px 38px;
-            border-radius: 16px;
-            position: relative;
-        }
-
-        .box-free {
-            background: var(--bg-white);
-            border: 1px solid var(--border-light);
-            box-shadow: 0 4px 14px rgba(0,0,0,0.03);
-        }
-
-        .box-pro {
-            background: linear-gradient(165deg, var(--text-dark) 0%, #1c1a22 100%);
-            box-shadow: 0 20px 40px rgba(59, 51, 71, 0.28);
-            color: var(--white);
-        }
-
-        .pro-badge {
-            position: absolute;
-            top: -14px;
-            right: 34px;
-            background-color: var(--mint-pastel); /* Verde menta */
-            color: var(--text-dark);
-            font-size: 0.68rem;
-            font-weight: 800;
-            letter-spacing: 1.2px;
+        .btn-sage-sm {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-sage);
+            color: #FFFFFF;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-decoration: none;
             text-transform: uppercase;
-            padding: 7px 16px;
-            border-radius: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+            transition: background-color 0.2s;
         }
 
-        .box-free h3 {
-            color: var(--text-dark);
-            font-family: var(--font-display);
-            font-size: 1.55rem;
-            font-weight: 700;
-            margin-bottom: 6px;
+        .btn-sage-sm:hover {
+            background-color: var(--accent-sage-hover);
         }
 
-        .box-pro h3 {
-            color: var(--white);
-            font-family: var(--font-display);
-            font-size: 1.55rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .box-kicker {
-            display: block;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .box-free .box-kicker { color: var(--text-gray); }
-        .box-pro .box-kicker { color: var(--mint-pastel); }
-
-        .feature-list {
-            list-style: none;
-            margin: 22px 0 28px 0;
-        }
-
-        .feature-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid var(--border-light);
-            font-size: 0.9rem;
-            color: var(--text-dark);
+        /* Columna 2: Servicios / Áreas */
+        .services-container {
             display: flex;
-            align-items: flex-start;
-            gap: 10px;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        .box-pro .feature-list li {
-            border-bottom: 1px solid rgba(255,255,255,0.12);
-            color: rgba(255,255,255,0.92);
-        }
-
-        .feature-list li::before {
-            content: '';
-            flex-shrink: 0;
-            width: 16px;
-            height: 16px;
-            margin-top: 2px;
-            border-radius: 50%;
-            border: 1.4px solid var(--mint-pastel);
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.3l2.4 2.4L12 5' fill='none' stroke='%233B3347' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .box-pro .feature-list li::before {
-            border: 1.4px solid var(--mint-pastel);
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.3l2.4 2.4L12 5' fill='none' stroke='%23A2E8DD' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-        }
-
-        .box-pro .btn-cta.btn-accent {
-            box-shadow: 0 8px 20px rgba(162, 232, 221, 0.35);
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: var(--text-dark);
-            color: var(--white);
-            padding: 70px 5% 30px 5%;
-            margin-top: 80px;
-            border-top: 3px solid var(--mint-pastel); /* Borde verde menta */
-        }
-
-        .footer-col h5 {
-            position: relative;
+        .services-header {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border-subtle);
             padding-bottom: 10px;
         }
 
-        .footer-col h5::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 24px;
-            height: 2px;
-            background-color: var(--mint-pastel);
-            opacity: 0.6;
-        }
-
-        .footer-grid {
+        .services-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto 40px auto;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
         }
 
-        .footer-col h5 {
-            font-size: 0.95rem;
-            margin-bottom: 16px;
-            color: var(--mint-pastel);
+        .service-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 220px;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(44, 40, 37, 0.06);
+        }
+
+        .card-tag {
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: var(--accent-rose-dark);
+            margin-bottom: 8px;
         }
 
-        .footer-col ul {
-            list-style: none;
+        .card-title {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-charcoal);
+            line-height: 1.25;
+            margin-bottom: 12px;
         }
 
-        .footer-col a {
-            color: #C5B0E5;
+        .card-link {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-charcoal);
             text-decoration: none;
-            font-size: 0.88rem;
-            line-height: 2;
-            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .footer-col a:hover {
-            color: var(--white);
+        /* Columna 3: Frase Destacada / Quote Box */
+        .quote-box {
+            background-color: var(--bg-card-accent);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 35px 28px;
+            position: relative;
         }
 
-        .footer-bottom {
+        .quote-mark {
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            color: var(--accent-rose);
+            line-height: 0.8;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .quote-text {
+            font-size: 0.92rem;
+            color: var(--text-charcoal);
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        /* BARRA DE TEMAS INFERIOR */
+        .topics-bar {
+            background-color: #E2DDD3;
+            border-top: 1px solid var(--border-subtle);
+            padding: 22px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .topic-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--text-charcoal);
+        }
+
+        .topic-item svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--text-charcoal);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        /* FOOTER CÁLIDO */
+        footer {
+            background-color: var(--bg-sand);
+            border-top: 1px solid var(--border-subtle);
+            padding: 40px 7% 30px 7%;
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            font-size: 0.82rem;
-            color: #94A3B8;
+            font-size: 0.75rem;
+            color: var(--text-muted);
         }
 
-        @media (max-width: 1024px) {
-            .centers-grid { grid-template-columns: repeat(3, 1fr); }
-            .metodo-grid, .freemium-container { grid-template-columns: 1fr; }
+        @media (max-width: 1100px) {
+            .content-triad {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .hero-right {
+                min-height: 300px;
+            }
+            .hero-right::before {
+                width: 100%;
+                height: 30%;
+                background: linear-gradient(to bottom, var(--bg-sand) 0%, transparent 100%);
+            }
         }
 
         @media (max-width: 768px) {
-            header { padding: 0 4%; }
-            .hero-buttons { flex-direction: column; gap: 10px; }
-            .centers-grid, .footer-grid { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 1.8rem; }
-            nav { display: none; }
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .hero-title {
+                font-size: 2.6rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .topics-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER DE ÁGORA LABORAL 360° -->
+    <!-- HEADER & LOGO -->
     <header>
-        <div class="logo-box">
-            <svg class="logo-mark" width="46" height="46" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 23 3 A 20 20 0 0 1 43 23" fill="none" stroke="#D9C7F2" stroke-width="4" stroke-linecap="round"/>
-                <path d="M 43 23 A 20 20 0 0 1 23 43" fill="none" stroke="#A2E8DD" stroke-width="4" stroke-linecap="round"/>
-                <path d="M 23 43 A 20 20 0 0 1 3 23" fill="none" stroke="#D9C7F2" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
-                <path d="M 3 23 A 20 20 0 0 1 23 3" fill="none" stroke="#A2E8DD" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
-                <circle cx="23" cy="23" r="13" fill="#D9C7F2"/>
-                <text x="23" y="28" text-anchor="middle" fill="#3B3347" font-family="Cormorant Garamond, serif" font-size="17" font-weight="700">A</text>
+        <a href="#" class="logo-box">
+            <!-- Icono botánico minimalista -->
+            <svg class="logo-icon" viewBox="0 0 24 24">
+                <path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" />
+                <path d="M12 22V10" />
             </svg>
             <div class="logo-text">
-                <span class="main-title">Ágora Laboral <sup>360°</sup></span>
-                <span class="sub-title">CONSULTORÍA &amp; RIESGO NORMATIVO</span>
+                <span class="logo-title">Ágora Laboral</span>
+                <span class="logo-subtitle">Consultoría &amp; Riesgo Normativo</span>
             </div>
-        </div>
+        </a>
+
         <nav>
             <ul>
-                <li><a href="#" class="active">INICIO</a></li>
-                <li><a href="#servicios">SERVICIOS</a></li>
-                <li><a href="academia/">ACADEMIA</a></li>
-                <li><a href="blog/">BLOG</a></li>
-                <li><a href="observatorio/">OBSERVATORIO</a></li>
-                <li><a href="#fundadora">FUNDADORA</a></li>
-                <li><a href="#contacto">CONTACTO</a></li>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="academia/">Academia</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="observatorio/">Observatorio</a></li>
+                <li><a href="#fundadora">Sobre Mí</a></li>
             </ul>
         </nav>
+
+        <a href="diagnostico/" class="btn-header">
+            Diagnóstico Gratis
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
     </header>
 
-    <!-- HERO BANNER -->
-    <section class="hero-banner">
-        <div class="hero-content">
-            <span class="hero-eyebrow">Consultoría Especializada · Perspectiva de género</span>
-            <h1>Espacios de trabajo seguros, equitativos y libres de violencia</h1>
-            <div class="hero-buttons">
-               <a href="diagnostico/" class="btn-cta btn-accent">REALIZAR DIAGNÓSTICO GRATIS LEY KARIN</a>
-                <a href="#reunion" class="btn-cta btn-purple">AGENDAR REUNIÓN TÉCNICA</a>
-            </div>
-            <p class="hero-subline">Ley 21.643 · Ley 21.828 · Investigaciones Periciales · Método Ágora 360®</p>
+    <!-- PORTADA HERO -->
+    <section class="hero">
+        <div class="hero-left">
+            <h1 class="hero-title">Espacios de trabajo seguros y equitativos</h1>
+            <p class="hero-subtitle">Consultoría especializada en Ley Karin (21.643), Equidad Salarial (21.828) e Investigaciones Periciales.</p>
+            <div class="hero-ribbon">Acompañamiento humano con rigor técnico.</div>
         </div>
+        <div class="hero-right"></div>
     </section>
 
-    <!-- BARRA DE CONFIANZA -->
-    <div class="trust-bar">
-        <ul>
-            <li>Confidencialidad garantizada</li>
-            <li>Atención directa de la fundadora</li>
-            <li>Enfoque técnico-humano</li>
-        </ul>
+    <!-- SECCIÓN TRÍPTICO: BIENVENIDA / SERVICIOS / CITA -->
+    <section class="content-triad" id="servicios">
+        
+        <!-- BIENVENIDA -->
+        <div class="welcome-box">
+            <div class="welcome-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h2 class="welcome-title">Bienvenida</h2>
+            <p class="welcome-text">
+                Este es un espacio para abordar la gestión normativa laboral con rigor pericial, protegiendo la cultura interna, la imparcialidad y la salud mental en las organizaciones.<br><br>
+                <strong>Porque prevenir y sancionar también es cuidar.</strong>
+            </p>
+            <a href="#fundadora" class="btn-sage-sm">Conoce a la Fundadora →</a>
+        </div>
+
+        <!-- SERVICIOS DESTACADOS -->
+        <div class="services-container">
+            <div class="services-header">Áreas de Especialización</div>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <div>
+                        <span class="card-tag">Peritaje</span>
+                        <h3 class="card-title">Investigación Externa</h3>
+                    </div>
+                    <a href="#" class="card-link">Saber más →</a>
+                </div>
+
+                <div class="service-card">
+                    <div>
+                        <span class="card-tag">Acompañamiento</span>
+                        <h3 class="card-title">Asesoría Interna</h3>
+                    </div>
+                    <a href="#" class="card-link">Saber más →</a>
+                </div>
+
+                <div class="service-card">
+                    <div>
+                        <span class="card-tag">Ley 21.828</span>
+                        <h3 class="card-title">Diagnóstico Equidad</h3>
+                    </div>
+                    <a href="#" class="card-link">Saber más →</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CITA DESTACADA -->
+        <div class="quote-box">
+            <span class="quote-mark">“</span>
+            <p class="quote-text">
+                No se trata solo de cumplir la ley, sino de recuperar la confianza, garantizar la imparcialidad y resguardar la dignidad en el trabajo.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- BARRA SUPERIOR DE TEMAS CLAVE -->
+    <div class="topics-bar">
+        <div class="topic-item">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Ley Karin 21.643
+        </div>
+        <div class="topic-item">
+            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            Investigación Pericial
+        </div>
+        <div class="topic-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Clima Laboral
+        </div>
+        <div class="topic-item">
+            <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            Equidad Salarial
+        </div>
     </div>
-
-    <!-- 5 TARJETAS INDEPENDIENTES DEBAJO DE LA PORTADA -->
-    <div class="centers-container" id="servicios">
-        <h2 class="section-title" style="margin-bottom:10px;">Servicios</h2>
-        <p class="section-subtitle">Un acompañamiento técnico y personalizado en cada etapa del proceso.</p>
-        <div class="divider-mark"><span></span></div>
-        <div class="centers-grid">
-            
-            <div class="center-card">
-                <div class="icon-box">
-                    <svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.2"/><line x1="14.5" y1="14.5" x2="20.5" y2="20.5" stroke-linecap="round"/><path d="M7.5 10l1.8 1.8L13 8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <h3>Investigación<br>Externa</h3>
-                <p>Peritaje independiente e imparcial en denuncias de acoso sexual, laboral y violencia con custodia de antecedentes.</p>
-            </div>
-
-            <div class="center-card">
-                <div class="icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M4 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="7.5" r="3.2"/><path d="M15.5 9.2c1.7.3 3 1.6 3.4 3.3M17.2 4.8c1.5.5 2.5 1.9 2.5 3.5 0 1.4-.8 2.6-1.9 3.2" stroke-linecap="round"/></svg>
-                </div>
-                <h3>Asesoría<br>Interna</h3>
-                <p>Soporte técnico y orientación metodológica paso a paso para instructores y fiscales de la empresa.</p>
-            </div>
-
-            <div class="center-card">
-                <div class="icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3" stroke-linecap="round"/><path d="M4 8.5h5l-2.5 7.5-2.5-7.5z" stroke-linejoin="round"/><path d="M15 8.5h5l-2.5 7.5-2.5-7.5z" stroke-linejoin="round"/><path d="M4 8.5c1.5-1.3 3.5-1.3 5 0M15 8.5c1.5-1.3 3.5-1.3 5 0" stroke-linecap="round"/><line x1="12" y1="6" x2="12" y2="6" stroke-linecap="round"/><line x1="6.5" y1="6" x2="17.5" y2="6" stroke-linecap="round"/></svg>
-                </div>
-                <h3>Diagnóstico<br>Ley 21.828</h3>
-                <p>Auditoría integral de brechas, equidad salarial, canales de denuncia y protocolos de prevención organizacional.</p>
-            </div>
-
-            <div class="center-card">
-                <div class="icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M12 4L3 8.5 12 13l9-4.5L12 4z" stroke-linejoin="round"/><path d="M6.5 10.7v4.3c0 1.5 2.5 2.8 5.5 2.8s5.5-1.3 5.5-2.8v-4.3" stroke-linecap="round" stroke-linejoin="round"/><line x1="20" y1="8.5" x2="20" y2="14" stroke-linecap="round"/></svg>
-                </div>
-                <h3>Academia<br>Ágora 360°</h3>
-                <p>Capacitación ejecutiva, talleres de prevención y formación práctica de comités y jefaturas.</p>
-            </div>
-
-            <div class="center-card">
-                <div class="icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M14.7 6.3a3.5 3.5 0 0 0-4.6 4.6l-6.6 6.6 1.6 1.6 6.6-6.6a3.5 3.5 0 0 0 4.6-4.6l-2.3 2.3-1.6-1.6 2.3-2.3z" stroke-linejoin="round" stroke-linecap="round"/></svg>
-                </div>
-                <h3>Herramientas<br>Gratuitas</h3>
-                <p>Calculadora de plazos, checklist preventivo DT, cronogramas y modelos descargables.</p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- SOBRE LA FUNDADORA (TEXTO A LA IZQUIERDA, FOTO A LA DERECHA) -->
-    <section class="founder-section" id="fundadora">
-        <div class="founder-grid">
-            <div class="founder-info">
-                <span class="founder-eyebrow">Quién está detrás del Método 360°</span>
-                <h2 class="founder-name">Mariela Silva</h2>
-                <p class="founder-role">Trabajadora Social · Perito Social · Fundadora de Ágora Laboral 360°</p>
-                <div class="founder-text">
-                    <p>Con formación en <strong>trabajo social y peritaje social</strong>, Mariela combina rigor técnico y mirada humana en la investigación de denuncias de acoso laboral, sexual y violencia en el trabajo.</p>
-                    <p>Es <strong>Magíster en Derecho de Familia</strong>, lo que le permite integrar el análisis jurídico con la evaluación social y sistémica exigida por la Ley 21.643 (Ley Karin) y la Ley 21.828.</p>
-                    <p>Cuenta con formación especializada en <strong>investigación Ley Karin, perspectiva de género y derechos humanos</strong>, y ha desarrollado su trayectoria profesional en fundaciones y en el ámbito municipal, interviniendo directamente en casos sociales y familiares complejos.</p>
-                </div>
-                <p class="credentials-label">Diplomados y formación complementaria</p>
-                <div class="credential-pills">
-                    <span>Pericia Social en Procesos Judiciales</span>
-                    <span>Marco Jurídico para la Intervención Familiar</span>
-                    <span>Intervención Familiar desde Perspectiva Sistémica</span>
-                    <span>Consumo de Drogas: Prevención y Modelos de Intervención</span>
-                    <span>Emprendimiento desde el Trabajo Social</span>
-                </div>
-            </div>
-            <div class="founder-photo">
-                <img src="foto-fundadora.jpg" alt="Foto profesional de la fundadora Mariela Silva">
-            </div>
-        </div>
-    </section>
-
-    <!-- MÉTODO ÁGORA 360° -->
-    <section class="section-wrapper" id="metodo">
-        <h2 class="section-title">Método Ágora 360°</h2>
-        <p class="section-subtitle">Arquitectura metodológica unificada para garantizar objetividad y rigor normativo.</p>
-        <div class="divider-mark"><span></span></div>
-
-        <div class="metodo-wrapper">
-            <div class="metodo-diagram">
-                <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="210" cy="210" r="168" fill="none" stroke="#E5DFED" stroke-width="2"/>
-                    <path d="M 210 42 A 168 168 0 0 1 378 210" fill="none" stroke="#D9C7F2" stroke-width="14" stroke-linecap="round"/>
-                    <path d="M 378 210 A 168 168 0 0 1 210 378" fill="none" stroke="#A2E8DD" stroke-width="14" stroke-linecap="round"/>
-                    <path d="M 210 378 A 168 168 0 0 1 42 210" fill="none" stroke="#D9C7F2" stroke-width="14" stroke-linecap="round" opacity="0.55"/>
-                    <path d="M 42 210 A 168 168 0 0 1 210 42" fill="none" stroke="#A2E8DD" stroke-width="14" stroke-linecap="round" opacity="0.55"/>
-                    <circle cx="210" cy="210" r="86" fill="#D9C7F2"/>
-                    <text x="210" y="202" text-anchor="middle" fill="#3B3347" font-family="Open Sans, sans-serif" font-size="34" font-weight="800">360°</text>
-                    <text x="210" y="226" text-anchor="middle" fill="#3B3347" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">MÉTODO ÁGORA</text>
-                    <text x="290" y="88" text-anchor="middle" fill="#3B3347" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">01</text>
-                    <text x="340" y="300" text-anchor="middle" fill="#3B3347" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">02</text>
-                    <text x="130" y="345" text-anchor="middle" fill="#3B3347" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">03</text>
-                    <text x="78" y="115" text-anchor="middle" fill="#3B3347" font-family="Open Sans, sans-serif" font-size="13" font-weight="800">04</text>
-                </svg>
-            </div>
-
-            <div class="metodo-list">
-                <div class="metodo-row">
-                    <span class="metodo-dot">01</span>
-                    <div>
-                        <h4>Imparcialidad</h4>
-                        <p>Peritaje técnico e independiente, desmarcado de presiones o sesgos corporativos.</p>
-                    </div>
-                </div>
-                <div class="metodo-row">
-                    <span class="metodo-dot">02</span>
-                    <div>
-                        <h4>Trazabilidad</h4>
-                        <p>Cadena de custodia en el resguardo de testimonios, antecedentes y actas.</p>
-                    </div>
-                </div>
-                <div class="metodo-row">
-                    <span class="metodo-dot">03</span>
-                    <div>
-                        <h4>Objetividad</h4>
-                        <p>Ponderación neutral de evidencia bajo los criterios oficiales de la Dirección del Trabajo.</p>
-                    </div>
-                </div>
-                <div class="metodo-row">
-                    <span class="metodo-dot">04</span>
-                    <div>
-                        <h4>Cumplimiento</h4>
-                        <p>Control estricto del plazo legal de 30 días e hitos del procedimiento sancionatorio.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- HERRAMIENTAS Y BIBLIOTECA -->
-    <section class="section-wrapper" id="herramientas">
-        <h2 class="section-title">Biblioteca de Recursos &amp; Herramientas</h2>
-        <p class="section-subtitle">Acceso libre para la gestión interna y kits profesionales avanzados.</p>
-        <div class="divider-mark"><span></span></div>
-
-        <div class="freemium-container">
-            <div class="box-free">
-                <span class="box-kicker">Acceso libre</span>
-                <h3>Recursos Abiertos</h3>
-                <ul class="feature-list">
-                    <li>Calculadora interactiva de 30 días legales</li>
-                    <li>Checklist preventivo Dirección del Trabajo</li>
-                    <li>Cronograma de implementación Ley Karin</li>
-                    <li>Textos oficiales Ley 21.643 y Ley 21.828</li>
-                </ul>
-                <a href="#descarga" class="btn-cta btn-purple">DESCARGAR HERRAMIENTAS</a>
-            </div>
-
-            <div class="box-pro">
-                <span class="pro-badge">Premium</span>
-                <span class="box-kicker">Acceso profesional</span>
-                <h3>Kit Profesional</h3>
-                <ul class="feature-list">
-                    <li>Manual completo de Investigación (Método 360°)</li>
-                    <li>Plantillas editables de actas, entrevistas e informes</li>
-                    <li>Matrices de evaluación de riesgo organizacional</li>
-                    <li>Jurisprudencia comentada y criterios de la DT</li>
-                </ul>
-                <a href="#contacto" class="btn-cta btn-accent">SOLICITAR KIT PROFESIONAL</a>
-            </div>
-        </div>
-    </section>
 
     <!-- FOOTER -->
     <footer id="contacto">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <div class="logo-box" style="margin-bottom: 12px;">
-                    <svg class="logo-mark" width="38" height="38" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 23 3 A 20 20 0 0 1 43 23" fill="none" stroke="#D9C7F2" stroke-width="4" stroke-linecap="round"/>
-                        <path d="M 43 23 A 20 20 0 0 1 23 43" fill="none" stroke="#A2E8DD" stroke-width="4" stroke-linecap="round"/>
-                        <path d="M 23 43 A 20 20 0 0 1 3 23" fill="none" stroke="#D9C7F2" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
-                        <path d="M 3 23 A 20 20 0 0 1 23 3" fill="none" stroke="#A2E8DD" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
-                        <circle cx="23" cy="23" r="13" fill="#FFFFFF"/>
-                        <text x="23" y="28" text-anchor="middle" fill="#3B3347" font-family="Cormorant Garamond, serif" font-size="17" font-weight="700">A</text>
-                    </svg>
-                    <span class="main-title" style="color: var(--white); font-size: 1.2rem; font-weight: 700; font-family: var(--font-display);">Ágora Laboral <sup>360°</sup></span>
-                </div>
-                <p style="font-size: 0.85rem; color: #94A3B8;">Consultora técnica especializada en gestión de riesgo, investigación pericial de acoso y cumplimiento Ley Karin y Ley 21.828.</p>
-            </div>
-            <div class="footer-col">
-                <h5>Servicios</h5>
-                <ul>
-                    <li><a href="#servicios">Investigación Externa</a></li>
-                    <li><a href="#servicios">Asesoría Interna</a></li>
-                    <li><a href="#servicios">Ley 21.828 (Equidad)</a></li>
-                    <li><a href="#servicios">Academia 360°</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Herramientas</h5>
-                <ul>
-                    <li><a href="diagnostico/">Diagnóstico Gratis</a></li>
-                    <li><a href="calculadora.html">Calculadora de Plazos</a></li>
-                    <li><a href="checklist.html">Checklist DT</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Contacto</h5>
-                <p style="font-size: 0.85rem; color: #94A3B8;">contacto@agoralaboral.cl</p>
-                <a href="#" class="btn-cta btn-accent" style="margin-top: 15px; font-size: 0.75rem; padding: 8px 14px;">WhatsApp Directo</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.
-        </div>
+        <p>&copy; 2026 Ágora Laboral 360°. Consultoría Especializada &amp; Riesgo Normativo. Todos los derechos reservados.</p>
     </footer>
 
 </body>
