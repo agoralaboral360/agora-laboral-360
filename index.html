@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ágora Laboral 360° | Consultoría &amp; Riesgo Normativo</title>
-    <!-- Fuentes: Cormorant Garamond (Titulares editoriales), Montserrat (Navegación y texto limpio), Dancing Script (Acento manuscrito) -->
+    <!-- Fuentes oficiales: Cormorant Garamond (Titulares), Montserrat (Cuerpo) y Dancing Script (Cinta manuscrita) -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Dancing+Script:wght@500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             /* PALETA EDITORIAL "ROSA VIEJO & ARENA" */
-            --bg-sand: #EBE6DD;           /* Fondo general tono arena cálido */
-            --bg-card: #FAF8F5;           /* Blanco roto / lino para tarjetas */
-            --bg-card-accent: #EFEAE2;    /* Tono neutro para cajas destacadas */
+            --bg-sand: #EBE6DD;           /* Fondo general tono arena */
+            --bg-card: #FAF8F5;           /* Lino / blanco roto */
+            --bg-card-accent: #EFEAE2;    /* Tono neutro para paneles */
             
-            --text-charcoal: #2C2825;     /* Tinta carbón profunda para titulares */
-            --text-muted: #615B55;        /* Gris terroso para párrafos */
+            --text-charcoal: #2C2825;     /* Tinta carbón para textos y titulares */
+            --text-muted: #615B55;        /* Gris terroso suave */
             
             --accent-sage: #828776;       /* Verde oliva / salvia para botones principales */
             --accent-sage-hover: #6E7363;
-            --accent-rose: #E2BCAE;       /* Rosa viejo / blush para la cinta manuscrita */
-            --accent-rose-dark: #C99A8B;
             
-            --border-subtle: #D8D1C5;     /* Límite orgánico y fino */
+            --accent-rose: #C48272;       /* Rosa Viejo auténtico */
+            --accent-rose-dark: #A36557;
+            
+            --border-subtle: #D8D1C5;     /* Líneas finas orgánicas */
             
             --font-serif: 'Cormorant Garamond', serif;
             --font-sans: 'Montserrat', sans-serif;
@@ -137,10 +138,10 @@
             border-bottom: none !important;
         }
 
-        /* HERO SECTION (COMPOSICIÓN CÁLIDA) */
+        /* HERO PORTADA (IMAGEN DIFUMINADA Y LIGERAMENTE MÁS OSCURA) */
         .hero {
             position: relative;
-            min-height: 540px;
+            min-height: 550px;
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
             background-color: var(--bg-sand);
@@ -149,7 +150,7 @@
         }
 
         .hero-left {
-            padding: 80px 8% 80px 10%;
+            padding: 90px 8% 90px 10%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -177,7 +178,7 @@
             line-height: 1.7;
         }
 
-        /* Cinta Manuscrita (Estilo "Liderar con miedo también cansa") */
+        /* Cinta Manuscrita Rosa Viejo */
         .hero-ribbon {
             display: inline-block;
             background-color: var(--accent-rose);
@@ -188,28 +189,30 @@
             border-radius: 30px 4px 30px 4px;
             transform: rotate(-1.5deg);
             align-self: flex-start;
-            box-shadow: 0 4px 15px rgba(226, 188, 174, 0.35);
+            box-shadow: 0 4px 15px rgba(196, 130, 114, 0.35);
             margin-bottom: 20px;
         }
 
+        /* Lado Derecho: Imagen con degradado difuminado orgánico */
         .hero-right {
             position: relative;
             background: url('image_f91a2f.jpg') center/cover no-repeat;
             min-height: 100%;
+            filter: brightness(0.90) contrast(0.96); /* Tono un poco más oscuro y cálido */
         }
 
-        /* Transición suave entre la imagen y el fondo arena */
+        /* Máscara de difuminado suave (Transición acuarela de arena a la imagen) */
         .hero-right::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 35%;
-            height: 100%;
-            background: linear-gradient(to right, var(--bg-sand) 0%, transparent 100%);
+            inset: 0;
+            background: 
+                linear-gradient(to right, var(--bg-sand) 0%, rgba(235, 230, 221, 0.65) 25%, transparent 65%),
+                linear-gradient(to bottom, var(--bg-sand) 0%, transparent 12%);
+            pointer-events: none;
         }
 
-        /* SECCIÓN TRIPTICO (BIENVENIDA - SERVICIOS - FRASE) */
+        /* SECCIONES TRÍPTICO */
         .content-triad {
             padding: 70px 7%;
             display: grid;
@@ -218,7 +221,6 @@
             align-items: start;
         }
 
-        /* Columna 1: Bienvenida */
         .welcome-box {
             display: flex;
             flex-direction: column;
@@ -283,7 +285,6 @@
             background-color: var(--accent-sage-hover);
         }
 
-        /* Columna 2: Servicios / Áreas */
         .services-container {
             display: flex;
             flex-direction: column;
@@ -353,7 +354,6 @@
             gap: 6px;
         }
 
-        /* Columna 3: Frase Destacada / Quote Box */
         .quote-box {
             background-color: var(--bg-card-accent);
             border: 1px solid var(--border-subtle);
@@ -409,7 +409,7 @@
             stroke-width: 1.5;
         }
 
-        /* FOOTER CÁLIDO */
+        /* FOOTER */
         footer {
             background-color: var(--bg-sand);
             border-top: 1px solid var(--border-subtle);
@@ -428,11 +428,9 @@
                 grid-template-columns: 1fr;
             }
             .hero-right {
-                min-height: 300px;
+                min-height: 320px;
             }
             .hero-right::before {
-                width: 100%;
-                height: 30%;
                 background: linear-gradient(to bottom, var(--bg-sand) 0%, transparent 100%);
             }
         }
@@ -466,13 +464,12 @@
     <!-- HEADER & LOGO -->
     <header>
         <a href="#" class="logo-box">
-            <!-- Icono botánico minimalista -->
             <svg class="logo-icon" viewBox="0 0 24 24">
                 <path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" />
                 <path d="M12 22V10" />
             </svg>
             <div class="logo-text">
-                <span class="logo-title">Ágora Laboral 360°</span>
+                <span class="logo-title">Ágora Laboral</span>
                 <span class="logo-subtitle">Consultoría &amp; Riesgo Normativo</span>
             </div>
         </a>
@@ -484,12 +481,12 @@
                 <li><a href="academia/">Academia</a></li>
                 <li><a href="blog/">Blog</a></li>
                 <li><a href="observatorio/">Observatorio</a></li>
-                
+                <li><a href="#fundadora">Sobre Mí</a></li>
             </ul>
         </nav>
 
         <a href="diagnostico/" class="btn-header">
-            Diagnóstico inicial
+            Diagnóstico Gratis
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
     </header>
@@ -497,14 +494,14 @@
     <!-- PORTADA HERO -->
     <section class="hero">
         <div class="hero-left">
-            <h1 class="hero-title">Espacios de trabajo seguros, equitativosy responsables</h1>
+            <h1 class="hero-title">Espacios de trabajo seguros y equitativos</h1>
             <p class="hero-subtitle">Consultoría laboral, investigación y gestión de riesgo normativo.</p>
             <div class="hero-ribbon">Acompañamiento humano con rigor técnico.</div>
         </div>
         <div class="hero-right"></div>
     </section>
 
-    <!-- SECCIÓN TRÍPTICO: BIENVENIDA / SERVICIOS / CITA -->
+    <!-- SECCIÓN TRÍPTICO -->
     <section class="content-triad" id="servicios">
         
         <!-- BIENVENIDA -->
@@ -544,7 +541,7 @@
                 <div class="service-card">
                     <div>
                         <span class="card-tag">Ley 21.828</span>
-                        <h3 class="card-title">Diagnóstico Inicial</h3>
+                        <h3 class="card-title">Diagnóstico Equidad</h3>
                     </div>
                     <a href="#" class="card-link">Saber más →</a>
                 </div>
@@ -565,20 +562,24 @@
     <!-- BARRA SUPERIOR DE TEMAS CLAVE -->
     <div class="topics-bar">
         <div class="topic-item">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <!-- Ícono de balanza / ley -->
+            <svg viewBox="0 0 24 24"><path d="M12 3v18M3 9l9-6 9 6M5 14h6M13 14h6"/></svg>
             Ley Karin 21.643
         </div>
         <div class="topic-item">
-            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            <!-- Ícono de documento pericial -->
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
             Investigación Pericial
         </div>
         <div class="topic-item">
+            <!-- Ícono de clima laboral -->
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
             Clima Laboral
         </div>
         <div class="topic-item">
+            <!-- Ícono de equidad salarial -->
             <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-            Ley 21.828
+            Ley 21.828 Equidad
         </div>
     </div>
 
