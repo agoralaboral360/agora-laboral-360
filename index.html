@@ -8,20 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* PALETA EDITORIAL "ROSA VIEJO SUAVE, SALVIA & CAFÉ ESPRESO" */
+            /* PALETA EDITORIAL "VERDE SALVIA, ROSA VIEJO & ARENA" */
             --bg-sand: #EBE6DD;           /* Fondo general tono arena */
             --bg-card: #EFEAE2;           /* Arena cálido para tarjetas */
             --bg-card-accent: #E5DFD5;    /* Paneles neutros */
             
-            --color-espresso: #282320;    /* Café Espreso oscuro para la barra inferior */
-            --text-charcoal: #2C2825;     /* Tinta carbón para textos generales */
+            --bg-topics: #D3D2C4;         /* Verde Salvia claro para la barra inferior */
+            --text-charcoal: #2C2825;     /* Tinta carbón para textos y titulares */
             --text-muted: #615B55;        /* Gris terroso suave */
             
-            --accent-sage: #717764;       /* Verde Salvia */
-            --accent-sage-hover: #5E6354;
+            --accent-sage: #828776;       /* Verde Salvia (Igual al botón Diagnóstico) */
+            --accent-sage-hover: #6E7363;
             
-            --accent-rose: #DCA69A;       /* Rosa Viejo Suave */
-            --accent-rose-dark: #B87B6E;  /* Rosa Viejo medio para contrastes */
+            --accent-rose: #C38271;       /* Rosa Viejo suave */
+            --accent-rose-dark: #A36557;
             
             --border-subtle: #D8D1C5;     /* Líneas finas orgánicas */
             
@@ -137,7 +137,7 @@
             background-color: var(--accent-sage-hover);
         }
 
-        /* HERO PORTADA FLUIDA */
+        /* HERO PORTADA (FOTO LIGERAMENTE OSCURECIDA PARA MAYOR CONTRASTE) */
         .hero {
             position: relative;
             min-height: 560px;
@@ -148,14 +148,15 @@
             overflow: hidden;
         }
 
+        /* Degradado gradual con filtro sutil para aumentar contraste de lectura */
         .hero-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(to right,
                 var(--bg-sand) 0%,
-                rgba(235, 230, 221, 0.95) 32%,
-                rgba(235, 230, 221, 0.55) 58%,
-                rgba(40, 35, 32, 0.18) 100%);
+                rgba(235, 230, 221, 0.96) 35%,
+                rgba(235, 230, 221, 0.65) 60%,
+                rgba(40, 35, 32, 0.25) 100%);
             z-index: 1;
         }
 
@@ -190,10 +191,10 @@
             line-height: 1.7;
         }
 
-        /* Cinta manuscrita Rosa Viejo Suave */
+        /* Cinta manuscrita en Verde Salvia (Igual al botón Diagnóstico) */
         .hero-ribbon {
             display: inline-block;
-            background-color: var(--accent-rose);
+            background-color: var(--accent-sage);
             color: #FFFFFF;
             font-family: var(--font-serif);
             font-style: italic;
@@ -202,7 +203,7 @@
             border-radius: 30px 6px 30px 6px;
             transform: rotate(-1.5deg);
             align-self: flex-start;
-            box-shadow: 0 6px 18px rgba(220, 166, 154, 0.35);
+            box-shadow: 0 6px 18px rgba(130, 135, 118, 0.35);
         }
 
         /* SECCIONES TRÍPTICO DE CONTENIDO */
@@ -343,7 +344,7 @@
             width: 36px;
             height: 36px;
             border-radius: 50%;
-            background-color: var(--accent-rose);
+            background-color: var(--accent-sage);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -352,7 +353,7 @@
         }
 
         .thumb-2 .service-icon {
-            background-color: var(--accent-sage);
+            background-color: var(--accent-rose);
         }
 
         .service-icon svg {
@@ -412,7 +413,7 @@
         .quote-mark {
             font-family: var(--font-serif);
             font-size: 4rem;
-            color: var(--accent-rose);
+            color: var(--accent-sage);
             line-height: 0.8;
             margin-bottom: 10px;
             display: block;
@@ -425,88 +426,98 @@
             font-style: italic;
         }
 
-        /* BARRA INFERIOR CAFÉ ESPRESO CON PÍLDORAS ROSA VIEJO SUAVE Y SALVIA */
+        /* BARRA INFERIOR EDITORIAL - VERDE SALVIA CLARO CON LÍNEAS LIMPIAS (EXACTA AL EJEMPLO) */
         .topics-bar {
-            background-color: var(--color-espresso);
-            padding: 24px 6%;
+            background-color: var(--bg-topics);
+            border-top: 1px solid var(--border-subtle);
+            padding: 20px 6%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 20px;
         }
 
-        .topics-pills {
+        .topics-list {
             display: flex;
+            align-items: center;
             flex-wrap: wrap;
-            gap: 14px;
-            align-items: center;
+            gap: 28px;
         }
 
-        .topic-pill {
-            display: inline-flex;
+        .topics-header {
+            display: flex;
             align-items: center;
-            gap: 10px;
-            background-color: var(--accent-sage);
-            border-radius: 30px;
-            padding: 10px 22px;
-            font-size: 0.72rem;
-            font-weight: 600;
-            letter-spacing: 1.2px;
+            gap: 8px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 1.8px;
             text-transform: uppercase;
-            color: #FFFFFF;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            color: var(--text-charcoal);
         }
 
-        .topic-pill.rose {
-            background-color: var(--accent-rose);
+        .topic-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-charcoal);
         }
 
-        .topic-pill svg {
-            width: 16px;
-            height: 16px;
-            stroke: #FFFFFF;
+        .topic-item svg, .topics-header svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--text-charcoal);
             fill: none;
-            stroke-width: 1.8;
+            stroke-width: 1.4;
             flex-shrink: 0;
         }
 
         .social-icons {
             display: flex;
-            gap: 12px;
+            gap: 10px;
+            align-items: center;
         }
 
         .social-icons a {
-            width: 38px;
-            height: 38px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--text-charcoal);
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background-color 0.2s;
+            transition: all 0.2s ease;
         }
 
         .social-icons a:hover {
-            background-color: var(--accent-rose);
+            background-color: var(--accent-sage);
+            border-color: var(--accent-sage);
+        }
+
+        .social-icons a:hover svg {
+            stroke: #FFFFFF;
         }
 
         .social-icons svg {
-            width: 16px;
-            height: 16px;
-            stroke: #FFFFFF;
+            width: 15px;
+            height: 15px;
+            stroke: var(--text-charcoal);
             fill: none;
-            stroke-width: 1.6;
+            stroke-width: 1.4;
         }
 
         /* FOOTER */
         footer {
-            background-color: var(--color-espresso);
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 24px 7%;
+            background-color: var(--bg-topics);
+            border-top: 1px solid rgba(44, 40, 37, 0.1);
+            padding: 22px 7%;
             text-align: center;
             font-size: 0.75rem;
-            color: #D2C8BF;
+            color: var(--text-muted);
         }
 
         @media (max-width: 1100px) {
@@ -577,7 +588,7 @@
         </a>
     </header>
 
-    <!-- PORTADA HERO -->
+    <!-- PORTADA HERO LUMINOSA CON MAYOR CONTRASTE -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -666,24 +677,37 @@
 
     </section>
 
-    <!-- BARRA INFERIOR CAFÉ ESPRESO CON PÍLDORAS SÓLIDAS EN SALVIA Y ROSA VIEJO SUAVE -->
+    <!-- BARRA INFERIOR EDITORIAL ILUSTRADA (IDÉNTICA A LA IMAGEN DE REFERENCIA) -->
     <div class="topics-bar">
-        <div class="topics-pills">
-            <div class="topic-pill">
-                <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-                Ley Karin 21.643
+        <div class="topics-list">
+            <div class="topics-header">
+                <svg viewBox="0 0 24 24"><path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z"/><path d="M12 22V10"/></svg>
+                Hablemos de:
             </div>
-            <div class="topic-pill rose">
-                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                Investigación Pericial
+            
+            <div class="topic-item">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M9 15c.5 1 1.5 1.5 3 1.5s2.5-.5 3-1.5"/></svg>
+                Salud Mental
             </div>
-            <div class="topic-pill">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+
+            <div class="topic-item">
+                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Liderazgo Humano
+            </div>
+
+            <div class="topic-item">
+                <svg viewBox="0 0 24 24"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.44A9 9 0 1 1 12 3z"/></svg>
                 Clima Laboral
             </div>
-            <div class="topic-pill rose">
-                <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-                Ley 21.828 Equidad
+
+            <div class="topic-item">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                Ley Karin
+            </div>
+
+            <div class="topic-item">
+                <svg viewBox="0 0 24 24"><path d="M12 22a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/><path d="M12 2v4"/><path d="M12 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                Maternidad y Trabajo
             </div>
         </div>
 
