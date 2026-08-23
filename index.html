@@ -8,22 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Dancing+Script:wght@500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* PALETA EDITORIAL "ROSA VIEJO & ARENA" */
+            /* PALETA EDITORIAL "ROSA VIEJO SUAVE & ARENA" */
             --bg-sand: #EBE6DD;           /* Fondo general tono arena */
             --bg-card: #FAF8F5;           /* Lino / blanco roto */
             --bg-card-accent: #EFEAE2;    /* Tono neutro para paneles */
-            
+
             --text-charcoal: #2C2825;     /* Tinta carbón para textos y titulares */
             --text-muted: #615B55;        /* Gris terroso suave */
-            
+
             --accent-sage: #828776;       /* Verde oliva / salvia para botones principales */
             --accent-sage-hover: #6E7363;
-            
-            --accent-rose: #C48272;       /* Rosa Viejo auténtico */
-            --accent-rose-dark: #A36557;
-            
+            --accent-sage-pale: #E4E4DA;  /* Salvia muy pálido, para píldoras */
+
+            --accent-rose: #E3C2B8;       /* Rosa viejo suave — relleno de cinta y píldoras */
+            --accent-rose-pale: #F3E4DF;  /* Rosa viejo muy claro — fondos de chip */
+            --accent-rose-dark: #B08477;  /* Rosa viejo más profundo — solo para texto/contraste */
+
             --border-subtle: #D8D1C5;     /* Líneas finas orgánicas */
-            
+
             --font-serif: 'Cormorant Garamond', serif;
             --font-sans: 'Montserrat', sans-serif;
             --font-script: 'Dancing Script', cursive;
@@ -138,19 +140,20 @@
             border-bottom: none !important;
         }
 
-        /* HERO PORTADA (IMAGEN DIFUMINADA Y LIGERAMENTE MÁS OSCURA) */
+        /* HERO PORTADA */
         .hero {
             position: relative;
-            min-height: 550px;
+            min-height: 560px;
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
+            grid-template-columns: 1fr 1.15fr;
             background-color: var(--bg-sand);
             border-bottom: 1px solid var(--border-subtle);
             overflow: hidden;
         }
 
         .hero-left {
-            padding: 90px 8% 90px 10%;
+            position: relative;
+            padding: 90px 6% 120px 10%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -159,7 +162,7 @@
 
         .hero-title {
             font-family: var(--font-serif);
-            font-size: 3.8rem;
+            font-size: 3.7rem;
             font-weight: 400;
             line-height: 1.08;
             color: var(--text-charcoal);
@@ -173,50 +176,52 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--text-muted);
-            margin-bottom: 32px;
-            max-width: 480px;
+            max-width: 420px;
             line-height: 1.7;
         }
 
-        /* Cinta Manuscrita Rosa Viejo */
+        /* Cinta manuscrita — trazo suave que se apoya sobre el borde de la foto */
         .hero-ribbon {
+            position: absolute;
+            left: 10%;
+            bottom: 64px;
+            z-index: 3;
             display: inline-block;
             background-color: var(--accent-rose);
-            color: #FFFFFF;
+            color: var(--text-charcoal);
             font-family: var(--font-script);
-            font-size: 1.65rem;
-            padding: 8px 28px;
-            border-radius: 30px 4px 30px 4px;
+            font-size: 1.55rem;
+            padding: 10px 30px;
+            border-radius: 30px 6px 30px 6px;
             transform: rotate(-1.5deg);
-            align-self: flex-start;
-            box-shadow: 0 4px 15px rgba(196, 130, 114, 0.35);
-            margin-bottom: 20px;
+            box-shadow: 0 10px 24px rgba(176, 132, 119, 0.28);
+            max-width: 340px;
         }
 
-        /* Lado Derecho: Imagen con degradado difuminado orgánico */
+        /* Lado Derecho: foto */
         .hero-right {
             position: relative;
             background: url('image_f91a2f.jpg') center/cover no-repeat;
             min-height: 100%;
-            filter: brightness(0.90) contrast(0.96); /* Tono un poco más oscuro y cálido */
+            filter: brightness(0.94) contrast(0.98);
         }
 
-        /* Máscara de difuminado suave (Transición acuarela de arena a la imagen) */
+        /* Máscara de difuminado suave y ligera (transición arena → foto) */
         .hero-right::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: 
-                linear-gradient(to right, var(--bg-sand) 0%, rgba(235, 230, 221, 0.65) 25%, transparent 65%),
-                linear-gradient(to bottom, var(--bg-sand) 0%, transparent 12%);
+            background:
+                linear-gradient(to right, var(--bg-sand) 0%, rgba(235, 230, 221, 0.35) 14%, transparent 42%),
+                linear-gradient(to bottom, rgba(235, 230, 221, 0.25) 0%, transparent 16%);
             pointer-events: none;
         }
 
-        /* SECCIONES TRÍPTICO */
+        /* SECCIÓN TRÍPTICO */
         .content-triad {
-            padding: 70px 7%;
+            padding: 80px 7% 60px 7%;
             display: grid;
-            grid-template-columns: 280px 1fr 300px;
+            grid-template-columns: 270px 1fr 280px;
             gap: 45px;
             align-items: start;
         }
@@ -268,6 +273,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            gap: 6px;
             background-color: var(--accent-sage);
             color: #FFFFFF;
             padding: 12px 20px;
@@ -278,6 +284,7 @@
             text-decoration: none;
             text-transform: uppercase;
             margin-top: 10px;
+            width: fit-content;
             transition: background-color 0.2s;
         }
 
@@ -310,18 +317,64 @@
         .service-card {
             background-color: var(--bg-card);
             border: 1px solid var(--border-subtle);
-            border-radius: 6px;
-            padding: 20px;
+            border-radius: 8px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            min-height: 220px;
             transition: transform 0.25s, box-shadow 0.25s;
         }
 
         .service-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(44, 40, 37, 0.06);
+            box-shadow: 0 14px 28px rgba(44, 40, 37, 0.08);
+        }
+
+        .service-thumb {
+            position: relative;
+            height: 108px;
+            background: url('image_f91a2f.jpg') center/cover no-repeat;
+        }
+
+        .service-thumb.thumb-1 { background-position: 20% 30%; }
+        .service-thumb.thumb-2 { background-position: 60% 50%; }
+        .service-thumb.thumb-3 { background-position: 80% 20%; }
+
+        .service-thumb::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(44, 40, 37, 0.28);
+        }
+
+        .service-icon {
+            position: absolute;
+            bottom: -18px;
+            left: 16px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .service-icon svg {
+            width: 17px;
+            height: 17px;
+            stroke: var(--accent-rose-dark);
+            fill: none;
+            stroke-width: 1.6;
+        }
+
+        .service-body {
+            padding: 28px 18px 20px 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
         }
 
         .card-tag {
@@ -335,11 +388,11 @@
 
         .card-title {
             font-family: var(--font-serif);
-            font-size: 1.35rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: var(--text-charcoal);
             line-height: 1.25;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .card-link {
@@ -378,35 +431,88 @@
             font-style: italic;
         }
 
-        /* BARRA DE TEMAS INFERIOR */
+        /* BARRA DE TEMAS INFERIOR — PÍLDORAS */
         .topics-bar {
             background-color: #E2DDD3;
             border-top: 1px solid var(--border-subtle);
-            padding: 22px 6%;
+            padding: 26px 6%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 16px;
         }
 
-        .topic-item {
+        .topics-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--text-charcoal);
+            margin-right: 6px;
+        }
+
+        .topics-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .topic-pill {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 0.68rem;
+            gap: 8px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 30px;
+            padding: 8px 16px 8px 12px;
+            font-size: 0.66rem;
             font-weight: 600;
-            letter-spacing: 1.8px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             color: var(--text-charcoal);
         }
 
-        .topic-item svg {
-            width: 18px;
-            height: 18px;
+        .topic-pill svg {
+            width: 15px;
+            height: 15px;
+            stroke: var(--accent-sage);
+            fill: none;
+            stroke-width: 1.6;
+            flex-shrink: 0;
+        }
+
+        .topic-pill.rose svg { stroke: var(--accent-rose-dark); }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--accent-rose-pale);
+            border-color: var(--accent-rose);
+        }
+
+        .social-icons svg {
+            width: 15px;
+            height: 15px;
             stroke: var(--text-charcoal);
             fill: none;
-            stroke-width: 1.5;
+            stroke-width: 1.6;
         }
 
         /* FOOTER */
@@ -433,6 +539,12 @@
             .hero-right::before {
                 background: linear-gradient(to bottom, var(--bg-sand) 0%, transparent 100%);
             }
+            .hero-ribbon {
+                position: static;
+                margin-top: 24px;
+                transform: rotate(-1deg);
+            }
+            .hero-left { padding-bottom: 40px; }
         }
 
         @media (max-width: 768px) {
@@ -496,14 +608,14 @@
         <div class="hero-left">
             <h1 class="hero-title">Espacios de trabajo seguros y equitativos</h1>
             <p class="hero-subtitle">Consultoría laboral, investigación y gestión de riesgo normativo.</p>
-            <div class="hero-ribbon">Acompañamiento humano con rigor técnico.</div>
         </div>
         <div class="hero-right"></div>
+        <div class="hero-ribbon">Acompañamiento humano con rigor técnico.</div>
     </section>
 
     <!-- SECCIÓN TRÍPTICO -->
     <section class="content-triad" id="servicios">
-        
+
         <!-- BIENVENIDA -->
         <div class="welcome-box">
             <div class="welcome-icon">
@@ -521,29 +633,50 @@
         <div class="services-container">
             <div class="services-header">Áreas de Especialización</div>
             <div class="services-grid">
-                
+
                 <div class="service-card">
-                    <div>
-                        <span class="card-tag">Peritaje</span>
-                        <h3 class="card-title">Investigación Externa</h3>
+                    <div class="service-thumb thumb-1">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 3v18M3 9l9-6 9 6M5 14h6M13 14h6"/></svg>
+                        </div>
                     </div>
-                    <a href="#" class="card-link">Saber más →</a>
+                    <div class="service-body">
+                        <div>
+                            <span class="card-tag">Peritaje</span>
+                            <h3 class="card-title">Investigación Externa</h3>
+                        </div>
+                        <a href="#" class="card-link">Saber más →</a>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <div>
-                        <span class="card-tag">Acompañamiento</span>
-                        <h3 class="card-title">Asesoría Interna</h3>
+                    <div class="service-thumb thumb-2">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M4 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" stroke-linecap="round"/><circle cx="10" cy="7.5" r="3.2"/></svg>
+                        </div>
                     </div>
-                    <a href="#" class="card-link">Saber más →</a>
+                    <div class="service-body">
+                        <div>
+                            <span class="card-tag">Acompañamiento</span>
+                            <h3 class="card-title">Asesoría Interna</h3>
+                        </div>
+                        <a href="#" class="card-link">Saber más →</a>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <div>
-                        <span class="card-tag">Ley 21.828</span>
-                        <h3 class="card-title">Diagnóstico Equidad</h3>
+                    <div class="service-thumb thumb-3">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                        </div>
                     </div>
-                    <a href="#" class="card-link">Saber más →</a>
+                    <div class="service-body">
+                        <div>
+                            <span class="card-tag">Ley 21.828</span>
+                            <h3 class="card-title">Diagnóstico Equidad</h3>
+                        </div>
+                        <a href="#" class="card-link">Saber más →</a>
+                    </div>
                 </div>
 
             </div>
@@ -559,27 +692,32 @@
 
     </section>
 
-    <!-- BARRA SUPERIOR DE TEMAS CLAVE -->
+    <!-- BARRA INFERIOR DE TEMAS CLAVE -->
     <div class="topics-bar">
-        <div class="topic-item">
-            <!-- Ícono de balanza / ley -->
-            <svg viewBox="0 0 24 24"><path d="M12 3v18M3 9l9-6 9 6M5 14h6M13 14h6"/></svg>
-            Ley Karin 21.643
+        <div class="topics-pills">
+            <span class="topics-label">Hablemos de:</span>
+            <div class="topic-pill">
+                <svg viewBox="0 0 24 24"><path d="M12 3v18M3 9l9-6 9 6M5 14h6M13 14h6"/></svg>
+                Ley Karin 21.643
+            </div>
+            <div class="topic-pill rose">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                Investigación Pericial
+            </div>
+            <div class="topic-pill">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                Clima Laboral
+            </div>
+            <div class="topic-pill rose">
+                <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                Ley 21.828 Equidad
+            </div>
         </div>
-        <div class="topic-item">
-            <!-- Ícono de documento pericial -->
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            Investigación Pericial
-        </div>
-        <div class="topic-item">
-            <!-- Ícono de clima laboral -->
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            Clima Laboral
-        </div>
-        <div class="topic-item">
-            <!-- Ícono de equidad salarial -->
-            <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-            Ley 21.828 Equidad
+        <!-- Iconos sociales: reemplazar "#" por los enlaces reales de la consultora -->
+        <div class="social-icons">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><path d="M12 16v-3a2 2 0 0 1 4 0v3"/></svg></a>
+            <a href="mailto:contacto@agoralaboral.cl" aria-label="Correo"><svg viewBox="0 0 24 24"><path d="M3 6l9 6 9-6M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></svg></a>
         </div>
     </div>
 
