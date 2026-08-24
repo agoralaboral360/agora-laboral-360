@@ -43,18 +43,18 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER ALINEADO Y AGRUPADO SIN ESPACIOS EXTRAÑOS */
+        /* HEADER ESPACIOSO Y NAVEGACIÓN PROPORCIONAL */
         header {
             background-color: var(--bg-sand);
-            padding: 18px 5%;
+            padding: 18px 4%;
             display: flex;
+            justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid rgba(216, 209, 197, 0.6);
             position: sticky;
             top: 0;
             z-index: 1000;
             width: 100%;
-            gap: 20px;
         }
 
         .logo-box {
@@ -106,7 +106,6 @@
             white-space: nowrap;
         }
 
-        /* Empuja el menú y el botón de acción hacia la derecha de forma compacta */
         nav {
             margin-left: auto;
         }
@@ -197,7 +196,7 @@
             border: none;
             white-space: nowrap;
             flex-shrink: 0;
-            margin-left: 8px; /* Controla la distancia exacta entre CONTACTO y el Botón */
+            margin-left: 8px;
         }
 
         .btn-header:hover {
@@ -461,7 +460,7 @@
             color: var(--accent-rose-dark);
         }
 
-        /* FRANJA DE ESPECIALIDADES NAVEGABLE */
+        /* FRANJA DE ESPECIALIDADES INTEGRADA SIN FONDOS CLAROS NI RECUADROS */
         .topics-bar {
             background-color: var(--bg-topics);
             border-top: 1px solid var(--border-subtle);
@@ -483,24 +482,24 @@
         .topic-nav-link {
             text-decoration: none;
             color: var(--text-charcoal);
-            font-size: 0.68rem;
+            font-size: 0.7rem;
             font-weight: 700;
-            letter-spacing: 1.4px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 10px 12px;
-            border-radius: 6px;
-            background-color: rgba(255, 255, 255, 0.22);
-            transition: all 0.2s ease;
+            padding: 10px 0;
+            background-color: transparent; /* Sin fondo de color claro */
+            transition: color 0.2s ease, transform 0.2s ease;
             white-space: nowrap;
         }
 
         .topic-nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.55);
-            color: var(--accent-rose-dark);
+            background-color: transparent; /* Mantiene la integración sin recuadros blancos */
+            color: var(--accent-rose-dark); /* Cambio elegante al Rosa Viejo corporativo */
+            transform: translateY(-2px);
         }
 
         .topic-nav-link svg {
@@ -705,7 +704,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN ÁREAS DE ESPECIALIZACIÓN -->
+    <!-- SECCIÓN ÁREAS DE ESPECIALIZACIÓN (4 TARJETAS EN FILA COMPLETA) -->
     <section class="content-triad" id="servicios">
 
         <div class="services-container">
@@ -793,7 +792,7 @@
 
     </section>
 
-    <!-- FRANJA DE ESPECIALIDADES NAVEGABLE EQUITATIVA CON ÍCONOS -->
+    <!-- FRANJA DE ESPECIALIDADES INTEGRADA (SIN CAJAS CLARAS NI HOVER BLANCO) -->
     <div class="topics-bar">
         <div class="topics-nav">
             <a href="#ley-karin" class="topic-nav-link">
