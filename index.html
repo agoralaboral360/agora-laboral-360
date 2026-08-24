@@ -205,7 +205,7 @@
             background-color: var(--accent-sage-hover);
         }
 
-        /* HERO PORTADA FLUIDA */
+        /* HERO PORTADA SIN DIFUMINADO EN LA FOTO */
         .hero {
             position: relative;
             min-height: 560px;
@@ -216,21 +216,21 @@
             overflow: hidden;
         }
 
+        /* Transición acotada al margen izquierdo para ver la fotografía nítida */
         .hero-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(to right,
                 var(--bg-sand) 0%,
-                rgba(235, 230, 221, 0.98) 45%,
-                rgba(120, 110, 100, 0.60) 70%,
-                rgba(25, 20, 18, 0.70) 100%);
+                rgba(235, 230, 221, 0.95) 28%,
+                transparent 52%);
             z-index: 1;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 820px; /* Amplitud suficiente para 2 líneas */
+            max-width: 820px;
             padding: 80px 6% 80px 8%;
             display: flex;
             flex-direction: column;
@@ -239,7 +239,7 @@
 
         .hero-title {
             font-family: var(--font-serif);
-            font-size: 2.8rem; /* Tamaño optimizado para 2 líneas elegantes */
+            font-size: 2.8rem;
             font-weight: 600;
             line-height: 1.12;
             color: var(--text-charcoal);
@@ -263,7 +263,7 @@
             color: var(--text-muted);
             line-height: 1.6;
             margin-bottom: 28px;
-            max-width: 560px;
+            max-width: 520px;
         }
 
         .hero-buttons {
@@ -713,7 +713,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN ÁREAS DE ESPECIALIZACIÓN (4 TARJETAS CON IMÁGENES DIFERENCIADAS) -->
+    <!-- SECCIÓN ÁREAS DE ESPECIALIZACIÓN -->
     <section class="content-triad" id="servicios">
 
         <div class="services-container">
