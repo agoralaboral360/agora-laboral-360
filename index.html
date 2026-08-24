@@ -220,26 +220,27 @@
             overflow: hidden;
         }
 
-        /* Desenfoque dinámico CSS en el margen izquierdo */
+        /* Desenfoque dinámico CSS ampliado para cubrir el área del texto */
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            mask-image: linear-gradient(to right, black 0%, black 25%, transparent 55%);
-            -webkit-mask-image: linear-gradient(to right, black 0%, black 25%, transparent 55%);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            mask-image: linear-gradient(to right, black 0%, black 35%, transparent 60%);
+            -webkit-mask-image: linear-gradient(to right, black 0%, black 35%, transparent 60%);
             z-index: 0;
         }
 
+        /* Capa con fondo sólido en el área de texto para contraste óptimo */
         .hero-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(to right,
                 var(--bg-sand) 0%,
-                rgba(235, 230, 221, 0.92) 28%,
-                rgba(235, 230, 221, 0.5) 45%,
-                transparent 65%);
+                var(--bg-sand) 40%,
+                rgba(235, 230, 221, 0.85) 52%,
+                transparent 70%);
             z-index: 1;
             pointer-events: none;
         }
@@ -275,12 +276,14 @@
             line-height: 1.5;
         }
 
+        /* FRASE DE ACOMPAÑAMIENTO CON ALTO CONTRASTE Y MAYOR PESO */
         .hero-description {
-            font-size: 0.9rem;
-            color: var(--text-muted);
+            font-size: 0.92rem;
+            color: var(--text-charcoal); /* Oscurecido de text-muted a text-charcoal */
+            font-weight: 500;           /* Peso mejorado para definición nítida */
             line-height: 1.6;
             margin-bottom: 28px;
-            max-width: 520px;
+            max-width: 540px;
         }
 
         .hero-buttons {
@@ -718,7 +721,7 @@
         </a>
     </header>
 
-    <!-- BLOQUE 1 — HERO -->
+    <!-- BLOQUE 1 — HERO CON CONTRASTE MEJORADO -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
