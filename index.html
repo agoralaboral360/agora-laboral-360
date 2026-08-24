@@ -17,7 +17,7 @@
             --text-charcoal: #2C2825;     /* Tinta carbón para textos y titulares */
             --text-muted: #615B55;        /* Gris terroso suave */
             
-            --accent-sage: #828776;       /* Verde Salvia (Igual al botón Diagnóstico) */
+            --accent-sage: #828776;       /* Verde Salvia */
             --accent-sage-hover: #6E7363;
             
             --accent-rose: #C38271;       /* Rosa Viejo suave */
@@ -137,7 +137,7 @@
             background-color: var(--accent-sage-hover);
         }
 
-        /* HERO PORTADA (FOTO LIGERAMENTE OSCURECIDA PARA MAYOR CONTRASTE) */
+        /* HERO PORTADA FLUIDA */
         .hero {
             position: relative;
             min-height: 560px;
@@ -148,7 +148,6 @@
             overflow: hidden;
         }
 
-        /* Degradado gradual con filtro sutil para aumentar contraste de lectura */
         .hero-overlay {
             position: absolute;
             inset: 0;
@@ -191,7 +190,7 @@
             line-height: 1.7;
         }
 
-        /* Cinta manuscrita en Verde Salvia (Igual al botón Diagnóstico) */
+        /* Cinta manuscrita en Verde Salvia */
         .hero-ribbon {
             display: inline-block;
             background-color: var(--accent-sage);
@@ -206,81 +205,13 @@
             box-shadow: 0 6px 18px rgba(130, 135, 118, 0.35);
         }
 
-        /* SECCIONES TRÍPTICO DE CONTENIDO */
+        /* SECCIONES: ÁREAS DE ESPECIALIZACIÓN + TARJETA DE CITA */
         .content-triad {
-            padding: 80px 7% 60px 7%;
+            padding: 70px 6%;
             display: grid;
-            grid-template-columns: 270px 1fr 280px;
-            gap: 45px;
-            align-items: start;
-        }
-
-        .welcome-box {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .welcome-icon {
-            width: 50px;
-            height: 50px;
-            background-color: var(--bg-card-accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 8px;
-        }
-
-        .welcome-icon svg {
-            width: 22px;
-            height: 22px;
-            stroke: var(--accent-sage);
-            fill: none;
-            stroke-width: 1.5;
-        }
-
-        .welcome-title {
-            font-family: var(--font-serif);
-            font-style: italic;
-            font-weight: 600;
-            font-size: 2.1rem;
-            color: var(--text-charcoal);
-            line-height: 1.1;
-        }
-
-        .welcome-text {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        .welcome-text strong {
-            color: var(--text-charcoal);
-            font-weight: 600;
-        }
-
-        .btn-sage-sm {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            background-color: var(--accent-sage);
-            color: #FFFFFF;
-            padding: 12px 20px;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-decoration: none;
-            text-transform: uppercase;
-            margin-top: 10px;
-            width: fit-content;
-            transition: background-color 0.2s;
-        }
-
-        .btn-sage-sm:hover {
-            background-color: var(--accent-sage-hover);
+            grid-template-columns: 1fr 340px;
+            gap: 40px;
+            align-items: stretch;
         }
 
         .services-container {
@@ -301,8 +232,8 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
         }
 
         .service-card {
@@ -322,13 +253,14 @@
 
         .service-thumb {
             position: relative;
-            height: 108px;
+            height: 110px;
             background: url('image_f91a2f.jpg') center/cover no-repeat;
         }
 
         .service-thumb.thumb-1 { background-position: 20% 30%; }
         .service-thumb.thumb-2 { background-position: 60% 50%; }
         .service-thumb.thumb-3 { background-position: 80% 20%; }
+        .service-thumb.thumb-4 { background-position: 40% 70%; }
 
         .service-thumb::after {
             content: '';
@@ -356,6 +288,10 @@
             background-color: var(--accent-rose);
         }
 
+        .thumb-4 .service-icon {
+            background-color: var(--accent-rose);
+        }
+
         .service-icon svg {
             width: 16px;
             height: 16px;
@@ -365,7 +301,7 @@
         }
 
         .service-body {
-            padding: 28px 18px 20px 18px;
+            padding: 28px 16px 20px 16px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -402,31 +338,37 @@
             gap: 6px;
         }
 
+        /* CUADRO DE CITA DESTACADA */
         .quote-box {
-            background-color: var(--bg-card-accent);
+            background-color: var(--bg-card);
             border: 1px solid var(--border-subtle);
             border-radius: 8px;
-            padding: 35px 28px;
-            position: relative;
+            padding: 45px 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
         }
 
         .quote-mark {
             font-family: var(--font-serif);
-            font-size: 4rem;
+            font-size: 4.5rem;
             color: var(--accent-sage);
-            line-height: 0.8;
-            margin-bottom: 10px;
+            line-height: 0.7;
+            margin-bottom: 25px;
             display: block;
         }
 
         .quote-text {
-            font-size: 0.92rem;
-            color: var(--text-charcoal);
-            line-height: 1.7;
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
             font-style: italic;
+            color: var(--text-charcoal);
+            line-height: 1.5;
+            letter-spacing: -0.2px;
         }
 
-        /* BARRA INFERIOR EDITORIAL - VERDE SALVIA CLARO CON LÍNEAS LIMPIAS (EXACTA AL EJEMPLO) */
+        /* BARRA INFERIOR EDITORIAL ILUSTRADA */
         .topics-bar {
             background-color: var(--bg-topics);
             border-top: 1px solid var(--border-subtle);
@@ -520,16 +462,16 @@
             color: var(--text-muted);
         }
 
-        @media (max-width: 1100px) {
+        @media (max-width: 1200px) {
             .content-triad {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            .hero {
-                min-height: 500px;
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-            .hero-content {
-                padding: 70px 6% 70px 6%;
+            .quote-box {
+                padding: 35px 25px;
             }
         }
 
@@ -588,7 +530,7 @@
         </a>
     </header>
 
-    <!-- PORTADA HERO LUMINOSA CON MAYOR CONTRASTE -->
+    <!-- PORTADA HERO LUMINOSA CON CONTRASTE -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -598,23 +540,10 @@
         </div>
     </section>
 
-    <!-- SECCIÓN TRÍPTICO DE CONTENIDO -->
+    <!-- SECCIÓN ÁREAS DE ESPECIALIZACIÓN (4 TARJETAS) + CUADRO DE CITA -->
     <section class="content-triad" id="servicios">
 
-        <!-- BIENVENIDA -->
-        <div class="welcome-box">
-            <div class="welcome-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><path d="M12 8v4l3 3"/></svg>
-            </div>
-            <h2 class="welcome-title">Bienvenida</h2>
-            <p class="welcome-text">
-                Este es un espacio para abordar la gestión normativa laboral con rigor pericial, protegiendo la cultura interna, la imparcialidad y la salud mental en las organizaciones.<br><br>
-                <strong>Porque prevenir y sancionar también es cuidar.</strong>
-            </p>
-            <a href="#fundadora" class="btn-sage-sm">Conoce a la Fundadora →</a>
-        </div>
-
-        <!-- SERVICIOS DESTACADOS -->
+        <!-- CONTENEDOR CON 4 TARJETAS -->
         <div class="services-container">
             <div class="services-header">Áreas de Especialización</div>
             <div class="services-grid">
@@ -630,7 +559,7 @@
                             <span class="card-tag">Peritaje</span>
                             <h3 class="card-title">Investigación Externa</h3>
                         </div>
-                        <a href="#" class="card-link">Saber más →</a>
+                        <a href="#" class="card-link">SABER MÁS →</a>
                     </div>
                 </div>
 
@@ -645,7 +574,7 @@
                             <span class="card-tag">Acompañamiento</span>
                             <h3 class="card-title">Asesoría Interna</h3>
                         </div>
-                        <a href="#" class="card-link">Saber más →</a>
+                        <a href="#" class="card-link">SABER MÁS →</a>
                     </div>
                 </div>
 
@@ -660,14 +589,29 @@
                             <span class="card-tag">Ley 21.828</span>
                             <h3 class="card-title">Diagnóstico Equidad</h3>
                         </div>
-                        <a href="#" class="card-link">Saber más →</a>
+                        <a href="#" class="card-link">SABER MÁS →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-thumb thumb-4">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+                        </div>
+                    </div>
+                    <div class="service-body">
+                        <div>
+                            <span class="card-tag">Formación</span>
+                            <h3 class="card-title">Academia 360°</h3>
+                        </div>
+                        <a href="academia/" class="card-link">SABER MÁS →</a>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <!-- CITA DESTACADA -->
+        <!-- CITA DESTACADA LADO DERECHO -->
         <div class="quote-box">
             <span class="quote-mark">“</span>
             <p class="quote-text">
@@ -677,11 +621,13 @@
 
     </section>
 
-    <!-- BARRA INFERIOR EDITORIAL ILUSTRADA (IDÉNTICA A LA IMAGEN DE REFERENCIA) -->
+    <!-- BARRA INFERIOR EDITORIAL ILUSTRADA -->
     <div class="topics-bar">
         <div class="topics-list">
             <div class="topics-header">
-                
+                <svg viewBox="0 0 24 24"><path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z"/><path d="M12 22V10"/></svg>
+                Hablemos de:
+            </div>
             
             <div class="topic-item">
                 <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M9 15c.5 1 1.5 1.5 3 1.5s2.5-.5 3-1.5"/></svg>
@@ -703,7 +649,10 @@
                 Ley Karin
             </div>
 
-            
+            <div class="topic-item">
+                <svg viewBox="0 0 24 24"><path d="M12 22a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/><path d="M12 2v4"/><path d="M12 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                Maternidad y Trabajo
+            </div>
         </div>
 
         <div class="social-icons">
