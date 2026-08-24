@@ -20,8 +20,8 @@
             --accent-sage: #828776;       
             --accent-sage-hover: #6E7363;
             
-            --accent-rose: #C38271;       
-            --accent-rose-dark: #A36557;
+            --accent-rose: #C38271;       /* Rosa Viejo / Rosa Polvo */
+            --accent-rose-dark: #A36557;  /* Malva / Rosa Viejo Oscuro */
             
             --border-subtle: #D8D1C5;     
             
@@ -205,12 +205,12 @@
             background-color: var(--accent-sage-hover);
         }
 
-        /* HERO PORTADA - VERIFICA QUE 'image_d55524.jpg' ESTÉ EN TU SERVIDOR */
+        /* HERO PORTADA - VINCULADO A 'imagen hero 01.png' */
         .hero {
             position: relative;
             min-height: 560px;
             background-color: var(--bg-sand);
-            background-image: url('image_d55524.jpg');
+            background-image: url('imagen%20hero%2001.png');
             background-position: center right;
             background-size: cover;
             background-repeat: no-repeat;
@@ -220,15 +220,26 @@
             overflow: hidden;
         }
 
-        /* Transición suave solo en la zona del texto (25% a 55%), dejando el resto transparente */
+        /* Desenfoque dinámico CSS en el margen izquierdo */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            mask-image: linear-gradient(to right, black 0%, black 25%, transparent 55%);
+            -webkit-mask-image: linear-gradient(to right, black 0%, black 25%, transparent 55%);
+            z-index: 0;
+        }
+
         .hero-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(to right,
-                #EBE6DD 0%,
-                #EBE6DD 28%,
-                rgba(235, 230, 221, 0.65) 45%,
-                transparent 60%);
+                var(--bg-sand) 0%,
+                rgba(235, 230, 221, 0.92) 28%,
+                rgba(235, 230, 221, 0.5) 45%,
+                transparent 65%);
             z-index: 1;
             pointer-events: none;
         }
@@ -236,7 +247,7 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 760px;
+            max-width: 820px;
             padding: 80px 6% 80px 8%;
             display: flex;
             flex-direction: column;
@@ -297,22 +308,24 @@
             background-color: var(--accent-sage-hover);
         }
 
+        /* BOTÓN SECUNDARIO: ROSA VIEJO / ROSA POLVO */
         .btn-hero-secondary {
-            background-color: transparent;
-            color: var(--text-charcoal) !important;
-            border: 1.5px solid var(--text-charcoal);
-            padding: 12px 22px;
+            background-color: var(--accent-rose);
+            color: #FFFFFF !important;
+            border: none;
+            padding: 13px 24px;
             border-radius: 4px;
             font-size: 0.72rem;
             font-weight: 700;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             text-decoration: none;
-            transition: all 0.25s ease;
+            transition: background-color 0.25s ease;
+            box-shadow: 0 4px 12px rgba(195, 130, 113, 0.25);
         }
 
         .btn-hero-secondary:hover {
-            background-color: var(--text-charcoal);
+            background-color: var(--accent-rose-dark);
             color: #FFFFFF !important;
         }
 
@@ -705,7 +718,7 @@
         </a>
     </header>
 
-    <!-- BLOQUE 1 — HERO EN EXACTAS 2 LÍNEAS -->
+    <!-- BLOQUE 1 — HERO -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
