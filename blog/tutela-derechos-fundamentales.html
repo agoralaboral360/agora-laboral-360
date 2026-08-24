@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutela Laboral y Garantías Constitucionales | Blog Ágora Laboral 360°</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutela Laboral y Garantías Constitucionales | Blog Ágora Laboral 360°</title>
+    
+    <!-- Fuentes oficiales: Cormorant Garamond y Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
+    <style>
+        :root {
             /* PALETA EDITORIAL "VERDE SALVIA, ROSA VIEJO & ARENA" */
             --bg-sand: #EBE6DD;           
             --bg-card: #EFEAE2;           
@@ -32,74 +31,547 @@
             --font-sans: 'Montserrat', sans-serif;
         }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Montserrat', sans-serif !important; background-color: var(--fondo-pagina); color: var(--texto-oscuro); line-height: 1.7; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            font-family: var(--font-sans); 
+            background: var(--bg-sand); 
+            color: var(--text-charcoal); 
+            line-height: 1.7; 
+            -webkit-font-smoothing: antialiased;
+        }
 
-    .header { background-color: var(--blanco); border-bottom: 3px solid var(--morado-principal); padding: 16px 24px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    .navbar { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    .logo-text { font-weight: 900; font-size: 1.25rem; color: var(--morado-principal); text-decoration: none; }
-    .logo-text span { border-bottom: 4px solid var(--verde-menta); }
-    .btn-back { background: var(--morado-principal); color: var(--blanco); text-decoration: none; font-weight: 800; font-size: 0.8rem; padding: 8px 16px; border-radius: 6px; text-transform: uppercase; transition: 0.2s; }
-    .btn-back:hover { background: var(--verde-menta); color: var(--morado-principal); }
+        /* HEADER ESPACIOSO Y NAVEGACIÓN UNIFICADA */
+        header {
+            background-color: var(--bg-sand);
+            padding: 18px 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(216, 209, 197, 0.6);
+            box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            gap: 20px;
+        }
 
-    .article-hero { background-color: var(--morado-principal); background-image: linear-gradient(rgba(54, 30, 66, 0.85), rgba(33, 19, 41, 0.95)), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; padding: 80px 24px; text-align: center; color: var(--blanco); border-bottom: 5px solid var(--verde-menta); }
-    .article-hero h1 { max-width: 800px; margin: 0 auto 15px; font-size: 2.5rem; font-weight: 900; line-height: 1.2; color: var(--blanco); }
-    .article-badge { background: var(--verde-menta); color: var(--morado-principal); font-size: 0.85rem; font-weight: 800; padding: 6px 16px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 20px; }
-    
-    .container { max-width: 800px; margin: 50px auto; padding: 0 24px; }
-    .article-meta { display: flex; justify-content: center; gap: 20px; font-size: 0.9rem; color: var(--texto-suave); font-weight: 600; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #ede8f2; }
-    .article-content h2 { font-size: 1.6rem; color: var(--morado-principal); margin: 35px 0 15px; font-weight: 800; border-left: 5px solid var(--verde-menta); padding-left: 15px; }
-    .article-content p { font-size: 1.05rem; color: var(--texto-suave); margin-bottom: 20px; font-weight: 500; }
-    
-    .highlight-box { background: var(--menta-fondo); border: 2px solid var(--morado-principal); border-radius: 8px; padding: 25px; margin: 30px 0; border-left: 8px solid var(--verde-menta); }
-    .highlight-box h3 { color: var(--morado-principal); font-size: 1.2rem; margin-bottom: 10px; font-weight: 800; }
-    
-    .cta-box { background: var(--morado-principal); color: var(--blanco); padding: 40px; border-radius: 12px; text-align: center; margin-top: 60px; box-shadow: 0 10px 30px rgba(54,30,66,0.2); border: 2px solid var(--verde-menta); }
-    .cta-box h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--blanco); }
-    .cta-box p { color: #ffffff !important; font-size: 1.1rem; margin-bottom: 20px; opacity: 0.95; }
-    .btn-cta { display: inline-block; background: var(--verde-menta); color: var(--morado-principal); font-weight: 900; padding: 15px 30px; border-radius: 8px; text-decoration: none; text-transform: uppercase; margin-top: 20px; transition: 0.2s; }
-    .btn-cta:hover { background: var(--blanco); color: var(--morado-principal); }
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-charcoal);
+            flex-shrink: 0;
+        }
 
-    footer { background: var(--morado-oscuro); color: var(--blanco); text-align: center; padding: 30px 24px; font-size: 0.88rem; font-weight: 600; margin-top: 60px; border-top: 4px solid var(--verde-menta); }
-  </style>
+        .logo-icon {
+            width: 28px;
+            height: 28px;
+            stroke: var(--text-charcoal);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-family: var(--font-serif);
+            font-size: 1.45rem;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            line-height: 1;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .logo-title sup {
+            font-size: 0.65em;
+            vertical-align: super;
+            font-weight: 500;
+            margin-left: 2px;
+        }
+
+        .logo-subtitle {
+            font-size: 0.58rem;
+            font-weight: 500;
+            letter-spacing: 1.8px;
+            color: var(--text-muted);
+            margin-top: 3px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        nav { margin-left: auto; }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 22px;
+            align-items: center;
+        }
+
+        nav ul li { position: relative; }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-charcoal);
+            font-size: 0.66rem;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            padding: 8px 0;
+            transition: all 0.2s ease;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        nav a:hover, nav a.active {
+            border-bottom: 1.5px solid var(--text-charcoal);
+        }
+
+        /* DROPDOWNS UNIFICADOS */
+        nav .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            padding: 8px 0;
+            min-width: 190px;
+            box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.25s ease;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav ul li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        nav .dropdown a {
+            padding: 8px 16px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            display: block;
+            border-bottom: none !important;
+            color: var(--text-charcoal);
+        }
+
+        nav .dropdown a:hover {
+            background-color: var(--bg-card-accent);
+            color: var(--accent-rose-dark);
+        }
+
+        .btn-header {
+            background-color: var(--accent-sage);
+            color: #FFFFFF !important;
+            padding: 9px 18px;
+            border-radius: 4px;
+            font-size: 0.66rem;
+            font-weight: 600;
+            letter-spacing: 1.4px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background-color 0.25s ease;
+            border: none;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-left: 8px;
+        }
+
+        .btn-header:hover {
+            background-color: var(--accent-sage-hover);
+        }
+
+        /* PORTADA DEL ARTÍCULO */
+        .article-hero { 
+            background: var(--bg-card-accent); 
+            border-bottom: 1px solid var(--border-subtle); 
+            padding: 65px 24px 50px 24px; 
+            text-align: center; 
+        }
+
+        .article-badge { 
+            background: var(--bg-sand); 
+            color: var(--accent-rose-dark); 
+            font-size: 0.68rem; 
+            font-weight: 700; 
+            padding: 5px 16px; 
+            border-radius: 20px; 
+            text-transform: uppercase; 
+            letter-spacing: 1.2px;
+            border: 1px solid var(--border-subtle);
+            display: inline-block; 
+            margin-bottom: 18px; 
+        }
+
+        .article-hero h1 { 
+            font-family: var(--font-serif);
+            max-width: 820px; 
+            margin: 0 auto 16px; 
+            font-size: 2.5rem; 
+            font-weight: 600; 
+            line-height: 1.15; 
+            color: var(--text-charcoal); 
+            text-transform: uppercase;
+        }
+
+        .article-hero-lead {
+            font-size: 0.95rem; 
+            font-weight: 500; 
+            max-width: 640px; 
+            margin: 0 auto;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* CONTENIDO DEL ARTÍCULO */
+        .container { 
+            max-width: 800px; 
+            margin: 45px auto 80px auto; 
+            padding: 0 24px; 
+        }
+
+        .article-meta { 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            font-size: 0.78rem; 
+            color: var(--text-muted); 
+            font-weight: 600; 
+            margin-bottom: 35px; 
+            padding-bottom: 18px; 
+            border-bottom: 1px solid var(--border-subtle); 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-content h2 { 
+            font-family: var(--font-serif);
+            font-size: 1.6rem; 
+            color: var(--text-charcoal); 
+            margin: 40px 0 15px; 
+            font-weight: 600; 
+            border-left: 4px solid var(--accent-sage); 
+            padding-left: 14px; 
+            line-height: 1.25;
+        }
+
+        .article-content p { 
+            font-size: 0.95rem; 
+            color: var(--text-charcoal); 
+            margin-bottom: 20px; 
+            font-weight: 400; 
+            line-height: 1.7;
+        }
+
+        .highlight-box { 
+            background: var(--bg-card); 
+            border: 1px solid var(--border-subtle); 
+            border-left: 5px solid var(--accent-rose); 
+            border-radius: 8px; 
+            padding: 24px; 
+            margin: 35px 0; 
+        }
+
+        .highlight-box h3 { 
+            color: var(--accent-rose-dark); 
+            font-family: var(--font-serif);
+            font-size: 1.3rem; 
+            margin-bottom: 10px; 
+            font-weight: 600; 
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* LLAMADO A LA ACCIÓN */
+        .cta-box { 
+            background: var(--bg-card); 
+            color: var(--text-charcoal); 
+            padding: 40px 30px; 
+            border-radius: 10px; 
+            text-align: center; 
+            margin-top: 60px; 
+            box-shadow: 0 10px 30px rgba(44,40,37,0.06); 
+            border: 1px solid var(--border-subtle); 
+        }
+
+        .cta-box h3 { 
+            font-family: var(--font-serif);
+            font-size: 1.8rem; 
+            margin-bottom: 12px; 
+            color: var(--text-charcoal); 
+            font-weight: 600;
+        }
+
+        .cta-box p { 
+            color: var(--text-muted); 
+            font-size: 0.92rem; 
+            margin-bottom: 22px; 
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-cta { 
+            display: inline-block; 
+            background: var(--accent-sage); 
+            color: #FFFFFF; 
+            font-weight: 700; 
+            padding: 13px 26px; 
+            border-radius: 4px; 
+            text-decoration: none; 
+            text-transform: uppercase; 
+            font-size: 0.72rem;
+            letter-spacing: 1.2px;
+            transition: background-color 0.25s ease; 
+        }
+
+        .btn-cta:hover { 
+            background: var(--accent-sage-hover); 
+        }
+
+        /* FOOTER EXTENDIDO UNIFICADO */
+        footer {
+            background-color: var(--bg-sand);
+            border-top: 1px solid var(--border-subtle);
+            padding: 60px 6% 30px 6%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
+            gap: 35px;
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+        }
+
+        .footer-col h5 {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-charcoal);
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-col a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-rose-dark);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1200px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; padding: 18px 4%; }
+            nav { margin-left: 0; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
+            .btn-header { margin-left: 0; }
+            .article-hero h1 { font-size: 2rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-  <header class="header">
-    <div class="navbar">
-      <a href="../index.html" class="logo-text">ÁGORA LABORAL <span>360°</span></a>
-      <a href="../index.html#blog" class="btn-back">← Volver al Blog</a>
-    </div>
-  </header>
 
-  <section class="article-hero">
-    <span class="article-badge">Derechos Fundamentales</span>
-    <h1>Tutela Laboral y Garantías Constitucionales</h1>
-    <p style="font-size: 1.2rem; font-weight: 500; max-width: 600px; margin: 0 auto;">Límites probatorios y resguardo de la honra y privacidad de las partes durante el proceso de investigación interna.</p>
-  </section>
+    <!-- HEADER DE NAVEGACIÓN GLOBAL UNIFICADO -->
+    <header>
+        <a href="/" class="logo-box">
+            <svg class="logo-icon" viewBox="0 0 24 24">
+                <path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" />
+                <path d="M12 22V10" />
+            </svg>
+            <div class="logo-text">
+                <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
+                <span class="logo-subtitle">Consultoría &amp; Riesgo Normativo</span>
+            </div>
+        </a>
 
-  <main class="container article-content">
-    <div class="article-meta"><span> Mayo 2026</span><span> 4 min de lectura</span><span> Equipo Legal Ágora</span></div>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
 
-    <p>El procedimiento de investigación por acoso no ocurre en un vacío legal. La empresa, al actuar como investigadora, está ejerciendo una potestad disciplinaria que tiene límites constitucionales infranqueables.</p>
+                <li>
+                    <a href="/#servicios">Servicios</a>
+                    <div class="dropdown">
+                        <a href="/#investigacion">Investigación Externa</a>
+                        <a href="/#asesoria">Asesoría Interna</a>
+                        <a href="/#ley-karin">Ley Karin</a>
+                        <a href="/#equidad">Equidad Salarial</a>
+                    </div>
+                </li>
 
-    <h2>El Riesgo de la Tutela Laboral</h2>
-    <p>Una investigación mal conducida puede derivar en una demanda por vulneración de Derechos Fundamentales (Tutela Laboral). Esto ocurre comúnmente cuando el empleador vulnera el derecho a la honra del denunciado (ej. filtraciones), el derecho a la integridad psíquica de la denunciante o el debido proceso.</p>
+                <li>
+                    <a href="/academia/">Academia</a>
+                    <div class="dropdown">
+                        <a href="/academia/#cursos">Cursos</a>
+                        <a href="/academia/#talleres">Talleres</a>
+                        <a href="/academia/#charlas">Charlas</a>
+                        <a href="/academia/#formacion">Formación Especializada</a>
+                    </div>
+                </li>
 
-    <h2>Límites en la Recopilación de Pruebas</h2>
-    <p>¿Puede la empresa revisar correos electrónicos o mensajes de WhatsApp privados? La respuesta es compleja y depende del grado de expectativa de privacidad. La jurisprudencia ha determinado que las pruebas obtenidas con vulneración de garantías fundamentales constituyen "prueba ilícita" y carecen de valor, exponiendo además a la empresa a graves sanciones.</p>
+                <li>
+                    <a href="/observatorio/">Observatorio</a>
+                    <div class="dropdown">
+                        <a href="/observatorio/#normativa">Normativa</a>
+                        <a href="/observatorio/#jurisprudencia">Jurisprudencia</a>
+                        <a href="/observatorio/#analisis">Análisis</a>
+                        <a href="/observatorio/#informes">Informes</a>
+                    </div>
+                </li>
 
-    <div class="highlight-box">
-      <h3> El Valor del Investigador Externo</h3>
-      <p style="margin-bottom: 0;">Contratar a un tercero experto como Ágora Laboral 360° permite "blindar" el proceso. Un investigador externo neutro asegura que la recopilación probatoria y la toma de declaraciones se ajusten estrictamente a la legalidad y al Código del Trabajo.</p>
-    </div>
+                <li>
+                    <a href="/blog/" class="active">Blog</a>
+                    <div class="dropdown">
+                        <a href="/blog/#ley-karin">Ley Karin</a>
+                        <a href="/blog/#gestion">Gestión Laboral</a>
+                        <a href="/blog/#equidad">Equidad</a>
+                        <a href="/blog/#clima">Clima Laboral</a>
+                    </div>
+                </li>
 
-    <div class="cta-box">
-      <h3>Proteja a su empresa frente a contingencias legales</h3>
-      <p style="font-size: 1.1rem; margin-bottom: 0;">Externalice sus investigaciones complejas con nuestro equipo y garantice el cumplimiento del debido proceso.</p>
-      <a href="../servicios/index.html" class="btn-cta">Conozca Nuestros Servicios →</a>
-    </div>
-  </main>
+                <li><a href="/#contacto">Contacto</a></li>
+            </ul>
+        </nav>
 
-  <footer><p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.</p></footer>
+        <a href="/diagnostico/" class="btn-header">
+            Diagnóstico Gratis
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    </header>
+
+    <!-- PORTADA DEL ARTÍCULO -->
+    <section class="article-hero">
+        <span class="article-badge">Derechos Fundamentales</span>
+        <h1>Tutela Laboral y Garantías Constitucionales</h1>
+        <p class="article-hero-lead">Límites probatorios y resguardo de la honra y privacidad de las partes durante el proceso de investigación interna.</p>
+    </section>
+
+    <!-- CONTENIDO DEL ARTÍCULO -->
+    <main class="container article-content">
+        <div class="article-meta">
+            <span>Mayo 2026</span>
+            <span>•</span>
+            <span>4 min de lectura</span>
+            <span>•</span>
+            <span>Equipo Legal Ágora</span>
+        </div>
+
+        <p>El procedimiento de investigación por acoso no ocurre en un vacío legal. La empresa, al actuar como investigadora, está ejerciendo una potestad disciplinaria que tiene límites constitucionales infranqueables.</p>
+
+        <h2>El Riesgo de la Tutela Laboral</h2>
+        <p>Una investigación mal conducida puede derivar en una demanda por vulneración de Derechos Fundamentales (Tutela Laboral). Esto ocurre comúnmente cuando el empleador vulnera el derecho a la honra del denunciado (ej. filtraciones), el derecho a la integridad psíquica de la denunciante o el debido proceso.</p>
+
+        <h2>Límites en la Recopilación de Pruebas</h2>
+        <p>¿Puede la empresa revisar correos electrónicos o mensajes de WhatsApp privados? La respuesta es compleja y depende del grado de expectativa de privacidad. La jurisprudencia ha determinado que las pruebas obtenidas con vulneración de garantías fundamentales constituyen "prueba ilícita" y carecen de valor, exponiendo además a la empresa a graves sanciones.</p>
+
+        <div class="highlight-box">
+            <h3>🛡️ El Valor del Investigador Externo</h3>
+            <p>Contratar a un tercero experto como Ágora Laboral 360° permite "blindar" el proceso. Un investigador externo neutro asegura que la recopilación probatoria y la toma de declaraciones se ajusten estrictamente a la legalidad y al Código del Trabajo.</p>
+        </div>
+
+        <!-- LLAMADO A LA ACCIÓN -->
+        <div class="cta-box">
+            <h3>Proteja a su empresa frente a contingencias legales</h3>
+            <p>Externalice sus investigaciones complejas con nuestro equipo y garantice el cumplimiento del debido proceso.</p>
+            <a href="/#servicios" class="btn-cta">Conozca Nuestros Servicios →</a>
+        </div>
+    </main>
+
+    <!-- FOOTER COMPLETO Y ESTRUCTURADO EN 5 COLUMNAS -->
+    <footer id="contacto">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <span class="logo-title" style="font-size:1.4rem;">ÁGORA LABORAL <sup>360°</sup></span>
+                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Consultoría especializada &amp; riesgo normativo.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h5>Servicios</h5>
+                <ul>
+                    <li><a href="/#investigacion">Investigación externa</a></li>
+                    <li><a href="/#asesoria">Asesoría interna</a></li>
+                    <li><a href="/#ley-karin">Ley Karin</a></li>
+                    <li><a href="/#equidad">Equidad salarial</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Contenido</h5>
+                <ul>
+                    <li><a href="/academia/">Academia</a></li>
+                    <li><a href="/observatorio/">Observatorio</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Empresa</h5>
+                <ul>
+                    <li><a href="/#contacto">Contacto</a></li>
+                    <li><a href="/#privacidad">Política de privacidad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Contacto</h5>
+                <ul>
+                    <li><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a></li>
+                    <li><a href="tel:+56900000000">+56 9 0000 0000</a></li>
+                    <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.</span>
+        </div>
+    </footer>
+
 </body>
 </html>
