@@ -43,14 +43,14 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER FLOTANTE CON SOMBRA DE CONTRASTE SOBRE EL HERO */
+        /* HEADER CON SOMBRA PROPRIONADA PARA MÁXIMO CONTRASTE */
         header {
             background-color: var(--bg-sand);
             padding: 18px 4%;
             display: flex;
             align-items: center;
             border-bottom: 1px solid var(--border-subtle);
-            box-shadow: 0 4px 18px rgba(44, 40, 37, 0.08); /* Sombra suave para separar del Hero */
+            box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -204,27 +204,26 @@
             background-color: var(--accent-sage-hover);
         }
 
-        /* HERO CON FOTO MÁS OSCURA Y CAPA DE GRADIENTE AJUSTADA */
+        /* HERO CON FONDO MÁS OSCURO PARA UN CONTRASTE DEFINIDO */
         .hero {
             position: relative;
             min-height: 560px;
             background: url('image_f91a2f.jpg') center right / cover no-repeat;
-            filter: contrast(1.02);
             display: flex;
             align-items: center;
             border-bottom: 1px solid var(--border-subtle);
             overflow: hidden;
         }
 
-        /* Degradado con oscurecimiento más pronunciado a la derecha */
+        /* Capa oscura que enfatiza el volumen de la imagen y hace resaltar el texto */
         .hero-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(to right,
                 var(--bg-sand) 0%,
-                rgba(235, 230, 221, 0.95) 38%,
-                rgba(235, 230, 221, 0.50) 65%,
-                rgba(35, 30, 28, 0.45) 100%);
+                rgba(235, 230, 221, 0.98) 38%,
+                rgba(120, 110, 100, 0.60) 65%,
+                rgba(25, 20, 18, 0.70) 100%);
             z-index: 1;
         }
 
@@ -311,7 +310,7 @@
             color: #FFFFFF !important;
         }
 
-        /* SECCIONES SERVICIOS */
+        /* SECCIONES SERVICIOS - IMÁGENES DIFERENCIADAS */
         .content-triad {
             padding: 70px 6%;
             width: 100%;
@@ -358,19 +357,27 @@
         .service-thumb {
             position: relative;
             height: 120px;
-            background: url('image_f91a2f.jpg') center/cover no-repeat;
         }
 
-        .service-thumb.thumb-1 { background-position: 20% 30%; }
-        .service-thumb.thumb-2 { background-position: 60% 50%; }
-        .service-thumb.thumb-3 { background-position: 80% 20%; }
-        .service-thumb.thumb-4 { background-position: 40% 70%; }
+        /* Fotografías únicas y temáticas para cada servicio */
+        .service-thumb.thumb-1 {
+            background: linear-gradient(rgba(44, 40, 37, 0.22), rgba(44, 40, 37, 0.22)),
+                        url('https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+        }
+        
+        .service-thumb.thumb-2 {
+            background: linear-gradient(rgba(44, 40, 37, 0.22), rgba(44, 40, 37, 0.22)),
+                        url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+        }
 
-        .service-thumb::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(44, 40, 37, 0.22);
+        .service-thumb.thumb-3 {
+            background: linear-gradient(rgba(44, 40, 37, 0.22), rgba(44, 40, 37, 0.22)),
+                        url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+        }
+
+        .service-thumb.thumb-4 {
+            background: linear-gradient(rgba(44, 40, 37, 0.22), rgba(44, 40, 37, 0.22)),
+                        url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
         }
 
         .service-icon {
@@ -707,7 +714,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN ÁREAS DE ESPECIALIZACIÓN (4 TARJETAS EN FILA COMPLETA) -->
+    <!-- SECCIÓN ÁREAS DE ESPECIALIZACIÓN (IMÁGENES DIFERENCIADAS POR SERVICIO) -->
     <section class="content-triad" id="servicios">
 
         <div class="services-container">
@@ -795,7 +802,7 @@
 
     </section>
 
-    <!-- FRANJA DE ESPECIALIDADES INTEGRADA (SIN FONDOS CLAROS NI HOVER BLANCO) -->
+    <!-- FRANJA DE ESPECIALIDADES INTEGRADA -->
     <div class="topics-bar">
         <div class="topics-nav">
             <a href="#ley-karin" class="topic-nav-link">
