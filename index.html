@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ágora Laboral 360° | Consultoría &amp; Riesgo Normativo</title>
+    <!-- Fuentes oficiales: Cormorant Garamond y Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -42,18 +43,18 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER ESPACIOSO Y NAVEGACIÓN PROPORCIONAL */
+        /* HEADER ALINEADO Y AGRUPADO SIN ESPACIOS EXTRAÑOS */
         header {
             background-color: var(--bg-sand);
-            padding: 18px 4%; /* Mayor margen interno utilizable */
+            padding: 18px 5%;
             display: flex;
-            justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid rgba(216, 209, 197, 0.6);
             position: sticky;
             top: 0;
             z-index: 1000;
             width: 100%;
+            gap: 20px;
         }
 
         .logo-box {
@@ -85,7 +86,7 @@
             letter-spacing: 1.2px;
             line-height: 1;
             text-transform: uppercase;
-            white-space: nowrap; /* Evita que 360° caiga a una segunda línea */
+            white-space: nowrap;
         }
 
         .logo-title sup {
@@ -105,10 +106,15 @@
             white-space: nowrap;
         }
 
+        /* Empuja el menú y el botón de acción hacia la derecha de forma compacta */
+        nav {
+            margin-left: auto;
+        }
+
         nav ul {
             display: flex;
             list-style: none;
-            gap: 18px; /* Espaciado equilibrado entre enlaces */
+            gap: 22px;
             align-items: center;
         }
 
@@ -119,7 +125,7 @@
         nav a {
             text-decoration: none;
             color: var(--text-charcoal);
-            font-size: 0.66rem; /* Tipografía más fina y ejecutable */
+            font-size: 0.66rem;
             font-weight: 600;
             letter-spacing: 1.2px;
             text-transform: uppercase;
@@ -191,6 +197,7 @@
             border: none;
             white-space: nowrap;
             flex-shrink: 0;
+            margin-left: 8px; /* Controla la distancia exacta entre CONTACTO y el Botón */
         }
 
         .btn-header:hover {
@@ -458,43 +465,63 @@
         .topics-bar {
             background-color: var(--bg-topics);
             border-top: 1px solid var(--border-subtle);
-            padding: 22px 6%;
+            padding: 22px 4%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
             gap: 20px;
         }
 
         .topics-nav {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            flex-grow: 1;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 28px;
         }
 
         .topic-nav-link {
             text-decoration: none;
             color: var(--text-charcoal);
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             font-weight: 700;
-            letter-spacing: 1.8px;
+            letter-spacing: 1.4px;
             text-transform: uppercase;
             display: flex;
             align-items: center;
-            gap: 6px;
-            transition: color 0.2s ease, transform 0.2s ease;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.22);
+            transition: all 0.2s ease;
+            white-space: nowrap;
         }
 
         .topic-nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.55);
             color: var(--accent-rose-dark);
-            transform: translateX(3px);
+        }
+
+        .topic-nav-link svg {
+            width: 17px;
+            height: 17px;
+            stroke: var(--text-charcoal);
+            fill: none;
+            stroke-width: 1.6;
+            flex-shrink: 0;
+            transition: stroke 0.2s ease;
+        }
+
+        .topic-nav-link:hover svg {
+            stroke: var(--accent-rose-dark);
         }
 
         .social-icons {
             display: flex;
             gap: 10px;
             align-items: center;
+            flex-shrink: 0;
         }
 
         .social-icons a {
@@ -578,15 +605,19 @@
 
         @media (max-width: 1200px) {
             .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .topics-nav { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 15px; padding: 18px 4%; }
+            nav { margin-left: 0; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
+            .btn-header { margin-left: 0; }
             .hero-title { font-size: 2.6rem; }
             .services-grid { grid-template-columns: 1fr; }
             .topics-bar { flex-direction: column; align-items: flex-start; }
+            .topics-nav { grid-template-columns: 1fr; width: 100%; }
             .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -674,7 +705,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN ÁREAS DE ESPECIALIZACIÓN (4 TARJETAS EN FILA COMPLETA) -->
+    <!-- SECCIÓN ÁREAS DE ESPECIALIZACIÓN -->
     <section class="content-triad" id="servicios">
 
         <div class="services-container">
@@ -762,13 +793,25 @@
 
     </section>
 
-    <!-- FRANJA DE ESPECIALIDADES NAVEGABLE CON FLECHAS -->
+    <!-- FRANJA DE ESPECIALIDADES NAVEGABLE EQUITATIVA CON ÍCONOS -->
     <div class="topics-bar">
         <div class="topics-nav">
-            <a href="#ley-karin" class="topic-nav-link">LEY KARIN →</a>
-            <a href="#investigacion" class="topic-nav-link">INVESTIGACIÓN PERICIAL →</a>
-            <a href="blog/#clima" class="topic-nav-link">CLIMA LABORAL →</a>
-            <a href="#equidad" class="topic-nav-link">EQUIDAD SALARIAL →</a>
+            <a href="#ley-karin" class="topic-nav-link">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                LEY KARIN
+            </a>
+            <a href="#investigacion" class="topic-nav-link">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                INVESTIGACIÓN PERICIAL
+            </a>
+            <a href="blog/#clima" class="topic-nav-link">
+                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                CLIMA LABORAL
+            </a>
+            <a href="#equidad" class="topic-nav-link">
+                <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                EQUIDAD SALARIAL
+            </a>
         </div>
 
         <div class="social-icons">
