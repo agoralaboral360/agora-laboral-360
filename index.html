@@ -205,32 +205,38 @@
             background-color: var(--accent-sage-hover);
         }
 
-        /* HERO PORTADA FLUIDA EN TONOS BEIGE CON IMAGEN ACTUALIZADA */
+        /* HERO PORTADA - VERIFICA QUE 'image_d55524.jpg' ESTÉ EN TU SERVIDOR */
         .hero {
             position: relative;
             min-height: 560px;
-            background: url('image_d55524.jpg') center right / cover no-repeat;
+            background-color: var(--bg-sand);
+            background-image: url('image_d55524.jpg');
+            background-position: center right;
+            background-size: cover;
+            background-repeat: no-repeat;
             display: flex;
             align-items: center;
             border-bottom: 1px solid var(--border-subtle);
             overflow: hidden;
         }
 
+        /* Transición suave solo en la zona del texto (25% a 55%), dejando el resto transparente */
         .hero-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(to right,
-                var(--bg-sand) 0%,
-                rgba(235, 230, 221, 0.94) 30%,
-                rgba(235, 230, 221, 0.35) 55%,
-                transparent 100%);
+                #EBE6DD 0%,
+                #EBE6DD 28%,
+                rgba(235, 230, 221, 0.65) 45%,
+                transparent 60%);
             z-index: 1;
+            pointer-events: none;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 820px;
+            max-width: 760px;
             padding: 80px 6% 80px 8%;
             display: flex;
             flex-direction: column;
@@ -699,7 +705,7 @@
         </a>
     </header>
 
-    <!-- BLOQUE 1 — HERO EN TONOS BEIGE NATIVOS -->
+    <!-- BLOQUE 1 — HERO EN EXACTAS 2 LÍNEAS -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
