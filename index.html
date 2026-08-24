@@ -43,13 +43,13 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER CON SOMBRA PROPRIONADA PARA MÁXIMO CONTRASTE */
+        /* HEADER ESPACIOSO Y NAVEGACIÓN PROPORCIONAL */
         header {
             background-color: var(--bg-sand);
             padding: 18px 4%;
             display: flex;
             align-items: center;
-            border-bottom: 1px solid var(--border-subtle);
+            border-bottom: 1px solid rgba(216, 209, 197, 0.6);
             box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12);
             position: sticky;
             top: 0;
@@ -204,7 +204,7 @@
             background-color: var(--accent-sage-hover);
         }
 
-        /* HERO CON FONDO MÁS OSCURO PARA UN CONTRASTE DEFINIDO */
+        /* HERO PORTADA FLUIDA */
         .hero {
             position: relative;
             min-height: 560px;
@@ -215,7 +215,6 @@
             overflow: hidden;
         }
 
-        /* Capa oscura que enfatiza el volumen de la imagen y hace resaltar el texto */
         .hero-overlay {
             position: absolute;
             inset: 0;
@@ -310,7 +309,7 @@
             color: #FFFFFF !important;
         }
 
-        /* SECCIONES SERVICIOS - IMÁGENES DIFERENCIADAS */
+        /* SECCIONES SERVICIOS - IMÁGENES ASIGNADAS SEGÚN LO SOLICITADO */
         .content-triad {
             padding: 70px 6%;
             width: 100%;
@@ -359,25 +358,28 @@
             height: 120px;
         }
 
-        /* Fotografías únicas y temáticas para cada servicio */
+        /* 01 INVESTIGACIÓN PERICIAL -> imagen 1.jpg */
         .service-thumb.thumb-1 {
-            background: linear-gradient(rgba(44, 40, 37, 0.22), rgba(44, 40, 37, 0.22)),
-                        url('https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(44, 40, 37, 0.18), rgba(44, 40, 37, 0.18)),
+                        url('imagen 1.jpg') center/cover no-repeat;
         }
         
+        /* 02 ASESORÍA Y ACOMPAÑAMIENTO -> erwinbosman-women-10322574_1920.jpg */
         .service-thumb.thumb-2 {
-            background: linear-gradient(rgba(44, 40, 37, 0.22), rgba(44, 40, 37, 0.22)),
-                        url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(44, 40, 37, 0.18), rgba(44, 40, 37, 0.18)),
+                        url('erwinbosman-women-10322574_1920.jpg') center/cover no-repeat;
         }
 
+        /* 03 LEY KARIN -> IMAGEN 5.png */
         .service-thumb.thumb-3 {
-            background: linear-gradient(rgba(44, 40, 37, 0.22), rgba(44, 40, 37, 0.22)),
-                        url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(44, 40, 37, 0.18), rgba(44, 40, 37, 0.18)),
+                        url('IMAGEN 5.png') center/cover no-repeat;
         }
 
+        /* 04 EQUIDAD SALARIAL -> IMAGEN 6 CARRUSEL.jpg */
         .service-thumb.thumb-4 {
-            background: linear-gradient(rgba(44, 40, 37, 0.22), rgba(44, 40, 37, 0.22)),
-                        url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(44, 40, 37, 0.18), rgba(44, 40, 37, 0.18)),
+                        url('IMAGEN 6 CARRUSEL.jpg') center/cover no-repeat;
         }
 
         .service-icon {
@@ -714,7 +716,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN ÁREAS DE ESPECIALIZACIÓN (IMÁGENES DIFERENCIADAS POR SERVICIO) -->
+    <!-- SECCIÓN ÁREAS DE ESPECIALIZACIÓN (4 TARJETAS CON IMÁGENES ASIGNADAS) -->
     <section class="content-triad" id="servicios">
 
         <div class="services-container">
