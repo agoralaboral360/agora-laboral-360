@@ -48,6 +48,7 @@
             background-color: var(--bg-sand);
             padding: 18px 4%;
             display: flex;
+            justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid rgba(216, 209, 197, 0.6);
             box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12);
@@ -220,8 +221,8 @@
             inset: 0;
             background: linear-gradient(to right,
                 var(--bg-sand) 0%,
-                rgba(235, 230, 221, 0.98) 38%,
-                rgba(120, 110, 100, 0.60) 65%,
+                rgba(235, 230, 221, 0.98) 45%,
+                rgba(120, 110, 100, 0.60) 70%,
                 rgba(25, 20, 18, 0.70) 100%);
             z-index: 1;
         }
@@ -229,8 +230,8 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 680px;
-            padding: 80px 6% 80px 9%;
+            max-width: 820px; /* Amplitud suficiente para 2 líneas */
+            padding: 80px 6% 80px 8%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -238,12 +239,12 @@
 
         .hero-title {
             font-family: var(--font-serif);
-            font-size: 3.4rem;
+            font-size: 2.8rem; /* Tamaño optimizado para 2 líneas elegantes */
             font-weight: 600;
-            line-height: 1.08;
+            line-height: 1.12;
             color: var(--text-charcoal);
             margin-bottom: 18px;
-            letter-spacing: -0.5px;
+            letter-spacing: 0.2px;
             text-transform: uppercase;
         }
 
@@ -262,7 +263,7 @@
             color: var(--text-muted);
             line-height: 1.6;
             margin-bottom: 28px;
-            max-width: 520px;
+            max-width: 560px;
         }
 
         .hero-buttons {
@@ -309,7 +310,7 @@
             color: #FFFFFF !important;
         }
 
-        /* SECCIONES SERVICIOS - IMÁGENES ASIGNADAS SEGÚN LO SOLICITADO */
+        /* SECCIONES SERVICIOS - 4 TARJETAS */
         .content-triad {
             padding: 70px 6%;
             width: 100%;
@@ -358,28 +359,24 @@
             height: 120px;
         }
 
-        /* 01 INVESTIGACIÓN PERICIAL -> imagen 1.jpg */
         .service-thumb.thumb-1 {
             background: linear-gradient(rgba(44, 40, 37, 0.18), rgba(44, 40, 37, 0.18)),
-                        url('imagen 1.jpg') center/cover no-repeat;
+                        url('imagen%201.jpg') center/cover no-repeat;
         }
         
-        /* 02 ASESORÍA Y ACOMPAÑAMIENTO -> erwinbosman-women-10322574_1920.jpg */
         .service-thumb.thumb-2 {
             background: linear-gradient(rgba(44, 40, 37, 0.18), rgba(44, 40, 37, 0.18)),
                         url('erwinbosman-women-10322574_1920.jpg') center/cover no-repeat;
         }
 
-        /* 03 LEY KARIN -> IMAGEN 5.png */
         .service-thumb.thumb-3 {
             background: linear-gradient(rgba(44, 40, 37, 0.18), rgba(44, 40, 37, 0.18)),
-                        url('IMAGEN 5.png') center/cover no-repeat;
+                        url('IMAGEN%205.png') center/cover no-repeat;
         }
 
-        /* 04 EQUIDAD SALARIAL -> IMAGEN 6 CARRUSEL.jpg */
         .service-thumb.thumb-4 {
             background: linear-gradient(rgba(44, 40, 37, 0.18), rgba(44, 40, 37, 0.18)),
-                        url('IMAGEN 6 CARRUSEL.jpg') center/cover no-repeat;
+                        url('IMAGEN%206%20CARRUSEL.jpg') center/cover no-repeat;
         }
 
         .service-icon {
@@ -625,7 +622,7 @@
             nav { margin-left: 0; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
             .btn-header { margin-left: 0; }
-            .hero-title { font-size: 2.6rem; }
+            .hero-title { font-size: 2.2rem; }
             .services-grid { grid-template-columns: 1fr; }
             .topics-bar { flex-direction: column; align-items: flex-start; }
             .topics-nav { grid-template-columns: 1fr; width: 100%; }
@@ -702,11 +699,11 @@
         </a>
     </header>
 
-    <!-- BLOQUE 1 — HERO -->
+    <!-- BLOQUE 1 — HERO EN EXACTAS 2 LÍNEAS -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Espacios de trabajo seguros y equitativos</h1>
+            <h1 class="hero-title">Espacios de trabajo<br>seguros y equitativos</h1>
             <p class="hero-subtitle">Consultoría especializada en gestión laboral, Ley Karin, equidad salarial e investigación pericial.</p>
             <p class="hero-description">Acompañamiento técnico para organizaciones que necesitan prevenir, investigar y gestionar riesgos laborales con rigor e imparcialidad.</p>
             <div class="hero-buttons">
@@ -716,7 +713,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN ÁREAS DE ESPECIALIZACIÓN (4 TARJETAS CON IMÁGENES ASIGNADAS) -->
+    <!-- SECCIÓN ÁREAS DE ESPECIALIZACIÓN (4 TARJETAS CON IMÁGENES DIFERENCIADAS) -->
     <section class="content-triad" id="servicios">
 
         <div class="services-container">
