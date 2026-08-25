@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academia | Ágora Laboral 360°</title>
+    <title>Escuela de Investigadores/as | Ágora Laboral 360°</title>
     
     <!-- Fuentes oficiales: Cormorant Garamond y Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,19 +14,14 @@
             --bg-sand: #EBE6DD;           
             --bg-card: #EFEAE2;           
             --bg-card-accent: #E5DFD5;    
-            
             --bg-topics: #D3D2C4;         
             --text-charcoal: #2C2825;     
             --text-muted: #615B55;        
-            
             --accent-sage: #828776;       
             --accent-sage-hover: #6E7363;
-            
-            --accent-rose: #C38271;       /* Rosa Viejo / Rosa Polvo */
-            --accent-rose-dark: #A36557;  /* Malva / Rosa Viejo Oscuro */
-            
+            --accent-rose: #C38271;       
+            --accent-rose-dark: #A36557;  
             --border-subtle: #D8D1C5;     
-            
             --font-serif: 'Cormorant Garamond', serif;
             --font-sans: 'Montserrat', sans-serif;
         }
@@ -42,7 +37,7 @@
         }
 
         /* HEADER ESPACIOSO Y NAVEGACIÓN UNIFICADA */
-        header {
+        header.site-header {
             background-color: var(--bg-sand);
             padding: 18px 4%;
             display: flex;
@@ -134,7 +129,6 @@
             border-bottom: 1.5px solid var(--text-charcoal);
         }
 
-        /* DROPDOWNS UNIFICADOS */
         nav .dropdown {
             position: absolute;
             top: 100%;
@@ -176,30 +170,7 @@
             color: var(--accent-rose-dark);
         }
 
-        .btn-header {
-            background-color: var(--accent-sage);
-            color: #FFFFFF !important;
-            padding: 9px 18px;
-            border-radius: 4px;
-            font-size: 0.66rem;
-            font-weight: 600;
-            letter-spacing: 1.4px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: background-color 0.25s ease;
-            border: none;
-            white-space: nowrap;
-            flex-shrink: 0;
-            margin-left: 8px;
-        }
-
-        .btn-header:hover {
-            background-color: var(--accent-sage-hover);
-        }
-
-        /* HERO DE LA ACADEMIA */
+        /* HERO DE LA ESCUELA */
         .page-hero {
             background: var(--bg-card-accent);
             padding: 65px 4% 50px 4%; 
@@ -234,26 +205,87 @@
         .page-hero p {
             font-size: 0.95rem; 
             color: var(--text-muted); 
-            max-width: 640px; 
+            max-width: 720px; 
             margin: 0 auto;
             line-height: 1.6;
         }
 
+        /* CONTENIDO DE PROGRAMAS */
+        .school-wrapper {
+            max-width: 1100px;
+            margin: 60px auto 80px auto;
+            padding: 0 4%;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .program-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            padding: 40px 35px;
+            box-shadow: 0 4px 15px rgba(44, 40, 37, 0.04);
+        }
+
+        .program-card h2 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            color: var(--text-charcoal);
+            font-weight: 600;
+            margin-bottom: 12px;
+            border-bottom: 2px solid var(--accent-sage);
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        .program-card p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .modules-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .modules-list li {
+            font-size: 0.88rem;
+            color: var(--text-charcoal);
+            padding: 12px 0;
+            border-bottom: 1px dashed var(--border-subtle);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        .modules-list li:last-child {
+            border-bottom: none;
+        }
+
+        .modules-list li svg {
+            color: var(--accent-sage);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
         /* TARJETA FORMULARIO LISTA DE ESPERA */
         .waitlist-card {
-            max-width: 580px; 
-            margin: 45px auto 80px auto; 
             background: var(--bg-card);
-            padding: 40px 35px; 
+            padding: 40px 30px; 
             border-radius: 10px; 
             border: 1px solid var(--border-subtle);
             box-shadow: 0 10px 30px rgba(44, 40, 37, 0.05); 
             text-align: center;
         }
 
-        .waitlist-card h2 {
+        .waitlist-card h3 {
             font-family: var(--font-serif); 
-            font-size: 1.9rem; 
+            font-size: 1.7rem; 
             color: var(--text-charcoal);
             font-weight: 600; 
             margin-bottom: 10px;
@@ -261,7 +293,7 @@
         }
 
         .waitlist-card p {
-            font-size: 0.88rem; 
+            font-size: 0.85rem; 
             color: var(--text-muted); 
             margin-bottom: 25px;
             line-height: 1.5;
@@ -274,7 +306,7 @@
 
         .form-group label { 
             display: block; 
-            font-size: 0.75rem; 
+            font-size: 0.72rem; 
             font-weight: 700; 
             color: var(--text-charcoal); 
             margin-bottom: 6px; 
@@ -372,25 +404,25 @@
             margin: 0 auto;
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1024px) {
+            .school-wrapper { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 768px) {
-            header { flex-direction: column; gap: 15px; padding: 18px 4%; }
+            header.site-header { flex-direction: column; gap: 15px; padding: 18px 4%; }
             nav { margin-left: 0; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
-            .btn-header { margin-left: 0; }
             .page-hero h1 { font-size: 2.1rem; }
-            .waitlist-card { padding: 30px 20px; }
+            .program-card, .waitlist-card { padding: 30px 20px; }
             .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER OFICIAL UNIFICADO -->
-    <header>
+    <!-- HEADER OFICIAL BOUTIQUE -->
+    <header class="site-header">
         <a href="/" class="logo-box">
             <svg class="logo-icon" viewBox="0 0 24 24">
                 <path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" />
@@ -398,7 +430,7 @@
             </svg>
             <div class="logo-text">
                 <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
-                <span class="logo-subtitle">Consultoría &amp; Riesgo Normativo</span>
+                <span class="logo-subtitle">Investigación &amp; Informes Técnicos</span>
             </div>
         </a>
 
@@ -407,106 +439,126 @@
                 <li><a href="/">Inicio</a></li>
 
                 <li>
-                    <a href="/#servicios">Servicios</a>
+                    <a href="/servicios/">Servicios</a>
                     <div class="dropdown">
-                        <a href="/#investigacion">Investigación Externa</a>
-                        <a href="/#asesoria">Asesoría Interna</a>
-                        <a href="/#ley-karin">Ley Karin</a>
-                        <a href="/#equidad">Equidad Salarial</a>
+                        <a href="/servicios/#investigacion">Investigaciones Externas</a>
+                        <a href="/servicios/#informes">Informes Técnicos y Periciales</a>
                     </div>
                 </li>
 
                 <li>
-                    <a href="/academia/" class="active">Academia</a>
+                    <a href="/academia/" class="active">Escuela</a>
                     <div class="dropdown">
-                        <a href="/academia/#cursos">Cursos</a>
-                        <a href="/academia/#talleres">Talleres</a>
-                        <a href="/academia/#charlas">Charlas</a>
-                        <a href="/academia/#formacion">Formación Especializada</a>
+                        <a href="/academia/">Formación de Investigadores/as</a>
+                        <a href="/academia/#cursos">Curso: Fundamentos de Investigación</a>
                     </div>
                 </li>
 
                 <li>
-                    <a href="/observatorio/">Observatorio</a>
+                    <a href="/recursos/">Recursos</a>
                     <div class="dropdown">
-                        <a href="/observatorio/#normativa">Normativa</a>
-                        <a href="/observatorio/#jurisprudencia">Jurisprudencia</a>
-                        <a href="/observatorio/#analisis">Análisis</a>
-                        <a href="/observatorio/#informes">Informes</a>
+                        <a href="/recursos/">Herramientas y Plantillas</a>
+                        <a href="/blog/">Blog Técnico</a>
+                        <a href="/observatorio/">Marco Normativo (Ley Karin / 21.828)</a>
                     </div>
                 </li>
 
-                <li>
-                    <a href="/blog/">Blog</a>
-                    <div class="dropdown">
-                        <a href="/blog/#ley-karin">Ley Karin</a>
-                        <a href="/blog/#gestion">Gestión Laboral</a>
-                        <a href="/blog/#equidad">Equidad</a>
-                        <a href="/blog/#clima">Clima Laboral</a>
-                    </div>
-                </li>
-
+                <li><a href="/diagnostico/">Diagnóstico</a></li>
                 <li><a href="/#contacto">Contacto</a></li>
             </ul>
         </nav>
-
-        <a href="/diagnostico/" class="btn-header">
-            Diagnóstico Gratis
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
     </header>
 
-    <!-- HERO DE LA ACADEMIA -->
+    <!-- HERO DE LA ESCUELA -->
     <main>
         <section class="page-hero">
-            <span class="tag-badge">🎓 Formación Especializada</span>
-            <h1>Plataforma de capacitación en preparación</h1>
-            <p>Estamos diseñando programas de alta especialización en Compliance Laboral, Ley Karin, Ley 21.828 y prevención de riesgos psicosociales.</p>
+            <span class="tag-badge">🎓 Escuela de Investigadores/as</span>
+            <h1>Formación Técnica en Investigación Laboral</h1>
+            <p>Capacitamos a profesionales, comités internos e investigadores/as en la conducción rigurosa, imparcial y metodológicamente consistente de denuncias en el ámbito laboral.</p>
         </section>
 
-        <!-- FORMULARIO LISTA DE ESPERA -->
-        <div class="waitlist-card">
-            <h2>Lista de Espera y Novedades</h2>
-            <p>Inscríbete para ser el/la primero/a en acceder a nuestros cursos, seminarios técnicos y talleres exclusivos.</p>
+        <div class="school-wrapper">
             
-            <form>
-                <div class="form-group">
-                    <label for="nombre">Nombre Completo *</label>
-                    <input type="text" id="nombre" class="form-control" placeholder="Ej: María González" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico *</label>
-                    <input type="email" id="email" class="form-control" placeholder="nombre@empresa.cl" required>
-                </div>
-                <button type="submit" class="btn-cta">UNIRME A LA LISTA DE ESPERA →</button>
-            </form>
+            <!-- PROGRAMA PRINCIPAL DESTACADO -->
+            <section class="program-card" id="cursos">
+                <h2>Programa: Fundamentos de la Investigación de Denuncias Laborales</h2>
+                <p>Un programa especializado diseñado para transferir herramientas periciales aplicables a investigaciones por acoso sexual, acoso laboral y violencia en el trabajo bajo el marco de la Ley N.° 21.643 (Ley Karin).</p>
+                
+                <ul class="modules-list">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <strong>Módulo I:</strong> Metodología de entrevista técnica y toma de declaraciones a partes involucradas.
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <strong>Módulo II:</strong> Análisis de evidencia documental, mensajes electrónicos y reconstrucción probatoria.
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <strong>Módulo III:</strong> Aplicación práctica de la perspectiva de género y pautas de no revictimización.
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <strong>Módulo IV:</strong> Estructura y elaboración del informe final de investigación con ponderación técnica.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- FORMULARIO LISTA DE ESPERA -->
+            <div class="waitlist-card">
+                <h3>Postulación &amp; Preinscripción</h3>
+                <p>Inscríbete para recibir la malla curricular detallada y ser notificado/a sobre la apertura de nuevas cohortes de formación.</p>
+                
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
+                    <input type="hidden" name="subject" value="NUEVA PREINSCRIPCIÓN ESCUELA: Ágora Laboral 360°">
+                    <input type="hidden" name="redirect" value="https://agoralaboral.cl/academia/">
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej. María González" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Corporativo / Profesional *</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="nombre@empresa.cl" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profesion">Profesión / Cargo *</label>
+                        <input type="text" id="profesion" name="profesion" class="form-control" placeholder="Ej. Abogada / HRBP" required>
+                    </div>
+
+                    <button type="submit" class="btn-cta">Solicitar Información del Programa →</button>
+                </form>
+            </div>
+
         </div>
     </main>
 
-    <!-- FOOTER EXTENDIDO Y ESTRUCTURADO EN 5 COLUMNAS -->
+    <!-- FOOTER EXTENDIDO Y ESTRUCTURADO -->
     <footer id="contacto">
         <div class="footer-grid">
             <div class="footer-col">
                 <span class="logo-title" style="font-size:1.4rem;">ÁGORA LABORAL <sup>360°</sup></span>
-                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Consultoría especializada &amp; riesgo normativo.</p>
+                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados.</p>
             </div>
             
             <div class="footer-col">
                 <h5>Servicios</h5>
                 <ul>
-                    <li><a href="/#investigacion">Investigación externa</a></li>
-                    <li><a href="/#asesoria">Asesoría interna</a></li>
-                    <li><a href="/#ley-karin">Ley Karin</a></li>
-                    <li><a href="/#equidad">Equidad salarial</a></li>
+                    <li><a href="/servicios/#investigacion">Investigación externa</a></li>
+                    <li><a href="/servicios/#informes">Informes técnicos y periciales</a></li>
+                    <li><a href="/servicios/#auditoria">Auditoría de investigaciones</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
                 <h5>Contenido</h5>
                 <ul>
-                    <li><a href="/academia/">Academia</a></li>
-                    <li><a href="/observatorio/">Observatorio</a></li>
-                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/academia/">Escuela de Investigadores/as</a></li>
+                    <li><a href="/recursos/">Herramientas y Plantillas</a></li>
+                    <li><a href="/blog/">Blog Técnico</a></li>
                 </ul>
             </div>
 
@@ -529,7 +581,7 @@
         </div>
 
         <div class="footer-bottom">
-            <span>&copy; 2026 Ágora Laboral 360°. Consultoría &amp; Riesgo Normativo. Todos los derechos reservados.</span>
+            <span>&copy; 2026 Ágora Laboral 360°. Investigación &amp; Informes Técnicos. Todos los derechos reservados.</span>
         </div>
     </footer>
 
