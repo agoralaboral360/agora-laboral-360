@@ -38,8 +38,22 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER UNIFICADO */
-        header { background-color: var(--bg-sand); padding: 18px 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(216, 209, 197, 0.6); box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12); position: sticky; top: 0; z-index: 1000; width: 100%; gap: 20px; }
+        /* HEADER PRINCIPAL */
+        header.site-header { 
+            background-color: var(--bg-sand); 
+            padding: 18px 4%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid rgba(216, 209, 197, 0.6); 
+            box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            width: 100%; 
+            gap: 20px; 
+        }
+
         .logo-box { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-charcoal); flex-shrink: 0; }
         .logo-icon { width: 28px; height: 28px; stroke: var(--text-charcoal); fill: none; stroke-width: 1.5; }
         .logo-text { display: flex; flex-direction: column; }
@@ -66,8 +80,8 @@
         .breadcrumb-container a { color: var(--text-charcoal); text-decoration: none; font-weight: 600; }
         .breadcrumb-container a:hover { color: var(--accent-rose-dark); }
 
-        /* HERO SECTION RECURSOS */
-        .hero-section { max-width: 900px; margin: 35px auto 50px; padding: 0 20px; text-align: center; }
+        /* HERO SECTION */
+        .hero-section { max-width: 900px; margin: 35px auto 50px; padding: 0 20px; text-align: center; display: block; position: relative; }
         .hero-badge { display: inline-block; background: var(--bg-card-accent); color: var(--accent-rose-dark); font-size: 0.68rem; font-weight: 700; padding: 6px 18px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1.2px; border: 1px solid var(--border-subtle); margin-bottom: 20px; }
         .hero-title { font-family: var(--font-serif); font-size: 2.6rem; font-weight: 600; color: var(--text-charcoal); line-height: 1.15; margin-bottom: 18px; text-transform: uppercase; }
         .hero-subtitle { font-size: 0.95rem; color: var(--text-muted); font-weight: 400; max-width: 780px; margin: 0 auto; line-height: 1.6; }
@@ -79,11 +93,11 @@
         .method-text h2 { font-family: var(--font-serif); font-size: 2rem; color: var(--text-charcoal); font-weight: 600; margin-bottom: 18px; text-transform: uppercase; }
         .method-text p { color: var(--text-muted); margin-bottom: 22px; font-size: 0.9rem; line-height: 1.6; }
         .method-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-        .method-list li { display: flex; align-items: flex-start; gap: 14px; font-size: 0.88rem; color: var(--text-charcoal); font-weight: 500;}
+        .method-list li { display: flex; align-items: flex-start; gap: 14px; font-size: 0.88rem; color: var(--text-charcoal); }
         .method-list li span { background: var(--accent-sage); color: #FFFFFF; width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700; font-size: 0.8rem; flex-shrink: 0; }
 
         /* TABLA DE PRECIOS 3 COLUMNAS */
-        .pricing-section { max-width: 1150px; margin: 0 auto 70px; padding: 0 20px; }
+        .pricing-section { max-width: 1150px; margin: 0 auto 70px; padding: 0 20px; scroll-margin-top: 100px; }
         .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; align-items: stretch; }
         .price-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 40px 28px; text-align: center; position: relative; transition: transform 0.25s ease, box-shadow 0.25s ease; display: flex; flex-direction: column; justify-content: space-between; }
         .price-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(44, 40, 37, 0.08); }
@@ -127,13 +141,13 @@
 
         @media (max-width: 1200px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 900px) { .method-container { grid-template-columns: 1fr; } .pricing-grid { grid-template-columns: 1fr; gap: 35px; } }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; padding: 18px 4%; } nav { margin-left: 0; } nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; } .btn-header { margin-left: 0; } .hero-title { font-size: 2.1rem; } .footer-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { header.site-header { flex-direction: column; gap: 15px; padding: 18px 4%; } nav { margin-left: 0; } nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; } .btn-header { margin-left: 0; } .hero-title { font-size: 2.1rem; } .footer-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-    <!-- HEADER DE NAVEGACIÓN GLOBAL UNIFICADO (Con Recursos Agregado) -->
-    <header>
+    <!-- HEADER NAVEGACIÓN GLOBAL -->
+    <header class="site-header">
         <a href="/" class="logo-box">
             <svg class="logo-icon" viewBox="0 0 24 24">
                 <path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" />
@@ -169,12 +183,11 @@
                     </div>
                 </li>
 
-                <!-- NUEVO ENLACE: RECURSOS -->
                 <li>
                     <a href="/recursos/" class="active">Recursos</a>
                     <div class="dropdown">
                         <a href="/recursos/#kits">Kits de Investigación</a>
-                        <a href="/recursos/#plantillas">Plantillas Legales</a>
+                        <a href="/recursos/muestra-manual.html">Muestra Manual</a>
                     </div>
                 </li>
 
@@ -214,11 +227,11 @@
     </div>
 
     <!-- HERO SECTION -->
-    <header class="hero-section">
+    <section class="hero-section">
         <span class="hero-badge">Herramientas para RR.HH. y Compliance</span>
         <h1 class="hero-title">No vendas plantillas, garantiza seguridad en tus investigaciones.</h1>
         <p class="hero-subtitle">El Estado te indica QUÉ hacer. Nosotros te enseñamos <strong>CÓMO investigar internamente</strong> cumpliendo rigurosamente la Ley Karin N.° 21.643, la Ley N.° 21.828 y las directrices de la Dirección del Trabajo.</p>
-    </header>
+    </section>
 
     <!-- SECCIÓN MÉTODO ÁGORA -->
     <section class="method-section">
@@ -354,7 +367,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.705 1.754zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.285-.143-1.687-.833-1.947-.928-.26-.095-.45-.143-.64.143-.19.285-.736.928-.902 1.118-.166.19-.333.214-.618.071-1.638-.82-2.718-1.462-3.804-3.328-.288-.495.288-.459.825-1.533.095-.19.048-.356-.024-.499-.071-.143-.64-1.543-.877-2.11-.23-.553-.464-.477-.64-.486l-.547-.01c-.19 0-.499.071-.76.356-.26.285-.998.975-.998 2.38 0 1.404 1.022 2.759 1.164 2.95.143.19 2.012 3.073 4.876 4.31.681.294 1.213.47 1.626.601.684.217 1.307.186 1.8.113.55-.082 1.687-.69 1.925-1.356.237-.666.237-1.237.166-1.356-.07-.118-.26-.19-.545-.333z"/></svg>
     </a>
 
-    <!-- FOOTER EXTENDIDO Y ESTRUCTURADO EN 5 COLUMNAS -->
+    <!-- FOOTER COMPLETO Y ESTRUCTURADO EN 5 COLUMNAS -->
     <footer id="contacto">
         <div class="footer-grid">
             <div class="footer-col">
@@ -376,6 +389,7 @@
                 <h5>Contenido</h5>
                 <ul>
                     <li><a href="/academia/">Academia</a></li>
+                    <li><a href="/recursos/">Recursos</a></li>
                     <li><a href="/observatorio/">Observatorio</a></li>
                     <li><a href="/blog/">Blog</a></li>
                 </ul>
