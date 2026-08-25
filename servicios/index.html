@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios de Consultoría &amp; Compliance | Ágora Laboral 360°</title>
+    <title>Servicios Periciales & Informes Técnicos | Ágora Laboral 360°</title>
     
     <!-- Fuentes oficiales: Cormorant Garamond y Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
         }
 
         /* HEADER ESPACIOSO Y NAVEGACIÓN UNIFICADA */
-        header {
+        header.site-header {
             background-color: var(--bg-sand);
             padding: 18px 4%;
             display: flex;
@@ -168,29 +168,6 @@
         nav .dropdown a:hover {
             background-color: var(--bg-card-accent);
             color: var(--accent-rose-dark);
-        }
-
-        .btn-header {
-            background-color: var(--accent-sage);
-            color: #FFFFFF !important;
-            padding: 9px 18px;
-            border-radius: 4px;
-            font-size: 0.66rem;
-            font-weight: 600;
-            letter-spacing: 1.4px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: background-color 0.25s ease;
-            border: none;
-            white-space: nowrap;
-            flex-shrink: 0;
-            margin-left: 8px;
-        }
-
-        .btn-header:hover {
-            background-color: var(--accent-sage-hover);
         }
 
         /* HERO SERVICIOS */
@@ -367,10 +344,9 @@
         }
 
         @media (max-width: 768px) {
-            header { flex-direction: column; gap: 15px; padding: 18px 4%; }
+            header.site-header { flex-direction: column; gap: 15px; padding: 18px 4%; }
             nav { margin-left: 0; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
-            .btn-header { margin-left: 0; }
             .services-hero h1 { font-size: 2.1rem; }
             .service-card { padding: 30px 20px; }
             .footer-grid { grid-template-columns: 1fr; }
@@ -379,8 +355,8 @@
 </head>
 <body>
 
-    <!-- HEADER OFICIAL UNIFICADO -->
-    <header>
+    <!-- HEADER OFICIAL UNIFICADO BOUTIQUE -->
+    <header class="site-header">
         <a href="/" class="logo-box">
             <svg class="logo-icon" viewBox="0 0 24 24">
                 <path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" />
@@ -388,7 +364,7 @@
             </svg>
             <div class="logo-text">
                 <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
-                <span class="logo-subtitle">Consultoría &amp; Riesgo Normativo</span>
+                <span class="logo-subtitle">Investigación &amp; Informes Técnicos</span>
             </div>
         </a>
 
@@ -399,107 +375,78 @@
                 <li>
                     <a href="/servicios/" class="active">Servicios</a>
                     <div class="dropdown">
-                        <a href="/servicios/#investigacion">Investigación Externa</a>
-                        <a href="/servicios/#asesoria">Asesoría Interna</a>
-                        <a href="/servicios/#ley-karin">Ley Karin</a>
-                        <a href="/servicios/#equidad">Equidad Salarial</a>
+                        <a href="/servicios/#investigacion">Investigaciones Externas</a>
+                        <a href="/servicios/#informes">Informes Técnicos y Periciales</a>
                     </div>
                 </li>
 
                 <li>
-                    <a href="/academia/">Academia</a>
+                    <a href="/academia/">Escuela</a>
                     <div class="dropdown">
-                        <a href="/academia/#cursos">Cursos</a>
-                        <a href="/academia/#talleres">Talleres</a>
-                        <a href="/academia/#charlas">Charlas</a>
-                        <a href="/academia/#formacion">Formación Especializada</a>
+                        <a href="/academia/">Formación de Investigadores/as</a>
+                        <a href="/academia/#cursos">Curso: Fundamentos de Investigación</a>
                     </div>
                 </li>
 
                 <li>
-                    <a href="/observatorio/">Observatorio</a>
+                    <a href="/recursos/">Recursos</a>
                     <div class="dropdown">
-                        <a href="/observatorio/#normativa">Normativa</a>
-                        <a href="/observatorio/#jurisprudencia">Jurisprudencia</a>
-                        <a href="/observatorio/#analisis">Análisis</a>
-                        <a href="/observatorio/#informes">Informes</a>
+                        <a href="/recursos/">Herramientas y Plantillas</a>
+                        <a href="/blog/">Blog Técnico</a>
+                        <a href="/observatorio/">Marco Normativo (Ley Karin / 21.828)</a>
                     </div>
                 </li>
 
-                <li>
-                    <a href="/blog/">Blog</a>
-                    <div class="dropdown">
-                        <a href="/blog/#ley-karin">Ley Karin</a>
-                        <a href="/blog/#gestion">Gestión Laboral</a>
-                        <a href="/blog/#equidad">Equidad</a>
-                        <a href="/blog/#clima">Clima Laboral</a>
-                    </div>
-                </li>
-
+                <li><a href="/diagnostico/">Diagnóstico</a></li>
                 <li><a href="/#contacto">Contacto</a></li>
             </ul>
         </nav>
-
-        <a href="/diagnostico/" class="btn-header">
-            Diagnóstico Gratis
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
     </header>
 
     <section class="services-hero">
-        <span class="tag-badge">Soluciones Corporativas B2B</span>
-        <h1>Nuestros Servicios Especializados</h1>
-        <p>Acompañamos a gerencias de personas, compliance y áreas legales en el blindaje normativo, la gestión de investigaciones y el cumplimiento de estándares del Código del Trabajo.</p>
+        <span class="tag-badge">Especialidad Pericial B2B</span>
+        <h1>Investigación Laboral e Informes Técnicos</h1>
+        <p>Proporcionamos a gerencias de personas, fiscalías corporativas y áreas de compliance un abordaje pericial independiente, garantizando rigor metodológico, imparcialidad y perspectiva de género.</p>
     </section>
 
     <main class="container">
 
         <!-- SERVICIO 1: INVESTIGACIÓN EXTERNA -->
         <section id="investigacion" class="service-card">
-            <h2>Investigación Externa Especializada</h2>
-            <p>Conducción imparcial de procedimientos de investigación por acoso sexual, acoso laboral y violencia en el trabajo bajo la Ley Karin (Ley N.° 21.643).</p>
+            <h2>Investigaciones Laborales Externas e Independientes</h2>
+            <p>Conducción completa de procedimientos de investigación frente a denuncias complejas por acoso sexual, acoso laboral y violencia en el trabajo bajo el marco de la Ley N.° 21.643 (Ley Karin).</p>
             <ul class="service-features">
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Dictamen pericial imparcial libre de sesgos.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Ponderación probatoria con metodología ICIA.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Entrega de informe final en el plazo de 30 días.</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Entrevistas técnicas y reconstrucción metodológica de hechos.</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Análisis probatorio bajo pautas que evitan la revictimización.</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Imparcialidad técnica libre de conflictos de interés internos.</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Conclusión mediante informe final parametrizado en plazos legales.</li>
             </ul>
-            <a href="/#contacto" class="btn-service">Solicitar Asesoría →</a>
+            <a href="/#contacto" class="btn-service">Solicitar Cotización de Investigación →</a>
         </section>
 
-        <!-- SERVICIO 2: ASESORÍA INTERNA -->
-        <section id="asesoria" class="service-card">
-            <h2>Asesoría Interna &amp; Acompañamiento</h2>
-            <p>Soporte técnico continuo para comités de investigación internos, áreas de personas y fiscalías corporativas durante la tramitación de denuncias.</p>
+        <!-- SERVICIO 2: INFORMES TÉCNICOS Y PERICIALES -->
+        <section id="informes" class="service-card">
+            <h2>Informes Técnicos &amp; Peritaje Social Laboral</h2>
+            <p>Elaboración de dictámenes periciales e informes técnicos de alta especialización para respaldar decisiones corporativas críticas o procesos de controversia jurídica.</p>
             <ul class="service-features">
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Revisión de admisibilidad dentro de las 72 horas.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Diseño de medidas de resguardo sin riesgo de tutela.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Auditoría preventiva de expedientes internos.</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Informes periciales sociales para causas laborales.</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Informes técnicos de auditoría de brechas y equidad (Ley 21.828).</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Análisis y evaluación técnica de antecedentes y denuncias previas.</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Dictámenes preventivos sobre cumplimiento de estándares DT.</li>
             </ul>
-            <a href="/#contacto" class="btn-service">Solicitar Asesoría →</a>
+            <a href="/#contacto" class="btn-service">Encargar Informe Técnico →</a>
         </section>
 
-        <!-- SERVICIO 3: LEY KARIN -->
-        <section id="ley-karin" class="service-card">
-            <h2>Cumplimiento Integral Ley Karin</h2>
-            <p>Adaptación normativa de la empresa frente a las exigencias de la Ley N.° 21.643 y dictámenes vigentes de la Dirección del Trabajo.</p>
+        <!-- SERVICIO 3: REVISIÓN DE EXPEDIENTES -->
+        <section id="auditoria" class="service-card">
+            <h2>Revisión &amp; Auditoría Técnica de Investigaciones Internas</h2>
+            <p>Evaluación externa de procedimientos de investigación desarrollados por comités o investigadores internos antes de su remisión a la Dirección del Trabajo o cierre de expediente.</p>
             <ul class="service-features">
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Actualización del Reglamento Interno (RIOHS).</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Matriz de riesgo psicosocial alineada al CEAL-SM.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Protocolos de prevención y resguardo inmediato.</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Análisis de admisibilidad y debido proceso dentro de las 72 horas.</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Revisión de consistencia probatoria y de perspectiva de género.</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Detección de brechas metodológicas para mitigar riesgo de tutela.</li>
             </ul>
-            <a href="/#contacto" class="btn-service">Solicitar Asesoría →</a>
-        </section>
-
-        <!-- SERVICIO 4: EQUIDAD SALARIAL -->
-        <section id="equidad" class="service-card">
-            <h2>Diagnóstico &amp; Matriz de Equidad Salarial</h2>
-            <p>Estructuración técnica de bandas salariales y valoración objetiva de puestos de trabajo conforme a la Ley N.° 21.828 de trabajo de igual valor.</p>
-            <ul class="service-features">
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Levantamiento de descriptores de cargo estandarizados.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Ponderación de factores objetivos de remuneración.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Plan de acción para corrección de brechas salariales.</li>
-            </ul>
-            <a href="/#contacto" class="btn-service">Solicitar Asesoría →</a>
+            <a href="/#contacto" class="btn-service">Solicitar Auditoría de Expediente →</a>
         </section>
 
     </main>
@@ -509,25 +456,24 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <span class="logo-title" style="font-size:1.4rem;">ÁGORA LABORAL <sup>360°</sup></span>
-                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Consultoría especializada &amp; riesgo normativo.</p>
+                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados.</p>
             </div>
             
             <div class="footer-col">
                 <h5>Servicios</h5>
                 <ul>
                     <li><a href="/servicios/#investigacion">Investigación externa</a></li>
-                    <li><a href="/servicios/#asesoria">Asesoría interna</a></li>
-                    <li><a href="/servicios/#ley-karin">Ley Karin</a></li>
-                    <li><a href="/servicios/#equidad">Equidad salarial</a></li>
+                    <li><a href="/servicios/#informes">Informes técnicos y periciales</a></li>
+                    <li><a href="/servicios/#auditoria">Auditoría de investigaciones</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
                 <h5>Contenido</h5>
                 <ul>
-                    <li><a href="/academia/">Academia</a></li>
-                    <li><a href="/observatorio/">Observatorio</a></li>
-                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/academia/">Escuela de Investigadores/as</a></li>
+                    <li><a href="/recursos/">Herramientas y Plantillas</a></li>
+                    <li><a href="/blog/">Blog Técnico</a></li>
                 </ul>
             </div>
 
@@ -550,7 +496,7 @@
         </div>
 
         <div class="footer-bottom">
-            <span>&copy; 2026 Ágora Laboral 360°. Consultoría &amp; Riesgo Normativo. Todos los derechos reservados.</span>
+            <span>&copy; 2026 Ágora Laboral 360°. Investigación &amp; Informes Técnicos. Todos los derechos reservados.</span>
         </div>
     </footer>
 
