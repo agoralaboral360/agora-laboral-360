@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos y Kits de Investigación | Ágora Laboral 360°</title>
-    <meta name="description" content="Kit profesional con metodología de investigación para Ley Karin N.° 21.643 y Ley N.° 21.828. Más que plantillas, un sistema paso a paso.">
+    <title>Herramientas y Plantillas de Investigación | Ágora Laboral 360°</title>
+    <meta name="description" content="Kit profesional con metodología de investigación para Ley Karin N.° 21.643 y Ley N.° 21.828. Un sistema paso a paso para el cumplimiento técnico.">
 
     <!-- Fuentes oficiales: Cormorant Garamond y Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER PRINCIPAL */
+        /* HEADER PRINCIPAL BOUTIQUE */
         header.site-header { 
             background-color: var(--bg-sand); 
             padding: 18px 4%; 
@@ -130,7 +130,7 @@
         .btn-submit { width: 100%; background: var(--accent-sage); color: #FFFFFF; border: none; padding: 15px; border-radius: 4px; font-weight: 700; font-size: 0.78rem; letter-spacing: 1.4px; cursor: pointer; text-transform: uppercase; margin-top: 12px; transition: background-color 0.25s ease; }
         .btn-submit:hover { background-color: var(--accent-sage-hover); }
 
-        /* FOOTER */
+        /* FOOTER EXTENDIDO */
         footer { background-color: var(--bg-sand); border-top: 1px solid var(--border-subtle); padding: 60px 6% 30px 6%; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr; gap: 35px; max-width: 1200px; margin: 0 auto 40px auto; }
         .footer-col h5 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--text-charcoal); margin-bottom: 15px; }
@@ -141,12 +141,12 @@
 
         @media (max-width: 1200px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 900px) { .method-container { grid-template-columns: 1fr; } .pricing-grid { grid-template-columns: 1fr; gap: 35px; } }
-        @media (max-width: 768px) { header.site-header { flex-direction: column; gap: 15px; padding: 18px 4%; } nav { margin-left: 0; } nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; } .btn-header { margin-left: 0; } .hero-title { font-size: 2.1rem; } .footer-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { header.site-header { flex-direction: column; gap: 15px; padding: 18px 4%; } nav { margin-left: 0; } nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; } .hero-title { font-size: 2.1rem; } .footer-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-    <!-- HEADER NAVEGACIÓN GLOBAL -->
+    <!-- HEADER NAVEGACIÓN GLOBAL BOUTIQUE -->
     <header class="site-header">
         <a href="/" class="logo-box">
             <svg class="logo-icon" viewBox="0 0 24 24">
@@ -155,48 +155,43 @@
             </svg>
             <div class="logo-text">
                 <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
-                <span class="logo-subtitle">Consultoría &amp; Riesgo Normativo</span>
+                <span class="logo-subtitle">Investigación &amp; Informes Técnicos</span>
             </div>
         </a>
 
-  <nav>
-    <ul>
-        <li><a href="/">Inicio</a></li>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
 
-        <li>
-            <a href="/servicios/">Servicios</a>
-            <div class="dropdown">
-                <a href="/servicios/#investigacion">Investigaciones Externas</a>
-                <a href="/servicios/#informes">Informes Sociales y Periciales</a>
-            </div>
-        </li>
+                <li>
+                    <a href="/servicios/">Servicios</a>
+                    <div class="dropdown">
+                        <a href="/servicios/#investigacion">Investigaciones Externas</a>
+                        <a href="/servicios/#informes">Informes Sociales y Periciales</a>
+                    </div>
+                </li>
 
-        <li>
-            <a href="/academia/">Escuela</a>
-            <div class="dropdown">
-                <a href="/academia/">Formación de Investigadores/as</a>
-                <a href="/academia/#cursos">Curso: Fundamentos de Investigación</a>
-            </div>
-        </li>
+                <li>
+                    <a href="/academia/">Escuela</a>
+                    <div class="dropdown">
+                        <a href="/academia/">Formación de Investigadores/as</a>
+                        <a href="/academia/#cursos">Curso: Fundamentos de Investigación</a>
+                    </div>
+                </li>
 
-        <li>
-            <a href="/recursos/">Recursos</a>
-            <div class="dropdown">
-                <a href="/recursos/">Herramientas y Plantillas</a>
-                <a href="/blog/">Blog Técnico</a>
-                <a href="/observatorio/">Marco Normativo (Ley Karin / 21.828)</a>
-            </div>
-        </li>
+                <li>
+                    <a href="/recursos/" class="active">Recursos</a>
+                    <div class="dropdown">
+                        <a href="/recursos/">Herramientas y Plantillas</a>
+                        <a href="/blog/">Blog Técnico</a>
+                        <a href="/observatorio/">Marco Normativo (Ley Karin / 21.828)</a>
+                    </div>
+                </li>
 
-        <li><a href="/diagnostico/" class="active">Diagnóstico</a></li>
-        <li><a href="/#contacto">Contacto</a></li>
-    </ul>
-</nav>
-
-        <a href="/diagnostico/" class="btn-header">
-            Diagnóstico Gratis
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+                <li><a href="/diagnostico/">Diagnóstico</a></li>
+                <li><a href="/#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- BREADCRUMB -->
@@ -345,31 +340,29 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.705 1.754zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.285-.143-1.687-.833-1.947-.928-.26-.095-.45-.143-.64.143-.19.285-.736.928-.902 1.118-.166.19-.333.214-.618.071-1.638-.82-2.718-1.462-3.804-3.328-.288-.495.288-.459.825-1.533.095-.19.048-.356-.024-.499-.071-.143-.64-1.543-.877-2.11-.23-.553-.464-.477-.64-.486l-.547-.01c-.19 0-.499.071-.76.356-.26.285-.998.975-.998 2.38 0 1.404 1.022 2.759 1.164 2.95.143.19 2.012 3.073 4.876 4.31.681.294 1.213.47 1.626.601.684.217 1.307.186 1.8.113.55-.082 1.687-.69 1.925-1.356.237-.666.237-1.237.166-1.356-.07-.118-.26-.19-.545-.333z"/></svg>
     </a>
 
-    <!-- FOOTER COMPLETO Y ESTRUCTURADO EN 5 COLUMNAS -->
+    <!-- FOOTER EXTENDIDO BOUTIQUE -->
     <footer id="contacto">
         <div class="footer-grid">
             <div class="footer-col">
                 <span class="logo-title" style="font-size:1.4rem;">ÁGORA LABORAL <sup>360°</sup></span>
-                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Consultoría especializada &amp; riesgo normativo.</p>
+                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados.</p>
             </div>
             
             <div class="footer-col">
                 <h5>Servicios</h5>
                 <ul>
                     <li><a href="/servicios/#investigacion">Investigación externa</a></li>
-                    <li><a href="/servicios/#asesoria">Asesoría interna</a></li>
-                    <li><a href="/servicios/#ley-karin">Ley Karin</a></li>
-                    <li><a href="/servicios/#equidad">Equidad salarial</a></li>
+                    <li><a href="/servicios/#informes">Informes Sociales y Periciales</a></li>
+                    <li><a href="/servicios/#auditoria">Auditoría de investigaciones</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
                 <h5>Contenido</h5>
                 <ul>
-                    <li><a href="/academia/">Academia</a></li>
-                    <li><a href="/recursos/">Recursos</a></li>
-                    <li><a href="/observatorio/">Observatorio</a></li>
-                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/academia/">Escuela de Investigadores/as</a></li>
+                    <li><a href="/recursos/">Herramientas y Plantillas</a></li>
+                    <li><a href="/blog/">Blog Técnico</a></li>
                 </ul>
             </div>
 
@@ -392,7 +385,7 @@
         </div>
 
         <div class="footer-bottom">
-            <span>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.</span>
+            <span>&copy; 2026 Ágora Laboral 360°. Investigación &amp; Informes Técnicos. Todos los derechos reservados.</span>
         </div>
     </footer>
 
