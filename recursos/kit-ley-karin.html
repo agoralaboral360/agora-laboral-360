@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kit de Investigación y Método ÁGORA | Ágora Laboral 360°</title>
+    <title>Recursos y Kits de Investigación | Ágora Laboral 360°</title>
     <meta name="description" content="Kit profesional con metodología de investigación para Ley Karin N.° 21.643 y Ley N.° 21.828. Más que plantillas, un sistema paso a paso.">
 
     <!-- Fuentes oficiales: Cormorant Garamond y Montserrat -->
@@ -15,19 +15,14 @@
             --bg-sand: #EBE6DD;           
             --bg-card: #EFEAE2;           
             --bg-card-accent: #E5DFD5;    
-            
             --bg-topics: #D3D2C4;         
             --text-charcoal: #2C2825;     
             --text-muted: #615B55;        
-            
             --accent-sage: #828776;       
             --accent-sage-hover: #6E7363;
-            
-            --accent-rose: #C38271;       /* Rosa Viejo / Rosa Polvo */
-            --accent-rose-dark: #A36557;  /* Malva / Rosa Viejo Oscuro */
-            
+            --accent-rose: #C38271;       
+            --accent-rose-dark: #A36557;  
             --border-subtle: #D8D1C5;     
-            
             --font-serif: 'Cormorant Garamond', serif;
             --font-sans: 'Montserrat', sans-serif;
             --verde-whatsapp: #25D366;
@@ -363,7 +358,6 @@
             box-shadow: 0 14px 28px rgba(44, 40, 37, 0.08); 
         }
 
-        /* Tarjeta Central Destacada */
         .price-card.featured { 
             border: 2px solid var(--accent-sage); 
             background: var(--bg-card-accent);
@@ -643,12 +637,12 @@
                 <li><a href="/">Inicio</a></li>
 
                 <li>
-                    <a href="/#servicios">Servicios</a>
+                    <a href="/servicios/">Servicios</a>
                     <div class="dropdown">
-                        <a href="/#investigacion">Investigación Externa</a>
-                        <a href="/#asesoria">Asesoría Interna</a>
-                        <a href="/#ley-karin">Ley Karin</a>
-                        <a href="/#equidad">Equidad Salarial</a>
+                        <a href="/servicios/#investigacion">Investigación Externa</a>
+                        <a href="/servicios/#asesoria">Asesoría Interna</a>
+                        <a href="/servicios/#ley-karin">Ley Karin</a>
+                        <a href="/servicios/#equidad">Equidad Salarial</a>
                     </div>
                 </li>
 
@@ -659,6 +653,15 @@
                         <a href="/academia/#talleres">Talleres</a>
                         <a href="/academia/#charlas">Charlas</a>
                         <a href="/academia/#formacion">Formación Especializada</a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="/recursos/" class="active">Recursos</a>
+                    <div class="dropdown">
+                        <a href="/recursos/#kits">Kits de Investigación</a>
+                        <a href="/recursos/kit-ley-karin.html">Kit Ley Karin</a>
+                        <a href="/recursos/muestra-manual.html">Muestra Manual</a>
                     </div>
                 </li>
 
@@ -709,7 +712,7 @@
         <div class="method-container">
             <div class="method-text">
                 <h2>Conoce el Método A.G.O.R.A.</h2>
-                <p>No basta con descargar "formatos básicos". La normativa vigente (Ley Karin N.° 21.643, Ley N.° 21.828 y dictámenes complementarios de la DT) exige investigar con <strong>perspectiva de género, confidencialidad, celeridad e imparcialidad</strong>. Nuestro sistema te enseña a cumplir cada exigencia paso a paso:</p>
+                <p>No basta con descargar "formatos básicos". La normativa vigente exige investigar con <strong>perspectiva de género, confidencialidad, celeridad e imparcialidad</strong>. Nuestro sistema te enseña a cumplir cada exigencia paso a paso:</p>
                 <ul class="method-list">
                     <li><span>A</span> <strong>Acoger:</strong> Recepción técnica, delimitación del caso y medidas de resguardo inmediatas.</li>
                     <li><span>G</span> <strong>Guiar:</strong> Planificación estratégica y definición de hipótesis investigativas.</li>
@@ -725,7 +728,7 @@
     </section>
 
     <!-- TABLA DE PRECIOS -->
-    <section class="pricing-section">
+    <section id="kits" class="pricing-section">
         <div class="pricing-grid">
             
             <!-- PLAN BÁSICO -->
@@ -849,10 +852,10 @@
             <div class="footer-col">
                 <h5>Servicios</h5>
                 <ul>
-                    <li><a href="/#investigacion">Investigación externa</a></li>
-                    <li><a href="/#asesoria">Asesoría interna</a></li>
-                    <li><a href="/#ley-karin">Ley Karin</a></li>
-                    <li><a href="/#equidad">Equidad salarial</a></li>
+                    <li><a href="/servicios/#investigacion">Investigación externa</a></li>
+                    <li><a href="/servicios/#asesoria">Asesoría interna</a></li>
+                    <li><a href="/servicios/#ley-karin">Ley Karin</a></li>
+                    <li><a href="/servicios/#equidad">Equidad salarial</a></li>
                 </ul>
             </div>
 
@@ -860,6 +863,7 @@
                 <h5>Contenido</h5>
                 <ul>
                     <li><a href="/academia/">Academia</a></li>
+                    <li><a href="/recursos/">Recursos</a></li>
                     <li><a href="/observatorio/">Observatorio</a></li>
                     <li><a href="/blog/">Blog</a></li>
                 </ul>
