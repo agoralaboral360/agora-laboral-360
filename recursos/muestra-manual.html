@@ -1,140 +1,671 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muestra Gratuita: Manual de Investigación Laboral | Ágora Laboral 360°</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
-   :root {
-    --morado: #6B5CA5;      /* Lavanda oficial */
-    --menta: #A2E8DD;       /* Menta pastel */
-    --naranja: #F27059;     /* Coral oficial */
-    --blanco: #FFFFFF;
-    --texto: #222222;       /* Texto oscuro */
-    --bg-white: #FAF7F2;    /* Blanco hueso de fondo */
-  }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Montserrat', sans-serif !important; background-color: var(--fondo-pagina); color: var(--texto-oscuro); line-height: 1.7; }
-
-    .header { background-color: var(--blanco); border-bottom: 3px solid var(--morado-principal); padding: 16px 24px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    .navbar { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    .logo-text { font-weight: 900; font-size: 1.25rem; color: var(--morado-principal); text-decoration: none; }
-    .logo-text span { border-bottom: 4px solid var(--verde-menta); }
-    .btn-back { background: var(--morado-principal); color: var(--blanco); text-decoration: none; font-weight: 800; font-size: 0.8rem; padding: 8px 16px; border-radius: 6px; text-transform: uppercase; }
-
-    .container { max-width: 900px; margin: 40px auto; padding: 0 24px; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muestra Gratuita: Manual de Investigación Laboral | Ágora Laboral 360°</title>
     
-    .document-card { background: var(--blanco); border: 2px solid var(--morado-principal); border-radius: 16px; padding: 45px 40px; box-shadow: 0 10px 30px rgba(54,30,66,0.06); }
-    .doc-badge { background: var(--verde-menta); color: var(--morado-principal); font-weight: 800; font-size: 0.75rem; padding: 4px 14px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 15px; }
-    
-    h1 { font-size: 2.2rem; font-weight: 900; color: var(--morado-principal); margin-bottom: 15px; line-height: 1.2; }
-    .meta-info { font-size: 0.88rem; color: var(--texto-suave); font-weight: 600; margin-bottom: 30px; border-bottom: 2px solid var(--menta-fondo); padding-bottom: 15px; }
+    <!-- Fuentes oficiales: Cormorant Garamond y Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    .content-section { margin-bottom: 35px; }
-    .content-section h2 { font-size: 1.4rem; font-weight: 800; color: var(--morado-principal); margin-bottom: 15px; border-left: 5px solid var(--verde-menta); padding-left: 12px; }
-    .content-section h3 { font-size: 1.1rem; font-weight: 700; color: var(--morado-principal); margin: 20px 0 10px 0; }
-    .content-section p { font-size: 0.98rem; color: var(--texto-suave); margin-bottom: 15px; font-weight: 500; }
-    
-    .highlight-box { background: var(--menta-fondo); border-left: 4px solid var(--morado-principal); padding: 18px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 0.95rem; font-weight: 600; }
+    <style>
+        :root {
+            /* PALETA EDITORIAL "VERDE SALVIA, ROSA VIEJO & ARENA" */
+            --bg-sand: #EBE6DD;           
+            --bg-card: #EFEAE2;           
+            --bg-card-accent: #E5DFD5;    
+            
+            --bg-topics: #D3D2C4;         
+            --text-charcoal: #2C2825;     
+            --text-muted: #615B55;        
+            
+            --accent-sage: #828776;       
+            --accent-sage-hover: #6E7363;
+            
+            --accent-rose: #C38271;       /* Rosa Viejo / Rosa Polvo */
+            --accent-rose-dark: #A36557;  /* Malva / Rosa Viejo Oscuro */
+            
+            --border-subtle: #D8D1C5;     
+            
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
 
-    footer { background: var(--morado-oscuro); color: var(--blanco); text-align: center; padding: 25px 24px; font-size: 0.85rem; font-weight: 600; margin-top: 60px; }
-  </style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            font-family: var(--font-sans); 
+            background: var(--bg-sand); 
+            color: var(--text-charcoal); 
+            line-height: 1.7; 
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* HEADER ESPACIOSO Y NAVEGACIÓN UNIFICADA */
+        header {
+            background-color: var(--bg-sand);
+            padding: 18px 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(216, 209, 197, 0.6);
+            box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-charcoal);
+            flex-shrink: 0;
+        }
+
+        .logo-icon {
+            width: 28px;
+            height: 28px;
+            stroke: var(--text-charcoal);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-family: var(--font-serif);
+            font-size: 1.45rem;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            line-height: 1;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .logo-title sup {
+            font-size: 0.65em;
+            vertical-align: super;
+            font-weight: 500;
+            margin-left: 2px;
+        }
+
+        .logo-subtitle {
+            font-size: 0.58rem;
+            font-weight: 500;
+            letter-spacing: 1.8px;
+            color: var(--text-muted);
+            margin-top: 3px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        nav { margin-left: auto; }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 22px;
+            align-items: center;
+        }
+
+        nav ul li { position: relative; }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-charcoal);
+            font-size: 0.66rem;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            padding: 8px 0;
+            transition: all 0.2s ease;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        nav a:hover, nav a.active {
+            border-bottom: 1.5px solid var(--text-charcoal);
+        }
+
+        /* DROPDOWNS UNIFICADOS */
+        nav .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            padding: 8px 0;
+            min-width: 190px;
+            box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.25s ease;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav ul li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        nav .dropdown a {
+            padding: 8px 16px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            display: block;
+            border-bottom: none !important;
+            color: var(--text-charcoal);
+        }
+
+        nav .dropdown a:hover {
+            background-color: var(--bg-card-accent);
+            color: var(--accent-rose-dark);
+        }
+
+        .btn-header {
+            background-color: var(--accent-sage);
+            color: #FFFFFF !important;
+            padding: 9px 18px;
+            border-radius: 4px;
+            font-size: 0.66rem;
+            font-weight: 600;
+            letter-spacing: 1.4px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background-color 0.25s ease;
+            border: none;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-left: 8px;
+        }
+
+        .btn-header:hover {
+            background-color: var(--accent-sage-hover);
+        }
+
+        /* BREADCRUMB */
+        .breadcrumb-container { 
+            max-width: 1200px; 
+            margin: 25px auto 0; 
+            padding: 0 4%; 
+            font-size: 0.75rem; 
+            color: var(--text-muted); 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .breadcrumb-container a { 
+            color: var(--text-charcoal); 
+            text-decoration: none; 
+            font-weight: 600; 
+        }
+
+        .breadcrumb-container a:hover {
+            color: var(--accent-rose-dark);
+        }
+
+        /* CONTENIDO DEL MANUAL */
+        .container { 
+            max-width: 900px; 
+            margin: 35px auto 80px auto; 
+            padding: 0 24px; 
+        }
+
+        .document-card { 
+            background: var(--bg-card); 
+            border: 1px solid var(--border-subtle); 
+            border-radius: 10px; 
+            padding: 55px 50px; 
+            box-shadow: 0 10px 30px rgba(44,40,37,0.06); 
+        }
+
+        .doc-badge { 
+            background: var(--bg-sand); 
+            color: var(--accent-rose-dark); 
+            font-weight: 700; 
+            font-size: 0.68rem; 
+            padding: 5px 16px; 
+            border-radius: 20px; 
+            text-transform: uppercase; 
+            display: inline-block; 
+            margin-bottom: 18px; 
+            border: 1px solid var(--border-subtle);
+            letter-spacing: 1.2px;
+        }
+
+        .document-card h1 { 
+            font-family: var(--font-serif);
+            font-size: 2.4rem; 
+            font-weight: 600; 
+            color: var(--text-charcoal); 
+            margin-bottom: 15px; 
+            line-height: 1.15; 
+            text-transform: uppercase;
+        }
+
+        .meta-info { 
+            font-size: 0.85rem; 
+            color: var(--text-muted); 
+            font-weight: 500; 
+            margin-bottom: 35px; 
+            border-bottom: 1px solid var(--border-subtle); 
+            padding-bottom: 18px; 
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .content-section { margin-bottom: 40px; }
+
+        .content-section h2 { 
+            font-family: var(--font-serif);
+            font-size: 1.6rem; 
+            font-weight: 600; 
+            color: var(--text-charcoal); 
+            margin-bottom: 18px; 
+            border-left: 4px solid var(--accent-sage); 
+            padding-left: 14px; 
+            text-transform: uppercase;
+        }
+
+        .content-section h3 { 
+            font-size: 1.1rem; 
+            font-weight: 600; 
+            color: var(--text-charcoal); 
+            margin: 25px 0 12px 0; 
+        }
+
+        .content-section p { 
+            font-size: 0.95rem; 
+            color: var(--text-charcoal); 
+            margin-bottom: 18px; 
+            font-weight: 400; 
+            line-height: 1.7;
+        }
+
+        .highlight-box { 
+            background: var(--bg-card-accent); 
+            border-left: 4px solid var(--accent-rose); 
+            padding: 22px 25px; 
+            border-radius: 0 8px 8px 0; 
+            margin: 25px 0; 
+            font-size: 0.92rem; 
+            font-weight: 500; 
+            color: var(--text-charcoal);
+            line-height: 1.6;
+            border-top: 1px solid var(--border-subtle);
+            border-right: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .highlight-box strong {
+            font-weight: 600;
+            color: var(--text-charcoal);
+        }
+
+        /* RECUADRO DESTACADO CTA CORAL DE VENTA */
+        .cta-sales {
+            background-color: var(--bg-card-accent); 
+            padding: 50px 40px; 
+            border-radius: 10px; 
+            border: 2px solid var(--accent-sage); 
+            text-align: center; 
+            margin-top: 60px; 
+            box-shadow: 0 10px 30px rgba(44,40,37,0.06);
+        }
+
+        .cta-sales-badge {
+            background: var(--accent-rose); 
+            color: #ffffff; 
+            font-size: 0.68rem; 
+            font-weight: 700; 
+            padding: 6px 18px; 
+            border-radius: 20px; 
+            text-transform: uppercase; 
+            display: inline-block; 
+            margin-bottom: 20px; 
+            letter-spacing: 1.2px;
+        }
+
+        .cta-sales h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem; 
+            font-weight: 600; 
+            color: var(--text-charcoal); 
+            margin-bottom: 18px; 
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .cta-sales p {
+            font-size: 0.95rem; 
+            color: var(--text-muted); 
+            margin-bottom: 30px; 
+            line-height: 1.6; 
+            font-weight: 400; 
+            max-width: 680px; 
+            margin-left: auto; 
+            margin-right: auto;
+        }
+
+        .cta-sales-list {
+            list-style: none; 
+            padding: 0; 
+            margin: 0 auto 35px auto; 
+            text-align: left; 
+            max-width: 660px;
+        }
+
+        .cta-sales-list li {
+            margin-bottom: 16px; 
+            font-size: 0.9rem; 
+            color: var(--text-charcoal); 
+            font-weight: 500; 
+            display: flex; 
+            align-items: flex-start; 
+            gap: 12px;
+            line-height: 1.5;
+        }
+
+        .cta-sales-list li svg {
+            color: var(--accent-sage);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .cta-sales-list .bonus-item {
+            margin-top: 20px; 
+            color: var(--accent-rose-dark); 
+            font-weight: 600;
+        }
+
+        .btn-cta-sales {
+            display: inline-block; 
+            background-color: var(--accent-sage); 
+            color: #ffffff; 
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            padding: 16px 32px; 
+            border-radius: 4px; 
+            text-decoration: none; 
+            text-transform: uppercase; 
+            letter-spacing: 1.4px; 
+            transition: background-color 0.25s ease;
+        }
+
+        .btn-cta-sales:hover {
+            background-color: var(--accent-sage-hover);
+        }
+
+        /* FOOTER EXTENDIDO UNIFICADO */
+        footer {
+            background-color: var(--bg-sand);
+            border-top: 1px solid var(--border-subtle);
+            padding: 60px 6% 30px 6%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
+            gap: 35px;
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+        }
+
+        .footer-col h5 {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-charcoal);
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-col a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-rose-dark);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1200px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; padding: 18px 4%; }
+            nav { margin-left: 0; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
+            .btn-header { margin-left: 0; }
+            .document-card { padding: 35px 25px; }
+            .document-card h1 { font-size: 2rem; }
+            .cta-sales { padding: 35px 25px; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="navbar">
-      <a href="https://agoralaboral.cl/" class="logo-text">ÁGORA LABORAL <span>360°</span></a>
-      <a href="https://agoralaboral.cl/recursos/index.html" class="btn-back">← Volver a Recursos</a>
-    </div>
-  </header>
-
-  <main class="container">
-    <article class="document-card">
-      <span class="doc-badge">Muestra Gratuita Oficial</span>
-      <h1>Manual de Investigación Laboral Ley Karin</h1>
-      <div class="meta-info">Documento de Lectura Técnica • Módulo I de VI • Ley N.° 21.643</div>
-
-      <!-- MÓDULO I / CAPÍTULO I -->
-      <section class="content-section">
-        <h2>Módulo I: Principios Guias y Marco Normativo de la Ley Karin</h2>
-        <p>La entrada en vigencia de la Ley N.° 21.643 redefine de manera sustancial las obligaciones de los empleadores en Chile respecto a la prevención, investigación y sanción del acoso sexual, laboral y la violencia en el trabajo.</p>
-
-        <h3>1.1 Principios Rectores Obligatorios</h3>
-        <p>Todo procedimiento de investigación interna o externa debe fundamentarse irrestrictamente en los siguientes principios expresados en la normativa:</p>
-        
-        <div class="highlight-box">
-          <strong>a) Perspectiva de Género:</strong> Obligación de analizar las dinámicas de poder e inequidades estructurales en el entorno de trabajo.<br>
-          <strong>b) No Revictimización:</strong> Prohibición absoluta de reiterar declaraciones de la persona afectada salvo estricta necesidad pericial.<br>
-          <strong>c) Debido Proceso e Imparcialidad:</strong> Garantía de objetividad, derecho a la defensa y ecuanimidad en la recepción de pruebas.<br>
-          <strong>d) Confidencialidad y Reserva:</strong> Resguardo estricto del expediente y la identidad de las partes involucradas.
-        </div>
-
-        <h3>1.2 Definición de las Tres Conductas Reguladas</h3>
-        <p><strong>Acoso Sexual:</strong> El que una persona realice de forma indebida, por cualquier medio, requerimientos de carácter sexual, no consentidos por quien los recibe y que amenacen o perjudiquen su situación laboral.</p>
-        <p><strong>Acoso Laboral:</strong> Toda conducta que constituya agresión u hostigamiento ejercida por el empleador o por uno o más trabajadores, en contra de otro u otros trabajadores, por cualquier medio, ocasionando menoscabo, maltrato o humillación.</p>
-        <p><strong>Violencia en el Trabajo:</strong> Conductas ejercidas por terceros ajenos a la relación laboral (clientes, proveedores, usuarios) en contra de los trabajadores durante la prestación de sus servicios.</p>
-      </section>
-
-      <!-- RECUADRO DESTACADO CTA CORAL DE VENTA -->
-      <div style="background-color: #361e42; color: #ffffff; padding: 45px 30px; border-radius: 16px; border: 3px solid #a8e6cf; text-align: center; margin-top: 50px; box-shadow: 0 10px 30px rgba(54,30,66,0.2);">
-        
-        <span style="background: #ff6b6b; color: #ffffff; font-size: 0.8rem; font-weight: 900; padding: 6px 18px; border-radius: 50px; text-transform: uppercase; display: inline-block; margin-bottom: 18px; box-shadow: 0 4px 12px rgba(255,107,107,0.35);">
-          Acceso Inmediato
-        </span>
-
-        <h2 style="font-size: 2.1rem; font-weight: 900; color: #ffffff; margin-bottom: 18px; line-height: 1.2;">
-          ¿Quieres acceder al Manual Completo y las Herramientas Editables?
-        </h2>
-
-        <p style="font-size: 1.05rem; color: #f8fafc; margin-bottom: 28px; line-height: 1.6; font-weight: 500; max-width: 720px; margin-left: auto; margin-right: auto;">
-          Esta muestra corresponde únicamente al <strong>Módulo I</strong>. Adquiriendo la <strong style="color: #a8e6cf;">Biblioteca Profesional ($79.900 CLP)</strong> o el <strong style="color: #ff6b6b;">Master Kit ($129.900 CLP)</strong> obtendrás acceso inmediato a:
-        </p>
-
-        <ul style="list-style: none; padding: 0; margin: 0 auto 32px auto; text-align: left; max-width: 660px;">
-          <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
-            <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
-            <span><strong>Módulo II:</strong> Filtro de Admisibilidad y Subsanación en 3 Días (Ley N.° 21.643 - Ley Karin).</span>
-          </li>
-          <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
-            <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
-            <span><strong>Módulo III:</strong> Cronograma de 30 Días e Hipótesis Investigativas.</span>
-          </li>
-          <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
-            <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
-            <span><strong>Módulo IV:</strong> Catálogo de Preguntas Permitidas vs. Prohibidas (Evita revictimización).</span>
-          </li>
-          <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
-            <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
-            <span><strong>Módulo V:</strong> Valoración de Evidencia mediante la Matriz ICIA.</span>
-          </li>
-          <li style="margin-bottom: 14px; font-size: 0.95rem; color: #ffffff; font-weight: 600; display: flex; align-items: flex-start; gap: 12px;">
-            <span style="color: #a8e6cf; font-size: 1.1rem; flex-shrink: 0;">✅</span>
-            <span><strong>Módulo VI:</strong> Estructura del Informe Final blindado para la DT.</span>
-          </li>
-          <li style="margin-top: 18px; font-size: 1.05rem; color: #a8e6cf; font-weight: 800; display: flex; align-items: flex-start; gap: 12px;">
-            <span style="color: #ff6b6b; font-size: 1.2rem; flex-shrink: 0;">✦</span>
-            <span>+ Todas las Actas y Formatos 100% Editables en Word.</span>
-          </li>
-        </ul>
-
-        <a href="https://agoralaboral.cl/recursos/index.html#precios" style="display: inline-block; background-color: #ff6b6b; color: #ffffff; font-size: 1rem; font-weight: 900; padding: 18px 36px; border-radius: 8px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 6px 20px rgba(255,107,107,0.4); transition: all 0.2s;">
-          ADQUIRIR EL KIT COMPLETO AQUÍ →
+    <!-- HEADER DE NAVEGACIÓN GLOBAL UNIFICADO -->
+    <header>
+        <a href="/" class="logo-box">
+            <svg class="logo-icon" viewBox="0 0 24 24">
+                <path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" />
+                <path d="M12 22V10" />
+            </svg>
+            <div class="logo-text">
+                <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
+                <span class="logo-subtitle">Consultoría &amp; Riesgo Normativo</span>
+            </div>
         </a>
 
-      </div>
-    </article>
-  </main>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
 
-  <footer>
-    <p>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.</p>
-  </footer>
+                <li>
+                    <a href="/servicios/">Servicios</a>
+                    <div class="dropdown">
+                        <a href="/servicios/#investigacion">Investigación Externa</a>
+                        <a href="/servicios/#asesoria">Asesoría Interna</a>
+                        <a href="/servicios/#ley-karin">Ley Karin</a>
+                        <a href="/servicios/#equidad">Equidad Salarial</a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="/academia/">Academia</a>
+                    <div class="dropdown">
+                        <a href="/academia/#cursos">Cursos</a>
+                        <a href="/academia/#talleres">Talleres</a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="/recursos/" class="active">Recursos</a>
+                    <div class="dropdown">
+                        <a href="/recursos/kit-ley-karin.html">Kit Ley Karin</a>
+                        <a href="/recursos/muestra-manual.html">Muestra Manual</a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="/observatorio/">Observatorio</a>
+                    <div class="dropdown">
+                        <a href="/observatorio/#normativa">Normativa</a>
+                        <a href="/observatorio/#jurisprudencia">Jurisprudencia</a>
+                    </div>
+                </li>
+
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <a href="/diagnostico/" class="btn-header">
+            Diagnóstico Gratis
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-container">
+        <a href="/">Inicio</a> &gt; <a href="/recursos/">Recursos</a> &gt; <span>Muestra Gratuita Oficial</span>
+    </div>
+
+    <!-- CONTENIDO DEL MANUAL -->
+    <main class="container">
+        <article class="document-card">
+            <span class="doc-badge">Muestra Gratuita Oficial</span>
+            <h1>Manual de Investigación Laboral Ley Karin</h1>
+            <div class="meta-info">Documento de Lectura Técnica • Módulo I de VI • Ley N.° 21.643</div>
+
+            <!-- MÓDULO I / CAPÍTULO I -->
+            <section class="content-section">
+                <h2>Módulo I: Principios Guías y Marco Normativo de la Ley Karin</h2>
+                <p>La entrada en vigencia de la Ley N.° 21.643 redefine de manera sustancial las obligaciones de los empleadores en Chile respecto a la prevención, investigación y sanción del acoso sexual, laboral y la violencia en el trabajo.</p>
+
+                <h3>1.1 Principios Rectores Obligatorios</h3>
+                <p>Todo procedimiento de investigación interna o externa debe fundamentarse irrestrictamente en los siguientes principios expresados en la normativa:</p>
+                
+                <div class="highlight-box">
+                    <strong>a) Perspectiva de Género:</strong> Obligación de analizar las dinámicas de poder e inequidades estructurales en el entorno de trabajo.<br><br>
+                    <strong>b) No Revictimización:</strong> Prohibición absoluta de reiterar declaraciones de la persona afectada salvo estricta necesidad pericial.<br><br>
+                    <strong>c) Debido Proceso e Imparcialidad:</strong> Garantía de objetividad, derecho a la defensa y ecuanimidad en la recepción de pruebas.<br><br>
+                    <strong>d) Confidencialidad y Reserva:</strong> Resguardo estricto del expediente y la identidad de las partes involucradas.
+                </div>
+
+                <h3>1.2 Definición de las Tres Conductas Reguladas</h3>
+                <p><strong>Acoso Sexual:</strong> El que una persona realice de forma indebida, por cualquier medio, requerimientos de carácter sexual, no consentidos por quien los recibe y que amenacen o perjudiquen su situación laboral.</p>
+                <p><strong>Acoso Laboral:</strong> Toda conducta que constituya agresión u hostigamiento ejercida por el empleador o por uno o más trabajadores, en contra de otro u otros trabajadores, por cualquier medio, ocasionando menoscabo, maltrato o humillación.</p>
+                <p><strong>Violencia en el Trabajo:</strong> Conductas ejercidas por terceros ajenos a la relación laboral (clientes, proveedores, usuarios) en contra de los trabajadores durante la prestación de sus servicios.</p>
+            </section>
+
+            <!-- RECUADRO DESTACADO CTA CORAL DE VENTA -->
+            <div class="cta-sales">
+                <span class="cta-sales-badge">Acceso Inmediato</span>
+                
+                <h2>¿Quieres acceder al Manual Completo y las Herramientas Editables?</h2>
+
+                <p>Esta muestra corresponde únicamente al <strong>Módulo I</strong>. Adquiriendo la <strong>Biblioteca Profesional ($79.900 CLP)</strong> o el <strong>Master Kit Premium ($129.900 CLP)</strong> obtendrás acceso inmediato a:</p>
+
+                <ul class="cta-sales-list">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span><strong>Módulo II:</strong> Filtro de Admisibilidad y Subsanación en 3 Días (Ley N.° 21.643 - Ley Karin).</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span><strong>Módulo III:</strong> Cronograma de 30 Días e Hipótesis Investigativas.</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span><strong>Módulo IV:</strong> Catálogo de Preguntas Permitidas vs. Prohibidas (Evita revictimización).</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span><strong>Módulo V:</strong> Valoración de Evidencia mediante la Matriz ICIA.</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span><strong>Módulo VI:</strong> Estructura del Informe Final blindado para la DT.</span>
+                    </li>
+                    <li class="bonus-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                        <span>+ Todas las Actas y Formatos 100% Editables en Word.</span>
+                    </li>
+                </ul>
+
+                <a href="/recursos/#kits" class="btn-cta-sales">Adquirir el Kit Completo Aquí →</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- FOOTER EXTENDIDO Y ESTRUCTURADO EN 5 COLUMNAS -->
+    <footer id="contacto">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <span class="logo-title" style="font-size:1.4rem;">ÁGORA LABORAL <sup>360°</sup></span>
+                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Consultoría especializada &amp; riesgo normativo.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h5>Servicios</h5>
+                <ul>
+                    <li><a href="/servicios/#investigacion">Investigación externa</a></li>
+                    <li><a href="/servicios/#asesoria">Asesoría interna</a></li>
+                    <li><a href="/servicios/#ley-karin">Ley Karin</a></li>
+                    <li><a href="/servicios/#equidad">Equidad salarial</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Contenido</h5>
+                <ul>
+                    <li><a href="/academia/">Academia</a></li>
+                    <li><a href="/recursos/">Recursos</a></li>
+                    <li><a href="/observatorio/">Observatorio</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Empresa</h5>
+                <ul>
+                    <li><a href="/#contacto">Contacto</a></li>
+                    <li><a href="/#privacidad">Política de privacidad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Contacto</h5>
+                <ul>
+                    <li><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a></li>
+                    <li><a href="tel:+56900000000">+56 9 0000 0000</a></li>
+                    <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.</span>
+        </div>
+    </footer>
 
 </body>
 </html>
