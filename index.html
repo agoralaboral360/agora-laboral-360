@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investigación Laboral & Informes Técnicos | Ágora Laboral 360°</title>
-    <meta name="description" content="Firma boutique especializada en investigaciones de acoso laboral, sexual y violencia (Ley Karin) e informes periciales sociales y laborales.">
+    <meta name="description" content="Firma especializada en investigaciones laborales externas e independientes e informes técnicos y periciales (Ley Karin N.° 21.643).">
 
     <!-- Fuentes oficiales: Cormorant Garamond y Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -51,13 +51,13 @@
         nav a { text-decoration: none; color: var(--text-charcoal); font-size: 0.66rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; padding: 8px 0; transition: all 0.2s ease; display: inline-block; white-space: nowrap; }
         nav a:hover, nav a.active { border-bottom: 1.5px solid var(--text-charcoal); }
         
-        nav .dropdown { position: absolute; top: 100%; left: 0; background-color: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 8px 0; min-width: 190px; box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.25s ease; z-index: 1000; display: flex; flex-direction: column; }
+        nav .dropdown { position: absolute; top: 100%; left: 0; background-color: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 8px 0; min-width: 200px; box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.25s ease; z-index: 1000; display: flex; flex-direction: column; }
         nav ul li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
         nav .dropdown a { padding: 8px 16px; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.8px; display: block; border-bottom: none !important; color: var(--text-charcoal); }
         nav .dropdown a:hover { background-color: var(--bg-card-accent); color: var(--accent-rose-dark); }
 
-        /* HERO SECTION CON IMAGEN PROPIA */
-       .hero { position: relative; width: 100%; min-height: 85vh; display: flex; align-items: center; background-image: url('imagen%201.png'); background-size: cover; background-position: center; border-bottom: 1px solid var(--border-subtle); }
+        /* HERO SECTION */
+        .hero { position: relative; width: 100%; min-height: 85vh; display: flex; align-items: center; background-image: url('imagen-1.png'); background-size: cover; background-position: center; border-bottom: 1px solid var(--border-subtle); }
         .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(235, 230, 221, 0.95) 0%, rgba(235, 230, 221, 0.85) 45%, rgba(235, 230, 221, 0.3) 100%); }
         .hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 4%; width: 100%; }
         
@@ -77,34 +77,40 @@
         .pillars-header h2 { font-family: var(--font-serif); font-size: 2.4rem; color: var(--text-charcoal); font-weight: 600; text-transform: uppercase; margin-bottom: 15px; }
         .pillars-header p { color: var(--text-muted); font-size: 0.95rem; }
 
-        .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .pillars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; max-width: 1000px; margin: 0 auto; }
         .pillar-card { 
-    background: var(--bg-sand); 
-    padding: 24px; 
-    border-radius: 8px; 
-    border: 1px solid var(--border-subtle); 
-    transition: transform 0.3s ease; 
-    display: flex;
-    flex-direction: column;
-}
+            background: var(--bg-sand); 
+            padding: 30px; 
+            border-radius: 8px; 
+            border: 1px solid var(--border-subtle); 
+            transition: transform 0.3s ease; 
+            display: flex;
+            flex-direction: column;
+        }
 
-.pillar-card:hover { 
-    transform: translateY(-5px); 
-    box-shadow: 0 10px 25px rgba(44,40,37,0.05); 
-    border-color: var(--accent-sage); 
-}
+        .pillar-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 25px rgba(44,40,37,0.05); 
+            border-color: var(--accent-sage); 
+        }
 
-.pillar-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    border: 1px solid var(--border-subtle);
-}
-        .pillar-card h3 { font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 12px; color: var(--text-charcoal); }
-        .pillar-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
-        .pillar-link { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--accent-rose-dark); text-decoration: none; letter-spacing: 1px; }
+        .pillar-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-subtle);
+        }
+        
+        .pillar-card h3 { font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 12px; color: var(--text-charcoal); line-height:1.2; text-transform: uppercase;}
+        .pillar-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+        .pillar-link { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--accent-rose-dark); text-decoration: none; letter-spacing: 1px; display: inline-block; margin-top: auto;}
+
+        /* SUB SERVICIO */
+        .sub-service { background: var(--bg-card-accent); border-left: 4px solid var(--accent-sage); padding: 20px; margin-top: 20px; border-radius: 0 6px 6px 0; }
+        .sub-service h4 { font-family: var(--font-serif); font-size: 1.2rem; color: var(--text-charcoal); margin-bottom: 8px; }
+        .sub-service p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
 
         /* SECCIÓN PERFIL PROFESIONAL */
         .profile-section { padding: 80px 4%; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
@@ -115,33 +121,83 @@
         .profile-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
         .p-badge { background: var(--bg-card-accent); border: 1px solid var(--border-subtle); padding: 6px 14px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; color: var(--text-charcoal); text-transform: uppercase; letter-spacing: 1px; }
 
-        /* CTA FINAL */
-        .cta-section { background: var(--bg-card-accent); padding: 70px 4%; text-align: center; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); margin-bottom: 40px; }
-        .cta-section h2 { font-family: var(--font-serif); font-size: 2.2rem; color: var(--text-charcoal); margin-bottom: 15px; }
-        .cta-section p { max-width: 600px; margin: 0 auto 30px auto; color: var(--text-muted); }
+        /* FORMULARIO DE CONTACTO / CTA */
+        .cta-section { background: var(--bg-card-accent); padding: 80px 4%; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); margin-bottom: 40px; }
+        .contact-container { max-width: 800px; margin: 0 auto; }
+        .cta-section h2 { font-family: var(--font-serif); font-size: 2.2rem; color: var(--text-charcoal); margin-bottom: 15px; text-align: center; }
+        .cta-section p { max-width: 600px; margin: 0 auto 40px auto; color: var(--text-muted); text-align: center; }
+        
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--text-charcoal); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .form-input, .form-select, .form-textarea { width: 100%; padding: 14px; border: 1px solid var(--border-subtle); border-radius: 4px; background: var(--bg-sand); font-family: inherit; font-size: 0.9rem; color: var(--text-charcoal); outline: none; transition: border-color 0.2s; }
+        .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--accent-sage); background: #ffffff; }
+        .form-textarea { resize: vertical; min-height: 120px; }
+        .btn-submit { width: 100%; background: var(--text-charcoal); color: #ffffff; border: none; padding: 18px; border-radius: 4px; font-weight: 700; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; transition: background 0.3s; margin-top: 10px;}
+        .btn-submit:hover { background: var(--accent-sage); }
 
         /* FOOTER EXTENDIDO BOUTIQUE */
         footer { background-color: var(--bg-sand); border-top: 1px solid var(--border-subtle); padding: 40px 6% 30px 6%; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr; gap: 35px; max-width: 1200px; margin: 0 auto 40px auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 35px; max-width: 1200px; margin: 0 auto 40px auto; }
         .footer-col h5 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--text-charcoal); margin-bottom: 15px; }
         .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
         .footer-col a { text-decoration: none; color: var(--text-muted); font-size: 0.78rem; transition: color 0.2s; }
         .footer-col a:hover { color: var(--accent-rose-dark); }
         .footer-bottom { border-top: 1px solid var(--border-subtle); padding-top: 25px; text-align: center; font-size: 0.72rem; color: var(--text-muted); max-width: 1200px; margin: 0 auto; }
 
-        @media (max-width: 1024px) { .pillars-grid, .profile-section { grid-template-columns: 1fr; } .hero-title { font-size: 3rem; } .footer-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 768px) { header.site-header { flex-direction: column; gap: 15px; padding: 18px 4%; } nav { margin-left: 0; } nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; } .hero-title { font-size: 2.4rem; } .footer-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 1024px) { .profile-section { grid-template-columns: 1fr; } .hero-title { font-size: 3rem; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) { header.site-header { flex-direction: column; gap: 15px; padding: 18px 4%; } nav { margin-left: 0; } nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; } .hero-title { font-size: 2.4rem; } .pillars-grid, .form-grid, .footer-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-    <!-- HEADER BOUTIQUE -->
-   <!-- PORTADA - HERO -->
+    <!-- HEADER BOUTIQUE LIMPIO (Sin Observatorio ni Blog) -->
+    <header class="site-header">
+        <a href="/" class="logo-box">
+            <svg class="logo-icon" viewBox="0 0 24 24">
+                <path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" />
+                <path d="M12 22V10" />
+            </svg>
+            <div class="logo-text">
+                <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
+                <span class="logo-subtitle">Investigación &amp; Informes Técnicos</span>
+            </div>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Inicio</a></li>
+
+                <li>
+                    <a href="#servicios">Servicios</a>
+                    <div class="dropdown">
+                        <a href="#investigacion">01 - Investigación Laboral</a>
+                        <a href="#informes">02 - Informes Técnicos</a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="/academia/">Escuela</a>
+                    <div class="dropdown">
+                        <a href="/academia/">Escuela de Investigadores</a>
+                        <a href="/academia/#cursos">Cursos y Programas</a>
+                    </div>
+                </li>
+
+                <li><a href="/recursos/">Recursos</a></li>
+                
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION ESPECIALIZADA -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <span class="hero-subtitle">Investigamos. Analizamos. Documentamos.</span>
-            <h1 class="hero-title">Investigación Laboral e Informes Técnicos.</h1>
+            <h1 class="hero-title">Investigación Laboral e<br>Informes Técnicos.</h1>
             <p class="hero-description">
                 Firma especializada en investigaciones laborales externas e independientes e informes técnicos y periciales, con especialización en denuncias de acoso laboral, acoso sexual y violencia en el trabajo, bajo el marco de la Ley N.° 21.643.
             </p>
@@ -152,70 +208,8 @@
         </div>
     </section>
 
-    <!-- QUIÉNES SOMOS -->
-    <section class="about-section" style="padding: 80px 4%; background: var(--bg-card); border-bottom: 1px solid var(--border-subtle); text-align: center;">
-        <div class="about-container" style="max-width: 800px; margin: 0 auto;">
-            <h2 style="font-family: var(--font-serif); font-size: 2.4rem; color: var(--text-charcoal); font-weight: 600; margin-bottom: 30px;">Rigor técnico para situaciones laborales complejas.</h2>
-            <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;"><strong>Ágora Laboral 360°</strong> es una firma especializada en investigación laboral e informes técnicos.</p>
-            <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">Abordamos situaciones que requieren análisis independiente, metodología rigurosa y documentación objetiva, transformando antecedentes complejos en información técnicamente fundamentada para apoyar la toma de decisiones.</p>
-            <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">Nuestro trabajo integra perspectiva social, análisis metodológico y conocimiento del marco laboral aplicable, con especial atención a la imparcialidad, la confidencialidad y el respeto por las personas involucradas.</p>
-        </div>
-    </section>
-        </a>
-
-        <nav>
-            <ul>
-                <li><a href="/" class="active">Inicio</a></li>
-
-                <li>
-                    <a href="/servicios/">Servicios</a>
-                    <div class="dropdown">
-                        <a href="/servicios/#investigacion">Investigaciones Externas</a>
-                        <a href="/servicios/#informes">Informes Sociales y Periciales</a>
-                    </div>
-                </li>
-
-                <li>
-                    <a href="/academia/">Escuela</a>
-                    <div class="dropdown">
-                        <a href="/academia/">Formación de Investigadores/as</a>
-                        <a href="/academia/#cursos">Curso: Fundamentos de Investigación</a>
-                    </div>
-                </li>
-
-                <li>
-                    <a href="/recursos/">Recursos</a>
-                    <div class="dropdown">
-                        <a href="/recursos/">Herramientas y Plantillas</a>
-                        <a href="/blog/">Blog Técnico</a>
-                        <a href="/observatorio/">Marco Normativo (Ley Karin / 21.828)</a>
-                    </div>
-                </li>
-
-                
-                <li><a href="/#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- HERO SECTION ESPECIALIZADA -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="hero-subtitle">Investigamos. Analizamos. Documentamos.</span>
-            <h1 class="hero-title">Investigación Laboral e<br>Informes Periciales.</h1>
-            <p class="hero-description">
-                Firma especializada en la conducción de investigaciones por denuncias de acoso laboral, sexual y violencia (Ley N.° 21.643), y elaboración de informes periciales sociales y laborales con rigor metodológico.
-            </p>
-            <div class="hero-buttons">
-                <a href="/diagnostico/" class="btn-hero-primary">Solicitar Diagnóstico →</a>
-                <a href="/servicios/" class="btn-hero-secondary">Ver Especialidades</a>
-            </div>
-        </div>
-    </section>
-
- <!-- PILARES DE SERVICIO CON IMÁGENES LIMPIAS -->
-    <section class="pillars-section">
+    <!-- PILARES DE SERVICIO (REDUCIDO A 2) -->
+    <section id="servicios" class="pillars-section">
         <div class="pillars-header">
             <h2>Nuestra Especialidad</h2>
             <p>Soluciones técnicas y periciales para respaldar decisiones corporativas y procesos jurídicos con absoluta imparcialidad.</p>
@@ -223,87 +217,130 @@
 
         <div class="pillars-grid">
             
-            <div class="pillar-card">
-                <img src="servicio-1.jpg.jpg" alt="Investigación Externa Ley Karin" class="pillar-image">
-                <h3>Investigación Externa<br></h3>
-                <p>Conducción completa de investigaciones laborales independientes frente a denuncias complejas.Metodología basada en la no revictimización y el debido proceso.</p>
-                <a href="/servicios/#investigacion" class="pillar-link">Conocer Servicio →</a>
+            <!-- SERVICIO 1 -->
+            <div class="pillar-card" id="investigacion">
+                <img src="servicio-1.jpg" alt="Investigación Externa Ley Karin" class="pillar-image">
+                <h3>Investigación Laboral Externa</h3>
+                <p>Conducción completa de investigaciones laborales independientes frente a denuncias complejas de acoso y violencia. Entrevistas técnicas, análisis probatorio y elaboración de informe final garantizando el debido proceso.</p>
+                <a href="#contacto" class="pillar-link">Solicitar Investigación →</a>
             </div>
 
-            <div class="pillar-card">
-                <img src="servicio-2.jpg.jpg" alt="Informes Sociales y Periciales" class="pillar-image">
-                <h3>Informes Sociales y Periciales</h3>
-                <p>Elaboración de dictámenes e informes técnicos de alta especialización (Peritaje Social, Laboral, análisis de antecedentes y evaluación técnica de pruebas).</p>
-                <a href="/servicios/#informes" class="pillar-link">Conocer Servicio →</a>
-            </div>
+            <!-- SERVICIO 2 (INCLUYE AUDITORÍA) -->
+            <div class="pillar-card" id="informes">
+                <img src="servicio-2.jpg" alt="Informes Sociales y Periciales" class="pillar-image">
+                <h3>Informes Técnicos y Peritajes</h3>
+                <p>Elaboración de dictámenes e informes técnicos de alta especialización (Peritaje Social y Laboral) para apoyar procesos de investigación y controversias.</p>
+                
+                <div class="sub-service">
+                    <h4>Revisión de Investigaciones Internas</h4>
+                    <p>Auditoría independiente a expedientes desarrollados por comités internos para detectar brechas y mitigar riesgos antes del cierre.</p>
+                </div>
 
-            <div class="pillar-card">
-                <img src="servicio-3.jpg.png" alt="Auditoría de Expedientes" class="pillar-image">
-                <h3>Auditoría de Expedientes</h3>
-                <p>Revisión técnica de procedimientos desarrollados por investigadores internos para detectar brechas, mitigar riesgos de tutela y asegurar admisibilidad.</p>
-                <a href="/servicios/#auditoria" class="pillar-link">Conocer Servicio →</a>
+                <a href="#contacto" class="pillar-link" style="margin-top: 20px;">Solicitar Informe →</a>
             </div>
 
         </div>
     </section>
 
-    <!-- SECCIÓN PERFIL / AUTORIDAD -->
+    <!-- SECCIÓN PERFIL / QUIÉNES SOMOS -->
     <section class="profile-section">
         <div class="profile-image">
-           <img src="imagen 1.png" alt="Directora Ágora Laboral 360 - Perito Laboral">
+            <img src="imagen-1.png" alt="Directora Ágora Laboral 360 - Perito Laboral">
         </div>
         <div class="profile-content">
             <h4>Dirección Técnica</h4>
-            <h2>Rigor pericial en la gestión del conflicto laboral</h2>
-            <p>Ágora Laboral 360° nace con un único propósito: aportar certeza técnica, jurídica y metodológica a las organizaciones que enfrentan crisis por denuncias internas.</p>
+            <h2>Rigor técnico para situaciones laborales complejas</h2>
+            <p><strong>Ágora Laboral 360°</strong> es una firma especializada en investigación laboral e informes técnicos. Abordamos situaciones que requieren análisis independiente, metodología rigurosa y documentación objetiva para apoyar la toma de decisiones corporativas.</p>
             <p>Nuestra visión como peritos e investigadoras nos permite analizar los conflictos desde la evidencia objetiva, aplicando las directrices de la <strong>Dirección del Trabajo</strong> y el cumplimiento estricto de normativas clave como la Ley Karin y la Ley 21.828.</p>
             
             <div class="profile-badges">
                 <span class="p-badge">Trabajo Social Pericial</span>
                 <span class="p-badge">Investigadora Laboral</span>
-                <span class="p-badge">Compliance</span>
+                <span class="p-badge">Cumplimiento Normativo</span>
             </div>
         </div>
     </section>
 
-    <!-- CTA FINAL -->
-    <section class="cta-section">
-        <h2>¿Necesita iniciar una investigación imparcial?</h2>
-        <p>Agende una sesión diagnóstica confidencial para evaluar su caso, revisar antecedentes y estructurar un plan de acción acorde a la normativa vigente.</p>
-        <a href="/diagnostico/" class="btn-hero-primary">SOLICITAR EVALUACIÓN TÉCNICA</a>
+    <!-- FORMULARIO DE CONTACTO INSTITUCIONAL -->
+    <section id="contacto" class="cta-section">
+        <div class="contact-container">
+            <h2>¿Necesita iniciar un proceso imparcial?</h2>
+            <p>Complete el formulario para solicitar una evaluación confidencial de su caso y estructurar el alcance técnico del servicio requerido.</p>
+            
+            <div class="form-card">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Tu Access Key de Web3Forms -->
+                    <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
+                    <input type="hidden" name="subject" value="NUEVO CONTACTO: Ágora Laboral 360">
+                    <input type="hidden" name="redirect" value="https://agoralaboral.cl/">
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Nombre / Organización *</label>
+                            <input type="text" name="nombre_organizacion" class="form-input" required placeholder="Ej. Empresa S.A. o Su Nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Cargo *</label>
+                            <input type="text" name="cargo" class="form-input" required placeholder="Ej. Gerente de Personas">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Correo Electrónico *</label>
+                            <input type="email" name="email" class="form-input" required placeholder="correo@empresa.cl">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Teléfono *</label>
+                            <input type="tel" name="telefono" class="form-input" required placeholder="+56 9 XXXX XXXX">
+                        </div>
+
+                        <div class="form-group full">
+                            <label class="form-label">Tipo de Solicitud *</label>
+                            <select name="tipo_solicitud" class="form-select" required>
+                                <option value="" disabled selected>Seleccione un servicio...</option>
+                                <option value="Investigación laboral (Ley Karin)">Investigación laboral (Externa / Ley Karin)</option>
+                                <option value="Informe técnico / Peritaje">Informe técnico / Peritaje social</option>
+                                <option value="Revisión de investigación interna">Revisión técnica de investigación interna</option>
+                                <option value="Otro">Otro requerimiento</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full">
+                            <label class="form-label">Descripción breve del caso *</label>
+                            <textarea name="descripcion" class="form-textarea" required placeholder="Indique de forma general la situación (mantenga reserva de nombres propios si lo considera necesario)."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Solicitud de Evaluación</button>
+                </form>
+            </div>
+        </div>
     </section>
 
-    <!-- FOOTER BOUTIQUE -->
-    <footer id="contacto">
+    <!-- FOOTER BOUTIQUE (Con link a diagnóstico) -->
+    <footer>
         <div class="footer-grid">
             <div class="footer-col">
                 <span class="logo-title" style="font-size:1.4rem;">ÁGORA LABORAL <sup>360°</sup></span>
-                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados.</p>
+                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados. Rigor e imparcialidad.</p>
             </div>
             
             <div class="footer-col">
                 <h5>Servicios</h5>
                 <ul>
-                    <li><a href="/servicios/#investigacion">Investigación externa</a></li>
-                    <li><a href="/servicios/#informes">Informes Sociales y Periciales</a></li>
-                    <li><a href="/servicios/#auditoria">Auditoría de investigaciones</a></li>
+                    <li><a href="#investigacion">Investigación Externa</a></li>
+                    <li><a href="#informes">Informes y Peritajes</a></li>
+                    <li><a href="#informes">Auditoría de Expedientes</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h5>Contenido</h5>
+                <h5>Plataforma</h5>
                 <ul>
                     <li><a href="/academia/">Escuela de Investigadores/as</a></li>
-                    <li><a href="/recursos/">Herramientas y Plantillas</a></li>
-                    <li><a href="/blog/">Blog Técnico</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h5>Empresa</h5>
-                <ul>
-                    <li><a href="/#contacto">Contacto</a></li>
-                    <li><a href="/#privacidad">Política de privacidad</a></li>
+                    <li><a href="/recursos/">Recursos y Guías</a></li>
+                    <li><a href="/diagnostico/" style="color: var(--accent-rose-dark); font-weight: 700;">Diagnóstico de Riesgo →</a></li>
                 </ul>
             </div>
 
@@ -314,7 +351,6 @@
                     <li><a href="tel:+56900000000">+56 9 0000 0000</a></li>
                     <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
                 </ul>
-                <li><a href="/diagnostico/" style="color: var(--accent-rose-dark); font-weight: 600;">Diagnóstico de Riesgo</a></li>
             </div>
         </div>
 
