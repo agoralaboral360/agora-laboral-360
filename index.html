@@ -43,7 +43,6 @@
         .logo-text { display: flex; flex-direction: column; }
         .logo-title { font-family: var(--font-serif); font-size: 1.45rem; font-weight: 600; letter-spacing: 1.2px; line-height: 1; text-transform: uppercase; white-space: nowrap; }
         .logo-title sup { font-size: 0.65em; vertical-align: super; font-weight: 500; margin-left: 2px; }
-        .logo-subtitle { font-size: 0.58rem; font-weight: 500; letter-spacing: 1.8px; color: var(--text-muted); margin-top: 3px; text-transform: uppercase; white-space: nowrap; }
         
         nav { margin-left: auto; }
         nav ul { display: flex; list-style: none; gap: 22px; align-items: center; }
@@ -51,11 +50,6 @@
         nav a { text-decoration: none; color: var(--text-charcoal); font-size: 0.66rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; padding: 8px 0; transition: all 0.2s ease; display: inline-block; white-space: nowrap; }
         nav a:hover, nav a.active { border-bottom: 1.5px solid var(--text-charcoal); }
         
-        nav .dropdown { position: absolute; top: 100%; left: 0; background-color: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 8px 0; min-width: 220px; box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.25s ease; z-index: 1000; display: flex; flex-direction: column; }
-        nav ul li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
-        nav .dropdown a { padding: 8px 16px; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.8px; display: block; border-bottom: none !important; color: var(--text-charcoal); }
-        nav .dropdown a:hover { background-color: var(--bg-card-accent); color: var(--accent-rose-dark); }
-
         /* HERO SECTION */
         .hero { position: relative; width: 100%; min-height: 85vh; display: flex; align-items: center; background-image: url('imagen-1.png'); background-size: cover; background-position: center; border-bottom: 1px solid var(--border-subtle); }
         .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(235, 230, 221, 0.95) 0%, rgba(235, 230, 221, 0.85) 45%, rgba(235, 230, 221, 0.3) 100%); }
@@ -74,27 +68,30 @@
         /* QUIÉNES SOMOS */
         .about-section { padding: 80px 4%; background: var(--bg-card); border-bottom: 1px solid var(--border-subtle); text-align: center; }
         .about-container { max-width: 800px; margin: 0 auto; }
-        .about-container h2 { font-family: var(--font-serif); font-size: 2.4rem; color: var(--text-charcoal); font-weight: 600; text-transform: uppercase; margin-bottom: 30px; }
+        .about-container h2 { font-family: var(--font-serif); font-size: 2.4rem; color: var(--text-charcoal); font-weight: 600; margin-bottom: 30px; }
         .about-container p { font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px; }
         .about-container p strong { color: var(--text-charcoal); font-weight: 600; }
 
-        /* SERVICIOS */
+        /* SERVICIOS CON IMÁGENES */
         .services-section { padding: 80px 4%; max-width: 1200px; margin: 0 auto; }
         .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;}
         
-        .service-card { background: var(--bg-card-accent); padding: 40px; border-radius: 8px; border: 1px solid var(--border-subtle); }
+        .service-card { background: var(--bg-card); padding: 35px; border-radius: 10px; border: 1px solid var(--border-subtle); transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column;}
+        .service-card:hover { transform: translateY(-5px); border-color: var(--accent-sage); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+        
+        .service-image { width: 100%; height: 240px; object-fit: cover; border-radius: 6px; margin-bottom: 25px; border: 1px solid var(--border-subtle); }
         .service-number { font-size: 0.85rem; font-weight: 700; color: var(--accent-rose-dark); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; display: block; }
         .service-card h3 { font-family: var(--font-serif); font-size: 1.9rem; color: var(--text-charcoal); margin-bottom: 15px; text-transform: uppercase; line-height: 1.2;}
         .service-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 25px; line-height: 1.6; }
         
-        .service-list { list-style: none; margin-bottom: 35px; display: flex; flex-direction: column; gap: 12px;}
+        .service-list { list-style: none; margin-bottom: 35px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1;}
         .service-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text-charcoal); font-weight: 500;}
         .service-list li svg { color: var(--accent-sage); flex-shrink: 0; margin-top: 3px; }
 
-        /* SUB-SERVICIO (AUDITORÍA) */
-        .sub-service { background: var(--bg-card); border-left: 4px solid var(--accent-sage); padding: 25px 30px; margin-top: 30px; border-radius: 0 8px 8px 0; }
-        .sub-service h4 { font-family: var(--font-serif); font-size: 1.4rem; color: var(--text-charcoal); margin-bottom: 10px; }
-        .sub-service p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; }
+        /* SUB-SERVICIO (AUDITORÍA) DENTRO DE LA TARJETA 2 */
+        .sub-service-box { margin-top: 25px; padding: 25px; background: var(--bg-card-accent); border-radius: 8px; border-left: 4px solid var(--accent-sage); }
+        .sub-service-box h4 { font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 10px; color: var(--text-charcoal); }
+        .sub-service-box p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; }
 
         /* CTA FINAL */
         .cta-section { background: var(--bg-card-accent); padding: 70px 4%; text-align: center; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
@@ -133,7 +130,7 @@
 </head>
 <body>
 
-    <!-- HEADER MENU PRINCIPAL -->
+    <!-- HEADER MENU PRINCIPAL LIMPIO -->
     <header class="site-header">
         <a href="/" class="logo-box">
             <svg class="logo-icon" viewBox="0 0 24 24">
@@ -149,13 +146,7 @@
         <nav>
             <ul>
                 <li><a href="/" class="active">Inicio</a></li>
-                <li>
-                    <a href="#servicios">Servicios</a>
-                    <div class="dropdown">
-                        <a href="#investigacion">Investigación Laboral</a>
-                        <a href="#informes">Informes Técnicos</a>
-                    </div>
-                </li>
+                <li><a href="#servicios">Servicios</a></li>
                 <li><a href="/academia/">Escuela</a></li>
                 <li><a href="/recursos/">Recursos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -189,21 +180,24 @@
         </div>
     </section>
 
-    <!-- SERVICIOS -->
+    <!-- SERVICIOS CON FOTOS -->
     <section id="servicios" class="services-section">
         <div class="services-grid">
             
             <!-- 01 INVESTIGACIÓN LABORAL -->
             <div class="service-card" id="investigacion">
+                <!-- AQUÍ RECUPERAMOS LA FOTO QUE HABÍAS SUBIDO -->
+                <img src="servicio-1.jpg.jpg" alt="Investigación Externa Ley Karin" class="service-image">
+                
                 <span class="service-number">01 — Investigación Laboral</span>
-                <h3>Investigaciones Laborales Externas e Independientes</h3>
+                <h3>Investigaciones Externas e Independientes</h3>
                 <p>Conducción externa e independiente de investigaciones frente a denuncias complejas de acoso sexual, acoso laboral y violencia en el trabajo, bajo el marco de la Ley N.° 21.643 (Ley Karin).</p>
                 
                 <ul class="service-list">
                     <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Entrevistas técnicas y reconstrucción metodológica de los hechos.</li>
                     <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Análisis de antecedentes y elementos probatorios.</li>
                     <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Investigación independiente, reduciendo conflictos de interés internos.</li>
-                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Elaboración del informe final conforme a la metodología y plazos aplicables.</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Elaboración del informe final conforme a la metodología y plazos.</li>
                 </ul>
 
                 <a href="#contacto" class="btn-hero-primary" style="width: 100%;">Solicitar Investigación →</a>
@@ -211,6 +205,9 @@
 
             <!-- 02 INFORMES TÉCNICOS -->
             <div class="service-card" id="informes">
+                <!-- AQUÍ RECUPERAMOS LA SEGUNDA FOTO -->
+                <img src="servicio-2.jpg.jpg" alt="Informes Sociales y Periciales" class="service-image">
+
                 <span class="service-number">02 — Informes Técnicos</span>
                 <h3>Informes Técnicos y Peritaje Social Laboral</h3>
                 <p>Elaboración de informes técnicos y periciales de carácter social y laboral para apoyar decisiones organizacionales, procesos de investigación y controversias laborales.</p>
@@ -219,24 +216,15 @@
                     <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Informes periciales sociales para causas laborales.</li>
                     <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Informes técnicos de análisis laboral.</li>
                     <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Análisis y evaluación técnica de antecedentes y denuncias.</li>
-                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Elaboración de informes especializados con fundamentación metodológica.</li>
                 </ul>
 
-                <a href="#contacto" class="btn-hero-secondary" style="width: 100%; border-color: var(--accent-sage); color: var(--accent-sage);">Solicitar Informe Técnico →</a>
-
                 <!-- SUB-SERVICIO: REVISIÓN DE AUDITORÍA -->
-                <div class="sub-service">
+                <div class="sub-service-box">
                     <h4>Revisión técnica de investigaciones internas</h4>
-                    <p>Evaluación independiente de investigaciones desarrolladas internamente por organizaciones, comités o investigadores, orientada a identificar brechas metodológicas, inconsistencias y aspectos susceptibles de revisión antes del cierre del procedimiento.</p>
-                    
-                    <ul class="service-list" style="margin-bottom: 20px;">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Revisión de antecedentes y metodología.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Análisis de entrevistas e identificación de brechas.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Evaluación de consistencia entre antecedentes y conclusiones.</li>
-                    </ul>
-
-                    <a href="#contacto" class="btn-hero-secondary" style="width: 100%; font-size: 0.75rem; padding: 10px;">Solicitar Revisión Técnica →</a>
+                    <p>Evaluación independiente de investigaciones desarrolladas internamente por organizaciones o comités, para identificar brechas metodológicas y evaluar consistencia probatoria antes del cierre.</p>
                 </div>
+
+                <a href="#contacto" class="btn-hero-secondary" style="width: 100%; border-color: var(--accent-sage); color: var(--accent-sage); margin-top: 20px;">Solicitar Informe Técnico →</a>
             </div>
 
         </div>
@@ -261,7 +249,6 @@
 
         <div class="form-card">
             <form action="https://api.web3forms.com/submit" method="POST">
-                <!-- Reemplaza con tu Access Key de Web3Forms si tienes -->
                 <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
                 <input type="hidden" name="subject" value="NUEVO CONTACTO: Ágora Laboral 360">
                 <input type="hidden" name="redirect" value="https://agoralaboral.cl/">
