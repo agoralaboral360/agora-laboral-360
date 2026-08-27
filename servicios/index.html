@@ -3,30 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios Periciales & Informes Técnicos | Ágora Laboral 360°</title>
-    
-    <!-- Fuentes oficiales: Cormorant Garamond y Montserrat -->
+    <title>Nuestros Servicios | Ágora Laboral 360°</title>
+    <meta name="description" content="Portafolio de servicios: Investigación laboral externa, informes periciales técnicos y auditoría de expedientes internos.">
+
+    <!-- Fuentes oficiales -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            /* PALETA EDITORIAL "VERDE SALVIA, ROSA VIEJO & ARENA" */
             --bg-sand: #EBE6DD;           
             --bg-card: #EFEAE2;           
             --bg-card-accent: #E5DFD5;    
-            --bg-topics: #D3D2C4;         
             --text-charcoal: #2C2825;     
             --text-muted: #615B55;        
             --accent-sage: #828776;       
             --accent-sage-hover: #6E7363;
-            --accent-rose: #C38271;       
             --accent-rose-dark: #A36557;  
             --border-subtle: #D8D1C5;     
             --font-serif: 'Cormorant Garamond', serif;
             --font-sans: 'Montserrat', sans-serif;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body { 
             font-family: var(--font-sans); 
@@ -36,184 +34,56 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER ESPACIOSO Y NAVEGACIÓN UNIFICADA */
-        header.site-header {
-            background-color: var(--bg-sand);
-            padding: 18px 4%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(216, 209, 197, 0.6);
-            box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            gap: 20px;
-        }
-
-        .logo-box {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--text-charcoal);
-            flex-shrink: 0;
-        }
-
-        .logo-icon {
-            width: 28px;
-            height: 28px;
-            stroke: var(--text-charcoal);
-            fill: none;
-            stroke-width: 1.5;
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-title {
-            font-family: var(--font-serif);
-            font-size: 1.45rem;
-            font-weight: 600;
-            letter-spacing: 1.2px;
-            line-height: 1;
-            text-transform: uppercase;
-            white-space: nowrap;
-        }
-
-        .logo-title sup {
-            font-size: 0.65em;
-            vertical-align: super;
-            font-weight: 500;
-            margin-left: 2px;
-        }
-
-        .logo-subtitle {
-            font-size: 0.58rem;
-            font-weight: 500;
-            letter-spacing: 1.8px;
-            color: var(--text-muted);
-            margin-top: 3px;
-            text-transform: uppercase;
-            white-space: nowrap;
-        }
-
+        /* HEADER GLOBAL */
+        header.site-header { background-color: var(--bg-sand); padding: 18px 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(216, 209, 197, 0.6); box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12); position: sticky; top: 0; z-index: 1000; width: 100%; gap: 20px; }
+        .logo-box { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-charcoal); flex-shrink: 0; }
+        .logo-icon { width: 28px; height: 28px; stroke: var(--text-charcoal); fill: none; stroke-width: 1.5; }
+        .logo-text { display: flex; flex-direction: column; }
+        .logo-title { font-family: var(--font-serif); font-size: 1.45rem; font-weight: 600; letter-spacing: 1.2px; line-height: 1; text-transform: uppercase; white-space: nowrap; }
+        .logo-title sup { font-size: 0.65em; vertical-align: super; font-weight: 500; margin-left: 2px; }
+        .logo-subtitle { font-size: 0.58rem; font-weight: 500; letter-spacing: 1.8px; color: var(--text-muted); margin-top: 3px; text-transform: uppercase; white-space: nowrap; }
+        
         nav { margin-left: auto; }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 22px;
-            align-items: center;
-        }
-
+        nav ul { display: flex; list-style: none; gap: 22px; align-items: center; }
         nav ul li { position: relative; }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-charcoal);
-            font-size: 0.66rem;
-            font-weight: 600;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            padding: 8px 0;
-            transition: all 0.2s ease;
-            display: inline-block;
-            white-space: nowrap;
-        }
-
-        nav a:hover, nav a.active {
-            border-bottom: 1.5px solid var(--text-charcoal);
-        }
-
-        nav .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 6px;
-            padding: 8px 0;
-            min-width: 190px;
-            box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(8px);
-            transition: all 0.25s ease;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-        }
-
-        nav ul li:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        nav .dropdown a {
-            padding: 8px 16px;
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 0.8px;
-            display: block;
-            border-bottom: none !important;
-            color: var(--text-charcoal);
-        }
-
-        nav .dropdown a:hover {
-            background-color: var(--bg-card-accent);
-            color: var(--accent-rose-dark);
-        }
+        nav a { text-decoration: none; color: var(--text-charcoal); font-size: 0.66rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; padding: 8px 0; transition: all 0.2s ease; display: inline-block; white-space: nowrap; }
+        nav a:hover, nav a.active { border-bottom: 1.5px solid var(--text-charcoal); }
+        
+        nav .dropdown { position: absolute; top: 100%; left: 0; background-color: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 8px 0; min-width: 200px; box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.25s ease; z-index: 1000; display: flex; flex-direction: column; }
+        nav ul li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        nav .dropdown a { padding: 8px 16px; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.8px; display: block; border-bottom: none !important; color: var(--text-charcoal); }
+        nav .dropdown a:hover { background-color: var(--bg-card-accent); color: var(--accent-rose-dark); }
 
         /* HERO SERVICIOS */
-        .services-hero {
-            background: var(--bg-card-accent);
-            padding: 65px 4% 50px 4%;
+        .page-hero {
+            background-color: var(--bg-card-accent);
+            padding: 80px 4% 60px 4%;
             text-align: center;
             border-bottom: 1px solid var(--border-subtle);
         }
 
-        .tag-badge {
-            display: inline-block;
-            background: var(--bg-sand);
-            color: var(--accent-rose-dark);
-            font-size: 0.68rem;
-            font-weight: 700;
-            padding: 5px 16px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            border: 1px solid var(--border-subtle);
-            margin-bottom: 18px;
-        }
-
-        .services-hero h1 {
+        .page-hero h1 {
             font-family: var(--font-serif);
-            font-size: 2.6rem;
+            font-size: 2.8rem;
             font-weight: 600;
             color: var(--text-charcoal);
             line-height: 1.15;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             text-transform: uppercase;
         }
 
-        .services-hero p {
-            font-size: 0.95rem;
+        .page-hero p {
+            font-size: 1.05rem;
             color: var(--text-muted);
-            max-width: 680px;
+            max-width: 750px;
             margin: 0 auto;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        /* CONTENIDO DE SERVICIOS */
-        .container {
-            max-width: 1100px;
-            margin: 60px auto 80px auto;
+        /* HUB DE SERVICIOS (LISTA VERTICAL) */
+        .services-hub {
+            max-width: 900px;
+            margin: 80px auto;
             padding: 0 4%;
             display: flex;
             flex-direction: column;
@@ -223,145 +93,98 @@
         .service-card {
             background: var(--bg-card);
             border: 1px solid var(--border-subtle);
-            border-radius: 10px;
-            padding: 40px 35px;
-            box-shadow: 0 4px 15px rgba(44, 40, 37, 0.04);
-            scroll-margin-top: 110px;
+            border-radius: 8px;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 15px 35px rgba(44, 40, 37, 0.05);
+            border-color: var(--accent-sage);
+        }
+
+        .service-card-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 20px;
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--bg-sand);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-sage);
+            flex-shrink: 0;
         }
 
         .service-card h2 {
             font-family: var(--font-serif);
             font-size: 1.8rem;
             color: var(--text-charcoal);
-            font-weight: 600;
-            margin-bottom: 12px;
-            border-bottom: 2px solid var(--accent-sage);
-            padding-bottom: 8px;
-            display: inline-block;
+            text-transform: uppercase;
+            line-height: 1.2;
         }
 
         .service-card p {
-            font-size: 0.92rem;
+            font-size: 1rem;
             color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .service-features {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 15px;
+            line-height: 1.7;
             margin-bottom: 25px;
         }
 
-        .service-features li {
-            font-size: 0.85rem;
-            color: var(--text-charcoal);
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-weight: 500;
-        }
-
-        .service-features li svg {
-            color: var(--accent-sage);
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .btn-service {
-            display: inline-block;
-            background: var(--accent-sage);
+        .btn-hub {
+            align-self: flex-start;
+            background-color: var(--accent-sage);
             color: #FFFFFF;
-            text-decoration: none;
-            font-weight: 700;
-            padding: 11px 22px;
+            padding: 14px 28px;
             border-radius: 4px;
-            font-size: 0.72rem;
-            letter-spacing: 1.2px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-decoration: none;
             text-transform: uppercase;
+            letter-spacing: 1px;
             transition: background-color 0.25s ease;
         }
 
-        .btn-service:hover {
+        .btn-hub:hover {
             background-color: var(--accent-sage-hover);
         }
 
-        /* FOOTER EXTENDIDO UNIFICADO */
-        footer {
-            background-color: var(--bg-sand);
-            border-top: 1px solid var(--border-subtle);
-            padding: 60px 6% 30px 6%;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
-            gap: 35px;
-            max-width: 1200px;
-            margin: 0 auto 40px auto;
-        }
-
-        .footer-col h5 {
-            font-family: var(--font-serif);
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text-charcoal);
-            margin-bottom: 15px;
-        }
-
-        .footer-col ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .footer-col a {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-size: 0.78rem;
-            transition: color 0.2s;
-        }
-
-        .footer-col a:hover {
-            color: var(--accent-rose-dark);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid var(--border-subtle);
-            padding-top: 25px;
-            text-align: center;
-            font-size: 0.72rem;
-            color: var(--text-muted);
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 1200px) {
-            .footer-grid { grid-template-columns: 1fr 1fr; }
-        }
+        /* FOOTER */
+        footer { background-color: var(--bg-sand); border-top: 1px solid var(--border-subtle); padding: 50px 6% 30px 6%; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 35px; max-width: 1200px; margin: 0 auto 40px auto; }
+        .footer-col h5 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--text-charcoal); margin-bottom: 15px; text-transform: uppercase; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-col a { text-decoration: none; color: var(--text-muted); font-size: 0.8rem; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--accent-rose-dark); }
+        .footer-bottom { border-top: 1px solid var(--border-subtle); padding-top: 25px; text-align: center; font-size: 0.75rem; color: var(--text-muted); max-width: 1200px; margin: 0 auto; }
 
         @media (max-width: 768px) {
-            header.site-header { flex-direction: column; gap: 15px; padding: 18px 4%; }
-            nav { margin-left: 0; }
+            header.site-header { flex-direction: column; gap: 15px; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
-            .services-hero h1 { font-size: 2.1rem; }
             .service-card { padding: 30px 20px; }
+            .service-card-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .btn-hub { align-self: stretch; text-align: center; }
             .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER OFICIAL UNIFICADO BOUTIQUE -->
+    <!-- HEADER MENU -->
     <header class="site-header">
         <a href="/" class="logo-box">
-            <svg class="logo-icon" viewBox="0 0 24 24">
-                <path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" />
-                <path d="M12 22V10" />
-            </svg>
+            <svg class="logo-icon" viewBox="0 0 24 24"><path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" /><path d="M12 22V10" /></svg>
             <div class="logo-text">
                 <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
                 <span class="logo-subtitle">Investigación &amp; Informes Técnicos</span>
@@ -371,117 +194,91 @@
         <nav>
             <ul>
                 <li><a href="/">Inicio</a></li>
-
                 <li>
                     <a href="/servicios/" class="active">Servicios</a>
                     <div class="dropdown">
-                        <a href="/servicios/#investigacion">Investigaciones Externas</a>
-                        <a href="/servicios/#informes">Informes Técnicos y Periciales</a>
+                        <a href="/servicios/investigacion-laboral/">01 - Investigación Laboral</a>
+                        <a href="/servicios/informes-tecnicos/">02 - Informes Técnicos</a>
+                        <a href="/servicios/auditoria-investigaciones/">03 - Auditoría de Expedientes</a>
                     </div>
                 </li>
-
-                <li>
-                    <a href="/academia/">Escuela</a>
-                    <div class="dropdown">
-                        <a href="/academia/">Formación de Investigadores/as</a>
-                        <a href="/academia/#cursos">Curso: Fundamentos de Investigación</a>
-                    </div>
-                </li>
-
-                <li>
-                    <a href="/recursos/">Recursos</a>
-                    <div class="dropdown">
-                        <a href="/recursos/">Herramientas y Plantillas</a>
-                        <a href="/blog/">Blog Técnico</a>
-                        <a href="/observatorio/">Marco Normativo (Ley Karin / 21.828)</a>
-                    </div>
-                </li>
-
-                <li><a href="/diagnostico/">Diagnóstico</a></li>
-                <li><a href="/#contacto">Contacto</a></li>
+                <li><a href="/academia/">Escuela</a></li>
+                <li><a href="/recursos/">Recursos</a></li>
+                <li><a href="/contacto/">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="services-hero">
-        <span class="tag-badge">Especialidad Pericial B2B</span>
-        <h1>Investigación Laboral e Informes Técnicos</h1>
-        <p>Proporcionamos a gerencias de personas, fiscalías corporativas y áreas de compliance un abordaje pericial independiente, garantizando rigor metodológico, imparcialidad y perspectiva de género.</p>
+    <!-- HERO SERVICIOS -->
+    <section class="page-hero">
+        <h1>Nuestros Servicios</h1>
+        <p>Aportamos rigor pericial, objetividad y perspectiva de género a la resolución de conflictos corporativos, apoyando a empresas y estudios jurídicos con evidencia técnica irrefutable.</p>
     </section>
 
-    <main class="container">
+    <!-- HUB DE SERVICIOS -->
+    <main class="services-hub">
 
-        <!-- SERVICIO 1: INVESTIGACIÓN EXTERNA -->
-        <section id="investigacion" class="service-card">
-            <h2>Investigaciones Laborales Externas e Independientes</h2>
-            <p>Conducción completa de procedimientos de investigación frente a denuncias complejas por acoso sexual, acoso laboral y violencia en el trabajo bajo el marco de la Ley N.° 21.643 (Ley Karin).</p>
-            <ul class="service-features">
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Entrevistas técnicas y reconstrucción metodológica de hechos.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Análisis probatorio bajo pautas que evitan la revictimización.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Imparcialidad técnica libre de conflictos de interés internos.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Conclusión mediante informe final parametrizado en plazos legales.</li>
-            </ul>
-            <a href="/#contacto" class="btn-service">Solicitar Cotización de Investigación →</a>
-        </section>
+        <!-- SERVICIO 1 -->
+        <article class="service-card">
+            <div class="service-card-header">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                </div>
+                <h2>Investigación Laboral Externa</h2>
+            </div>
+            <p>Conducción integral, independiente y objetiva de procedimientos de investigación frente a denuncias por acoso sexual, acoso laboral y violencia en el trabajo bajo el estándar exigido por la Ley Karin (21.643).</p>
+            <a href="/servicios/investigacion-laboral/" class="btn-hub">Ver detalles del servicio →</a>
+        </article>
 
-        <!-- SERVICIO 2: INFORMES TÉCNICOS Y PERICIALES -->
-        <section id="informes" class="service-card">
-            <h2>Informes Técnicos &amp; Peritaje Social Laboral</h2>
-            <p>Elaboración de dictámenes periciales e informes técnicos de alta especialización para respaldar decisiones corporativas críticas o procesos de controversia jurídica.</p>
-            <ul class="service-features">
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Informes periciales sociales para causas laborales.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Informes técnicos de auditoría de brechas y equidad (Ley 21.828).</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Análisis y evaluación técnica de antecedentes y denuncias previas.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Dictámenes preventivos sobre cumplimiento de estándares DT.</li>
-            </ul>
-            <a href="/#contacto" class="btn-service">Encargar Informe Técnico →</a>
-        </section>
+        <!-- SERVICIO 2 -->
+        <article class="service-card">
+            <div class="service-card-header">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                </div>
+                <h2>Informes Técnicos y Peritajes</h2>
+            </div>
+            <p>Elaboración de dictámenes periciales sociales, informes socioeconómicos y análisis de equidad (Ley 21.828) diseñados para respaldar la estrategia legal de estudios jurídicos y fiscalías corporativas en tribunales.</p>
+            <a href="/servicios/informes-tecnicos/" class="btn-hub">Ver tipos de informes →</a>
+        </article>
 
-        <!-- SERVICIO 3: REVISIÓN DE EXPEDIENTES -->
-        <section id="auditoria" class="service-card">
-            <h2>Revisión &amp; Auditoría Técnica de Investigaciones Internas</h2>
-            <p>Evaluación externa de procedimientos de investigación desarrollados por comités o investigadores internos antes de su remisión a la Dirección del Trabajo o cierre de expediente.</p>
-            <ul class="service-features">
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Análisis de admisibilidad y debido proceso dentro de las 72 horas.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Revisión de consistencia probatoria y de perspectiva de género.</li>
-                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Detección de brechas metodológicas para mitigar riesgo de tutela.</li>
-            </ul>
-            <a href="/#contacto" class="btn-service">Solicitar Auditoría de Expediente →</a>
-        </section>
+        <!-- SERVICIO 3 -->
+        <article class="service-card">
+            <div class="service-card-header">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                </div>
+                <h2>Auditoría de Investigaciones Internas</h2>
+            </div>
+            <p>Control de calidad exprés (72 horas) para revisar investigaciones realizadas por comités internos antes de su envío a la DT, garantizando el debido proceso y mitigando riesgos de nulidad o tutela laboral.</p>
+            <a href="/servicios/auditoria-investigaciones/" class="btn-hub">Ver metodología y plazos →</a>
+        </article>
 
     </main>
 
-    <!-- FOOTER EXTENDIDO Y ESTRUCTURADO EN 5 COLUMNAS -->
-    <footer id="contacto">
+    <!-- FOOTER -->
+    <footer>
         <div class="footer-grid">
             <div class="footer-col">
                 <span class="logo-title" style="font-size:1.4rem;">ÁGORA LABORAL <sup>360°</sup></span>
-                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados.</p>
+                <p style="font-size:0.8rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados. Rigor e imparcialidad.</p>
             </div>
             
             <div class="footer-col">
                 <h5>Servicios</h5>
                 <ul>
-                    <li><a href="/servicios/#investigacion">Investigación externa</a></li>
-                    <li><a href="/servicios/#informes">Informes técnicos y periciales</a></li>
-                    <li><a href="/servicios/#auditoria">Auditoría de investigaciones</a></li>
+                    <li><a href="/servicios/investigacion-laboral/">Investigación Externa</a></li>
+                    <li><a href="/servicios/informes-tecnicos/">Informes y Peritajes</a></li>
+                    <li><a href="/servicios/auditoria-investigaciones/">Auditoría de Expedientes</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h5>Contenido</h5>
+                <h5>Plataforma</h5>
                 <ul>
-                    <li><a href="/academia/">Escuela de Investigadores/as</a></li>
-                    <li><a href="/recursos/">Herramientas y Plantillas</a></li>
-                    <li><a href="/blog/">Blog Técnico</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h5>Empresa</h5>
-                <ul>
-                    <li><a href="/#contacto">Contacto</a></li>
-                    <li><a href="/#privacidad">Política de privacidad</a></li>
+                    <li><a href="/academia/">Escuela de Investigadores</a></li>
+                    <li><a href="/recursos/">Recursos y Guías</a></li>
+                    <li><a href="/diagnostico/" style="color: var(--accent-rose-dark); font-weight: 700;">Diagnóstico Inicial Gratis →</a></li>
                 </ul>
             </div>
 
@@ -496,7 +293,7 @@
         </div>
 
         <div class="footer-bottom">
-            <span>&copy; 2026 Ágora Laboral 360°. Investigación &amp; Informes Técnicos. Todos los derechos reservados.</span>
+            <span>&copy; 2026 Ágora Laboral 360°. Investigación e Informes Técnicos. Todos los derechos reservados.</span>
         </div>
     </footer>
 
