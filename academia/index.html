@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escuela de Investigadores/as | Ágora Laboral 360°</title>
-    
-    <!-- Fuentes oficiales: Cormorant Garamond y Montserrat -->
+    <meta name="description" content="Programa de formación técnica especializada en conducción de investigaciones laborales y aplicación de la Ley N.° 21.643.">
+
+    <!-- Fuentes oficiales -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            /* PALETA EDITORIAL "VERDE SALVIA, ROSA VIEJO & ARENA" */
             --bg-sand: #EBE6DD;           
             --bg-card: #EFEAE2;           
             --bg-card-accent: #E5DFD5;    
-            --bg-topics: #D3D2C4;         
             --text-charcoal: #2C2825;     
             --text-muted: #615B55;        
             --accent-sage: #828776;       
             --accent-sage-hover: #6E7363;
-            --accent-rose: #C38271;       
             --accent-rose-dark: #A36557;  
             --border-subtle: #D8D1C5;     
             --font-serif: 'Cormorant Garamond', serif;
@@ -36,7 +34,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER ESPACIOSO Y NAVEGACIÓN UNIFICADA */
+        /* HEADER GLOBAL */
         header.site-header {
             background-color: var(--bg-sand);
             padding: 18px 4%;
@@ -137,7 +135,7 @@
             border: 1px solid var(--border-subtle);
             border-radius: 6px;
             padding: 8px 0;
-            min-width: 190px;
+            min-width: 200px;
             box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08);
             opacity: 0;
             visibility: hidden;
@@ -170,7 +168,7 @@
             color: var(--accent-rose-dark);
         }
 
-        /* HERO DE LA ESCUELA */
+        /* HERO ESCUELA */
         .page-hero {
             background: var(--bg-card-accent);
             padding: 65px 4% 50px 4%; 
@@ -194,7 +192,7 @@
 
         .page-hero h1 {
             font-family: var(--font-serif); 
-            font-size: 2.6rem; 
+            font-size: 2.5rem; 
             font-weight: 600;
             color: var(--text-charcoal); 
             line-height: 1.15; 
@@ -210,10 +208,10 @@
             line-height: 1.6;
         }
 
-        /* CONTENIDO DE PROGRAMAS */
+        /* CONTENIDO PRINCIPAL */
         .school-wrapper {
             max-width: 1100px;
-            margin: 60px auto 80px auto;
+            margin: 50px auto 80px auto;
             padding: 0 4%;
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
@@ -224,20 +222,21 @@
         .program-card {
             background: var(--bg-card);
             border: 1px solid var(--border-subtle);
-            border-radius: 10px;
-            padding: 40px 35px;
+            border-radius: 8px;
+            padding: 35px;
             box-shadow: 0 4px 15px rgba(44, 40, 37, 0.04);
         }
 
         .program-card h2 {
             font-family: var(--font-serif);
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: var(--text-charcoal);
             font-weight: 600;
             margin-bottom: 12px;
             border-bottom: 2px solid var(--accent-sage);
             padding-bottom: 8px;
             display: inline-block;
+            text-transform: uppercase;
         }
 
         .program-card p {
@@ -273,23 +272,23 @@
             margin-top: 3px;
         }
 
-        /* TARJETA FORMULARIO LISTA DE ESPERA */
+        /* CARD DE FORMULARIO / ADMISIÓN */
         .waitlist-card {
             background: var(--bg-card);
-            padding: 40px 30px; 
-            border-radius: 10px; 
+            padding: 35px 30px; 
+            border-radius: 8px; 
             border: 1px solid var(--border-subtle);
             box-shadow: 0 10px 30px rgba(44, 40, 37, 0.05); 
-            text-align: center;
         }
 
         .waitlist-card h3 {
             font-family: var(--font-serif); 
-            font-size: 1.7rem; 
+            font-size: 1.5rem; 
             color: var(--text-charcoal);
             font-weight: 600; 
             margin-bottom: 10px;
             text-transform: uppercase;
+            text-align: center;
         }
 
         .waitlist-card p {
@@ -297,6 +296,7 @@
             color: var(--text-muted); 
             margin-bottom: 25px;
             line-height: 1.5;
+            text-align: center;
         }
 
         .form-group { 
@@ -316,7 +316,7 @@
 
         .form-control {
             width: 100%; 
-            padding: 12px 15px; 
+            padding: 12px 14px; 
             border: 1px solid var(--border-subtle);
             border-radius: 4px; 
             font-size: 0.88rem; 
@@ -334,7 +334,7 @@
 
         .btn-cta {
             width: 100%; 
-            padding: 15px; 
+            padding: 16px; 
             background-color: var(--accent-sage);
             color: #FFFFFF; 
             border: none; 
@@ -344,25 +344,24 @@
             letter-spacing: 1.4px; 
             text-transform: uppercase;
             cursor: pointer;
-            transition: background-color 0.25s ease, transform 0.2s ease; 
+            transition: background-color 0.25s ease; 
             margin-top: 10px;
         }
 
         .btn-cta:hover { 
             background-color: var(--accent-sage-hover); 
-            transform: translateY(-2px); 
         }
 
-        /* FOOTER EXTENDIDO UNIFICADO */
+        /* FOOTER EXTENDIDO */
         footer {
             background-color: var(--bg-sand);
             border-top: 1px solid var(--border-subtle);
-            padding: 60px 6% 30px 6%;
+            padding: 50px 6% 30px 6%;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
             gap: 35px;
             max-width: 1200px;
             margin: 0 auto 40px auto;
@@ -374,6 +373,7 @@
             font-weight: 700;
             color: var(--text-charcoal);
             margin-bottom: 15px;
+            text-transform: uppercase;
         }
 
         .footer-col ul {
@@ -386,7 +386,7 @@
         .footer-col a {
             text-decoration: none;
             color: var(--text-muted);
-            font-size: 0.78rem;
+            font-size: 0.8rem;
             transition: color 0.2s;
         }
 
@@ -398,7 +398,7 @@
             border-top: 1px solid var(--border-subtle);
             padding-top: 25px;
             text-align: center;
-            font-size: 0.72rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
             max-width: 1200px;
             margin: 0 auto;
@@ -414,14 +414,14 @@
             nav { margin-left: 0; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
             .page-hero h1 { font-size: 2.1rem; }
-            .program-card, .waitlist-card { padding: 30px 20px; }
+            .program-card, .waitlist-card { padding: 25px 20px; }
             .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER OFICIAL BOUTIQUE -->
+    <!-- HEADER OFICIAL -->
     <header class="site-header">
         <a href="/" class="logo-box">
             <svg class="logo-icon" viewBox="0 0 24 24">
@@ -441,73 +441,64 @@
                 <li>
                     <a href="/servicios/">Servicios</a>
                     <div class="dropdown">
-                        <a href="/servicios/#investigacion">Investigaciones Externas</a>
-                        <a href="/servicios/#informes">Informes Técnicos y Periciales</a>
+                        <a href="/servicios/#investigacion">01 - Investigación Laboral</a>
+                        <a href="/servicios/#informes">02 - Informes Técnicos</a>
                     </div>
                 </li>
 
                 <li>
                     <a href="/academia/" class="active">Escuela</a>
                     <div class="dropdown">
-                        <a href="/academia/">Formación de Investigadores/as</a>
-                        <a href="/academia/#cursos">Curso: Fundamentos de Investigación</a>
+                        <a href="/academia/">Escuela de Investigadores</a>
+                        <a href="/academia/#cursos">Cursos y Programas</a>
                     </div>
                 </li>
 
-                <li>
-                    <a href="/recursos/">Recursos</a>
-                    <div class="dropdown">
-                        <a href="/recursos/">Herramientas y Plantillas</a>
-                        <a href="/blog/">Blog Técnico</a>
-                        <a href="/observatorio/">Marco Normativo (Ley Karin / 21.828)</a>
-                    </div>
-                </li>
-
-                <li><a href="/diagnostico/">Diagnóstico</a></li>
-                <li><a href="/#contacto">Contacto</a></li>
+                <li><a href="/recursos/">Recursos</a></li>
+                <li><a href="/contacto/">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- HERO DE LA ESCUELA -->
+    <!-- HERO ESCUELA -->
     <main>
         <section class="page-hero">
-            <span class="tag-badge">🎓 Escuela de Investigadores/as</span>
+            <span class="tag-badge">Escuela de Investigadores/as</span>
             <h1>Formación Técnica en Investigación Laboral</h1>
             <p>Capacitamos a profesionales, comités internos e investigadores/as en la conducción rigurosa, imparcial y metodológicamente consistente de denuncias en el ámbito laboral.</p>
         </section>
 
         <div class="school-wrapper">
             
-            <!-- PROGRAMA PRINCIPAL DESTACADO -->
+            <!-- PROGRAMA PRINCIPAL -->
             <section class="program-card" id="cursos">
-                <h2>Programa: Fundamentos de la Investigación de Denuncias Laborales</h2>
-                <p>Un programa especializado diseñado para transferir herramientas periciales aplicables a investigaciones por acoso sexual, acoso laboral y violencia en el trabajo bajo el marco de la Ley N.° 21.643 (Ley Karin).</p>
+                <h2>Programa: Fundamentos de Investigación Laboral</h2>
+                <p>Transferencia de herramientas periciales aplicables a investigaciones por acoso sexual, acoso laboral y violencia en el trabajo bajo el marco de la Ley N.° 21.643 (Ley Karin).</p>
                 
                 <ul class="modules-list">
                     <li>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <strong>Módulo I:</strong> Metodología de entrevista técnica y toma de declaraciones a partes involucradas.
+                        <span><strong>Módulo I:</strong> Metodología de entrevista técnica y toma de declaraciones a partes involucradas.</span>
                     </li>
                     <li>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <strong>Módulo II:</strong> Análisis de evidencia documental, mensajes electrónicos y reconstrucción probatoria.
+                        <span><strong>Módulo II:</strong> Análisis de evidencia documental, comunicaciones electrónicas y reconstrucción probatoria.</span>
                     </li>
                     <li>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <strong>Módulo III:</strong> Aplicación práctica de la perspectiva de género y pautas de no revictimización.
+                        <span><strong>Módulo III:</strong> Aplicación práctica de la perspectiva de género y pautas de no revictimización.</span>
                     </li>
                     <li>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <strong>Módulo IV:</strong> Estructura y elaboración del informe final de investigación con ponderación técnica.
+                        <span><strong>Módulo IV:</strong> Estructura y elaboración del informe final de investigación con ponderación técnica.</span>
                     </li>
                 </ul>
             </section>
 
-            <!-- FORMULARIO LISTA DE ESPERA -->
+            <!-- FORMULARIO PREINSCRIPCIÓN -->
             <div class="waitlist-card">
-                <h3>Postulación &amp; Preinscripción</h3>
-                <p>Inscríbete para recibir la malla curricular detallada y ser notificado/a sobre la apertura de nuevas cohortes de formación.</p>
+                <h3>Postulación &amp; Información</h3>
+                <p>Inscríbete para recibir la malla curricular detallada y ser notificado/a sobre la apertura de nuevas cohortes.</p>
                 
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
@@ -520,53 +511,45 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Correo Corporativo / Profesional *</label>
+                        <label for="email">Correo Profesional *</label>
                         <input type="email" id="email" name="email" class="form-control" placeholder="nombre@empresa.cl" required>
                     </div>
 
                     <div class="form-group">
                         <label for="profesion">Profesión / Cargo *</label>
-                        <input type="text" id="profesion" name="profesion" class="form-control" placeholder="Ej. Abogada / HRBP" required>
+                        <input type="text" id="profesion" name="profesion" class="form-control" placeholder="Ej. Abogada / Gerente de Personas" required>
                     </div>
 
-                    <button type="submit" class="btn-cta">Solicitar Información del Programa →</button>
+                    <button type="submit" class="btn-cta">Solicitar Información →</button>
                 </form>
             </div>
 
         </div>
     </main>
 
-    <!-- FOOTER EXTENDIDO Y ESTRUCTURADO -->
-    <footer id="contacto">
+    <!-- FOOTER -->
+    <footer>
         <div class="footer-grid">
             <div class="footer-col">
                 <span class="logo-title" style="font-size:1.4rem;">ÁGORA LABORAL <sup>360°</sup></span>
-                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados.</p>
+                <p style="font-size:0.8rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados. Rigor e imparcialidad.</p>
             </div>
             
             <div class="footer-col">
                 <h5>Servicios</h5>
                 <ul>
-                    <li><a href="/servicios/#investigacion">Investigación externa</a></li>
-                    <li><a href="/servicios/#informes">Informes técnicos y periciales</a></li>
-                    <li><a href="/servicios/#auditoria">Auditoría de investigaciones</a></li>
+                    <li><a href="/servicios/#investigacion">Investigación Externa</a></li>
+                    <li><a href="/servicios/#informes">Informes y Peritajes</a></li>
+                    <li><a href="/servicios/#informes">Auditoría de Expedientes</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h5>Contenido</h5>
+                <h5>Plataforma</h5>
                 <ul>
-                    <li><a href="/academia/">Escuela de Investigadores/as</a></li>
-                    <li><a href="/recursos/">Herramientas y Plantillas</a></li>
-                    <li><a href="/blog/">Blog Técnico</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h5>Empresa</h5>
-                <ul>
-                    <li><a href="/#contacto">Contacto</a></li>
-                    <li><a href="/#privacidad">Política de privacidad</a></li>
+                    <li><a href="/academia/">Escuela de Investigadores</a></li>
+                    <li><a href="/recursos/">Recursos y Guías</a></li>
+                    <li><a href="/diagnostico/" style="color: var(--accent-rose-dark); font-weight: 700;">Diagnóstico de Riesgo →</a></li>
                 </ul>
             </div>
 
@@ -581,7 +564,7 @@
         </div>
 
         <div class="footer-bottom">
-            <span>&copy; 2026 Ágora Laboral 360°. Investigación &amp; Informes Técnicos. Todos los derechos reservados.</span>
+            <span>&copy; 2026 Ágora Laboral 360°. Investigación e Informes Técnicos. Todos los derechos reservados.</span>
         </div>
     </footer>
 
