@@ -3,880 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos y Kits de Investigación | Ágora Laboral 360°</title>
-    <meta name="description" content="Kit profesional con metodología de investigación para Ley Karin N.° 21.643 y Ley N.° 21.828. Más que plantillas, un sistema paso a paso.">
+    <title>Kit Oficial Ley Karin | Ágora Laboral 360°</title>
+    <meta name="description" content="Kit de plantillas y modelos técnicos para la investigación interna bajo la Ley Karin (N.° 21.643).">
 
-    <!-- Fuentes oficiales: Cormorant Garamond y Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            /* PALETA EDITORIAL "VERDE SALVIA, ROSA VIEJO & ARENA" */
             --bg-sand: #EBE6DD;           
             --bg-card: #EFEAE2;           
             --bg-card-accent: #E5DFD5;    
-            --bg-topics: #D3D2C4;         
             --text-charcoal: #2C2825;     
             --text-muted: #615B55;        
             --accent-sage: #828776;       
             --accent-sage-hover: #6E7363;
-            --accent-rose: #C38271;       
             --accent-rose-dark: #A36557;  
             --border-subtle: #D8D1C5;     
             --font-serif: 'Cormorant Garamond', serif;
             --font-sans: 'Montserrat', sans-serif;
-            --verde-whatsapp: #25D366;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-sans); background-color: var(--bg-sand); color: var(--text-charcoal); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+        /* HEADER GLOBAL */
+        header.site-header { background-color: var(--bg-sand); padding: 18px 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(216, 209, 197, 0.6); box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12); position: sticky; top: 0; z-index: 1000; width: 100%; gap: 20px; }
+        .logo-box { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-charcoal); flex-shrink: 0; }
+        .logo-icon { width: 28px; height: 28px; stroke: var(--text-charcoal); fill: none; stroke-width: 1.5; }
+        .logo-text { display: flex; flex-direction: column; }
+        .logo-title { font-family: var(--font-serif); font-size: 1.45rem; font-weight: 600; letter-spacing: 1.2px; line-height: 1; text-transform: uppercase; white-space: nowrap; }
+        .logo-title sup { font-size: 0.65em; vertical-align: super; font-weight: 500; margin-left: 2px; }
+        .logo-subtitle { font-size: 0.58rem; font-weight: 500; letter-spacing: 1.8px; color: var(--text-muted); margin-top: 3px; text-transform: uppercase; white-space: nowrap; }
         
-        body { 
-            font-family: var(--font-sans); 
-            background-color: var(--bg-sand); 
-            color: var(--text-charcoal); 
-            line-height: 1.6; 
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* HEADER ESPACIOSO Y NAVEGACIÓN UNIFICADA */
-        header {
-            background-color: var(--bg-sand);
-            padding: 18px 4%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(216, 209, 197, 0.6);
-            box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            gap: 20px;
-        }
-
-        .logo-box {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--text-charcoal);
-            flex-shrink: 0;
-        }
-
-        .logo-icon {
-            width: 28px;
-            height: 28px;
-            stroke: var(--text-charcoal);
-            fill: none;
-            stroke-width: 1.5;
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-title {
-            font-family: var(--font-serif);
-            font-size: 1.45rem;
-            font-weight: 600;
-            letter-spacing: 1.2px;
-            line-height: 1;
-            text-transform: uppercase;
-            white-space: nowrap;
-        }
-
-        .logo-title sup {
-            font-size: 0.65em;
-            vertical-align: super;
-            font-weight: 500;
-            margin-left: 2px;
-        }
-
-        .logo-subtitle {
-            font-size: 0.58rem;
-            font-weight: 500;
-            letter-spacing: 1.8px;
-            color: var(--text-muted);
-            margin-top: 3px;
-            text-transform: uppercase;
-            white-space: nowrap;
-        }
-
         nav { margin-left: auto; }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 22px;
-            align-items: center;
-        }
-
+        nav ul { display: flex; list-style: none; gap: 22px; align-items: center; }
         nav ul li { position: relative; }
+        nav a { text-decoration: none; color: var(--text-charcoal); font-size: 0.66rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; padding: 8px 0; transition: all 0.2s ease; display: inline-block; white-space: nowrap; }
+        nav a:hover, nav a.active { border-bottom: 1.5px solid var(--text-charcoal); }
+        nav .dropdown { position: absolute; top: 100%; left: 0; background-color: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 8px 0; min-width: 200px; box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.25s ease; z-index: 1000; display: flex; flex-direction: column; }
+        nav ul li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        nav .dropdown a { padding: 8px 16px; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.8px; display: block; border-bottom: none !important; color: var(--text-charcoal); }
+        nav .dropdown a:hover { background-color: var(--bg-card-accent); color: var(--accent-rose-dark); }
 
-        nav a {
-            text-decoration: none;
-            color: var(--text-charcoal);
-            font-size: 0.66rem;
-            font-weight: 600;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            padding: 8px 0;
-            transition: all 0.2s ease;
-            display: inline-block;
-            white-space: nowrap;
-        }
-
-        nav a:hover, nav a.active {
-            border-bottom: 1.5px solid var(--text-charcoal);
-        }
-
-        /* DROPDOWNS UNIFICADOS */
-        nav .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 6px;
-            padding: 8px 0;
-            min-width: 190px;
-            box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(8px);
-            transition: all 0.25s ease;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-        }
-
-        nav ul li:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        nav .dropdown a {
-            padding: 8px 16px;
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 0.8px;
-            display: block;
-            border-bottom: none !important;
-            color: var(--text-charcoal);
-        }
-
-        nav .dropdown a:hover {
+        /* HERO kit-ley-karin */
+        .kit-hero {
             background-color: var(--bg-card-accent);
-            color: var(--accent-rose-dark);
-        }
-
-        .btn-header {
-            background-color: var(--accent-sage);
-            color: #FFFFFF !important;
-            padding: 9px 18px;
-            border-radius: 4px;
-            font-size: 0.66rem;
-            font-weight: 600;
-            letter-spacing: 1.4px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: background-color 0.25s ease;
-            border: none;
-            white-space: nowrap;
-            flex-shrink: 0;
-            margin-left: 8px;
-        }
-
-        .btn-header:hover {
-            background-color: var(--accent-sage-hover);
-        }
-
-        /* BREADCRUMB */
-        .breadcrumb-container { 
-            max-width: 1200px; 
-            margin: 25px auto 0; 
-            padding: 0 4%; 
-            font-size: 0.75rem; 
-            color: var(--text-muted); 
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .breadcrumb-container a { 
-            color: var(--text-charcoal); 
-            text-decoration: none; 
-            font-weight: 600; 
-        }
-
-        .breadcrumb-container a:hover {
-            color: var(--accent-rose-dark);
-        }
-
-        /* HERO SECTION */
-        .hero-section { 
-            max-width: 900px; 
-            margin: 35px auto 50px; 
-            padding: 0 20px; 
-            text-align: center; 
-        }
-
-        .hero-badge { 
-            display: inline-block; 
-            background: var(--bg-card-accent); 
-            color: var(--accent-rose-dark); 
-            font-size: 0.68rem; 
-            font-weight: 700; 
-            padding: 6px 18px; 
-            border-radius: 20px; 
-            text-transform: uppercase; 
-            letter-spacing: 1.2px;
-            border: 1px solid var(--border-subtle); 
-            margin-bottom: 20px; 
-        }
-
-        .hero-title { 
-            font-family: var(--font-serif);
-            font-size: 2.6rem; 
-            font-weight: 600; 
-            color: var(--text-charcoal); 
-            line-height: 1.15; 
-            margin-bottom: 18px; 
-            text-transform: uppercase;
-        }
-
-        .hero-subtitle { 
-            font-size: 0.95rem; 
-            color: var(--text-muted); 
-            font-weight: 400; 
-            max-width: 780px; 
-            margin: 0 auto; 
-            line-height: 1.6;
-        }
-
-        .hero-subtitle strong { 
-            color: var(--text-charcoal); 
-            font-weight: 600;
-        }
-
-        /* SECCIONAL MÉTODO ÁGORA */
-        .method-section { 
-            background: var(--bg-card); 
-            padding: 60px 20px; 
-            border-top: 1px solid var(--border-subtle); 
-            border-bottom: 1px solid var(--border-subtle); 
-            margin-bottom: 60px; 
-        }
-
-        .method-container { 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            display: grid; 
-            grid-template-columns: 1.1fr 0.9fr; 
-            gap: 45px; 
-            align-items: center; 
-        }
-
-        .method-text h2 { 
-            font-family: var(--font-serif);
-            font-size: 2rem; 
-            color: var(--text-charcoal); 
-            font-weight: 600; 
-            margin-bottom: 18px; 
-            text-transform: uppercase;
-        }
-
-        .method-text p { 
-            color: var(--text-muted); 
-            margin-bottom: 22px; 
-            font-size: 0.9rem; 
-            line-height: 1.6;
-        }
-
-        .method-list { 
-            list-style: none; 
-            display: flex; 
-            flex-direction: column; 
-            gap: 14px; 
-        }
-
-        .method-list li { 
-            display: flex; 
-            align-items: flex-start; 
-            gap: 14px; 
-            font-size: 0.88rem; 
-            color: var(--text-charcoal); 
-        }
-
-        .method-list li span { 
-            background: var(--accent-sage); 
-            color: #FFFFFF; 
-            width: 26px; 
-            height: 26px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            border-radius: 50%; 
-            font-weight: 700; 
-            font-size: 0.8rem; 
-            flex-shrink: 0; 
-        }
-
-        /* TABLA DE PRECIOS 3 COLUMNAS */
-        .pricing-section { 
-            max-width: 1150px; 
-            margin: 0 auto 70px; 
-            padding: 0 20px; 
-        }
-
-        .pricing-grid { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 25px; 
-            align-items: stretch; 
-        }
-
-        .price-card { 
-            background: var(--bg-card); 
-            border: 1px solid var(--border-subtle); 
-            border-radius: 10px; 
-            padding: 40px 28px; 
-            text-align: center; 
-            position: relative; 
-            transition: transform 0.25s ease, box-shadow 0.25s ease; 
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .price-card:hover { 
-            transform: translateY(-4px); 
-            box-shadow: 0 14px 28px rgba(44, 40, 37, 0.08); 
-        }
-
-        .price-card.featured { 
-            border: 2px solid var(--accent-sage); 
-            background: var(--bg-card-accent);
-            box-shadow: 0 10px 30px rgba(44, 40, 37, 0.08); 
-            z-index: 10; 
-            padding: 48px 28px 40px; 
-        }
-
-        .featured-ribbon { 
-            position: absolute; 
-            top: -15px; 
-            left: 50%; 
-            transform: translateX(-50%); 
-            background: var(--accent-sage); 
-            color: #FFFFFF; 
-            padding: 6px 18px; 
-            border-radius: 30px; 
-            font-weight: 700; 
-            font-size: 0.65rem; 
-            text-transform: uppercase; 
-            letter-spacing: 1.2px;
-            white-space: nowrap; 
-        }
-
-        .plan-name { 
-            font-family: var(--font-serif);
-            font-size: 1.4rem; 
-            font-weight: 600; 
-            color: var(--text-charcoal); 
-            margin-bottom: 12px; 
-            text-transform: uppercase;
-        }
-
-        .plan-price { 
-            font-size: 2.2rem; 
-            font-weight: 700; 
-            color: var(--text-charcoal); 
-            margin-bottom: 20px; 
-        }
-
-        .plan-price span { 
-            font-size: 0.85rem; 
-            color: var(--text-muted); 
-            font-weight: 500; 
-        }
-
-        .plan-features { 
-            list-style: none; 
-            text-align: left; 
-            margin-bottom: 30px; 
-            display: flex; 
-            flex-direction: column; 
-            gap: 12px; 
-            flex-grow: 1;
-        }
-
-        .plan-features li { 
-            font-size: 0.82rem; 
-            color: var(--text-muted); 
-            display: flex; 
-            align-items: flex-start; 
-            gap: 10px; 
-            line-height: 1.5;
-        }
-
-        .plan-features li svg { 
-            color: var(--accent-sage); 
-            flex-shrink: 0; 
-            margin-top: 2px; 
-        }
-
-        .plan-features li.pro-feature { 
-            font-weight: 600; 
-            color: var(--text-charcoal); 
-        }
-
-        .btn-buy { 
-            width: 100%; 
-            padding: 13px 20px; 
-            border-radius: 4px; 
-            font-weight: 700; 
-            font-size: 0.72rem; 
-            text-transform: uppercase; 
-            letter-spacing: 1.2px;
-            cursor: pointer; 
-            text-decoration: none; 
-            display: inline-block; 
-            transition: background-color 0.25s ease; 
+            padding: 80px 4% 60px 4%;
             text-align: center;
+            border-bottom: 1px solid var(--border-subtle);
         }
 
-        .btn-buy-basic { 
-            background: var(--accent-rose); 
-            color: #FFFFFF; 
-            border: none; 
-        }
-
-        .btn-buy-basic:hover { 
-            background: var(--accent-rose-dark); 
-        }
-
-        .btn-buy-pro { 
-            background: var(--accent-sage); 
-            color: #FFFFFF; 
-            border: none; 
-        }
-
-        .btn-buy-pro:hover { 
-            background: var(--accent-sage-hover); 
-        }
-
-        /* FORMULARIO FINAL */
-        .form-section { 
-            background: var(--bg-card-accent); 
-            padding: 70px 20px; 
-            border-top: 1px solid var(--border-subtle);
-        }
-
-        .form-container { 
-            max-width: 620px; 
-            margin: 0 auto; 
-            background: var(--bg-card); 
-            padding: 40px 35px; 
-            border-radius: 10px; 
-            color: var(--text-charcoal); 
-            border: 1px solid var(--border-subtle);
-            box-shadow: 0 10px 30px rgba(44, 40, 37, 0.05);
-        }
-
-        .form-title { 
-            font-family: var(--font-serif);
-            font-size: 1.9rem; 
-            font-weight: 600; 
-            color: var(--text-charcoal); 
-            margin-bottom: 10px; 
-            text-align: center; 
-            text-transform: uppercase;
-        }
-
-        .form-group { margin-bottom: 18px; }
-
-        .form-label { 
-            display: block; 
-            font-size: 0.75rem; 
-            font-weight: 700; 
-            margin-bottom: 6px; 
-            color: var(--text-charcoal); 
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .form-input { 
-            width: 100%; 
-            padding: 12px 15px; 
-            border-radius: 4px; 
-            border: 1px solid var(--border-subtle); 
-            background: var(--bg-sand);
-            font-family: inherit; 
-            font-size: 0.88rem; 
-            color: var(--text-charcoal);
-            outline: none; 
-            transition: border-color 0.2s ease;
-        }
-
-        .form-input:focus { 
-            border-color: var(--accent-sage); 
-            background: #FFFFFF;
-        }
-
-        .btn-submit { 
-            width: 100%; 
-            background: var(--accent-sage); 
-            color: #FFFFFF; 
-            border: none; 
-            padding: 15px; 
-            border-radius: 4px; 
-            font-weight: 700; 
-            font-size: 0.78rem; 
-            letter-spacing: 1.4px;
-            cursor: pointer; 
-            text-transform: uppercase; 
-            margin-top: 12px; 
-            transition: background-color 0.25s ease;
-        }
-
-        .btn-submit:hover {
-            background-color: var(--accent-sage-hover);
-        }
-
-        /* FOOTER EXTENDIDO UNIFICADO */
-        footer {
-            background-color: var(--bg-sand);
-            border-top: 1px solid var(--border-subtle);
-            padding: 60px 6% 30px 6%;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
-            gap: 35px;
-            max-width: 1200px;
-            margin: 0 auto 40px auto;
-        }
-
-        .footer-col h5 {
-            font-family: var(--font-serif);
-            font-size: 1.1rem;
+        .kit-tag {
+            font-size: 0.75rem;
             font-weight: 700;
-            color: var(--text-charcoal);
-            margin-bottom: 15px;
-        }
-
-        .footer-col ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .footer-col a {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-size: 0.78rem;
-            transition: color 0.2s;
-        }
-
-        .footer-col a:hover {
             color: var(--accent-rose-dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: inline-block;
         }
 
-        .footer-bottom {
-            border-top: 1px solid var(--border-subtle);
-            padding-top: 25px;
-            text-align: center;
-            font-size: 0.72rem;
+        .kit-hero h1 {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: var(--text-charcoal);
+            line-height: 1.15;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .kit-hero p {
+            font-size: 1.05rem;
             color: var(--text-muted);
-            max-width: 1200px;
+            max-width: 750px;
             margin: 0 auto;
+            line-height: 1.7;
         }
 
-        @media (max-width: 1200px) {
-            .footer-grid { grid-template-columns: 1fr 1fr; }
-        }
+        /* CONTENIDO DEL KIT */
+        .kit-content { max-width: 900px; margin: 60px auto; padding: 0 4%; }
+        .kit-box { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 40px; margin-bottom: 40px; }
+        .kit-box h2 { font-family: var(--font-serif); font-size: 2rem; color: var(--text-charcoal); text-transform: uppercase; margin-bottom: 20px; }
+        .kit-list { list-style: none; margin-bottom: 30px; }
+        .kit-list li { font-size: 0.95rem; color: var(--text-charcoal); padding: 12px 0; border-bottom: 1px dashed var(--border-subtle); display: flex; align-items: center; gap: 12px; }
+        .kit-list li::before { content: '✓'; color: var(--accent-sage); font-weight: bold; font-size: 1.1rem; }
 
-        @media (max-width: 900px) {
-            .method-container { grid-template-columns: 1fr; }
-            .pricing-grid { grid-template-columns: 1fr; gap: 35px; }
-        }
+        .btn-buy-large { display: inline-block; background-color: var(--accent-sage); color: #FFFFFF; text-decoration: none; padding: 18px 36px; border-radius: 4px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: background 0.2s ease; text-align: center; }
+        .btn-buy-large:hover { background-color: var(--accent-sage-hover); }
 
-        @media (max-width: 768px) {
-            header { flex-direction: column; gap: 15px; padding: 18px 4%; }
-            nav { margin-left: 0; }
-            nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
-            .btn-header { margin-left: 0; }
-            .hero-title { font-size: 2.1rem; }
-            .footer-grid { grid-template-columns: 1fr; }
-        }
+        footer { background-color: var(--bg-sand); border-top: 1px solid var(--border-subtle); padding: 50px 6% 30px 6%; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 35px; max-width: 1200px; margin: 0 auto 40px auto; }
+        .footer-col h5 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--text-charcoal); margin-bottom: 15px; text-transform: uppercase; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-col a { text-decoration: none; color: var(--text-muted); font-size: 0.8rem; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--accent-rose-dark); }
+        .footer-bottom { border-top: 1px solid var(--border-subtle); padding-top: 25px; text-align: center; font-size: 0.75rem; color: var(--text-muted); max-width: 1200px; margin: 0 auto; }
+
+        @media (max-width: 768px) { header.site-header { flex-direction: column; gap: 15px; } nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; } .kit-hero h1 { font-size: 2.2rem; } .footer-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-    <!-- HEADER DE NAVEGACIÓN GLOBAL UNIFICADO -->
-    <header>
+    <header class="site-header">
         <a href="/" class="logo-box">
-            <svg class="logo-icon" viewBox="0 0 24 24">
-                <path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" />
-                <path d="M12 22V10" />
-            </svg>
+            <svg class="logo-icon" viewBox="0 0 24 24"><path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" /><path d="M12 22V10" /></svg>
             <div class="logo-text">
                 <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
-                <span class="logo-subtitle">Consultoría &amp; Riesgo Normativo</span>
+                <span class="logo-subtitle">Investigación &amp; Informes Técnicos</span>
             </div>
         </a>
 
         <nav>
             <ul>
                 <li><a href="/">Inicio</a></li>
-
                 <li>
                     <a href="/servicios/">Servicios</a>
                     <div class="dropdown">
-                        <a href="/servicios/#investigacion">Investigación Externa</a>
-                        <a href="/servicios/#asesoria">Asesoría Interna</a>
-                        <a href="/servicios/#ley-karin">Ley Karin</a>
-                        <a href="/servicios/#equidad">Equidad Salarial</a>
+                        <a href="/servicios/investigacion-laboral/">01 - Investigación Laboral</a>
+                        <a href="/servicios/informes-tecnicos/">02 - Informes Técnicos</a>
+                        <a href="/servicios/auditoria-investigaciones/">03 - Auditoría de Expedientes</a>
                     </div>
                 </li>
-
-                <li>
-                    <a href="/academia/">Academia</a>
-                    <div class="dropdown">
-                        <a href="/academia/#cursos">Cursos</a>
-                        <a href="/academia/#talleres">Talleres</a>
-                        <a href="/academia/#charlas">Charlas</a>
-                        <a href="/academia/#formacion">Formación Especializada</a>
-                    </div>
-                </li>
-
-                <li>
-                    <a href="/recursos/" class="active">Recursos</a>
-                    <div class="dropdown">
-                        <a href="/recursos/#kits">Kits de Investigación</a>
-                        <a href="/recursos/kit-ley-karin.html">Kit Ley Karin</a>
-                        <a href="/recursos/muestra-manual.html">Muestra Manual</a>
-                    </div>
-                </li>
-
-                <li>
-                    <a href="/observatorio/">Observatorio</a>
-                    <div class="dropdown">
-                        <a href="/observatorio/#normativa">Normativa</a>
-                        <a href="/observatorio/#jurisprudencia">Jurisprudencia</a>
-                        <a href="/observatorio/#analisis">Análisis</a>
-                        <a href="/observatorio/#informes">Informes</a>
-                    </div>
-                </li>
-
-                <li>
-                    <a href="/blog/">Blog</a>
-                    <div class="dropdown">
-                        <a href="/blog/#ley-karin">Ley Karin</a>
-                        <a href="/blog/#gestion">Gestión Laboral</a>
-                        <a href="/blog/#equidad">Equidad</a>
-                        <a href="/blog/#clima">Clima Laboral</a>
-                    </div>
-                </li>
-
-                <li><a href="/#contacto">Contacto</a></li>
+                <li><a href="/academia/">Escuela</a></li>
+                <li><a href="/recursos/" class="active">Recursos</a></li>
+                <li><a href="/contacto/">Contacto</a></li>
             </ul>
         </nav>
-
-        <a href="/diagnostico/" class="btn-header">
-            Diagnóstico Gratis
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
     </header>
 
-    <!-- BREADCRUMB -->
-    <div class="breadcrumb-container">
-        <a href="/">Inicio</a> &gt; <a href="/recursos/">Recursos</a> &gt; <span>Método ÁGORA Ley Karin &amp; Ley N.° 21.828</span>
-    </div>
-
-    <!-- HERO SECTION -->
-    <header class="hero-section">
-        <span class="hero-badge">Herramientas para RR.HH. y Compliance</span>
-        <h1 class="hero-title">No vendas plantillas, garantiza seguridad en tus investigaciones.</h1>
-        <p class="hero-subtitle">El Estado te indica QUÉ hacer. Nosotros te enseñamos <strong>CÓMO investigar internamente</strong> cumpliendo rigurosamente la Ley Karin N.° 21.643, la Ley N.° 21.828 y las directrices de la Dirección del Trabajo.</p>
-    </header>
-
-    <!-- SECCIÓN MÉTODO ÁGORA -->
-    <section class="method-section">
-        <div class="method-container">
-            <div class="method-text">
-                <h2>Conoce el Método A.G.O.R.A.</h2>
-                <p>No basta con descargar "formatos básicos". La normativa vigente exige investigar con <strong>perspectiva de género, confidencialidad, celeridad e imparcialidad</strong>. Nuestro sistema te enseña a cumplir cada exigencia paso a paso:</p>
-                <ul class="method-list">
-                    <li><span>A</span> <strong>Acoger:</strong> Recepción técnica, delimitación del caso y medidas de resguardo inmediatas.</li>
-                    <li><span>G</span> <strong>Guiar:</strong> Planificación estratégica y definición de hipótesis investigativas.</li>
-                    <li><span>O</span> <strong>Observar:</strong> Pautas de entrevistas especializadas (Qué preguntar y qué NO preguntar).</li>
-                    <li><span>R</span> <strong>Razonar:</strong> Matriz ICIA (Índice de Calidad) para valorar la evidencia objetivamente.</li>
-                    <li><span>A</span> <strong>Argumentar:</strong> Elaboración de conclusiones fundamentadas y trazables para la DT.</li>
-                </ul>
-            </div>
-            <div>
-                <img src="https://images.unsplash.com/photo-1554774853-719586f82d77?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Investigación y Compliance" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle); box-shadow: 0 10px 25px rgba(44,40,37,0.06);">
-            </div>
-        </div>
+    <section class="kit-hero">
+        <span class="kit-tag">Herramientas para RR.HH. y Compliance</span>
+        <h1>NO COMPRES SÓLO PLANTILLAS, GARANTIZA RIGOR EN TUS INVESTIGACIONES</h1>
+        <p>El Estado te indica QUÉ hacer. Nosotros te enseñamos CÓMO investigar internamente cumpliendo rigurosamente la Ley Karin N.° 21.643, la Ley N.° 21.828 y las directrices de la Dirección del Trabajo.</p>
     </section>
 
-    <!-- TABLA DE PRECIOS -->
-    <section id="kits" class="pricing-section">
-        <div class="pricing-grid">
-            
-            <!-- PLAN BÁSICO -->
-            <div class="price-card">
-                <div>
-                    <h3 class="plan-name">Kit Documental Básico</h3>
-                    <div class="plan-price">$39.900 <span>CLP</span></div>
-                    <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 20px; min-height: 40px;">Ideal para quienes solo necesitan los formatos legales obligatorios.</p>
-                    
-                    <ul class="plan-features">
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Acta de recepción de denuncia.</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Acta de medidas de resguardo.</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Modelos de citación a partes.</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Formato de informe final simple.</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Editable en Word.</li>
-                    </ul>
-                </div>
-                <a href="#formulario-compra" class="btn-buy btn-buy-basic" onclick="seleccionarPlan('Básico ($39.900)')">Solicitar Plan Básico</a>
+    <main class="kit-content">
+        <div class="kit-box">
+            <h2>Componentes del Kit Oficial</h2>
+            <ul class="kit-list">
+                <li>Modelo editable de acta de denuncia formal y ratificación.</li>
+                <li>Matriz de adopción y notificación de medidas de resguardo inmediatas.</li>
+                <li>Pauta estandarizada para toma de declaraciones sin revictimización.</li>
+                <li>Estructura parametrizada de Informe Final de Investigación para la DT.</li>
+            </ul>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="/contacto/?producto=kit-ley-karin" class="btn-buy-large">Solicitar Kit Oficial Ley Karin →</a>
             </div>
-
-            <!-- PLAN PROFESIONAL (DESTACADO) -->
-            <div class="price-card featured">
-                <div class="featured-ribbon">⭐ Más Solicitado</div>
-                <div>
-                    <h3 class="plan-name">Biblioteca Profesional</h3>
-                    <div class="plan-price">$79.900 <span>CLP</span></div>
-                    <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 20px; min-height: 40px;">Sistema completo con metodología de investigación y perspectiva de género.</p>
-                    
-                    <ul class="plan-features">
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Todo lo del Kit Básico +</strong></li>
-                        <li class="pro-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Actualización Ley N.° 21.643 y Nuevo Reglamento DT.</li>
-                        <li class="pro-feature" style="color: var(--accent-rose-dark);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 🆕 Filtro de Admisibilidad y Antecedentes Mínimos.</li>
-                        <li class="pro-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Formato de Subsanación (Plazo 3 días).</li>
-                        <li class="pro-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Manual del Investigador (Método Ágora 360®).</strong></li>
-                        <li class="pro-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Pautas de Entrevista Guiadas y Matriz ICIA.</li>
-                        <li class="pro-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Instrucciones de uso paso a paso.</li>
-                    </ul>
-                </div>
-                <a href="#formulario-compra" class="btn-buy btn-buy-pro" onclick="seleccionarPlan('Profesional ($79.900)')">Adquirir Biblioteca Profesional</a>
-            </div>
-
-            <!-- PLAN PREMIUM -->
-            <div class="price-card">
-                <div>
-                    <h3 class="plan-name">Master Kit Premium</h3>
-                    <div class="plan-price">$129.900 <span>CLP</span></div>
-                    <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 20px; min-height: 40px;">La solución definitiva que incluye blindaje técnico y auditoría.</p>
-                    
-                    <ul class="plan-features">
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Toda la Biblioteca Profesional +</strong></li>
-                        <li class="pro-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Los 25 errores que invalidan un caso.</li>
-                        <li class="pro-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 3 Casos Prácticos resueltos.</li>
-                        <li class="pro-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Índice de Calidad (Checklist ICIA).</li>
-                        <li class="pro-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Hr de Videollamada de Auditoría.</li>
-                    </ul>
-                </div>
-                <a href="#formulario-compra" class="btn-buy btn-buy-basic" onclick="seleccionarPlan('Premium ($129.900)')">Solicitar Plan Premium</a>
-            </div>
-
         </div>
-    </section>
+    </main>
 
-    <!-- FORMULARIO DE COMPRA -->
-    <section class="form-section" id="formulario-compra">
-        <div class="form-container">
-            <h3 class="form-title">Solicitar Acceso</h3>
-            <p style="text-align: center; color: var(--text-muted); margin-bottom: 25px; font-size: 0.88rem; line-height: 1.5;">Complete sus datos, seleccione su plan y lo contactaremos inmediatamente con los medios de pago corporativos y el acceso al material.</p>
-
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="redirect" id="redirect-url" value="https://mpago.la/1GxYcmP">
-                <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
-                <input type="hidden" name="subject" value="NUEVA COMPRA: Kit Ley Karin / Ley 21.828">
-
-                <div class="form-group">
-                    <label class="form-label">Plan Seleccionado *</label>
-                    <select name="plan" id="plan-selector" class="form-input" style="font-weight: 700; color: var(--text-charcoal);">
-                        <option value="Básico ($39.900)">Kit Documental Básico ($39.900 CLP)</option>
-                        <option value="Profesional ($79.900)" selected>⭐ Biblioteca Profesional ($79.900 CLP)</option>
-                        <option value="Premium ($129.900)">Master Kit Premium ($129.900 CLP)</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">Nombre Completo *</label>
-                    <input type="text" name="nombre" class="form-input" placeholder="Ej. Constanza Silva" required>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">Correo Corporativo *</label>
-                    <input type="email" name="email" class="form-input" placeholder="nombre@empresa.cl" required>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">Empresa / Organización *</label>
-                    <input type="text" name="empresa" class="form-input" placeholder="Razón Social o Fantasía" required>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">Teléfono / WhatsApp *</label>
-                    <input type="tel" name="telefono" class="form-input" placeholder="+56 9 1234 5678" required>
-                </div>
-
-                <button type="submit" class="btn-submit">Solicitar Medios de Pago →</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- BOTÓN FLOTANTE WHATSAPP -->
-    <a href="https://wa.me/56999840502?text=Hola,%20quisiera%20consultar%20sobre%20los%20planes%20del%20Kit%20Metodol%C3%B3gico%20Ley%20Karin%20y%20Ley%2021.828" class="btn-whatsapp-float" style="position: fixed; bottom: 25px; right: 25px; background-color: var(--verde-whatsapp); width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,0.2); z-index: 10000;" target="_blank" aria-label="Contacto por WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.705 1.754zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.285-.143-1.687-.833-1.947-.928-.26-.095-.45-.143-.64.143-.19.285-.736.928-.902 1.118-.166.19-.333.214-.618.071-1.638-.82-2.718-1.462-3.804-3.328-.288-.495.288-.459.825-1.533.095-.19.048-.356-.024-.499-.071-.143-.64-1.543-.877-2.11-.23-.553-.464-.477-.64-.486l-.547-.01c-.19 0-.499.071-.76.356-.26.285-.998.975-.998 2.38 0 1.404 1.022 2.759 1.164 2.95.143.19 2.012 3.073 4.876 4.31.681.294 1.213.47 1.626.601.684.217 1.307.186 1.8.113.55-.082 1.687-.69 1.925-1.356.237-.666.237-1.237.166-1.356-.07-.118-.26-.19-.545-.333z"/></svg>
-    </a>
-
-    <!-- FOOTER COMPLETO Y ESTRUCTURADO EN 5 COLUMNAS -->
-    <footer id="contacto">
+    <footer>
         <div class="footer-grid">
             <div class="footer-col">
                 <span class="logo-title" style="font-size:1.4rem;">ÁGORA LABORAL <sup>360°</sup></span>
-                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Consultoría especializada &amp; riesgo normativo.</p>
+                <p style="font-size:0.8rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados. Rigor e imparcialidad.</p>
             </div>
-            
             <div class="footer-col">
                 <h5>Servicios</h5>
                 <ul>
-                    <li><a href="/servicios/#investigacion">Investigación externa</a></li>
-                    <li><a href="/servicios/#asesoria">Asesoría interna</a></li>
-                    <li><a href="/servicios/#ley-karin">Ley Karin</a></li>
-                    <li><a href="/servicios/#equidad">Equidad salarial</a></li>
+                    <li><a href="/servicios/investigacion-laboral/">Investigación Externa</a></li>
+                    <li><a href="/servicios/informes-tecnicos/">Informes y Peritajes</a></li>
+                    <li><a href="/servicios/auditoria-investigaciones/">Auditoría de Expedientes</a></li>
                 </ul>
             </div>
-
             <div class="footer-col">
-                <h5>Contenido</h5>
+                <h5>Plataforma</h5>
                 <ul>
-                    <li><a href="/academia/">Academia</a></li>
-                    <li><a href="/recursos/">Recursos</a></li>
-                    <li><a href="/observatorio/">Observatorio</a></li>
-                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/academia/">Escuela de Investigadores</a></li>
+                    <li><a href="/recursos/">Recursos y Guías</a></li>
+                    <li><a href="/diagnostico/" style="color: var(--accent-rose-dark); font-weight: 700;">Diagnóstico Inicial Gratis →</a></li>
                 </ul>
             </div>
-
-            <div class="footer-col">
-                <h5>Empresa</h5>
-                <ul>
-                    <li><a href="/#contacto">Contacto</a></li>
-                    <li><a href="/#privacidad">Política de privacidad</a></li>
-                </ul>
-            </div>
-
             <div class="footer-col">
                 <h5>Contacto</h5>
                 <ul>
@@ -886,41 +187,10 @@
                 </ul>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <span>&copy; 2026 Ágora Laboral 360°. Todos los derechos reservados.</span>
+            <span>&copy; 2026 Ágora Laboral 360°. Investigación e Informes Técnicos. Todos los derechos reservados.</span>
         </div>
     </footer>
-
-    <!-- SCRIPTS DE REDIRECCIÓN Y SELECCIÓN DE PLAN -->
-    <script>
-        const linksMercadoPago = {
-            "Básico ($39.900)": "https://mpago.la/1hc9K3p",
-            "Profesional ($79.900)": "https://mpago.la/1GxYcmP",
-            "Premium ($129.900)": "https://mpago.la/1fmZ61x"
-        };
-
-        const planSelector = document.getElementById('plan-selector');
-        const redirectInput = document.getElementById('redirect-url');
-
-        if (planSelector && redirectInput) {
-            planSelector.addEventListener('change', function() {
-                const selectedPlan = this.value;
-                if (linksMercadoPago[selectedPlan]) {
-                    redirectInput.value = linksMercadoPago[selectedPlan];
-                }
-            });
-        }
-
-        function seleccionarPlan(plan) {
-            if (planSelector) {
-                planSelector.value = plan;
-                if (linksMercadoPago[plan] && redirectInput) {
-                    redirectInput.value = linksMercadoPago[plan];
-                }
-            }
-        }
-    </script>
 
 </body>
 </html>
