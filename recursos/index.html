@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos & Herramientas Gratuitas | Ágora Laboral 360°</title>
-    <meta name="description" content="Calculadora de plazos, checklists de cumplimiento y cronogramas de investigación bajo la Ley Karin (Ley 21.643).">
+    <title>Recursos & Herramientas | Ágora Laboral 360°</title>
+    <meta name="description" content="Calculadoras, checklists interactivas y plantillas técnicas de pago para la gestión de la Ley Karin (Ley 21.643).">
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -45,17 +45,21 @@
         nav .dropdown a { padding: 8px 16px; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.8px; display: block; border-bottom: none !important; color: var(--text-charcoal); }
         nav .dropdown a:hover { background-color: var(--bg-card-accent); color: var(--accent-rose-dark); }
 
-        .page-hero { background-color: var(--bg-card-accent); padding: 80px 4% 60px 4%; text-align: center; border-bottom: 1px solid var(--border-subtle); }
-        .page-hero h1 { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 600; color: var(--text-charcoal); line-height: 1.15; margin-bottom: 20px; text-transform: uppercase; }
+        .page-hero { background-color: var(--bg-card-accent); padding: 70px 4% 50px 4%; text-align: center; border-bottom: 1px solid var(--border-subtle); }
+        .page-hero h1 { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 600; color: var(--text-charcoal); line-height: 1.15; margin-bottom: 15px; text-transform: uppercase; }
         .page-hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 750px; margin: 0 auto; line-height: 1.7; }
 
-        .resources-grid { max-width: 1100px; margin: 70px auto; padding: 0 4%; display: flex; flex-direction: column; gap: 50px; }
-        .resource-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; scroll-margin-top: 100px; }
-        .resource-card h2 { font-family: var(--font-serif); font-size: 2rem; color: var(--text-charcoal); text-transform: uppercase; margin-bottom: 15px; }
-        .resource-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; }
-        
-        /* ESTILOS DE LAS HERRAMIENTAS INTERACTIVAS */
-        .interactive-tool { background: var(--bg-sand); padding: 30px; border-radius: 6px; border: 1px solid var(--border-subtle); }
+        .section-title { font-family: var(--font-serif); font-size: 2.2rem; color: var(--text-charcoal); text-transform: uppercase; text-align: center; margin-bottom: 10px; }
+        .section-subtitle { text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 40px; }
+
+        /* SECCIÓN HERRAMIENTAS GRATUITAS */
+        .free-section { max-width: 1100px; margin: 60px auto; padding: 0 4%; }
+        .resources-grid { display: flex; flex-direction: column; gap: 40px; }
+        .resource-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 35px; display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: start; scroll-margin-top: 100px; }
+        .resource-card h3 { font-family: var(--font-serif); font-size: 1.8rem; color: var(--text-charcoal); text-transform: uppercase; margin-bottom: 12px; }
+        .resource-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 15px; }
+
+        .interactive-tool { background: var(--bg-sand); padding: 25px; border-radius: 6px; border: 1px solid var(--border-subtle); }
         .interactive-tool h4 { font-family: var(--font-serif); font-size: 1.2rem; text-transform: uppercase; margin-bottom: 15px; text-align: center; }
         
         .form-group { margin-bottom: 15px; }
@@ -65,22 +69,32 @@
         .btn-action { width: 100%; background-color: var(--accent-sage); color: #FFFFFF; padding: 14px; border: none; border-radius: 4px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: background 0.2s ease; margin-top: 10px;}
         .btn-action:hover { background-color: var(--accent-sage-hover); }
 
-        /* Cajas de Resultado */
         .result-box { background-color: #FFFFFF; border: 1px solid var(--accent-sage); padding: 15px; border-radius: 4px; margin-top: 15px; font-size: 0.85rem; display: none; line-height: 1.5;}
-        .result-box strong { color: var(--text-charcoal); }
         .result-box span { color: var(--accent-rose-dark); font-weight: 600;}
         
-        /* Estilos Checklist */
         .chk-label { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; margin-bottom: 12px; cursor: pointer; font-weight: 500; text-transform: none; }
         .chk-label input { margin-top: 4px; accent-color: var(--accent-sage); }
         .progress-bar-bg { width: 100%; background-color: var(--border-subtle); border-radius: 4px; height: 12px; margin-top: 20px; overflow: hidden; }
         .progress-bar-fill { height: 100%; background-color: var(--accent-sage); width: 0%; transition: width 0.4s ease; }
         .progress-text { text-align: center; font-size: 0.85rem; font-weight: 700; margin-top: 10px; color: var(--accent-sage); }
 
-        /* Estilos Tabla Cronograma */
         .cronograma-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.8rem; }
         .cronograma-table th, .cronograma-table td { border: 1px solid var(--border-subtle); padding: 8px; text-align: left; }
         .cronograma-table th { background-color: var(--bg-card-accent); font-weight: 700; text-transform: uppercase; }
+
+        /* SECCIÓN RECURSOS DE PAGO (PREMIUM) */
+        .paid-section { background-color: var(--bg-card-accent); padding: 70px 4%; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
+        .paid-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        
+        .paid-card { background: var(--bg-sand); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 35px; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .paid-card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08); border-color: var(--accent-sage); }
+        
+        .paid-badge { align-self: flex-start; background: var(--accent-rose-dark); color: #FFFFFF; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; letter-spacing: 1px; margin-bottom: 15px; }
+        .paid-card h4 { font-family: var(--font-serif); font-size: 1.6rem; color: var(--text-charcoal); text-transform: uppercase; margin-bottom: 10px; line-height: 1.2; }
+        .paid-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; }
+
+        .btn-buy { background-color: var(--accent-sage); color: #FFFFFF; text-decoration: none; text-align: center; padding: 14px; border-radius: 4px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: background 0.2s ease; margin-top: auto; }
+        .btn-buy:hover { background-color: var(--accent-sage-hover); }
 
         footer { background-color: var(--bg-sand); border-top: 1px solid var(--border-subtle); padding: 50px 6% 30px 6%; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 35px; max-width: 1200px; margin: 0 auto 40px auto; }
@@ -90,7 +104,7 @@
         .footer-col a:hover { color: var(--accent-rose-dark); }
         .footer-bottom { border-top: 1px solid var(--border-subtle); padding-top: 25px; text-align: center; font-size: 0.75rem; color: var(--text-muted); max-width: 1200px; margin: 0 auto; }
 
-        @media (max-width: 900px) { .resource-card { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { .resource-card { grid-template-columns: 1fr; } .paid-grid { grid-template-columns: 1fr; } }
         @media (max-width: 768px) { header.site-header { flex-direction: column; gap: 15px; } nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; } .footer-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -124,100 +138,132 @@
     </header>
 
     <section class="page-hero">
-        <h1>Herramientas & Recursos Gratuitos</h1>
-        <p>Insumos técnicos automatizados para profesionales de Recursos Humanos, Fiscalía Interna e Investigadores bajo el marco normativo de la Ley Karin (Ley 21.643).</p>
+        <h1>Centro de Recursos & Herramientas</h1>
+        <p>Soluciones interactivas gratuitas e insumos técnicos descargables de alta especialización para profesionales de Compliance, RRHH y Abogados.</p>
     </section>
 
-    <main class="resources-grid">
+    <!-- BLOQUE 1: HERRAMIENTAS INTERACTIVAS GRATUITAS -->
+    <section class="free-section">
+        <h2 class="section-title">Herramientas Gratuitas</h2>
+        <p class="section-subtitle">Calculadores y sistemas de verificación automática en tiempo real.</p>
 
-        <!-- 1. CALCULADORA INTERACTIVA -->
-        <article id="calculadora" class="resource-card">
-            <div>
-                <h2>Calculadora de Plazos Ley Karin</h2>
-                <p>Calcula automáticamente los plazos legales para la adopción de medidas de resguardo y el límite legal de 30 días para concluir el informe de investigación.</p>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Cálculo inmediato del límite de 30 días.</li>
-                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Definición de fechas de resguardo.</li>
-                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Evita vicios de nulidad por plazos vencidos.</li>
-                </ul>
-            </div>
-            <div class="interactive-tool">
-                <h4>Calculadora de 30 Días</h4>
-                <div class="form-group">
-                    <label>Fecha de Recepción de la Denuncia</label>
-                    <input type="date" id="calc-fecha" class="form-control">
-                </div>
-                <button type="button" class="btn-action" onclick="calcularPlazos()">Calcular Plazos →</button>
-                
-                <div id="calc-resultado" class="result-box">
-                    <strong>Derivación a DT o Resguardo (Max 2 días):</strong> <br>
-                    <span id="res-resguardo">-</span> <br><br>
-                    <strong>Límite de Entrega de Informe (Max 30 días):</strong> <br>
-                    <span id="res-limite">-</span>
-                </div>
-            </div>
-        </article>
+        <div class="resources-grid">
 
-        <!-- 2. CHECKLIST INTERACTIVO -->
-        <article id="checklist" class="resource-card">
-            <div>
-                <h2>Checklist de Cumplimiento</h2>
-                <p>Verifica en tiempo real si tu investigación interna cumple con los estándares mínimos de debido proceso exigidos por la Dirección del Trabajo antes de cerrarla.</p>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Medición de porcentaje de cumplimiento.</li>
-                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Puntos clave de imparcialidad.</li>
-                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Prevención de multas por fallas procedimentales.</li>
-                </ul>
-            </div>
-            <div class="interactive-tool">
-                <h4>Auditoría Rápida</h4>
-                
-                <label class="chk-label"><input type="checkbox" class="chk-item"> Denuncia consta por escrito y fue ratificada.</label>
-                <label class="chk-label"><input type="checkbox" class="chk-item"> Se adoptaron medidas de resguardo inmediatas.</label>
-                <label class="chk-label"><input type="checkbox" class="chk-item"> El investigador/a no tiene conflicto de interés.</label>
-                <label class="chk-label"><input type="checkbox" class="chk-item"> Se garantizó confidencialidad a ambas partes.</label>
-                <label class="chk-label"><input type="checkbox" class="chk-item"> Se escuchó formalmente al denunciado/a.</label>
-
-                <div class="progress-bar-bg">
-                    <div id="chk-progress" class="progress-bar-fill"></div>
+            <!-- 1. CALCULADORA -->
+            <article id="calculadora" class="resource-card">
+                <div>
+                    <h3>Calculadora de Plazos Ley Karin</h3>
+                    <p>Calcula automáticamente los plazos legales para la adopción de medidas de resguardo y el límite legal de 30 días para concluir el informe de investigación.</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Cálculo inmediato del límite de 30 días.</li>
+                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Definición de fechas de resguardo.</li>
+                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Evita vicios de nulidad por plazos vencidos.</li>
+                    </ul>
                 </div>
-                <div id="chk-text" class="progress-text">0% de Cumplimiento</div>
-            </div>
-        </article>
-
-        <!-- 3. CRONOGRAMA AUTOMÁTICO -->
-        <article id="cronograma" class="resource-card">
-            <div>
-                <h2>Generador de Cronograma</h2>
-                <p>Estructura automáticamente las etapas de la investigación ingresando la fecha de inicio. Obtén un mapa de ruta claro para notificaciones, entrevistas e informes.</p>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Generación instantánea de hitos.</li>
-                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Mapeo de etapa probatoria.</li>
-                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Orden metodológico de la investigación.</li>
-                </ul>
-            </div>
-            <div class="interactive-tool">
-                <h4>Generar Carta Gantt</h4>
-                <div class="form-group">
-                    <label>Fecha de Inicio del Procedimiento</label>
-                    <input type="date" id="crono-fecha" class="form-control">
+                <div class="interactive-tool">
+                    <h4>Calculadora de 30 Días</h4>
+                    <div class="form-group">
+                        <label>Fecha de Recepción de la Denuncia</label>
+                        <input type="date" id="calc-fecha" class="form-control">
+                    </div>
+                    <button type="button" class="btn-action" onclick="calcularPlazos()">Calcular Plazos →</button>
+                    
+                    <div id="calc-resultado" class="result-box">
+                        <strong>Derivación a DT o Resguardo (Max 2 días):</strong> <br>
+                        <span id="res-resguardo">-</span> <br><br>
+                        <strong>Límite de Entrega de Informe (Max 30 días):</strong> <br>
+                        <span id="res-limite">-</span>
+                    </div>
                 </div>
-                <button type="button" class="btn-action" onclick="generarCronograma()">Crear Cronograma →</button>
-                
-                <div id="crono-resultado" class="result-box" style="padding: 10px;">
-                    <table class="cronograma-table">
-                        <tr><th>Hito / Etapa</th><th>Fecha Sugerida</th></tr>
-                        <tr><td>Recepción y Resguardo</td><td id="cro-1">-</td></tr>
-                        <tr><td>Notificación Denunciado</td><td id="cro-2">-</td></tr>
-                        <tr><td>Inicio Entrevistas</td><td id="cro-3">-</td></tr>
-                        <tr><td>Cierre Etapa Probatoria</td><td id="cro-4">-</td></tr>
-                        <tr><td>Entrega Informe Final</td><td id="cro-5">-</td></tr>
-                    </table>
-                </div>
-            </div>
-        </article>
+            </article>
 
-    </main>
+            <!-- 2. CHECKLIST INTERACTIVO -->
+            <article id="checklist" class="resource-card">
+                <div>
+                    <h3>Checklist de Cumplimiento</h3>
+                    <p>Verifica en tiempo real si tu investigación interna cumple con los estándares mínimos de debido proceso exigidos por la Dirección del Trabajo antes de cerrarla.</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Medición de porcentaje de cumplimiento.</li>
+                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Puntos clave de imparcialidad.</li>
+                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Prevención de multas por fallas procedimentales.</li>
+                    </ul>
+                </div>
+                <div class="interactive-tool">
+                    <h4>Auditoría Rápida</h4>
+                    
+                    <label class="chk-label"><input type="checkbox" class="chk-item"> Denuncia consta por escrito y fue ratificada.</label>
+                    <label class="chk-label"><input type="checkbox" class="chk-item"> Se adoptaron medidas de resguardo inmediatas.</label>
+                    <label class="chk-label"><input type="checkbox" class="chk-item"> El investigador/a no tiene conflicto de interés.</label>
+                    <label class="chk-label"><input type="checkbox" class="chk-item"> Se garantizó confidencialidad a ambas partes.</label>
+                    <label class="chk-label"><input type="checkbox" class="chk-item"> Se escuchó formalmente al denunciado/a.</label>
+
+                    <div class="progress-bar-bg">
+                        <div id="chk-progress" class="progress-bar-fill"></div>
+                    </div>
+                    <div id="chk-text" class="progress-text">0% de Cumplimiento</div>
+                </div>
+            </article>
+
+            <!-- 3. CRONOGRAMA AUTOMÁTICO -->
+            <article id="cronograma" class="resource-card">
+                <div>
+                    <h3>Generador de Cronograma</h3>
+                    <p>Estructura automáticamente las etapas de la investigación ingresando la fecha de inicio. Obtén un mapa de ruta claro para notificaciones, entrevistas e informes.</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Generación instantánea de hitos.</li>
+                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Mapeo de etapa probatoria.</li>
+                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Orden metodológico de la investigación.</li>
+                    </ul>
+                </div>
+                <div class="interactive-tool">
+                    <h4>Generar Carta Gantt</h4>
+                    <div class="form-group">
+                        <label>Fecha de Inicio del Procedimiento</label>
+                        <input type="date" id="crono-fecha" class="form-control">
+                    </div>
+                    <button type="button" class="btn-action" onclick="generarCronograma()">Crear Cronograma →</button>
+                    
+                    <div id="crono-resultado" class="result-box" style="padding: 10px;">
+                        <table class="cronograma-table">
+                            <tr><th>Hito / Etapa</th><th>Fecha Sugerida</th></tr>
+                            <tr><td>Recepción y Resguardo</td><td id="cro-1">-</td></tr>
+                            <tr><td>Notificación Denunciado</td><td id="cro-2">-</td></tr>
+                            <tr><td>Inicio Entrevistas</td><td id="cro-3">-</td></tr>
+                            <tr><td>Cierre Etapa Probatoria</td><td id="cro-4">-</td></tr>
+                            <tr><td>Entrega Informe Final</td><td id="cro-5">-</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- BLOQUE 2: PLANTILLAS & GUÍAS TÉCNICAS (CONEXIÓN DIRECTA) -->
+    <section class="paid-section">
+        <h2 class="section-title">Plantillas & Guías Específicas</h2>
+        <p class="section-subtitle">Insumos técnicos de descarga e información especializada.</p>
+
+        <div class="paid-grid">
+
+            <!-- RECURSO 1: LINK DIRECTO A kit-ley-karin.html -->
+            <div class="paid-card">
+                <span class="paid-badge">Kit Documental</span>
+                <h4>Kit Oficial Ley Karin</h4>
+                <p>Set completo de plantillas y modelos técnicos de actas, resoluciones de resguardo y estructura de informes para la gestión de denuncias.</p>
+                <a href="/recursos/kit-ley-karin.html" class="btn-buy">Ver Kit Completo →</a>
+            </div>
+
+            <!-- RECURSO 2: LINK DIRECTO A muestra-manual.html -->
+            <div class="paid-card">
+                <span class="paid-badge">Guía Metodológica</span>
+                <h4>Muestra Manual de Entrevistas</h4>
+                <p>Muestra y guía técnica para la conducción de entrevistas periciales, toma de declaraciones a partes involucradas y aplicación de perspectiva de género.</p>
+                <a href="/recursos/muestra-manual.html" class="btn-buy">Ver Muestra Manual →</a>
+            </div>
+
+        </div>
+    </section>
 
     <footer>
         <div class="footer-grid">
@@ -257,26 +303,21 @@
 
     <!-- SCRIPTS PARA HERRAMIENTAS INTERACTIVAS -->
     <script>
-        // Función auxiliar para formatear fechas
         function formatFecha(fecha) {
             const opciones = { day: '2-digit', month: '2-digit', year: 'numeric' };
             return fecha.toLocaleDateString('es-CL', opciones);
         }
 
-        // HERRAMIENTA 1: Calculadora de Plazos
         function calcularPlazos() {
             const inputVal = document.getElementById('calc-fecha').value;
             if (!inputVal) return alert('Por favor, seleccione una fecha válida.');
             
-            // Ajuste para zona horaria (evita que reste un día)
             const parts = inputVal.split('-');
             const fechaInicio = new Date(parts[0], parts[1] - 1, parts[2]);
 
-            // Resguardo (2 días)
             const resguardo = new Date(fechaInicio);
             resguardo.setDate(resguardo.getDate() + 2);
             
-            // Límite (30 días corridos estándar Ley Karin)
             const limite = new Date(fechaInicio);
             limite.setDate(limite.getDate() + 30);
 
@@ -285,7 +326,6 @@
             document.getElementById('calc-resultado').style.display = 'block';
         }
 
-        // HERRAMIENTA 2: Checklist Interactivo
         const checkboxes = document.querySelectorAll('.chk-item');
         checkboxes.forEach(chk => {
             chk.addEventListener('change', () => {
@@ -304,7 +344,6 @@
             });
         });
 
-        // HERRAMIENTA 3: Generador de Cronograma
         function generarCronograma() {
             const inputVal = document.getElementById('crono-fecha').value;
             if (!inputVal) return alert('Por favor, seleccione la fecha de inicio.');
@@ -312,7 +351,6 @@
             const parts = inputVal.split('-');
             const f = new Date(parts[0], parts[1] - 1, parts[2]);
 
-            // Días estimados: 0, 3, 7, 23, 30
             const f1 = new Date(f);
             const f2 = new Date(f); f2.setDate(f2.getDate() + 3);
             const f3 = new Date(f); f3.setDate(f3.getDate() + 7);
