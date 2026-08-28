@@ -26,6 +26,7 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: var(--font-sans); background-color: var(--bg-sand); color: var(--text-charcoal); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
+        /* HEADER GLOBAL */
         header.site-header { background-color: var(--bg-sand); padding: 18px 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(216, 209, 197, 0.6); box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12); position: sticky; top: 0; z-index: 1000; width: 100%; gap: 20px; }
         .logo-box { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-charcoal); flex-shrink: 0; }
         .logo-icon { width: 28px; height: 28px; stroke: var(--text-charcoal); fill: none; stroke-width: 1.5; }
@@ -49,20 +50,37 @@
         .page-hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 750px; margin: 0 auto; line-height: 1.7; }
 
         .resources-grid { max-width: 1100px; margin: 70px auto; padding: 0 4%; display: flex; flex-direction: column; gap: 50px; }
-        .resource-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; scroll-margin-top: 100px; }
+        .resource-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; scroll-margin-top: 100px; }
         .resource-card h2 { font-family: var(--font-serif); font-size: 2rem; color: var(--text-charcoal); text-transform: uppercase; margin-bottom: 15px; }
         .resource-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; }
-        .resource-card ul { list-style: none; margin-bottom: 25px; }
-        .resource-card ul li { font-size: 0.85rem; color: var(--text-charcoal); padding: 6px 0; display: flex; align-items: center; gap: 8px; }
-        .resource-card ul li::before { content: '✓'; color: var(--accent-sage); font-weight: bold; }
-
-        .resource-form { background: var(--bg-sand); padding: 30px; border-radius: 6px; border: 1px solid var(--border-subtle); }
-        .resource-form h4 { font-family: var(--font-serif); font-size: 1.2rem; text-transform: uppercase; margin-bottom: 15px; text-align: center; }
+        
+        /* ESTILOS DE LAS HERRAMIENTAS INTERACTIVAS */
+        .interactive-tool { background: var(--bg-sand); padding: 30px; border-radius: 6px; border: 1px solid var(--border-subtle); }
+        .interactive-tool h4 { font-family: var(--font-serif); font-size: 1.2rem; text-transform: uppercase; margin-bottom: 15px; text-align: center; }
+        
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
         .form-control { width: 100%; padding: 12px; border: 1px solid var(--border-subtle); border-radius: 4px; background: #FFFFFF; font-family: inherit; font-size: 0.85rem; }
-        .btn-download { width: 100%; background-color: var(--accent-sage); color: #FFFFFF; padding: 14px; border: none; border-radius: 4px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: background 0.2s ease; }
-        .btn-download:hover { background-color: var(--accent-sage-hover); }
+        
+        .btn-action { width: 100%; background-color: var(--accent-sage); color: #FFFFFF; padding: 14px; border: none; border-radius: 4px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: background 0.2s ease; margin-top: 10px;}
+        .btn-action:hover { background-color: var(--accent-sage-hover); }
+
+        /* Cajas de Resultado */
+        .result-box { background-color: #FFFFFF; border: 1px solid var(--accent-sage); padding: 15px; border-radius: 4px; margin-top: 15px; font-size: 0.85rem; display: none; line-height: 1.5;}
+        .result-box strong { color: var(--text-charcoal); }
+        .result-box span { color: var(--accent-rose-dark); font-weight: 600;}
+        
+        /* Estilos Checklist */
+        .chk-label { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; margin-bottom: 12px; cursor: pointer; font-weight: 500; text-transform: none; }
+        .chk-label input { margin-top: 4px; accent-color: var(--accent-sage); }
+        .progress-bar-bg { width: 100%; background-color: var(--border-subtle); border-radius: 4px; height: 12px; margin-top: 20px; overflow: hidden; }
+        .progress-bar-fill { height: 100%; background-color: var(--accent-sage); width: 0%; transition: width 0.4s ease; }
+        .progress-text { text-align: center; font-size: 0.85rem; font-weight: 700; margin-top: 10px; color: var(--accent-sage); }
+
+        /* Estilos Tabla Cronograma */
+        .cronograma-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.8rem; }
+        .cronograma-table th, .cronograma-table td { border: 1px solid var(--border-subtle); padding: 8px; text-align: left; }
+        .cronograma-table th { background-color: var(--bg-card-accent); font-weight: 700; text-transform: uppercase; }
 
         footer { background-color: var(--bg-sand); border-top: 1px solid var(--border-subtle); padding: 50px 6% 30px 6%; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 35px; max-width: 1200px; margin: 0 auto 40px auto; }
@@ -107,101 +125,95 @@
 
     <section class="page-hero">
         <h1>Herramientas & Recursos Gratuitos</h1>
-        <p>Insumos técnicos de apoyo para profesionales de Recursos Humanos, Fiscalía Interna e Investigadores bajo el marco normativo de la Ley Karin (Ley 21.643).</p>
+        <p>Insumos técnicos automatizados para profesionales de Recursos Humanos, Fiscalía Interna e Investigadores bajo el marco normativo de la Ley Karin (Ley 21.643).</p>
     </section>
 
     <main class="resources-grid">
 
-        <!-- 1. CALCULADORA -->
+        <!-- 1. CALCULADORA INTERACTIVA -->
         <article id="calculadora" class="resource-card">
             <div>
                 <h2>Calculadora de Plazos Ley Karin</h2>
-                <p>Matriz de cómputo en días hábiles/corridos ajustada a la circular de la Dirección del Trabajo para no incurrir en vicios de procedimiento.</p>
-                <ul>
-                    <li>Cálculo automático de los 30 días de investigación.</li>
-                    <li>Plazos de remisión a la DT y adopción de medidas de resguardo.</li>
-                    <li>Formato Excel descargable y editable.</li>
+                <p>Calcula automáticamente los plazos legales para la adopción de medidas de resguardo y el límite legal de 30 días para concluir el informe de investigación.</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Cálculo inmediato del límite de 30 días.</li>
+                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Definición de fechas de resguardo.</li>
+                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Evita vicios de nulidad por plazos vencidos.</li>
                 </ul>
             </div>
-            <div class="resource-form">
-                <h4>Obtener Calculadora</h4>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
-                    <input type="hidden" name="subject" value="Solicitud Recurso: Calculadora de Plazos">
-                    <input type="hidden" name="redirect" value="https://agoralaboral.cl/recursos/">
-
-                    <div class="form-group">
-                        <label>Nombre Completo</label>
-                        <input type="text" name="nombre" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Correo Corporativo</label>
-                        <input type="email" name="email" class="form-control" required>
-                    </div>
-                    <button type="submit" class="btn-download">Enviar a mi correo →</button>
-                </form>
+            <div class="interactive-tool">
+                <h4>Calculadora de 30 Días</h4>
+                <div class="form-group">
+                    <label>Fecha de Recepción de la Denuncia</label>
+                    <input type="date" id="calc-fecha" class="form-control">
+                </div>
+                <button type="button" class="btn-action" onclick="calcularPlazos()">Calcular Plazos →</button>
+                
+                <div id="calc-resultado" class="result-box">
+                    <strong>Derivación a DT o Resguardo (Max 2 días):</strong> <br>
+                    <span id="res-resguardo">-</span> <br><br>
+                    <strong>Límite de Entrega de Informe (Max 30 días):</strong> <br>
+                    <span id="res-limite">-</span>
+                </div>
             </div>
         </article>
 
-        <!-- 2. CHECKLIST -->
+        <!-- 2. CHECKLIST INTERACTIVO -->
         <article id="checklist" class="resource-card">
             <div>
-                <h2>Checklist de Cumplimiento Normativo</h2>
-                <p>Lista de verificación técnica con los 15 puntos críticos que la Dirección del Trabajo audita al revisar un protocolo interno o expediente de denuncia.</p>
-                <ul>
-                    <li>Verificación de medidas de resguardo inmediatas.</li>
-                    <li>Pautas de imparcialidad y no revictimización.</li>
-                    <li>Formato PDF estructurado listo para imprimir.</li>
+                <h2>Checklist de Cumplimiento</h2>
+                <p>Verifica en tiempo real si tu investigación interna cumple con los estándares mínimos de debido proceso exigidos por la Dirección del Trabajo antes de cerrarla.</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Medición de porcentaje de cumplimiento.</li>
+                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Puntos clave de imparcialidad.</li>
+                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Prevención de multas por fallas procedimentales.</li>
                 </ul>
             </div>
-            <div class="resource-form">
-                <h4>Obtener Checklist</h4>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
-                    <input type="hidden" name="subject" value="Solicitud Recurso: Checklist de Cumplimiento">
-                    <input type="hidden" name="redirect" value="https://agoralaboral.cl/recursos/">
+            <div class="interactive-tool">
+                <h4>Auditoría Rápida</h4>
+                
+                <label class="chk-label"><input type="checkbox" class="chk-item"> Denuncia consta por escrito y fue ratificada.</label>
+                <label class="chk-label"><input type="checkbox" class="chk-item"> Se adoptaron medidas de resguardo inmediatas.</label>
+                <label class="chk-label"><input type="checkbox" class="chk-item"> El investigador/a no tiene conflicto de interés.</label>
+                <label class="chk-label"><input type="checkbox" class="chk-item"> Se garantizó confidencialidad a ambas partes.</label>
+                <label class="chk-label"><input type="checkbox" class="chk-item"> Se escuchó formalmente al denunciado/a.</label>
 
-                    <div class="form-group">
-                        <label>Nombre Completo</label>
-                        <input type="text" name="nombre" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Correo Corporativo</label>
-                        <input type="email" name="email" class="form-control" required>
-                    </div>
-                    <button type="submit" class="btn-download">Enviar a mi correo →</button>
-                </form>
+                <div class="progress-bar-bg">
+                    <div id="chk-progress" class="progress-bar-fill"></div>
+                </div>
+                <div id="chk-text" class="progress-text">0% de Cumplimiento</div>
             </div>
         </article>
 
-        <!-- 3. CRONOGRAMA -->
+        <!-- 3. CRONOGRAMA AUTOMÁTICO -->
         <article id="cronograma" class="resource-card">
             <div>
-                <h2>Cronograma de Investigación Laboral</h2>
-                <p>Carta Gantt de trazabilidad metodológica para estructurar las etapas desde la recepción de la denuncia hasta la entrega del informe final.</p>
-                <ul>
-                    <li>Planificación de entrevistas y toma de declaraciones.</li>
-                    <li>Sistemas de archivo confidencial de evidencia.</li>
-                    <li>Plantilla editable en Word y Excel.</li>
+                <h2>Generador de Cronograma</h2>
+                <p>Estructura automáticamente las etapas de la investigación ingresando la fecha de inicio. Obtén un mapa de ruta claro para notificaciones, entrevistas e informes.</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Generación instantánea de hitos.</li>
+                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Mapeo de etapa probatoria.</li>
+                    <li style="margin-bottom:8px; font-size:0.85rem;">✓ Orden metodológico de la investigación.</li>
                 </ul>
             </div>
-            <div class="resource-form">
-                <h4>Obtener Cronograma</h4>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
-                    <input type="hidden" name="subject" value="Solicitud Recurso: Cronograma de Investigación">
-                    <input type="hidden" name="redirect" value="https://agoralaboral.cl/recursos/">
-
-                    <div class="form-group">
-                        <label>Nombre Completo</label>
-                        <input type="text" name="nombre" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Correo Corporativo</label>
-                        <input type="email" name="email" class="form-control" required>
-                    </div>
-                    <button type="submit" class="btn-download">Enviar a mi correo →</button>
-                </form>
+            <div class="interactive-tool">
+                <h4>Generar Carta Gantt</h4>
+                <div class="form-group">
+                    <label>Fecha de Inicio del Procedimiento</label>
+                    <input type="date" id="crono-fecha" class="form-control">
+                </div>
+                <button type="button" class="btn-action" onclick="generarCronograma()">Crear Cronograma →</button>
+                
+                <div id="crono-resultado" class="result-box" style="padding: 10px;">
+                    <table class="cronograma-table">
+                        <tr><th>Hito / Etapa</th><th>Fecha Sugerida</th></tr>
+                        <tr><td>Recepción y Resguardo</td><td id="cro-1">-</td></tr>
+                        <tr><td>Notificación Denunciado</td><td id="cro-2">-</td></tr>
+                        <tr><td>Inicio Entrevistas</td><td id="cro-3">-</td></tr>
+                        <tr><td>Cierre Etapa Probatoria</td><td id="cro-4">-</td></tr>
+                        <tr><td>Entrega Informe Final</td><td id="cro-5">-</td></tr>
+                    </table>
+                </div>
             </div>
         </article>
 
@@ -243,5 +255,78 @@
         </div>
     </footer>
 
+    <!-- SCRIPTS PARA HERRAMIENTAS INTERACTIVAS -->
+    <script>
+        // Función auxiliar para formatear fechas
+        function formatFecha(fecha) {
+            const opciones = { day: '2-digit', month: '2-digit', year: 'numeric' };
+            return fecha.toLocaleDateString('es-CL', opciones);
+        }
+
+        // HERRAMIENTA 1: Calculadora de Plazos
+        function calcularPlazos() {
+            const inputVal = document.getElementById('calc-fecha').value;
+            if (!inputVal) return alert('Por favor, seleccione una fecha válida.');
+            
+            // Ajuste para zona horaria (evita que reste un día)
+            const parts = inputVal.split('-');
+            const fechaInicio = new Date(parts[0], parts[1] - 1, parts[2]);
+
+            // Resguardo (2 días)
+            const resguardo = new Date(fechaInicio);
+            resguardo.setDate(resguardo.getDate() + 2);
+            
+            // Límite (30 días corridos estándar Ley Karin)
+            const limite = new Date(fechaInicio);
+            limite.setDate(limite.getDate() + 30);
+
+            document.getElementById('res-resguardo').innerText = formatFecha(resguardo);
+            document.getElementById('res-limite').innerText = formatFecha(limite);
+            document.getElementById('calc-resultado').style.display = 'block';
+        }
+
+        // HERRAMIENTA 2: Checklist Interactivo
+        const checkboxes = document.querySelectorAll('.chk-item');
+        checkboxes.forEach(chk => {
+            chk.addEventListener('change', () => {
+                const checkedCount = document.querySelectorAll('.chk-item:checked').length;
+                const porcentaje = Math.round((checkedCount / checkboxes.length) * 100);
+                
+                document.getElementById('chk-progress').style.width = porcentaje + '%';
+                
+                let mensaje = `${porcentaje}% de Cumplimiento`;
+                if (porcentaje === 100) mensaje = `100% - ¡Expediente Sólido!`;
+                else if (porcentaje < 50) mensaje = `${porcentaje}% - Riesgo Alto`;
+                
+                const txt = document.getElementById('chk-text');
+                txt.innerText = mensaje;
+                txt.style.color = porcentaje === 100 ? '#4CAF50' : 'var(--accent-sage)';
+            });
+        });
+
+        // HERRAMIENTA 3: Generador de Cronograma
+        function generarCronograma() {
+            const inputVal = document.getElementById('crono-fecha').value;
+            if (!inputVal) return alert('Por favor, seleccione la fecha de inicio.');
+            
+            const parts = inputVal.split('-');
+            const f = new Date(parts[0], parts[1] - 1, parts[2]);
+
+            // Días estimados: 0, 3, 7, 23, 30
+            const f1 = new Date(f);
+            const f2 = new Date(f); f2.setDate(f2.getDate() + 3);
+            const f3 = new Date(f); f3.setDate(f3.getDate() + 7);
+            const f4 = new Date(f); f4.setDate(f4.getDate() + 23);
+            const f5 = new Date(f); f5.setDate(f5.getDate() + 30);
+
+            document.getElementById('cro-1').innerText = formatFecha(f1);
+            document.getElementById('cro-2').innerText = formatFecha(f2);
+            document.getElementById('cro-3').innerText = formatFecha(f3);
+            document.getElementById('cro-4').innerText = formatFecha(f4);
+            document.getElementById('cro-5').innerText = formatFecha(f5);
+            
+            document.getElementById('crono-resultado').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
