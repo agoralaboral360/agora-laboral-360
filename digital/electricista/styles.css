@@ -24,3 +24,28 @@
 .contact-section{background:#f3f6fc}.contact-method>span{background:#e5ebf8}
 .final-cta{background:var(--teal)}.final-cta p{color:#dce5fa}
 footer{background:#111d4a}footer p{color:#bdc9e5}
+/* Galería vertical sin fotografías cortadas */
+.work-grid.work-photos {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  align-items: start;
+}
+
+.work-photo,
+.work-photo.tall {
+  grid-row: auto;
+  aspect-ratio: 3 / 4;
+}
+
+.work-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 800px) {
+  .work-grid.work-photos {
+    grid-template-columns: 1fr;
+  }
+}
