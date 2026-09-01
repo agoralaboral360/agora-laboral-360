@@ -1,457 +1,144 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-CL">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mario Labarca | Técnico Eléctrico Domiciliario</title>
-  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mario Labarca | Técnico eléctrico domiciliario en Santiago</title>
+  <meta name="description" content="Electricista domiciliario en el Sector Oriente de Santiago. Reparaciones, instalaciones, tableros, luminarias y urgencias eléctricas. Solicita evaluación sin costo.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b3840">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --azul-cobalto: #1e3a8a;
-      --naranja-energia: #ff6b00;
-      --naranja-hover: #e05d00;
-      --blanco: #ffffff;
-      --fondo-suave: #f8fafc;
-      --fondo-destacado: #eff6ff;
-      --texto-oscuro: #0f172a;
-      --texto-gris: #475569;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
-    html { scroll-behavior: smooth; }
-    body { background-color: var(--fondo-suave); color: var(--texto-oscuro); line-height: 1.6; }
-
-    /* BARRA SUPERIOR LIMPIA */
-    .top-bar { background: var(--azul-cobalto); color: var(--blanco); padding: 8px 15px; font-size: 0.82rem; font-weight: 700; }
-    .top-bar-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    .top-bar-left { display: flex; align-items: center; gap: 8px; }
-    .top-bar-right a { color: #ffffff; text-decoration: none; font-weight: 800; }
-    
-    @media (max-width: 600px) {
-      .top-bar-left { display: none; }
-      .top-bar-container { justify-content: center; }
-    }
-
-    /* NAVBAR */
-    .navbar { background: var(--blanco); border-bottom: 3px solid var(--azul-cobalto); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-    .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; }
-    .logo { font-weight: 900; font-size: 1.2rem; color: var(--azul-cobalto); text-decoration: none; }
-    .logo span { color: var(--naranja-energia); }
-    
-    .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
-    .nav-links a { text-decoration: none; color: var(--azul-cobalto); font-weight: 700; font-size: 0.88rem; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--naranja-energia); }
-    @media (max-width: 768px) { .nav-links { display: none; } }
-
-    /* HERO PRINCIPAL */
-    .hero { background: var(--fondo-destacado); padding: 40px 20px; border-bottom: 1px solid #dbeafe; }
-    .hero-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 35px; align-items: center; }
-    @media (max-width: 850px) { .hero-container { grid-template-columns: 1fr; text-align: center; } }
-
-    .badge-sec { background: var(--azul-cobalto); color: var(--blanco); padding: 5px 12px; border-radius: 50px; font-weight: 800; font-size: 0.78rem; display: inline-block; margin-bottom: 12px; text-transform: uppercase; }
-    .hero-title { font-size: 2.1rem; font-weight: 900; color: var(--azul-cobalto); line-height: 1.25; margin-bottom: 12px; }
-    .hero-desc { background: var(--blanco); border-left: 4px solid var(--naranja-energia); padding: 14px 18px; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-weight: 600; font-size: 0.92rem; color: var(--texto-gris); box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-
-    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 22px; }
-    @media (max-width: 850px) { .hero-btns { justify-content: center; } }
-    
-    .btn-naranja { background: var(--naranja-energia); color: var(--blanco); padding: 14px 24px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.92rem; box-shadow: 0 6px 16px rgba(255, 107, 0, 0.25); transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 8px; }
-    .btn-naranja:hover { background: var(--naranja-hover); transform: translateY(-2px); }
-    
-    .btn-llamar { background: var(--azul-cobalto); color: var(--blanco); padding: 14px 22px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.92rem; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; }
-    .btn-llamar:hover { background: #152b68; transform: translateY(-2px); }
-
-    .hero-info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; text-align: left; background: var(--blanco); padding: 14px; border-radius: 10px; font-size: 0.82rem; border: 1px solid #dbeafe; }
-    @media (max-width: 500px) { .hero-info-grid { grid-template-columns: 1fr; } }
-    .hero-info-grid strong { color: var(--azul-cobalto); }
-
-    .hero-photo-wrapper img { width: 100%; max-width: 360px; border-radius: 16px; border: 4px solid var(--blanco); outline: 3px solid var(--azul-cobalto); box-shadow: 0 12px 25px rgba(30, 58, 138, 0.12); object-fit: cover; object-position: top center; }
-
-    /* CONTADORES */
-    .counter-banner { background: var(--azul-cobalto); color: var(--blanco); padding: 30px 20px; }
-    .counter-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 18px; text-align: center; }
-    .counter-item h3 { font-size: 2rem; font-weight: 900; color: var(--naranja-energia); margin-bottom: 2px; }
-    .counter-item p { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-
-    /* SECCIONES GENERALES */
-    .section { padding: 50px 20px; max-width: 1100px; margin: 0 auto; }
-    .section-title { text-align: center; font-size: 1.7rem; font-weight: 900; color: var(--azul-cobalto); margin-bottom: 8px; text-transform: uppercase; }
-    .section-subtitle { text-align: center; color: var(--texto-gris); font-weight: 500; margin-bottom: 35px; }
-
-    /* ZONA DE COBERTURA (MAPA) */
-    .map-container { border-radius: 16px; overflow: hidden; border: 3px solid var(--blanco); outline: 1px solid #e2e8f0; box-shadow: 0 8px 20px rgba(0,0,0,0.06); margin-top: 15px; }
-    .map-container iframe { width: 100%; height: 350px; display: block; border: none; }
-    .cobertura-comunas { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
-    .comuna-badge { background: var(--fondo-destacado); color: var(--azul-cobalto); font-size: 0.85rem; font-weight: 700; padding: 6px 14px; border-radius: 50px; border: 1px solid #dbeafe; }
-
-    /* SERVICIOS */
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .service-card { background: var(--blanco); padding: 25px 20px; border-radius: 12px; border: 1px solid #e2e8f0; position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
-    .service-num { font-size: 1.6rem; font-weight: 900; color: var(--naranja-energia); margin-bottom: 6px; }
-    .service-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--azul-cobalto); margin-bottom: 8px; }
-    .service-card p { font-size: 0.86rem; color: var(--texto-gris); line-height: 1.5; }
-
-    /* SOBRE MÍ */
-    .why-bg { background: var(--blanco); border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
-    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .why-box { padding: 20px; border-radius: 10px; background: var(--fondo-suave); border: 1px solid #e2e8f0; }
-    .why-box h4 { font-size: 1rem; font-weight: 800; color: var(--azul-cobalto); margin-bottom: 6px; }
-    .why-box p { font-size: 0.85rem; color: var(--texto-gris); }
-
-    /* GALERÍA */
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .gallery-card { background: var(--blanco); border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
-    .gallery-card img { width: 100%; height: 260px; object-fit: cover; object-position: top center; border-bottom: 4px solid var(--azul-cobalto); }
-    .gallery-info { padding: 18px; }
-    .gallery-info h4 { font-size: 1rem; font-weight: 800; color: var(--azul-cobalto); margin-bottom: 4px; }
-    .gallery-info p { font-size: 0.84rem; color: var(--texto-gris); }
-
-    /* TESTIMONIOS */
-    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    .review-card { background: var(--blanco); padding: 22px; border-radius: 12px; border: 1px solid #e2e8f0; border-left: 4px solid var(--naranja-energia); border-left-width: 4px; }
-    .stars { color: var(--naranja-energia); font-size: 1rem; margin-bottom: 6px; }
-    .review-text { font-style: italic; color: #334155; font-size: 0.88rem; margin-bottom: 10px; }
-    .review-author { font-weight: 800; color: var(--azul-cobalto); font-size: 0.82rem; }
-
-    /* CTA FINAL */
-    .cta-final { background: var(--azul-cobalto); color: var(--blanco); border-radius: 16px; padding: 40px 20px; text-align: center; }
-    .cta-final h2 { font-size: 1.6rem; font-weight: 900; margin-bottom: 6px; }
-    .cta-final p { font-size: 0.95rem; color: #e2e8f0; margin-bottom: 22px; }
-    .cta-links { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-
-    .btn-insta-cta { background: var(--blanco); color: var(--azul-cobalto); padding: 14px 22px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.92rem; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; }
-    .btn-insta-cta:hover { background: #f8fafc; transform: translateY(-2px); }
-
-    footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 18px; font-size: 0.78rem; }
-    /* PORTADA RENOVADA - AGORA DIGITAL */
-    .top-bar { display: none; }
-    .navbar { border-bottom: 1px solid #e5e7eb; box-shadow: none; }
-    .nav-container { max-width: 1180px; min-height: 86px; padding: 14px 24px; }
-    .logo { display: flex; align-items: center; gap: 12px; color: #102f3a; font-size: 1.08rem; }
-    .logo-mark { width: 52px; height: 52px; border-radius: 17px; display: grid; place-items: center; background: #102f3a; color: #fff; font-weight: 900; }
-    .logo-text span { color: #f2b705; }
-    .nav-links a { color: #102f3a; }
-    .nav-cta { background: #f2b705; color: #102f3a !important; padding: 11px 16px; border-radius: 10px; }
-    .menu-toggle { display: none; width: 46px; height: 46px; border: 0; background: transparent; cursor: pointer; }
-    .menu-toggle span { display: block; width: 29px; height: 3px; margin: 5px auto; border-radius: 3px; background: #102f3a; }
-
-    .hero { position: relative; overflow: hidden; background: linear-gradient(135deg, #f7faf9 0%, #eef5f3 100%); padding: 72px 24px 78px; border-bottom: 0; }
-    .hero::after { content: ''; position: absolute; right: -130px; bottom: -220px; width: 520px; height: 520px; border: 2px solid rgba(242,183,5,.22); border-radius: 50%; box-shadow: 0 0 0 52px rgba(242,183,5,.06), 0 0 0 104px rgba(16,47,58,.04); }
-    .hero-container { position: relative; z-index: 1; max-width: 1180px; grid-template-columns: 1.05fr .95fr; gap: 70px; }
-    .badge-sec { background: transparent; color: #55717a; padding: 0; border-radius: 0; letter-spacing: .13em; font-size: .77rem; }
-    .badge-sec::before { content: ''; display: inline-block; width: 9px; height: 9px; margin-right: 9px; border-radius: 50%; background: #f2b705; box-shadow: 0 0 0 7px rgba(242,183,5,.16); }
-    .hero-title { max-width: 650px; color: #102f3a; font-size: clamp(2.6rem, 5.2vw, 4.9rem); line-height: .99; letter-spacing: -.055em; margin: 20px 0 24px; }
-    .hero-title em { display: block; color: #d89e00; font-style: normal; }
-    .hero-desc { max-width: 650px; background: transparent; border: 0; box-shadow: none; padding: 0; border-radius: 0; color: #5f7075; font-size: 1.06rem; font-weight: 500; line-height: 1.75; margin-bottom: 29px; }
-    .hero-btns { gap: 12px; margin-bottom: 30px; }
-    .btn-naranja, .btn-llamar { min-height: 56px; justify-content: center; border-radius: 12px; padding: 15px 22px; }
-    .btn-naranja { background: #25a958; box-shadow: 0 9px 22px rgba(37,169,88,.2); }
-    .btn-naranja:hover { background: #208f4c; }
-    .btn-llamar { background: #fff; color: #102f3a; border: 1px solid #cbd8d5; }
-    .btn-llamar:hover { background: #f8fbfa; }
-    .hero-info-grid { display: flex; flex-wrap: wrap; gap: 12px 24px; background: transparent; border: 0; padding: 0; color: #102f3a; font-size: .84rem; }
-    .hero-info-grid div { position: relative; padding-left: 18px; }
-    .hero-info-grid div::before { content: '\2713'; position: absolute; left: 0; color: #d89e00; font-weight: 900; }
-    .hero-info-grid strong { color: #102f3a; }
-    .hero-photo-wrapper { position: relative; display: flex; justify-content: center; }
-    .hero-photo-wrapper::before { content: ''; position: absolute; inset: 26px -18px -18px 30px; border-radius: 32px; background: #f2b705; opacity: .2; transform: rotate(4deg); }
-    .hero-photo-wrapper img { position: relative; width: min(100%, 465px); max-width: none; height: 570px; border: 0; outline: 0; border-radius: 30px; box-shadow: 0 28px 58px rgba(16,47,58,.2); object-position: center 18%; }
-
-    @media (max-width: 850px) {
-      .nav-container { min-height: 76px; padding: 11px 18px; }
-      .logo-mark { width: 48px; height: 48px; border-radius: 15px; }
-      .menu-toggle { display: block; }
-      .nav-links { position: absolute; top: 76px; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 12px 20px 20px; background: #fff; border-bottom: 1px solid #e5e7eb; box-shadow: 0 14px 25px rgba(16,47,58,.1); }
-      .nav-links.is-open { display: flex; }
-      .nav-links a { display: block; padding: 12px 4px; }
-      .nav-cta { margin-top: 8px; text-align: center; }
-      .hero { padding: 52px 20px 58px; }
-      .hero-container { grid-template-columns: 1fr; gap: 42px; text-align: center; }
-      .hero-title { margin-left: auto; margin-right: auto; font-size: clamp(2.55rem, 11vw, 4rem); }
-      .hero-desc { margin-left: auto; margin-right: auto; }
-      .hero-btns, .hero-info-grid { justify-content: center; }
-      .hero-photo-wrapper img { height: min(122vw, 560px); }
-    }
-    @media (max-width: 520px) {
-      .logo-text { font-size: .94rem; }
-      .hero-title { letter-spacing: -.06em; }
-      .hero-btns { display: grid; grid-template-columns: 1fr; }
-      .hero-info-grid { display: grid; grid-template-columns: 1fr 1fr; text-align: left; gap: 12px; }
-      .hero-photo-wrapper::before { inset: 18px -8px -12px 16px; }
-      .hero-photo-wrapper img { border-radius: 24px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo" aria-label="Mario Labarca, inicio">
-        <span class="logo-mark" aria-hidden="true">ML</span>
-        <span class="logo-text">Mario Labarca <span>Eléctrico</span></span>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header" id="inicio">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Mario Labarca Eléctrico, inicio">
+        <span class="brand-mark" aria-hidden="true">ML</span>
+        <span>Mario Labarca <b>Eléctrico</b></span>
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links" id="menu-principal">
-        <li><a href="#cobertura">Cobertura</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#sobre-mi">Sobre Mí</a></li>
-        <li><a href="#trabajos">Trabajos</a></li>
-        <li><a href="#opiniones">Opiniones</a></li>
-        <li><a class="nav-cta" href="https://wa.me/56992232623?text=Hola%20Mario,%20necesito%20un%20presupuesto" target="_blank" rel="noopener">Pedir presupuesto</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- HERO PRINCIPAL -->
-  <header class="hero">
-    <div class="hero-container">
-      <div>
-        <span class="badge-sec">TÉCNICO ELÉCTRICO · SECTOR ORIENTE</span>
-        <h1 class="hero-title">Soluciones eléctricas <em>seguras y profesionales</em></h1>
-        
-        <div class="hero-desc">
-          Reparaciones, instalaciones y normalización de tableros en el Sector Oriente de Santiago. Atención directa, evaluación sin costo y garantía escrita.
-        </div>
-
-        <div class="hero-btns">
-          <a href="https://wa.me/56992232623?text=Hola%20Mario,%20necesito%20un%20presupuesto%20gratuito" class="btn-naranja" target="_blank">
-            Pedir presupuesto por WhatsApp
-          </a>
-          <a href="tel:+56992232623" class="btn-llamar">
-            Llamar ahora
-          </a>
-        </div>
-
-        <div class="hero-info-grid">
-          <div><strong>Formación IP INACAP</strong></div>
-          <div><strong>Más de 20 años de experiencia</strong></div>
-          <div><strong>Evaluación sin costo</strong></div>
-          <div><strong>Sector Oriente</strong></div>
-        </div>
-      </div>
-
-      <div class="hero-photo-wrapper">
-        <img src="image_0262e7.PNG" alt="Mario Labarca, técnico eléctrico domiciliario en Santiago" width="1024" height="1365">
-      </div>
+      <nav class="main-nav" id="main-menu" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="button button-small button-primary header-cta js-whatsapp" href="#contacto">Pedir presupuesto</a>
     </div>
   </header>
 
-  <!-- BANNER DE CIFRAS -->
-  <section class="counter-banner">
-    <div class="counter-grid">
-      <div class="counter-item">
-        <h3>+20</h3>
-        <p>Años de Experiencia</p>
-      </div>
-      <div class="counter-item">
-        <h3>+800</h3>
-        <p>Trabajos Realizados</p>
-      </div>
-      <div class="counter-item">
-        <h3>100%</h3>
-        <p>Garantía Directa</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ZONA DE COBERTURA MAPA (UBICADA ARRIBA PARA FILTRAR VISITAS) -->
-  <section id="cobertura" class="section">
-    <h2 class="section-title">Zona de Cobertura</h2>
-    <p class="section-subtitle">Atención exclusiva y prioritaria en comunas del Sector Oriente</p>
-    
-    <div class="map-container">
-      <iframe src="https://maps.google.com/maps?q=Providencia,%20Las%20Condes,%20Vitacura,%20Santiago,%20Chile&t=&z=12&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    
-    <div class="cobertura-comunas">
-      <span class="comuna-badge">Las Condes</span>
-      <span class="comuna-badge">Providencia</span>
-      <span class="comuna-badge">Vitacura</span>
-      <span class="comuna-badge">Lo Barnechea</span>
-      <span class="comuna-badge">La Reina</span>
-      <span class="comuna-badge">Ñuñoa</span>
-    </div>
-  </section>
-
-  <!-- SERVICIOS NUMERADOS -->
-  <section id="servicios" class="section" style="padding-top: 10px;">
-    <h2 class="section-title">Mis Servicios Eléctricos</h2>
-    <p class="section-subtitle">Soluciones técnicas profesionales y prolijas para tu inmueble</p>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-num">01</div>
-        <h3>Instalaciones Eléctricas</h3>
-        <p>Servicio residencial y comercial completo. Recableados, independización de líneas y montaje técnico en baja tensión.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-num">02</div>
-        <h3>Instalación de Luminarias y LED</h3>
-        <p>Montaje de lámparas colgantes, focos LED de alta eficiencia, apliqués y proyectos de iluminación interior y exterior.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-num">03</div>
-        <h3>Reparación de Fallas y Cortos</h3>
-        <p>Diagnóstico preciso de fugas de corriente, automáticos que caen y fallas urgentes con equipos de medición.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-num">04</div>
-        <h3>Tableros y Puesta a Tierra</h3>
-        <p>Armado y mantenimiento de tableros eléctricos. Recambio de disyuntores automáticos, diferenciales y barra Cooper.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-num">05</div>
-        <h3>Mantenimiento Preventivo</h3>
-        <p>Inspección integral de redes de cableado, orden de circuitos y revisión de enchufes para prevenir sobrecargas.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-num">06</div>
-        <h3>Atención de Urgencias</h3>
-        <p>Respuesta veloz ante cortes imprevistos o chispazos en tomacorrientes en las comunas de cobertura.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE MÍ -->
-  <div id="sobre-mi" class="why-bg">
-    <section class="section">
-      <h2 class="section-title">¿Por Qué Elegir Mi Servicio?</h2>
-      <p class="section-subtitle">Trato personal, responsabilidad y transparencia en cada trabajo</p>
-
-      <div class="why-grid">
-        <div class="why-box">
-          <h4>Trato Directo</h4>
-          <p>Sin subcontratistas ni intermediarios. Yo mismo evalúo, ejecuto y respondo por cada trabajo realizado.</p>
+  <main id="contenido">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="status-dot"></span> Técnico eléctrico · Sector Oriente</span>
+          <h1>Soluciones eléctricas <em>seguras y profesionales</em></h1>
+          <p>Reparaciones, instalaciones y normalización de tableros en Santiago. Atención directa, evaluación sin costo y garantía escrita.</p>
+          <div class="hero-actions">
+            <a class="button button-whatsapp js-whatsapp" href="#contacto">
+              <span aria-hidden="true">●</span> Pedir presupuesto por WhatsApp
+            </a>
+            <a class="button button-outline js-phone" href="#contacto">Llamar ahora</a>
+          </div>
+          <ul class="trust-list" aria-label="Ventajas del servicio">
+            <li>Atención directa</li>
+            <li>Presupuesto claro</li>
+            <li>Más de 20 años</li>
+          </ul>
         </div>
-
-        <div class="why-box">
-          <h4>Formación Técnica</h4>
-          <p>IP INACAP, con sólida preparación teórica y práctica para garantizar intervenciones seguras.</p>
-        </div>
-
-        <div class="why-box">
-          <h4>Presupuesto previo $0</h4>
-          <p>Evalúo técnicamente tus requerimientos y entrego un valor claro antes de comenzar. Sin cobros sorpresa.</p>
-        </div>
-
-        <div class="why-box">
-          <h4>Trabajo Garantizado</h4>
-          <p>Uso de materiales de excelente calidad y terminaciones prolijas con respaldo directo.</p>
+        <div class="hero-visual hero-photo" aria-label="Mario Labarca, técnico eléctrico domiciliario">
+          <div class="water-ring ring-one"></div><div class="water-ring ring-two"></div>
+          <img src="image_0262e7.PNG" alt="Mario Labarca trabajando como técnico eléctrico junto a un tablero domiciliario" width="1024" height="1365">
+          <div class="visual-badge"><strong>Atención directa</strong><span>Más de 20 años de experiencia</span></div>
         </div>
       </div>
     </section>
-  </div>
 
-  <!-- GALERÍA DE TRABAJOS REALIZADOS -->
-  <div id="trabajos" class="section">
-    <h2 class="section-title">Trabajos Realizados</h2>
-    <p class="section-subtitle">Muestra gráfica de procedimientos y ejecuciones en terreno</p>
-
-    <div class="gallery-grid">
-      <div class="gallery-card">
-        <img src="imagen.elec1.jpg" alt="Montaje de Iluminación">
-        <div class="gallery-info">
-          <h4>Montaje e Iluminación en Altura</h4>
-          <p>Conexión de centros de luz, revisión de cableado aéreo y cajas de derivación.</p>
-        </div>
-      </div>
-
-      <div class="gallery-card">
-        <img src="imagen.elec2.jpg" alt="Revisión de Enchufes">
-        <div class="gallery-info">
-          <h4>Enchufes y Puntos de Fuerza</h4>
-          <p>Intervención técnica limpia, verificación de circuitos e instrumental especializado.</p>
-        </div>
-      </div>
-
-      <div class="gallery-card">
-        <img src="image_0262e7.PNG" alt="Normalización de Tableros">
-        <div class="gallery-info">
-          <h4>Normalización de Tableros</h4>
-          <p>Armado de tableros con disyuntores automáticos, protectores diferenciales y puesta a tierra.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TESTIMONIOS -->
-  <div id="opiniones" class="why-bg">
-    <section class="section">
-      <h2 class="section-title">Comentarios de Clientes</h2>
-      <p class="section-subtitle">Opiniones reales de quienes han confiado en mi trabajo</p>
-
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p class="review-text">"Excelente disposición. Vino a evaluar la falla sin cobro de visita y dejó la instalación funcionando el mismo día."</p>
-          <div class="review-author">— Violeta Saludes (La Reina)</div>
-        </div>
-
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p class="review-text">"Muy responsable y claro con los costos. Hizo el recableado de mi local comercial con mucha prolijidad."</p>
-          <div class="review-author">— Cristóbal Santibañez (Ñuñoa)</div>
-        </div>
-
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p class="review-text">"Instaló la barra cooper y separó los circuitos de la cocina. Todo impecable y muy seguro."</p>
-          <div class="review-author">— Felipe Sat (Las Condes)</div>
+    <section class="section services" id="servicios">
+      <div class="container">
+        <div class="section-heading"><div><span class="kicker">Servicios</span><h2>Soluciones para tus necesidades eléctricas</h2></div><p>Atención domiciliaria y comercial con información clara antes de comenzar cada trabajo.</p></div>
+        <div class="card-grid">
+          <article class="service-card"><span class="service-icon">↯</span><h3>Instalaciones eléctricas</h3><p>Recableados, nuevas líneas, enchufes y montaje técnico en baja tensión.</p><a class="text-link js-whatsapp" href="#contacto">Consultar servicio →</a></article>
+          <article class="service-card"><span class="service-icon">✦</span><h3>Luminarias y LED</h3><p>Instalación de lámparas, focos LED, apliqués e iluminación interior y exterior.</p><a class="text-link js-whatsapp" href="#contacto">Consultar servicio →</a></article>
+          <article class="service-card"><span class="service-icon">⌁</span><h3>Fallas y cortocircuitos</h3><p>Diagnóstico de fugas de corriente, automáticos que caen y fallas imprevistas.</p><a class="text-link js-whatsapp" href="#contacto">Consultar servicio →</a></article>
+          <article class="service-card"><span class="service-icon">▣</span><h3>Tableros eléctricos</h3><p>Armado, orden y mantenimiento de tableros, automáticos y diferenciales.</p><a class="text-link js-whatsapp" href="#contacto">Consultar servicio →</a></article>
+          <article class="service-card"><span class="service-icon">✓</span><h3>Mantenimiento preventivo</h3><p>Revisión de cableado, circuitos y enchufes para prevenir sobrecargas.</p><a class="text-link js-whatsapp" href="#contacto">Consultar servicio →</a></article>
+          <article class="service-card"><span class="service-icon">!</span><h3>Urgencias eléctricas</h3><p>Atención ante cortes, chispazos y fallas urgentes en las comunas de cobertura.</p><a class="text-link js-whatsapp" href="#contacto">Consultar servicio →</a></article>
         </div>
       </div>
     </section>
-  </div>
 
-  <!-- CONTACTO Y CTA FINAL -->
-  <section id="contacto" class="section">
-    <div class="cta-final">
-      <h2>¿Necesitas evaluación para un trabajo eléctrico?</h2>
-      <p>Evaluación técnica sin costo previa a cualquier proyecto en Sector Oriente</p>
-
-      <div class="cta-links">
-        <a href="https://wa.me/56992232623?text=Hola%20Mario,%20necesito%20un%20presupuesto" class="btn-naranja" target="_blank">
-          📱 Cotizar por WhatsApp
-        </a>
-        <a href="tel:+56992232623" class="btn-llamar">
-          📞 Llamar al +56 9 9223 2623
-        </a>
-        <a href="https://instagram.com/mariolabarca56" class="btn-insta-cta" target="_blank">
-          📷 Ver en Instagram
-        </a>
+    <section class="section why-section">
+      <div class="container why-grid">
+        <div><span class="kicker kicker-light">Servicio simple y transparente</span><h2>¿Por qué elegirme?</h2><p>Comunicación directa desde la primera consulta hasta la revisión del trabajo solicitado.</p><a class="button button-light js-whatsapp" href="#contacto">Consultar disponibilidad</a></div>
+        <ul class="benefit-list">
+          <li><span>01</span><div><strong>Atención directa</strong><small>Hablas con quien revisará tu solicitud.</small></div></li>
+          <li><span>02</span><div><strong>Presupuesto claro</strong><small>Información antes de comenzar el trabajo.</small></div></li>
+          <li><span>03</span><div><strong>Trabajo responsable</strong><small>Revisión cuidadosa del problema informado.</small></div></li>
+          <li><span>04</span><div><strong>Formación técnica</strong><small>Preparación profesional en IP INACAP.</small></div></li>
+          <li><span>05</span><div><strong>Contacto rápido</strong><small>Consulta fácilmente por WhatsApp.</small></div></li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Mario Labarca | Técnico Eléctrico Domiciliario, IP INACAP | RUT: 8.027.653-2 &copy; 2026</p>
-  </footer>
+    <section class="section" id="trabajos">
+      <div class="container">
+        <div class="section-heading"><div><span class="kicker">Galería</span><h2>Trabajos realizados</h2></div><p>Instalaciones y reparaciones eléctricas realizadas con cuidado y orden.</p></div>
+        <div class="work-grid work-photos">
+          <figure class="work-photo tall"><img src="imagen.elec1.jpg" alt="Instalación eléctrica en altura" loading="lazy"><figcaption>Instalación de iluminación</figcaption></figure>
+          <figure class="work-photo"><img src="imagen.elec2.jpg" alt="Reparación de conexión eléctrica" loading="lazy"><figcaption>Reparación de conexiones</figcaption></figure>
+          <figure class="work-photo"><img src="image_0262e7.PNG" alt="Mario Labarca junto a un tablero eléctrico" loading="lazy"><figcaption>Tableros eléctricos</figcaption></figure>
+        </div>
+      </div>
+    </section>
 
-  <script>
-    const menuButton = document.querySelector('.menu-toggle');
-    const mainMenu = document.querySelector('.nav-links');
-    menuButton.addEventListener('click', () => {
-      const isOpen = mainMenu.classList.toggle('is-open');
-      menuButton.setAttribute('aria-expanded', String(isOpen));
-      menuButton.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
-    });
-    mainMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-      mainMenu.classList.remove('is-open');
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'Abrir menú');
-    }));
-  </script>
+    <section class="section opinions" id="opiniones">
+      <div class="container">
+        <div class="section-heading"><div><span class="kicker">Opiniones</span><h2>Lo que dicen los clientes</h2></div><p>Experiencias de personas que confiaron en el trabajo de Mario.</p></div>
+        <div class="testimonial-grid">
+          <article class="testimonial"><span>Cliente verificado</span><p>“Excelente disposición. Evaluó la falla sin cobro de visita y dejó la instalación funcionando el mismo día.”</p><small>Violeta Saludes · La Reina</small></article>
+          <article class="testimonial"><span>Cliente verificado</span><p>“Muy responsable y claro con los costos. Hizo el recableado de mi local comercial con mucha prolijidad.”</p><small>Cristóbal Santibáñez · Ñuñoa</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section zone-section" id="cobertura">
+      <div class="container zone-grid">
+        <div class="map-placeholder" role="img" aria-label="Mapa referencial de zona de atención en Santiago"><span class="map-pin">●</span><i></i><i></i><i></i></div>
+        <div><span class="kicker">Zona de atención</span><h2>Sector Oriente de Santiago</h2><p>Atención prioritaria en las comunas indicadas. Consulta disponibilidad para otros sectores.</p><div class="communes"><span>Las Condes</span><span>Providencia</span><span>Vitacura</span><span>Lo Barnechea</span><span>La Reina</span><span>Ñuñoa</span></div></div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-copy"><span class="kicker">Contacto</span><h2>Cuéntale a Mario qué necesitas</h2><p>Envía los datos principales del trabajo para consultar disponibilidad y presupuesto.</p>
+          <div class="contact-method"><span>WA</span><div><small>WhatsApp</small><strong>+56 9 9223 2623</strong></div></div>
+          <div class="contact-method"><span>☎</span><div><small>Teléfono</small><strong>+56 9 9223 2623</strong></div></div>
+        </div>
+        <form class="contact-form" id="quote-form">
+          <div class="form-row"><label>Nombre<input name="nombre" type="text" placeholder="Tu nombre" required></label><label>Comuna<input name="comuna" type="text" placeholder="Tu comuna" required></label></div>
+          <label>Tipo de trabajo<select name="problema" required><option value="">Selecciona una opción</option><option>Instalación eléctrica</option><option>Luminarias y LED</option><option>Falla o cortocircuito</option><option>Tablero eléctrico</option><option>Mantenimiento</option><option>Urgencia</option><option>Otro</option></select></label>
+          <label>Mensaje<textarea name="mensaje" rows="4" placeholder="Describe brevemente el problema"></textarea></label>
+          <button class="button button-whatsapp button-full" type="submit">Preparar consulta por WhatsApp</button>
+          <small class="form-note">No se enviará nada hasta que confirmes el mensaje en WhatsApp.</small>
+        </form>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container final-cta-inner"><div><h2>¿Necesitas una reparación o instalación eléctrica?</h2><p>Consulta disponibilidad y solicita una evaluación sin costo.</p></div><a class="button button-light js-whatsapp" href="#contacto">Consultar por WhatsApp</a></div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><div class="brand brand-footer"><span class="brand-mark">ML</span><span>Mario Labarca <b>Eléctrico</b></span></div><p>© <span id="year"></span> Mario Labarca Eléctrico</p><p>Sitio desarrollado por <strong>Ágora Digital</strong>.</p></div></footer>
+  <a class="floating-whatsapp js-whatsapp" href="https://wa.me/56992232623?text=Hola%20Mario,%20necesito%20un%20presupuesto" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp"><svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M16.75 13.96c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.13.17 1.75 2.67 4.24 3.75.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29M12.04 21.5h-.01a9.5 9.5 0 0 1-4.84-1.33l-.35-.2-3.6.94.96-3.51-.23-.36A9.46 9.46 0 0 1 2.5 11.96 9.51 9.51 0 0 1 12 2.5a9.5 9.5 0 0 1 .04 19m8.08-17.58A11.4 11.4 0 0 0 12.01.56C5.69.56.55 5.7.55 12.01c0 2.02.53 3.99 1.53 5.72L.45 23.68l6.09-1.6a11.46 11.46 0 0 0 5.47 1.39h.01c6.31 0 11.45-5.14 11.45-11.46 0-3.06-1.19-5.93-3.35-8.09"/></svg><b>WhatsApp</b></a>
+  <script src="script.js"></script>
 </body>
 </html>
