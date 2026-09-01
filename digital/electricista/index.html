@@ -127,33 +127,84 @@
     .btn-insta-cta:hover { background: #f8fafc; transform: translateY(-2px); }
 
     footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 18px; font-size: 0.78rem; }
+    /* PORTADA RENOVADA - AGORA DIGITAL */
+    .top-bar { display: none; }
+    .navbar { border-bottom: 1px solid #e5e7eb; box-shadow: none; }
+    .nav-container { max-width: 1180px; min-height: 86px; padding: 14px 24px; }
+    .logo { display: flex; align-items: center; gap: 12px; color: #102f3a; font-size: 1.08rem; }
+    .logo-mark { width: 52px; height: 52px; border-radius: 17px; display: grid; place-items: center; background: #102f3a; color: #fff; font-weight: 900; }
+    .logo-text span { color: #f2b705; }
+    .nav-links a { color: #102f3a; }
+    .nav-cta { background: #f2b705; color: #102f3a !important; padding: 11px 16px; border-radius: 10px; }
+    .menu-toggle { display: none; width: 46px; height: 46px; border: 0; background: transparent; cursor: pointer; }
+    .menu-toggle span { display: block; width: 29px; height: 3px; margin: 5px auto; border-radius: 3px; background: #102f3a; }
+
+    .hero { position: relative; overflow: hidden; background: linear-gradient(135deg, #f7faf9 0%, #eef5f3 100%); padding: 72px 24px 78px; border-bottom: 0; }
+    .hero::after { content: ''; position: absolute; right: -130px; bottom: -220px; width: 520px; height: 520px; border: 2px solid rgba(242,183,5,.22); border-radius: 50%; box-shadow: 0 0 0 52px rgba(242,183,5,.06), 0 0 0 104px rgba(16,47,58,.04); }
+    .hero-container { position: relative; z-index: 1; max-width: 1180px; grid-template-columns: 1.05fr .95fr; gap: 70px; }
+    .badge-sec { background: transparent; color: #55717a; padding: 0; border-radius: 0; letter-spacing: .13em; font-size: .77rem; }
+    .badge-sec::before { content: ''; display: inline-block; width: 9px; height: 9px; margin-right: 9px; border-radius: 50%; background: #f2b705; box-shadow: 0 0 0 7px rgba(242,183,5,.16); }
+    .hero-title { max-width: 650px; color: #102f3a; font-size: clamp(2.6rem, 5.2vw, 4.9rem); line-height: .99; letter-spacing: -.055em; margin: 20px 0 24px; }
+    .hero-title em { display: block; color: #d89e00; font-style: normal; }
+    .hero-desc { max-width: 650px; background: transparent; border: 0; box-shadow: none; padding: 0; border-radius: 0; color: #5f7075; font-size: 1.06rem; font-weight: 500; line-height: 1.75; margin-bottom: 29px; }
+    .hero-btns { gap: 12px; margin-bottom: 30px; }
+    .btn-naranja, .btn-llamar { min-height: 56px; justify-content: center; border-radius: 12px; padding: 15px 22px; }
+    .btn-naranja { background: #25a958; box-shadow: 0 9px 22px rgba(37,169,88,.2); }
+    .btn-naranja:hover { background: #208f4c; }
+    .btn-llamar { background: #fff; color: #102f3a; border: 1px solid #cbd8d5; }
+    .btn-llamar:hover { background: #f8fbfa; }
+    .hero-info-grid { display: flex; flex-wrap: wrap; gap: 12px 24px; background: transparent; border: 0; padding: 0; color: #102f3a; font-size: .84rem; }
+    .hero-info-grid div { position: relative; padding-left: 18px; }
+    .hero-info-grid div::before { content: '\2713'; position: absolute; left: 0; color: #d89e00; font-weight: 900; }
+    .hero-info-grid strong { color: #102f3a; }
+    .hero-photo-wrapper { position: relative; display: flex; justify-content: center; }
+    .hero-photo-wrapper::before { content: ''; position: absolute; inset: 26px -18px -18px 30px; border-radius: 32px; background: #f2b705; opacity: .2; transform: rotate(4deg); }
+    .hero-photo-wrapper img { position: relative; width: min(100%, 465px); max-width: none; height: 570px; border: 0; outline: 0; border-radius: 30px; box-shadow: 0 28px 58px rgba(16,47,58,.2); object-position: center 18%; }
+
+    @media (max-width: 850px) {
+      .nav-container { min-height: 76px; padding: 11px 18px; }
+      .logo-mark { width: 48px; height: 48px; border-radius: 15px; }
+      .menu-toggle { display: block; }
+      .nav-links { position: absolute; top: 76px; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 12px 20px 20px; background: #fff; border-bottom: 1px solid #e5e7eb; box-shadow: 0 14px 25px rgba(16,47,58,.1); }
+      .nav-links.is-open { display: flex; }
+      .nav-links a { display: block; padding: 12px 4px; }
+      .nav-cta { margin-top: 8px; text-align: center; }
+      .hero { padding: 52px 20px 58px; }
+      .hero-container { grid-template-columns: 1fr; gap: 42px; text-align: center; }
+      .hero-title { margin-left: auto; margin-right: auto; font-size: clamp(2.55rem, 11vw, 4rem); }
+      .hero-desc { margin-left: auto; margin-right: auto; }
+      .hero-btns, .hero-info-grid { justify-content: center; }
+      .hero-photo-wrapper img { height: min(122vw, 560px); }
+    }
+    @media (max-width: 520px) {
+      .logo-text { font-size: .94rem; }
+      .hero-title { letter-spacing: -.06em; }
+      .hero-btns { display: grid; grid-template-columns: 1fr; }
+      .hero-info-grid { display: grid; grid-template-columns: 1fr 1fr; text-align: left; gap: 12px; }
+      .hero-photo-wrapper::before { inset: 18px -8px -12px 16px; }
+      .hero-photo-wrapper img { border-radius: 24px; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- BARRA SUPERIOR LIMPIA -->
-  <div class="top-bar">
-    <div class="top-bar-container">
-      <div class="top-bar-left">
-        <span>⚡ Servicio Eléctrico exclusivo en sector oriente de Santiago</span>
-      </div>
-      <div class="top-bar-right">
-        <a href="tel:+56992232623">📞 Llamar: +56 9 9223 2623</a>
-      </div>
-    </div>
-  </div>
-
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo">MARIO LABARCA <span>⚡</span></a>
-      <ul class="nav-links">
+      <a href="#" class="logo" aria-label="Mario Labarca, inicio">
+        <span class="logo-mark" aria-hidden="true">ML</span>
+        <span class="logo-text">Mario Labarca <span>Eléctrico</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="menu-principal">
         <li><a href="#cobertura">Cobertura</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#sobre-mi">Sobre Mí</a></li>
         <li><a href="#trabajos">Trabajos</a></li>
         <li><a href="#opiniones">Opiniones</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a class="nav-cta" href="https://wa.me/56992232623?text=Hola%20Mario,%20necesito%20un%20presupuesto" target="_blank" rel="noopener">Pedir presupuesto</a></li>
       </ul>
     </div>
   </nav>
@@ -162,32 +213,32 @@
   <header class="hero">
     <div class="hero-container">
       <div>
-        <span class="badge-sec">IP INACAP</span>
-        <h1 class="hero-title">Técnico Eléctrico Domiciliario</h1>
+        <span class="badge-sec">TÉCNICO ELÉCTRICO · SECTOR ORIENTE</span>
+        <h1 class="hero-title">Soluciones eléctricas <em>seguras y profesionales</em></h1>
         
         <div class="hero-desc">
-          Atención personal y directa en Sector Oriente. Reparaciones, instalaciones y normalización de tableros con garantía escrita.
+          Reparaciones, instalaciones y normalización de tableros en el Sector Oriente de Santiago. Atención directa, evaluación sin costo y garantía escrita.
         </div>
 
         <div class="hero-btns">
           <a href="https://wa.me/56992232623?text=Hola%20Mario,%20necesito%20un%20presupuesto%20gratuito" class="btn-naranja" target="_blank">
-            💬 Presupuesto Gratis
+            Pedir presupuesto por WhatsApp
           </a>
           <a href="tel:+56992232623" class="btn-llamar">
-            📞 Llamar Ahora
+            Llamar ahora
           </a>
         </div>
 
         <div class="hero-info-grid">
-          <div>🎓 <strong>Formación:</strong> IP INACAP</div>
-          <div>📝 <strong>RUT:</strong> 8.027.653-2</div>
-          <div>⚡ <strong>Visita:</strong> Evaluación $0</div>
-          <div>✉️ <strong>Correo:</strong> mariolabarca56@gmail.com</div>
+          <div><strong>Formación IP INACAP</strong></div>
+          <div><strong>Más de 20 años de experiencia</strong></div>
+          <div><strong>Evaluación sin costo</strong></div>
+          <div><strong>Sector Oriente</strong></div>
         </div>
       </div>
 
       <div class="hero-photo-wrapper">
-        <img src="image_0262e7.jpg" alt="Mario Labarca - Técnico Eléctrico Domiciliario">
+        <img src="image_0262e7.PNG" alt="Mario Labarca, técnico eléctrico domiciliario en Santiago" width="1024" height="1365">
       </div>
     </div>
   </header>
@@ -326,7 +377,7 @@
       </div>
 
       <div class="gallery-card">
-        <img src="image_0262e7.jpg" alt="Normalización de Tableros">
+        <img src="image_0262e7.PNG" alt="Normalización de Tableros">
         <div class="gallery-info">
           <h4>Normalización de Tableros</h4>
           <p>Armado de tableros con disyuntores automáticos, protectores diferenciales y puesta a tierra.</p>
@@ -388,5 +439,19 @@
     <p>Mario Labarca | Técnico Eléctrico Domiciliario, IP INACAP | RUT: 8.027.653-2 &copy; 2026</p>
   </footer>
 
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const mainMenu = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => {
+      const isOpen = mainMenu.classList.toggle('is-open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+    });
+    mainMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mainMenu.classList.remove('is-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Abrir menú');
+    }));
+  </script>
 </body>
 </html>
