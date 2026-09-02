@@ -15,3 +15,21 @@
 .cards article:nth-child(2) .symbol{background:var(--accent-cream)}
 .cards article:nth-child(3) .symbol{background:var(--lavender)}
 @media(max-width:600px){.hero{background:linear-gradient(180deg,rgba(253,249,242,.98) 0%,rgba(253,249,242,.88) 48%,rgba(253,249,242,.08) 78%),url('hero-investigacion-laboral.png') center/cover no-repeat}}
+
+/* Botones principales en lavanda */
+.header-cta, .btn.dark, button {
+  background: #D8D8F6;
+  color: #373139;
+  border-color: #968E9A;
+}
+
+/* Cambio al pasar el cursor */
+.header-cta:hover, .btn.dark:hover, button:hover {
+  background: #5E556A;
+  color: #FFFFFF;
+}
+
+/* Footer morado más claro */
+footer {
+  background: #5E556A;
+}
