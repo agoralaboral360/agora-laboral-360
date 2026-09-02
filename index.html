@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto y Evaluación Técnica | Ágora Laboral 360°</title>
-    <meta name="description" content="Solicite una evaluación técnica confidencial para una investigación laboral, informe técnico o peritaje social laboral.">
+    <title>Investigación Laboral e Informes Técnicos | Ágora Laboral 360°</title>
+    <meta name="description" content="Firma chilena especializada en investigaciones laborales externas e independientes, informes técnicos y peritaje social laboral.">
     <meta name="theme-color" content="#EDE8DF">
-    <link rel="canonical" href="https://agoralaboral.cl/contacto/">
+    <link rel="canonical" href="https://agoralaboral.cl/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,8 +23,7 @@
             --rose: #955143;
             --rose-soft: #C88C7D;
             --line: #D4CCBF;
-            --error: #8F302F;
-            --shadow: 0 24px 65px rgba(40, 36, 33, 0.11);
+            --shadow: 0 18px 50px rgba(40, 36, 33, 0.09);
             --serif: "Cormorant Garamond", Georgia, serif;
             --sans: "Montserrat", Arial, sans-serif;
         }
@@ -32,15 +31,14 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body {
-            min-height: 100vh;
+            font-family: var(--sans);
             background: var(--sand);
             color: var(--charcoal);
-            font-family: var(--sans);
             line-height: 1.65;
             -webkit-font-smoothing: antialiased;
         }
+        img { display: block; max-width: 100%; }
         a { color: inherit; }
-        button, input, select, textarea { font: inherit; }
         .skip-link {
             position: fixed;
             left: 16px;
@@ -69,7 +67,13 @@
             box-shadow: 0 10px 30px rgba(40, 36, 33, 0.07);
             backdrop-filter: blur(14px);
         }
-        .logo-box { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
         .logo-icon { width: 30px; height: 30px; fill: none; stroke: var(--charcoal); stroke-width: 1.4; }
         .logo-text { display: flex; flex-direction: column; }
         .logo-title {
@@ -114,205 +118,249 @@
             text-decoration: none;
             text-transform: uppercase;
             white-space: nowrap;
+            transition: color 180ms ease, border-color 180ms ease;
         }
         nav a:hover, nav a.active, nav a:focus-visible { color: var(--rose); border-color: currentColor; }
 
-        main { position: relative; overflow: hidden; }
-        main::before {
+        .hero {
+            position: relative;
+            min-height: min(790px, calc(100vh - 82px));
+            display: grid;
+            align-items: center;
+            overflow: hidden;
+            background-image: url("imagen%20hero%2001.png");
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid var(--line);
+        }
+        .hero::before {
             content: "";
             position: absolute;
-            top: -220px;
-            right: -130px;
-            width: 580px;
-            height: 580px;
-            border: 1px solid rgba(154,90,75,.23);
-            border-radius: 50%;
-            pointer-events: none;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(237,232,223,.98) 0%, rgba(237,232,223,.91) 44%, rgba(237,232,223,.22) 100%);
         }
-        main::after {
+        .hero::after {
             content: "";
             position: absolute;
-            top: -140px;
-            right: -240px;
-            width: 620px;
-            height: 620px;
-            border: 1px solid rgba(98,104,88,.26);
-            border-radius: 50%;
-            pointer-events: none;
+            left: clamp(22px, 6vw, 90px);
+            bottom: 0;
+            width: 1px;
+            height: 110px;
+            background: var(--rose);
+            opacity: .65;
         }
-        .contact-shell {
+        .hero-content {
             position: relative;
             z-index: 1;
-            width: min(1180px, calc(100% - 44px));
+            width: min(1200px, 100%);
             margin: 0 auto;
-            padding: 76px 0 94px;
-        }
-        .intro {
-            display: grid;
-            grid-template-columns: 1.15fr .85fr;
-            gap: clamp(35px, 7vw, 95px);
-            align-items: end;
-            margin-bottom: 52px;
+            padding: 78px clamp(22px, 5vw, 76px) 95px;
         }
         .eyebrow {
             display: flex;
             align-items: center;
             gap: 14px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             color: var(--rose);
-            font-size: 0.76rem;
+            font-size: 0.78rem;
             font-weight: 700;
             letter-spacing: 0.2em;
             text-transform: uppercase;
         }
         .eyebrow::before { content: ""; width: 42px; height: 1px; background: currentColor; }
-        h1 {
-            max-width: 720px;
+        .hero h1 {
+            max-width: 760px;
+            margin-bottom: 24px;
             font-family: var(--serif);
-            font-size: clamp(3.2rem, 6.8vw, 6.3rem);
+            font-size: clamp(3.15rem, 6.3vw, 5.95rem);
             font-weight: 600;
-            letter-spacing: -0.035em;
-            line-height: .9;
+            letter-spacing: -0.025em;
+            line-height: 0.92;
             text-transform: uppercase;
         }
-        .intro-copy { padding-bottom: 8px; }
-        .intro-copy p { color: var(--muted); font-size: 1rem; }
-        .intro-copy strong { color: var(--charcoal); }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.45fr) minmax(300px, .75fr);
-            gap: 24px;
-            align-items: stretch;
+        .hero-description {
+            max-width: 660px;
+            margin-bottom: 34px;
+            font-size: clamp(1rem, 1.45vw, 1.08rem);
+            font-weight: 500;
+            line-height: 1.8;
         }
-        .form-card, .info-card {
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-radius: 4px;
-            box-shadow: var(--shadow);
-        }
-        .form-card { padding: clamp(28px, 4.5vw, 54px); }
-        .card-kicker {
-            display: block;
-            margin-bottom: 10px;
-            color: var(--rose);
-            font-size: .74rem;
-            font-weight: 700;
-            letter-spacing: .16em;
-            text-transform: uppercase;
-        }
-        .form-card h2, .info-card h2 {
-            font-family: var(--serif);
-            font-size: clamp(2rem, 3.4vw, 2.8rem);
-            font-weight: 600;
-            line-height: 1;
-            text-transform: uppercase;
-        }
-        .form-intro { margin: 14px 0 30px; color: var(--muted); font-size: .93rem; }
-        .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-        .field { display: grid; gap: 8px; }
-        .field-full { grid-column: 1 / -1; }
-        label { font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
-        .optional { color: var(--muted); font-size: .7rem; font-weight: 500; letter-spacing: 0; text-transform: none; }
-        input, select, textarea {
-            width: 100%;
-            border: 1px solid #C8BFB2;
-            border-radius: 3px;
-            background: #FFFDF9;
-            color: var(--charcoal);
-            font-size: .94rem;
-            outline: none;
-            transition: border-color 160ms ease, box-shadow 160ms ease;
-        }
-        input, select { min-height: 50px; padding: 11px 13px; }
-        textarea { min-height: 128px; padding: 13px; resize: vertical; }
-        input:focus, select:focus, textarea:focus { border-color: var(--rose); box-shadow: 0 0 0 3px rgba(154,90,75,.14); }
-        .privacy-note {
-            display: grid;
-            grid-template-columns: 25px 1fr;
-            gap: 12px;
-            margin: 24px 0;
-            padding: 16px;
-            background: var(--sand-soft);
-            border-left: 3px solid var(--rose);
-            color: var(--muted);
-            font-size: .82rem;
-        }
-        .privacy-note svg { width: 21px; height: 21px; fill: none; stroke: var(--rose); stroke-width: 1.6; }
-        .form-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 18px; }
-        .submit-button {
+        .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; }
+        .button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             min-height: 54px;
-            padding: 15px 24px;
-            border: 0;
+            padding: 15px 26px;
+            border: 1px solid transparent;
             border-radius: 3px;
-            background: var(--sage);
-            color: #fff;
-            font-size: .78rem;
+            font-size: 0.78rem;
             font-weight: 700;
-            letter-spacing: .09em;
+            letter-spacing: 0.1em;
+            text-decoration: none;
             text-transform: uppercase;
-            cursor: pointer;
-            transition: transform 160ms ease, background 160ms ease;
+            transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease;
         }
-        .submit-button:hover { transform: translateY(-2px); background: var(--sage-hover); }
-        .action-help { max-width: 250px; color: var(--muted); font-size: .75rem; }
+        .button:hover { transform: translateY(-2px); }
+        .button-primary { background: var(--sage); color: #fff; }
+        .button-primary:hover { background: var(--sage-hover); }
+        .button-secondary { border-color: var(--charcoal); color: var(--charcoal); }
+        .button-secondary:hover { background: var(--charcoal); color: #fff; }
 
-        .info-card {
-            display: flex;
-            flex-direction: column;
-            padding: clamp(28px, 3.7vw, 44px);
-            background: var(--charcoal);
-            color: #F8F3EA;
-        }
-        .info-card .card-kicker { color: #D9A497; }
-        .info-card > p { margin-top: 16px; color: #D4CCC3; font-size: .9rem; }
-        .process-list { margin: 30px 0; border-top: 1px solid rgba(255,255,255,.2); list-style: none; }
-        .process-list li {
-            display: grid;
-            grid-template-columns: 34px 1fr;
-            gap: 12px;
-            padding: 18px 0;
-            border-bottom: 1px solid rgba(255,255,255,.16);
-        }
-        .process-list span { color: #D9A497; font-family: var(--serif); font-size: 1.2rem; }
-        .process-list strong { display: block; margin-bottom: 3px; font-family: var(--serif); font-size: 1.12rem; font-weight: 600; text-transform: uppercase; }
-        .process-list p { color: #C9C0B7; font-size: .8rem; }
-        .direct-contact { margin-top: auto; padding-top: 25px; }
-        .direct-contact small { display: block; margin-bottom: 8px; color: #C9C0B7; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
-        .email-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
-        .email-link { color: #fff; font-size: .86rem; font-weight: 600; text-decoration: none; word-break: break-word; }
-        .copy-button {
-            padding: 7px 10px;
-            border: 1px solid rgba(255,255,255,.28);
-            border-radius: 3px;
-            background: transparent;
-            color: #fff;
-            font-size: .68rem;
-            font-weight: 700;
-            letter-spacing: .07em;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-        .copy-button:hover { background: rgba(255,255,255,.09); }
-        .copy-status { min-height: 18px; margin-top: 7px; color: #D9A497; font-size: .72rem; }
-
-        footer { padding: 34px clamp(22px, 5vw, 76px); border-top: 1px solid var(--line); background: #E4DED4; }
-        .footer-inner {
+        .tools-bar { padding: 18px clamp(22px, 5vw, 76px); background: #D9D6CC; border-bottom: 1px solid var(--line); }
+        .tools-inner {
             width: min(1180px, 100%);
             margin: 0 auto;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 25px;
-            color: var(--muted);
-            font-size: .76rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px 28px;
         }
-        .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
-        .footer-links a { text-decoration: none; }
-        .footer-links a:hover { color: var(--rose); }
+        .tools-label, .tool-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .tools-label { padding-right: 25px; border-right: 1px solid rgba(40,36,33,.24); }
+        .tool-link { color: var(--charcoal); text-decoration: none; }
+        .tool-link:hover { color: var(--rose); }
+        .tool-link svg, .tools-label svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; }
+
+        .section { padding: 94px clamp(22px, 5vw, 76px); }
+        .section-inner { width: min(1160px, 100%); margin: 0 auto; }
+        .section-heading { max-width: 760px; margin-bottom: 45px; }
+        .section-kicker {
+            display: block;
+            margin-bottom: 12px;
+            color: var(--rose);
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        .section-heading h2, .method-copy h2, .profile-content h2, .cta h2 {
+            font-family: var(--serif);
+            font-size: clamp(2.45rem, 4.5vw, 4rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .section-heading p { max-width: 680px; margin-top: 18px; color: var(--muted); font-size: 1rem; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+        .service-card {
+            position: relative;
+            display: grid;
+            grid-template-rows: 300px auto;
+            overflow: hidden;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            color: inherit;
+            text-decoration: none;
+            box-shadow: 0 8px 30px rgba(40,36,33,.04);
+            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        }
+        .service-card:hover { transform: translateY(-6px); border-color: #B7AD9E; box-shadow: var(--shadow); }
+        .service-card img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.78) contrast(.94); }
+        .service-card-body { position: relative; padding: 30px 30px 34px; }
+        .service-number {
+            position: absolute;
+            right: 26px;
+            top: 22px;
+            color: var(--rose-soft);
+            font-family: var(--serif);
+            font-size: 2.2rem;
+            line-height: 1;
+        }
+        .service-card h3 { max-width: 76%; font-family: var(--serif); font-size: 2rem; font-weight: 600; line-height: 1; text-transform: uppercase; }
+        .service-card p { margin: 16px 0 22px; color: var(--muted); font-size: .95rem; }
+        .text-link { color: var(--rose); font-size: .76rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+
+        .methodology { background: var(--charcoal); color: #F7F2E9; }
+        .method-grid { display: grid; grid-template-columns: .85fr 1.45fr; gap: clamp(45px, 8vw, 110px); align-items: start; }
+        .method-copy .section-kicker { color: #D6A094; }
+        .method-copy p { margin-top: 22px; color: #D8D1C8; font-size: 1rem; }
+        .method-steps { border-top: 1px solid rgba(255,255,255,.24); }
+        .method-step {
+            display: grid;
+            grid-template-columns: 55px 1fr;
+            gap: 18px;
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255,255,255,.17);
+        }
+        .method-step span { color: #D6A094; font-family: var(--serif); font-size: 1.35rem; }
+        .method-step h3 { margin-bottom: 5px; font-family: var(--serif); font-size: 1.55rem; font-weight: 600; text-transform: uppercase; }
+        .method-step p { color: #CFC7BE; font-size: .92rem; }
+
+        .principle-band { padding: 36px clamp(22px, 5vw, 76px); background: #E2DBD0; border-block: 1px solid var(--line); }
+        .principle-band blockquote {
+            width: min(980px, 100%);
+            margin: 0 auto;
+            text-align: center;
+            font-family: var(--serif);
+            font-size: clamp(1.5rem, 2.6vw, 2.05rem);
+            font-style: italic;
+            line-height: 1.3;
+        }
+
+        .profile { padding-block: 84px; }
+        .profile-grid { display: grid; grid-template-columns: 1fr 1.08fr; gap: clamp(40px, 7vw, 84px); align-items: center; }
+        .profile-image { position: relative; }
+        .profile-image::before {
+            content: "";
+            position: absolute;
+            inset: -14px 18px 18px -14px;
+            border: 1px solid var(--rose-soft);
+            border-radius: 3px;
+            pointer-events: none;
+        }
+        .profile-image img { position: relative; width: 100%; border-radius: 3px; box-shadow: var(--shadow); }
+        .profile-content p { margin-top: 22px; color: var(--muted); font-size: 1rem; }
+        .credentials { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+        .credential {
+            padding: 9px 14px;
+            background: transparent;
+            border: 1px solid #C8BFB2;
+            border-radius: 30px;
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .cta { padding: 90px clamp(22px, 5vw, 76px); background: var(--paper); border-block: 1px solid var(--line); text-align: center; }
+        .cta-inner { width: min(760px, 100%); margin: 0 auto; }
+        .cta p { margin: 22px auto 32px; color: var(--muted); font-size: 1rem; }
+
+        footer { padding: 56px clamp(22px, 5vw, 76px) 28px; background: var(--sand); }
+        .footer-grid {
+            width: min(1160px, 100%);
+            margin: 0 auto 40px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.35fr;
+            gap: 38px;
+        }
+        .footer-brand p { max-width: 290px; margin-top: 14px; color: var(--muted); font-size: .86rem; }
+        footer h3 { margin-bottom: 15px; font-family: var(--serif); font-size: 1.2rem; font-weight: 700; text-transform: uppercase; }
+        footer ul { display: grid; gap: 10px; list-style: none; }
+        footer a { color: var(--muted); font-size: .84rem; text-decoration: none; }
+        footer a:hover { color: var(--rose); }
+        .footer-bottom {
+            width: min(1160px, 100%);
+            margin: 0 auto;
+            padding-top: 24px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: .75rem;
+            text-align: center;
+        }
 
         :focus-visible { outline: 3px solid rgba(149,81,67,.42); outline-offset: 4px; }
 
@@ -332,8 +380,11 @@
             nav.open { display: block; }
             nav ul { align-items: stretch; flex-direction: column; gap: 0; }
             nav a { width: 100%; padding: 14px 0; border-bottom: 1px solid var(--line); }
-            .intro, .contact-grid { grid-template-columns: 1fr; }
-            .intro { align-items: start; gap: 25px; }
+            .hero { min-height: 700px; background-position: 62% center; }
+            .services-grid, .profile-grid { grid-template-columns: 1fr; }
+            .service-card { grid-template-rows: 260px auto; }
+            .method-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 640px) {
@@ -341,13 +392,18 @@
             .logo-title { font-size: 1.28rem; }
             .logo-subtitle { font-size: .58rem; white-space: normal; }
             .logo-icon { width: 25px; height: 25px; }
-            .contact-shell { width: min(100% - 32px, 1180px); padding-block: 55px 70px; }
-            h1 { font-size: clamp(2.8rem, 15vw, 4.2rem); }
-            .form-grid { grid-template-columns: 1fr; }
-            .field-full { grid-column: auto; }
-            .submit-button { width: 100%; }
-            .action-help { max-width: none; }
-            .footer-inner { align-items: flex-start; flex-direction: column; }
+            .hero { min-height: 660px; background-position: 68% center; }
+            .hero::before { background: rgba(237,232,223,.91); }
+            .hero-content { padding-block: 65px 80px; }
+            .hero h1 { font-size: clamp(2.75rem, 15vw, 4.15rem); }
+            .hero-buttons .button { width: 100%; }
+            .tools-inner { align-items: flex-start; flex-direction: column; }
+            .tools-label { padding: 0 0 10px; border-right: 0; border-bottom: 1px solid rgba(40,36,33,.2); }
+            .section { padding-block: 72px; }
+            .service-card { grid-template-rows: 220px auto; }
+            .service-card-body { padding: 25px; }
+            .method-step { grid-template-columns: 42px 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -379,129 +435,168 @@
 
         <nav id="menu-principal" aria-label="Navegación principal">
             <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/#servicios">Servicios</a></li>
+                <li><a href="/" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
                 <li><a href="/academia/">Escuela</a></li>
                 <li><a href="/recursos/">Recursos</a></li>
-                <li><a href="/contacto/" class="active" aria-current="page">Contacto</a></li>
+                <li><a href="/contacto/">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="contenido">
-        <div class="contact-shell">
-            <section class="intro" aria-labelledby="contacto-titulo">
-                <div>
-                    <span class="eyebrow">Contacto técnico</span>
-                    <h1 id="contacto-titulo">Evaluemos su requerimiento</h1>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="eyebrow">Investigamos. Analizamos. Documentamos.</span>
+                <h1>Investigación laboral e informes técnicos</h1>
+                <p class="hero-description">Firma chilena especializada en investigaciones laborales externas e independientes e informes técnicos y periciales, especialmente en materias de acoso laboral, acoso sexual y violencia en el trabajo.</p>
+                <div class="hero-buttons">
+                    <a href="/contacto/" class="button button-primary">Solicitar evaluación técnica →</a>
+                    <a href="#servicios" class="button button-secondary">Conocer especialidades</a>
                 </div>
-                <div class="intro-copy">
-                    <p>Comparta únicamente antecedentes generales. <strong>No envíe denuncias, declaraciones, nombres de personas ni documentos confidenciales</strong> en este primer contacto.</p>
-                </div>
-            </section>
-
-            <div class="contact-grid">
-                <section class="form-card" aria-labelledby="formulario-titulo">
-                    <span class="card-kicker">Evaluación inicial</span>
-                    <h2 id="formulario-titulo">Solicitar contacto</h2>
-                    <p class="form-intro">Complete los datos básicos. Al continuar se abrirá su aplicación de correo con la solicitud preparada para enviarla a Ágora Laboral 360°.</p>
-
-                    <form id="contact-form">
-                        <div class="form-grid">
-                            <div class="field">
-                                <label for="nombre">Nombre</label>
-                                <input id="nombre" name="nombre" type="text" autocomplete="name" required>
-                            </div>
-                            <div class="field">
-                                <label for="organizacion">Organización</label>
-                                <input id="organizacion" name="organizacion" type="text" autocomplete="organization" required>
-                            </div>
-                            <div class="field">
-                                <label for="correo">Correo de contacto</label>
-                                <input id="correo" name="correo" type="email" autocomplete="email" required>
-                            </div>
-                            <div class="field">
-                                <label for="telefono">Teléfono <span class="optional">(opcional)</span></label>
-                                <input id="telefono" name="telefono" type="tel" autocomplete="tel">
-                            </div>
-                            <div class="field field-full">
-                                <label for="servicio">Servicio requerido</label>
-                                <select id="servicio" name="servicio" required>
-                                    <option value="" selected disabled>Seleccione una opción</option>
-                                    <option>Investigación laboral externa</option>
-                                    <option>Informe técnico o peritaje social laboral</option>
-                                    <option>Revisión técnica de una investigación</option>
-                                    <option>Consulta institucional general</option>
-                                </select>
-                            </div>
-                            <div class="field field-full">
-                                <label for="mensaje">Descripción general <span class="optional">(sin información sensible)</span></label>
-                                <textarea id="mensaje" name="mensaje" maxlength="700" placeholder="Ejemplo: empresa privada requiere evaluar el inicio de una investigación laboral."></textarea>
-                            </div>
-                        </div>
-
-                        <div class="privacy-note">
-                            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-                            <p>Este formulario no reemplaza un canal formal de denuncia. Los antecedentes sensibles se solicitarán posteriormente mediante un medio definido para el servicio.</p>
-                        </div>
-
-                        <div class="form-actions">
-                            <button class="submit-button" type="submit">Preparar solicitud por correo →</button>
-                            <p class="action-help">Revise el mensaje en su correo antes de enviarlo.</p>
-                        </div>
-                    </form>
-                </section>
-
-                <aside class="info-card" aria-labelledby="proceso-titulo">
-                    <span class="card-kicker">Qué ocurre después</span>
-                    <h2 id="proceso-titulo">Una primera revisión clara y reservada</h2>
-                    <p>La evaluación inicial permite comprender el requerimiento y definir si corresponde una investigación, un informe técnico u otra orientación.</p>
-
-                    <ol class="process-list">
-                        <li>
-                            <span>01</span>
-                            <div><strong>Recepción</strong><p>Revisamos el tipo de solicitud y sus antecedentes generales.</p></div>
-                        </li>
-                        <li>
-                            <span>02</span>
-                            <div><strong>Contacto</strong><p>Coordinamos una conversación breve para precisar alcance y urgencia.</p></div>
-                        </li>
-                        <li>
-                            <span>03</span>
-                            <div><strong>Propuesta</strong><p>Definimos servicio, metodología, plazo y condiciones comerciales.</p></div>
-                        </li>
-                    </ol>
-
-                    <div class="direct-contact">
-                        <small>Correo directo</small>
-                        <div class="email-row">
-                            <a class="email-link" href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a>
-                            <button class="copy-button" type="button" id="copy-email">Copiar</button>
-                        </div>
-                        <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
-                    </div>
-                </aside>
             </div>
-        </div>
+        </section>
+
+        <section class="tools-bar" aria-label="Herramientas gratuitas">
+            <div class="tools-inner">
+                <span class="tools-label">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z"/><path d="M12 22V10"/></svg>
+                    Herramientas gratuitas
+                </span>
+                <a href="/recursos/#calculadora" class="tool-link">Calculadora de plazos</a>
+                <a href="/recursos/#checklist" class="tool-link">Checklist de cumplimiento</a>
+                <a href="/recursos/#cronograma" class="tool-link">Cronograma de investigación</a>
+            </div>
+        </section>
+
+        <section class="section" id="servicios">
+            <div class="section-inner">
+                <header class="section-heading">
+                    <span class="section-kicker">Nuestra especialidad</span>
+                    <h2>Dos líneas, un mismo estándar técnico</h2>
+                    <p>Servicios especializados para investigar hechos, analizar antecedentes y respaldar decisiones organizacionales mediante informes claros, fundados y trazables.</p>
+                </header>
+
+                <div class="services-grid">
+                    <a href="/servicios/investigacion-laboral/" class="service-card">
+                        <img src="imagen_tarjeta%201.avif" alt="Profesional revisando antecedentes de una investigación laboral">
+                        <div class="service-card-body">
+                            <span class="service-number" aria-hidden="true">01</span>
+                            <h3>Investigaciones laborales externas</h3>
+                            <p>Investigación independiente de denuncias de acoso laboral, acoso sexual y violencia en el trabajo, con planificación, entrevistas, análisis de evidencia e informe final.</p>
+                            <span class="text-link">Conocer el servicio →</span>
+                        </div>
+                    </a>
+
+                    <a href="/servicios/informes-tecnicos/" class="service-card">
+                        <img src="imagen_tarjeta%202.avif" alt="Revisión técnica y documental de antecedentes laborales">
+                        <div class="service-card-body">
+                            <span class="service-number" aria-hidden="true">02</span>
+                            <h3>Informes técnicos y peritaje</h3>
+                            <p>Informes técnicos, peritaje social laboral y revisión metodológica de investigaciones realizadas por terceros para apoyar decisiones y procesos laborales.</p>
+                            <span class="text-link">Conocer el servicio →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section methodology" aria-labelledby="metodologia-titulo">
+            <div class="section-inner method-grid">
+                <div class="method-copy">
+                    <span class="section-kicker">Metodología Ágora</span>
+                    <h2 id="metodologia-titulo">Cada conclusión debe poder explicarse</h2>
+                    <p>Lo denunciado no equivale automáticamente a lo acreditado. Nuestro trabajo distingue hechos, evidencia, análisis y conclusión.</p>
+                </div>
+
+                <div class="method-steps">
+                    <article class="method-step">
+                        <span>01</span>
+                        <div><h3>Evaluación</h3><p>Delimitación del requerimiento, alcance, hechos y antecedentes disponibles.</p></div>
+                    </article>
+                    <article class="method-step">
+                        <span>02</span>
+                        <div><h3>Investigación</h3><p>Plan de trabajo, entrevistas, recepción documental y contraste de versiones.</p></div>
+                    </article>
+                    <article class="method-step">
+                        <span>03</span>
+                        <div><h3>Análisis</h3><p>Valoración crítica y trazable de los antecedentes incorporados al expediente.</p></div>
+                    </article>
+                    <article class="method-step">
+                        <span>04</span>
+                        <div><h3>Informe</h3><p>Conclusiones fundadas, claramente relacionadas con los antecedentes verificados.</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <aside class="principle-band" aria-label="Compromiso metodológico">
+            <blockquote>“Resguardamos la confidencialidad, la imparcialidad y la estricta reserva del procedimiento, conforme a la normativa vigente.”</blockquote>
+        </aside>
+
+        <section class="section profile">
+            <div class="section-inner profile-grid">
+                <div class="profile-image">
+                    <img src="imagen%201.png" alt="Dirección Técnica de Ágora Laboral 360°">
+                </div>
+                <div class="profile-content">
+                    <span class="section-kicker">Dirección técnica</span>
+                    <h2>Rigor profesional aplicado a cada expediente</h2>
+                    <p>La investigación se desarrolla con criterio técnico, análisis crítico de los antecedentes y respeto por las garantías de las personas involucradas. El objetivo no es confirmar una versión inicial, sino determinar qué hechos pueden sostenerse a partir de evidencia verificable.</p>
+                    <div class="credentials" aria-label="Áreas de especialización">
+                        <span class="credential">Trabajo social pericial</span>
+                        <span class="credential">Investigación laboral</span>
+                        <span class="credential">Informes técnicos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="contacto">
+            <div class="cta-inner">
+                <span class="section-kicker">Evaluación inicial</span>
+                <h2>¿Necesita analizar un caso o iniciar una investigación?</h2>
+                <p>Solicite una evaluación técnica confidencial. En esta primera etapa solo necesitamos antecedentes generales para definir el servicio y su alcance.</p>
+                <a href="/contacto/" class="button button-primary">Solicitar evaluación técnica →</a>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <div class="footer-inner">
-            <p>© 2026 Ágora Laboral 360°. Investigación e Informes Técnicos.</p>
-            <div class="footer-links">
-                <a href="/servicios/investigacion-laboral/">Investigación laboral</a>
-                <a href="/servicios/informes-tecnicos/">Informes técnicos</a>
-                <a href="mailto:contacto@agoralaboral.cl">Correo</a>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
+                <p>Investigación laboral e informes técnicos especializados. Rigor, imparcialidad y trazabilidad.</p>
+            </div>
+            <div>
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="/servicios/investigacion-laboral/">Investigación externa</a></li>
+                    <li><a href="/servicios/informes-tecnicos/">Informes y peritajes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="/academia/">Escuela</a></li>
+                    <li><a href="/recursos/">Herramientas y guías</a></li>
+                    <li><a href="/diagnostico/">Diagnóstico inicial</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a></li>
+                    <li><a href="/contacto/">Solicitar evaluación técnica</a></li>
+                </ul>
             </div>
         </div>
+        <div class="footer-bottom">© 2026 Ágora Laboral 360°. Investigación e Informes Técnicos. Todos los derechos reservados.</div>
     </footer>
 
     <script>
         const menuButton = document.querySelector('.menu-toggle');
         const menu = document.querySelector('#menu-principal');
-        const form = document.querySelector('#contact-form');
-        const copyButton = document.querySelector('#copy-email');
-        const copyStatus = document.querySelector('#copy-status');
 
         menuButton.addEventListener('click', () => {
             const isOpen = menu.classList.toggle('open');
@@ -515,41 +610,6 @@
                 menuButton.setAttribute('aria-expanded', 'false');
                 menuButton.setAttribute('aria-label', 'Abrir menú');
             });
-        });
-
-        form.addEventListener('submit', event => {
-            event.preventDefault();
-
-            if (!form.reportValidity()) return;
-
-            const data = new FormData(form);
-            const servicio = data.get('servicio');
-            const subject = `Solicitud de evaluación técnica - ${servicio}`;
-            const lines = [
-                'SOLICITUD DE EVALUACIÓN TÉCNICA',
-                '',
-                `Nombre: ${data.get('nombre')}`,
-                `Organización: ${data.get('organizacion')}`,
-                `Correo: ${data.get('correo')}`,
-                `Teléfono: ${data.get('telefono') || 'No informado'}`,
-                `Servicio: ${servicio}`,
-                '',
-                'Descripción general:',
-                data.get('mensaje') || 'Sin descripción adicional.',
-                '',
-                'Declaro que en este primer contacto no he incorporado nombres de personas, declaraciones, denuncias ni documentos confidenciales.'
-            ];
-
-            window.location.href = `mailto:contacto@agoralaboral.cl?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
-        });
-
-        copyButton.addEventListener('click', async () => {
-            try {
-                await navigator.clipboard.writeText('contacto@agoralaboral.cl');
-                copyStatus.textContent = 'Correo copiado.';
-            } catch (error) {
-                copyStatus.textContent = 'Seleccione y copie el correo manualmente.';
-            }
         });
     </script>
 </body>
