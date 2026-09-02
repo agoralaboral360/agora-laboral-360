@@ -7,3 +7,11 @@
 .hero{background:linear-gradient(90deg,rgba(239,239,255,.97) 0%,rgba(239,239,255,.84) 38%,rgba(239,239,255,.12) 70%),url('hero-investigacion-laboral.png') center/cover no-repeat}
 .expert-image{background-image:url('hero-investigacion-laboral.png')}
 @media(max-width:600px){.hero{background:linear-gradient(180deg,rgba(239,239,255,.98) 0%,rgba(239,239,255,.88) 48%,rgba(239,239,255,.08) 78%),url('hero-investigacion-laboral.png') center/cover no-repeat}}
+
+/* Uso funcional definitivo de la paleta */
+:root{--cream:#fdf9f2;--paper:#fdf9f2;--purple:#5e556a;--deep:#373139;--line:#cdc8c9;--white:#fff;--soft:#ede9e4;--tone:#968e9a;--accent-cream:#ffebc9;--lilac:#efefff;--lavender:#d8d8f6}
+.hero{background:linear-gradient(90deg,rgba(253,249,242,.97) 0%,rgba(253,249,242,.84) 38%,rgba(253,249,242,.12) 70%),url('hero-investigacion-laboral.png') center/cover no-repeat}
+.symbol{background:var(--lilac);width:48px;height:48px;display:grid;place-items:center}
+.cards article:nth-child(2) .symbol{background:var(--accent-cream)}
+.cards article:nth-child(3) .symbol{background:var(--lavender)}
+@media(max-width:600px){.hero{background:linear-gradient(180deg,rgba(253,249,242,.98) 0%,rgba(253,249,242,.88) 48%,rgba(253,249,242,.08) 78%),url('hero-investigacion-laboral.png') center/cover no-repeat}}
