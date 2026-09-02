@@ -3,614 +3,472 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investigación Laboral e Informes Técnicos | Ágora Laboral 360°</title>
-    <meta name="description" content="Firma chilena especializada en investigaciones laborales externas e independientes, informes técnicos y peritaje social laboral.">
-    <meta name="theme-color" content="#EDE8DF">
-    <link rel="canonical" href="https://agoralaboral.cl/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Investigación Laboral & Informes Técnicos | Ágora Laboral 360°</title>
+    <meta name="description" content="Firma especializada en investigaciones laborales externas e independientes e informes técnicos y periciales (Ley Karin N.° 21.643).">
+
+    <!-- Fuentes oficiales -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --sand: #EDE8DF;
-            --sand-soft: #F5F1EA;
-            --paper: #FAF8F4;
-            --charcoal: #282421;
-            --muted: #625C56;
-            --sage: #626858;
-            --sage-hover: #505648;
-            --rose: #955143;
-            --rose-soft: #C88C7D;
-            --line: #D4CCBF;
-            --shadow: 0 18px 50px rgba(40, 36, 33, 0.09);
-            --serif: "Cormorant Garamond", Georgia, serif;
-            --sans: "Montserrat", Arial, sans-serif;
+            --bg-sand: #EBE6DD;           
+            --bg-card: #EFEAE2;           
+            --bg-card-accent: #E5DFD5;    
+            --text-charcoal: #2C2825;     
+            --text-muted: #615B55;        
+            --accent-sage: #828776;       
+            --accent-sage-hover: #6E7363;
+            --accent-rose: #C38271;       
+            --accent-rose-dark: #A36557;  
+            --border-subtle: #D8D1C5;     
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: var(--sans);
-            background: var(--sand);
-            color: var(--charcoal);
-            line-height: 1.65;
+        
+        body { 
+            font-family: var(--font-sans); 
+            background-color: var(--bg-sand); 
+            color: var(--text-charcoal); 
+            line-height: 1.6; 
             -webkit-font-smoothing: antialiased;
         }
-        img { display: block; max-width: 100%; }
-        a { color: inherit; }
-        .skip-link {
-            position: fixed;
-            left: 16px;
-            top: -80px;
-            z-index: 3000;
-            padding: 12px 18px;
-            background: var(--charcoal);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-        .skip-link:focus { top: 16px; }
 
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 28px;
-            min-height: 82px;
-            padding: 16px clamp(22px, 5vw, 76px);
-            background: rgba(237, 232, 223, 0.96);
-            border-bottom: 1px solid rgba(40, 36, 33, 0.11);
-            box-shadow: 0 10px 30px rgba(40, 36, 33, 0.07);
-            backdrop-filter: blur(14px);
-        }
-        .logo-box {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            flex-shrink: 0;
-        }
-        .logo-icon { width: 30px; height: 30px; fill: none; stroke: var(--charcoal); stroke-width: 1.4; }
+        /* HEADER GLOBAL */
+        header.site-header { background-color: var(--bg-sand); padding: 18px 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(216, 209, 197, 0.6); box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12); position: sticky; top: 0; z-index: 1000; width: 100%; gap: 20px; }
+        .logo-box { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-charcoal); flex-shrink: 0; }
+        .logo-icon { width: 28px; height: 28px; stroke: var(--text-charcoal); fill: none; stroke-width: 1.5; }
         .logo-text { display: flex; flex-direction: column; }
-        .logo-title {
-            font-family: var(--serif);
-            font-size: 1.55rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            line-height: 0.95;
-            text-transform: uppercase;
-            white-space: nowrap;
-        }
-        .logo-title sup { font-size: 0.58em; margin-left: 2px; vertical-align: super; }
-        .logo-subtitle {
-            margin-top: 6px;
-            color: var(--muted);
-            font-size: 0.66rem;
-            font-weight: 600;
-            letter-spacing: 0.17em;
-            line-height: 1.25;
-            text-transform: uppercase;
-            white-space: nowrap;
-        }
-        .menu-toggle {
-            display: none;
-            width: 44px;
-            height: 44px;
-            border: 1px solid var(--line);
-            border-radius: 50%;
-            background: transparent;
-            color: var(--charcoal);
-            cursor: pointer;
-        }
-        .menu-toggle svg { width: 22px; height: 22px; }
-        nav ul { display: flex; align-items: center; gap: 25px; list-style: none; }
-        nav a {
-            display: inline-flex;
-            padding: 10px 0 8px;
-            border-bottom: 1px solid transparent;
-            font-size: 0.74rem;
-            font-weight: 700;
-            letter-spacing: 0.13em;
-            text-decoration: none;
-            text-transform: uppercase;
-            white-space: nowrap;
-            transition: color 180ms ease, border-color 180ms ease;
-        }
-        nav a:hover, nav a.active, nav a:focus-visible { color: var(--rose); border-color: currentColor; }
+        .logo-title { font-family: var(--font-serif); font-size: 1.45rem; font-weight: 600; letter-spacing: 1.2px; line-height: 1; text-transform: uppercase; white-space: nowrap; }
+        .logo-title sup { font-size: 0.65em; vertical-align: super; font-weight: 500; margin-left: 2px; }
+        .logo-subtitle { font-size: 0.58rem; font-weight: 500; letter-spacing: 1.8px; color: var(--text-muted); margin-top: 3px; text-transform: uppercase; white-space: nowrap; }
+        
+        nav { margin-left: auto; }
+        nav ul { display: flex; list-style: none; gap: 22px; align-items: center; }
+        nav ul li { position: relative; }
+        nav a { text-decoration: none; color: var(--text-charcoal); font-size: 0.66rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; padding: 8px 0; transition: all 0.2s ease; display: inline-block; white-space: nowrap; }
+        nav a:hover, nav a.active { border-bottom: 1.5px solid var(--text-charcoal); }
+        
+        nav .dropdown { position: absolute; top: 100%; left: 0; background-color: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 8px 0; min-width: 200px; box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.25s ease; z-index: 1000; display: flex; flex-direction: column; }
+        nav ul li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        nav .dropdown a { padding: 8px 16px; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.8px; display: block; border-bottom: none !important; color: var(--text-charcoal); }
+        nav .dropdown a:hover { background-color: var(--bg-card-accent); color: var(--accent-rose-dark); }
 
-        .hero {
-            position: relative;
-            min-height: min(790px, calc(100vh - 82px));
-            display: grid;
-            align-items: center;
-            overflow: hidden;
-            background-image: url("imagen%20hero%2001.png");
-            background-size: cover;
-            background-position: center;
-            border-bottom: 1px solid var(--line);
-        }
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(90deg, rgba(237,232,223,.98) 0%, rgba(237,232,223,.91) 44%, rgba(237,232,223,.22) 100%);
-        }
-        .hero::after {
-            content: "";
-            position: absolute;
-            left: clamp(22px, 6vw, 90px);
-            bottom: 0;
-            width: 1px;
-            height: 110px;
-            background: var(--rose);
-            opacity: .65;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            width: min(1200px, 100%);
-            margin: 0 auto;
-            padding: 78px clamp(22px, 5vw, 76px) 95px;
-        }
-        .eyebrow {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 24px;
-            color: var(--rose);
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-        }
-        .eyebrow::before { content: ""; width: 42px; height: 1px; background: currentColor; }
-        .hero h1 {
-            max-width: 760px;
-            margin-bottom: 24px;
-            font-family: var(--serif);
-            font-size: clamp(3.15rem, 6.3vw, 5.95rem);
-            font-weight: 600;
-            letter-spacing: -0.025em;
-            line-height: 0.92;
-            text-transform: uppercase;
-        }
-        .hero-description {
-            max-width: 660px;
-            margin-bottom: 34px;
-            font-size: clamp(1rem, 1.45vw, 1.08rem);
-            font-weight: 500;
-            line-height: 1.8;
-        }
-        .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; }
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 54px;
-            padding: 15px 26px;
-            border: 1px solid transparent;
-            border-radius: 3px;
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease;
-        }
-        .button:hover { transform: translateY(-2px); }
-        .button-primary { background: var(--sage); color: #fff; }
-        .button-primary:hover { background: var(--sage-hover); }
-        .button-secondary { border-color: var(--charcoal); color: var(--charcoal); }
-        .button-secondary:hover { background: var(--charcoal); color: #fff; }
+        /* HERO SECTION */
+        .hero { width: 100%; min-height: 72vh; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr); align-items: stretch; gap: clamp(28px, 5vw, 76px); padding: clamp(54px, 7vw, 96px) max(4%, calc((100vw - 1200px) / 2)); border-bottom: 1px solid var(--border-subtle); overflow: hidden; }
+        .hero-content { display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+        .hero-visual { min-height: 520px; border-radius: 180px 180px 18px 18px; overflow: hidden; position: relative; box-shadow: 0 24px 55px rgba(44, 40, 37, .16); }
+        .hero-visual::after { content: ''; position: absolute; inset: 0; border: 1px solid rgba(255,255,255,.5); border-radius: inherit; pointer-events: none; }
+        .hero-visual img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
+        
+        .hero-title { font-family: var(--font-serif); font-size: clamp(2.65rem, 5vw, 4.65rem); font-weight: 600; color: var(--text-charcoal); line-height: .94; margin-bottom: 24px; text-transform: uppercase; letter-spacing: -.02em; max-width: 760px; text-wrap: balance; overflow-wrap: normal; }
+        .hero-subtitle { font-size: 1.1rem; font-weight: 700; color: var(--accent-rose-dark); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; display: block; }
+        .hero-description { font-size: 1.05rem; color: var(--text-charcoal); font-weight: 500; max-width: 600px; margin-bottom: 35px; line-height: 1.7; }
+        
+        .hero-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+        .btn-hero-primary { background-color: var(--accent-sage); color: #ffffff; padding: 16px 30px; border-radius: 4px; font-weight: 700; font-size: 0.85rem; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: background-color 0.25s ease; border: none; display: inline-block; }
+        .btn-hero-primary:hover { background-color: var(--accent-sage-hover); }
+        .btn-hero-secondary { background-color: transparent; color: var(--text-charcoal); padding: 14px 30px; border-radius: 4px; font-weight: 700; font-size: 0.85rem; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; border: 2px solid var(--text-charcoal); transition: all 0.25s ease; display: inline-block; }
+        .btn-hero-secondary:hover { background-color: var(--text-charcoal); color: #ffffff; }
 
-        .tools-bar { padding: 18px clamp(22px, 5vw, 76px); background: #D9D6CC; border-bottom: 1px solid var(--line); }
-        .tools-inner {
-            width: min(1180px, 100%);
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px 28px;
+        /* BANDA DE RECURSOS GRATUITOS (MINIMALISTA HORIZONTAL) */
+        .quick-tools-section { 
+            background-color: #D8D6CB; 
+            border-bottom: 1px solid var(--border-subtle); 
+            border-top: 1px solid var(--border-subtle); 
+            padding: 16px 4%; 
+            width: 100%; 
         }
-        .tools-label, .tool-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-        .tools-label { padding-right: 25px; border-right: 1px solid rgba(40,36,33,.24); }
-        .tool-link { color: var(--charcoal); text-decoration: none; }
-        .tool-link:hover { color: var(--rose); }
-        .tool-link svg, .tools-label svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; }
 
-        .section { padding: 94px clamp(22px, 5vw, 76px); }
-        .section-inner { width: min(1160px, 100%); margin: 0 auto; }
-        .section-heading { max-width: 760px; margin-bottom: 45px; }
-        .section-kicker {
-            display: block;
-            margin-bottom: 12px;
-            color: var(--rose);
-            font-size: 0.76rem;
-            font-weight: 700;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
+        .quick-tools-container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 30px; 
+            flex-wrap: wrap; 
         }
-        .section-heading h2, .method-copy h2, .profile-content h2, .cta h2 {
-            font-family: var(--serif);
-            font-size: clamp(2.45rem, 4.5vw, 4rem);
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            line-height: 1;
-            text-transform: uppercase;
-        }
-        .section-heading p { max-width: 680px; margin-top: 18px; color: var(--muted); font-size: 1rem; }
 
-        .services-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
-        .service-card {
-            position: relative;
-            display: grid;
-            grid-template-rows: 300px auto;
-            overflow: hidden;
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-radius: 4px;
-            color: inherit;
-            text-decoration: none;
-            box-shadow: 0 8px 30px rgba(40,36,33,.04);
-            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        .quick-tools-title { 
+            font-family: var(--font-sans); 
+            font-size: 0.72rem; 
+            font-weight: 700; 
+            color: var(--text-charcoal); 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            padding-right: 20px; 
+            border-right: 1px solid rgba(44, 40, 37, 0.2); 
         }
-        .service-card:hover { transform: translateY(-6px); border-color: #B7AD9E; box-shadow: var(--shadow); }
-        .service-card img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.78) contrast(.94); }
-        .service-card-body { position: relative; padding: 30px 30px 34px; }
-        .service-number {
-            position: absolute;
-            right: 26px;
-            top: 22px;
-            color: var(--rose-soft);
-            font-family: var(--serif);
-            font-size: 2.2rem;
-            line-height: 1;
-        }
-        .service-card h3 { max-width: 76%; font-family: var(--serif); font-size: 2rem; font-weight: 600; line-height: 1; text-transform: uppercase; }
-        .service-card p { margin: 16px 0 22px; color: var(--muted); font-size: .95rem; }
-        .text-link { color: var(--rose); font-size: .76rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 
-        .methodology { background: var(--charcoal); color: #F7F2E9; }
-        .method-grid { display: grid; grid-template-columns: .85fr 1.45fr; gap: clamp(45px, 8vw, 110px); align-items: start; }
-        .method-copy .section-kicker { color: #D6A094; }
-        .method-copy p { margin-top: 22px; color: #D8D1C8; font-size: 1rem; }
-        .method-steps { border-top: 1px solid rgba(255,255,255,.24); }
-        .method-step {
-            display: grid;
-            grid-template-columns: 55px 1fr;
-            gap: 18px;
-            padding: 24px 0;
-            border-bottom: 1px solid rgba(255,255,255,.17);
+        .quick-tools-grid { 
+            display: flex; 
+            align-items: center; 
+            gap: 28px; 
+            flex-wrap: wrap; 
         }
-        .method-step span { color: #D6A094; font-family: var(--serif); font-size: 1.35rem; }
-        .method-step h3 { margin-bottom: 5px; font-family: var(--serif); font-size: 1.55rem; font-weight: 600; text-transform: uppercase; }
-        .method-step p { color: #CFC7BE; font-size: .92rem; }
 
-        .principle-band { padding: 36px clamp(22px, 5vw, 76px); background: #E2DBD0; border-block: 1px solid var(--line); }
-        .principle-band blockquote {
-            width: min(980px, 100%);
-            margin: 0 auto;
+        .tool-chip { 
+            background: transparent; 
+            border: none; 
+            padding: 0; 
+            text-decoration: none; 
+            color: var(--text-charcoal); 
+            font-size: 0.72rem; 
+            font-weight: 600; 
+            text-transform: uppercase; 
+            letter-spacing: 1.2px; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            transition: color 0.2s ease, transform 0.2s ease; 
+        }
+
+        .tool-chip svg { 
+            stroke: var(--text-charcoal); 
+            transition: stroke 0.2s ease; 
+        }
+
+        .tool-chip:hover { 
+            color: var(--accent-rose-dark); 
+            transform: translateY(-1px); 
+        }
+
+        .tool-chip:hover svg { 
+            stroke: var(--accent-rose-dark); 
+        }
+
+        /* SECCIÓN DE PILARES CON MARGEN OPTIMIZADO */
+        .pillars-section { padding: 60px 4% 40px 4%; background: var(--bg-sand); }
+        .pillars-header { text-align: center; max-width: 800px; margin: 0 auto 40px auto; }
+        .pillars-header h2 { font-family: var(--font-serif); font-size: 2.2rem; color: var(--text-charcoal); font-weight: 600; text-transform: uppercase; margin-bottom: 12px; }
+        .pillars-header p { color: var(--text-muted); font-size: 0.95rem; }
+
+        .pillars-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; 
+            max-width: 1150px; 
+            margin: 0 auto; 
+        }
+
+        .pillar-card { 
+            background: var(--bg-card); 
+            border: 1px solid var(--border-subtle); 
+            border-radius: 8px; 
+            padding: 20px; 
+            text-decoration: none; 
+            color: inherit; 
+            display: flex; 
+            flex-direction: column; 
+            transition: all 0.3s ease; 
+        }
+
+        .pillar-card:hover { 
+            transform: translateY(-4px); 
+            border-color: var(--accent-sage); 
+            box-shadow: 0 10px 25px rgba(44,40,37,0.08); 
+        }
+
+        .pillar-image { 
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 6px; 
+            margin-bottom: 15px; 
+            border: 1px solid var(--border-subtle); 
+            background-color: var(--bg-card-accent); 
+        }
+
+        .pillar-card h3 { 
+            font-family: var(--font-serif); 
+            font-size: 1.35rem; 
+            color: var(--text-charcoal); 
+            text-transform: uppercase; 
+            margin-bottom: 12px; 
+            font-weight: 600; 
+            line-height: 1.2; 
+        }
+
+        .pillar-link { 
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            color: var(--accent-rose-dark); 
+            letter-spacing: 1px; 
+            margin-top: auto; 
+            display: inline-block; 
+        }
+
+        /* BANDA DE CITA Y RESPALDO INSTITUCIONAL */
+        .trust-quote-band {
+            background-color: var(--bg-card-accent);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 26px 4%;
             text-align: center;
-            font-family: var(--serif);
-            font-size: clamp(1.5rem, 2.6vw, 2.05rem);
+        }
+
+        .trust-quote-text {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
             font-style: italic;
-            line-height: 1.3;
-        }
-
-        .profile { padding-block: 84px; }
-        .profile-grid { display: grid; grid-template-columns: 1fr 1.08fr; gap: clamp(40px, 7vw, 84px); align-items: center; }
-        .profile-image { position: relative; }
-        .profile-image::before {
-            content: "";
-            position: absolute;
-            inset: -14px 18px 18px -14px;
-            border: 1px solid var(--rose-soft);
-            border-radius: 3px;
-            pointer-events: none;
-        }
-        .profile-image img { position: relative; width: 100%; border-radius: 3px; box-shadow: var(--shadow); }
-        .profile-content p { margin-top: 22px; color: var(--muted); font-size: 1rem; }
-        .credentials { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-        .credential {
-            padding: 9px 14px;
-            background: transparent;
-            border: 1px solid #C8BFB2;
-            border-radius: 30px;
-            font-size: .72rem;
-            font-weight: 700;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-        }
-
-        .cta { padding: 90px clamp(22px, 5vw, 76px); background: var(--paper); border-block: 1px solid var(--line); text-align: center; }
-        .cta-inner { width: min(760px, 100%); margin: 0 auto; }
-        .cta p { margin: 22px auto 32px; color: var(--muted); font-size: 1rem; }
-
-        footer { padding: 56px clamp(22px, 5vw, 76px) 28px; background: var(--sand); }
-        .footer-grid {
-            width: min(1160px, 100%);
-            margin: 0 auto 40px;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1.35fr;
-            gap: 38px;
-        }
-        .footer-brand p { max-width: 290px; margin-top: 14px; color: var(--muted); font-size: .86rem; }
-        footer h3 { margin-bottom: 15px; font-family: var(--serif); font-size: 1.2rem; font-weight: 700; text-transform: uppercase; }
-        footer ul { display: grid; gap: 10px; list-style: none; }
-        footer a { color: var(--muted); font-size: .84rem; text-decoration: none; }
-        footer a:hover { color: var(--rose); }
-        .footer-bottom {
-            width: min(1160px, 100%);
+            color: var(--text-charcoal);
+            max-width: 850px;
             margin: 0 auto;
-            padding-top: 24px;
-            border-top: 1px solid var(--line);
-            color: var(--muted);
-            font-size: .75rem;
-            text-align: center;
+            line-height: 1.5;
         }
 
-        :focus-visible { outline: 3px solid rgba(149,81,67,.42); outline-offset: 4px; }
+        /* SECCIÓN PERFIL PROFESIONAL OPTIMIZADA */
+        .profile-section { padding: 50px 4% 60px 4%; max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .profile-image img { width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle); box-shadow: 0 15px 30px rgba(44,40,37,0.08); }
+        .profile-content h2 { font-family: var(--font-serif); font-size: 2rem; color: var(--text-charcoal); margin-bottom: 15px; text-transform: uppercase; }
+        .profile-content h4 { font-size: 0.85rem; color: var(--accent-sage); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
+        .profile-content p { color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem; line-height: 1.7; }
+        .profile-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+        .p-badge { background: var(--bg-card-accent); border: 1px solid var(--border-subtle); padding: 6px 14px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; color: var(--text-charcoal); text-transform: uppercase; letter-spacing: 1px; }
 
-        @media (max-width: 940px) {
-            .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
-            nav {
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 100%;
-                display: none;
-                padding: 16px clamp(22px, 5vw, 76px) 24px;
-                background: var(--sand-soft);
-                border-bottom: 1px solid var(--line);
-                box-shadow: 0 18px 30px rgba(40,36,33,.08);
-            }
-            nav.open { display: block; }
-            nav ul { align-items: stretch; flex-direction: column; gap: 0; }
-            nav a { width: 100%; padding: 14px 0; border-bottom: 1px solid var(--line); }
-            .hero { min-height: 700px; background-position: 62% center; }
-            .services-grid, .profile-grid { grid-template-columns: 1fr; }
-            .service-card { grid-template-rows: 260px auto; }
-            .method-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        /* CTA FINAL */
+        .cta-section { background: var(--bg-card-accent); padding: 70px 4%; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); text-align: center; }
+        .cta-container { max-width: 700px; margin: 0 auto; }
+        .cta-section h2 { font-family: var(--font-serif); font-size: 2.2rem; color: var(--text-charcoal); margin-bottom: 15px; text-transform: uppercase; }
+        .cta-section p { color: var(--text-muted); font-size: 1rem; margin-bottom: 30px; line-height: 1.7; }
+
+        /* FOOTER */
+        footer { background-color: var(--bg-sand); border-top: 1px solid var(--border-subtle); padding: 50px 6% 30px 6%; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 35px; max-width: 1200px; margin: 0 auto 40px auto; }
+        .footer-col h5 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--text-charcoal); margin-bottom: 15px; text-transform: uppercase; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-col a { text-decoration: none; color: var(--text-muted); font-size: 0.8rem; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--accent-rose-dark); }
+        .footer-bottom { border-top: 1px solid var(--border-subtle); padding-top: 25px; text-align: center; font-size: 0.75rem; color: var(--text-muted); max-width: 1200px; margin: 0 auto; }
+
+        @media (max-width: 900px) { 
+            .profile-section, .pillars-grid { grid-template-columns: 1fr; } 
+            .footer-grid { grid-template-columns: 1fr 1fr; } 
+            .quick-tools-title { border-right: none; padding-right: 0; }
         }
-
-        @media (max-width: 640px) {
-            .site-header { min-height: 76px; padding-block: 14px; }
-            .logo-title { font-size: 1.28rem; }
-            .logo-subtitle { font-size: .58rem; white-space: normal; }
-            .logo-icon { width: 25px; height: 25px; }
-            .hero { min-height: 660px; background-position: 68% center; }
-            .hero::before { background: rgba(237,232,223,.91); }
-            .hero-content { padding-block: 65px 80px; }
-            .hero h1 { font-size: clamp(2.75rem, 15vw, 4.15rem); }
-            .hero-buttons .button { width: 100%; }
-            .tools-inner { align-items: flex-start; flex-direction: column; }
-            .tools-label { padding: 0 0 10px; border-right: 0; border-bottom: 1px solid rgba(40,36,33,.2); }
-            .section { padding-block: 72px; }
-            .service-card { grid-template-rows: 220px auto; }
-            .service-card-body { padding: 25px; }
-            .method-step { grid-template-columns: 42px 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
+        @media (max-width: 768px) { 
+            header.site-header { flex-direction: row; gap: 10px; padding: 14px 4%; } 
+            .logo-icon { width: 22px; height: 22px; }
+            .logo-title { font-size: 1.03rem; letter-spacing: .6px; }
+            .logo-subtitle { font-size: .44rem; letter-spacing: 1px; }
+            nav { margin-left: 0; } 
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; } 
+            .hero { min-height: auto; grid-template-columns: minmax(0, 1.1fr) minmax(112px, .9fr); gap: 15px; padding: 42px 18px 46px; align-items: center; }
+            .hero-subtitle { font-size: .64rem; letter-spacing: 1.1px; margin-bottom: 14px; }
+            .hero-title { font-size: clamp(2rem, 9.1vw, 2.75rem); line-height: .98; letter-spacing: -.025em; margin-bottom: 16px; }
+            .hero-description { font-size: .89rem; line-height: 1.55; margin-bottom: 22px; }
+            .hero-visual { min-height: 370px; height: 62vh; max-height: 490px; border-radius: 80px 80px 10px 10px; }
+            .hero-visual img { object-position: 56% center; }
+            .hero-buttons { gap: 9px; }
+            .btn-hero-primary, .btn-hero-secondary { width: 100%; padding: 13px 10px; font-size: .67rem; letter-spacing: .6px; }
+            .footer-grid { grid-template-columns: 1fr; } 
         }
-
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto; }
-            *, *::before, *::after { transition: none !important; }
+        @media (max-width: 420px) {
+            .hero { grid-template-columns: minmax(0, 1.18fr) minmax(100px, .82fr); padding-inline: 14px; }
+            .hero-title { font-size: clamp(1.82rem, 8.7vw, 2.25rem); }
+            .hero-description { font-size: .82rem; }
+            .hero-visual { height: 55vh; min-height: 330px; }
         }
     </style>
 </head>
 <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
+    <!-- HEADER MENU PRINCIPAL -->
     <header class="site-header">
-        <a href="/" class="logo-box" aria-label="Ágora Laboral 360°, inicio">
-            <svg class="logo-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <a href="/" class="logo-box">
+            <svg class="logo-icon" viewBox="0 0 24 24">
                 <path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" />
                 <path d="M12 22V10" />
             </svg>
-            <span class="logo-text">
+            <div class="logo-text">
                 <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
                 <span class="logo-subtitle">Investigación &amp; Informes Técnicos</span>
-            </span>
+            </div>
         </a>
 
-        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-                <path d="M4 7h16M4 12h16M4 17h16" />
-            </svg>
-        </button>
-
-        <nav id="menu-principal" aria-label="Navegación principal">
+      <nav>
             <ul>
-                <li><a href="/" class="active" aria-current="page">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="/academia/">Escuela</a></li>
+                <li><a href="/" class="active">Inicio</a></li>
+                <li>
+                    <a href="/servicios/">Servicios</a>
+                    <div class="dropdown">
+                        <a href="/servicios/investigacion-laboral/">01 - Investigación Laboral</a>
+                        <a href="/servicios/informes-tecnicos/">02 - Informes Técnicos</a>
+                        <a href="/servicios/auditoria-investigaciones/">03 - Auditoría de Expedientes</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/academia/">Escuela</a>
+                    <div class="dropdown">
+                        <a href="/academia/">Escuela de Investigadores</a>
+                        <a href="/academia/#cursos">Cursos y Programas</a>
+                    </div>
+                </li>
                 <li><a href="/recursos/">Recursos</a></li>
                 <li><a href="/contacto/">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="contenido">
-        <section class="hero" id="inicio">
-            <div class="hero-content">
-                <span class="eyebrow">Investigamos. Analizamos. Documentamos.</span>
-                <h1>Investigación laboral e informes técnicos</h1>
-                <p class="hero-description">Firma chilena especializada en investigaciones laborales externas e independientes e informes técnicos y periciales, especialmente en materias de acoso laboral, acoso sexual y violencia en el trabajo.</p>
-                <div class="hero-buttons">
-                    <a href="/contacto/" class="button button-primary">Solicitar evaluación técnica →</a>
-                    <a href="#servicios" class="button button-secondary">Conocer especialidades</a>
-                </div>
+    <!-- PORTADA - HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">Investigamos. Analizamos. Documentamos.</span>
+            <h1 class="hero-title">Investigación Laboral e Informes Técnicos.</h1>
+            <p class="hero-description">
+                Firma especializada en investigaciones laborales externas e independientes e informes técnicos y periciales, con especialización en denuncias de acoso laboral, acoso sexual y violencia en el trabajo, bajo el marco de la Ley N.° 21.643.
+            </p>
+            <div class="hero-buttons">
+                <a href="/contacto/" class="btn-hero-primary">Solicitar Investigación →</a>
+                <a href="#servicios" class="btn-hero-secondary">Conocer Servicios →</a>
             </div>
-        </section>
+        </div>
+        <figure class="hero-visual" aria-label="Equipo profesional analizando antecedentes de una investigación laboral">
+            <img src="assets/hero-investigacion-laboral.png" alt="Equipo profesional revisando documentos y evidencia de una investigación laboral" width="1024" height="1280" fetchpriority="high">
+        </figure>
+    </section>
 
-        <section class="tools-bar" aria-label="Herramientas gratuitas">
-            <div class="tools-inner">
-                <span class="tools-label">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z"/><path d="M12 22V10"/></svg>
-                    Herramientas gratuitas
-                </span>
-                <a href="/recursos/#calculadora" class="tool-link">Calculadora de plazos</a>
-                <a href="/recursos/#checklist" class="tool-link">Checklist de cumplimiento</a>
-                <a href="/recursos/#cronograma" class="tool-link">Cronograma de investigación</a>
+    <!-- BANDA DE HERRAMIENTAS GRATUITAS (CINTILLA CENTRADA) -->
+    <section class="quick-tools-section">
+        <div class="quick-tools-container">
+            <span class="quick-tools-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" /><path d="M12 22V10" /></svg>
+                Herramientas Gratuitas:
+            </span>
+            
+            <div class="quick-tools-grid">
+                <!-- 1. CALCULADORA -->
+                <a href="/recursos/#calculadora" class="tool-chip">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+                    Calculadora de Plazos
+                </a>
+
+                <!-- 2. CHECKLIST -->
+                <a href="/recursos/#checklist" class="tool-chip">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Checklist de Cumplimiento
+                </a>
+
+                <!-- 3. CRONOGRAMA -->
+                <a href="/recursos/#cronograma" class="tool-chip">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Cronograma de Investigación
+                </a>
             </div>
-        </section>
+        </div>
+    </section>
+       
+    <!-- ESPECIALIDADES EN 3 COLUMNAS SIMÉTRICAS -->
+    <section id="servicios" class="pillars-section">
+        <div class="pillars-header">
+            <h2>Nuestra Especialidad</h2>
+            <p>Soluciones técnicas y periciales para respaldar decisiones corporativas.</p>
+        </div>
 
-        <section class="section" id="servicios">
-            <div class="section-inner">
-                <header class="section-heading">
-                    <span class="section-kicker">Nuestra especialidad</span>
-                    <h2>Dos líneas, un mismo estándar técnico</h2>
-                    <p>Servicios especializados para investigar hechos, analizar antecedentes y respaldar decisiones organizacionales mediante informes claros, fundados y trazables.</p>
-                </header>
+      <div class="pillars-grid">
+            <!-- TARJETA 1 -->
+            <a href="/servicios/investigacion-laboral/" class="pillar-card">
+                <img src="imagen_tarjeta 1.avif" alt="Investigación Laboral Externa" class="pillar-image">
+                <h3>Investigación Laboral Externa</h3>
+                <span class="pillar-link">Ver especialidad →</span>
+            </a>
 
-                <div class="services-grid">
-                    <a href="/servicios/investigacion-laboral/" class="service-card">
-                        <img src="imagen_tarjeta%201.avif" alt="Profesional revisando antecedentes de una investigación laboral">
-                        <div class="service-card-body">
-                            <span class="service-number" aria-hidden="true">01</span>
-                            <h3>Investigaciones laborales externas</h3>
-                            <p>Investigación independiente de denuncias de acoso laboral, acoso sexual y violencia en el trabajo, con planificación, entrevistas, análisis de evidencia e informe final.</p>
-                            <span class="text-link">Conocer el servicio →</span>
-                        </div>
-                    </a>
+            <!-- TARJETA 2 -->
+            <a href="/servicios/informes-tecnicos/" class="pillar-card">
+                <img src="imagen_tarjeta 2.avif" alt="Informes Técnicos y Peritajes" class="pillar-image">
+                <h3>Informes Técnicos y Peritajes</h3>
+                <span class="pillar-link">Ver especialidad →</span>
+            </a>
 
-                    <a href="/servicios/informes-tecnicos/" class="service-card">
-                        <img src="imagen_tarjeta%202.avif" alt="Revisión técnica y documental de antecedentes laborales">
-                        <div class="service-card-body">
-                            <span class="service-number" aria-hidden="true">02</span>
-                            <h3>Informes técnicos y peritaje</h3>
-                            <p>Informes técnicos, peritaje social laboral y revisión metodológica de investigaciones realizadas por terceros para apoyar decisiones y procesos laborales.</p>
-                            <span class="text-link">Conocer el servicio →</span>
-                        </div>
-                    </a>
-                </div>
+            <!-- TARJETA 3 -->
+            <a href="/diagnostico/" class="pillar-card">
+                <img src="imagen_tarjeta 3.jpg" alt="Diagnóstico y Herramientas Ley 21.643 y Ley 21.828" class="pillar-image">
+                <h3>Diagnóstico Inicial & Herramientas</h3>
+                <span class="pillar-link">Realizar Diagnóstico Gratis →</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- CITA DE COMPROMISO Y CONFIDENCIALIDAD -->
+    <div class="trust-quote-band">
+        <p class="trust-quote-text">
+            «Garantizamos reserva absoluta, imparcialidad metodológica y estricto apego al debido proceso en cada investigación e informe técnico.»
+        </p>
+    </div>
+
+    <!-- SECCIÓN PERFIL PROFESIONAL -->
+    <section class="profile-section">
+        <div class="profile-image">
+            <img src="imagen%201.png" alt="Directora Ágora Laboral 360 - Perito Laboral">
+        </div>
+        <div class="profile-content">
+            <h4>Dirección Técnica</h4>
+            <h2>Rigor pericial en la gestión del conflicto</h2>
+            <p>Nuestra visión como peritos e investigadoras nos permite analizar los conflictos desde la evidencia objetiva, aplicando las directrices de la <strong>Dirección del Trabajo</strong> y el cumplimiento estricto de normativas clave como la Ley Karin y la Ley 21.828.</p>
+            
+            <div class="profile-badges">
+                <span class="p-badge">Trabajo Social Pericial</span>
+                <span class="p-badge">Investigadora Laboral</span>
+                <span class="p-badge">Cumplimiento Normativo</span>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section methodology" aria-labelledby="metodologia-titulo">
-            <div class="section-inner method-grid">
-                <div class="method-copy">
-                    <span class="section-kicker">Metodología Ágora</span>
-                    <h2 id="metodologia-titulo">Cada conclusión debe poder explicarse</h2>
-                    <p>Lo denunciado no equivale automáticamente a lo acreditado. Nuestro trabajo distingue hechos, evidencia, análisis y conclusión.</p>
-                </div>
+    <!-- CALL TO ACTION A PÁGINA INTERNA DE CONTACTO -->
+    <section id="contacto" class="cta-section">
+        <div class="cta-container">
+            <h2>¿Necesita evaluar un caso o iniciar una investigación?</h2>
+            <p>Agende una evaluación confidencial con nuestro equipo técnico para analizar antecedentes y estructurar el alcance requerido bajo estricta reserva.</p>
+            <a href="/contacto/" class="btn-hero-primary" style="padding: 18px 36px; text-decoration: none;">Solicitar Evaluación Técnica →</a>
+        </div>
+    </section>
 
-                <div class="method-steps">
-                    <article class="method-step">
-                        <span>01</span>
-                        <div><h3>Evaluación</h3><p>Delimitación del requerimiento, alcance, hechos y antecedentes disponibles.</p></div>
-                    </article>
-                    <article class="method-step">
-                        <span>02</span>
-                        <div><h3>Investigación</h3><p>Plan de trabajo, entrevistas, recepción documental y contraste de versiones.</p></div>
-                    </article>
-                    <article class="method-step">
-                        <span>03</span>
-                        <div><h3>Análisis</h3><p>Valoración crítica y trazable de los antecedentes incorporados al expediente.</p></div>
-                    </article>
-                    <article class="method-step">
-                        <span>04</span>
-                        <div><h3>Informe</h3><p>Conclusiones fundadas, claramente relacionadas con los antecedentes verificados.</p></div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <aside class="principle-band" aria-label="Compromiso metodológico">
-            <blockquote>“Resguardamos la confidencialidad, la imparcialidad y la estricta reserva del procedimiento, conforme a la normativa vigente.”</blockquote>
-        </aside>
-
-        <section class="section profile">
-            <div class="section-inner profile-grid">
-                <div class="profile-image">
-                    <img src="imagen%201.png" alt="Dirección Técnica de Ágora Laboral 360°">
-                </div>
-                <div class="profile-content">
-                    <span class="section-kicker">Dirección técnica</span>
-                    <h2>Rigor profesional aplicado a cada expediente</h2>
-                    <p>La investigación se desarrolla con criterio técnico, análisis crítico de los antecedentes y respeto por las garantías de las personas involucradas. El objetivo no es confirmar una versión inicial, sino determinar qué hechos pueden sostenerse a partir de evidencia verificable.</p>
-                    <div class="credentials" aria-label="Áreas de especialización">
-                        <span class="credential">Trabajo social pericial</span>
-                        <span class="credential">Investigación laboral</span>
-                        <span class="credential">Informes técnicos</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta" id="contacto">
-            <div class="cta-inner">
-                <span class="section-kicker">Evaluación inicial</span>
-                <h2>¿Necesita analizar un caso o iniciar una investigación?</h2>
-                <p>Solicite una evaluación técnica confidencial. En esta primera etapa solo necesitamos antecedentes generales para definir el servicio y su alcance.</p>
-                <a href="/contacto/" class="button button-primary">Solicitar evaluación técnica →</a>
-            </div>
-        </section>
-    </main>
-
+    <!-- FOOTER -->
     <footer>
         <div class="footer-grid">
-            <div class="footer-brand">
-                <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
-                <p>Investigación laboral e informes técnicos especializados. Rigor, imparcialidad y trazabilidad.</p>
+            <div class="footer-col">
+                <span class="logo-title" style="font-size:1.4rem;">ÁGORA LABORAL <sup>360°</sup></span>
+                <p style="font-size:0.8rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados. Rigor e imparcialidad.</p>
             </div>
-            <div>
-                <h3>Servicios</h3>
+            
+           <div class="footer-col">
+                <h5>Servicios</h5>
                 <ul>
-                    <li><a href="/servicios/investigacion-laboral/">Investigación externa</a></li>
-                    <li><a href="/servicios/informes-tecnicos/">Informes y peritajes</a></li>
+                    <li><a href="/servicios/investigacion-laboral/">Investigación Externa</a></li>
+                    <li><a href="/servicios/informes-tecnicos/">Informes y Peritajes</a></li>
+                    <li><a href="/servicios/auditoria-investigaciones/">Auditoría de Expedientes</a></li>
                 </ul>
             </div>
-            <div>
-                <h3>Recursos</h3>
+
+            <div class="footer-col">
+                <h5>Plataforma</h5>
                 <ul>
-                    <li><a href="/academia/">Escuela</a></li>
-                    <li><a href="/recursos/">Herramientas y guías</a></li>
-                    <li><a href="/diagnostico/">Diagnóstico inicial</a></li>
+                    <li><a href="/academia/">Escuela de Investigadores</a></li>
+                    <li><a href="/recursos/">Recursos y Guías</a></li>
+                    <li><a href="/diagnostico/" style="color: var(--accent-rose-dark); font-weight: 700;">Diagnóstico Inicial Gratis →</a></li>
                 </ul>
             </div>
-            <div>
-                <h3>Contacto</h3>
+
+            <div class="footer-col">
+                <h5>Contacto</h5>
                 <ul>
                     <li><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a></li>
-                    <li><a href="/contacto/">Solicitar evaluación técnica</a></li>
+                    <li><a href="tel:+56900000000">+56 9 0000 0000</a></li>
+                    <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom">© 2026 Ágora Laboral 360°. Investigación e Informes Técnicos. Todos los derechos reservados.</div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 Ágora Laboral 360°. Investigación e Informes Técnicos. Todos los derechos reservados.</span>
+        </div>
     </footer>
 
-    <script>
-        const menuButton = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('#menu-principal');
-
-        menuButton.addEventListener('click', () => {
-            const isOpen = menu.classList.toggle('open');
-            menuButton.setAttribute('aria-expanded', String(isOpen));
-            menuButton.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
-        });
-
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.remove('open');
-                menuButton.setAttribute('aria-expanded', 'false');
-                menuButton.setAttribute('aria-label', 'Abrir menú');
-            });
-        });
-    </script>
 </body>
 </html>
