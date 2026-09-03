@@ -23,15 +23,43 @@
     @media(max-width:1250px){.site-header{min-height:125px}.brand-mark{width:75px;height:75px}.brand-copy strong{font-size:32px}.desktop-nav{gap:19px}.desktop-nav a{font-size:11px}.header-cta{min-width:auto;padding:17px 21px;font-size:11px}.facts{grid-template-columns:repeat(4,1fr)}.facts>a{grid-column:1/-1;justify-content:center}.review-grid,.experience-grid{grid-template-columns:1fr 1fr}.review-card:nth-child(2){border-right:0}.review-card:nth-child(-n+2){border-bottom:1px solid var(--line)}.credential:nth-child(2){border-right:0}.credential:nth-child(-n+2){border-bottom:1px solid var(--sand)}}
     @media(max-width:900px){.site-header{min-height:94px;padding:12px 20px}.brand{gap:10px}.brand-mark{width:62px;height:62px}.brand-copy strong{font-size:25px}.brand-copy small{margin-top:7px;font-size:8px}.desktop-nav,.header-cta{display:none}.menu-button{margin-left:auto;display:flex;align-items:center;gap:10px;text-decoration:none;text-transform:uppercase;font-size:11px;font-weight:700}.mobile-nav:target{display:flex}.mobile-nav{position:fixed;inset:0;z-index:100;background:var(--espresso);color:#fff;padding:80px 35px 35px;flex-direction:column;gap:25px}.mobile-nav a{font:500 35px var(--serif);text-decoration:none}.mobile-close{position:absolute;top:20px;right:30px;font-size:45px!important}.page-hero{grid-template-columns:1fr}.hero-copy{padding:70px 30px}.hero-photo{min-height:520px}.facts{margin:0;border-radius:0;grid-template-columns:1fr 1fr}.facts div{border-bottom:1px solid var(--line)}.facts div:nth-child(even){border-right:0}.review{padding:90px 25px 70px}.quality{grid-template-columns:1fr}.quality-photo{height:520px}.experience{padding:90px 25px}.experience-header{grid-template-columns:1fr;gap:30px}.request{grid-template-columns:1fr;padding:90px 25px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
     @media(max-width:600px){.brand-mark{width:55px;height:55px}.brand-copy strong{font-size:22px}.page-hero{min-height:auto}.hero-copy h1{font-size:52px}.hero-photo{min-height:410px}.facts{grid-template-columns:1fr}.facts div{border-right:0}.section-heading h2,.quality-copy h2,.experience h2,.request-copy h2{font-size:45px}.review-grid,.experience-grid{grid-template-columns:1fr}.review-card,.review-card:nth-child(2),.credential,.credential:nth-child(2){border-right:0;border-bottom:1px solid var(--line)}.review-card{min-height:auto}.review-card h3{margin-top:38px}.quality-photo{height:390px}.quality-copy{padding:70px 25px}.checklist{grid-template-columns:1fr}.experience-header{margin-bottom:40px}.boundary{grid-template-columns:1fr}.form-row{grid-template-columns:1fr;gap:0}.footer-grid{grid-template-columns:1fr;gap:42px}.footer-grid>div:first-child{grid-column:auto}.footer-bottom{flex-direction:column;gap:8px}.pill-button{min-width:0;width:100%}}
+
+    /* Ajustes de proporción y ancho para escritorio */
+    html,body{max-width:100%;overflow-x:hidden}
+    .site-header,.page-hero,.facts,.review,.quality,.experience,.boundary,.request,footer{max-width:100%}
+    @media(min-width:901px){
+      .review{padding-top:82px;padding-bottom:72px}
+      .section-heading{margin-bottom:46px}
+      .review-card{min-height:310px;padding-top:30px;padding-bottom:32px}
+      .review-card h3{margin-top:30px;margin-bottom:16px}
+      .experience{padding-top:82px;padding-bottom:78px}
+      .experience-header{margin-bottom:46px;gap:60px}
+      .credential{padding-top:30px;padding-bottom:34px}
+      .credential h3{margin-top:28px;margin-bottom:14px}
+    }
+
+    @media(min-width:1251px){
+      .facts{grid-template-columns:repeat(4,minmax(0,1fr)) minmax(230px,280px)}
+      .facts>div,.facts>a{min-width:0}
+    }
+
+    @media(max-width:1600px) and (min-width:1251px){
+      .site-header{min-height:118px;padding:18px 30px;gap:22px}
+      .brand{gap:14px}.brand-mark{width:72px;height:72px}.brand-copy strong{font-size:30px}.brand-copy small{margin-top:8px;font-size:9px}
+      .desktop-nav{gap:20px}.desktop-nav a{font-size:11px}
+      .header-cta{min-width:205px;padding:16px 19px;font-size:10px}
+      .page-hero{min-height:600px}.hero-copy{padding:72px 46px}.hero-photo{min-height:600px}
+      .facts div,.facts>a{padding:23px 22px}
+    }
   </style>
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="/" aria-label="Ágora Laboral 360°, inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 120 120"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M60 8a52 52 0 0 1 47 30" class="arc arc-one"/><path d="M108 48a52 52 0 0 1-20 52" class="arc arc-two"/><path d="M78 108a52 52 0 0 1-53-13" class="arc arc-one"/><path d="M17 85A52 52 0 0 1 42 11" class="arc arc-three"/><path d="M32 91 59 24 87 91M43 67h32" class="letter-a"/><path d="M27 76c13-18 25 14 40-3 10-12 20-13 29-5" class="swoop"/><circle cx="60" cy="8" r="3.8" class="node node-one"/><circle cx="108" cy="43" r="3.8" class="node node-two"/><circle cx="84" cy="103" r="3.8" class="node node-three"/><circle cx="20" cy="88" r="3.8" class="node node-four"/></g></svg></span><span class="brand-copy"><strong>ÁGORA</strong><small>LABORAL 360°</small></span></a>
-    <nav class="desktop-nav" aria-label="Navegación principal"><a href="/">Inicio</a><a href="/servicios/" aria-current="page">Servicios</a><a href="/#especializacion">Especialización</a><a href="/#metodo">Metodología</a><a href="/#escuela">Escuela</a><a href="/#contacto">Contacto</a></nav>
+    <nav class="desktop-nav" aria-label="Navegación principal"><a href="/">Inicio</a><a href="/servicios/" aria-current="page">Servicios</a><a href="/#especializacion">Especialización</a><a href="/#metodo">Metodología</a><a href="/academia/">Escuela</a><a href="/#contacto">Contacto</a></nav>
     <a class="header-cta" href="#solicitud">Solicitar evaluación</a><a class="menu-button" href="#menu-movil">Menú <span>☰</span></a>
   </header>
-  <nav class="mobile-nav" id="menu-movil" aria-label="Navegación móvil"><a class="mobile-close" href="#inicio" aria-label="Cerrar menú">×</a><a href="/">Inicio</a><a href="/servicios/">Servicios</a><a href="/#especializacion">Especialización</a><a href="/#metodo">Metodología</a><a href="/#escuela">Escuela</a><a href="#solicitud">Contacto</a></nav>
+  <nav class="mobile-nav" id="menu-movil" aria-label="Navegación móvil"><a class="mobile-close" href="#inicio" aria-label="Cerrar menú">×</a><a href="/">Inicio</a><a href="/servicios/">Servicios</a><a href="/#especializacion">Especialización</a><a href="/#metodo">Metodología</a><a href="/academia/">Escuela</a><a href="#solicitud">Contacto</a></nav>
 
   <main>
     <section class="page-hero" id="inicio"><div class="hero-copy"><p class="eyebrow">Servicio especializado</p><h1>Revisión técnica de <em>investigaciones internas.</em></h1><p class="hero-lead">Una mirada externa e independiente para examinar la metodología, la trazabilidad y la coherencia del expediente antes de su cierre.</p><a class="pill-button" href="#revision">Conocer la revisión <span>→</span></a></div><figure class="hero-photo"><img src="/hero-escritorio-agora.png" alt="Profesional revisando documentos de una investigación laboral"></figure></section>
