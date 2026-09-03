@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title id="title">Monograma A de Ágora Laboral 360°</title>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 8a52 52 0 0 1 47 30" stroke="#aa7f63" stroke-width="1.8"/>
+    <path d="M108 48a52 52 0 0 1-20 52" stroke="#6f4b35" stroke-width="1.8"/>
+    <path d="M78 108a52 52 0 0 1-53-13" stroke="#aa7f63" stroke-width="1.8"/>
+    <path d="M17 85A52 52 0 0 1 42 11" stroke="#8e927f" stroke-width="1.8"/>
+    <path d="M32 91 59 24 87 91M43 67h32" stroke="#3c1f13" stroke-width="2.2"/>
+    <path d="M27 76c13-18 25 14 40-3 10-12 20-13 29-5" stroke="#aa7f63" stroke-width="2"/>
+    <circle cx="60" cy="8" r="3.8" fill="#d7c1b2" stroke="#d7c1b2"/>
+    <circle cx="108" cy="43" r="3.8" fill="#d9a99a" stroke="#d9a99a"/>
+    <circle cx="84" cy="103" r="3.8" fill="#6f4b35" stroke="#6f4b35"/>
+    <circle cx="20" cy="88" r="3.8" fill="#8e927f" stroke="#8e927f"/>
+  </g>
+</svg>
