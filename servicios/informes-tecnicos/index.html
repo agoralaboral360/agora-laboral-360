@@ -1,237 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- ÁGORA LABORAL 360° · INFORMES TÉCNICOS Y PERITAJE · 2026-09-03 -->
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informes Técnicos y Peritajes Laborales | Ágora Laboral 360°</title>
-    <meta name="description" content="Informes socioeconómicos, peritajes sociales y auditorías de cumplimiento (Ley Karin y Ley 21.828) para estudios jurídicos y litigios laborales.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Informes técnicos y peritaje social y laboral | Ágora Laboral 360°</title>
+  <meta name="description" content="Informes técnicos, informes sociales y socioeconómicos, peritaje social y laboral y análisis documental para organizaciones y estudios jurídicos en Chile.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{--ivory:#fbf7f2;--blush:#f3e8e1;--paper:#fffdfa;--espresso:#3c1f13;--cocoa:#6f4b35;--caramel:#aa7f63;--sand:#d7c1b2;--line:#dfd0c6;--muted:#76675f;--shadow:0 18px 45px rgba(60,31,19,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:var(--ivory);color:var(--espresso);font-family:"Montserrat",Arial,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}p{line-height:1.7}h1,h2,h3{margin-top:0;font-family:"Cormorant Garamond",Georgia,serif;font-weight:600}
+    .site-header{width:100%;max-width:1920px;min-height:136px;margin:0 auto;padding:0 clamp(28px,2.5vw,48px);display:flex;align-items:center;gap:clamp(24px,2vw,38px);background:var(--ivory)}
+    .brand{margin-right:auto;display:inline-flex;align-items:center;gap:16px}.brand-mark{width:80px;height:80px;flex:0 0 80px}.brand-mark svg{width:100%;height:100%;display:block}.brand-mark .arc{stroke-width:1.8}.brand-mark .arc-one{stroke:var(--caramel)}.brand-mark .arc-two{stroke:var(--cocoa)}.brand-mark .arc-three{stroke:#8e927f}.brand-mark .letter-a{stroke:var(--espresso);stroke-width:2.2}.brand-mark .swoop{stroke:var(--caramel);stroke-width:2}.brand-mark .node{stroke-width:1}.brand-mark .node-one{fill:var(--sand);stroke:var(--sand)}.brand-mark .node-two{fill:#d9a99a;stroke:#d9a99a}.brand-mark .node-three{fill:var(--cocoa);stroke:var(--cocoa)}.brand-mark .node-four{fill:#8e927f;stroke:#8e927f}.brand-copy{display:flex;flex-direction:column;line-height:1}.brand-copy strong{font:500 34px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.18em}.brand-copy small{margin-top:10px;color:var(--caramel);font-size:9px;font-weight:600;letter-spacing:.31em}
+    .desktop-nav{margin-left:auto;display:flex;align-items:center;gap:clamp(22px,2vw,38px)}.desktop-nav a{padding:13px 0;border-bottom:2px solid transparent;font-size:12px;font-weight:500;letter-spacing:.045em;text-transform:uppercase}.desktop-nav a:hover,.desktop-nav a[aria-current="page"]{border-color:var(--cocoa)}
+    .header-cta,.pill-button{min-height:54px;padding:0 25px;display:inline-flex;align-items:center;justify-content:center;gap:22px;border:0;border-radius:999px;background:var(--cocoa);color:#fff;font:700 11px "Montserrat",Arial,sans-serif;letter-spacing:.055em;text-transform:uppercase;white-space:nowrap;cursor:pointer;transition:.2s ease}.header-cta{flex:0 0 auto}.header-cta:hover,.pill-button:hover{background:var(--espresso);transform:translateY(-2px)}.menu-button,.mobile-nav{display:none}
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    .page-hero{min-height:610px;display:grid;grid-template-columns:46% 54%;background:var(--blush)}.hero-copy{padding:64px 38px 72px max(30px,calc(50vw - 900px));display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.eyebrow{margin:0 0 27px;font-size:11px;font-weight:600;letter-spacing:.19em;line-height:1.5;text-transform:uppercase}h1{max-width:800px;margin-bottom:27px;font-size:clamp(57px,4.8vw,84px);line-height:.91;letter-spacing:-.045em}h1 em{color:var(--caramel);font-style:normal}.hero-lead{max-width:650px;margin:0 0 33px;color:var(--muted);font-size:16px}.hero-photo{position:relative;min-width:0;margin:0;overflow:hidden}.hero-photo:before{content:"";position:absolute;z-index:1;inset:0 auto 0 0;width:140px;background:linear-gradient(90deg,var(--blush),rgba(243,232,225,0))}.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+    .facts{position:relative;z-index:2;width:min(1740px,calc(100% - 60px));min-height:112px;margin:-38px auto 0;padding:0 25px;display:grid;grid-template-columns:repeat(4,1fr) 1.1fr;border-radius:22px;background:var(--paper);box-shadow:var(--shadow)}.facts>div{padding:26px 30px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--line)}.facts small{margin-bottom:8px;color:var(--caramel);font-size:8px;font-weight:600;letter-spacing:.15em;text-transform:uppercase}.facts strong{font-size:12px;font-weight:500;line-height:1.45}.facts>a{margin:22px 0 22px 25px;display:flex;align-items:center;justify-content:center;gap:18px;border-radius:999px;background:var(--cocoa);color:#fff;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
 
-    <style>
-        :root { --bg-sand: #EBE6DD; --bg-card: #EFEAE2; --bg-card-accent: #E5DFD5; --text-charcoal: #2C2825; --text-muted: #615B55; --accent-sage: #828776; --accent-sage-hover: #6E7363; --accent-rose-dark: #A36557; --border-subtle: #D8D1C5; --font-serif: 'Cormorant Garamond', serif; --font-sans: 'Montserrat', sans-serif; }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: var(--font-sans); background-color: var(--bg-sand); color: var(--text-charcoal); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .reports{padding:110px max(30px,calc(50vw - 900px)) 102px}.section-title{max-width:880px;margin:0 auto 58px;text-align:center}.section-title .eyebrow{display:flex;align-items:center;justify-content:center;gap:24px}.section-title .eyebrow:before,.section-title .eyebrow:after{content:"";width:68px;height:1px;background:var(--caramel)}.section-title h2{margin-bottom:21px;font-size:clamp(48px,4.1vw,70px);line-height:.96;letter-spacing:-.035em}.section-title>p:last-child{max-width:735px;margin:0 auto;color:var(--muted);font-size:14px}.reports-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.report-card{min-height:415px;padding:35px 38px 38px;display:grid;grid-template-columns:76px 1fr;grid-template-rows:auto auto 1fr auto;column-gap:27px;border:1px solid var(--line);border-radius:22px;background:var(--paper);box-shadow:0 12px 34px rgba(60,31,19,.04)}.report-card:nth-child(2),.report-card:nth-child(3){background:#f7ece5}.report-icon{grid-row:1/5;width:76px;height:76px;padding:18px;display:grid;place-items:center;border:1px solid var(--caramel);border-radius:50%;color:var(--cocoa)}.report-icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}.report-card>small{margin:5px 0 15px;color:var(--caramel);font-size:9px;font-weight:600;letter-spacing:.15em;text-transform:uppercase}.report-card h3{margin-bottom:16px;font-size:34px;line-height:1}.report-card p{margin:0 0 20px;color:var(--muted);font-size:12px}.report-card ul{margin:0;padding:0;display:grid;gap:9px;list-style:none;color:#675850;font-size:11px}.report-card li{display:flex;gap:9px}.report-card li:before{content:"—";color:var(--caramel)}
 
-        header.site-header { background-color: var(--bg-sand); padding: 18px 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(216, 209, 197, 0.6); box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12); position: sticky; top: 0; z-index: 1000; width: 100%; gap: 20px; }
-        .logo-box { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-charcoal); flex-shrink: 0; }
-        .logo-icon { width: 28px; height: 28px; stroke: var(--text-charcoal); fill: none; stroke-width: 1.5; }
-        .logo-text { display: flex; flex-direction: column; }
-        .logo-title { font-family: var(--font-serif); font-size: 1.45rem; font-weight: 600; letter-spacing: 1.2px; line-height: 1; text-transform: uppercase; white-space: nowrap; }
-        .logo-title sup { font-size: 0.65em; vertical-align: super; font-weight: 500; margin-left: 2px; }
-        .logo-subtitle { font-size: 0.58rem; font-weight: 500; letter-spacing: 1.8px; color: var(--text-muted); margin-top: 3px; text-transform: uppercase; white-space: nowrap; }
-        
-        nav { margin-left: auto; }
-        nav ul { display: flex; list-style: none; gap: 22px; align-items: center; }
-        nav ul li { position: relative; }
-        nav a { text-decoration: none; color: var(--text-charcoal); font-size: 0.66rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; padding: 8px 0; transition: all 0.2s ease; display: inline-block; white-space: nowrap; }
-        nav a:hover, nav a.active { border-bottom: 1.5px solid var(--text-charcoal); }
-        nav .dropdown { position: absolute; top: 100%; left: 0; background-color: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 8px 0; min-width: 200px; box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.25s ease; z-index: 1000; display: flex; flex-direction: column; }
-        nav ul li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
-        nav .dropdown a { padding: 8px 16px; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.8px; display: block; border-bottom: none !important; color: var(--text-charcoal); }
-        nav .dropdown a:hover { background-color: var(--bg-card-accent); color: var(--accent-rose-dark); }
+    .value{padding:96px max(30px,calc(50vw - 900px));display:grid;grid-template-columns:.8fr 1.2fr;gap:86px;align-items:center;background:linear-gradient(135deg,#f4e8e1,#fbf7f2 63%,#efe1d8)}.value-photo{height:500px;margin:0;overflow:hidden;border-radius:24px;box-shadow:var(--shadow)}.value-photo img{width:100%;height:100%;object-fit:cover;object-position:center}.value h2,.experience h2,.quote h2{margin-bottom:23px;font-size:clamp(48px,4.2vw,72px);line-height:.96;letter-spacing:-.035em}.value-copy>p:not(.eyebrow){max-width:750px;color:var(--muted);font-size:14px}.value-list{margin-top:27px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:11px 24px;list-style:none}.value-list li{padding:13px 0;border-bottom:1px solid var(--line);color:#675850;font-size:11px}.value-list li:before{content:"✓";margin-right:10px;color:var(--caramel);font-weight:700}
 
-        .page-hero { background-color: var(--bg-card-accent); padding: 80px 4% 60px 4%; text-align: center; border-bottom: 1px solid var(--border-subtle); }
-        .service-tag { font-size: 0.75rem; font-weight: 700; color: var(--accent-rose-dark); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; display: inline-block; }
-        .page-hero h1 { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 600; color: var(--text-charcoal); line-height: 1.15; margin-bottom: 20px; text-transform: uppercase; max-width: 900px; margin-left: auto; margin-right: auto; }
-        .page-hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 750px; margin: 0 auto; line-height: 1.7; }
+    .experience{padding:90px max(30px,calc(50vw - 900px));display:grid;grid-template-columns:.9fr 1.1fr;gap:100px;align-items:center;background:var(--paper)}.experience-copy>p:not(.eyebrow){max-width:690px;color:var(--muted);font-size:14px}.credentials{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.credential{min-height:145px;padding:25px;border:1px solid var(--line);border-radius:18px;background:var(--ivory)}.credential:nth-child(2),.credential:nth-child(3){background:var(--blush)}.credential span{display:block;margin-bottom:15px;color:var(--caramel);font:600 17px "Cormorant Garamond",Georgia,serif}.credential strong{display:block;font:600 22px/1.08 "Cormorant Garamond",Georgia,serif}.credential small{display:block;margin-top:9px;color:var(--muted);font-size:10px;line-height:1.5}
 
-        .reports-section { max-width: 1100px; margin: 70px auto; padding: 0 4%; }
-        .reports-intro { text-align: center; max-width: 800px; margin: 0 auto 50px auto; }
-        .reports-intro h2 { font-family: var(--font-serif); font-size: 2.2rem; color: var(--text-charcoal); margin-bottom: 15px; text-transform: uppercase; }
-        .reports-intro p { color: var(--text-muted); font-size: 1rem; line-height: 1.7; }
-        .reports-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-        .report-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 40px 35px; transition: box-shadow 0.3s ease; }
-        .report-card:hover { box-shadow: 0 10px 25px rgba(44, 40, 37, 0.06); border-color: var(--accent-sage); }
-        .report-card svg { color: var(--accent-sage); margin-bottom: 20px; }
-        .report-card h3 { font-family: var(--font-serif); font-size: 1.6rem; color: var(--text-charcoal); margin-bottom: 15px; text-transform: uppercase; line-height: 1.2; }
-        .report-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
-        .report-card ul { list-style: none; }
-        .report-card ul li { font-size: 0.85rem; color: var(--text-charcoal); padding: 8px 0; border-bottom: 1px dashed var(--border-subtle); display: flex; align-items: center; gap: 10px; }
-        .report-card ul li:last-child { border-bottom: none; }
-        .report-card ul li::before { content: '→'; color: var(--accent-rose-dark); font-weight: bold; }
+    .quote{padding:96px max(30px,calc(50vw - 900px));display:grid;grid-template-columns:.85fr 1.15fr;gap:100px;align-items:start;background:var(--cocoa);color:#fff}.quote-copy{padding-top:20px}.quote-copy .eyebrow{color:var(--sand)}.quote-copy h2{max-width:680px}.quote-copy>p:not(.eyebrow){max-width:580px;color:rgba(255,255,255,.72);font-size:13px}.privacy-note{margin-top:27px;padding-top:23px;border-top:1px solid rgba(255,255,255,.24);font-size:11px;color:rgba(255,255,255,.67)}.quote-form{padding:39px;border-radius:24px;background:var(--paper);color:var(--espresso);box-shadow:0 22px 50px rgba(37,19,12,.18)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}.form-group{margin-bottom:19px}.form-group label{display:block;margin-bottom:8px;font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}.form-control{width:100%;min-height:52px;padding:13px 15px;border:1px solid var(--line);border-radius:10px;background:#fff;font:400 12px "Montserrat",Arial,sans-serif;color:var(--espresso)}textarea.form-control{min-height:105px;resize:vertical}.form-control:focus{outline:2px solid rgba(170,127,99,.22);border-color:var(--caramel)}.quote-form .pill-button{width:100%;margin-top:5px}.form-note{margin:14px 0 0;text-align:center;color:var(--muted);font-size:9px}
 
-        .quote-section { background-color: var(--bg-card-accent); border-top: 1px solid var(--border-subtle); padding: 80px 4%; }
-        .quote-container { max-width: 650px; margin: 0 auto; background-color: var(--bg-sand); padding: 40px; border-radius: 8px; border: 1px solid var(--border-subtle); box-shadow: 0 15px 35px rgba(44, 40, 37, 0.05); }
-        .quote-container h3 { font-family: var(--font-serif); font-size: 1.8rem; text-align: center; text-transform: uppercase; margin-bottom: 10px; }
-        .quote-container p { text-align: center; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 30px; }
+    footer{padding:78px max(30px,calc(50vw - 900px)) 28px;background:var(--ivory);border-top:1px solid var(--line)}.footer-grid{display:grid;grid-template-columns:1.65fr 1fr 1fr 1.3fr;gap:58px}.brand-footer{margin-bottom:22px}.footer-grid>div:first-child p{max-width:340px;color:var(--muted);font-size:12px}.footer-links{display:flex;flex-direction:column;gap:13px;color:var(--muted);font-size:12px}.footer-links strong{margin-bottom:8px;color:var(--espresso);font:600 24px "Cormorant Garamond",Georgia,serif}.footer-links a:hover{color:var(--cocoa)}.footer-bottom{margin-top:58px;padding-top:22px;display:flex;justify-content:space-between;border-top:1px solid var(--line);color:#8d7e76;font-size:10px}
 
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-        .form-control { width: 100%; padding: 14px; border: 1px solid var(--border-subtle); border-radius: 4px; background: #FFFFFF; font-family: inherit; font-size: 0.9rem; transition: border-color 0.2s ease; }
-        .form-control:focus { border-color: var(--accent-sage); outline: none; }
-        
-        .btn-submit { width: 100%; background-color: var(--accent-sage); color: #FFFFFF; padding: 16px; border: none; border-radius: 4px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: background-color 0.2s ease; margin-top: 10px; }
-        .btn-submit:hover { background-color: var(--accent-sage-hover); }
-
-        footer { background-color: var(--bg-sand); border-top: 1px solid var(--border-subtle); padding: 50px 6% 30px 6%; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 35px; max-width: 1200px; margin: 0 auto 40px auto; }
-        .footer-col h5 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--text-charcoal); margin-bottom: 15px; text-transform: uppercase; }
-        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-        .footer-col a { text-decoration: none; color: var(--text-muted); font-size: 0.8rem; transition: color 0.2s; }
-        .footer-col a:hover { color: var(--accent-rose-dark); }
-        .footer-bottom { border-top: 1px solid var(--border-subtle); padding-top: 25px; text-align: center; font-size: 0.75rem; color: var(--text-muted); max-width: 1200px; margin: 0 auto; }
-
-        @media (max-width: 900px) { .reports-grid { grid-template-columns: 1fr; } }
-        @media (max-width: 768px) { header.site-header { flex-direction: column; gap: 15px; } nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; } .page-hero h1 { font-size: 2.2rem; } .footer-grid { grid-template-columns: 1fr; } .quote-container { padding: 30px 20px; } }
-    </style>
+    @media(max-width:1250px){.site-header{min-height:108px}.brand-mark{width:62px;height:62px;flex-basis:62px}.brand-copy strong{font-size:27px}.desktop-nav{gap:20px}.header-cta{padding-inline:20px}.report-card{grid-template-columns:62px 1fr;padding-inline:28px}.report-icon{width:62px;height:62px}.experience{gap:60px}}
+    @media(max-width:1030px){.desktop-nav,.header-cta{display:none}.menu-button{display:inline-flex;margin-left:auto;align-items:center;gap:9px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.menu-button span{font-size:20px}.mobile-nav:target{position:fixed;inset:0;z-index:20;padding:40px;display:flex;flex-direction:column;gap:24px;background:var(--espresso);color:#fff;font:600 31px "Cormorant Garamond",Georgia,serif}.mobile-close{align-self:flex-end;font:300 43px Arial,sans-serif}.page-hero{grid-template-columns:1fr 1fr}.facts{grid-template-columns:1fr 1fr}.facts>a{grid-column:1/-1;min-height:66px;margin:14px}.value{grid-template-columns:1fr 1fr;gap:48px}.experience{grid-template-columns:1fr 1fr;gap:45px}.credentials{grid-template-columns:1fr}.quote{gap:55px}.footer-grid{grid-template-columns:1.5fr 1fr 1fr}.footer-grid>div:last-child{grid-column:1/-1}}
+    @media(max-width:760px){.site-header{min-height:82px;padding:0 20px}.brand{gap:11px}.brand-mark{width:48px;height:48px;flex-basis:48px}.brand-copy strong{font-size:22px}.brand-copy small{margin-top:7px;font-size:7px}.page-hero{grid-template-columns:1fr}.hero-copy{min-height:455px;padding:54px 23px 60px}.eyebrow{font-size:9px;margin-bottom:22px}h1{font-size:clamp(45px,13vw,58px)}.hero-lead{font-size:14px}.hero-photo{min-height:390px}.hero-photo:before{inset:0 0 auto;width:auto;height:80px;background:linear-gradient(180deg,var(--blush),rgba(243,232,225,0))}.facts{width:calc(100% - 28px);margin-top:-20px;padding:10px;grid-template-columns:1fr 1fr}.facts>div{padding:19px 15px}.facts>div:nth-child(2),.facts>div:nth-child(4){border-right:0}.facts>a{margin:9px;min-height:62px}.reports{padding:76px 22px}.section-title{margin-bottom:42px}.section-title h2{font-size:44px}.section-title .eyebrow{gap:12px}.section-title .eyebrow:before,.section-title .eyebrow:after{width:30px}.reports-grid{grid-template-columns:1fr}.report-card{min-height:auto;grid-template-columns:62px 1fr;padding:28px 24px}.value{padding:72px 22px;grid-template-columns:1fr;gap:42px}.value-photo{height:350px}.value h2,.experience h2,.quote h2{font-size:45px}.value-list{grid-template-columns:1fr}.experience{padding:72px 22px;grid-template-columns:1fr;gap:42px}.credentials{grid-template-columns:1fr 1fr}.quote{padding:72px 22px;grid-template-columns:1fr;gap:36px}.quote-form{padding:28px 22px}.form-row{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child,.footer-grid>div:last-child{grid-column:1/-1}}
+    @media(max-width:480px){.menu-button{font-size:0}.menu-button span{font-size:22px}.facts{grid-template-columns:1fr}.facts>div{border-right:0;border-bottom:1px solid var(--line)}.report-card{display:block}.report-icon{margin-bottom:25px}.credentials{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child,.footer-grid>div:last-child{grid-column:auto}.footer-bottom{flex-direction:column;gap:10px}}
+  </style>
 </head>
 <body>
+  <header class="site-header"><a class="brand" href="/" aria-label="Ágora Laboral 360°, inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 120 120" focusable="false"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M60 8a52 52 0 0 1 47 30" class="arc arc-one"/><path d="M108 48a52 52 0 0 1-20 52" class="arc arc-two"/><path d="M78 108a52 52 0 0 1-53-13" class="arc arc-one"/><path d="M17 85A52 52 0 0 1 42 11" class="arc arc-three"/><path d="M32 91 59 24 87 91M43 67h32" class="letter-a"/><path d="M27 76c13-18 25 14 40-3 10-12 20-13 29-5" class="swoop"/><circle cx="60" cy="8" r="3.8" class="node node-one"/><circle cx="108" cy="43" r="3.8" class="node node-two"/><circle cx="84" cy="103" r="3.8" class="node node-three"/><circle cx="20" cy="88" r="3.8" class="node node-four"/></g></svg></span><span class="brand-copy"><strong>ÁGORA</strong><small>LABORAL 360°</small></span></a><nav class="desktop-nav" aria-label="Navegación principal"><a href="/">Inicio</a><a href="/servicios/" aria-current="page">Servicios</a><a href="/#especializacion">Especialización</a><a href="/#metodo">Metodología</a><a href="/#escuela">Escuela</a><a href="/#contacto">Contacto</a></nav><a class="header-cta" href="#solicitud">Solicitar evaluación</a><a class="menu-button" href="#menu-movil" aria-label="Abrir menú">Menú <span>☰</span></a></header>
+  <nav class="mobile-nav" id="menu-movil" aria-label="Navegación móvil"><a class="mobile-close" href="#inicio" aria-label="Cerrar menú">×</a><a href="/">Inicio</a><a href="/servicios/">Servicios</a><a href="/#especializacion">Especialización</a><a href="/#metodo">Metodología</a><a href="/#escuela">Escuela</a><a href="#solicitud">Contacto</a></nav>
 
-    <header class="site-header">
-        <a href="/" class="logo-box">
-            <svg class="logo-icon" viewBox="0 0 24 24"><path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" /><path d="M12 22V10" /></svg>
-            <div class="logo-text">
-                <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
-                <span class="logo-subtitle">Investigación &amp; Informes Técnicos</span>
-            </div>
-        </a>
+  <main>
+    <section class="page-hero" id="inicio"><div class="hero-copy"><p class="eyebrow">Informes especializados</p><h1>Informes técnicos y <em>peritaje social y laboral.</em></h1><p class="hero-lead">Análisis profesional y documentación fundada para apoyar decisiones institucionales, administrativas y judiciales.</p><a class="pill-button" href="#informes">Conocer los informes <span>→</span></a></div><figure class="hero-photo"><img src="/hero-escritorio-agora.png" alt="Profesional analizando documentos para un informe técnico"></figure></section>
+    <section class="facts" aria-label="Características del servicio"><div><small>Producto</small><strong>Informe técnico fundado</strong></div><div><small>Especialidad</small><strong>Peritaje social y laboral</strong></div><div><small>Metodología</small><strong>Análisis documentado</strong></div><div><small>Cobertura</small><strong>Atención en Chile</strong></div><a href="#solicitud">Evaluación inicial <span>→</span></a></section>
 
-        <nav>
-            <ul>
-                <li><a href="/">Inicio</a></li>
-                <li>
-                    <a href="/servicios/" class="active">Servicios</a>
-                    <div class="dropdown">
-                        <a href="/servicios/investigacion-laboral/">01 - Investigación Laboral</a>
-                        <a href="/servicios/informes-tecnicos/">02 - Informes Técnicos</a>
-                        <a href="/servicios/auditoria-investigaciones/">03 - Auditoría de Expedientes</a>
-                    </div>
-                </li>
-                <li><a href="/academia/">Escuela</a></li>
-                <li><a href="/recursos/">Recursos</a></li>
-                <li><a href="/contacto/">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <section class="reports" id="informes"><div class="section-title"><p class="eyebrow">Áreas de análisis</p><h2>Documentación técnica para decisiones complejas.</h2><p>Cada informe responde a una pregunta técnica y explicita las fuentes revisadas, el método utilizado, el análisis efectuado y los límites de sus conclusiones.</p></div><div class="reports-grid">
+      <article class="report-card"><span class="report-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="18" cy="16" r="8"/><path d="M5 41c1-9 6-14 13-14s12 5 13 14M30 12c6 0 10 4 10 10M33 28c6 1 9 5 10 13"/></svg></span><small>Área 01</small><h3>Informes sociales y socioeconómicos</h3><p>Evaluación del contexto personal, familiar, social y económico relevante para una decisión institucional o judicial.</p><ul><li>Levantamiento y revisión de antecedentes</li><li>Entrevista social y análisis contextual</li><li>Conclusiones y limitaciones explícitas</li></ul></article>
+      <article class="report-card"><span class="report-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M13 7h17l7 7v27H13zM30 7v8h7M19 23h12M19 29h12M19 35h8"/></svg></span><small>Área 02</small><h3>Peritaje social y laboral</h3><p>Análisis especializado de antecedentes sociales y laborales para aportar comprensión técnica en procedimientos administrativos o judiciales.</p><ul><li>Pregunta pericial delimitada</li><li>Metodología y fuentes identificadas</li><li>Informe profesional fundado</li></ul></article>
+      <article class="report-card"><span class="report-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 40h32M13 35V21M24 35V11M35 35V17M9 17l12-8 10 4 8-7"/></svg></span><small>Área 03</small><h3>Informes de brecha y equidad</h3><p>Análisis técnico de antecedentes organizacionales vinculados con igualdad de remuneraciones, participación y brechas de género.</p><ul><li>Revisión de información disponible</li><li>Identificación de brechas relevantes</li><li>Documentación de hallazgos y recomendaciones</li></ul></article>
+      <article class="report-card"><span class="report-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 5 40 11v11c0 10-6 17-16 21C14 39 8 32 8 22V11z"/><path d="m16 24 5 5 11-12"/></svg></span><small>Área 04</small><h3>Revisión técnica de expedientes</h3><p>Control metodológico y documental de investigaciones internas antes de su cierre, presentación o utilización institucional.</p><ul><li>Coherencia del procedimiento</li><li>Trazabilidad de las actuaciones</li><li>Consistencia entre evidencia y conclusiones</li></ul></article>
+    </div></section>
 
-    <section class="page-hero">
-        <span class="service-tag">Alianza Estratégica Legal</span>
-        <h1>Informes Técnicos y Peritaje Laboral</h1>
-        <p>Proporcionamos a Estudios Jurídicos y Fiscalías Corporativas el respaldo técnico, social y metodológico necesario para sustentar evidencia en litigios laborales y auditorías de compliance normativo.</p>
-    </section>
+    <section class="value"><figure class="value-photo"><img src="/equipo-agora-oficina.jpg" alt="Profesionales dialogando en una oficina luminosa"></figure><div class="value-copy"><p class="eyebrow">Nuestro estándar</p><h2>Un informe debe permitir comprender cómo se llegó a cada conclusión.</h2><p>No se trata solo de reunir antecedentes. El valor técnico está en ordenarlos, analizar su pertinencia, explicar el razonamiento y distinguir claramente entre hechos, interpretaciones y conclusiones.</p><ul class="value-list"><li>Pregunta técnica definida</li><li>Fuentes identificadas</li><li>Metodología explícita</li><li>Análisis contextual</li><li>Conclusiones fundadas</li><li>Limitaciones reconocidas</li></ul></div></section>
 
-    <section class="reports-section">
-        <div class="reports-intro">
-            <h2>Evidencia Técnica para Litigios y Cumplimiento</h2>
-            <p>Traducimos la realidad socio-laboral en dictámenes periciales objetivos. Nuestro trabajo fortalece el acervo probatorio de los abogados defensores o demandantes mediante metodologías validadas ante tribunales y la Dirección del Trabajo.</p>
-        </div>
+    <section class="experience"><div class="experience-copy"><p class="eyebrow">Respaldo profesional</p><h2>Formación social, jurídica y pericial.</h2><p>La elaboración de informes integra experiencia en intervención social, coordinación institucional y análisis de situaciones complejas, junto con formación de posgrado en intervención familiar y derecho de familia.</p></div><div class="credentials"><article class="credential"><span>01</span><strong>Trabajo Social</strong><small>Análisis profesional de contextos personales, familiares y laborales.</small></article><article class="credential"><span>02</span><strong>Pericia Social</strong><small>Formación especializada en evaluación e informes periciales.</small></article><article class="credential"><span>03</span><strong>Intervención Familiar</strong><small>Formación de magíster para el abordaje de situaciones complejas.</small></article><article class="credential"><span>04</span><strong>Derecho de Familia</strong><small>Formación de magíster y comprensión del contexto jurídico.</small></article></div></section>
 
-        <div class="reports-grid">
-            <div class="report-card">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                <h3>Informes Sociales y Socioeconómicos</h3>
-                <p>Levantamiento técnico para tribunales laborales y de familia. Evaluación del impacto psicosocial, daño moral y contexto socioeconómico del trabajador/a.</p>
-                <ul>
-                    <li>Acreditación de menoscabo laboral.</li>
-                    <li>Evaluación en casos de vulneración de derechos.</li>
-                    <li>Análisis socioeconómico para tribunales.</li>
-                </ul>
-            </div>
-            <div class="report-card">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-                <h3>Informe Pericial Ley Karin (21.643)</h3>
-                <p>Dictámenes especializados para presentar ante la DT o tribunales en casos de acoso sexual, acoso laboral o violencia en el trabajo. Elaborados bajo estricto debido proceso.</p>
-                <ul>
-                    <li>Reconstrucción técnica de la denuncia.</li>
-                    <li>Validación de perspectiva de género.</li>
-                    <li>Auditoría técnica de investigaciones previas viciadas.</li>
-                </ul>
-            </div>
-            <div class="report-card">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
-                <h3>Informe de Brecha y Equidad (Ley 21.828)</h3>
-                <p>Auditoría y análisis técnico de compensaciones para dar cumplimiento a la nueva normativa de igualdad de remuneraciones entre hombres y mujeres.</p>
-                <ul>
-                    <li>Análisis objetivo del valor del trabajo.</li>
-                    <li>Detección de brechas salariales de género.</li>
-                    <li>Documentación técnica para evitar multas DT.</li>
-                </ul>
-            </div>
-            <div class="report-card">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                <h3>Auditoría de Investigaciones Internas</h3>
-                <p>Revisión externa y control de calidad de expedientes instruidos por la empresa, previo a su remisión a entidades fiscalizadoras o uso en juicios laborales.</p>
-                <ul>
-                    <li>Detección temprana de vicios procedimentales.</li>
-                    <li>Mitigación de riesgo de demanda por Tutela Laboral.</li>
-                    <li>Validación de conclusiones y toma de declaraciones.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <section class="quote" id="solicitud"><div class="quote-copy"><p class="eyebrow">Solicitud de evaluación</p><h2>Conversemos sobre el informe que necesita.</h2><p>Envíenos los antecedentes generales. Revisaremos la pregunta técnica, el alcance, la documentación disponible y la factibilidad del encargo.</p><p class="privacy-note">No adjunte información sensible ni identifique a terceras personas en este primer contacto.</p></div><form class="quote-form" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3"><input type="hidden" name="subject" value="Cotización: Informe Técnico / Peritaje"><input type="hidden" name="redirect" value="https://agoralaboral.cl/servicios/informes-tecnicos/"><div class="form-row"><div class="form-group"><label for="nombre">Nombre</label><input id="nombre" type="text" name="nombre" class="form-control" placeholder="Nombre del solicitante" required></div><div class="form-group"><label for="empresa">Organización o estudio</label><input id="empresa" type="text" name="empresa" class="form-control" placeholder="Nombre de la organización" required></div></div><div class="form-group"><label for="email">Correo profesional</label><input id="email" type="email" name="email" class="form-control" placeholder="nombre@organizacion.cl" required></div><div class="form-group"><label for="tipo">Tipo de informe</label><select id="tipo" name="tipo_informe" class="form-control"><option value="Informe social o socioeconómico">Informe social o socioeconómico</option><option value="Peritaje social y laboral">Peritaje social y laboral</option><option value="Informe de brecha y equidad">Informe de brecha y equidad</option><option value="Revisión técnica de expediente">Revisión técnica de expediente</option><option value="Otro">Otro / Necesito orientación</option></select></div><div class="form-group"><label for="mensaje">Necesidad general</label><textarea id="mensaje" name="mensaje" class="form-control" placeholder="Describa brevemente el objetivo del informe, sin incluir datos personales sensibles."></textarea></div><button type="submit" class="pill-button">Solicitar evaluación <span>→</span></button><p class="form-note">La información será utilizada únicamente para responder esta solicitud.</p></form></section>
+  </main>
 
-    <section class="quote-section">
-        <div class="quote-container">
-            <h3>Solicitar Evaluación Pericial</h3>
-            <p>Formulario exclusivo para Estudios Jurídicos y Fiscalías Corporativas. Envíenos los antecedentes generales para evaluar factibilidad y plazos.</p>
-
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="89805d88-75bd-4cde-84ad-3252b6b718f3">
-                <input type="hidden" name="subject" value="Cotización: Informe Técnico / Peritaje">
-                <input type="hidden" name="redirect" value="https://agoralaboral.cl/servicios/informes-tecnicos/">
-
-                <div class="form-group">
-                    <label>Nombre del Solicitante</label>
-                    <input type="text" name="nombre" class="form-control" placeholder="Ej. Ana Silva" required>
-                </div>
-                <div class="form-group">
-                    <label>Estudio Jurídico o Empresa</label>
-                    <input type="text" name="empresa" class="form-control" placeholder="Nombre de la firma o corporación" required>
-                </div>
-                <div class="form-group">
-                    <label>Correo Profesional</label>
-                    <input type="email" name="email" class="form-control" placeholder="contacto@estudiojuridico.cl" required>
-                </div>
-                <div class="form-group">
-                    <label>Tipo de Informe Requerido</label>
-                    <select name="tipo_informe" class="form-control">
-                        <option value="Informe Socioeconómico / Social">Informe Socioeconómico / Social</option>
-                        <option value="Peritaje Ley Karin (21.643)">Peritaje Ley Karin (21.643)</option>
-                        <option value="Informe de Brecha y Equidad (Ley 21.828)">Informe de Brecha (Ley 21.828)</option>
-                        <option value="Auditoría de Expediente">Auditoría de Expediente Interno</option>
-                        <option value="Otro">Otro / Necesito orientación</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn-submit">Solicitar Evaluación Técnica →</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <span class="logo-title" style="font-size:1.4rem;">ÁGORA LABORAL <sup>360°</sup></span>
-                <p style="font-size:0.8rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados. Rigor e imparcialidad.</p>
-            </div>
-            <div class="footer-col">
-                <h5>Servicios</h5>
-                <ul>
-                    <li><a href="/servicios/investigacion-laboral/">Investigación Externa</a></li>
-                    <li><a href="/servicios/informes-tecnicos/">Informes y Peritajes</a></li>
-                    <li><a href="/servicios/auditoria-investigaciones/">Auditoría de Expedientes</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Plataforma</h5>
-                <ul>
-                    <li><a href="/academia/">Escuela de Investigadores</a></li>
-                    <li><a href="/recursos/">Recursos y Guías</a></li>
-                    <li><a href="/diagnostico/" style="color: var(--accent-rose-dark); font-weight: 700;">Diagnóstico Inicial Gratis →</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Contacto</h5>
-                <ul>
-                    <li><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a></li>
-                    <li><a href="tel:+56900000000">+56 9 0000 0000</a></li>
-                    <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>&copy; 2026 Ágora Laboral 360°. Investigación e Informes Técnicos. Todos los derechos reservados.</span>
-        </div>
-    </footer>
+  <footer><div class="footer-grid"><div><a class="brand brand-footer" href="/"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 120 120" focusable="false"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M60 8a52 52 0 0 1 47 30" class="arc arc-one"/><path d="M108 48a52 52 0 0 1-20 52" class="arc arc-two"/><path d="M78 108a52 52 0 0 1-53-13" class="arc arc-one"/><path d="M17 85A52 52 0 0 1 42 11" class="arc arc-three"/><path d="M32 91 59 24 87 91M43 67h32" class="letter-a"/><path d="M27 76c13-18 25 14 40-3 10-12 20-13 29-5" class="swoop"/><circle cx="60" cy="8" r="3.8" class="node node-one"/><circle cx="108" cy="43" r="3.8" class="node node-two"/><circle cx="84" cy="103" r="3.8" class="node node-three"/><circle cx="20" cy="88" r="3.8" class="node node-four"/></g></svg></span><span class="brand-copy"><strong>ÁGORA</strong><small>LABORAL 360°</small></span></a><p>Investigación laboral e informes técnicos especializados.</p></div><div class="footer-links"><strong>Servicios</strong><a href="/servicios/investigacion-laboral/">Investigaciones</a><a href="/servicios/informes-tecnicos/">Informes técnicos</a><a href="/servicios/auditoria-investigaciones/">Revisión técnica</a></div><div class="footer-links"><strong>Ágora Laboral</strong><a href="/#especializacion">Especialización</a><a href="/#metodo">Metodología</a><a href="/#escuela">Escuela</a></div><div class="footer-links"><strong>Contacto</strong><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a><span>Chile · Atención presencial y remota</span></div></div><div class="footer-bottom"><span>© 2026 Ágora Laboral 360°</span><span>Investigación e Informes Técnicos</span></div></footer>
 </body>
 </html>
