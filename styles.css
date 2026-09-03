@@ -83,7 +83,7 @@ h1, h2, h3 { margin-top: 0; font-family: "Cormorant Garamond", Georgia, serif; f
 
 .hero {
   position: relative;
-  min-height: 685px;
+  min-height: 620px;
   display: grid;
   grid-template-columns: 48% 52%;
   background: var(--blush);
@@ -91,7 +91,7 @@ h1, h2, h3 { margin-top: 0; font-family: "Cormorant Garamond", Georgia, serif; f
 .hero-copy {
   position: relative;
   z-index: 2;
-  padding: 92px 30px 72px max(30px, calc(50vw - 900px));
+  padding: 62px 30px 58px max(30px, calc(50vw - 900px));
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -184,7 +184,7 @@ h1 em { color: var(--caramel); font-style: normal; }
 }
 .section-intro > p:last-child { max-width: 650px; margin-bottom: 0; color: #76675f; font-size: 14px; }
 
-.services { background: var(--ivory); }
+.services { padding-top: 84px; padding-bottom: 0; background: var(--ivory); }
 .services-title {
   margin: 0 auto 68px;
   display: flex;
@@ -227,7 +227,7 @@ h1 em { color: var(--caramel); font-style: normal; }
 .service-links i { align-self: end; font-style: normal; font-size: 11px; font-weight: 500; letter-spacing: .02em; white-space: nowrap; }
 
 .specialty { background: var(--ivory); }
-.about-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 92px; align-items: center; border-top: 1px solid var(--line); }
+.about-grid { padding-top: 68px; padding-bottom: 88px; display: grid; grid-template-columns: 1.35fr .65fr; gap: 92px; align-items: center; }
 .specialty-copy { padding-right: 35px; }
 .specialty-copy > p:not(.eyebrow) { max-width: 980px; color: #76675f; font-size: 14px; }
 .text-link {
@@ -331,7 +331,7 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
   .brand-copy strong { font-size: 22px; }
   .brand-copy small { margin-top: 7px; font-size: 7px; }
   .hero { min-height: auto; grid-template-columns: 1fr; }
-  .hero-copy { min-height: 420px; padding: 50px 24px 54px; }
+  .hero-copy { min-height: 390px; padding: 38px 24px 48px; }
   h1 { width: 100%; font-size: clamp(43px, 12vw, 55px); line-height: .95; }
   h1 span { white-space: normal; }
   .hero-lead { font-size: 14px; }
@@ -344,6 +344,8 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
   .brief-bar strong { font-size: 12px; }
   .brief-bar > a { margin: 14px; }
   .section-shell { padding: 85px 22px; }
+  .services.section-shell { padding-top: 62px; padding-bottom: 0; }
+  .about-grid.section-shell { padding-top: 48px; padding-bottom: 68px; }
   .section-intro h2, .specialty h2, .school h2, .contact h2 { font-size: 43px; }
   .services-title { gap: 14px; font-size: 9px; }
   .services-title::before, .services-title::after { width: 33px; }
@@ -366,7 +368,7 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
 @media (max-width: 480px) {
   .menu-button { font-size: 0; }
   .menu-button span { font-size: 22px; }
-  .hero-copy { min-height: 400px; padding-top: 45px; }
+  .hero-copy { min-height: 370px; padding-top: 32px; }
   .eyebrow { margin-bottom: 25px; font-size: 9px; }
   h1 { font-size: clamp(39px, 11.5vw, 49px); }
   .hero-photo { min-height: 330px; }
