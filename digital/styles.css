@@ -18,6 +18,7 @@
 .image-frame img{object-position:center}
 .button-salmon{background:var(--salmon);color:var(--teal-deep);box-shadow:0 10px 25px #f3afa366}
 .button-salmon:hover{background:#ef9f92;color:var(--teal-deep)}
+.site-header{background:var(--turquoise-light);border-bottom:1px solid #b9ddd6;box-shadow:0 0 0 100vmax var(--turquoise-light),0 8px 24px #174b4712;clip-path:inset(0 -100vmax)}
 @media (width<=820px){
   .float-card{bottom:16px}
   .search-needs{grid-template-columns:1fr 1fr}
