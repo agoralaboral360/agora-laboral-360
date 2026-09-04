@@ -51,6 +51,21 @@
       .page-hero{min-height:600px}.hero-copy{padding:72px 46px}.hero-photo{min-height:600px}
       .facts div,.facts>a{padding:23px 22px}
     }
+
+    /* Tamaño definitivo de botones, franja y separación */
+    .hero-copy .pill-button{min-width:250px;height:58px;min-height:58px;max-height:58px;padding:0 24px;font-size:11px}
+    @media(min-width:1251px){
+      .facts{height:110px;min-height:110px;max-height:110px;padding:12px 16px;align-items:center;border-radius:22px}
+      .facts>div{height:86px;padding:12px 24px;display:flex;flex-direction:column;justify-content:center}
+      .facts>a{width:calc(100% - 16px);height:58px;min-height:58px;max-height:58px;margin-left:16px;padding:0 22px;border:0;border-radius:999px;justify-content:center}
+      .review{padding-top:52px}
+    }
+    @media(max-width:1250px) and (min-width:901px){
+      .facts{height:auto;padding:12px 16px;align-items:center}
+      .facts>div{min-height:76px;padding:12px 22px}
+      .facts>a{height:58px;min-height:58px;max-height:58px;margin:12px 0 0;padding:0 22px;border-radius:999px}
+      .review{padding-top:52px}
+    }
   </style>
 </head>
 <body>
