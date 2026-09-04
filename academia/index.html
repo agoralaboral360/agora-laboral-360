@@ -23,6 +23,30 @@
     @media(max-width:1250px){.site-header{min-height:125px}.brand-mark{width:75px;height:75px}.brand-copy strong{font-size:32px}.desktop-nav{gap:19px}.desktop-nav a{font-size:11px}.header-cta{min-width:auto;padding:17px 21px;font-size:11px}.facts{grid-template-columns:repeat(4,1fr)}.facts>a{grid-column:1/-1;justify-content:center}.audience-grid,.experience-grid{grid-template-columns:1fr 1fr}.audience-card:nth-child(2),.credential:nth-child(2){border-right:0}.audience-card:nth-child(-n+2),.credential:nth-child(-n+2){border-bottom:1px solid var(--line)}}
     @media(max-width:900px){.site-header{min-height:94px;padding:12px 20px}.brand{gap:10px}.brand-mark{width:62px;height:62px}.brand-copy strong{font-size:25px}.brand-copy small{margin-top:7px;font-size:8px}.desktop-nav,.header-cta{display:none}.menu-button{margin-left:auto;display:flex;align-items:center;gap:10px;text-decoration:none;text-transform:uppercase;font-size:11px;font-weight:700}.mobile-nav:target{display:flex}.mobile-nav{position:fixed;inset:0;z-index:100;background:var(--espresso);color:#fff;padding:80px 35px 35px;flex-direction:column;gap:25px}.mobile-nav a{font:500 35px var(--serif);text-decoration:none}.mobile-close{position:absolute;top:20px;right:30px;font-size:45px!important}.page-hero{grid-template-columns:1fr}.hero-copy{padding:70px 30px}.hero-photo{min-height:520px}.facts{margin:0;border-radius:0;grid-template-columns:1fr 1fr}.facts div{border-bottom:1px solid var(--line)}.facts div:nth-child(even){border-right:0}.audience{padding:90px 25px 70px}.curriculum{padding:90px 25px}.curriculum-header,.experience-header{grid-template-columns:1fr;gap:30px}.method{grid-template-columns:1fr}.method-photo{height:520px}.experience{padding:90px 25px}.interest{grid-template-columns:1fr;padding:90px 25px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
     @media(max-width:600px){.brand-mark{width:55px;height:55px}.brand-copy strong{font-size:22px}.page-hero{min-height:auto}.hero-copy h1{font-size:52px}.hero-photo{min-height:410px}.facts{grid-template-columns:1fr}.facts div{border-right:0}.section-heading h2,.curriculum-header h2,.method-copy h2,.experience h2,.interest-copy h2{font-size:45px}.audience-grid,.experience-grid,.modules{grid-template-columns:1fr}.audience-card,.audience-card:nth-child(2),.credential,.credential:nth-child(2){border-right:0;border-bottom:1px solid var(--line)}.audience-card{min-height:auto}.audience-card h3{margin-top:38px}.module{padding:32px 26px}.method-photo{height:390px}.method-copy{padding:70px 25px}.experience-header{margin-bottom:40px}.form-row{grid-template-columns:1fr;gap:0}.footer-grid{grid-template-columns:1fr;gap:42px}.footer-grid>div:first-child{grid-column:auto}.footer-bottom{flex-direction:column;gap:8px}.pill-button{min-width:0;width:100%}}
+
+    /* Corrección de ancho, botones y separación vertical */
+    html,body{max-width:100%;overflow-x:hidden}
+    .site-header,.page-hero,.facts,.audience,.curriculum,.method,.experience,.interest,footer{max-width:100%}
+    .hero-copy .pill-button{min-width:250px;height:58px;min-height:58px;max-height:58px;padding:0 24px;font-size:11px}
+    @media(min-width:1251px){
+      .facts{height:110px;min-height:110px;max-height:110px;padding:12px 16px;align-items:center;grid-template-columns:repeat(4,minmax(0,1fr)) minmax(230px,280px);border-radius:22px}
+      .facts>div{height:86px;min-width:0;padding:12px 24px;display:flex;flex-direction:column;justify-content:center}
+      .facts>a{width:calc(100% - 16px);height:58px;min-height:58px;max-height:58px;margin-left:16px;padding:0 22px;border:0;border-radius:999px;justify-content:center}
+      .audience{padding-top:52px}
+    }
+    @media(max-width:1600px) and (min-width:1251px){
+      .site-header{min-height:118px;padding:18px 30px;gap:22px}
+      .brand{gap:14px}.brand-mark{width:72px;height:72px}.brand-copy strong{font-size:30px}.brand-copy small{margin-top:8px;font-size:9px}
+      .desktop-nav{gap:20px}.desktop-nav a{font-size:11px}
+      .header-cta{min-width:205px;padding:16px 19px;font-size:10px}
+      .page-hero{min-height:600px}.hero-copy{padding:72px 46px}.hero-photo{min-height:600px}
+    }
+    @media(max-width:1250px) and (min-width:901px){
+      .facts{height:auto;padding:12px 16px;align-items:center}
+      .facts>div{min-height:76px;padding:12px 22px}
+      .facts>a{height:58px;min-height:58px;max-height:58px;margin:12px 0 0;padding:0 22px;border-radius:999px}
+      .audience{padding-top:52px}
+    }
   </style>
 </head>
 <body>
