@@ -1,256 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muestra Manual de Entrevistas | Ágora Laboral 360°</title>
-    <meta name="description" content="Guía de conducción de entrevistas técnicas sin revictimización bajo la Ley Karin (N.° 21.643).">
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --bg-sand: #EBE6DD;           
-            --bg-card: #EFEAE2;           
-            --bg-card-accent: #E5DFD5;    
-            --text-charcoal: #2C2825;     
-            --text-muted: #615B55;        
-            --accent-sage: #828776;       
-            --accent-sage-hover: #6E7363;
-            --accent-rose-dark: #A36557;  
-            --border-subtle: #D8D1C5;     
-            --font-serif: 'Cormorant Garamond', serif;
-            --font-sans: 'Montserrat', sans-serif;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: var(--font-sans); background-color: var(--bg-sand); color: var(--text-charcoal); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-
-        header.site-header { background-color: var(--bg-sand); padding: 18px 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(216, 209, 197, 0.6); box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12); position: sticky; top: 0; z-index: 1000; width: 100%; gap: 20px; }
-        .logo-box { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-charcoal); flex-shrink: 0; }
-        .logo-icon { width: 28px; height: 28px; stroke: var(--text-charcoal); fill: none; stroke-width: 1.5; }
-        .logo-text { display: flex; flex-direction: column; }
-        .logo-title { font-family: var(--font-serif); font-size: 1.45rem; font-weight: 600; letter-spacing: 1.2px; line-height: 1; text-transform: uppercase; white-space: nowrap; }
-        .logo-title sup { font-size: 0.65em; vertical-align: super; font-weight: 500; margin-left: 2px; }
-        .logo-subtitle { font-size: 0.58rem; font-weight: 500; letter-spacing: 1.8px; color: var(--text-muted); margin-top: 3px; text-transform: uppercase; white-space: nowrap; }
-        
-        nav { margin-left: auto; }
-        nav ul { display: flex; list-style: none; gap: 22px; align-items: center; }
-        nav ul li { position: relative; }
-        nav a { text-decoration: none; color: var(--text-charcoal); font-size: 0.66rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; padding: 8px 0; transition: all 0.2s ease; display: inline-block; white-space: nowrap; }
-        nav a:hover, nav a.active { border-bottom: 1.5px solid var(--text-charcoal); }
-        nav .dropdown { position: absolute; top: 100%; left: 0; background-color: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 8px 0; min-width: 200px; box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.25s ease; z-index: 1000; display: flex; flex-direction: column; }
-        nav ul li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
-        nav .dropdown a { padding: 8px 16px; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.8px; display: block; border-bottom: none !important; color: var(--text-charcoal); }
-        nav .dropdown a:hover { background-color: var(--bg-card-accent); color: var(--accent-rose-dark); }
-
-        .manual-hero {
-            background-color: var(--bg-card-accent);
-            padding: 70px 4% 50px 4%;
-            text-align: center;
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .manual-tag {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--accent-rose-dark);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-            display: inline-block;
-        }
-
-        .manual-hero h1 {
-            font-family: var(--font-serif);
-            font-size: 2.8rem;
-            font-weight: 600;
-            color: var(--text-charcoal);
-            line-height: 1.15;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .manual-hero p {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            max-width: 750px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
-
-        .manual-content { max-width: 900px; margin: 60px auto; padding: 0 4%; }
-        .manual-box { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 40px; margin-bottom: 30px; }
-        .manual-box h2 { font-family: var(--font-serif); font-size: 1.8rem; color: var(--text-charcoal); text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 10px; }
-        .manual-box p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 15px; }
-
-        .tech-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85rem; }
-        .tech-table th, .tech-table td { border: 1px solid var(--border-subtle); padding: 12px; text-align: left; }
-        .tech-table th { background-color: var(--bg-card-accent); font-weight: 700; text-transform: uppercase; color: var(--text-charcoal); }
-
-        .btn-request { display: inline-block; background-color: var(--accent-sage); color: #FFFFFF; text-decoration: none; padding: 16px 32px; border-radius: 4px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: background 0.2s ease; text-align: center; }
-        .btn-request:hover { background-color: var(--accent-sage-hover); }
-
-        footer { background-color: var(--bg-sand); border-top: 1px solid var(--border-subtle); padding: 50px 6% 30px 6%; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 35px; max-width: 1200px; margin: 0 auto 40px auto; }
-        .footer-col h5 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--text-charcoal); margin-bottom: 15px; text-transform: uppercase; }
-        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-        .footer-col a { text-decoration: none; color: var(--text-muted); font-size: 0.8rem; transition: color 0.2s; }
-        .footer-col a:hover { color: var(--accent-rose-dark); }
-        .footer-bottom { border-top: 1px solid var(--border-subtle); padding-top: 25px; text-align: center; font-size: 0.75rem; color: var(--text-muted); max-width: 1200px; margin: 0 auto; }
-
-        @media (max-width: 768px) { header.site-header { flex-direction: column; gap: 15px; } nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; } .manual-hero h1 { font-size: 2.2rem; } .footer-grid { grid-template-columns: 1fr; } }
-    </style>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Muestra del manual de entrevistas laborales | Ágora Laboral 360°</title>
+  <meta name="description" content="Muestra metodológica para preparar entrevistas en investigaciones laborales con imparcialidad, cuidado y trazabilidad.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ivory:#fbf7f2;--blush:#f3e8e1;--paper:#fffdfa;--espresso:#3c1f13;--cocoa:#6f4b35;--caramel:#aa7f63;--sand:#d7c1b2;--line:#dfd0c6;--muted:#765d50;--serif:'Cormorant Garamond',serif;--sans:'Montserrat',sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--ivory);color:var(--espresso);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}a{color:inherit}.shell{width:min(1180px,calc(100% - 48px));margin:auto}.site-header{position:sticky;top:0;z-index:20;background:rgba(251,247,242,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.header-inner{min-height:104px;display:flex;align-items:center;gap:32px}.brand{display:flex;align-items:center;gap:14px;text-decoration:none;flex:none}.brand svg{width:64px;height:64px}.brand-name{font:500 2rem/1 var(--serif);letter-spacing:.18em}.brand-sub{display:block;margin-top:7px;font-size:.64rem;letter-spacing:.28em;color:var(--caramel)}.nav{margin-left:auto;display:flex;align-items:center;gap:27px}.nav a{text-decoration:none;text-transform:uppercase;font-size:.68rem;font-weight:600;letter-spacing:.08em;white-space:nowrap;padding:8px 0;border-bottom:1px solid transparent}.nav a:hover,.nav a.active{border-color:var(--cocoa)}.nav-cta{border:0!important;background:var(--cocoa);color:white;border-radius:999px;padding:14px 22px!important}.menu{display:none;margin-left:auto;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--paper);color:var(--espresso);font-size:1.15rem}
+    .hero{padding:78px 0 70px;background:linear-gradient(120deg,var(--blush),var(--ivory) 70%)}.hero-grid{display:grid;grid-template-columns:1.16fr .84fr;gap:70px;align-items:end}.eyebrow{margin:0 0 17px;text-transform:uppercase;letter-spacing:.2em;font-size:.71rem;font-weight:700;color:var(--cocoa)}h1{font:500 clamp(3.2rem,6vw,5.5rem)/.94 var(--serif);margin:0}.hero p{margin:0;color:var(--muted);font-size:.96rem}.notice{margin-top:23px;padding:15px 18px;border-left:3px solid var(--caramel);background:rgba(255,253,250,.68);font-size:.73rem!important}.content{padding:80px 0}.chapter{display:grid;grid-template-columns:.38fr 1.62fr;gap:48px;padding:42px 0;border-top:1px solid var(--line)}.chapter:first-child{border-top:0;padding-top:0}.chapter-number{font:500 4rem/1 var(--serif);color:var(--sand)}.chapter h2{font:500 clamp(2rem,4vw,3.2rem)/1.05 var(--serif);margin:0 0 20px}.chapter p{color:var(--muted);font-size:.83rem;margin:0 0 14px}.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.principle{padding:22px;border:1px solid var(--line);border-radius:17px;background:var(--paper)}.principle h3{font:500 1.38rem/1.1 var(--serif);margin:0 0 8px}.principle p{font-size:.72rem;margin:0}.parties{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.party{padding:22px;background:var(--blush);border-radius:17px}.party strong{display:block;font:500 1.3rem var(--serif);margin-bottom:7px}.examples{display:grid;gap:12px}.example{display:grid;grid-template-columns:150px 1fr 1fr;border:1px solid var(--line);border-radius:15px;overflow:hidden;background:var(--paper)}.example>*{padding:17px;border-left:1px solid var(--line);font-size:.72rem;color:var(--muted)}.example>*:first-child{border-left:0;color:var(--espresso);font-weight:700}.good::before{content:'Formulación abierta';display:block;color:#71806b;font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:5px}.avoid::before{content:'Conviene evitar';display:block;color:#9a694f;font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:5px}.cta{padding:65px 0;background:var(--espresso);color:white}.cta-grid{display:flex;align-items:center;justify-content:space-between;gap:50px}.cta h2{font:500 clamp(2.5rem,5vw,4.2rem)/1 var(--serif);margin:0}.cta p{max-width:570px;color:#e4d5cc;font-size:.8rem}.btn{display:inline-flex;justify-content:space-between;align-items:center;gap:24px;padding:14px 21px;border-radius:999px;background:var(--paper);color:var(--espresso);text-decoration:none;text-transform:uppercase;letter-spacing:.05em;font-size:.68rem;font-weight:700;white-space:nowrap}.btn:hover{background:var(--blush)}footer{padding:40px 0;background:var(--paper)}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}.footer-brand{font:600 1.5rem var(--serif);letter-spacing:.08em}.footer-links{display:flex;gap:22px;flex-wrap:wrap}.footer-links a{text-decoration:none;text-transform:uppercase;font-size:.66rem;letter-spacing:.08em}.copyright{font-size:.64rem;color:var(--muted)}
+    @media(max-width:1040px){.nav{display:none;position:absolute;top:100%;left:0;right:0;padding:24px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:7px}.nav.open{display:flex}.menu{display:block}.hero-grid{grid-template-columns:1fr;gap:28px}.header-inner{min-height:88px}.principles,.parties{grid-template-columns:1fr}.example{grid-template-columns:1fr}.example>*{border-left:0;border-top:1px solid var(--line)}.example>*:first-child{border-top:0}}@media(max-width:700px){.shell{width:min(100% - 28px,1180px)}.brand svg{width:50px;height:50px}.brand-name{font-size:1.55rem}.header-inner{min-height:76px}.hero{padding:50px 0}.content{padding:60px 0}.chapter{grid-template-columns:1fr;gap:15px;padding:34px 0}.chapter-number{font-size:2.5rem}.cta-grid,.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-direction:column;gap:10px}}
+  </style>
 </head>
 <body>
-
-    <header class="site-header">
-        <a href="/" class="logo-box">
-            <svg class="logo-icon" viewBox="0 0 24 24"><path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" /><path d="M12 22V10" /></svg>
-            <div class="logo-text">
-                <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
-                <span class="logo-subtitle">Investigación &amp; Informes Técnicos</span>
-            </div>
-        </a>
-
-        <nav>
-            <ul>
-                <li><a href="/">Inicio</a></li>
-                <li>
-                    <a href="/servicios/">Servicios</a>
-                    <div class="dropdown">
-                        <a href="/servicios/investigacion-laboral/">01 - Investigación Laboral</a>
-                        <a href="/servicios/informes-tecnicos/">02 - Informes Técnicos</a>
-                        <a href="/servicios/auditoria-investigaciones/">03 - Auditoría de Expedientes</a>
-                    </div>
-                </li>
-                <li><a href="/academia/">Escuela</a></li>
-                <li><a href="/recursos/" class="active">Recursos</a></li>
-                <li><a href="/contacto/">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="manual-hero">
-        <span class="manual-tag">Metodología de Investigación Pericial</span>
-        <h1>MUESTRA MANUAL DE ENTREVISTAS (LEY KARIN N.° 21.643)</h1>
-        <p>Pautas técnicas para la conducción de declaraciones a parte denunciante, denunciada y testigos con perspectiva de género y resguardo del debido proceso.</p>
-    </section>
-
-    <main class="manual-content">
-        
-        <div class="manual-box">
-            <h2>1. Principios Rectores en la Toma de Declaraciones</h2>
-            <p>La investigación pericial requiere que cada entrevista sea conducida bajo estricta neutralidad, eliminando juicios de valor o sesgos que vicien el expediente ante la Dirección del Trabajo.</p>
-
-            <table class="tech-table">
-                <tr>
-                    <th>Principio</th>
-                    <th>Aplicación Práctica</th>
-                </tr>
-                <tr>
-                    <td><strong>No Revictimización</strong></td>
-                    <td>Evitar la repetición innecesaria del relato o preguntas inquisitivas sobre la conducta personal previa.</td>
-                </tr>
-                <tr>
-                    <td><strong>Perspectiva de Género</strong></td>
-                    <td>Reconocer las asimetrías de poder y dinámicas de sometimiento en el entorno laboral.</td>
-                </tr>
-                <tr>
-                    <td><strong>Imparcialidad Objetiva</strong></td>
-                    <td>Garantizar el derecho a la legítima defensa e imparcialidad para ambas partes.</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="manual-box">
-            <h2>2. Estructura de la Entrevista a las Partes</h2>
-            <p><strong>A. Parte Denunciante:</strong> Encuadre inicial de confidencialidad, relato libre cronológico, preguntas aclaratorias sobre pruebas y evaluación del impacto psicosocial.</p>
-            <p><strong>B. Parte Denunciada:</strong> Lectura formal de hechos imputados, descargo punto por punto, recepción de pruebas de descargo y preservación de presunción de inocencia.</p>
-            <p><strong>C. Testigos:</strong> Diferenciación entre prueba directa (hechos presenciados) y prueba de oídas, identificando posibles sesgos o conflictos de interés.</p>
-        </div>
-
-        <div class="manual-box">
-            <h2>3. Matriz de Preguntas Seguras y Formulaciones Aconsejadas</h2>
-            <p>El estándar pericial prohíbe el uso de preguntas inducidas o con carga valórica. Se priorizan preguntas abiertas de contexto y de clarificación factual:</p>
-
-            <table class="tech-table">
-                <tr>
-                    <th>Tipo de Entrevistado</th>
-                    <th>Formulación Sugerida (Correcta)</th>
-                    <th>Formulación a Evitar (Inquisitiva)</th>
-                </tr>
-                <tr>
-                    <td><strong>Denunciante</strong></td>
-                    <td>"Describa las circunstancias específicas en las que ocurrieron los hechos señalados."</td>
-                    <td>"¿Por qué no denunció esto inmediatamente cuando ocurrió?"</td>
-                </tr>
-                <tr>
-                    <td><strong>Denunciado/a</strong></td>
-                    <td>"Respecto al evento del día [fecha], ¿cuál es su versión sobre las interacciones sostenidas?"</td>
-                    <td>"¿Usted niega haber tratado mal a su dependiente?"</td>
-                </tr>
-                <tr>
-                    <td><strong>Testigo Directo</strong></td>
-                    <td>"Relate lo que percibió directamente a través de sus sentidos el día en cuestión."</td>
-                    <td>"¿Usted cree que la relación entre ambos siempre fue conflictiva?"</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="manual-box">
-            <h2>4. Protocolo de Transcripción y Firma de Actas</h2>
-            <p>Al término de cada sesión, se debe redactar el Acta de Declaración en tiempo real. El documento debe ser leído íntegramente por la persona entrevistada, otorgándole la oportunidad de realizar precisiones o adiciones antes de firmar.</p>
-            <p>En entrevistas remotas (videoconferencia), la grabación debe contar con consentimiento expreso al inicio y respaldarse en medios encriptados para el expediente técnico final.</p>
-        </div>
-
-        <div class="manual-box" style="text-align: center;">
-            <h2>SOLICITAR MANUAL TÉCNICO COMPLETO</h2>
-            <p>Obtenga el documento completo con el protocolo detallado de transcripción, matrices de preguntas seguras y formatos de acta.</p>
-            <br>
-            <a href="/recursos/manual-entrevistas-ley-karin.pdf" target="_blank" class="btn-request">SOLICITAR GUÍA METODOLÓGICA →</a>
-        </div>
-
-    </main>
-
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <span class="logo-title" style="font-size:1.4rem;">ÁGORA LABORAL <sup>360°</sup></span>
-                <p style="font-size:0.8rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados. Rigor e imparcialidad.</p>
-            </div>
-            <div class="footer-col">
-                <h5>Servicios</h5>
-                <ul>
-                    <li><a href="/servicios/investigacion-laboral/">Investigación Externa</a></li>
-                    <li><a href="/servicios/informes-tecnicos/">Informes y Peritajes</a></li>
-                    <li><a href="/servicios/auditoria-investigaciones/">Auditoría de Expedientes</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Plataforma</h5>
-                <ul>
-                    <li><a href="/academia/">Escuela de Investigadores</a></li>
-                    <li><a href="/recursos/">Recursos y Guías</a></li>
-                    <li><a href="/contacto/" style="color: var(--accent-rose-dark); font-weight: 700;">Diagnóstico Inicial Gratis →</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Contacto</h5>
-                <ul>
-                    <li><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a></li>
-                    <li><a href="tel:+56900000000">+56 9 0000 0000</a></li>
-                    <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>&copy; 2026 Ágora Laboral 360°. Investigación e Informes Técnicos. Todos los derechos reservados.</span>
-        </div>
-    </footer>
-
+  <header class="site-header"><div class="shell header-inner"><a class="brand" href="/" aria-label="Ágora Laboral 360°, inicio"><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><circle cx="50" cy="50" r="42" stroke="#aa7f63"/><path d="M28 74 50 23l22 51M36 57c12-8 26-8 38 0" stroke="#3c1f13" stroke-width="2"/><circle cx="24" cy="72" r="3" fill="#71806b"/><circle cx="75" cy="72" r="3" fill="#6f4b35"/><circle cx="70" cy="21" r="3" fill="#d7c1b2"/></svg><span><span class="brand-name">ÁGORA</span><span class="brand-sub">Laboral 360°</span></span></a><button class="menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button><nav class="nav"><a href="/">Inicio</a><a href="/servicios/">Servicios</a><a href="/metodo/">Metodología</a><a href="/academia/">Escuela</a><a class="active" href="/recursos/">Recursos</a><a class="nav-cta" href="/#contacto">Contacto</a></nav></div></header>
+  <main>
+    <section class="hero"><div class="shell hero-grid"><div><p class="eyebrow">Muestra metodológica</p><h1>Manual para entrevistas laborales.</h1></div><div><p>Criterios para preparar entrevistas, formular preguntas y documentar información con imparcialidad, cuidado y trazabilidad.</p><p class="notice">Esta muestra es educativa y debe adaptarse al contexto. No reemplaza la formación profesional, el análisis del caso ni la asesoría jurídica.</p></div></div></section>
+    <section class="content"><div class="shell">
+      <article class="chapter"><span class="chapter-number">01</span><div><h2>Principios para la conducción.</h2><div class="principles"><div class="principle"><h3>Cuidado y no revictimización</h3><p>Evitar repeticiones innecesarias, juicios sobre la conducta personal y preguntas que responsabilicen a quien declara.</p></div><div class="principle"><h3>Imparcialidad</h3><p>Recoger versiones y antecedentes sin anticipar conclusiones ni orientar las respuestas.</p></div><div class="principle"><h3>Enfoque de género</h3><p>Considerar posibles asimetrías y estereotipos sin sustituir el análisis de los hechos y sus respaldos.</p></div></div></div></article>
+      <article class="chapter"><span class="chapter-number">02</span><div><h2>Una estructura diferenciada.</h2><div class="parties"><div class="party"><strong>Persona denunciante</strong><p>Encuadre, relato libre, secuencia de hechos, contexto, posibles respaldos y precisiones.</p></div><div class="party"><strong>Persona denunciada</strong><p>Comunicación suficiente de los hechos, versión propia, antecedentes y oportunidad de formular observaciones.</p></div><div class="party"><strong>Testigos</strong><p>Distinguir aquello percibido directamente de interpretaciones, comentarios de terceros o inferencias.</p></div></div></div></article>
+      <article class="chapter"><span class="chapter-number">03</span><div><h2>Preguntas abiertas y neutrales.</h2><div class="examples"><div class="example"><div>Persona denunciante</div><div class="good">Describa qué ocurrió, dónde y quiénes estaban presentes.</div><div class="avoid">¿Por qué no denunció inmediatamente?</div></div><div class="example"><div>Persona denunciada</div><div class="good">¿Cuál es su versión respecto de los hechos comunicados?</div><div class="avoid">¿Usted niega haber actuado de esa manera?</div></div><div class="example"><div>Testigo</div><div class="good">¿Qué observó o escuchó directamente en esa ocasión?</div><div class="avoid">¿Cree que siempre tuvieron una relación conflictiva?</div></div></div></div></article>
+      <article class="chapter"><span class="chapter-number">04</span><div><h2>Registro, revisión y resguardo.</h2><p>El acta debe reflejar fielmente lo declarado, permitir que la persona revise y solicite precisiones, e identificar la fecha y modalidad de la entrevista.</p><p>Una eventual grabación requiere una base y finalidad definidas, información previa y medidas de seguridad acordes con la sensibilidad de los datos. No debe adoptarse como práctica automática.</p></div></article>
+    </div></section>
+    <section class="cta"><div class="shell cta-grid"><div><p class="eyebrow" style="color:#d7c1b2">Documento de muestra</p><h2>Revise la guía en formato PDF.</h2><p>El archivo se abrirá en una nueva pestaña. Antes de publicarlo, confirme que <strong>manual-entrevistas-ley-karin.pdf</strong> esté dentro de la carpeta Recursos.</p></div><a class="btn" href="/recursos/manual-entrevistas-ley-karin.pdf" target="_blank" rel="noopener">Abrir muestra PDF <span>→</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-inner"><div><div class="footer-brand">ÁGORA LABORAL 360°</div><div class="copyright">© 2026 · Investigación e informes técnicos</div></div><div class="footer-links"><a href="/recursos/">Volver a recursos</a><a href="/diagnostico/">Diagnóstico</a><a href="mailto:contacto@agoralaboral.cl">Correo</a></div></div></footer>
+  <script>const b=document.querySelector('.menu'),n=document.querySelector('.nav');b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o))});</script>
 </body>
 </html>
