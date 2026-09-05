@@ -1,370 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos & Herramientas | Ágora Laboral 360°</title>
-    <meta name="description" content="Calculadoras, checklists interactivas y plantillas técnicas de pago para la gestión de la Ley Karin (Ley 21.643).">
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --bg-sand: #EBE6DD;           
-            --bg-card: #EFEAE2;           
-            --bg-card-accent: #E5DFD5;    
-            --text-charcoal: #2C2825;     
-            --text-muted: #615B55;        
-            --accent-sage: #828776;       
-            --accent-sage-hover: #6E7363;
-            --accent-rose-dark: #A36557;  
-            --border-subtle: #D8D1C5;     
-            --font-serif: 'Cormorant Garamond', serif;
-            --font-sans: 'Montserrat', sans-serif;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: var(--font-sans); background-color: var(--bg-sand); color: var(--text-charcoal); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-
-        /* HEADER GLOBAL */
-        header.site-header { background-color: var(--bg-sand); padding: 18px 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(216, 209, 197, 0.6); box-shadow: 0 4px 18px rgba(44, 40, 37, 0.12); position: sticky; top: 0; z-index: 1000; width: 100%; gap: 20px; }
-        .logo-box { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-charcoal); flex-shrink: 0; }
-        .logo-icon { width: 28px; height: 28px; stroke: var(--text-charcoal); fill: none; stroke-width: 1.5; }
-        .logo-text { display: flex; flex-direction: column; }
-        .logo-title { font-family: var(--font-serif); font-size: 1.45rem; font-weight: 600; letter-spacing: 1.2px; line-height: 1; text-transform: uppercase; white-space: nowrap; }
-        .logo-title sup { font-size: 0.65em; vertical-align: super; font-weight: 500; margin-left: 2px; }
-        .logo-subtitle { font-size: 0.58rem; font-weight: 500; letter-spacing: 1.8px; color: var(--text-muted); margin-top: 3px; text-transform: uppercase; white-space: nowrap; }
-        
-        nav { margin-left: auto; }
-        nav ul { display: flex; list-style: none; gap: 22px; align-items: center; }
-        nav ul li { position: relative; }
-        nav a { text-decoration: none; color: var(--text-charcoal); font-size: 0.66rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; padding: 8px 0; transition: all 0.2s ease; display: inline-block; white-space: nowrap; }
-        nav a:hover, nav a.active { border-bottom: 1.5px solid var(--text-charcoal); }
-        nav .dropdown { position: absolute; top: 100%; left: 0; background-color: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 8px 0; min-width: 200px; box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.25s ease; z-index: 1000; display: flex; flex-direction: column; }
-        nav ul li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
-        nav .dropdown a { padding: 8px 16px; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.8px; display: block; border-bottom: none !important; color: var(--text-charcoal); }
-        nav .dropdown a:hover { background-color: var(--bg-card-accent); color: var(--accent-rose-dark); }
-
-        .page-hero { background-color: var(--bg-card-accent); padding: 70px 4% 50px 4%; text-align: center; border-bottom: 1px solid var(--border-subtle); }
-        .page-hero h1 { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 600; color: var(--text-charcoal); line-height: 1.15; margin-bottom: 15px; text-transform: uppercase; }
-        .page-hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 750px; margin: 0 auto; line-height: 1.7; }
-
-        .section-title { font-family: var(--font-serif); font-size: 2.2rem; color: var(--text-charcoal); text-transform: uppercase; text-align: center; margin-bottom: 10px; }
-        .section-subtitle { text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 40px; }
-
-        /* SECCIÓN HERRAMIENTAS GRATUITAS */
-        .free-section { max-width: 1100px; margin: 60px auto; padding: 0 4%; }
-        .resources-grid { display: flex; flex-direction: column; gap: 40px; }
-        .resource-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 35px; display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: start; scroll-margin-top: 100px; }
-        .resource-card h3 { font-family: var(--font-serif); font-size: 1.8rem; color: var(--text-charcoal); text-transform: uppercase; margin-bottom: 12px; }
-        .resource-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 15px; }
-
-        .interactive-tool { background: var(--bg-sand); padding: 25px; border-radius: 6px; border: 1px solid var(--border-subtle); }
-        .interactive-tool h4 { font-family: var(--font-serif); font-size: 1.2rem; text-transform: uppercase; margin-bottom: 15px; text-align: center; }
-        
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
-        .form-control { width: 100%; padding: 12px; border: 1px solid var(--border-subtle); border-radius: 4px; background: #FFFFFF; font-family: inherit; font-size: 0.85rem; }
-        
-        .btn-action { width: 100%; background-color: var(--accent-sage); color: #FFFFFF; padding: 14px; border: none; border-radius: 4px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: background 0.2s ease; margin-top: 10px;}
-        .btn-action:hover { background-color: var(--accent-sage-hover); }
-
-        .result-box { background-color: #FFFFFF; border: 1px solid var(--accent-sage); padding: 15px; border-radius: 4px; margin-top: 15px; font-size: 0.85rem; display: none; line-height: 1.5;}
-        .result-box span { color: var(--accent-rose-dark); font-weight: 600;}
-        
-        .chk-label { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; margin-bottom: 12px; cursor: pointer; font-weight: 500; text-transform: none; }
-        .chk-label input { margin-top: 4px; accent-color: var(--accent-sage); }
-        .progress-bar-bg { width: 100%; background-color: var(--border-subtle); border-radius: 4px; height: 12px; margin-top: 20px; overflow: hidden; }
-        .progress-bar-fill { height: 100%; background-color: var(--accent-sage); width: 0%; transition: width 0.4s ease; }
-        .progress-text { text-align: center; font-size: 0.85rem; font-weight: 700; margin-top: 10px; color: var(--accent-sage); }
-
-        .cronograma-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.8rem; }
-        .cronograma-table th, .cronograma-table td { border: 1px solid var(--border-subtle); padding: 8px; text-align: left; }
-        .cronograma-table th { background-color: var(--bg-card-accent); font-weight: 700; text-transform: uppercase; }
-
-        /* SECCIÓN RECURSOS DE PAGO (PREMIUM) */
-        .paid-section { background-color: var(--bg-card-accent); padding: 70px 4%; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
-        .paid-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
-        
-        .paid-card { background: var(--bg-sand); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 35px; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .paid-card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08); border-color: var(--accent-sage); }
-        
-        .paid-badge { align-self: flex-start; background: var(--accent-rose-dark); color: #FFFFFF; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; letter-spacing: 1px; margin-bottom: 15px; }
-        .paid-card h4 { font-family: var(--font-serif); font-size: 1.6rem; color: var(--text-charcoal); text-transform: uppercase; margin-bottom: 10px; line-height: 1.2; }
-        .paid-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; }
-
-        .btn-buy { background-color: var(--accent-sage); color: #FFFFFF; text-decoration: none; text-align: center; padding: 14px; border-radius: 4px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: background 0.2s ease; margin-top: auto; }
-        .btn-buy:hover { background-color: var(--accent-sage-hover); }
-
-        footer { background-color: var(--bg-sand); border-top: 1px solid var(--border-subtle); padding: 50px 6% 30px 6%; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 35px; max-width: 1200px; margin: 0 auto 40px auto; }
-        .footer-col h5 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--text-charcoal); margin-bottom: 15px; text-transform: uppercase; }
-        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-        .footer-col a { text-decoration: none; color: var(--text-muted); font-size: 0.8rem; transition: color 0.2s; }
-        .footer-col a:hover { color: var(--accent-rose-dark); }
-        .footer-bottom { border-top: 1px solid var(--border-subtle); padding-top: 25px; text-align: center; font-size: 0.75rem; color: var(--text-muted); max-width: 1200px; margin: 0 auto; }
-
-        @media (max-width: 900px) { .resource-card { grid-template-columns: 1fr; } .paid-grid { grid-template-columns: 1fr; } }
-        @media (max-width: 768px) { header.site-header { flex-direction: column; gap: 15px; } nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; } .footer-grid { grid-template-columns: 1fr; } }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Recursos y herramientas | Ágora Laboral 360°</title>
+  <meta name="description" content="Herramientas orientativas, guías y recursos técnicos para investigación laboral, Ley Karin y gestión documental.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ivory:#fbf7f2;--blush:#f3e8e1;--paper:#fffdfa;--espresso:#3c1f13;--cocoa:#6f4b35;--caramel:#aa7f63;--sand:#d7c1b2;--line:#dfd0c6;--muted:#765d50;--sage:#71806b;--shadow:0 18px 42px rgba(60,31,19,.08);--serif:'Cormorant Garamond',serif;--sans:'Montserrat',sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--espresso);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}button,input{font:inherit}a{color:inherit}.shell{width:min(1180px,calc(100% - 48px));margin:auto}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(251,247,242,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.header-inner{min-height:104px;display:flex;align-items:center;gap:32px}.brand{display:flex;align-items:center;gap:14px;text-decoration:none;flex:0 0 auto}.brand svg{width:64px;height:64px}.brand-name{font-family:var(--serif);font-size:2rem;letter-spacing:.18em;line-height:1}.brand-sub{display:block;margin-top:7px;font-size:.64rem;letter-spacing:.28em;color:var(--caramel)}.nav{margin-left:auto;display:flex;align-items:center;gap:27px}.nav a{text-decoration:none;text-transform:uppercase;font-size:.68rem;font-weight:600;letter-spacing:.08em;white-space:nowrap;border-bottom:1px solid transparent;padding:8px 0}.nav a:hover,.nav a.active{border-color:var(--cocoa)}.nav-cta{border:0!important;background:var(--cocoa);color:white;border-radius:999px;padding:14px 22px!important}.menu-toggle{display:none;margin-left:auto;border:1px solid var(--line);background:var(--paper);border-radius:50%;width:44px;height:44px;color:var(--espresso);font-size:1.2rem}
+    .hero{padding:78px 0 68px;background:linear-gradient(120deg,var(--blush),var(--ivory) 68%)}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:end}.eyebrow{margin:0 0 18px;text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:700;color:var(--cocoa)}h1{font:500 clamp(3.3rem,6vw,5.5rem)/.94 var(--serif);margin:0}.hero-copy{margin:0;color:var(--muted);font-size:1rem}.hero-note{margin-top:24px;padding:15px 18px;border-left:3px solid var(--caramel);background:rgba(255,253,250,.65);font-size:.74rem;color:var(--muted)}
+    .section{padding:86px 0}.section.alt{background:var(--blush)}.section-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:end;margin-bottom:38px}.section h2{font:500 clamp(2.6rem,5vw,4.4rem)/1 var(--serif);margin:0}.section-intro{margin:0;color:var(--muted);font-size:.9rem}.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.tool-card{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:24px;overflow:hidden;min-height:100%}.tool-info{padding:28px 28px 22px}.icon{width:58px;height:58px;border:1px solid var(--caramel);border-radius:50%;display:grid;place-items:center;margin-bottom:24px}.icon svg{width:27px;height:27px;fill:none;stroke:var(--cocoa);stroke-width:1.6}.card-label{text-transform:uppercase;letter-spacing:.14em;color:var(--caramel);font-size:.64rem;font-weight:700}.tool-card h3{font:500 2rem/1.05 var(--serif);margin:9px 0 12px}.tool-card p{color:var(--muted);font-size:.8rem;margin:0}.tool-box{margin-top:auto;background:var(--ivory);border-top:1px solid var(--line);padding:24px 28px}.field label{display:block;margin-bottom:7px;font-size:.63rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700}.field input{width:100%;padding:11px 12px;background:var(--paper);border:1px solid var(--line);border-radius:8px;color:var(--espresso)}.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;margin-top:15px;padding:13px 19px;border:0;border-radius:999px;background:var(--cocoa);color:white;cursor:pointer;text-decoration:none;text-transform:uppercase;letter-spacing:.05em;font-size:.66rem;font-weight:700;max-width:100%}.btn:hover{background:var(--espresso)}.result{display:none;margin-top:16px;padding:15px;border:1px solid var(--line);border-radius:12px;background:var(--paper);font-size:.73rem;color:var(--muted)}.result.show{display:block}.result strong{color:var(--espresso)}
+    .checks{display:grid;gap:9px}.check{display:flex;gap:9px;align-items:flex-start;font-size:.72rem;color:var(--muted);cursor:pointer}.check input{accent-color:var(--cocoa);margin-top:4px}.progress{height:8px;margin-top:16px;border-radius:99px;overflow:hidden;background:var(--line)}.progress span{display:block;height:100%;width:0;background:var(--sage);transition:width .25s}.progress-copy{font-size:.7rem;margin-top:7px;color:var(--muted)}
+    table{width:100%;border-collapse:collapse;margin-top:12px;font-size:.66rem}th,td{padding:7px 4px;text-align:left;border-bottom:1px solid var(--line)}th{text-transform:uppercase;letter-spacing:.06em;color:var(--cocoa)}
+    .legal-note{margin-top:24px;font-size:.7rem;color:var(--muted);padding:15px 18px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+    .resources{display:grid;grid-template-columns:1fr 1fr;gap:20px}.resource{position:relative;display:flex;flex-direction:column;min-height:340px;padding:36px;border:1px solid var(--line);border-radius:26px;background:var(--paper)}.resource:nth-child(2){background:var(--ivory)}.resource h3{font:500 clamp(2rem,4vw,3rem)/1.05 var(--serif);margin:14px 0}.resource p{color:var(--muted);font-size:.82rem;max-width:500px;margin:0 0 22px}.resource .btn{margin-top:auto;align-self:flex-start}.tag{align-self:flex-start;border:1px solid var(--caramel);border-radius:99px;padding:6px 10px;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--cocoa)}.resource-meta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:22px;font-size:.66rem;text-transform:uppercase;letter-spacing:.07em;color:var(--caramel)}
+    .diagnostic{padding:72px 0;background:var(--espresso);color:white}.diagnostic-grid{display:flex;align-items:center;justify-content:space-between;gap:60px}.diagnostic h2{font:500 clamp(2.5rem,5vw,4.3rem)/1 var(--serif);margin:0}.diagnostic p{max-width:530px;color:#e4d5cc;font-size:.83rem}.diagnostic .btn{background:var(--paper);color:var(--espresso);white-space:nowrap}.diagnostic .btn:hover{background:var(--blush)}
+    footer{padding:42px 0;background:var(--paper);border-top:1px solid var(--line)}.footer-inner{display:flex;justify-content:space-between;gap:35px;align-items:center}.footer-brand{font:600 1.5rem var(--serif);letter-spacing:.08em}.footer-links{display:flex;gap:22px;flex-wrap:wrap}.footer-links a{font-size:.68rem;text-decoration:none;text-transform:uppercase;letter-spacing:.08em}.copyright{font-size:.65rem;color:var(--muted)}
+    @media(max-width:1040px){.nav{display:none;position:absolute;top:100%;left:0;right:0;padding:24px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:7px}.nav.open{display:flex}.menu-toggle{display:block}.hero-grid,.section-head{grid-template-columns:1fr;gap:28px}.tool-grid{grid-template-columns:1fr}.tool-card{display:grid;grid-template-columns:1fr 1fr}.tool-box{border-top:0;border-left:1px solid var(--line)}.header-inner{min-height:88px}}
+    @media(max-width:700px){.shell{width:min(100% - 28px,1180px)}.brand svg{width:50px;height:50px}.brand-name{font-size:1.55rem}.header-inner{min-height:76px}.hero{padding:50px 0}.section{padding:62px 0}.tool-card{display:flex}.tool-box{border-left:0;border-top:1px solid var(--line)}.resources{grid-template-columns:1fr}.resource{min-height:auto;padding:28px}.diagnostic-grid,.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-direction:column;gap:10px}.btn{width:auto}.hero-note{font-size:.7rem}}
+  </style>
 </head>
 <body>
+  <header class="site-header"><div class="shell header-inner">
+    <a class="brand" href="/" aria-label="Ágora Laboral 360°, inicio"><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><circle cx="50" cy="50" r="42" stroke="#aa7f63"/><path d="M28 74 50 23l22 51M36 57c12-8 26-8 38 0" stroke="#3c1f13" stroke-width="2"/><circle cx="24" cy="72" r="3" fill="#71806b"/><circle cx="75" cy="72" r="3" fill="#6f4b35"/><circle cx="70" cy="21" r="3" fill="#d7c1b2"/></svg><span><span class="brand-name">ÁGORA</span><span class="brand-sub">Laboral 360°</span></span></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Navegación principal"><a href="/">Inicio</a><a href="/servicios/">Servicios</a><a href="/#especializacion">Especialización</a><a href="/metodo/">Metodología</a><a href="/academia/">Escuela</a><a class="active" href="/recursos/">Recursos</a><a class="nav-cta" href="/#contacto">Contacto</a></nav>
+  </div></header>
 
-    <header class="site-header">
-        <a href="/" class="logo-box">
-            <svg class="logo-icon" viewBox="0 0 24 24"><path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" /><path d="M12 22V10" /></svg>
-            <div class="logo-text">
-                <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
-                <span class="logo-subtitle">Investigación &amp; Informes Técnicos</span>
-            </div>
-        </a>
+  <main>
+    <section class="hero"><div class="shell hero-grid"><div><p class="eyebrow">Biblioteca práctica</p><h1>Recursos para decisiones laborales mejor documentadas.</h1></div><div><p class="hero-copy">Herramientas gratuitas, guías y modelos técnicos para ordenar procesos de investigación laboral y fortalecer su trazabilidad.</p><div class="hero-note">Estos recursos tienen fines informativos y de apoyo. Deben adaptarse al caso concreto y no reemplazan asesoría jurídica ni una revisión técnica individual.</div></div></div></section>
 
-        <nav>
-            <ul>
-                <li><a href="/">Inicio</a></li>
-                <li>
-                    <a href="/servicios/">Servicios</a>
-                    <div class="dropdown">
-                        <a href="/servicios/investigacion-laboral/">01 - Investigación Laboral</a>
-                        <a href="/servicios/informes-tecnicos/">02 - Informes Técnicos</a>
-                        <a href="/servicios/auditoria-investigaciones/">03 - Auditoría de Expedientes</a>
-                    </div>
-                </li>
-                <li><a href="/academia/">Escuela</a></li>
-                <li><a href="/recursos/" class="active">Recursos</a></li>
-                <li><a href="/contacto/">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <section class="section"><div class="shell"><div class="section-head"><div><p class="eyebrow">Herramientas gratuitas</p><h2>Revise, ordene y planifique.</h2></div><p class="section-intro">Tres apoyos preliminares para visualizar fechas y componentes del proceso. Sus resultados son orientativos: no certifican cumplimiento ni determinan la validez de una investigación.</p></div>
+      <div class="tool-grid">
+        <article class="tool-card" id="calculadora"><div class="tool-info"><div class="icon"><svg viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="20" rx="2"/><path d="M10 4v6m12-6v6M5 13h22m-17 5h3m4 0h3m-10 4h3m4 0h3"/></svg></div><span class="card-label">Estimador de fechas</span><h3>30 días hábiles administrativos</h3><p>Entrega una fecha preliminar contando de lunes a viernes. Revise siempre feriados, reglas de cómputo y particularidades del procedimiento.</p></div><div class="tool-box"><div class="field"><label for="deadline-date">Fecha de recepción</label><input type="date" id="deadline-date"></div><button class="btn" type="button" id="deadline-button">Estimar fecha <span>→</span></button><div class="result" id="deadline-result" aria-live="polite"></div></div></article>
+        <article class="tool-card" id="checklist"><div class="tool-info"><div class="icon"><svg viewBox="0 0 32 32"><path d="M8 5h16v22H8zM12 11h8m-8 5h8m-8 5h5"/></svg></div><span class="card-label">Lista orientativa</span><h3>Revisión documental inicial</h3><p>Permite identificar qué respaldos básicos declara tener la organización antes de solicitar una revisión especializada.</p></div><div class="tool-box"><div class="checks"><label class="check"><input type="checkbox">Denuncia o registro de recepción disponible</label><label class="check"><input type="checkbox">Medidas de resguardo documentadas</label><label class="check"><input type="checkbox">Designación y ausencia de conflicto registradas</label><label class="check"><input type="checkbox">Entrevistas y comunicaciones respaldadas</label><label class="check"><input type="checkbox">Hallazgos vinculados con sus fuentes</label></div><div class="progress"><span id="check-progress"></span></div><div class="progress-copy" id="check-copy">0 de 5 elementos declarados</div></div></article>
+        <article class="tool-card" id="cronograma"><div class="tool-info"><div class="icon"><svg viewBox="0 0 32 32"><path d="M6 26h20M8 22l5-6 4 3 7-10M20 9h4v4"/></svg></div><span class="card-label">Planificación interna</span><h3>Cronograma preliminar</h3><p>Distribuye hitos sugeridos dentro de una ventana de trabajo. Las fechas deben ajustarse a los hechos, disponibilidad y exigencias aplicables.</p></div><div class="tool-box"><div class="field"><label for="schedule-date">Fecha de inicio</label><input type="date" id="schedule-date"></div><button class="btn" type="button" id="schedule-button">Crear borrador <span>→</span></button><div class="result" id="schedule-result"><table><thead><tr><th>Hito sugerido</th><th>Fecha</th></tr></thead><tbody><tr><td>Recepción y resguardo</td><td id="date-1">—</td></tr><tr><td>Planificación</td><td id="date-2">—</td></tr><tr><td>Entrevistas</td><td id="date-3">—</td></tr><tr><td>Análisis y cierre</td><td id="date-4">—</td></tr><tr><td>Informe</td><td id="date-5">—</td></tr></tbody></table></div></div></article>
+      </div>
+      <p class="legal-note"><strong>Importante:</strong> la Dirección del Trabajo ha interpretado el plazo de investigación como 30 días hábiles administrativos. El estimador no incorpora feriados ni eventuales incidencias del caso; confirme siempre el cómputo antes de actuar.</p>
+    </div></section>
 
-    <section class="page-hero">
-        <h1>Centro de Recursos & Herramientas</h1>
-        <p>Soluciones interactivas gratuitas e insumos técnicos descargables de alta especialización para profesionales de Compliance, RRHH y Abogados.</p>
-    </section>
+    <section class="section alt"><div class="shell"><div class="section-head"><div><p class="eyebrow">Guías y modelos</p><h2>Recursos técnicos descargables.</h2></div><p class="section-intro">Materiales propios de Ágora Laboral 360° para apoyar el trabajo profesional. Cada documento informa su alcance y las condiciones de uso antes de la descarga o compra.</p></div>
+      <div class="resources">
+        <article class="resource"><span class="tag">Kit documental</span><h3>Kit de apoyo para la Ley Karin</h3><p>Modelos editables para organizar registros, medidas de resguardo y estructura de informe. No corresponde a un formulario oficial ni asegura por sí solo el cumplimiento del procedimiento.</p><div class="resource-meta"><span>Formato editable</span><span>Uso profesional</span></div><a class="btn" href="/recursos/kit-ley-karin.html">Conocer el kit <span>→</span></a></article>
+        <article class="resource"><span class="tag">Muestra gratuita</span><h3>Manual para entrevistas laborales</h3><p>Vista previa de una guía metodológica para preparar entrevistas, formular preguntas y documentar información con criterios de imparcialidad y cuidado.</p><div class="resource-meta"><span>Lectura previa</span><span>Guía metodológica</span></div><a class="btn" href="/recursos/muestra-manual.html">Ver la muestra <span>→</span></a></article>
+      </div>
+    </div></section>
 
-    <!-- BLOQUE 1: HERRAMIENTAS INTERACTIVAS GRATUITAS -->
-    <section class="free-section">
-        <h2 class="section-title">Herramientas Gratuitas</h2>
-        <p class="section-subtitle">Calculadores y sistemas de verificación automática en tiempo real.</p>
+    <section class="diagnostic"><div class="shell diagnostic-grid"><div><p class="eyebrow" style="color:#d7c1b2">¿Por dónde comenzar?</p><h2>Realice el diagnóstico inicial de preparación.</h2><p>Revise prácticas básicas relacionadas con Ley Karin y con la Ley N.º 21.828 de Transparencia e Inclusión Laboral de las Mujeres.</p></div><a class="btn" href="/diagnostico/">Ir al diagnóstico <span>→</span></a></div></section>
+  </main>
 
-        <div class="resources-grid">
-
-            <!-- 1. CALCULADORA -->
-            <article id="calculadora" class="resource-card">
-                <div>
-                    <h3>Calculadora de Plazos Ley Karin</h3>
-                    <p>Calcula automáticamente los plazos legales para la adopción de medidas de resguardo y el límite legal de 30 días para concluir el informe de investigación.</p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Cálculo inmediato del límite de 30 días.</li>
-                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Definición de fechas de resguardo.</li>
-                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Evita vicios de nulidad por plazos vencidos.</li>
-                    </ul>
-                </div>
-                <div class="interactive-tool">
-                    <h4>Calculadora de 30 Días</h4>
-                    <div class="form-group">
-                        <label>Fecha de Recepción de la Denuncia</label>
-                        <input type="date" id="calc-fecha" class="form-control">
-                    </div>
-                    <button type="button" class="btn-action" onclick="calcularPlazos()">Calcular Plazos →</button>
-                    
-                    <div id="calc-resultado" class="result-box">
-                        <strong>Derivación a DT o Resguardo (Max 2 días):</strong> <br>
-                        <span id="res-resguardo">-</span> <br><br>
-                        <strong>Límite de Entrega de Informe (Max 30 días):</strong> <br>
-                        <span id="res-limite">-</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- 2. CHECKLIST INTERACTIVO -->
-            <article id="checklist" class="resource-card">
-                <div>
-                    <h3>Checklist de Cumplimiento</h3>
-                    <p>Verifica en tiempo real si tu investigación interna cumple con los estándares mínimos de debido proceso exigidos por la Dirección del Trabajo antes de cerrarla.</p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Medición de porcentaje de cumplimiento.</li>
-                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Puntos clave de imparcialidad.</li>
-                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Prevención de multas por fallas procedimentales.</li>
-                    </ul>
-                </div>
-                <div class="interactive-tool">
-                    <h4>Auditoría Rápida</h4>
-                    
-                    <label class="chk-label"><input type="checkbox" class="chk-item"> Denuncia consta por escrito y fue ratificada.</label>
-                    <label class="chk-label"><input type="checkbox" class="chk-item"> Se adoptaron medidas de resguardo inmediatas.</label>
-                    <label class="chk-label"><input type="checkbox" class="chk-item"> El investigador/a no tiene conflicto de interés.</label>
-                    <label class="chk-label"><input type="checkbox" class="chk-item"> Se garantizó confidencialidad a ambas partes.</label>
-                    <label class="chk-label"><input type="checkbox" class="chk-item"> Se escuchó formalmente al denunciado/a.</label>
-
-                    <div class="progress-bar-bg">
-                        <div id="chk-progress" class="progress-bar-fill"></div>
-                    </div>
-                    <div id="chk-text" class="progress-text">0% de Cumplimiento</div>
-                </div>
-            </article>
-
-            <!-- 3. CRONOGRAMA AUTOMÁTICO -->
-            <article id="cronograma" class="resource-card">
-                <div>
-                    <h3>Generador de Cronograma</h3>
-                    <p>Estructura automáticamente las etapas de la investigación ingresando la fecha de inicio. Obtén un mapa de ruta claro para notificaciones, entrevistas e informes.</p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Generación instantánea de hitos.</li>
-                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Mapeo de etapa probatoria.</li>
-                        <li style="margin-bottom:8px; font-size:0.85rem;">✓ Orden metodológico de la investigación.</li>
-                    </ul>
-                </div>
-                <div class="interactive-tool">
-                    <h4>Generar Carta Gantt</h4>
-                    <div class="form-group">
-                        <label>Fecha de Inicio del Procedimiento</label>
-                        <input type="date" id="crono-fecha" class="form-control">
-                    </div>
-                    <button type="button" class="btn-action" onclick="generarCronograma()">Crear Cronograma →</button>
-                    
-                    <div id="crono-resultado" class="result-box" style="padding: 10px;">
-                        <table class="cronograma-table">
-                            <tr><th>Hito / Etapa</th><th>Fecha Sugerida</th></tr>
-                            <tr><td>Recepción y Resguardo</td><td id="cro-1">-</td></tr>
-                            <tr><td>Notificación Denunciado</td><td id="cro-2">-</td></tr>
-                            <tr><td>Inicio Entrevistas</td><td id="cro-3">-</td></tr>
-                            <tr><td>Cierre Etapa Probatoria</td><td id="cro-4">-</td></tr>
-                            <tr><td>Entrega Informe Final</td><td id="cro-5">-</td></tr>
-                        </table>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- BLOQUE 2: PLANTILLAS & GUÍAS TÉCNICAS (CONEXIÓN DIRECTA) -->
-    <section class="paid-section">
-        <h2 class="section-title">Plantillas & Guías Específicas</h2>
-        <p class="section-subtitle">Insumos técnicos de descarga e información especializada.</p>
-
-        <div class="paid-grid">
-
-            <!-- RECURSO 1: LINK DIRECTO A kit-ley-karin.html -->
-            <div class="paid-card">
-                <span class="paid-badge">Kit Documental</span>
-                <h4>Kit Oficial Ley Karin</h4>
-                <p>Set completo de plantillas y modelos técnicos de actas, resoluciones de resguardo y estructura de informes para la gestión de denuncias.</p>
-                <a href="/recursos/kit-ley-karin.html" class="btn-buy">Ver Kit Completo →</a>
-            </div>
-
-            <!-- RECURSO 2: LINK DIRECTO A muestra-manual.html -->
-            <div class="paid-card">
-                <span class="paid-badge">Guía Metodológica</span>
-                <h4>Muestra Manual de Entrevistas</h4>
-                <p>Muestra y guía técnica para la conducción de entrevistas periciales, toma de declaraciones a partes involucradas y aplicación de perspectiva de género.</p>
-                <a href="/recursos/muestra-manual.html" class="btn-buy">Ver Muestra Manual →</a>
-            </div>
-
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <span class="logo-title" style="font-size:1.4rem;">ÁGORA LABORAL <sup>360°</sup></span>
-                <p style="font-size:0.8rem; color:var(--text-muted); margin-top:10px; max-width: 260px;">Investigación laboral e informes técnicos especializados. Rigor e imparcialidad.</p>
-            </div>
-            <div class="footer-col">
-                <h5>Servicios</h5>
-                <ul>
-                    <li><a href="/servicios/investigacion-laboral/">Investigación Externa</a></li>
-                    <li><a href="/servicios/informes-tecnicos/">Informes y Peritajes</a></li>
-                    <li><a href="/servicios/auditoria-investigaciones/">Auditoría de Expedientes</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Plataforma</h5>
-                <ul>
-                    <li><a href="/academia/">Escuela de Investigadores</a></li>
-                    <li><a href="/recursos/">Recursos y Guías</a></li>
-                    <li><a href="/diagnostico/" style="color: var(--accent-rose-dark); font-weight: 700;">Diagnóstico Inicial Gratis →</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Contacto</h5>
-                <ul>
-                    <li><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a></li>
-                    <li><a href="tel:+56900000000">+56 9 0000 0000</a></li>
-                    <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>&copy; 2026 Ágora Laboral 360°. Investigación e Informes Técnicos. Todos los derechos reservados.</span>
-        </div>
-    </footer>
-
-    <!-- SCRIPTS PARA HERRAMIENTAS INTERACTIVAS -->
-    <script>
-        function formatFecha(fecha) {
-            const opciones = { day: '2-digit', month: '2-digit', year: 'numeric' };
-            return fecha.toLocaleDateString('es-CL', opciones);
-        }
-
-        function calcularPlazos() {
-            const inputVal = document.getElementById('calc-fecha').value;
-            if (!inputVal) return alert('Por favor, seleccione una fecha válida.');
-            
-            const parts = inputVal.split('-');
-            const fechaInicio = new Date(parts[0], parts[1] - 1, parts[2]);
-
-            const resguardo = new Date(fechaInicio);
-            resguardo.setDate(resguardo.getDate() + 2);
-            
-            const limite = new Date(fechaInicio);
-            limite.setDate(limite.getDate() + 30);
-
-            document.getElementById('res-resguardo').innerText = formatFecha(resguardo);
-            document.getElementById('res-limite').innerText = formatFecha(limite);
-            document.getElementById('calc-resultado').style.display = 'block';
-        }
-
-        const checkboxes = document.querySelectorAll('.chk-item');
-        checkboxes.forEach(chk => {
-            chk.addEventListener('change', () => {
-                const checkedCount = document.querySelectorAll('.chk-item:checked').length;
-                const porcentaje = Math.round((checkedCount / checkboxes.length) * 100);
-                
-                document.getElementById('chk-progress').style.width = porcentaje + '%';
-                
-                let mensaje = `${porcentaje}% de Cumplimiento`;
-                if (porcentaje === 100) mensaje = `100% - ¡Expediente Sólido!`;
-                else if (porcentaje < 50) mensaje = `${porcentaje}% - Riesgo Alto`;
-                
-                const txt = document.getElementById('chk-text');
-                txt.innerText = mensaje;
-                txt.style.color = porcentaje === 100 ? '#4CAF50' : 'var(--accent-sage)';
-            });
-        });
-
-        function generarCronograma() {
-            const inputVal = document.getElementById('crono-fecha').value;
-            if (!inputVal) return alert('Por favor, seleccione la fecha de inicio.');
-            
-            const parts = inputVal.split('-');
-            const f = new Date(parts[0], parts[1] - 1, parts[2]);
-
-            const f1 = new Date(f);
-            const f2 = new Date(f); f2.setDate(f2.getDate() + 3);
-            const f3 = new Date(f); f3.setDate(f3.getDate() + 7);
-            const f4 = new Date(f); f4.setDate(f4.getDate() + 23);
-            const f5 = new Date(f); f5.setDate(f5.getDate() + 30);
-
-            document.getElementById('cro-1').innerText = formatFecha(f1);
-            document.getElementById('cro-2').innerText = formatFecha(f2);
-            document.getElementById('cro-3').innerText = formatFecha(f3);
-            document.getElementById('cro-4').innerText = formatFecha(f4);
-            document.getElementById('cro-5').innerText = formatFecha(f5);
-            
-            document.getElementById('crono-resultado').style.display = 'block';
-        }
-    </script>
+  <footer><div class="shell footer-inner"><div><div class="footer-brand">ÁGORA LABORAL 360°</div><div class="copyright">© 2026 · Investigación e informes técnicos</div></div><div class="footer-links"><a href="/servicios/">Servicios</a><a href="/metodo/">Metodología</a><a href="/academia/">Escuela</a><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a></div></div></footer>
+  <script>
+    const menuButton=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');menuButton.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open))});
+    const formatDate=date=>new Intl.DateTimeFormat('es-CL',{day:'2-digit',month:'2-digit',year:'numeric'}).format(date);
+    function fromInput(id){const value=document.getElementById(id).value;if(!value)return null;const [year,month,day]=value.split('-').map(Number);return new Date(year,month-1,day)}
+    function addWeekdays(date,days){const result=new Date(date);let added=0;while(added<days){result.setDate(result.getDate()+1);if(result.getDay()!==0&&result.getDay()!==6)added++}return result}
+    document.getElementById('deadline-button').addEventListener('click',()=>{const date=fromInput('deadline-date');if(!date)return alert('Seleccione una fecha de recepción.');const estimate=addWeekdays(date,30);const result=document.getElementById('deadline-result');result.innerHTML=`<strong>Fecha preliminar:</strong> ${formatDate(estimate)}<br>No incorpora feriados ni reemplaza el cómputo jurídico del plazo.`;result.classList.add('show')});
+    const checks=[...document.querySelectorAll('.checks input')];checks.forEach(check=>check.addEventListener('change',()=>{const selected=checks.filter(item=>item.checked).length;document.getElementById('check-progress').style.width=`${selected/checks.length*100}%`;document.getElementById('check-copy').textContent=`${selected} de ${checks.length} elementos declarados${selected===checks.length?'. Corresponde verificar su contenido y aplicación.':''}`}));
+    document.getElementById('schedule-button').addEventListener('click',()=>{const date=fromInput('schedule-date');if(!date)return alert('Seleccione una fecha de inicio.');const offsets=[0,3,7,22,30];offsets.forEach((offset,index)=>{const target=offset===0?date:addWeekdays(date,offset);document.getElementById(`date-${index+1}`).textContent=formatDate(target)});document.getElementById('schedule-result').classList.add('show')});
+  </script>
 </body>
 </html>
