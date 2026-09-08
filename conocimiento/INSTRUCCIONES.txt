@@ -1,0 +1,19 @@
+CARPETA CONOCIMIENTO — ÁGORA LABORAL 360°
+
+1. Suba la carpeta completa "conocimiento" en la raíz del repositorio de GitHub.
+2. No cambie los nombres de las subcarpetas ni mueva la carpeta "assets".
+3. La dirección principal será: https://agoralaboral.cl/conocimiento/
+4. Recursos: https://agoralaboral.cl/conocimiento/recursos/
+5. Observatorio: https://agoralaboral.cl/conocimiento/observatorio/
+6. Blog: https://agoralaboral.cl/conocimiento/blog/
+
+FUNCIÓN DE CADA SECCIÓN
+- Recursos: descargas gratuitas y productos profesionales.
+- Observatorio: normas, dictámenes, fechas y fuentes oficiales.
+- Blog: artículos explicativos y análisis propios.
+
+En el menú principal del resto del sitio, el enlace "Conocimiento" debe apuntar a:
+/conocimiento/
+
+Cuando existan nuevos artículos, se agregarán dentro de la carpeta "blog" sin mezclar
+sus contenidos con las fichas normativas del Observatorio.
