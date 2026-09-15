@@ -226,7 +226,7 @@ body{
   bottom:-2%;
   width:min(920px,70vw);
   aspect-ratio:931/410;
-  background:url("ondas-agora.png") right bottom/contain no-repeat;
+  background:url("ondas-agora.png?v=20260915-2") right bottom/contain no-repeat;
   opacity:.92;
   pointer-events:none;
 }
@@ -351,7 +351,7 @@ body{
   z-index:-1;
   width:min(660px,58vw);
   aspect-ratio:931/410;
-  background:url("ondas-agora.png") center/contain no-repeat;
+  background:url("ondas-agora.png?v=20260915-2") center/contain no-repeat;
   opacity:.12;
   pointer-events:none;
 }
@@ -438,7 +438,7 @@ body{
   bottom:-90px;
   width:520px;
   aspect-ratio:931/410;
-  background:url("ondas-agora.png") center/contain no-repeat;
+  background:url("ondas-agora.png?v=20260915-2") center/contain no-repeat;
   opacity:.16;
   pointer-events:none;
 }
@@ -463,7 +463,7 @@ body{
   bottom:-100px;
   width:520px;
   aspect-ratio:931/410;
-  background:url("ondas-agora.png") center/contain no-repeat;
+  background:url("ondas-agora.png?v=20260915-2") center/contain no-repeat;
   opacity:.24;
   pointer-events:none;
 }
