@@ -556,4 +556,15 @@ body{
 .faq-list details[open] summary span{background:#1D1F22;transform:rotate(45deg)}
 *:focus-visible{outline:3px solid #3B3F45;outline-offset:4px}
 .process :focus-visible,footer :focus-visible{outline-color:#FFF1B8}
+
+/* Cabecera y etiqueta en grafito, según referencia. */
+.site-header{background:#3B3F45;color:#E7E2D3;border-color:#A7B1B7;box-shadow:0 12px 28px #1D1F221a}
+.site-header .brand,.site-header .brand small,.site-header nav{color:#E7E2D3}
+.site-header nav a:hover{color:#FFF1B8}
+.site-header>.button{display:none}
+.site-header .brand-mark{background:#1D1F22;color:#FFF1B8}
+.site-header .mobile-menu{background:#1D1F22;color:#FFF1B8}
+.mobile-links{background:#3B3F45;color:#E7E2D3}
+.site-header :focus-visible,.mobile-links :focus-visible{outline-color:#FFF1B8}
+.hero .eyebrow{background:#3B3F45;color:#FFF1B8;border:1px solid #3B3F45;box-shadow:0 6px 16px #1D1F2214}
 @media(max-width:600px){.hero::before{width:100%;right:0;opacity:.18}.trade-cloud span{padding:10px 12px;gap:10px}.trade-cloud svg{width:21px;height:21px;padding:8px}.hero .float-card{bottom:-18px}.step>span{width:50px;height:50px;font-size:24px}}
