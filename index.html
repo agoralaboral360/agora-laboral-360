@@ -1,18 +1,20 @@
 <!doctype html>
-<!-- ENTREGA CONSOLIDADA · ÁGORA LABORAL 360° · 2026-09-03 -->
-<html lang="es">
+<!-- Propuesta de portada · Ágora Laboral 360° · Recursos en preparación -->
+<html lang="es-CL">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Investigación laboral e informes técnicos | Ágora Laboral 360°</title>
-  <meta name="description" content="Investigaciones laborales externas e independientes, informes técnicos y peritaje social-laboral en Chile.">
-  <meta name="agora-version" content="entrega-consolidada-2026-09-03">
+  <title>Investigación laboral y recursos prácticos | Ágora Laboral 360°</title>
+  <meta name="description" content="Investigación laboral, informes técnicos y peritaje social-laboral en Chile. Conozca los servicios de Ágora y su próxima línea de plantillas y guías prácticas.">
+  <meta name="agora-version" content="revision-recursos-2026-09-17">
+  <link rel="canonical" href="https://agoralaboral.cl/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="agora-home">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Ágora Laboral 360°, inicio">
       <span class="brand-mark" aria-hidden="true">
@@ -41,8 +43,9 @@
       <a class="nav-home" href="#inicio">Inicio</a>
       <a href="/servicios/">Servicios</a>
       <a href="#especializacion">Especialización</a>
-      <a href="/metodo/">METODOLOGÍA</a>
+      <a href="#metodo">Metodología</a>
       <a href="/academia/">Escuela</a>
+      <a href="#recursos">Recursos</a>
       <a href="#contacto">Contacto</a>
     </nav>
 
@@ -50,23 +53,27 @@
     <a class="menu-button" href="#menu-movil" aria-label="Abrir menú">Menú <span>☰</span></a>
   </header>
 
-  <div class="mobile-nav" id="menu-movil">
+  <nav class="mobile-nav" id="menu-movil" aria-label="Navegación móvil">
     <a class="mobile-close" href="#inicio" aria-label="Cerrar menú">×</a>
     <a href="#inicio">Inicio</a>
     <a href="/servicios/">Servicios</a>
     <a href="#especializacion">Especialización</a>
     <a href="#metodo">Metodología</a>
     <a href="/academia/">Escuela</a>
+      <a href="#recursos">Recursos</a>
     <a href="#contacto">Contacto</a>
-  </div>
+  </nav>
 
-  <main>
+  <main id="contenido" tabindex="-1">
     <section class="hero" id="inicio">
       <div class="hero-copy">
         <p class="eyebrow">Rigor, imparcialidad y confidencialidad</p>
         <h1><span>Investigación laboral</span><span>e informes <em>técnicos</em></span></h1>
         <p class="hero-lead">Investigaciones laborales externas e independientes, informes técnicos y peritaje social-laboral para organizaciones.</p>
-        <a class="pill-button" href="#servicios">Conozca nuestros servicios <span aria-hidden="true">→</span></a>
+        <div class="hero-actions">
+          <a class="pill-button" href="#servicios">Conocer servicios <span aria-hidden="true">→</span></a>
+          <a class="pill-button button-outline" href="#recursos">Explorar recursos</a>
+        </div>
       </div>
 
       <figure class="hero-photo">
@@ -84,7 +91,7 @@
     </section>
 
     <section class="services section-shell" id="servicios">
-      <p class="services-title"><span>Soluciones técnicas para su organización</span></p>
+      <h2 class="services-title"><span>Soluciones técnicas para su organización</span></h2>
 
       <div class="service-links">
         <a href="/servicios/investigacion-laboral/">
@@ -121,11 +128,17 @@
           <h2>Rigor técnico con una mirada humana.</h2>
           <p>Somos una firma chilena especializada en investigaciones laborales externas, informes técnicos y peritaje social-laboral.</p>
           <p>Integramos imparcialidad, perspectiva de género y resguardo del debido proceso. La evidencia orienta las conclusiones; el trato respetuoso protege a quienes participan.</p>
-          <a class="text-link" href="#metodo">Conocer nuestra metodología <span>→</span></a>
+          <div class="professional-note">
+            <p class="eyebrow">Dirección profesional</p>
+            <h3>Mariela Astudillo Silva</h3>
+            <p>Trabajadora Social. Magíster en Intervención Familiar y Magíster en Derecho de Familia.</p>
+            <p>Experiencia en coordinación de programas sociales y equipos de trabajo en el ámbito municipal.</p>
+          </div>
+          <a class="text-link" href="#metodo">Conocer nuestra metodología <span aria-hidden="true">→</span></a>
         </div>
 
         <figure class="about-photo">
-          <img src="equipo-agora-oficina.jpg" alt="Equipo profesional reunido en una oficina luminosa con plantas">
+          <img src="equipo-agora-oficina.jpg" alt="Escena ilustrativa de trabajo colaborativo en una oficina" loading="lazy" decoding="async">
         </figure>
       </div>
 
@@ -162,13 +175,52 @@
       </div>
     </section>
 
+    <section class="resources section-shell" id="recursos" aria-labelledby="recursos-titulo">
+      <div class="section-intro">
+        <p class="eyebrow">Recursos Ágora</p>
+        <h2 id="recursos-titulo">Herramientas para trabajar con más claridad.</h2>
+        <p>Estamos preparando plantillas editables y guías prácticas para apoyar el registro y la organización del trabajo. Conozca el primer kit y consulte por su lanzamiento.</p>
+      </div>
+      <article class="resource-feature" aria-labelledby="kit-titulo">
+        <div class="resource-art" aria-hidden="true">
+          <div class="resource-sheet">
+            <span class="sheet-brand">ÁGORA · RECURSOS</span>
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h23l10 10v40H16zM39 7v11h10M24 29h17M24 37h17M24 45h10"/><circle cx="47" cy="48" r="10"/><path d="m42 48 3 3 6-7"/></svg>
+            <strong>Recepción y registro<br>de denuncias</strong>
+            <span class="sheet-rule"></span>
+            <span class="sheet-rule short"></span>
+            <small>VISTA CONCEPTUAL · EN PREPARACIÓN</small>
+          </div>
+        </div>
+        <div class="resource-copy">
+          <span class="resource-status">En preparación</span>
+          <p class="resource-category">Ley Karin · Kit práctico</p>
+          <h3 id="kit-titulo">Recepción y registro de denuncias</h3>
+          <p>Dirigido a personas encargadas de recibir y organizar antecedentes en organizaciones.</p>
+          <h4>Contenido previsto</h4>
+          <ul class="resource-list">
+            <li>Formulario para presentar una denuncia.</li>
+            <li>Acta de recepción de denuncia verbal.</li>
+            <li>Comprobante de recepción.</li>
+            <li>Lista de verificación e instrucciones de uso.</li>
+          </ul>
+          <p class="resource-note">El alcance, los formatos y el precio se informarán cuando el kit esté disponible. Aún no está a la venta.</p>
+          <a class="pill-button" href="mailto:contacto@agoralaboral.cl?subject=Consulta%20sobre%20el%20kit%20de%20recepci%C3%B3n%20de%20denuncias">Consultar por el kit <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </section>
+
     <section class="contact section-shell" id="contacto">
       <p class="eyebrow">Evaluación técnica inicial</p>
       <div class="contact-grid">
-        <h2>Conversemos sobre la necesidad de su organización.</h2>
+        <h2>¿Necesita un servicio o busca un recurso práctico?</h2>
         <div>
-          <p>Revisaremos el requerimiento para determinar el servicio y alcance técnico adecuado.</p>
-          <a class="pill-button" href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl <span>→</span></a>
+          <p>Cuéntenos qué necesita: una investigación, un informe, formación o información sobre los próximos recursos.</p>
+          <div class="contact-actions">
+            <a class="pill-button" href="https://wa.me/56932701196?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20%C3%81gora%20Laboral%20360.">Consultar por WhatsApp <span aria-hidden="true">→</span></a>
+            <a class="contact-email" href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a>
+            <a class="contact-phone" href="tel:+56932701196">Llamar al +56 9 3270 1196</a>
+          </div>
         </div>
       </div>
     </section>
@@ -199,10 +251,15 @@
         <p>Investigación laboral e informes técnicos especializados.</p>
       </div>
       <div class="footer-links"><strong>Servicios</strong><a href="/servicios/investigacion-laboral/">Investigaciones</a><a href="/servicios/informes-tecnicos/">Informes técnicos</a><a href="/servicios/auditoria-investigaciones/">Revisión técnica</a></div>
-      <div class="footer-links"><strong>Ágora Laboral</strong><a href="#especializacion">Especialización</a><a href="#metodo">Metodología</a><a href="/academia/">Escuela</a></div>
-      <div class="footer-contact"><strong>Contacto</strong><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a><span>Chile · Atención presencial y remota</span></div>
+      <div class="footer-links"><strong>Ágora Laboral</strong><a href="#especializacion">Especialización</a><a href="#metodo">Metodología</a><a href="/academia/">Escuela</a>
+      <a href="#recursos">Recursos</a></div>
+      <div class="footer-contact"><strong>Contacto</strong><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a><a href="tel:+56932701196">+56 9 3270 1196</a><span>Chile · Atención presencial y remota</span></div>
     </div>
     <div class="footer-bottom"><span>© 2026 Ágora Laboral 360°</span><span>Una línea especializada de Ágora</span></div>
   </footer>
+  <a class="whatsapp-link" href="https://wa.me/56932701196?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20%C3%81gora%20Laboral%20360." aria-label="Consultar a Ágora Laboral por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.3 7.9L3 21l1.6-4.7A9 9 0 1 1 21 11.5Z"/><path d="M8.5 7.5c0 4 4 8 8 8l1-2-3-1-1 1a8 8 0 0 1-3-3l1-1-1-3z"/></svg>
+    <span>WhatsApp</span>
+  </a>
 </body>
 </html>
