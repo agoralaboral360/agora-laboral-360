@@ -453,7 +453,7 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
 .agora-home .resources { background: linear-gradient(140deg, var(--paper), var(--blush)); }
 .agora-home .resource-feature { display: grid; grid-template-columns: .9fr 1.1fr; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: var(--paper); box-shadow: var(--shadow); }
 .agora-home .resource-art { min-width: 0; display: grid; place-items: center; padding: 48px; background: radial-gradient(circle at 30% 30%, var(--paper), var(--blush) 70%); }
-.agora-home .resource-sheet { width: 100%; max-width: 310px; padding: 32px; display: flex; flex-direction: column; gap: 23px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; box-shadow: 12px 18px 0 var(--sand), 0 22px 40px rgba(60,31,19,.12); transform: rotate(-4deg); }
+.agora-home .resource-sheet { width: 100%; max-width: 310px; padding: 32px; display: flex; flex-direction: column; gap: 23px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; box-shadow: 12px 18px 0 var(--sand), 0 22px 40px rgba(60,31,19,.12); transform: none; }
 .agora-home .sheet-brand { font-size: 10px; font-weight: 700; letter-spacing: .16em; }
 .agora-home .resource-sheet svg { width: 68px; height: 68px; color: var(--cocoa); }
 .agora-home .resource-sheet strong { font: 600 32px/1.1 "Cormorant Garamond", Georgia, serif; }
