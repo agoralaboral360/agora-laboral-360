@@ -423,3 +423,84 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
   .footer-main > div:first-child, .footer-contact { grid-column: auto; }
   .footer-bottom { flex-direction: column; }
 }
+
+/* Portada: recursos, contacto y ajustes de lectura.
+   Reglas limitadas a .agora-home para preservar las páginas internas. */
+.agora-home .skip-link { position: fixed; top: 12px; left: 12px; z-index: 100; padding: 14px 20px; background: var(--espresso); color: white; transform: translateY(-180%); }
+.agora-home .skip-link:focus { transform: none; }
+.agora-home a:focus-visible { outline: 3px solid var(--cocoa); outline-offset: 5px; }
+.agora-home .mobile-nav a:focus-visible { outline-color: var(--paper); }
+.agora-home section { scroll-margin-top: 24px; }
+.agora-home .site-header { min-height: 104px; gap: 20px; }
+.agora-home .desktop-nav { gap: clamp(12px, 1.25vw, 24px); }
+.agora-home .desktop-nav a { font-size: 11px; }
+.agora-home .hero-copy { min-width: 0; padding-bottom: 90px; }
+.agora-home h1 { font-size: clamp(40px, 4.5vw, 76px); line-height: 1.05; }
+.agora-home h1 span { white-space: normal; }
+.agora-home h1 em { color: var(--cocoa); }
+.agora-home .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.agora-home .pill-button { text-align: center; padding: 16px 25px; line-height: 1.5; max-width: 100%; }
+.agora-home .button-outline { background: transparent; color: var(--cocoa); border: 1px solid var(--cocoa); }
+.agora-home .button-outline:hover { background: var(--paper); }
+.agora-home .services-title { font-family: "Montserrat", Arial, sans-serif; line-height: 1.6; }
+.agora-home .service-links > a { min-width: 0; grid-template-rows: 86px auto 1fr auto; gap: 12px; }
+.agora-home .service-links b { padding-top: 12px; }
+.agora-home .service-links small { padding-bottom: 12px; }
+.agora-home .professional-note { margin-top: 28px; padding: 24px; border-left: 3px solid var(--caramel); background: var(--paper); border-radius: 0 18px 18px 0; }
+.agora-home .professional-note .eyebrow { margin-bottom: 10px; }
+.agora-home .professional-note h3 { font-size: 29px; margin-bottom: 12px; }
+.agora-home .professional-note p:not(.eyebrow) { color: var(--cocoa); font-size: 14px; margin-bottom: 0; }
+.agora-home .resources { background: linear-gradient(140deg, var(--paper), var(--blush)); }
+.agora-home .resource-feature { display: grid; grid-template-columns: .9fr 1.1fr; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: var(--paper); box-shadow: var(--shadow); }
+.agora-home .resource-art { min-width: 0; display: grid; place-items: center; padding: 48px; background: radial-gradient(circle at 30% 30%, var(--paper), var(--blush) 70%); }
+.agora-home .resource-sheet { width: 100%; max-width: 310px; padding: 32px; display: flex; flex-direction: column; gap: 23px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; box-shadow: 12px 18px 0 var(--sand), 0 22px 40px rgba(60,31,19,.12); transform: rotate(-4deg); }
+.agora-home .sheet-brand { font-size: 10px; font-weight: 700; letter-spacing: .16em; }
+.agora-home .resource-sheet svg { width: 68px; height: 68px; color: var(--cocoa); }
+.agora-home .resource-sheet strong { font: 600 32px/1.1 "Cormorant Garamond", Georgia, serif; }
+.agora-home .sheet-rule { display: block; height: 3px; background: var(--line); }
+.agora-home .sheet-rule.short { width: 65%; }
+.agora-home .resource-sheet small { font-size: 9px; line-height: 1.6; color: var(--cocoa); }
+.agora-home .resource-copy { min-width: 0; padding: clamp(24px, 4vw, 60px); }
+.agora-home .resource-status { display: inline-block; padding: 8px 13px; background: var(--blush); color: var(--espresso); border-radius: 99px; font-size: 12px; font-weight: 600; }
+.agora-home .resource-category { font-size: 12px; color: var(--cocoa); margin: 22px 0 12px; }
+.agora-home .resource-copy h3 { font-size: clamp(32px, 3vw, 46px); line-height: 1.1; margin-bottom: 18px; }
+.agora-home .resource-copy h4 { font: 600 14px/1.5 "Montserrat", Arial, sans-serif; margin: 24px 0 12px; }
+.agora-home .resource-copy p, .agora-home .resource-list { font-size: 14px; line-height: 1.75; }
+.agora-home .resource-list { padding-left: 20px; }
+.agora-home .resource-list li { padding: 4px 0; }
+.agora-home .resource-note { color: var(--cocoa); border-top: 1px solid var(--line); padding-top: 18px; margin-bottom: 24px; }
+.agora-home .contact-actions { display: flex; align-items: flex-start; flex-direction: column; gap: 18px; min-width: 0; }
+.agora-home .contact-email { overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 5px; line-height: 1.7; }
+.agora-home .contact-phone { padding-block: 10px; font-size: 14px; }
+.agora-home .footer-contact { overflow-wrap: anywhere; }
+.agora-home footer { padding-bottom: 112px; }
+.agora-home .whatsapp-link { position: fixed; z-index: 10; right: 22px; bottom: max(18px, env(safe-area-inset-bottom)); display: inline-flex; align-items: center; gap: 10px; padding: 16px 22px; background: var(--cocoa); color: white; border-radius: 99px; box-shadow: var(--shadow); font-size: 13px; font-weight: 600; }
+.agora-home .whatsapp-link svg { width: 24px; height: 24px; }
+@media (max-width: 1250px) {
+  .agora-home .desktop-nav, .agora-home .header-cta { display: none; }
+  .agora-home .menu-button { display: inline-flex; min-height: 44px; align-items: center; gap: 9px; font-size: 12px; font-weight: 700; }
+  .agora-home .menu-button span { font-size: 22px; }
+  .agora-home .mobile-nav:target { position: fixed; inset: 0; z-index: 20; padding: 24px; display: flex; flex-direction: column; gap: 12px; overflow-y: auto; background: var(--espresso); color: white; font: 600 28px/1.2 "Cormorant Garamond", Georgia, serif; }
+  .agora-home .mobile-nav a { padding: 8px 4px; }
+  .agora-home .mobile-close { align-self: flex-end; font: 300 38px/1 Arial, sans-serif; }
+}
+@media (max-width: 760px) {
+  .agora-home .site-header { min-height: 82px; }
+  .agora-home .hero-copy { min-height: auto; padding: 38px 24px 44px; }
+  .agora-home h1 { font-size: clamp(39px, 10vw, 55px); }
+  .agora-home .hero-actions { width: 100%; }
+  .agora-home .hero-actions .pill-button { flex: 1 1 230px; }
+  .agora-home .hero-photo { min-height: 0; height: clamp(250px, 70vw, 400px); }
+  .agora-home .resource-feature { grid-template-columns: 1fr; }
+  .agora-home .resource-art { padding: 36px 32px 44px; }
+  .agora-home .resource-sheet { transform: none; }
+  .agora-home .resource-copy { padding: 28px 22px; }
+  .agora-home .resource-copy .pill-button { width: 100%; }
+  .agora-home .mobile-nav:target { gap: 8px; }
+  .agora-home .whatsapp-link { right: 14px; padding: 13px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .agora-home *, .agora-home *::before, .agora-home *::after { transition: none !important; animation: none !important; }
+  .agora-home a:hover { transform: none; }
+}
