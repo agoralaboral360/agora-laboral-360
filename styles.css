@@ -636,3 +636,37 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
 .agora-home .free-section {gap:28px;}
 .agora-home .catalog-lead {font-size:15px;}
 }
+
+/* Acentos aprobados: oliva suave y rosa viejo. */
+.agora-home {
+  --olive: #74785B;
+  --olive-light: #E5E7D8;
+  --old-rose: #B88783;
+}
+.agora-home .catalog-hero {
+  background: radial-gradient(circle at 90% 10%, var(--olive-light), transparent 42%),
+              linear-gradient(120deg, var(--blush), var(--ivory));
+}
+.agora-home .product-card { border-top: 3px solid var(--old-rose); }
+.agora-home .product-number { color: var(--olive); }
+.agora-home .product-card .resource-status {
+  background: var(--olive-light);
+  color: var(--espresso);
+}
+.agora-home .professional-note { border-left-color: var(--old-rose); }
+.agora-home .free-section {
+  background: linear-gradient(120deg, var(--olive-light) 0%, var(--ivory) 100%);
+  color: var(--espresso);
+}
+.agora-home .free-section .eyebrow { color: var(--espresso); }
+.agora-home .free-section .pill-button {
+  background: var(--cocoa);
+  color: var(--ivory);
+}
+.agora-home .free-section .pill-button:hover { background: var(--espresso); }
+.agora-home .free-section a:focus-visible { outline-color: var(--espresso); }
+.agora-home .free-note {
+  background: var(--paper);
+  border-color: var(--olive);
+  border-top: 3px solid var(--old-rose);
+}
