@@ -559,3 +559,37 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
   .agora-home .resources.section-shell { padding-bottom: 32px; }
   .agora-home .contact.section-shell { padding-top: 32px; }
 }
+
+/* Cierre con contraste, dentro de la paleta café y marfil. */
+.agora-home .contact {
+  background: linear-gradient(120deg, var(--espresso) 0%, var(--cocoa) 100%);
+  color: var(--ivory);
+}
+.agora-home .contact h2,
+.agora-home .contact .eyebrow { color: var(--ivory); }
+.agora-home .contact-grid p,
+.agora-home .contact-email,
+.agora-home .contact-phone { color: var(--blush); }
+.agora-home .contact .pill-button {
+  background: var(--ivory);
+  color: var(--espresso);
+  border: 1px solid var(--ivory);
+}
+.agora-home .contact .pill-button:hover {
+  background: var(--sand);
+  border-color: var(--sand);
+}
+.agora-home .contact a:focus-visible {
+  outline-color: var(--ivory);
+}
+.agora-home .contact::before {
+  border-color: rgba(251,247,242,.22);
+  box-shadow: 0 0 0 60px rgba(251,247,242,.035),
+              0 0 0 120px rgba(251,247,242,.025);
+}
+@media (max-width: 760px) {
+  .agora-home .contact::before {
+    box-shadow: 0 0 0 40px rgba(251,247,242,.035),
+                0 0 0 80px rgba(251,247,242,.025);
+  }
+}
