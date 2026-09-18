@@ -670,3 +670,9 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
   border-color: var(--olive);
   border-top: 3px solid var(--old-rose);
 }
+
+/* Iconos temáticos en lugar de numeración decorativa. */
+.agora-home .topic-icon { display:inline-grid;place-items:center;width:52px;height:52px;flex:0 0 52px;padding:12px;margin-bottom:20px;border:1px solid var(--old-rose);border-radius:16px;background:var(--olive-light);color:var(--cocoa); }
+.agora-home .topic-icon svg { width:100%;height:100%; }
+.agora-home .principles .topic-icon { margin-bottom:0;background:transparent;color:var(--ivory);border-color:var(--sand); }
+.agora-home .method-grid .topic-icon { margin-bottom:30px; }
