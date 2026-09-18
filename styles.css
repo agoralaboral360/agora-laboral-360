@@ -594,9 +594,9 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
   }
 }
 
-/* Biblioteca profesional y acento verde petróleo. */
-.agora-home { --accent: #315c59; }
-.agora-home .catalog-hero { position:relative; overflow:hidden; background:radial-gradient(circle at 90% 10%,#dbe5df 0,transparent 38%),linear-gradient(120deg,var(--blush),var(--ivory)); }
+/* Biblioteca profesional y acentos café y crema. */
+.agora-home { --accent: var(--cocoa); }
+.agora-home .catalog-hero { position:relative; overflow:hidden; background:radial-gradient(circle at 90% 10%,var(--sand) 0,transparent 38%),linear-gradient(120deg,var(--blush),var(--ivory)); }
 .agora-home .catalog-hero h1 { max-width:950px; margin-block:24px; }
 .agora-home .catalog-hero h1 em { color:var(--accent); font-style:normal; }
 .agora-home .catalog-lead { max-width:720px; font-size:17px; line-height:1.8; }
@@ -614,7 +614,7 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
 .agora-home .catalog-action {margin-top:30px;background:var(--accent);}
 .agora-home .free-section {display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center;background:var(--accent);color:var(--ivory);}
 .agora-home .free-section .pill-button {background:var(--ivory);color:var(--accent);}
-.agora-home .free-note {border:1px solid #90aaa1;border-radius:20px;padding:32px;}
+.agora-home .free-note {border:1px solid var(--sand);border-radius:20px;padding:32px;}
 .agora-home .free-note h3 {font-size:38px;margin-block:22px;}
 .agora-home .free-section a:focus-visible {outline-color:var(--ivory);}
 .agora-home .support-section {background:var(--blush);}
