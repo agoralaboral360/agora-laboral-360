@@ -551,3 +551,11 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
   .agora-home .resources::before { top: -190px; right: -150px; }
   .agora-home .contact::before { bottom: -190px; left: -170px; }
 }
+
+/* Reducir el espacio acumulado entre Recursos y Contacto. */
+.agora-home .resources.section-shell { padding-bottom: 48px; }
+.agora-home .contact.section-shell { padding-top: 48px; }
+@media (max-width: 760px) {
+  .agora-home .resources.section-shell { padding-bottom: 32px; }
+  .agora-home .contact.section-shell { padding-top: 32px; }
+}
