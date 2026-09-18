@@ -593,3 +593,46 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
                 0 0 0 80px rgba(251,247,242,.025);
   }
 }
+
+/* Biblioteca profesional y acento verde petróleo. */
+.agora-home { --accent: #315c59; }
+.agora-home .catalog-hero { position:relative; overflow:hidden; background:radial-gradient(circle at 90% 10%,#dbe5df 0,transparent 38%),linear-gradient(120deg,var(--blush),var(--ivory)); }
+.agora-home .catalog-hero h1 { max-width:950px; margin-block:24px; }
+.agora-home .catalog-hero h1 em { color:var(--accent); font-style:normal; }
+.agora-home .catalog-lead { max-width:720px; font-size:17px; line-height:1.8; }
+.agora-home .catalog-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px; }
+.agora-home .home-resource-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.agora-home .product-card { position:relative; display:flex;flex-direction:column;align-items:flex-start;padding:32px;border:1px solid var(--line);border-radius:22px;background:var(--paper);box-shadow:0 12px 30px rgba(60,31,19,.05); }
+.agora-home .product-card .eyebrow {color:var(--accent);font-size:10px;margin-bottom:18px;}
+.agora-home .product-card h3 {font-size:34px;line-height:1.12;margin-bottom:16px;}
+.agora-home .product-card p {font-size:14px;}
+.agora-home .product-card dl {font-size:12px;line-height:1.7;margin-bottom:24px;}
+.agora-home .product-card dt {font-weight:600;color:var(--accent);}
+.agora-home .product-card dd {margin:0 0 12px;}
+.agora-home .product-number {font:600 24px Georgia,serif;color:var(--accent);margin-bottom:20px;}
+.agora-home .product-card .resource-status {margin-top:auto;}
+.agora-home .catalog-action {margin-top:30px;background:var(--accent);}
+.agora-home .free-section {display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center;background:var(--accent);color:var(--ivory);}
+.agora-home .free-section .pill-button {background:var(--ivory);color:var(--accent);}
+.agora-home .free-note {border:1px solid #90aaa1;border-radius:20px;padding:32px;}
+.agora-home .free-note h3 {font-size:38px;margin-block:22px;}
+.agora-home .free-section a:focus-visible {outline-color:var(--ivory);}
+.agora-home .support-section {background:var(--blush);}
+.agora-home .support-section p {max-width:700px;}
+.agora-home.agora-inner .section-shell>h2,.agora-home .free-section h2 {font-size:clamp(36px,4vw,60px);line-height:1.05;}
+.agora-home.agora-inner .site-header {gap:36px;}
+.agora-home.agora-inner .mobile-nav:not(:target) {display:none;}
+.agora-home.agora-inner .menu-button {display:none;}
+.agora-home.agora-inner .desktop-nav {display:flex;gap:clamp(28px,2vw,40px);}
+.agora-home.agora-inner .header-cta {display:inline-flex;}
+.agora-home.agora-inner .desktop-nav a {font-size:12px;text-transform:none;}
+@media(max-width:1440px){
+.agora-home.agora-inner .desktop-nav,.agora-home.agora-inner .header-cta {display:none;}
+.agora-home.agora-inner .menu-button {display:inline-flex;}
+}
+@media(max-width:760px){
+.agora-home .catalog-grid,.agora-home .home-resource-grid,.agora-home .free-section {grid-template-columns:1fr;}
+.agora-home .product-card {padding:26px;}
+.agora-home .free-section {gap:28px;}
+.agora-home .catalog-lead {font-size:15px;}
+}
