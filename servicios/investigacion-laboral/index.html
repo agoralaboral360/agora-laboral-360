@@ -38,19 +38,62 @@
     @media(max-width:760px){.site-header{min-height:82px;padding:0 20px}.brand{gap:11px}.brand-mark{width:48px;height:48px;flex-basis:48px}.brand-copy strong{font-size:22px}.brand-copy small{margin-top:7px;font-size:7px}.page-hero{grid-template-columns:1fr}.hero-copy{min-height:455px;padding:54px 23px 60px}.eyebrow{font-size:9px;margin-bottom:22px}h1{font-size:clamp(45px,13vw,58px)}.hero-lead{font-size:14px}.hero-photo{min-height:390px}.hero-photo:before{inset:0 0 auto;width:auto;height:80px;background:linear-gradient(180deg,var(--blush),rgba(243,232,225,0))}.facts{width:calc(100% - 28px);margin-top:-20px;padding:10px;grid-template-columns:1fr 1fr}.facts>div{padding:19px 15px}.facts>div:nth-child(2),.facts>div:nth-child(4){border-right:0}.facts>a{margin:9px;min-height:62px}.intro{padding:76px 22px;grid-template-columns:1fr;gap:43px}.intro h2,.scope h2,.quote-copy h2{font-size:45px}.standards{grid-template-columns:1fr 1fr}.standard{min-height:190px;padding:23px}.process-section{padding:72px 22px}.process-heading{margin-bottom:40px}.process-heading h2{font-size:44px}.process-heading .eyebrow{gap:12px}.process-heading .eyebrow:before,.process-heading .eyebrow:after{width:30px}.steps{grid-template-columns:1fr}.steps article{min-height:215px}.steps span{margin-bottom:30px}.scope{padding:72px 22px;grid-template-columns:1fr;gap:42px}.scope-photo{height:350px}.scope-list{grid-template-columns:1fr}.quote{padding:72px 22px;grid-template-columns:1fr;gap:36px}.quote-form{padding:28px 22px}.form-row{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child,.footer-grid>div:last-child{grid-column:1/-1}}
     @media(max-width:480px){.menu-button{font-size:0}.menu-button span{font-size:22px}.facts{grid-template-columns:1fr}.facts>div{border-right:0;border-bottom:1px solid var(--line)}.standards{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child,.footer-grid>div:last-child{grid-column:auto}.footer-bottom{flex-direction:column;gap:10px}}
   </style>
+<link rel="stylesheet" href="../../styles.css">
 </head>
-<body>
+<body class="agora-home agora-inner">
   <header class="site-header">
-    <a class="brand" href="/" aria-label="Ágora Laboral 360°, inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 120 120" focusable="false"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M60 8a52 52 0 0 1 47 30" class="arc arc-one"/><path d="M108 48a52 52 0 0 1-20 52" class="arc arc-two"/><path d="M78 108a52 52 0 0 1-53-13" class="arc arc-one"/><path d="M17 85A52 52 0 0 1 42 11" class="arc arc-three"/><path d="M32 91 59 24 87 91M43 67h32" class="letter-a"/><path d="M27 76c13-18 25 14 40-3 10-12 20-13 29-5" class="swoop"/><circle cx="60" cy="8" r="3.8" class="node node-one"/><circle cx="108" cy="43" r="3.8" class="node node-two"/><circle cx="84" cy="103" r="3.8" class="node node-three"/><circle cx="20" cy="88" r="3.8" class="node node-four"/></g></svg></span><span class="brand-copy"><strong>ÁGORA</strong><small>LABORAL 360°</small></span></a>
-    <nav class="desktop-nav" aria-label="Navegación principal"><a href="/">Inicio</a><a href="/servicios/" aria-current="page">Servicios</a><a href="/#especializacion">Especialización</a><a href="/metodo/">METODOLOGÍA</a><a href="/#escuela">Escuela</a><a href="/#contacto">Contacto</a></nav>
-    <a class="header-cta" href="#cotizar">Solicitar evaluación</a><a class="menu-button" href="#menu-movil" aria-label="Abrir menú">Menú <span>☰</span></a>
+    <a class="brand" href="../../index.html" aria-label="Ágora Laboral 360°, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 120 120" focusable="false">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M60 8a52 52 0 0 1 47 30" class="arc arc-one"/>
+            <path d="M108 48a52 52 0 0 1-20 52" class="arc arc-two"/>
+            <path d="M78 108a52 52 0 0 1-53-13" class="arc arc-one"/>
+            <path d="M17 85A52 52 0 0 1 42 11" class="arc arc-three"/>
+            <path d="M32 91 59 24 87 91M43 67h32" class="letter-a"/>
+            <path d="M27 76c13-18 25 14 40-3 10-12 20-13 29-5" class="swoop"/>
+            <circle cx="60" cy="8" r="3.8" class="node node-one"/>
+            <circle cx="108" cy="43" r="3.8" class="node node-two"/>
+            <circle cx="84" cy="103" r="3.8" class="node node-three"/>
+            <circle cx="20" cy="88" r="3.8" class="node node-four"/>
+          </g>
+        </svg>
+      </span>
+      <span class="brand-copy">
+        <strong>ÁGORA</strong>
+        <small>LABORAL 360°</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a class="nav-home" href="../../index.html">Inicio</a>
+      <a href="../index.html">Servicios</a>
+      <a href="../../index.html#especializacion">Especialización</a>
+      <a href="../../index.html#metodo">Metodología</a>
+      <a href="../../academia/index.html">Escuela</a>
+      <a href="../../recursos/index.html">Recursos</a>
+      <a href="../../index.html#contacto">Contacto</a>
+    </nav>
+
+    <a class="header-cta" href="../../index.html#contacto">Solicitar evaluación</a>
+    <a class="menu-button" href="#menu-movil" aria-label="Abrir menú">Menú <span>☰</span></a>
   </header>
-  <nav class="mobile-nav" id="menu-movil" aria-label="Navegación móvil"><a class="mobile-close" href="#inicio" aria-label="Cerrar menú">×</a><a href="/">Inicio</a><a href="/servicios/">Servicios</a><a href="/#especializacion">Especialización</a><a href="/#metodo">Metodología</a><a href="/#escuela">Escuela</a><a href="#cotizar">Contacto</a></nav>
+
+  <nav class="mobile-nav" id="menu-movil" aria-label="Navegación móvil">
+    <a class="mobile-close" href="../../index.html" aria-label="Cerrar menú">×</a>
+    <a href="../../index.html">Inicio</a>
+    <a href="../index.html">Servicios</a>
+    <a href="../../index.html#especializacion">Especialización</a>
+    <a href="../../index.html#metodo">Metodología</a>
+    <a href="../../academia/index.html">Escuela</a>
+      <a href="../../recursos/index.html">Recursos</a>
+    <a href="../../index.html#contacto">Contacto</a>
+  </nav>
 
   <main>
     <section class="page-hero" id="inicio">
       <div class="hero-copy"><p class="eyebrow">Servicio de especialidad</p><h1>Investigación laboral externa e <em>independiente.</em></h1><p class="hero-lead">Conducción integral de investigaciones por acoso sexual, acoso laboral y violencia en el trabajo, conforme a la Ley N.° 21.643.</p><a class="pill-button" href="#cotizar">Solicitar evaluación <span>→</span></a></div>
-      <figure class="hero-photo"><img src="/hero-escritorio-agora.png" alt="Profesional revisando antecedentes de una investigación laboral"></figure>
+      <figure class="hero-photo"><img src="../../hero-escritorio-agora.png" alt="Profesional revisando antecedentes de una investigación laboral"></figure>
     </section>
 
     <section class="facts" aria-label="Características del servicio"><div><small>Modalidad</small><strong>Investigación externa</strong></div><div><small>Marco</small><strong>Ley N.° 21.643</strong></div><div><small>Estándar</small><strong>Imparcialidad técnica</strong></div><div><small>Cobertura</small><strong>Atención en Chile</strong></div><a href="#cotizar">Evaluación inicial <span>→</span></a></section>
@@ -66,7 +109,7 @@
     </section>
 
     <section class="scope">
-      <figure class="scope-photo"><img src="/equipo-agora-oficina.jpg" alt="Entrevista profesional en una oficina luminosa"></figure>
+      <figure class="scope-photo"><img src="../../equipo-agora-oficina.jpg" alt="Entrevista profesional en una oficina luminosa"></figure>
       <div class="scope-copy"><p class="eyebrow">Alcance del servicio</p><h2>Investigar también es proteger el proceso.</h2><p>La perspectiva de género se integra como criterio de análisis responsable, sin reemplazar la evidencia ni anticipar responsabilidad. El objetivo es esclarecer los hechos y sostener conclusiones comprensibles y defendibles.</p><ul class="scope-list"><li>Acoso laboral</li><li>Acoso sexual</li><li>Violencia en el trabajo</li><li>No revictimización</li><li>Confidencialidad</li><li>Debido proceso</li></ul></div>
     </section>
 
@@ -83,6 +126,37 @@
     </section>
   </main>
 
-  <footer><div class="footer-grid"><div><a class="brand brand-footer" href="/"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 120 120" focusable="false"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M60 8a52 52 0 0 1 47 30" class="arc arc-one"/><path d="M108 48a52 52 0 0 1-20 52" class="arc arc-two"/><path d="M78 108a52 52 0 0 1-53-13" class="arc arc-one"/><path d="M17 85A52 52 0 0 1 42 11" class="arc arc-three"/><path d="M32 91 59 24 87 91M43 67h32" class="letter-a"/><path d="M27 76c13-18 25 14 40-3 10-12 20-13 29-5" class="swoop"/><circle cx="60" cy="8" r="3.8" class="node node-one"/><circle cx="108" cy="43" r="3.8" class="node node-two"/><circle cx="84" cy="103" r="3.8" class="node node-three"/><circle cx="20" cy="88" r="3.8" class="node node-four"/></g></svg></span><span class="brand-copy"><strong>ÁGORA</strong><small>LABORAL 360°</small></span></a><p>Investigación laboral e informes técnicos especializados.</p></div><div class="footer-links"><strong>Servicios</strong><a href="/servicios/investigacion-laboral/">Investigaciones</a><a href="/servicios/informes-tecnicos/">Informes técnicos</a><a href="/servicios/auditoria-investigaciones/">Revisión técnica</a></div><div class="footer-links"><strong>Ágora Laboral</strong><a href="/#especializacion">Especialización</a><a href="/#metodo">Metodología</a><a href="/#escuela">Escuela</a></div><div class="footer-links"><strong>Contacto</strong><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a><span>Chile · Atención presencial y remota</span></div></div><div class="footer-bottom"><span>© 2026 Ágora Laboral 360°</span><span>Investigación e Informes Técnicos</span></div></footer>
+  <footer>
+    <div class="footer-main">
+      <div>
+        <a class="brand brand-footer" href="../../index.html">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 120 120" focusable="false">
+              <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M60 8a52 52 0 0 1 47 30" class="arc arc-one"/>
+                <path d="M108 48a52 52 0 0 1-20 52" class="arc arc-two"/>
+                <path d="M78 108a52 52 0 0 1-53-13" class="arc arc-one"/>
+                <path d="M17 85A52 52 0 0 1 42 11" class="arc arc-three"/>
+                <path d="M32 91 59 24 87 91M43 67h32" class="letter-a"/>
+                <path d="M27 76c13-18 25 14 40-3 10-12 20-13 29-5" class="swoop"/>
+                <circle cx="60" cy="8" r="3.8" class="node node-one"/>
+                <circle cx="108" cy="43" r="3.8" class="node node-two"/>
+                <circle cx="84" cy="103" r="3.8" class="node node-three"/>
+                <circle cx="20" cy="88" r="3.8" class="node node-four"/>
+              </g>
+            </svg>
+          </span>
+          <span class="brand-copy"><strong>ÁGORA</strong><small>LABORAL 360°</small></span>
+        </a>
+        <p>Investigación laboral e informes técnicos especializados.</p>
+      </div>
+      <div class="footer-links"><strong>Servicios</strong><a href="index.html">Investigaciones</a><a href="../informes-tecnicos/index.html">Informes técnicos</a><a href="../auditoria-investigaciones/index.html">Revisión técnica</a></div>
+      <div class="footer-links"><strong>Ágora Laboral</strong><a href="../../index.html#especializacion">Especialización</a><a href="../../index.html#metodo">Metodología</a><a href="../../academia/index.html">Escuela</a>
+      <a href="../../recursos/index.html">Recursos</a></div>
+      <div class="footer-contact"><strong>Contacto</strong><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a><a href="tel:+56932701196">+56 9 3270 1196</a><span>Chile · Atención presencial y remota</span></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Ágora Laboral 360°</span><span>Una línea especializada de Ágora</span></div>
+  </footer>
 </body>
 </html>
+
