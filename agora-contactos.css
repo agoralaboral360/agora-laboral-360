@@ -1,7 +1,7 @@
 /* Navegación visible y vías de contacto de Ágora Laboral 360°. */
 body .site-header{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;padding:20px clamp(20px,4vw,64px);min-height:110px;height:auto}
 body .site-header .brand{margin-right:auto;min-width:0;flex-shrink:0}
-body .site-header .desktop-nav{display:flex!important;position:static;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 22px;margin:0;min-width:0}
+body .site-header .desktop-nav{display:flex!important;position:static;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:8px 22px;margin:0 0 0 auto;min-width:0}
 body .site-header .desktop-nav a{font-size:11px;line-height:1.5;padding:10px 0;white-space:normal}
 body .site-header .header-cta{display:inline-flex!important;align-items:center;justify-content:center;flex-shrink:0;min-width:0;min-height:44px;height:auto;padding:13px 20px;font-size:11px;line-height:1.5;white-space:normal}
 body .site-header .menu-button,body .site-header .menu-toggle,body .mobile-nav,body .mobile-nav:target{display:none!important}
@@ -18,7 +18,7 @@ body .contact-email{overflow-wrap:anywhere}
 .agora-contact-page #menu-principal ul{display:flex;flex-wrap:wrap;flex-direction:row;gap:8px 22px}
 .agora-contact-page #menu-principal a{display:block;width:auto;font-size:12px;padding:9px 0}
 .agora-contact-page .contact-whatsapp{display:inline-flex;padding:14px 20px;border-radius:24px;background:#6f4b35;color:#fff;text-decoration:none;font-weight:600;font-size:13px;margin-bottom:20px}
-@media(max-width:1440px){
+@media(max-width:1050px){
 body .site-header .desktop-nav{order:3;flex-basis:100%;border-top:1px solid #dfd0c6;padding-top:12px;gap:8px 28px}
 body .site-header .brand-mark{width:64px;height:64px;flex-basis:64px}
 }
@@ -28,10 +28,27 @@ body .site-header .brand-mark{width:48px;height:48px;flex-basis:48px}
 body .site-header .brand-copy strong{font-size:23px}
 body .site-header .brand-copy small{font-size:7px;letter-spacing:2px}
 body .site-header .header-cta{font-size:10px;padding:10px 12px;max-width:150px}
-body .site-header .desktop-nav{gap:4px 18px;justify-content:flex-start;padding-top:10px}
+body .site-header .desktop-nav{gap:4px 18px;justify-content:flex-end;padding-top:10px}
 body .site-header .desktop-nav a{font-size:10px;padding:8px 0}
 body .catalog-hero{grid-template-columns:1fr;gap:28px}
 body .catalog-photo img{height:280px}
 .agora-contact-page .site-header #menu-principal{flex-basis:100%}
 }
 @media(max-width:370px){body .site-header .header-cta{max-width:115px;font-size:9px}body .site-header{padding-inline:14px}}
+
+/* Menú a la derecha, sin llamada a la acción duplicada. */
+body .site-header .desktop-nav a,
+.agora-contact-page #menu-principal a{border-bottom:2px solid transparent;text-decoration:none;transition:border-color .18s ease}
+body .site-header .desktop-nav a:hover,
+body .site-header .desktop-nav a:focus-visible,
+body .site-header .desktop-nav a[aria-current],
+.agora-contact-page #menu-principal a:hover,
+.agora-contact-page #menu-principal a:focus-visible,
+.agora-contact-page #menu-principal a[aria-current]{border-bottom-color:var(--cocoa,#6f4b35)}
+.agora-contact-page .site-header #menu-principal{margin-left:auto}
+.agora-contact-page #menu-principal ul{justify-content:flex-end;padding:0;margin:0}
+/* Fotografías de apertura para las dos páginas que no tenían imagen. */
+body.manual-page .manual-hero{background:linear-gradient(90deg,rgba(251,247,242,.98),rgba(251,247,242,.89)),url('hero-escritorio-agora.png') center/cover}
+.agora-contact-page .intro{background:linear-gradient(90deg,rgba(251,247,242,.98),rgba(251,247,242,.82)),url('equipo-agora-oficina.jpg') center/cover;padding:clamp(24px,4vw,54px);border-radius:20px}
+@media(min-width:1051px){body .site-header .desktop-nav{flex:1 1 550px;order:initial;border:0;padding-top:0}}
+@media(prefers-reduced-motion:reduce){body .site-header .desktop-nav a{transition:none}}
