@@ -355,39 +355,45 @@
             *, *::before, *::after { transition: none !important; }
         }
     </style>
-<link rel="stylesheet" href="../agora-contactos.css?v=20260928">
+<link rel="stylesheet" href="../agora-contactos.css?v=20260928b">
 <script src="../agora-nav.js" defer></script>
 </head>
 <body class="agora-contact-page">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
     <header class="site-header">
-        <a href="/" class="logo-box" aria-label="Ágora Laboral 360°, inicio">
-            <svg class="logo-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 22C12 22 10 16 5 13C2 11.2 2 8 5 8C8 8 10 11 12 14C14 11 16 8 19 8C22 8 22 11.2 19 13C14 16 12 22 12 22Z" />
-                <path d="M12 22V10" />
-            </svg>
-            <span class="logo-text">
-                <span class="logo-title">Ágora Laboral <sup>360°</sup></span>
-                <span class="logo-subtitle">Investigación &amp; Informes Técnicos</span>
-            </span>
-        </a>
+        <a class="brand" href="/" aria-label="Ágora Laboral 360°, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 120 120" focusable="false">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M60 8a52 52 0 0 1 47 30" class="arc arc-one"/>
+            <path d="M108 48a52 52 0 0 1-20 52" class="arc arc-two"/>
+            <path d="M78 108a52 52 0 0 1-53-13" class="arc arc-one"/>
+            <path d="M17 85A52 52 0 0 1 42 11" class="arc arc-three"/>
+            <path d="M32 91 59 24 87 91M43 67h32" class="letter-a"/>
+            <path d="M27 76c13-18 25 14 40-3 10-12 20-13 29-5" class="swoop"/>
+            <circle cx="60" cy="8" r="3.8" class="node node-one"/>
+            <circle cx="108" cy="43" r="3.8" class="node node-two"/>
+            <circle cx="84" cy="103" r="3.8" class="node node-three"/>
+            <circle cx="20" cy="88" r="3.8" class="node node-four"/>
+          </g>
+        </svg>
+      </span>
+      <span class="brand-copy">
+        <strong>ÁGORA</strong>
+        <small>LABORAL 360°</small>
+      </span>
+    </a>
 
-        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-                <path d="M4 7h16M4 12h16M4 17h16" />
-            </svg>
-        </button>
-
-        <nav id="menu-principal" aria-label="Navegación principal">
-            <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/#servicios">Servicios</a></li>
-                <li><a href="/academia/">Escuela</a></li>
-                <li><a href="/recursos/">Recursos</a></li>
-                <li><a href="/contacto/" class="active" aria-current="page">Contacto</a></li>
-            </ul>
-        </nav>
+        <nav class="desktop-nav" aria-label="Navegación principal">
+      <a class="nav-home" href="/#inicio">Inicio</a>
+      <a href="/servicios/index.html">Servicios</a>
+      <a href="/#especializacion">Especialización</a>
+      <a href="/#metodo">Metodología</a>
+      <a href="/academia/index.html">Escuela</a>
+      <a href="/recursos/index.html">Recursos</a>
+      <a href="/contacto/">Contacto</a>
+    </nav>
     </header>
 
     <main id="contenido">
@@ -499,25 +505,9 @@
     </footer>
 
     <script>
-        const menuButton = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('#menu-principal');
         const form = document.querySelector('#contact-form');
         const copyButton = document.querySelector('#copy-email');
         const copyStatus = document.querySelector('#copy-status');
-
-        menuButton.addEventListener('click', () => {
-            const isOpen = menu.classList.toggle('open');
-            menuButton.setAttribute('aria-expanded', String(isOpen));
-            menuButton.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
-        });
-
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.remove('open');
-                menuButton.setAttribute('aria-expanded', 'false');
-                menuButton.setAttribute('aria-label', 'Abrir menú');
-            });
-        });
 
         form.addEventListener('submit', event => {
             event.preventDefault();

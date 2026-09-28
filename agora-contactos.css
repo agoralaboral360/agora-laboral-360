@@ -48,7 +48,50 @@ body .site-header .desktop-nav a[aria-current],
 .agora-contact-page .site-header #menu-principal{margin-left:auto}
 .agora-contact-page #menu-principal ul{justify-content:flex-end;padding:0;margin:0}
 /* Fotografías de apertura para las dos páginas que no tenían imagen. */
-body.manual-page .manual-hero{background:linear-gradient(90deg,rgba(251,247,242,.98),rgba(251,247,242,.89)),url('hero-escritorio-agora.png') center/cover}
-.agora-contact-page .intro{background:linear-gradient(90deg,rgba(251,247,242,.98),rgba(251,247,242,.82)),url('equipo-agora-oficina.jpg') center/cover;padding:clamp(24px,4vw,54px);border-radius:20px}
+body.manual-page .manual-hero{background:linear-gradient(90deg,rgba(251,247,242,.98),rgba(251,247,242,.89)),url('https://images.pexels.com/photos/8297053/pexels-photo-8297053.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover}
+.agora-contact-page .intro{background:linear-gradient(90deg,rgba(251,247,242,.98),rgba(251,247,242,.82)),url('https://images.pexels.com/photos/8297490/pexels-photo-8297490.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover;padding:clamp(24px,4vw,54px);border-radius:20px}
 @media(min-width:1051px){body .site-header .desktop-nav{flex:1 1 550px;order:initial;border:0;padding-top:0}}
 @media(prefers-reduced-motion:reduce){body .site-header .desktop-nav a{transition:none}}
+
+/* Ritmo vertical coherente entre las diez páginas principales. */
+body.agora-home main>.section-shell:not(.catalog-hero){padding-top:64px;padding-bottom:64px}
+body.agora-inner main>.intro,body.agora-inner main>.process-section,
+body.agora-inner main>.scope,body.agora-inner main>.quote,
+body.agora-inner main>.reports,body.agora-inner main>.value,
+body.agora-inner main>.experience,body.agora-inner main>.cta{padding-top:64px;padding-bottom:64px}
+body.agora-inner .report-card,body.agora-inner .process-card{min-height:0}
+body.agora-home .method-grid span{margin-bottom:22px}
+body.agora-home .method-grid article{min-height:0;padding:24px}
+.agora-contact-page{--cocoa:#6f4b35;--espresso:#3c1f13;--caramel:#aa7f63;--sand:#dcc3b4;background:#fbf7f2;color:var(--espresso)}
+.agora-contact-page .site-header{background:#fbf7f2;box-shadow:none;position:relative}
+.agora-contact-page .brand{text-decoration:none;display:inline-flex;align-items:center;gap:16px}
+.agora-contact-page .brand-mark{width:80px;height:80px;flex:0 0 80px}
+.agora-contact-page .brand-mark svg{display:block;width:100%;height:100%}
+.agora-contact-page .brand-mark .arc{stroke-width:1.8}
+.agora-contact-page .brand-mark .arc-one{stroke:var(--caramel)}
+.agora-contact-page .brand-mark .arc-two{stroke:var(--cocoa)}
+.agora-contact-page .brand-mark .arc-three{stroke:#8e927f}
+.agora-contact-page .brand-mark .letter-a{stroke:var(--espresso);stroke-width:2.2}
+.agora-contact-page .brand-mark .swoop{stroke:var(--caramel);stroke-width:2}
+.agora-contact-page .brand-mark .node-one{fill:var(--sand)}
+.agora-contact-page .brand-mark .node-two{fill:#d9a99a}
+.agora-contact-page .brand-mark .node-three{fill:var(--cocoa)}
+.agora-contact-page .brand-mark .node-four{fill:#8e927f}
+.agora-contact-page .brand-copy{display:flex;flex-direction:column;line-height:1}
+.agora-contact-page .brand-copy strong{font:500 34px/1 var(--serif);letter-spacing:.18em}
+.agora-contact-page .brand-copy small{margin-top:10px;color:var(--caramel);font-size:9px;font-weight:600;letter-spacing:.31em}
+.agora-contact-page .desktop-nav a{text-transform:none;font-weight:500;letter-spacing:0}
+.agora-contact-page .contact-shell{padding-top:40px;padding-bottom:56px}
+.agora-contact-page .intro{padding:32px;gap:32px;margin-bottom:32px}
+.agora-contact-page h1{font-size:clamp(40px,4.4vw,64px);text-transform:none;line-height:1.06}
+@media(max-width:760px){
+body.agora-home main>.section-shell:not(.catalog-hero),body.agora-inner main>.intro,
+body.agora-inner main>.process-section,body.agora-inner main>.scope,
+body.agora-inner main>.quote,body.agora-inner main>.reports,
+body.agora-inner main>.value,body.agora-inner main>.experience,
+body.agora-inner main>.cta{padding-top:40px;padding-bottom:40px}
+.agora-contact-page .brand-mark{width:48px;height:48px;flex-basis:48px}
+.agora-contact-page .brand-copy strong{font-size:23px}
+.agora-contact-page .brand-copy small{font-size:7px;letter-spacing:2px}
+.agora-contact-page .intro{padding:24px;gap:20px}
+}
