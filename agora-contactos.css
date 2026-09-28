@@ -95,3 +95,12 @@ body.agora-inner main>.cta{padding-top:40px;padding-bottom:40px}
 .agora-contact-page .brand-copy small{font-size:7px;letter-spacing:2px}
 .agora-contact-page .intro{padding:24px;gap:20px}
 }
+
+/* Ajustes finales de tarjetas y alineación del contacto. */
+body.agora-home .contact-grid{align-items:start;gap:48px}
+body.agora-home .contact-grid h2{margin-top:0}
+body.agora-home .service-links>a{min-height:0;padding:0 24px 30px;grid-template-rows:60px 78px minmax(58px,auto) 38px}
+body.agora-home .service-links .service-icon{width:60px;height:60px;padding:14px}
+body.agora-inner .service-card{min-height:0;padding:28px}
+body.agora-inner .service-card .service-icon{width:60px;height:60px;padding:14px;margin-bottom:22px}
+@media(max-width:760px){body.agora-home .contact-grid{gap:24px}}
