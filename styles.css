@@ -289,6 +289,7 @@ h1 em { color: var(--caramel); font-style: normal; }
   background: rgba(255, 253, 250, .55);
 }
 .method-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.method-grid.method-grid-5 { grid-template-columns: repeat(5, 1fr); }
 .method-grid article {
   min-height: 245px;
   padding: 28px 30px 32px;
@@ -310,7 +311,12 @@ h1 em { color: var(--caramel); font-style: normal; }
   font: 600 18px "Cormorant Garamond", Georgia, serif;
 }
 .method-grid h3 { margin-bottom: 13px; font-size: 27px; }
+.method-grid h3 em { color: var(--caramel); font-style: normal; }
 .method-grid p { margin: 0; color: #76675f; font-size: 12px; }
+
+@media (max-width: 1400px) {
+  .method-grid.method-grid-5 { grid-template-columns: repeat(3, 1fr); }
+}
 
 .school {
   display: grid;
@@ -360,6 +366,7 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
   .brief-bar { grid-template-columns: repeat(2, 1fr); }
   .brief-bar > a { grid-column: 1/-1; min-height: 70px; }
   .service-links, .method-grid { grid-template-columns: 1fr 1fr; }
+  .method-grid.method-grid-5 { grid-template-columns: 1fr 1fr; }
   .about-grid { grid-template-columns: 1fr 1fr; gap: 52px; }
   .principles { grid-template-columns: 1fr 1fr; gap: 25px 0; }
   .principles article:nth-child(2) { border-right: 0; }
@@ -393,6 +400,7 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
   .services-title { gap: 14px; font-size: 9px; }
   .services-title::before, .services-title::after { width: 33px; }
   .service-links, .method-grid { grid-template-columns: 1fr; }
+  .method-grid.method-grid-5 { grid-template-columns: 1fr; }
   .service-links > a { min-height: 285px; padding-inline: 15px; }
   .method-grid article { min-height: 215px; }
   .method-grid span { margin-bottom: 30px; }
@@ -601,7 +609,8 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
 .agora-home .catalog-hero h1 em { color:var(--accent); font-style:normal; }
 .agora-home .catalog-lead { max-width:720px; font-size:17px; line-height:1.8; }
 .agora-home .catalog-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px; }
-.agora-home .home-resource-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.agora-home .catalog-grid.catalog-grid-3,
+.agora-home .catalog-grid.home-resource-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
 .agora-home .product-card { position:relative; display:flex;flex-direction:column;align-items:flex-start;padding:32px;border:1px solid var(--line);border-radius:22px;background:var(--paper);box-shadow:0 12px 30px rgba(60,31,19,.05); }
 .agora-home .product-card .eyebrow {color:var(--accent);font-size:10px;margin-bottom:18px;}
 .agora-home .product-card h3 {font-size:34px;line-height:1.12;margin-bottom:16px;}
@@ -653,7 +662,7 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
   background: var(--olive-light);
   color: var(--espresso);
 }
-.agora-home .professional-note { border-left-color: var(--old-rose); }
+.agora-home .professional-note { border-left-color: var(--caramel); }
 .agora-home .free-section {
   background: linear-gradient(120deg, var(--olive-light) 0%, var(--ivory) 100%);
   color: var(--espresso);
@@ -711,4 +720,84 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
 .agora-home.agora-inner .catalog-hero{padding-block:36px}
 .agora-home.agora-inner .request{padding-block:44px}
 .agora-home.agora-inner .hero-actions{gap:12px}
+}
+
+/* ===================================================================
+   ESCUELA (academia/) — integrada al sistema compartido.
+   Reemplaza el bloque de estilos propios que antes duplicaba
+   :root, header, nav, footer y pill-button.
+   =================================================================== */
+.agora-escuela .page-hero { min-height: 0; }
+.agora-escuela .page-hero .hero-copy { padding: clamp(60px, 7vw, 110px) clamp(28px, 4.5vw, 90px); }
+.agora-escuela .page-hero .hero-lead { max-width: 640px; margin: 24px 0 34px; }
+
+.agora-escuela .audience { padding: 110px max(28px, calc(50vw - 900px)) 90px; }
+.agora-escuela .audience-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.agora-escuela .audience-card { min-height: 300px; padding: 36px 30px; border-right: 1px solid var(--line); }
+.agora-escuela .audience-card:last-child { border-right: 0; }
+.agora-escuela .audience-card:nth-child(even) { background: rgba(243,232,225,.55); }
+.agora-escuela .audience-card h3 { margin: 40px 0 14px; font: 600 clamp(26px,2vw,34px)/1.08 "Cormorant Garamond", Georgia, serif; }
+.agora-escuela .audience-card p { margin: 0; color: #76675f; font-size: 13px; }
+
+.agora-escuela .curriculum { padding: 100px max(28px, calc(50vw - 900px)); background: var(--paper); }
+.agora-escuela .curriculum-header { display: grid; grid-template-columns: 1.15fr .85fr; gap: 70px; align-items: end; margin-bottom: 50px; }
+.agora-escuela .modules { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.agora-escuela .module { padding: 22px; background: var(--blush); border-radius: 22px; border: 1px solid var(--line); border-top: 3px solid var(--old-rose); overflow: hidden; }
+.agora-escuela .module:nth-child(2), .agora-escuela .module:nth-child(4) { background: var(--ivory); }
+.agora-escuela .module-photo { width: 100%; height: 170px; object-fit: cover; border-radius: 13px; margin: 0 0 18px; }
+.agora-escuela .module-top { display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px; border-bottom: 1px solid var(--sand); }
+.agora-escuela .module-top span:first-child { color: var(--caramel); text-transform: uppercase; font-size: 11px; font-weight: 700; letter-spacing: .14em; }
+.agora-escuela .module-top .topic-icon { width: 36px; height: 36px; margin: 0; padding: 7px; border-radius: 10px; }
+.agora-escuela .module h3 { margin: 16px 0 12px; font: 600 clamp(26px,2.2vw,34px)/1.08 "Cormorant Garamond", Georgia, serif; }
+.agora-escuela .module h3 em { color: var(--caramel); font-style: normal; }
+.agora-escuela .module p { margin: 0; color: #76675f; font-size: 14px; }
+.agora-escuela .module ul { margin: 16px 0 0; padding: 0; list-style: none; }
+.agora-escuela .module li { padding: 8px 0 8px 20px; border-top: 1px solid rgba(170,127,99,.28); position: relative; color: #76675f; font-size: 13px; }
+.agora-escuela .module li::before { content: '—'; position: absolute; left: 0; color: var(--caramel); }
+.agora-escuela .module-photo-credit { margin: 20px 0 0; font-size: 11px; color: #76675f; line-height: 1.6; }
+.agora-escuela .module-photo-credit a { color: inherit; text-underline-offset: 3px; }
+
+.agora-escuela .method-page { display: grid; grid-template-columns: 48% 52%; min-height: 0; background: var(--ivory); }
+.agora-escuela .method-page-photo { margin: 0; overflow: hidden; min-height: 460px; }
+.agora-escuela .method-page-copy { padding: 90px clamp(34px, 6vw, 110px); display: flex; flex-direction: column; justify-content: center; }
+.agora-escuela .method-list { margin: 8px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.agora-escuela .method-list li { display: grid; grid-template-columns: 42px 1fr; gap: 15px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); color: #76675f; font-size: 14px; }
+.agora-escuela .method-list .topic-icon { width: 40px; height: 40px; padding: 9px; margin: 0; }
+
+.agora-escuela .experience { padding: 110px max(28px, calc(50vw - 900px)); background: var(--blush); }
+.agora-escuela .experience-header { display: grid; grid-template-columns: 1.15fr .85fr; gap: 70px; align-items: end; margin-bottom: 50px; }
+.agora-escuela .experience-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--sand); }
+.agora-escuela .credential { padding: 34px 30px; border-right: 1px solid var(--sand); }
+.agora-escuela .credential:last-child { border-right: 0; }
+.agora-escuela .credential h3 { margin: 38px 0 12px; font: 600 27px/1.08 "Cormorant Garamond", Georgia, serif; }
+.agora-escuela .credential p { margin: 0; color: #76675f; font-size: 13px; }
+
+.agora-escuela .interest { padding: 110px max(28px, calc(50vw - 900px)); display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(50px, 7vw, 130px); background: var(--paper); }
+.agora-escuela .interest-copy p.notice { padding-top: 20px; border-top: 1px solid var(--line); font-size: 12px; color: #76675f; }
+.agora-escuela .interest-form { align-self: start; }
+.agora-escuela .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.agora-escuela .form-group { margin-bottom: 24px; }
+.agora-escuela .form-group label { display: block; margin-bottom: 8px; text-transform: uppercase; color: var(--cocoa); font-size: 10px; font-weight: 700; letter-spacing: .13em; }
+.agora-escuela .form-control { width: 100%; padding: 14px 2px; border: 0; border-bottom: 1px solid var(--sand); background: transparent; color: var(--espresso); font: 15px "Montserrat", Arial, sans-serif; }
+.agora-escuela .form-control:focus { outline: 0; border-color: var(--cocoa); }
+.agora-escuela .interest-form .pill-button { margin-top: 8px; width: 100%; justify-content: center; }
+.agora-escuela .form-note { margin: 14px 0 0; color: #76675f; font-size: 11px; }
+
+@media (max-width: 1250px) {
+  .agora-escuela .audience-grid, .agora-escuela .experience-grid { grid-template-columns: 1fr 1fr; }
+  .agora-escuela .audience-card:nth-child(2), .agora-escuela .credential:nth-child(2) { border-right: 0; }
+  .agora-escuela .audience-card:nth-child(-n+2), .agora-escuela .credential:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 1030px) {
+  .agora-escuela .method-page { grid-template-columns: 1fr; }
+  .agora-escuela .method-page-photo { min-height: 360px; }
+  .agora-escuela .curriculum-header, .agora-escuela .experience-header { grid-template-columns: 1fr; gap: 28px; }
+  .agora-escuela .interest { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .agora-escuela .audience, .agora-escuela .curriculum, .agora-escuela .experience, .agora-escuela .interest { padding: 70px 22px; }
+  .agora-escuela .audience-grid, .agora-escuela .experience-grid, .agora-escuela .modules { grid-template-columns: 1fr; }
+  .agora-escuela .audience-card, .agora-escuela .audience-card:nth-child(2), .agora-escuela .credential, .agora-escuela .credential:nth-child(2) { border-right: 0; border-bottom: 1px solid var(--line); }
+  .agora-escuela .form-row { grid-template-columns: 1fr; gap: 0; }
+  .agora-escuela .method-page-copy { padding: 60px 24px; }
 }
