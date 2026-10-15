@@ -912,3 +912,11 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
 @media(max-width:1100px){.agora-home .agora-highlights{grid-template-columns:repeat(3,1fr)}.agora-home .header-cta{display:none;}}
 @media(max-width:760px){.agora-home .site-header{min-height:88px}.agora-home .brand-mark{width:58px;height:58px;flex-basis:58px}.agora-home .hero-copy{padding:55px 24px;min-height:570px}.agora-home .hero h1{font-size:clamp(40px,9vw,60px)}.agora-home .agora-highlights{grid-template-columns:repeat(2,1fr);gap:24px;padding:35px 22px}.agora-home .agora-highlights span{width:48px;height:48px;flex-basis:48px;font-size:24px}.agora-home .agora-highlights p{font-size:12px}}
 @media(max-width:420px){.agora-home .agora-highlights{grid-template-columns:1fr 1fr;gap:14px}.agora-home .agora-highlights>div{gap:8px}}
+
+
+/* Ilustración de derechos laborales en lugar de fotografía de oficina */
+.agora-home .hero-photo img{display:none!important}
+.agora-home .hero-photo{background-image:url("assets/hero-derechos-laborales.svg");background-repeat:no-repeat;background-size:cover;background-position:center center}
+.agora-home .hero-photo::before{background:linear-gradient(90deg,rgba(252,249,253,.99) 0%,rgba(250,245,251,.96) 29%,rgba(249,243,251,.77) 44%,rgba(249,243,251,.08) 65%,transparent 85%)!important}
+.agora-home .hero-photo::after{background:none!important}
+@media(max-width:760px){.agora-home .hero-photo{background-size:auto 100%;background-position:60% center}.agora-home .hero-photo::before{background:linear-gradient(90deg,rgba(252,249,253,.98),rgba(250,245,251,.88) 62%,rgba(250,245,251,.55))!important}}
