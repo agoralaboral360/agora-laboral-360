@@ -959,3 +959,14 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
 .agora-home .contact .pill-button{background:#785593!important;color:#fff!important;border-color:#785593!important}
 .agora-home .contact .pill-button:hover{background:#5e4077!important}
 @media(max-width:760px){.agora-home .agora-highlights>a span{flex-basis:48px!important;width:48px;height:48px}.agora-home .agora-highlights>a p{font-size:12px!important}.agora-home .agora-highlights{gap:12px;padding:24px 14px}}
+
+
+/* Accesos de portada: distribución equilibrada en pantallas pequeñas */
+@media (max-width:760px){
+ .agora-home .agora-highlights{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:12px 8px!important;padding:25px 12px!important}
+ .agora-home .agora-highlights>a{flex:0 1 calc((100% - 16px)/3)!important;max-width:calc((100% - 16px)/3)!important;min-width:0!important;box-sizing:border-box!important;padding:12px 4px!important}
+ .agora-home .agora-highlights>a p{font-size:11px!important;overflow-wrap:break-word}
+}
+@media (max-width:390px){
+ .agora-home .agora-highlights>a{flex-basis:calc((100% - 8px)/2)!important;max-width:calc((100% - 8px)/2)!important}
+}
