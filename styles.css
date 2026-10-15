@@ -919,3 +919,15 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
 .agora-home .hero-photo img{display:none!important}
 .agora-home .hero-photo{background:radial-gradient(ellipse at 78% 35%,#d9c4e9 0%,transparent 43%),radial-gradient(ellipse at 94% 80%,#b9d0c0 0%,transparent 38%),radial-gradient(ellipse at 60% 85%,#f2d7d7 0%,transparent 40%),linear-gradient(115deg,#fcfafd 20%,#eee3f4 100%)!important}
 .agora-home .hero-photo::before,.agora-home .hero-photo::after{background:none!important}
+
+
+/* Compactar portada: eliminar vacío superior sin alterar el logotipo */
+@media(min-width:761px){
+ .agora-home .hero{min-height:560px!important;align-items:start!important}
+ .agora-home .hero-copy{justify-content:flex-start!important;padding-top:64px!important;padding-bottom:58px!important;min-height:0!important}
+ .agora-home .hero .eyebrow{margin-top:0!important}
+}
+@media(max-width:760px){
+ .agora-home .hero{min-height:0!important}
+ .agora-home .hero-copy{min-height:0!important;justify-content:flex-start!important;padding-top:38px!important;padding-bottom:42px!important}
+}
