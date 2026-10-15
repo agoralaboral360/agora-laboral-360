@@ -886,3 +886,29 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
 .agora-home .contact {background:linear-gradient(135deg,#F0EBF7,#F7F4FA);}
 .agora-home .hero-copy::before {background:radial-gradient(circle,rgba(155,125,192,.16),transparent 72%);}
 @media(max-width:760px){.agora-home .hero-photo::before{background:linear-gradient(90deg,rgba(249,247,253,.97),rgba(237,230,247,.88));}.agora-home .hero-photo::after{background:rgba(242,236,250,.08);}}
+
+
+/* Portada editorial ilustrada: composición inspirada en la maqueta aprobada. */
+.agora-home .site-header {min-height:108px;padding-inline:clamp(24px,4.8vw,85px);}
+.agora-home .brand-mark {width:68px;height:68px;flex-basis:68px;}
+.agora-home .brand-copy strong {font-size:32px;}
+.agora-home .header-cta {background:#906BA6;min-height:54px;padding:0 34px;color:white;box-shadow:none;}
+.agora-home .header-cta:hover {background:#76528F;}
+.agora-home .hero {min-height:660px;}
+.agora-home .hero-copy {padding-top:75px;padding-bottom:80px;padding-left:clamp(35px,5vw,90px);max-width:850px;}
+.agora-home .hero h1 {font-size:clamp(48px,4.3vw,77px);line-height:1.02;max-width:800px;}
+.agora-home .hero h1 span {white-space:normal;}
+.agora-home .hero-lead {font-size:clamp(16px,1.32vw,21px);line-height:1.65;max-width:700px;}
+.agora-home .hero-actions {display:flex;flex-wrap:wrap;gap:18px;}
+.agora-home .hero-actions .pill-button {font-size:13px;min-width:225px;}
+.agora-home .agora-highlights {position:relative;z-index:4;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;padding:30px clamp(25px,5vw,90px) 45px;background:linear-gradient(90deg,#FCFAFD,#F5EDF8);}
+.agora-home .agora-highlights>div {display:flex;align-items:center;gap:15px;}
+.agora-home .agora-highlights span {width:58px;height:58px;display:grid;place-items:center;flex:0 0 58px;border-radius:50%;background:#EBDDF2;color:#78569A;font-size:29px;font-family:Georgia,serif;}
+.agora-home .agora-highlights>div:nth-child(2) span {background:#F5E1E5;}
+.agora-home .agora-highlights>div:nth-child(3) span {background:#E5ECE6;}
+.agora-home .agora-highlights>div:nth-child(4) span {background:#F9E6CB;}
+.agora-home .agora-highlights>div:nth-child(5) span {background:#F0E0EF;}
+.agora-home .agora-highlights p {font-size:13px;line-height:1.55;margin:0;}
+@media(max-width:1100px){.agora-home .agora-highlights{grid-template-columns:repeat(3,1fr)}.agora-home .header-cta{display:none;}}
+@media(max-width:760px){.agora-home .site-header{min-height:88px}.agora-home .brand-mark{width:58px;height:58px;flex-basis:58px}.agora-home .hero-copy{padding:55px 24px;min-height:570px}.agora-home .hero h1{font-size:clamp(40px,9vw,60px)}.agora-home .agora-highlights{grid-template-columns:repeat(2,1fr);gap:24px;padding:35px 22px}.agora-home .agora-highlights span{width:48px;height:48px;flex-basis:48px;font-size:24px}.agora-home .agora-highlights p{font-size:12px}}
+@media(max-width:420px){.agora-home .agora-highlights{grid-template-columns:1fr 1fr;gap:14px}.agora-home .agora-highlights>div{gap:8px}}
