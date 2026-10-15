@@ -805,3 +805,53 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
   .agora-escuela .form-row { grid-template-columns: 1fr; gap: 0; }
   .agora-escuela .method-page-copy { padding: 60px 24px; }
 }
+
+
+/* Renovación visual de portada — octubre 2026.
+   Acentos violeta (perspectiva de género), rosa viejo y salvia.
+   Se limita a la portada para preservar el diseño de páginas interiores. */
+.agora-home {
+  --ivory:#FCFAFD;--blush:#F0EAF5;--paper:#FFFFFF;
+  --espresso:#30303B;--cocoa:#73548F;--caramel:#9C6F9D;
+  --sand:#D6C7DE;--line:#E7DDEA;
+  --shadow:0 20px 55px rgba(70,46,92,.11);
+}
+.agora-home .site-header {min-height:100px;background:rgba(252,250,253,.96);box-shadow:0 3px 18px rgba(55,42,70,.045);}
+.agora-home .brand-mark .arc-one,.agora-home .brand-mark .swoop {stroke:#9C6F9D;}
+.agora-home .brand-mark .arc-three {stroke:#92A98C;}
+.agora-home .brand-mark .node-two {fill:#C98D94;stroke:#C98D94;}
+.agora-home .desktop-nav a {transition:color .22s,border-color .22s;}
+.agora-home .desktop-nav a:hover {color:#73548F;border-color:#9C6F9D;}
+.agora-home .hero {background:linear-gradient(125deg,#F7F1FA 0%,#EDE4F2 64%,#F3E7ED 100%);}
+.agora-home .hero-copy {justify-content:center;padding-top:72px;padding-bottom:90px;}
+.agora-home .hero-copy::before {content:"";position:absolute;width:260px;height:260px;left:-135px;top:22px;border-radius:50%;background:radial-gradient(circle,rgba(178,144,197,.19),transparent 72%);pointer-events:none;}
+.agora-home .hero h1 {font-size:clamp(42px,4.05vw,72px);line-height:1.04;letter-spacing:-.032em;}
+.agora-home .hero h1 span {white-space:normal;}
+.agora-home .hero h1 em {color:#765295;}
+.agora-home .hero-lead {max-width:580px;}
+.agora-home .hero .eyebrow {color:#795795;letter-spacing:.14em;}
+.agora-home .hero-photo img {transition:transform 1.1s ease;filter:saturate(.83) contrast(1.04);}
+.agora-home .hero-photo:hover img {transform:scale(1.035);}
+.agora-home .hero-photo::before {background:linear-gradient(90deg,#EDE4F2,rgba(237,228,242,0));}
+.agora-home .pill-button,.agora-home .brief-bar>a {background:#73548F;box-shadow:0 9px 24px rgba(115,84,143,.18);}
+.agora-home .pill-button:hover,.agora-home .brief-bar>a:hover {background:#573B73;transform:translateY(-3px);}
+.agora-home .button-outline {background:transparent;color:#65467F;border:1.5px solid #8F72A7;box-shadow:none;}
+.agora-home .button-outline:hover {background:#E4D8EB;color:#422B56;}
+.agora-home .brief-bar {border:1px solid #E7DDEA;}
+.agora-home .services {padding-bottom:75px;background:linear-gradient(180deg,#FCFAFD,#F8F5FA);}
+.agora-home .service-links {gap:18px;border:0;}
+.agora-home .service-links>a {min-height:300px;padding:24px 18px 28px;border:1px solid #E7DDEA;border-radius:20px;background:#fff;box-shadow:0 9px 28px rgba(74,48,96,.055);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;}
+.agora-home .service-links>a:hover {transform:translateY(-9px);border-color:#B99DCA;box-shadow:0 23px 42px rgba(74,48,96,.13);}
+.agora-home .service-icon {background:#F4EDF8;border-color:#D6C1E3;color:#765295;transition:background .3s,transform .3s;}
+.agora-home .service-links>a:hover .service-icon {background:#E7D9F0;transform:scale(1.06);}
+.agora-home .service-links>a:nth-child(2) .service-icon {background:#F9ECEF;color:#A36E7C;border-color:#E8C8D0;}
+.agora-home .service-links>a:nth-child(3) .service-icon {background:#EDF3EB;color:#67816B;border-color:#C8D7C5;}
+.agora-home .specialty {background:#fff;}
+.agora-home .about-photo {border-radius:28px;}
+.agora-home .professional-note {border-left:3px solid #9B78B5;}
+.agora-home .principles {background:#F1EAF5;}
+.agora-home .contact {background:linear-gradient(135deg,#F0E8F5,#F8F1F4);}
+.agora-home a:focus-visible {outline:3px solid #765295;outline-offset:4px;}
+@media(max-width:1100px){.agora-home .service-links{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:700px){.agora-home .hero-copy{padding-top:54px;padding-bottom:54px;}.agora-home .hero h1{font-size:clamp(39px,10vw,58px);}.agora-home .service-links{grid-template-columns:1fr;}.agora-home .service-links>a{min-height:270px;}}
+@media(prefers-reduced-motion:reduce){.agora-home .hero-photo img,.agora-home .service-links>a,.agora-home .service-icon{transition:none!important;transform:none!important;}}
