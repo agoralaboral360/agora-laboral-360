@@ -946,3 +946,16 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
 .agora-home .agora-highlights>a:nth-child(5) span{background:#F0E0EF}
 @media(max-width:760px){.agora-home .agora-highlights>a{align-items:flex-start}.agora-home .agora-highlights>a small{padding-left:0}}
 @media(prefers-reduced-motion:reduce){.agora-home .agora-highlights>a,.agora-home .agora-highlights>a span{transition:none!important}}
+
+
+/* Ajuste final: accesos simétricos y contacto legible */
+.agora-home .agora-highlights{align-items:stretch;gap:clamp(10px,2vw,28px);padding-top:35px;padding-bottom:38px}
+.agora-home .agora-highlights>a{display:flex!important;flex-direction:column!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;text-align:center!important;padding:15px 8px!important;min-width:0}
+.agora-home .agora-highlights>a span{flex:0 0 58px!important;width:58px;height:58px}
+.agora-home .agora-highlights>a p{margin:0!important;line-height:1.45!important;font-size:13px!important;text-align:center!important}
+.agora-home .contact{background:linear-gradient(125deg,#eee5f5,#f8f3fa)!important;color:#302b3e!important}
+.agora-home .contact .eyebrow,.agora-home .contact h2,.agora-home .contact p,.agora-home .contact a:not(.pill-button){color:#302b3e!important;opacity:1!important}
+.agora-home .contact .eyebrow{color:#765293!important}
+.agora-home .contact .pill-button{background:#785593!important;color:#fff!important;border-color:#785593!important}
+.agora-home .contact .pill-button:hover{background:#5e4077!important}
+@media(max-width:760px){.agora-home .agora-highlights>a span{flex-basis:48px!important;width:48px;height:48px}.agora-home .agora-highlights>a p{font-size:12px!important}.agora-home .agora-highlights{gap:12px;padding:24px 14px}}
