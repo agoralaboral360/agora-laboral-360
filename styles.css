@@ -876,3 +876,13 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
  .agora-home .hero-photo::after {background:rgba(247,239,250,.10);}
  .agora-home .hero-copy {min-height:520px;}
 }
+
+
+/* Ajuste de identidad: violeta predominante, rosa viejo solo en detalles. */
+.agora-home {--blush:#F0EBF7;--ivory:#FBFAFD;}
+.agora-home .hero {background:#F0EBF7;}
+.agora-home .hero-photo::before {background:linear-gradient(90deg,rgba(249,247,253,.98) 0%,rgba(241,235,249,.94) 37%,rgba(228,219,241,.69) 68%,rgba(217,207,235,.34) 100%);}
+.agora-home .hero-photo::after {background:linear-gradient(0deg,rgba(104,76,143,.10),transparent 40%);}
+.agora-home .contact {background:linear-gradient(135deg,#F0EBF7,#F7F4FA);}
+.agora-home .hero-copy::before {background:radial-gradient(circle,rgba(155,125,192,.16),transparent 72%);}
+@media(max-width:760px){.agora-home .hero-photo::before{background:linear-gradient(90deg,rgba(249,247,253,.97),rgba(237,230,247,.88));}.agora-home .hero-photo::after{background:rgba(242,236,250,.08);}}
