@@ -855,3 +855,24 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
 @media(max-width:1100px){.agora-home .service-links{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:700px){.agora-home .hero-copy{padding-top:54px;padding-bottom:54px;}.agora-home .hero h1{font-size:clamp(39px,10vw,58px);}.agora-home .service-links{grid-template-columns:1fr;}.agora-home .service-links>a{min-height:270px;}}
 @media(prefers-reduced-motion:reduce){.agora-home .hero-photo img,.agora-home .service-links>a,.agora-home .service-icon{transition:none!important;transform:none!important;}}
+
+
+/* Portada: fotografía atmosférica como fondo difuminado, texto siempre legible */
+@media(min-width:761px){
+ .agora-home .hero {grid-template-columns:1fr;min-height:620px;isolation:isolate;background:#F2EAF5;}
+ .agora-home .hero-photo {position:absolute;inset:0;z-index:-1;}
+ .agora-home .hero-photo img {width:100%;height:100%;object-fit:cover;object-position:center 43%;filter:blur(3px) saturate(.7);transform:scale(1.035);}
+ .agora-home .hero-photo:hover img {transform:scale(1.055);}
+ .agora-home .hero-photo::before {inset:0;width:100%;background:linear-gradient(90deg,rgba(249,245,252,.98) 0%,rgba(246,238,250,.94) 36%,rgba(237,224,245,.70) 65%,rgba(226,207,236,.36) 100%);}
+ .agora-home .hero-photo::after {background:linear-gradient(0deg,rgba(110,73,137,.12),transparent 40%);}
+ .agora-home .hero-copy {max-width:850px;padding-left:max(32px,calc(50vw - 850px));padding-right:30px;}
+ .agora-home .hero h1 {max-width:750px;}
+}
+@media(max-width:760px){
+ .agora-home .hero {position:relative;isolation:isolate;background:#F2EAF5;}
+ .agora-home .hero-photo {position:absolute;inset:0;z-index:-1;min-height:100%;}
+ .agora-home .hero-photo img {width:100%;height:100%;object-fit:cover;filter:blur(4px) saturate(.65);transform:scale(1.06);}
+ .agora-home .hero-photo::before {inset:0;width:100%;background:linear-gradient(90deg,rgba(249,245,252,.97),rgba(245,237,249,.87));}
+ .agora-home .hero-photo::after {background:rgba(247,239,250,.10);}
+ .agora-home .hero-copy {min-height:520px;}
+}
