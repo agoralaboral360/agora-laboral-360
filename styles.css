@@ -931,3 +931,18 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
  .agora-home .hero{min-height:0!important}
  .agora-home .hero-copy{min-height:0!important;justify-content:flex-start!important;padding-top:38px!important;padding-bottom:42px!important}
 }
+
+
+/* Accesos rápidos interactivos a las especialidades */
+.agora-home .agora-highlights>a{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;text-decoration:none;color:inherit;border-radius:16px;padding:12px 9px;transition:background .22s,transform .22s,box-shadow .22s}
+.agora-home .agora-highlights>a:hover{background:#fff;transform:translateY(-5px);box-shadow:0 9px 22px rgba(78,52,100,.11)}
+.agora-home .agora-highlights>a:focus-visible{outline:3px solid #78569a;outline-offset:3px}
+.agora-home .agora-highlights>a span{transition:transform .22s}
+.agora-home .agora-highlights>a:hover span{transform:scale(1.1)}
+.agora-home .agora-highlights>a small{flex-basis:100%;font-size:11px;color:#795393;font-weight:600;padding-left:72px}
+.agora-home .agora-highlights>a:nth-child(2) span{background:#F5E1E5}
+.agora-home .agora-highlights>a:nth-child(3) span{background:#E5ECE6}
+.agora-home .agora-highlights>a:nth-child(4) span{background:#F9E6CB}
+.agora-home .agora-highlights>a:nth-child(5) span{background:#F0E0EF}
+@media(max-width:760px){.agora-home .agora-highlights>a{align-items:flex-start}.agora-home .agora-highlights>a small{padding-left:0}}
+@media(prefers-reduced-motion:reduce){.agora-home .agora-highlights>a,.agora-home .agora-highlights>a span{transition:none!important}}
