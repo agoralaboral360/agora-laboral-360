@@ -109,7 +109,18 @@
 <link rel="stylesheet" href="../agora-contactos.css?v=20260928c">
 <script src="../agora-nav.js" defer></script>
 <style>.prevention-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.prevention-grid .service-card:last-child{grid-column:auto}.prevention-grid .service-card{min-height:auto;scroll-margin-top:140px}.prevention-grid .text-link{overflow-wrap:anywhere} @media(max-width:760px){.prevention-grid{grid-template-columns:1fr}}</style>
-</head>
+<style>
+/* Ajustes responsivos y acceso visible a la formación especializada */
+.agora-home.agora-inner .service-grid,.agora-home.agora-inner .prevention-grid{min-width:0}
+.agora-home.agora-inner .service-card{min-width:0;overflow-wrap:break-word}
+.agora-home.agora-inner .service-card h3,.agora-home.agora-inner .service-card p,.agora-home.agora-inner .service-card a{max-width:100%;overflow-wrap:break-word}
+@media(max-width:760px){.agora-home.agora-inner .service-grid,.agora-home.agora-inner .prevention-grid{grid-template-columns:minmax(0,1fr)!important}.agora-home.agora-inner .service-card{grid-column:auto!important;padding:24px!important;min-height:0!important}.agora-home.agora-inner .service-card h3{font-size:clamp(28px,8vw,38px)}.agora-home.agora-inner .page-hero{grid-template-columns:1fr!important}.agora-home.agora-inner .hero-copy{padding:38px 22px!important}.agora-home.agora-inner .hero-copy h1{font-size:clamp(39px,10vw,56px)!important;line-height:1.08}.agora-home.agora-inner .hero-photo{min-width:0}}
+.agora-escuela-link{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:27px 30px;margin:24px auto 10px;border-radius:20px;background:#eee7f4;color:#33283e}
+.agora-escuela-link h2{font-size:clamp(28px,3vw,39px);margin:4px 0 10px}
+.agora-escuela-link p{margin:0;max-width:720px}
+.agora-escuela-link a{display:inline-flex;padding:13px 21px;border-radius:99px;background:#76538e;color:white;font-size:13px;font-weight:700}
+@media(max-width:680px){.agora-escuela-link{padding:23px 20px}.agora-escuela-link a{width:100%;justify-content:center}}
+</style></head>
 <body class="agora-home agora-inner">
   <header class="site-header">
     <a class="brand" href="../index.html" aria-label="Ágora Laboral 360°, inicio">
@@ -138,6 +149,7 @@
     <nav class="desktop-nav" aria-label="Navegación principal">
       <a class="nav-start" href="../index.html">Inicio</a>
       <a href="index.html" aria-current="page">Servicios</a>
+      <a href="../quienes-somos/index.html">Quiénes somos</a>
       <a href="../escuela/index.html">Escuela Ágora</a>
       <a href="../observatorio/index.html">Observatorio</a>
       <a href="../index.html#contacto">Contacto</a>
@@ -149,7 +161,8 @@
     <a class="mobile-close" href="../index.html" aria-label="Cerrar menú">×</a>
     <a href="../index.html">Inicio</a>
     <a href="index.html" aria-current="page">Servicios</a>
-    <a href="../escuela/index.html">Escuela Ágora</a>
+    <a href="../quienes-somos/index.html">Quiénes somos</a>
+      <a href="../escuela/index.html">Escuela Ágora</a>
       <a href="../observatorio/index.html">Observatorio</a>
     <a href="../index.html#contacto">Contacto</a>
   </nav>
@@ -163,7 +176,7 @@
         <a class="pill-button" href="#servicios">Conocer los servicios <span>→</span></a>
       </div>
       <figure class="hero-photo"><img src="https://images.pexels.com/photos/8297490/pexels-photo-8297490.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Profesionales revisando documentos durante una reunión de trabajo"></figure>
-    </section>
+    </section><section class="agora-escuela-link shell" aria-label="Formación Escuela Ágora"><div><p class="eyebrow">Formación aplicada</p><h2>Escuela Ágora: prevenir y actuar</h2><p>Talleres prácticos para jefaturas y equipos sobre Ley Karin, violencia ejercida por terceros y respuesta ante incidentes en el trabajo.</p></div><a href="../escuela/prevencion-violencia/index.html">Conocer el taller →</a></section>
 
     <section class="services" id="para-quienes" aria-labelledby="publicos-titulo" style="padding-top:45px;padding-bottom:20px"><div class="section-title"><p class="eyebrow">Atención especializada</p><h2 id="publicos-titulo">¿A quiénes apoyamos?</h2></div><div class="service-grid"><article class="service-card" style="min-height:auto"><h3>Abogados y estudios jurídicos</h3><p>Informes sociales, socioeconómicos y periciales; análisis social-laboral y revisión técnica de antecedentes según el encargo.</p><a class="text-link" href="informes-tecnicos/index.html">Ver informes y peritajes →</a></article><article class="service-card" style="min-height:auto"><h3>Peritos y profesionales</h3><p>Colaboración interdisciplinaria, apoyo metodológico y actividades de formación especializada, previa evaluación de cada solicitud.</p><a class="text-link" href="../escuela/index.html">Ver formación →</a></article><article class="service-card" style="min-height:auto"><h3>Empresas e instituciones</h3><p>Investigaciones laborales, revisión de protocolos, prevención del acoso y violencia, y capacitación de equipos.</p><a class="text-link" href="#prevencion">Ver prevención →</a></article></div><p style="font-size:12px;color:var(--muted);margin-top:22px">Ágora es una consultora independiente. No actúa en representación de la Dirección del Trabajo ni del Poder Judicial. La aceptación de cada encargo depende de su alcance y de la evaluación de independencia y eventuales conflictos de interés.</p></section>
     <section class="services" id="servicios">
@@ -247,7 +260,8 @@
         <p>Investigación laboral e informes técnicos especializados.</p>
       </div>
       <div class="footer-links"><strong>Servicios</strong><a href="investigacion-laboral/index.html">Investigaciones</a><a href="informes-tecnicos/index.html">Informes técnicos</a><a href="auditoria-investigaciones/index.html">Revisión técnica</a></div>
-      <div class="footer-links"><strong>Ágora Laboral</strong><a href="../escuela/index.html">Escuela Ágora</a>
+      <div class="footer-links"><strong>Ágora Laboral</strong><a href="../quienes-somos/index.html">Quiénes somos</a>
+      <a href="../escuela/index.html">Escuela Ágora</a>
       <a href="../observatorio/index.html">Observatorio</a></div>
       <div class="footer-contact"><strong>Contacto</strong><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a><a class="backup-email" href="mailto:agoralaboral360@gmail.com"><span>Correo alternativo</span> agoralaboral360@gmail.com</a><a href="https://wa.me/56999840502?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20%C3%81gora%20Laboral%20360.">WhatsApp · +56 9 9984 0502</a><span>Chile · Atención presencial y remota</span></div>
     </div>
