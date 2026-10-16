@@ -970,3 +970,7 @@ footer { padding: 84px max(30px, calc(50vw - 900px)) 30px; background: var(--ivo
 @media (max-width:390px){
  .agora-home .agora-highlights>a{flex-basis:calc((100% - 8px)/2)!important;max-width:calc((100% - 8px)/2)!important}
 }
+
+/* Portada 2026: titular más compacto y jerarquía de lectura clara */
+@media(min-width:901px){.agora-home .hero{min-height:540px}.agora-home .hero-copy{padding-top:clamp(38px,4vw,68px)!important;padding-bottom:clamp(38px,4vw,68px)!important}.agora-home .hero h1{font-size:clamp(43px,4.1vw,66px)!important;line-height:1.05!important;letter-spacing:-.025em!important;margin-top:20px!important;margin-bottom:22px!important}.agora-home .hero-lead{font-size:clamp(15px,1.25vw,18px)!important;line-height:1.65!important;max-width:650px}}
+@media(max-width:900px){.agora-home .hero h1{font-size:clamp(38px,7vw,60px)!important;line-height:1.09!important}.agora-home .hero-copy{padding-top:38px!important;padding-bottom:40px!important}}
