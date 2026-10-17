@@ -439,6 +439,9 @@
                                     <option>Investigación laboral externa</option>
                                     <option>Informe técnico o peritaje social laboral</option>
                                     <option>Revisión técnica de una investigación</option>
+                                    <option>Asesoría Ley Karin y protocolos preventivos</option>
+                                    <option>Capacitación y talleres para equipos</option>
+                                    <option>Diagnóstico organizacional y riesgos psicosociales</option>
                                     <option>Consulta institucional general</option>
                                 </select>
                             </div>
@@ -454,8 +457,8 @@
                         </div>
 
                         <div class="form-actions">
-                            <button class="submit-button" type="submit">Preparar solicitud por correo →</button>
-                            <p class="action-help">Revise el mensaje en su correo antes de enviarlo.</p>
+                            <button class="submit-button" type="submit">Preparar consulta por WhatsApp →</button>
+                            <p class="action-help">Se abrirá WhatsApp con el mensaje preparado. Revíselo y pulse Enviar para completar su consulta.</p>
                         </div>
                     </form>
                 </section>
@@ -516,7 +519,7 @@
 
             const data = new FormData(form);
             const servicio = data.get('servicio');
-            const subject = `Solicitud de evaluación técnica - ${servicio}`;
+            
             const lines = [
                 'SOLICITUD DE EVALUACIÓN TÉCNICA',
                 '',
