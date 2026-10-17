@@ -25,3 +25,17 @@ body img{max-width:100%;height:auto}
  body :is(.site-header nav,header nav){row-gap:12px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body *,body *::before,body *::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* Paleta tipográfica accesible y consistente */
+body{color:#34313d}
+body :is(h1,h2){color:#3c3048}
+body h3{color:#51405f}
+body :is(.eyebrow,.kicker,.card-kicker){color:#76538e}
+body :is(.lead,.hero-lead,.card-desc,.section-intro p){color:#514d59}
+body :is(.muted,.subtitle,small){color:#625d69}
+body :is(.service-card,.product-card,.card-post,.form-card,.info-card,.panel){color:#34313d}
+body :is(.service-card,.product-card,.card-post,.form-card,.info-card,.panel) :is(h2,h3){color:#51405f}
+body :is(a:not(.button):not(.btn):not(.btn-header):not(.header-cta):not(.submit-button)){text-underline-offset:3px}
+body :is(input,textarea,select){color:#34313d}
+body :is(input,textarea)::placeholder{color:#6b6571}
+body :is(.hero,.page-hero,.blog-hero) :is(h1,h2){color:#3c3048}
