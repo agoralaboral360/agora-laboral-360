@@ -535,7 +535,7 @@
                 'Declaro que en este primer contacto no he incorporado nombres de personas, declaraciones, denuncias ni documentos confidenciales.'
             ];
 
-            window.location.href = `mailto:contacto@agoralaboral.cl?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+            window.open(`https://wa.me/56999840502?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener,noreferrer');
         });
 
         copyButton.addEventListener('click', async () => {
