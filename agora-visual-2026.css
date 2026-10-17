@@ -39,3 +39,32 @@ body :is(a:not(.button):not(.btn):not(.btn-header):not(.header-cta):not(.submit-
 body :is(input,textarea,select){color:#34313d}
 body :is(input,textarea)::placeholder{color:#6b6571}
 body :is(.hero,.page-hero,.blog-hero) :is(h1,h2){color:#3c3048}
+
+/* Acabado final: menús, fondos, contraste y respiración */
+body .agora-unified-nav{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 19px}
+body .agora-unified-nav a{display:inline-flex;align-items:center;padding:7px 2px;text-decoration:none;font-family:Montserrat,Arial,sans-serif;font-size:clamp(.76rem,.92vw,.88rem);font-weight:600;line-height:1.35;white-space:nowrap}
+body .agora-unified-nav a[aria-current="page"]{border-bottom:2px solid #a47cae}
+body .mobile-nav.agora-unified-nav{display:none}
+body .agora-unified-nav a:focus-visible{outline:2px solid #76538e;outline-offset:3px}
+body :is(.section-shell,.section,.free-section,.support-section){scroll-margin-top:100px}
+body :is(.service-card,.product-card,.card-post,.info-card,.format-card){border-radius:16px}
+body :is(.service-card,.product-card,.card-post,.info-card,.format-card) p{line-height:1.65}
+body :is(.section-shell,.section,.catalog-hero,.blog-hero){padding-block:clamp(28px,4vw,64px)}
+body :is(.service-grid,.catalog-grid,.format-grid,.grid-blog){align-items:stretch}
+body :is(.service-card,.product-card,.card-post,.info-card,.format-card){background-color:#fffdfd}
+body :is(.site-header,header){z-index:20}
+body :is(.site-header,header) .agora-unified-nav a{color:#44374e}
+body :is(.site-header,header) .agora-unified-nav a:hover{color:#76538e}
+body :is(.site-header,header) .agora-unified-nav a[aria-current="page"]{color:#624578}
+body :is(.site-header,header) .mobile-nav.agora-unified-nav a{color:#44374e}
+body :is(footer,.site-footer,.dark-section,.dark-band,.section-dark,[class*="dark-bg"]) :is(h1,h2,h3,p,small,li){color:inherit}
+body :is(.btn,.button,.btn-header,.header-cta,.submit-button,.contact-whatsapp){color:inherit}
+body :is(.btn,.button,.btn-header,.header-cta,.submit-button,.contact-whatsapp):hover{filter:brightness(1.04)}
+@media(max-width:980px){body .agora-unified-nav{gap:8px 13px}}
+@media(max-width:760px){
+ body nav.agora-unified-nav:not(.mobile-nav){display:flex;justify-content:flex-start;flex-wrap:wrap;gap:4px 12px}
+ body nav.agora-unified-nav:not(.mobile-nav) a{font-size:.76rem;padding:6px 0}
+ body .mobile-nav.agora-unified-nav{display:none}
+ body .mobile-nav.agora-unified-nav:target{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+ body :is(.section-shell,.section,.catalog-hero,.blog-hero){padding-block:clamp(22px,6vw,40px)}
+}
