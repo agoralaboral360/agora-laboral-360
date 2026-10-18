@@ -55,3 +55,25 @@ body .site-head .brand-word,body .site-header .brand-copy{color:#302e37}
 body .site-header .header-cta,body .site-head .whatsapp{flex-shrink:0}
 @media(max-width:1050px){body :is(.site-header,.site-head,header.site-header,header:has(> .logo-box)){flex-wrap:wrap;justify-content:center}body :is(nav.agora-unified-nav,.site-head nav){order:3;width:100%;margin:0;justify-content:center}body .site-header .menu-button{display:none!important}}
 @media(max-width:760px){body :is(.site-header,.site-head,header.site-header,header:has(> .logo-box)){padding:14px 18px;gap:10px}body :is(nav.agora-unified-nav,.site-head nav){display:flex!important;grid-template-columns:none!important;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:17px;padding:8px 2px 12px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}body :is(nav.agora-unified-nav,.site-head nav) a{font-size:12px;flex:0 0 auto}body .site-header .menu-button{display:none!important}}
+
+/* Encabezado único: sin saltos de fila en escritorio */
+body .agora-global-header{box-sizing:border-box;display:grid!important;grid-template-columns:minmax(170px,245px) minmax(0,1fr) auto!important;align-items:center!important;gap:clamp(12px,1.6vw,24px)!important;padding:15px clamp(20px,3vw,46px)!important;background:#fff!important;border-bottom:1px solid #e9e5eb!important;position:relative;z-index:30;width:100%}
+body .agora-global-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#302e37;min-width:0}
+body .agora-brand-symbol{display:block;width:40px;height:50px;flex-shrink:0}
+body .agora-global-word{font:600 clamp(24px,2.25vw,36px)/.9 "Cormorant Garamond",Georgia,serif;letter-spacing:.1em;white-space:nowrap}
+body .agora-global-word small{display:block;margin-top:9px;font:700 9px/1.3 Montserrat,Arial,sans-serif;letter-spacing:.23em;color:#79548c}
+body .agora-global-nav{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:center!important;gap:clamp(9px,1.1vw,20px)!important;min-width:0;margin:0!important;width:auto!important;order:initial!important}
+body .agora-global-nav a{font:600 clamp(10px,.79vw,12px)/1.4 Montserrat,Arial,sans-serif!important;color:#3e3945!important;white-space:nowrap;text-decoration:none!important;padding:8px 0!important;border-bottom:2px solid transparent}
+body .agora-global-nav a[aria-current="page"]{color:#79548c!important;border-bottom-color:#79548c}
+body .agora-global-cta{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;padding:13px 17px;border-radius:10px;background:#79548c;color:#fff!important;text-decoration:none;font:700 12px Montserrat,Arial,sans-serif}
+body .agora-global-cta:hover{background:#674578}
+@media(max-width:1160px){body .agora-global-header{grid-template-columns:1fr auto!important;gap:8px 16px!important}body .agora-global-nav{grid-column:1/-1;grid-row:2;justify-content:center!important;padding-top:8px}}
+@media(max-width:760px){body .agora-global-header{padding:13px 17px!important}body .agora-global-nav{display:flex!important;justify-content:flex-start!important;overflow-x:auto!important;gap:18px!important;scrollbar-width:thin;padding-bottom:8px}body .agora-global-nav a{font-size:12px!important;flex-shrink:0}body .agora-global-word{font-size:29px}body .agora-global-cta{padding:11px 12px;font-size:11px}}
+/* Tarjetas de servicios: alternancia fría y cálida moderada */
+body .service-grid>.service-card{background:#fff!important;border:1px solid #e6e4e8!important;box-shadow:0 8px 26px #2d28350c!important}
+body .service-grid>.service-card:nth-child(3n+2){background:#edf3ee!important;border-color:#dbe6dc!important}
+body .service-grid>.service-card:nth-child(3n){background:#f2eff5!important;border-color:#e7e1ed!important}
+body .service-grid>.service-card h3{color:#3b3543!important}
+body .service-grid>.service-card p{color:#5b5560!important}
+body .service-grid>.service-card .text-link{color:#79548c!important;border-color:#a88ab5!important}
+body .service-grid>.service-card .text-link:hover{color:#5f3e74!important}
