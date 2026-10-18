@@ -43,3 +43,15 @@ body .reconnect.anticipate h2{color:#486d59!important}
 body .reconnect.anticipate :is(.button,.pill-button){background:#79548c!important;color:#fff!important}
 body .agora-escuela-link{background:#f2eff5!important}
 body .agora-escuela-link :is(.button,.pill-button,a){background:#79548c!important;color:#fff!important}
+
+/* Navegación uniforme y adaptable: octubre 2026 */
+body :is(.site-header,.site-head,header.site-header,header:has(> .logo-box)){display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,1.6vw,25px);padding:15px clamp(18px,3vw,48px);background:#fff!important;border-bottom:1px solid #e7e4e8}
+body :is(.site-header,.site-head,header.site-header,header:has(> .logo-box)) > :is(.brand,.logo,.logo-box){flex-shrink:0}
+body :is(nav.agora-unified-nav,.site-head nav){display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px clamp(9px,1.2vw,19px);margin-left:auto;min-width:0}
+body :is(nav.agora-unified-nav,.site-head nav) a{display:inline-block;white-space:nowrap;text-decoration:none;font-family:Montserrat,Arial,sans-serif;font-size:clamp(10px,.83vw,12px);font-weight:600;line-height:1.4;color:#3e3945;padding:7px 0}
+body :is(nav.agora-unified-nav,.site-head nav) a:hover{color:#79548c!important}
+body :is(nav.agora-unified-nav,.site-head nav) a[aria-current="page"]{color:#79548c!important;border-bottom:2px solid #79548c}
+body .site-head .brand-word,body .site-header .brand-copy{color:#302e37}
+body .site-header .header-cta,body .site-head .whatsapp{flex-shrink:0}
+@media(max-width:1050px){body :is(.site-header,.site-head,header.site-header,header:has(> .logo-box)){flex-wrap:wrap;justify-content:center}body :is(nav.agora-unified-nav,.site-head nav){order:3;width:100%;margin:0;justify-content:center}body .site-header .menu-button{display:none!important}}
+@media(max-width:760px){body :is(.site-header,.site-head,header.site-header,header:has(> .logo-box)){padding:14px 18px;gap:10px}body :is(nav.agora-unified-nav,.site-head nav){display:flex!important;grid-template-columns:none!important;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:17px;padding:8px 2px 12px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}body :is(nav.agora-unified-nav,.site-head nav) a{font-size:12px;flex:0 0 auto}body .site-header .menu-button{display:none!important}}
