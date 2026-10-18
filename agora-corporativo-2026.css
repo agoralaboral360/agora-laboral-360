@@ -77,3 +77,11 @@ body .service-grid>.service-card h3{color:#3b3543!important}
 body .service-grid>.service-card p{color:#5b5560!important}
 body .service-grid>.service-card .text-link{color:#79548c!important;border-color:#a88ab5!important}
 body .service-grid>.service-card .text-link:hover{color:#5f3e74!important}
+
+/* Navegación alineada a la derecha, con WhatsApp al extremo derecho */
+body .agora-global-header{grid-template-columns:minmax(175px,245px) minmax(0,1fr) auto!important}
+body .agora-global-nav{justify-content:flex-end!important;margin-left:auto!important;gap:clamp(10px,1vw,18px)!important}
+body .agora-global-nav a{font-family:Montserrat,Arial,sans-serif!important;font-size:12px!important;font-weight:600!important;letter-spacing:0!important;text-transform:none!important}
+@media(min-width:1161px){body .agora-global-header{grid-template-columns:minmax(175px,245px) minmax(0,1fr) auto!important}}
+@media(min-width:761px) and (max-width:1160px){body .agora-global-nav{justify-content:flex-end!important}}
+@media(max-width:760px){body .agora-global-nav{justify-content:flex-start!important;margin-left:0!important}}
