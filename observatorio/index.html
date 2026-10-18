@@ -409,6 +409,16 @@ body footer .logo-title,body footer h5,body footer a,body footer p,body footer .
 .agora-global-cta{display:inline-flex!important;align-items:center!important;justify-content:center!important;background:#79548c!important;color:white!important;border-radius:10px!important;padding:13px 16px!important;text-decoration:none!important;white-space:nowrap!important;font:700 12px Montserrat,Arial,sans-serif!important}
 @media(max-width:1160px){.agora-global-header{grid-template-columns:1fr auto!important}.agora-global-nav{grid-column:1/-1!important;grid-row:2!important;justify-content:center!important}}
 @media(max-width:760px){.agora-global-header{padding:12px 16px!important}.agora-global-word{font-size:26px!important}.agora-global-nav{justify-content:flex-start!important;overflow-x:auto!important;gap:16px!important;padding-bottom:7px!important}.agora-global-nav a{flex:0 0 auto!important}.agora-global-cta{font-size:11px!important;padding:10px!important}}
+</style><style id="observatorio-ajustes-menu-foto">
+/* Igualar exactamente el menú al de Servicios */
+body .agora-global-header .agora-global-nav a{font-family:Montserrat,Arial,sans-serif!important;font-size:12px!important;font-weight:600!important;letter-spacing:normal!important;text-transform:none!important;line-height:1.4!important}
+body .agora-global-header .agora-global-nav{gap:clamp(8px,1vw,18px)!important}
+body .agora-global-header .agora-global-nav a[aria-current="page"]{border-bottom:2px solid #79548c!important}
+/* Encuadre horizontal sin cortar rostros; se elimina círculo superpuesto */
+body .agora-cover-image{border-radius:60px 0 0 60px / 15% 0 0 15%!important;background:#f1f1ed!important;min-height:480px}
+body .agora-cover-image img{object-fit:contain!important;object-position:center center!important;background:#f1f1ed!important}
+body .agora-cover-image::after{display:none!important}
+@media(max-width:760px){body .agora-cover-image{min-height:300px!important;border-radius:28px 0 0 0!important}body .agora-cover-image img{object-fit:contain!important}}
 </style></head>
 <body>
 
