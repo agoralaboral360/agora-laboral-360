@@ -10,17 +10,17 @@
 
     <style>
         :root {
-            --bg-sand: #EBE6DD;           
-            --bg-card: #EFEAE2;           
-            --bg-card-accent: #E5DFD5;    
-            --bg-topics: #D3D2C4;         
-            --text-charcoal: #2C2825;     
-            --text-muted: #615B55;        
-            --accent-sage: #828776;       
-            --accent-sage-hover: #6E7363;
-            --accent-rose: #C38271;       
-            --accent-rose-dark: #A36557;  
-            --border-subtle: #D8D1C5;     
+            --bg-sand: #FCF9FB;           
+            --bg-card: #FFFFFF;           
+            --bg-card-accent: #F3EAF4;    
+            --bg-topics: #E7EDE6;         
+            --text-charcoal: #34313D;     
+            --text-muted: #625969;        
+            --accent-sage: #76538E;       
+            --accent-sage-hover: #624578;
+            --accent-rose: #C991A0;       
+            --accent-rose-dark: #975F75;  
+            --border-subtle: #E8DDEA;     
             --font-serif: 'Cormorant Garamond', serif;
             --font-sans: 'Montserrat', sans-serif;
         }
@@ -362,7 +362,19 @@
             .blog-hero h1 { font-size: 2.1rem; }
             .footer-grid { grid-template-columns: 1fr; }
         }
-    </style>
+    /* Identidad visual Ágora: lavanda, rosa viejo y fondos claros */
+header{background:#fffdfd;border-bottom:1px solid #eadfeb;box-shadow:0 3px 18px rgba(80,50,93,.07)}
+.blog-hero{background:linear-gradient(125deg,#f7edf6 0%,#fff9fc 58%,#eaf1e9 100%);padding:clamp(58px,7vw,95px) 20px}
+.blog-hero h1{color:#3c3048;text-transform:none;font-size:clamp(2.5rem,5vw,4.4rem);line-height:1.06}
+.card-post{background:#fffdfd;border:1px solid #e8ddea;border-radius:18px;box-shadow:0 8px 28px rgba(84,55,97,.06)}
+.card-post:hover{transform:translateY(-6px);box-shadow:0 17px 35px rgba(84,55,97,.12)}
+.card-title{color:#51405f}.tag{background:#f4e9f2;color:#76538e;border-radius:30px}
+.btn-leer{color:#76538e}.container{margin-top:clamp(36px,5vw,65px)}
+nav.agora-unified-nav{display:flex;flex-wrap:wrap;gap:8px 17px;align-items:center}
+nav.agora-unified-nav a{font-size:12px;letter-spacing:0;text-transform:none;font-weight:600}
+nav.agora-unified-nav a[aria-current=page]{border-bottom:2px solid #a783ae}
+@media(max-width:850px){header{flex-wrap:wrap}nav.agora-unified-nav{order:3;width:100%;justify-content:flex-start}}
+</style>
 <link rel="stylesheet" href="../agora-visual-2026.css?v=20261017">
 </head>
 <body>
@@ -457,8 +469,8 @@
             <div class="footer-col">
                 <h5>Empresa</h5>
                 <ul>
-                    <li><a href="/#contacto">Contacto</a></li>
-                    <li><a href="/#privacidad">Política de privacidad</a></li>
+                    <li><a href="/contacto/">Contacto</a></li>
+                    <li><a href="/contacto/">Política de privacidad</a></li>
                 </ul>
             </div>
 
@@ -466,7 +478,7 @@
                 <h5>Contacto</h5>
                 <ul>
                     <li><a href="mailto:contacto@agoralaboral.cl">contacto@agoralaboral.cl</a></li>
-                    <li><a href="tel:+56900000000">+56 9 0000 0000</a></li>
+                    <li><a href="tel:+56999840502">+56 9 9984 0502</a></li>
                     <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
                 </ul>
             </div>
