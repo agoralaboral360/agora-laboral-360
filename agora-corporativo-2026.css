@@ -33,3 +33,13 @@ body .agora-cover-image:after,body .hero-media:after{background:linear-gradient(
 body :is(.pill-button,.button,.action.primary,.agora-cover-actions a:first-child,.whatsapp,.btn-header,.btn-leer,.header-cta,.agora-escuela-link a){background:#79548c!important;color:#fff!important;border-color:#79548c!important;text-shadow:none!important}
 body :is(.pill-button,.button,.action.primary,.agora-cover-actions a:first-child,.whatsapp,.btn-header,.btn-leer,.header-cta,.agora-escuela-link a):is(:hover,:focus-visible){background:#674578!important;color:#fff!important;border-color:#674578!important}
 body :is(.pill-button,.button,.action.primary,.agora-cover-actions a:first-child,.whatsapp,.btn-header,.btn-leer,.header-cta,.agora-escuela-link a) :is(span,svg){color:inherit!important}
+
+/* Ritmo cromático entre secciones: blanco, salvia y lavanda desaturada */
+body :is(main, .main-content) > section:not(.hero):not(.page-hero):not(.catalog-hero):not(.agora-cover):not(.blog-hero):nth-of-type(3n+1){background-color:#ffffff}
+body :is(main, .main-content) > section:not(.hero):not(.page-hero):not(.catalog-hero):not(.agora-cover):not(.blog-hero):nth-of-type(3n+2){background-color:#edf3ee}
+body :is(main, .main-content) > section:not(.hero):not(.page-hero):not(.catalog-hero):not(.agora-cover):not(.blog-hero):nth-of-type(3n){background-color:#f2eff5}
+body .reconnect.anticipate{background:#edf3ee!important}
+body .reconnect.anticipate h2{color:#486d59!important}
+body .reconnect.anticipate :is(.button,.pill-button){background:#79548c!important;color:#fff!important}
+body .agora-escuela-link{background:#f2eff5!important}
+body .agora-escuela-link :is(.button,.pill-button,a){background:#79548c!important;color:#fff!important}
