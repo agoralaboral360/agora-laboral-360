@@ -1,0 +1,30 @@
+/* Ágora Laboral 360° — identidad corporativa sobria, octubre 2026 */
+:root{--ag-violet:#51465f;--ag-rose:#a57986;--ag-sage:#7b897b;--ag-ink:#302e37;--ag-soft:#f8f7f6}
+html body{background:#f8f7f6;color:#302e37}
+body :is(h1,h2,h3){color:#302e37}
+body :is(.eyebrow,.agora-cover-eyebrow){color:#5f586a}
+body :is(.lead,.hero-lead,.catalog-lead,.agora-cover-desc){color:#56515c}
+body :is(.pill-button,.button,.action.primary,.agora-cover-actions a:first-child,.whatsapp,.btn-header,.btn-leer){background:#51465f!important;color:#fff!important;border-radius:10px!important}
+body :is(.pill-button,.button,.action.primary,.agora-cover-actions a:first-child,.whatsapp,.btn-header,.btn-leer):hover{background:#393143!important}
+body :is(.button-outline,.action.secondary,.agora-cover-actions a:last-child){background:transparent!important;color:#51465f!important;border:1px solid #8e8497!important;border-radius:10px!important}
+body :is(.hero,.page-hero,.catalog-hero,.blog-hero,.agora-cover){background:linear-gradient(115deg,#fbfaf9 0%,#f5f3f5 65%,#edf0ec 100%)!important}
+body .agora-cover h1,body .agora-cover h1 em,body .hero h1 em,body .page-hero h1 em,body .catalog-hero h1 em{color:#38323f!important}
+body :is(.hero-media,.agora-cover-image){border-radius:45px 0 0 45px / 20% 0 0 20%}
+body :is(.panel,.feature,.card-post,.product-card,.principles article){border-radius:12px!important}
+body .panel{background:linear-gradient(110deg,#f2f0f2,#f5f5f2)!important}
+body .feature:nth-child(1){background:#f0edf1!important}
+body .feature:nth-child(2){background:#ecf0ec!important}
+body .feature:nth-child(3){background:#f4f0f0!important}
+body .feature:nth-child(4){background:#f3f1ed!important}
+body .feature .icon{background:#e6e1e9!important;color:#51465f!important}
+body .feature:nth-child(2) .icon{background:#e0e7e0!important;color:#657665!important}
+body .feature:nth-child(3) .icon{background:#ebe3e5!important;color:#8d6873!important}
+body :is(.site-header,.site-head,header.site-header){background:#fff!important;border-bottom:1px solid #e9e6e9}
+body :is(nav.agora-unified-nav a[aria-current="page"],nav a[aria-current="page"]){color:#51465f!important;border-bottom-color:#51465f!important}
+body :is(.card-post,.product-card,.principles article){background:#fff!important;border-color:#e7e3e8!important}
+body :is(.card-post,.product-card,.feature,.principles article){box-shadow:0 5px 18px #28202e0a}
+body :is(.card-post,.product-card,.feature,.principles article):hover{box-shadow:0 13px 30px #28202e17}
+body .tag{background:#eeebf0!important;color:#51465f!important}
+body .agora-cover-image:after,body .hero-media:after{background:linear-gradient(140deg,#e4e0e7a0,#dce4d9a8)!important}
+@media(max-width:760px){body :is(.hero-media,.agora-cover-image){border-radius:32px 0 0 0}}
+@media(prefers-reduced-motion:reduce){body *{transition:none!important}}
