@@ -28,3 +28,8 @@ body .tag{background:#eeebf0!important;color:#51465f!important}
 body .agora-cover-image:after,body .hero-media:after{background:linear-gradient(140deg,#e4e0e7a0,#dce4d9a8)!important}
 @media(max-width:760px){body :is(.hero-media,.agora-cover-image){border-radius:32px 0 0 0}}
 @media(prefers-reduced-motion:reduce){body *{transition:none!important}}
+
+/* Botones: violeta medio aprobado por referencia visual, con texto blanco legible */
+body :is(.pill-button,.button,.action.primary,.agora-cover-actions a:first-child,.whatsapp,.btn-header,.btn-leer,.header-cta,.agora-escuela-link a){background:#79548c!important;color:#fff!important;border-color:#79548c!important;text-shadow:none!important}
+body :is(.pill-button,.button,.action.primary,.agora-cover-actions a:first-child,.whatsapp,.btn-header,.btn-leer,.header-cta,.agora-escuela-link a):is(:hover,:focus-visible){background:#674578!important;color:#fff!important;border-color:#674578!important}
+body :is(.pill-button,.button,.action.primary,.agora-cover-actions a:first-child,.whatsapp,.btn-header,.btn-leer,.header-cta,.agora-escuela-link a) :is(span,svg){color:inherit!important}
