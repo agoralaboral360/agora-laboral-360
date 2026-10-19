@@ -135,7 +135,15 @@
 .agora-global-cta{display:inline-flex!important;align-items:center!important;justify-content:center!important;background:#79548c!important;color:white!important;border-radius:10px!important;padding:13px 16px!important;text-decoration:none!important;white-space:nowrap!important;font:700 12px Montserrat,Arial,sans-serif!important}
 @media(max-width:1160px){.agora-global-header{grid-template-columns:1fr auto!important}.agora-global-nav{grid-column:1/-1!important;grid-row:2!important;justify-content:center!important}}
 @media(max-width:760px){.agora-global-header{padding:12px 16px!important}.agora-global-word{font-size:26px!important}.agora-global-nav{justify-content:flex-start!important;overflow-x:auto!important;gap:16px!important;padding-bottom:7px!important}.agora-global-nav a{flex:0 0 auto!important}.agora-global-cta{font-size:11px!important;padding:10px!important}}
-</style></head>
+</style><style id="agora-servicios-portada-foto">
+/* La fotografía ocupa realmente la columna derecha del hero, sin depender de alturas porcentuales indefinidas. */
+body .page-hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;align-items:stretch}
+body .page-hero .hero-photo{position:relative!important;display:block!important;min-height:580px!important;margin:0!important;overflow:hidden!important;background:#e8ece8!important}
+body .page-hero .hero-photo img{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:center!important;opacity:1!important;visibility:visible!important}
+body .page-hero .hero-photo::before{pointer-events:none}
+@media(max-width:760px){body .page-hero{grid-template-columns:minmax(0,1fr)!important}body .page-hero .hero-photo{min-height:320px!important}}
+</style>
+</head>
 <body class="agora-home agora-inner">
   <header class="agora-global-header"><a class="agora-global-brand" href="../index.html" aria-label="Ágora Laboral 360°, inicio"><svg class="agora-brand-symbol" viewBox="0 0 55 70" aria-hidden="true"><path d="M27 63V27" stroke="#807287" stroke-width="2" fill="none"/><path d="M26 38C4 33 5 15 9 5c15 6 23 17 17 33Z" fill="#b6a0c0"/><path d="M30 34C48 25 51 14 47 4 32 9 24 19 30 34Z" fill="#9986aa"/><path d="M27 52C44 52 50 43 50 35c-14 0-23 5-23 17Z" fill="#839a7e"/></svg><span class="agora-global-word">ÁGORA<small>LABORAL 360°</small></span></a><nav class="agora-global-nav" aria-label="Navegación principal"><a href="../index.html">Inicio</a><a href="../servicios/index.html" aria-current="page">Servicios</a><a href="../quienes-somos/index.html">Quiénes somos</a><a href="../escuela/index.html">Escuela</a><a href="../observatorio/index.html">Observatorio</a><a href="../recursos/index.html">Recursos</a><a href="../contacto/index.html">Contacto</a></nav><a class="agora-global-cta" href="https://wa.me/56999840502" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></header>
 
