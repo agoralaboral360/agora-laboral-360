@@ -85,3 +85,7 @@ body .agora-global-nav a{font-family:Montserrat,Arial,sans-serif!important;font-
 @media(min-width:1161px){body .agora-global-header{grid-template-columns:minmax(175px,245px) minmax(0,1fr) auto!important}}
 @media(min-width:761px) and (max-width:1160px){body .agora-global-nav{justify-content:flex-end!important}}
 @media(max-width:760px){body .agora-global-nav{justify-content:flex-start!important;margin-left:0!important}}
+
+/* Unificación final: CTA de Inicio y formulario de Contacto */
+body.agora-home .contact .pill-button,body.agora-home .hero-actions .pill-button,body .submit-button{background:#79548c!important;color:#fff!important;border-color:#79548c!important}
+body.agora-home .contact .pill-button:is(:hover,:focus-visible),body.agora-home .hero-actions .pill-button:is(:hover,:focus-visible),body .submit-button:is(:hover,:focus-visible){background:#674578!important;color:#fff!important;border-color:#674578!important}
